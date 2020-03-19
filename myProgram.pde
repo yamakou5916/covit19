@@ -21,6 +21,11 @@ void draw(){
     noStroke();
     fill(color(0, 0, 0), 64);
     rect(0,0,width,height);
+    
+  //line
+  stroke(250,250,250);
+  strokeWeight(0.1);
+  line(cwidth[0]+100, cheight[0]+100, cwidth[1]-100, cheight[1]-100);
   
   //flow
     noStroke();
