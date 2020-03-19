@@ -27,6 +27,13 @@ void draw(){
   rect(0,0,width,height);
   fill(color(255, 204, 0));
 
+//flow
+  noStroke();
+  //ellipse(mouseX,mouseY,30,30);
+  for(Maru maru:maruhairetu){
+    maru.draw();
+  }
+  
 //Big Circle
   fill(0, 0, 0);
   //for(float d = 200; d > 0; d -= 5){
@@ -35,62 +42,61 @@ void draw(){
   //    ellipse(width / 2, height / 2, d, d);
   //  }
       
-      fill(255);
-      textSize(20);
-      textAlign(CENTER);
-      text("AAAA", cwidth, cheight);
+  fill(255);
+  textSize(20);
+  textAlign(CENTER);
+  text("AAAA", cwidth, cheight);
     
-//Small Circle (Blue)
-      fill(255, 204, 0);
-      ellipse(cwidth-100, cheight-100, 80, 80);
-      //for(float d = 100; d > 0; d -= 5){
-      //  color c = lerpColor(c3, c4, d / 100.0);
-      //  fill(c, 64);
-      //  ellipse(width / 2 -100, height / 2 -100, d, d);
-      //}
-      
-      fill(255);
-      textSize(10);
-      textAlign(CENTER);
-      text("AAAA", cwidth-100, cheight-100);
-  
-//Small Circle (Yellow)
-      fill(255, 204, 0);
-      ellipse(cwidth+100, cheight-100, 80, 80);
-      
-      fill(255);
-      textSize(10);
-      textAlign(CENTER);
-      text("AAAA", cwidth+100, cheight-100);
-  
-//Small Circle (Lime)
-      fill(255, 204, 0);
-      ellipse(cwidth-100, cheight+100, 80, 80);
-      fill(255);
-      textSize(10);
-      textAlign(CENTER);
-      text("AAAA", cwidth-100, cheight+100);
-      
-//Small Circle (Red)
-      fill(255, 204, 0);
-      ellipse(cwidth+100, cheight+100, 80, 80);
-      fill(255);
-      textSize(10);
-      textAlign(CENTER);
-      text("AAAA", cwidth+100, cheight+100);
-      
 //Stroke Circle
   stroke(250,250,250);
-  strokeWeight(0.1);
+  strokeWeight(0.1
+  );
   noFill();
   ellipse(cwidth, cheight,300,300);
   
-//flow
-  noStroke();
-  //ellipse(mouseX,mouseY,30,30);
-  for(Maru maru:maruhairetu){
-    maru.draw();
-  }
+  
+//Small Circle (Blue)
+  stroke(255, 204, 0);
+  strokeWeight(1.5);
+  fill(0, 0, 0);
+  ellipse(cwidth-100, cheight-100, 80, 80);
+      
+  fill(255, 204, 0);
+  textSize(10);
+  textAlign(CENTER);
+  text("AAAA", cwidth-100, cheight-100);
+  
+//Small Circle (Yellow)
+  stroke(255, 204, 0);
+  strokeWeight(1.5);
+  fill(0, 0, 0);
+  ellipse(cwidth+100, cheight-100, 80, 80);
+      
+  fill(255, 204, 0);
+  textSize(10);
+  textAlign(CENTER);
+  text("AAAA", cwidth+100, cheight-100);
+  
+//Small Circle (Lime)
+  stroke(255, 204, 0);
+  strokeWeight(1.5);
+  fill(0, 0, 0);
+  ellipse(cwidth-100, cheight+100, 80, 80);
+  fill(255, 204, 0);
+  textSize(10);
+  textAlign(CENTER);
+  text("AAAA", cwidth-100, cheight+100);
+      
+//Small Circle (Red)
+  stroke(255, 204, 0);
+  strokeWeight(1.5);
+  fill(0, 0, 0);
+  ellipse(cwidth+100, cheight+100, 80, 80);
+  fill(255, 204, 0);
+  textSize(10);
+  textAlign(CENTER);
+  text("AAAA", cwidth+100, cheight+100);
+  
 }
 
 class Maru{
