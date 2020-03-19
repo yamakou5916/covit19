@@ -18,11 +18,12 @@ void setup(){
 }
 
 void draw(){
-  for(int i=0; i<cwidth.length;i++){
-  //BackGround
+//BackGround
     noStroke();
-    fill(color(0, 0, 0), 6);
+    fill(color(0, 0, 0), 32);
     rect(0,0,width,height);
+  for(int i=0; i<cwidth.length;i++){
+
     
   //line
   stroke(250,250,250);
