@@ -1,4 +1,6 @@
 float a=0; 
+int cwidth=250;
+int cheight=250;
 Maru[] maruhairetu;
 
 void setup(){
@@ -14,20 +16,19 @@ void setup(){
 }
 
 void draw(){
-  
+//Color Definition
   color c1 = color(55, 55, 55);
   color c2 = color(0, 0, 0);
- 
   color c3 = color(255, 204, 0);
   color c4 = color(0, 0, 0); 
   
+//BackGround
   fill(color(0, 0, 0), 64);
   rect(0,0,width,height);
   fill(color(255, 204, 0));
 
 //Big Circle
   fill(0, 0, 0);
-
   //for(float d = 200; d > 0; d -= 5){
   //    color c = lerpColor(c1, c2, d / 200.0);
   //    fill(c, 64);
@@ -37,12 +38,11 @@ void draw(){
       fill(255);
       textSize(20);
       textAlign(CENTER);
-      text("AAAA", width/2, height/2);
+      text("AAAA", cwidth, cheight);
     
 //Small Circle (Blue)
       fill(255, 204, 0);
-      ellipse(width/2-100, height/2-100, 80, 80);
-      
+      ellipse(cwidth-100, cheight-100, 80, 80);
       //for(float d = 100; d > 0; d -= 5){
       //  color c = lerpColor(c3, c4, d / 100.0);
       //  fill(c, 64);
@@ -52,40 +52,38 @@ void draw(){
       fill(255);
       textSize(10);
       textAlign(CENTER);
-      text("AAAA", width/2-100, height/2-100);
+      text("AAAA", cwidth-100, cheight-100);
   
 //Small Circle (Yellow)
       fill(255, 204, 0);
-      ellipse(width/2+100, height/2-100, 80, 80);
+      ellipse(cwidth+100, cheight-100, 80, 80);
       
       fill(255);
       textSize(10);
       textAlign(CENTER);
-      text("AAAA", width/2+100, height/2-100);
+      text("AAAA", cwidth+100, cheight-100);
   
 //Small Circle (Lime)
       fill(255, 204, 0);
-      ellipse(width/2-100, height/2+100, 80, 80);
-      
+      ellipse(cwidth-100, cheight+100, 80, 80);
       fill(255);
       textSize(10);
       textAlign(CENTER);
-      text("AAAA", width/2-100, height/2+100);
+      text("AAAA", cwidth-100, cheight+100);
       
 //Small Circle (Red)
       fill(255, 204, 0);
-      ellipse(width/2+100, height/2+100, 80, 80);
-      
+      ellipse(cwidth+100, cheight+100, 80, 80);
       fill(255);
       textSize(10);
       textAlign(CENTER);
-      text("AAAA", width/2+100, height/2+100);
+      text("AAAA", cwidth+100, cheight+100);
       
 //Stroke Circle
   stroke(250,250,250);
   strokeWeight(0.1);
   noFill();
-  ellipse(width/2, height/2,300,300);
+  ellipse(cwidth, cheight,300,300);
   
 //flow
   noStroke();
