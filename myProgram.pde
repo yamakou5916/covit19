@@ -101,14 +101,14 @@ class Maru{
   }
  
   void draw(){
-      if (mousePressed)
-      {
+      //if (mousePressed)
+      //{
         
         for(int i=0; i<cwidth.length;i++){
           fill(color(255, 204, 0));    
-          a+=x/10000;
+          a+=x/100000;
           ellipse(cwidth[i]+x*cos(a), cheight[i]+x*sin(a),5,5);
         }
-    }
+    //}
   }
 }
