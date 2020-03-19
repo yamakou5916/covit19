@@ -105,7 +105,7 @@ class Maru{
       {
       fill(color(255, 204, 0));    
       a+=x/7000;
-      ellipse(width/2+x*cos(a), height/2+x*sin(a),5,5);
+      ellipse(cwidth+x*cos(a), cheight+x*sin(a),5,5);
       //ellipse(mouseX+x*cos(a),mouseY+x*sin(a),5,5);
     }
   }
