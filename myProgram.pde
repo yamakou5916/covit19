@@ -31,6 +31,7 @@ void draw(){
   //Big Circle
     BigCircle(i);
     text("AAAA", cwidth[0], cheight[0]);
+    text("BBBB", cwidth[1], cheight[1]);
     
   //Small Circle
     SmallCircle(i);
@@ -38,6 +39,10 @@ void draw(){
     text("AAAA", cwidth[0]+100, cheight[0]-100);
     text("AAAA", cwidth[0]-100, cheight[0]+100);
     text("AAAA", cwidth[0]+100, cheight[0]+100);
+    text("BBBB", cwidth[1]-100, cheight[1]-100);
+    text("BBBB", cwidth[1]+100, cheight[1]-100);
+    text("BBBB", cwidth[1]-100, cheight[1]+100);
+    text("BBBB", cwidth[1]+100, cheight[1]+100);
   }
   
 }
