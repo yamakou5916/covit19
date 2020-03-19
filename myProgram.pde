@@ -26,16 +26,18 @@ void draw(){
   fill(color(255, 204, 0));
 
 //Big Circle
-  for(float d = 400; d > 0; d -= 5){
-      color c = lerpColor(c1, c2, d / 400.0);
-      fill(c, 64);
-      ellipse(width / 2, height / 2, d, d);
-    }
+  fill(0, 0, 0);
+
+  //for(float d = 200; d > 0; d -= 5){
+  //    color c = lerpColor(c1, c2, d / 200.0);
+  //    fill(c, 64);
+  //    ellipse(width / 2, height / 2, d, d);
+  //  }
       
-      fill(0);
+      fill(255);
       textSize(20);
       textAlign(CENTER);
-      text("COVID-19", width/2, height/2);
+      text("AAAA", width/2, height/2);
     
 //Small Circle (Blue)
       fill(255, 204, 0);
@@ -47,37 +49,37 @@ void draw(){
       //  ellipse(width / 2 -100, height / 2 -100, d, d);
       //}
       
-      fill(0);
+      fill(255);
       textSize(10);
       textAlign(CENTER);
-      text("COVID-19", width/2-100, height/2-100);
+      text("AAAA", width/2-100, height/2-100);
   
 //Small Circle (Yellow)
       fill(255, 204, 0);
       ellipse(width/2+100, height/2-100, 80, 80);
       
-      fill(0);
+      fill(255);
       textSize(10);
       textAlign(CENTER);
-      text("COVID-19", width/2+100, height/2-100);
+      text("AAAA", width/2+100, height/2-100);
   
 //Small Circle (Lime)
       fill(255, 204, 0);
       ellipse(width/2-100, height/2+100, 80, 80);
       
-      fill(0);
+      fill(255);
       textSize(10);
       textAlign(CENTER);
-      text("COVID-19", width/2-100, height/2+100);
+      text("AAAA", width/2-100, height/2+100);
       
 //Small Circle (Red)
       fill(255, 204, 0);
       ellipse(width/2+100, height/2+100, 80, 80);
       
-      fill(0);
+      fill(255);
       textSize(10);
       textAlign(CENTER);
-      text("COVID-19", width/2+100, height/2+100);
+      text("AAAA", width/2+100, height/2+100);
       
 //Stroke Circle
   stroke(250,250,250);
@@ -104,7 +106,7 @@ class Maru{
       if (mousePressed)
       {
       fill(color(255, 204, 0));    
-      a+=x/5000;
+      a+=x/7000;
       ellipse(width/2+x*cos(a), height/2+x*sin(a),5,5);
       //ellipse(mouseX+x*cos(a),mouseY+x*sin(a),5,5);
     }
