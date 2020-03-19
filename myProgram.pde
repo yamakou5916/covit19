@@ -1,6 +1,8 @@
 float a=0; 
-int cwidth[]={250,700,300};
-int cheight[]={200,400,600};
+int cwidth[]={250,550,300};
+int cheight[]={200,300,600};
+int cnt = 0;
+float rSize = 300;
 Maru[] maruhairetu;
 
 void setup(){
@@ -25,7 +27,8 @@ void draw(){
   //line
   stroke(250,250,250);
   strokeWeight(0.1);
-  line(cwidth[0]+100, cheight[0]+100, cwidth[1]-100, cheight[1]-100);
+  line(cwidth[0]+rSize/3, cheight[0]+rSize/3, cwidth[1]-rSize/3, cheight[1]-rSize/3);
+  line(cwidth[0]-rSize/3, cheight[0]+rSize/3, cwidth[2]-rSize/3, cheight[2]-rSize/3);
   
   //flow
     noStroke();
@@ -41,26 +44,36 @@ void draw(){
     
   //Small Circle
     SmallCircle(i);
-    text("AAAA", cwidth[0]-100, cheight[0]-100);
-    text("AAAA", cwidth[0]+100, cheight[0]-100);
-    text("AAAA", cwidth[0]-100, cheight[0]+100);
-    text("AAAA", cwidth[0]+100, cheight[0]+100);
-    text("BBBB", cwidth[1]-100, cheight[1]-100);
-    text("BBBB", cwidth[1]+100, cheight[1]-100);
-    text("BBBB", cwidth[1]-100, cheight[1]+100);
-    text("BBBB", cwidth[1]+100, cheight[1]+100);
-    text("CCCC", cwidth[2]-100, cheight[2]-100);
-    text("CCCC", cwidth[2]+100, cheight[2]-100);
-    text("CCCC", cwidth[2]-100, cheight[2]+100);
-    text("CCCC", cwidth[2]+100, cheight[2]+100);
+    text("AAAA", cwidth[0]-rSize/3, cheight[0]-rSize/3);
+    text("AAAA", cwidth[0]+rSize/3, cheight[0]-rSize/3);
+    text("AAAA", cwidth[0]-rSize/3, cheight[0]+rSize/3);
+    text("AAAA", cwidth[0]+rSize/3, cheight[0]+rSize/3);
+    text("BBBB", cwidth[1]-rSize/3, cheight[1]-rSize/3);
+    text("BBBB", cwidth[1]+rSize/3, cheight[1]-rSize/3);
+    text("BBBB", cwidth[1]-rSize/3, cheight[1]+rSize/3);
+    text("BBBB", cwidth[1]+rSize/3, cheight[1]+rSize/3);
+    text("CCCC", cwidth[2]-rSize/3, cheight[2]-rSize/3);
+    text("CCCC", cwidth[2]+rSize/3, cheight[2]-rSize/3);
+    text("CCCC", cwidth[2]-rSize/3, cheight[2]+rSize/3);
+    text("CCCC", cwidth[2]+rSize/3, cheight[2]+rSize/3);
   }
+  
+  cnt++;
+  if (70 * sin(radians(cnt)) > 0) {
+    //smaller
+    rSize -= 0.7;
+  } else {
+    //bigger
+    rSize += 0.7;
+  }
+  
 }
 
 void BigCircle(int i){
   stroke(250,250,250);
   strokeWeight(0.1);
   noFill();
-  ellipse(cwidth[i], cheight[i],300,300);
+  ellipse(cwidth[i], cheight[i],rSize,rSize);
   fill(255);
   textSize(20);
   textAlign(CENTER);
@@ -70,10 +83,10 @@ void SmallCircle(int i){
   stroke(255, 204, 0);
   strokeWeight(1.5);
   fill(0, 0, 0);
-  ellipse(cwidth[i]-100, cheight[i]-100, 80, 80);
-  ellipse(cwidth[i]+100, cheight[i]-100, 80, 80);
-  ellipse(cwidth[i]-100, cheight[i]+100, 80, 80);
-  ellipse(cwidth[i]+100, cheight[i]+100, 80, 80);
+  ellipse(cwidth[i]-rSize/3, cheight[i]-rSize/3, 80, 80);
+  ellipse(cwidth[i]+rSize/3, cheight[i]-rSize/3, 80, 80);
+  ellipse(cwidth[i]-rSize/3, cheight[i]+rSize/3, 80, 80);
+  ellipse(cwidth[i]+rSize/3, cheight[i]+rSize/3, 80, 80);
   fill(255, 204, 0);
   textSize(10);
   textAlign(CENTER);
@@ -90,6 +103,7 @@ class Maru{
   void draw(){
       if (mousePressed)
       {
+        
         for(int i=0; i<cwidth.length;i++){
           fill(color(255, 204, 0));    
           a+=x/10000;
