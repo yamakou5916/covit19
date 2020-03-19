@@ -23,9 +23,10 @@ void draw(){
   color c4 = color(0, 0, 0); 
   
 //BackGround
+  noStroke();
   fill(color(0, 0, 0), 64);
   rect(0,0,width,height);
-  fill(color(255, 204, 0));
+  //fill(color(255, 204, 0));
 
 //flow
   noStroke();
