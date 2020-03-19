@@ -81,7 +81,7 @@ void BigCircle(int i){
 
 void SmallCircle(int i){
   stroke(255, 204, 0);
-  strokeWeight(1.5);
+  strokeWeight(3);
   fill(0, 0, 0);
   ellipse(cwidth[i]-rSize/3, cheight[i]-rSize/3, 80, 80);
   ellipse(cwidth[i]+rSize/3, cheight[i]-rSize/3, 80, 80);
