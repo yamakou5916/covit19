@@ -32,6 +32,7 @@ void draw(){
     BigCircle(i);
     text("AAAA", cwidth[0], cheight[0]);
     text("BBBB", cwidth[1], cheight[1]);
+    text("CCCC", cwidth[2], cheight[2]);
     
   //Small Circle
     SmallCircle(i);
@@ -43,8 +44,11 @@ void draw(){
     text("BBBB", cwidth[1]+100, cheight[1]-100);
     text("BBBB", cwidth[1]-100, cheight[1]+100);
     text("BBBB", cwidth[1]+100, cheight[1]+100);
+    text("CCCC", cwidth[2]-100, cheight[2]-100);
+    text("CCCC", cwidth[2]+100, cheight[2]-100);
+    text("CCCC", cwidth[2]-100, cheight[2]+100);
+    text("CCCC", cwidth[2]+100, cheight[2]+100);
   }
-  
 }
 
 void BigCircle(int i){
