@@ -1,6 +1,6 @@
 float a=0; 
-int cwidth[]={250,550,300};
-int cheight[]={200,275,600};
+int cwidth[]={220,520,270};
+int cheight[]={180,255,580};
 int cnt = 0;
 float rSize[] = {300,300,300};
 Maru[] maruhairetu;
