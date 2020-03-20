@@ -1,8 +1,8 @@
 float a=0; 
-int cwidth[]={220,520,270,780,750};
-int cheight[]={180,255,580,150,600};
+int cwidth[]={220,520,270,780,750,1050};
+int cheight[]={180,255,580,150,600,250};
 int cnt = 0;
-float rSize[] = {300,300,100,200,180};
+float rSize[] = {300,300,100,200,180,250};
 Maru[] maruhairetu;
 
 void setup(){
@@ -50,6 +50,7 @@ void draw(){
     text("意識の変化", cwidth[2], cheight[2]);
     text("意識の変化", cwidth[3], cheight[3]);
     text("意識の変化", cwidth[4], cheight[4]);
+    text("意識の変化", cwidth[5], cheight[5]);
     
   //Small Circle
     SmallCircle(i);
@@ -73,6 +74,10 @@ void draw(){
     text("事象E", cwidth[4]+rSize[4]/3, cheight[4]-rSize[4]/3);
     text("事象E", cwidth[4]-rSize[4]/3, cheight[4]+rSize[4]/3);
     text("事象E", cwidth[4]+rSize[4]/3, cheight[4]+rSize[4]/3);
+    text("事象F", cwidth[5]-rSize[5]/3, cheight[5]-rSize[5]/3);
+    text("事象F", cwidth[5]+rSize[5]/3, cheight[5]-rSize[5]/3);
+    text("事象F", cwidth[5]-rSize[5]/3, cheight[5]+rSize[5]/3);
+    text("事象F", cwidth[5]+rSize[5]/3, cheight[5]+rSize[5]/3);
   }
   
   cnt++;
@@ -83,6 +88,7 @@ void draw(){
     rSize[2] += 3;
     rSize[3] += 0.2;
     rSize[4] += 0.7;
+    rSize[5] += 0.2;
 
   } else {
     //bigger
@@ -91,6 +97,8 @@ void draw(){
     rSize[2] -= 3;
     rSize[3] -= 0.2;
     //rSize[4] -= 0.7;
+    rSize[5] -= 0.2;
+
   }
   if(rSize[4]>500){rSize[4]=180;}
   
