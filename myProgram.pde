@@ -6,6 +6,8 @@ float rSize[] = {300,300,300,200,180};
 Maru[] maruhairetu;
 
 void setup(){
+  PFont font = createFont("MS Gothic",50);
+  textFont (font);
   size(1200,800);
   noStroke();
   background(0);
@@ -40,34 +42,34 @@ void draw(){
       
   //Big Circle
     BigCircle(i);
-    text("AAAA", cwidth[0], cheight[0]);
-    text("BBBB", cwidth[1], cheight[1]);
-    text("CCCC", cwidth[2], cheight[2]);
-    text("DDDD", cwidth[3], cheight[3]);
-    text("EEEE", cwidth[4], cheight[4]);
+    text("意識の変化", cwidth[0], cheight[0]);
+    text("意識の変化", cwidth[1], cheight[1]);
+    text("意識の変化", cwidth[2], cheight[2]);
+    text("意識の変化", cwidth[3], cheight[3]);
+    text("意識の変化", cwidth[4], cheight[4]);
     
   //Small Circle
     SmallCircle(i);
-    text("AAAA", cwidth[0]-rSize[0]/3, cheight[0]-rSize[0]/3);
-    text("AAAA", cwidth[0]+rSize[0]/3, cheight[0]-rSize[0]/3);
-    text("AAAA", cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3);
-    text("AAAA", cwidth[0]+rSize[0]/3, cheight[0]+rSize[0]/3);
-    text("BBBB", cwidth[1]-rSize[1]/3, cheight[1]-rSize[1]/3);
-    text("BBBB", cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3);
-    text("BBBB", cwidth[1]-rSize[1]/3, cheight[1]+rSize[1]/3);
-    text("BBBB", cwidth[1]+rSize[1]/3, cheight[1]+rSize[1]/3);
-    text("CCCC", cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
-    text("CCCC", cwidth[2]+rSize[2]/3, cheight[2]-rSize[2]/3);
-    text("CCCC", cwidth[2]-rSize[2]/3, cheight[2]+rSize[2]/3);
-    text("CCCC", cwidth[2]+rSize[2]/3, cheight[2]+rSize[2]/3);
-    text("DDDD", cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
-    text("DDDD", cwidth[3]+rSize[3]/3, cheight[3]-rSize[3]/3);
-    text("DDDD", cwidth[3]-rSize[3]/3, cheight[3]+rSize[3]/3);
-    text("DDDD", cwidth[3]+rSize[3]/3, cheight[3]+rSize[3]/3);
-    text("EEEE", cwidth[4]-rSize[4]/3, cheight[4]-rSize[4]/3);
-    text("EEEE", cwidth[4]+rSize[4]/3, cheight[4]-rSize[4]/3);
-    text("EEEE", cwidth[4]-rSize[4]/3, cheight[4]+rSize[4]/3);
-    text("EEEE", cwidth[4]+rSize[4]/3, cheight[4]+rSize[4]/3);
+    text("事象A", cwidth[0]-rSize[0]/3, cheight[0]-rSize[0]/3);
+    text("事象A", cwidth[0]+rSize[0]/3, cheight[0]-rSize[0]/3);
+    text("事象A", cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3);
+    text("事象A", cwidth[0]+rSize[0]/3, cheight[0]+rSize[0]/3);
+    text("事象B", cwidth[1]-rSize[1]/3, cheight[1]-rSize[1]/3);
+    text("事象B", cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3);
+    text("事象B", cwidth[1]-rSize[1]/3, cheight[1]+rSize[1]/3);
+    text("事象B", cwidth[1]+rSize[1]/3, cheight[1]+rSize[1]/3);
+    text("事象C", cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
+    text("事象C", cwidth[2]+rSize[2]/3, cheight[2]-rSize[2]/3);
+    text("事象C", cwidth[2]-rSize[2]/3, cheight[2]+rSize[2]/3);
+    text("事象C", cwidth[2]+rSize[2]/3, cheight[2]+rSize[2]/3);
+    text("事象D", cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
+    text("事象D", cwidth[3]+rSize[3]/3, cheight[3]-rSize[3]/3);
+    text("事象D", cwidth[3]-rSize[3]/3, cheight[3]+rSize[3]/3);
+    text("事象D", cwidth[3]+rSize[3]/3, cheight[3]+rSize[3]/3);
+    text("事象E", cwidth[4]-rSize[4]/3, cheight[4]-rSize[4]/3);
+    text("事象E", cwidth[4]+rSize[4]/3, cheight[4]-rSize[4]/3);
+    text("事象E", cwidth[4]-rSize[4]/3, cheight[4]+rSize[4]/3);
+    text("事象E", cwidth[4]+rSize[4]/3, cheight[4]+rSize[4]/3);
   }
   
   cnt++;
