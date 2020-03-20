@@ -2,7 +2,7 @@ float a=0;
 int cwidth[]={220,520,270,780,750};
 int cheight[]={180,255,580,150,600};
 int cnt = 0;
-float rSize[] = {300,300,300,200,180};
+float rSize[] = {300,300,100,200,180};
 Maru[] maruhairetu;
 
 void setup(){
@@ -80,7 +80,7 @@ void draw(){
     //smaller
     rSize[0] -= 0.7;
     rSize[1] -= 0.6;
-    rSize[2] += 1;
+    rSize[2] += 3;
     rSize[3] += 0.2;
     rSize[4] += 0.7;
 
@@ -88,7 +88,7 @@ void draw(){
     //bigger
     rSize[0] += 0.7;
     rSize[1] += 0.6;
-    rSize[2] -= 1;
+    rSize[2] -= 3;
     rSize[3] -= 0.2;
     //rSize[4] -= 0.7;
   }
