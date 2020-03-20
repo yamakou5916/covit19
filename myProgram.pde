@@ -71,7 +71,7 @@ void draw(){
   }
   
   cnt++;
-  if (70 * sin(radians(cnt)) > 0) {
+  if (1000 * sin(radians(cnt)) > 0) {
     //smaller
     rSize[0] -= 0.7;
     rSize[1] -= 0.6;
@@ -101,9 +101,9 @@ void BigCircle(int i){
 }
 
 void SmallCircle(int i){
-  stroke(255, 204, 0);
-  strokeWeight(3);
   fill(0, 0, 0);
+  stroke(255, 204, 100);
+  strokeWeight(3);
   ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
