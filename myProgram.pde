@@ -28,6 +28,7 @@ void draw(){
   strokeWeight(0.1);
   line(cwidth[0]+rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[1]-rSize[1]/3, cheight[1]-rSize[1]/3);
   line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
+  line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
     
   for(int i=0; i<cwidth.length;i++){    
   
@@ -42,7 +43,7 @@ void draw(){
     text("AAAA", cwidth[0], cheight[0]);
     text("BBBB", cwidth[1], cheight[1]);
     text("CCCC", cwidth[2], cheight[2]);
-    text("CCCC", cwidth[3], cheight[3]);
+    text("DDDD", cwidth[3], cheight[3]);
     
   //Small Circle
     SmallCircle(i);
