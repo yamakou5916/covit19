@@ -1,8 +1,8 @@
 float a=0; 
-int cwidth[]={220,520,270};
-int cheight[]={180,255,580};
+int cwidth[]={220,520,270,780};
+int cheight[]={180,255,580,150};
 int cnt = 0;
-float rSize[] = {300,300,300};
+float rSize[] = {300,300,300,200};
 Maru[] maruhairetu;
 
 void setup(){
@@ -28,8 +28,6 @@ void draw(){
   strokeWeight(0.1);
   line(cwidth[0]+rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[1]-rSize[1]/3, cheight[1]-rSize[1]/3);
   line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
-
-    
     
   for(int i=0; i<cwidth.length;i++){    
   
@@ -67,12 +65,14 @@ void draw(){
     rSize[0] -= 0.7;
     rSize[1] -= 0.6;
     rSize[2] += 1;
+    rSize[3] += 0.2;
 
   } else {
     //bigger
     rSize[0] += 0.7;
     rSize[1] += 0.6;
     rSize[2] -= 1;
+    rSize[3] -= 0.2;
   }
   
 }
