@@ -90,8 +90,9 @@ void draw(){
     rSize[1] += 0.6;
     rSize[2] -= 1;
     rSize[3] -= 0.2;
-    rSize[4] -= 0.7;
+    //rSize[4] -= 0.7;
   }
+  if(rSize[4]>500){rSize[4]=180;}
   
 }
 
