@@ -32,6 +32,9 @@ void draw(){
   line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
   line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
     
+  OtherCircle();
+    
+    
   for(int i=0; i<cwidth.length;i++){    
   
   //flow
@@ -115,6 +118,21 @@ void SmallCircle(int i){
   textAlign(CENTER);
 }
 
+void OtherCircle(){
+  fill(0, 0, 0);
+  stroke(250,250,250);
+  strokeWeight(3);
+  ellipse(350, 350, 80, 80);
+  ellipse(550, 600, 80, 80);
+  ellipse(800, 350, 80, 80);
+  fill(250,250,250);
+  textSize(10);
+  textAlign(CENTER);
+  text("社会課題", 350, 350);
+  text("社会課題", 550, 600);
+  text("社会課題", 800, 350);
+
+}
 
 class Maru{
   float x,a;
