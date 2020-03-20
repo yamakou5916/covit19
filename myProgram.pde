@@ -6,7 +6,7 @@ float rSize[] = {300,300,300,200,180};
 Maru[] maruhairetu;
 
 void setup(){
-  PFont font = createFont("MS Gothic",50);
+  PFont font = createFont("YuMin_36pKn-Medium",50);
   textFont (font);
   size(1200,800);
   noStroke();
