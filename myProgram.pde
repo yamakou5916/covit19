@@ -1,8 +1,8 @@
 float a=0; 
-int cwidth[]={220,520,270,780};
-int cheight[]={180,255,580,150};
+int cwidth[]={220,520,270,780,750};
+int cheight[]={180,255,580,150,600};
 int cnt = 0;
-float rSize[] = {300,300,300,200};
+float rSize[] = {300,300,300,200,180};
 Maru[] maruhairetu;
 
 void setup(){
@@ -44,6 +44,7 @@ void draw(){
     text("BBBB", cwidth[1], cheight[1]);
     text("CCCC", cwidth[2], cheight[2]);
     text("DDDD", cwidth[3], cheight[3]);
+    text("EEEE", cwidth[4], cheight[4]);
     
   //Small Circle
     SmallCircle(i);
@@ -63,6 +64,10 @@ void draw(){
     text("DDDD", cwidth[3]+rSize[3]/3, cheight[3]-rSize[3]/3);
     text("DDDD", cwidth[3]-rSize[3]/3, cheight[3]+rSize[3]/3);
     text("DDDD", cwidth[3]+rSize[3]/3, cheight[3]+rSize[3]/3);
+    text("EEEE", cwidth[4]-rSize[4]/3, cheight[4]-rSize[4]/3);
+    text("EEEE", cwidth[4]+rSize[4]/3, cheight[4]-rSize[4]/3);
+    text("EEEE", cwidth[4]-rSize[4]/3, cheight[4]+rSize[4]/3);
+    text("EEEE", cwidth[4]+rSize[4]/3, cheight[4]+rSize[4]/3);
   }
   
   cnt++;
@@ -72,6 +77,7 @@ void draw(){
     rSize[1] -= 0.6;
     rSize[2] += 1;
     rSize[3] += 0.2;
+    rSize[4] += 0.7;
 
   } else {
     //bigger
@@ -79,6 +85,7 @@ void draw(){
     rSize[1] += 0.6;
     rSize[2] -= 1;
     rSize[3] -= 0.2;
+    rSize[4] -= 0.7;
   }
   
 }
@@ -119,7 +126,7 @@ class Maru{
       //{
         
         for(int i=0; i<cwidth.length;i++){
-          fill(color(255, 204, 0));    
+          fill(color(255, 204, 0));  
           a+=x/100000;
           ellipse(cwidth[i]+x*cos(a), cheight[i]+x*sin(a),5,5);
         }
