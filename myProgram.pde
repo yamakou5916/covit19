@@ -116,13 +116,13 @@ void BigCircle(int i){
 
 void SmallCircle(int i){
   fill(0, 0, 0);
-  stroke(255 , 255 - rSize[i]/3, 0 );
+  stroke(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
   strokeWeight(3);
   ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-  fill(255 , 255 - rSize[i]/3, 0 );
+  fill(255, 204, 0);
   textSize(10);
   textAlign(CENTER);
 }
