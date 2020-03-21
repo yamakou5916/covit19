@@ -122,7 +122,7 @@ void SmallCircle(int i){
   ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-  fill(255, 204, 0);
+  fill(255 , 255 - rSize[i]/3, 0 );
   textSize(10);
   textAlign(CENTER);
 }
