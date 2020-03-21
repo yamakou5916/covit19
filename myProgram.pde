@@ -54,30 +54,6 @@ void draw(){
     
   //Small Circle
     SmallCircle(i);
-    text("事象A", cwidth[0]-rSize[0]/3, cheight[0]-rSize[0]/3);
-    text("事象A", cwidth[0]+rSize[0]/3, cheight[0]-rSize[0]/3);
-    text("事象A", cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3);
-    text("事象A", cwidth[0]+rSize[0]/3, cheight[0]+rSize[0]/3);
-    text("事象B", cwidth[1]-rSize[1]/3, cheight[1]-rSize[1]/3);
-    text("事象B", cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3);
-    text("事象B", cwidth[1]-rSize[1]/3, cheight[1]+rSize[1]/3);
-    text("事象B", cwidth[1]+rSize[1]/3, cheight[1]+rSize[1]/3);
-    text("事象C", cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
-    text("事象C", cwidth[2]+rSize[2]/3, cheight[2]-rSize[2]/3);
-    text("事象C", cwidth[2]-rSize[2]/3, cheight[2]+rSize[2]/3);
-    text("事象C", cwidth[2]+rSize[2]/3, cheight[2]+rSize[2]/3);
-    text("事象D", cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
-    text("事象D", cwidth[3]+rSize[3]/3, cheight[3]-rSize[3]/3);
-    text("事象D", cwidth[3]-rSize[3]/3, cheight[3]+rSize[3]/3);
-    text("事象D", cwidth[3]+rSize[3]/3, cheight[3]+rSize[3]/3);
-    text("事象E", cwidth[4]-rSize[4]/3, cheight[4]-rSize[4]/3);
-    text("事象E", cwidth[4]+rSize[4]/3, cheight[4]-rSize[4]/3);
-    text("事象E", cwidth[4]-rSize[4]/3, cheight[4]+rSize[4]/3);
-    text("事象E", cwidth[4]+rSize[4]/3, cheight[4]+rSize[4]/3);
-    text("事象F", cwidth[5]-rSize[5]/3, cheight[5]-rSize[5]/3);
-    text("事象F", cwidth[5]+rSize[5]/3, cheight[5]-rSize[5]/3);
-    text("事象F", cwidth[5]-rSize[5]/3, cheight[5]+rSize[5]/3);
-    text("事象F", cwidth[5]+rSize[5]/3, cheight[5]+rSize[5]/3);
   }
   
   cnt++;
@@ -122,9 +98,13 @@ void SmallCircle(int i){
   ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-  fill(255, 204, 0);
+  fill(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
   textSize(10);
   textAlign(CENTER);
+  text("事象A", cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
+  text("事象A", cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
+  text("事象A", cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
+  text("事象A", cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
 }
 
 void OtherCircle(){
