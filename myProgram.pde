@@ -14,7 +14,7 @@ void setup(){
 
   maruhairetu =new Maru[5];
   for(int i=0; i<maruhairetu.length;i++){
-    Maru maru=new Maru(150+10*cos(random(100)),150+10*sin(random(600)));
+    Maru maru=new Maru(rSize[i],rSize[i]);
     maruhairetu[i]=maru;
   }   
 }
@@ -128,6 +128,8 @@ class Maru{
   Maru(float x, float a){
     this.x=x;
     this.a=a;
+    print(x);
+    print(a);
   }
  
   void draw(){
@@ -137,7 +139,7 @@ class Maru{
         for(int i=0; i<cwidth.length;i++){
           fill(color(255, 204, 0));  
           a+=x/100000;
-          ellipse(cwidth[i]+x*cos(a), cheight[i]+x*sin(a),5,5);
+          ellipse(cwidth[i]+rSize[i]*cos(a)/2, cheight[i]+rSize[i]*sin(a)/2,5,5);
         }
     //}
   }
