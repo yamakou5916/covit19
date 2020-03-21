@@ -8,7 +8,7 @@ Maru[] maruhairetu;
 void setup(){
   PFont font = createFont("YuMin_36pKn-Medium",50);
   textFont (font);
-  size(1200,800);
+  size(1280,840);
   noStroke();
   background(0);
 
