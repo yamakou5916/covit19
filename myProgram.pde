@@ -1,6 +1,8 @@
 float a=0; 
 int cwidth[]={220,520,270,780,950,1050, 650};
 int cheight[]={180,255,580,150,600,250,700};
+int owidth[]={100,350,410,400,550,800, 760, 250};
+int oheight[]={600,400,90,300,400,350,690,250};
 int cnt = 0;
 float rSize[] = {250,300,100,200,180,250,300};
 String smallText[][]=
@@ -125,23 +127,23 @@ void OtherCircle(){
   fill(0, 0, 0);
   stroke(250,250,250);
   strokeWeight(3);
-  ellipse(100, 600, 80, 80);
-  ellipse(350, 400, 80, 80);
-  ellipse(410, 90, 80, 80);
-  ellipse(400, 300, 80, 80);
-  ellipse(550, 400, 80, 80);
-  ellipse(800, 350, 80, 80);
-  ellipse(760, 690, 80, 80);
+  ellipse(owidth[0], oheight[0], 80, 80);
+  ellipse(owidth[1], oheight[1], 80, 80);
+  ellipse(owidth[2], oheight[2], 80, 80);
+  ellipse(owidth[3], oheight[3], 80, 80);
+  ellipse(owidth[4], oheight[4], 80, 80);
+  ellipse(owidth[5], oheight[5], 80, 80);
+  ellipse(owidth[6], oheight[6], 80, 80);
   fill(250,250,250);
   textSize(10);
   textAlign(CENTER);
-  text("不正なメディア", 100, 600);
-  text("高齢化", 350, 400);
-  text("景気後退", 410, 90);
-  text("社会保障費の\n増大", 400, 300);
-  text("医師不足\n医療崩壊", 550, 400);
-  text("経済の\nブロック化", 800, 350);
-  text("ひきこもり", 760, 690);
+  text("不正なメディア", owidth[0], oheight[0]);
+  text("高齢化", owidth[1], oheight[1]);
+  text("景気後退", owidth[2], oheight[2]);
+  text("社会保障費の\n増大", owidth[3], oheight[3]);
+  text("医師不足\n医療崩壊", owidth[4], oheight[4]);
+  text("経済の\nブロック化", owidth[5], oheight[5]);
+  text("ひきこもり", owidth[6], oheight[6]);
 
 }
 
