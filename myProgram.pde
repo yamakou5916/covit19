@@ -3,6 +3,16 @@ int cwidth[]={220,520,270,780,750,1050};
 int cheight[]={180,255,580,150,600,250};
 int cnt = 0;
 float rSize[] = {300,300,100,200,180,250};
+String smallText[][]=
+{{"事象A", "事象B", "事象C", "事象D"},
+{"事象E", "事象F", "事象G", "事象H"},
+{"事象I", "事象J", "事象K", "事象L"},
+{"事象M", "事象N", "事象O", "事象P"},
+{"事象Q", "事象R", "事象S", "事象T"},
+{"事象A", "事象B", "事象C", "事象D"},
+{"事象E", "事象F", "事象G", "事象H"},
+
+};
 Maru[] maruhairetu;
 
 void setup(){
@@ -101,10 +111,10 @@ void SmallCircle(int i){
   fill(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
   textSize(10);
   textAlign(CENTER);
-  text("事象A", cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
-  text("事象A", cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
-  text("事象A", cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
-  text("事象A", cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
+  text(smallText[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
+  text(smallText[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
+  text(smallText[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
+  text(smallText[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
 }
 
 void OtherCircle(){
