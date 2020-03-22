@@ -1,8 +1,8 @@
 float a=0; 
-int cwidth[]={220,520,270,780,750,1050};
-int cheight[]={180,255,580,150,600,250};
+int cwidth[]={220,520,270,780,950,1050, 650};
+int cheight[]={180,255,580,150,600,250,700};
 int cnt = 0;
-float rSize[] = {300,300,100,200,180,250};
+float rSize[] = {250,300,100,200,180,250,300};
 String smallText[][]=
 {{"事象A", "事象B", "事象C", "事象D"},
 {"事象E", "事象F", "事象G", "事象H"},
@@ -11,6 +11,7 @@ String smallText[][]=
 {"事象Q", "事象R", "事象S", "事象T"},
 {"事象A", "事象B", "事象C", "事象D"},
 {"事象E", "事象F", "事象G", "事象H"},
+{"事象I", "事象J", "事象K", "事象L"},
 
 };
 Maru[] maruhairetu;
@@ -18,7 +19,7 @@ Maru[] maruhairetu;
 void setup(){
   PFont font = createFont("YuMin_36pKn-Medium",50);
   textFont (font);
-  size(1280,840);
+  size(1280,1000);
   noStroke();
   background(0);
 
@@ -55,12 +56,13 @@ void draw(){
       
   //Big Circle
     BigCircle(i);
-    text("意識の変化", cwidth[0], cheight[0]);
-    text("意識の変化", cwidth[1], cheight[1]);
-    text("意識の変化", cwidth[2], cheight[2]);
-    text("意識の変化", cwidth[3], cheight[3]);
-    text("意識の変化", cwidth[4], cheight[4]);
+    text("不正なビジネスが流行る", cwidth[0], cheight[0]);
+    text("市場の自浄効果", cwidth[1], cheight[1]);
+    text("短期的な感染対策をとる", cwidth[2], cheight[2]);
+    text("政府や外国からの支援", cwidth[3], cheight[3]);
+    text("予防習慣が定着する", cwidth[4], cheight[4]);
     text("意識の変化", cwidth[5], cheight[5]);
+    text("支出を減らす", cwidth[6], cheight[6]);
     
   //Small Circle
     SmallCircle(i);
@@ -69,21 +71,23 @@ void draw(){
   cnt++;
   if (1000 * sin(radians(cnt)) > 0) {
     //smaller
-    rSize[0] -= 0.7;
+    rSize[0] += 0.7;
     rSize[1] -= 0.6;
     rSize[2] += 3;
-    rSize[3] += 0.2;
+    rSize[3] -= 0.2;
     rSize[4] += 0.7;
     rSize[5] += 0.2;
+    rSize[6] += 0.4;
 
   } else {
     //bigger
-    rSize[0] += 0.7;
+    rSize[0] -= 0.7;
     rSize[1] += 0.6;
     rSize[2] -= 3;
-    rSize[3] -= 0.2;
+    rSize[3] += 0.2;
     //rSize[4] -= 0.7;
     rSize[5] -= 0.2;
+    rSize[6] -= 0.4;
 
   }
   if(rSize[4]>500){rSize[4]=180;}
@@ -121,15 +125,17 @@ void OtherCircle(){
   fill(0, 0, 0);
   stroke(250,250,250);
   strokeWeight(3);
-  ellipse(350, 350, 80, 80);
-  ellipse(550, 600, 80, 80);
+  ellipse(350, 400, 80, 80);
+  ellipse(550, 250, 80, 80);
   ellipse(800, 350, 80, 80);
+  ellipse(760, 690, 80, 80);
   fill(250,250,250);
   textSize(10);
   textAlign(CENTER);
-  text("社会課題", 350, 350);
-  text("社会課題", 550, 600);
+  text("高齢化", 350, 400);
+  text("医師不足", 550, 400);
   text("社会課題", 800, 350);
+  text("ひきこもり", 760, 690);
 
 }
 
