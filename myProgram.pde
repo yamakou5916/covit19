@@ -126,7 +126,7 @@ void OtherCircle(){
   stroke(250,250,250);
   strokeWeight(3);
   ellipse(350, 400, 80, 80);
-  ellipse(550, 250, 80, 80);
+  ellipse(550, 400, 80, 80);
   ellipse(800, 350, 80, 80);
   ellipse(760, 690, 80, 80);
   fill(250,250,250);
