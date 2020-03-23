@@ -31,6 +31,8 @@ String smallText[][]=
 
 };
 Maru[] maruhairetu;
+ArrayList<Explosion> explosion=new ArrayList<Explosion>();
+
 
 void setup(){
   PFont font = createFont("NotoSansCJKjp-Regular",50);
@@ -51,7 +53,7 @@ void draw(){
     noStroke();
     fill(color(0, 0, 0), 32);
     rect(0,0,width,height);
-    
+    /*
 //Collision
    // if (mousePressed) {
    for(int i=0; i<cwidth.length;i++){
@@ -111,8 +113,9 @@ void draw(){
             explosion.remove(iii);
           }
         }
-     }
+     }     
    }
+   */
 
 //line
   stroke(250,250,250);
@@ -252,7 +255,6 @@ class Maru{
     //}
   }
 }
-
 class Explosion {
   ArrayList<ExRect> exRects=new ArrayList<ExRect>();
   int exRectNum=100;
