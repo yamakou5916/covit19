@@ -51,7 +51,7 @@ void draw(){
     noStroke();
     fill(color(0, 0, 0), 32);
     rect(0,0,width,height);
-    /*
+    
 //Collision
    // if (mousePressed) {
    for(int i=0; i<cwidth.length;i++){
@@ -112,7 +112,7 @@ void draw(){
           }
         }
      }
-   }*/
+   }
 
 //line
   stroke(250,250,250);
