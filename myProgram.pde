@@ -31,8 +31,6 @@ String smallText[][]=
 
 };
 Maru[] maruhairetu;
-//ArrayList<Explosion> explosion=new ArrayList<Explosion>();
-
 
 void setup(){
   PFont font = createFont("NotoSansCJKjp-Regular",50);
@@ -254,7 +252,7 @@ class Maru{
     //}
   }
 }
-/*
+
 class Explosion {
   ArrayList<ExRect> exRects=new ArrayList<ExRect>();
   int exRectNum=100;
@@ -326,4 +324,3 @@ class ExRect {
     rotate(rotateRad*PI);
   }
 }
-*/
