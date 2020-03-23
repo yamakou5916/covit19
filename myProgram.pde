@@ -285,6 +285,7 @@ class Explosion {
     }
   }
 }
+
 class ExRect {
   PVector pos=new PVector();
   PVector spd=new PVector();
