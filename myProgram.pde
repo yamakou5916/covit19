@@ -131,7 +131,7 @@ void draw(){
   //flow
     noStroke();
     for(Maru maru:maruhairetu){
-      maru.draw();
+      maru.display();
     }
     //Small Circle
     SmallCircle(i);
@@ -172,7 +172,7 @@ void draw(){
 }
 
 void PopUp(int i){
-      if( dist(cwidth[i], cheight[i],mouseX,mouseY) <= 200 && mousePressed){
+      if( dist(cwidth[i], cheight[i],mouseX,mouseY) <= 100 && mousePressed){
     rect(80, 80, 1120, 920, 7);
   }
 }
@@ -243,7 +243,7 @@ class Maru{
     print(x);
     print(a);
   }
-  void draw(){
+  void display(){
       //if (mousePressed)
       //{
         for(int i=0; i<cwidth.length;i++){
