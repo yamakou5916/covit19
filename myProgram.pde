@@ -107,13 +107,13 @@ void draw(){
         }
      } 
    }
-   
+   /*
    for (int i=explosion.size()-1; i>=0; i--) {
      explosion.get(i).run();
      if (explosion.get(i).removeFlag) {
        explosion.remove(i);
      }
-   }
+   }*/
 //line
   stroke(250,250,250);
   strokeWeight(0.1);
@@ -253,15 +253,15 @@ class Maru{
   }
 }
 class Explosion {
-  //ArrayList<ExRect> exRects=new ArrayList<ExRect>();
+  ArrayList<ExRect> exRects=new ArrayList<ExRect>();
   int exRectNum=100;
   int time=0;
   boolean removeFlag;
   PVector pos=new PVector();
   Explosion(PVector pos) {
-    //for (int i=0; i<exRectNum; i++) {
-      //exRects.add(new ExRect(new PVector(pos.x, pos.y), new PVector(random(-10, 10), random(-10, 0)), random(0, 10), random(0.01, 0.1)));
-    //}
+    for (int i=0; i<exRectNum; i++) {
+      exRects.add(new ExRect(new PVector(pos.x, pos.y), new PVector(random(-10, 10), random(-10, 0)), random(0, 10), random(0.01, 0.1)));
+    }
     this.pos=pos;
   }
   void run() {
