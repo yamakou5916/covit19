@@ -109,6 +109,9 @@ void draw(){
      }
    }
    */
+   
+    explosion.add(new Explosion(new PVector(cwidth[1]+rSize[1]/3, cheight[1]+rSize[1]/3)));
+   explosion.add(new Explosion(new PVector(cwidth[2]+rSize[2]/3, cheight[2]-rSize[2]/3)));
    for (int iii=explosion.size()-1; iii>=0; iii--) {
      explosion.get(iii).run();
      if (explosion.get(iii).removeFlag) {
