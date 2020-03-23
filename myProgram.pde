@@ -107,13 +107,13 @@ void draw(){
         }
      } 
    }
-   /*
+   
    for (int i=explosion.size()-1; i>=0; i--) {
      explosion.get(i).run();
      if (explosion.get(i).removeFlag) {
        explosion.remove(i);
      }
-   }*/
+   }
 //line
   stroke(250,250,250);
   strokeWeight(0.1);
@@ -265,9 +265,9 @@ class Explosion {
     this.pos=pos;
   }
   void run() {
-    for (int i=exRects.size()-1; i>=0; i--) {
-      exRects.get(i).run();
-    }
+    //for (int i=exRects.size()-1; i>=0; i--) {
+      //exRects.get(i).run();
+    //}
     rogic();
     display();
   }
