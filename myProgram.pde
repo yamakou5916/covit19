@@ -31,7 +31,7 @@ String smallText[][]=
 
 };
 Maru[] maruhairetu;
-ArrayList<Explosion> explosion=new ArrayList<Explosion>();
+//ArrayList<Explosion> explosion=new ArrayList<Explosion>();
 
 
 void setup(){
@@ -254,6 +254,7 @@ class Maru{
     //}
   }
 }
+/*
 class Explosion {
   ArrayList<ExRect> exRects=new ArrayList<ExRect>();
   int exRectNum=100;
@@ -325,3 +326,4 @@ class ExRect {
     rotate(rotateRad*PI);
   }
 }
+*/
