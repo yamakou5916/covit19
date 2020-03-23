@@ -54,6 +54,7 @@ void draw(){
     fill(color(0, 0, 0), 32);
     rect(0,0,width,height);
     
+    /*
 //Collision
    // if (mousePressed) {
    for(int i=0; i<cwidth.length;i++){
@@ -108,6 +109,7 @@ void draw(){
         }
      }
    }
+   */
    for (int iii=explosion.size()-1; iii>=0; iii--) {
      explosion.get(iii).run();
      if (explosion.get(iii).removeFlag) {
