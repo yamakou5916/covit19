@@ -55,7 +55,6 @@ void draw(){
     rect(0,0,width,height);
     
 //Collision
-   // if (mousePressed) {
    for(int i=0; i<cwidth.length;i++){
      for(int ii=0; ii<cwidth.length;ii++){
          if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
@@ -108,12 +107,13 @@ void draw(){
         }
      } 
    }
-    for (int i=explosion.size()-1; i>=0; i--) {
-        explosion.get(i).run();
-        if (explosion.get(i).removeFlag) {
-          explosion.remove(i);
-        }
-      }
+   /*
+   for (int i=explosion.size()-1; i>=0; i--) {
+     explosion.get(i).run();
+     if (explosion.get(i).removeFlag) {
+       explosion.remove(i);
+     }
+   }*/
 //line
   stroke(250,250,250);
   strokeWeight(0.1);
