@@ -33,7 +33,6 @@ String smallText[][]=
 Maru[] maruhairetu;
 ArrayList<PG> pgl = new ArrayList<PG>();
 
-
 void setup(){
   PFont font = createFont("NotoSansCJKjp-Regular",50);
   textFont (font);
@@ -67,62 +66,43 @@ void draw(){
    for(int i=0; i<cwidth.length;i++){
      for(int ii=0; ii<cwidth.length;ii++){
          if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          //explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+           pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 100, 3));
         }
         if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          //explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 100, 3));
         }
         if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          //explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 100, 3));
         }
         if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          //explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 100, 3));
         }
         if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          //explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 100, 3));
         }
         if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          //explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 100, 3));
         }
         if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          //explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 100, 3));
         }
         if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          //explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 100, 3));
         }
         if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          //explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 100, 3));
         }
         if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-         // explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 100, 3));
         }
         if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          //explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 100, 3));
         }
         if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          //explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3)));
-          //explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 100, 3));
         }
      } 
    }
-   /*
-   for (int i=explosion.size()-1; i>=0; i--) {
-     explosion.get(i).run();
-     if (explosion.get(i).removeFlag) {
-       explosion.remove(i);
-     }
-   }*/
 //line
   stroke(250,250,250);
   strokeWeight(0.1);
@@ -260,10 +240,6 @@ class Maru{
         }
     //}
   }
-}
-
-void mousePressed() {
-  pgl.add(new PG(mouseX, mouseY, 500, 3));
 }
 
 class PG {
