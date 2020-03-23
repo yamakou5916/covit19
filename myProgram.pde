@@ -106,16 +106,14 @@ void draw(){
           explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3)));
           explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
         }
-        
-        for (int iii=explosion.size()-1; iii>=0; iii--) {
-          explosion.get(iii).run();
-          if (explosion.get(iii).removeFlag) {
-            explosion.remove(iii);
-          }
-        }
-     }     
+     }
    }
-   
+   for (int iii=explosion.size()-1; iii>=0; iii--) {
+     explosion.get(iii).run();
+     if (explosion.get(iii).removeFlag) {
+       explosion.remove(iii);
+     }
+   }
 
 //line
   stroke(250,250,250);
