@@ -31,9 +31,11 @@ String smallText[][]=
 
 };
 Maru[] maruhairetu;
+ArrayList<Explosion> explosion=new ArrayList<Explosion>();
+
 
 void setup(){
-  PFont font = createFont("YuMin_36pKn-Medium",50);
+  PFont font = createFont("NotoSansCJKjp-Regular",50);
   textFont (font);
   size(1280,1000);
   noStroke();
@@ -51,6 +53,68 @@ void draw(){
     noStroke();
     fill(color(0, 0, 0), 32);
     rect(0,0,width,height);
+    
+//Collision
+   // if (mousePressed) {
+   for(int i=0; i<cwidth.length;i++){
+     for(int ii=0; ii<cwidth.length;ii++){
+         if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+        }
+        if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+        }
+        if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+        }
+        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+        }
+        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+        }
+        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]+rSize[ii]/3)));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]+rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+          explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3)));
+          explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
+        }
+        
+        for (int iii=explosion.size()-1; iii>=0; iii--) {
+          explosion.get(iii).run();
+          if (explosion.get(iii).removeFlag) {
+            explosion.remove(iii);
+          }
+        }
+     }     
+   }
 
 //line
   stroke(250,250,250);
@@ -58,9 +122,9 @@ void draw(){
   line(cwidth[0]+rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[1]-rSize[1]/3, cheight[1]-rSize[1]/3);
   line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
   line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
-    
+  
+  //Other Circle
   OtherCircle();
-    
     
   for(int i=0; i<cwidth.length;i++){    
   
@@ -69,12 +133,10 @@ void draw(){
     for(Maru maru:maruhairetu){
       maru.draw();
     }
-      
+    //Small Circle
+    SmallCircle(i);
   //Big Circle
     BigCircle(i);
-    
-  //Small Circle
-    SmallCircle(i);
   }
   
   cnt++;
@@ -101,6 +163,18 @@ void draw(){
   }
   if(rSize[4]>500){rSize[4]=180;}
   
+    for(int i=0; i<cwidth.length;i++){    
+      //popup
+      PopUp(i);
+    }
+
+  
+}
+
+void PopUp(int i){
+      if( dist(cwidth[i], cheight[i],mouseX,mouseY) <= 200 && mousePressed){
+    rect(80, 80, 1120, 920, 7);
+  }
 }
 
 void BigCircle(int i){
@@ -112,7 +186,6 @@ void BigCircle(int i){
   textSize(20);
   textAlign(CENTER);
   text(bigText[i][0], cwidth[i], cheight[i]);
-
 }
 
 void SmallCircle(int i){
@@ -170,16 +243,85 @@ class Maru{
     print(x);
     print(a);
   }
- 
   void draw(){
       //if (mousePressed)
       //{
-        
         for(int i=0; i<cwidth.length;i++){
           fill(color(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 ));  
           a+=x/100000;
           ellipse(cwidth[i]+rSize[i]*cos(a)/2, cheight[i]+rSize[i]*sin(a)/2,3,3);
         }
     //}
+  }
+}
+class Explosion {
+  ArrayList<ExRect> exRects=new ArrayList<ExRect>();
+  int exRectNum=100;
+  int time=0;
+  boolean removeFlag;
+  PVector pos=new PVector();
+  Explosion(PVector pos) {
+    for (int i=0; i<exRectNum; i++) {
+      //exRects.add(new ExRect(new PVector(pos.x, pos.y), new PVector(random(-10, 10), random(-10, 0)), random(0, 10), random(0.01, 0.1)));
+    }
+    this.pos=pos;
+  }
+  void run() {
+    for (int i=exRects.size()-1; i>=0; i--) {
+      exRects.get(i).run();
+    }
+    rogic();
+    display();
+  }
+  void display() {
+    noFill();
+    stroke(250,204,0,50);
+    circle(pos.x, pos.y, time*0.5);
+    circle(pos.x, pos.y, time*1);
+    circle(pos.x, pos.y, time*2);
+  }
+  void rogic() {
+    time+=10;
+    if (time>=70) {
+      removeFlag=true;
+    }
+  }
+}
+class ExRect {
+  PVector pos=new PVector();
+  PVector spd=new PVector();
+  float size;
+  float gravity=0;
+  float rotateRad;
+  float rotateSpd;
+  float alpha=50;
+  ExRect(PVector pos, PVector spd, float size, float rotateSpd) {
+    this.pos=pos;
+    this.spd=spd;
+    this.size=size;
+    this.rotateSpd=rotateSpd;
+  }
+  void run() {
+    rogic();
+    pushMatrix();
+    setMatrix();
+    display();
+    popMatrix();
+  }
+  void display() {
+    noFill();
+    stroke(250,204,0, alpha);
+    strokeWeight(1);
+    rect(0, 0, size, size);
+  }
+  void rogic() {
+    rotateRad+=rotateSpd;
+    spd.y+=gravity;
+    pos.add(spd);
+    alpha--;
+  }
+  void setMatrix() {
+    translate(pos.x, pos.y);
+    rotate(rotateRad*PI);
   }
 }
