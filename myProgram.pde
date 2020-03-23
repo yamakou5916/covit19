@@ -54,8 +54,8 @@ void draw(){
     fill(color(0, 0, 0), 32);
     rect(0,0,width,height);
     
-    /*
 //Collision
+   // if (mousePressed) {
    for(int i=0; i<cwidth.length;i++){
      for(int ii=0; ii<cwidth.length;ii++){
          if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
@@ -106,17 +106,14 @@ void draw(){
           explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3)));
           explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
         }
-     }
-   }
-   */
-   
-    explosion.add(new Explosion(new PVector(cwidth[1]+rSize[1]/3, cheight[1]+rSize[1]/3)));
-   explosion.add(new Explosion(new PVector(cwidth[2]+rSize[2]/3, cheight[2]-rSize[2]/3)));
-   for (int iii=explosion.size()-1; iii>=0; iii--) {
-     explosion.get(iii).run();
-     if (explosion.get(iii).removeFlag) {
-       explosion.remove(iii);
-     }
+        
+        for (int iii=explosion.size()-1; iii>=0; iii--) {
+          explosion.get(iii).run();
+          if (explosion.get(iii).removeFlag) {
+            explosion.remove(iii);
+          }
+        }
+     }     
    }
 
 //line
@@ -130,15 +127,19 @@ void draw(){
   OtherCircle();
     
   for(int i=0; i<cwidth.length;i++){    
+  
   //flow
     noStroke();
     for(Maru maru:maruhairetu){
-      maru.display();
+      maru.draw();
     }
     //Small Circle
     SmallCircle(i);
   //Big Circle
     BigCircle(i);
+    
+  //popup
+
   }
   
   cnt++;
@@ -165,16 +166,6 @@ void draw(){
   }
   if(rSize[4]>500){rSize[4]=180;}
   
-  for(int i=0; i<cwidth.length;i++){    
-    //popup
-    PopUp(i);
-  }
-}
-
-void PopUp(int i){
-  if( dist(cwidth[i], cheight[i],mouseX,mouseY) <= 100 && mousePressed){
-    rect(80, 80, 1120, 920, 7);
-  }
 }
 
 void BigCircle(int i){
@@ -243,7 +234,7 @@ class Maru{
     print(x);
     print(a);
   }
-  void display(){
+  void draw(){
       //if (mousePressed)
       //{
         for(int i=0; i<cwidth.length;i++){
@@ -275,7 +266,7 @@ class Explosion {
   }
   void display() {
     noFill();
-    stroke(250,204,0,50);
+    stroke(250,204,0,100);
     circle(pos.x, pos.y, time*0.5);
     circle(pos.x, pos.y, time*1);
     circle(pos.x, pos.y, time*2);
