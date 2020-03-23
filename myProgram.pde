@@ -106,16 +106,14 @@ void draw(){
           explosion.add(new Explosion(new PVector(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3)));
           explosion.add(new Explosion(new PVector(cwidth[ii]-rSize[ii]/3, cheight[ii]-rSize[ii]/3)));
         }
-        
-        for (int iii=explosion.size()-1; iii>=0; iii--) {
-          explosion.get(iii).run();
-          if (explosion.get(iii).removeFlag) {
-            explosion.remove(iii);
-          }
-        }
-     }     
+     } 
    }
-
+    for (int i=explosion.size()-1; i>=0; i--) {
+        explosion.get(i).run();
+        if (explosion.get(i).removeFlag) {
+          explosion.remove(i);
+        }
+      }
 //line
   stroke(250,250,250);
   strokeWeight(0.1);
@@ -137,9 +135,6 @@ void draw(){
     SmallCircle(i);
   //Big Circle
     BigCircle(i);
-    
-  //popup
-
   }
   
   cnt++;
@@ -166,7 +161,19 @@ void draw(){
   }
   if(rSize[4]>500){rSize[4]=180;}
   
+  
+    for(int i=0; i<cwidth.length;i++){    
+    //popup
+    PopUp(i);
+  }
 }
+
+void PopUp(int i){
+  if( dist(cwidth[i], cheight[i],mouseX,mouseY) <= 100 && mousePressed){
+    rect(80, 80, 1120, 920, 7);
+  }
+}
+ 
 
 void BigCircle(int i){
   stroke(250,250,250);
@@ -253,7 +260,7 @@ class Explosion {
   PVector pos=new PVector();
   Explosion(PVector pos) {
     for (int i=0; i<exRectNum; i++) {
-      //exRects.add(new ExRect(new PVector(pos.x, pos.y), new PVector(random(-10, 10), random(-10, 0)), random(0, 10), random(0.01, 0.1)));
+      exRects.add(new ExRect(new PVector(pos.x, pos.y), new PVector(random(-10, 10), random(-10, 0)), random(0, 10), random(0.01, 0.1)));
     }
     this.pos=pos;
   }
