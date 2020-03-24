@@ -110,8 +110,8 @@ p.circle {
 
 .open_btn {
   position: absolute;
-    top: 0;
-    left: 0;
+  top: 50%;
+  left: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
