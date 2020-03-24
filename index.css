@@ -15,9 +15,14 @@ h1.intro_top {
 p.intro{
 	margin-bottom: 20px;
 }
+p.quote{
+	font-size: 30px;
+	margin-bottom: 40px;
+}
 .box{
 	width: 800px;
 	height: 50px;
+	border-radius: 40px;
 	background: rgb(183,255,0);
 	background: linear-gradient(90deg, rgba(183,255,0,1) 0%, rgba(255,53,0,1) 100%);
 	text-align:center;
@@ -28,14 +33,14 @@ p.intro{
 	font-family: 'Noto Sans JP', sans-serif;
 	font-size: 20px;
 	margin-top: 10px;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 .high {
 	float: right;
 	font-family: 'Noto Sans JP', sans-serif;
 	font-size: 20px;
 	margin-top: 10px;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 p.circle {
 	margin-top: 20px;
