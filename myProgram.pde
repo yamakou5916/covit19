@@ -64,8 +64,8 @@ textSize(15);
 textAlign(CENTER);
 text("一時的", 45,height/2+7.5);
 text("継続的", width-45,height/2+7.5);
-text("社会", width/2,30);
 text("個人", width/2,height-30);
+text("社会", width/2,30);
 
     
   //Other Circle
