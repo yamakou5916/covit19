@@ -287,7 +287,7 @@ class PG {
       sp *= 0.99; //0.99を変えると減速速度が速くなる
       if (x < 0 || x > width) dead = true;
       if (y < 0 || y > height) dead = true;
-      if (sp < 0.3) dead = true;
+      if (sp < 1) dead = true;
     }
     
     void draw() {
