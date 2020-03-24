@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 	
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">	
 
 <!--
 .p-title{width:312px;font-weight:bold; text-align:center;border-left:1px solid #000;border-right:1px solid #000;margin:auto;}
@@ -40,11 +40,18 @@
 <body bgcolor= "#000"; style="min-width: 1200px">
 
 <div class="div-base">
-	<h1>Experience map after COVIDE-19</h1>
-	<p>2019年11月に中国武漢を震源に発生したコロナウイルスは、瞬く間に拡散し2020年3月現在、世界Xカ国約20万人への感染が確認された.<br>
+	<h1 class="intro_top">Experience map after COVIDE-19</h1>
+	<p class="intro">2019年11月に中国武漢を震源に発生したコロナウイルスは、瞬く間に拡散し2020年3月現在、世界Xカ国約20万人への感染が確認された.<br>
 	その病原菌を伝染させるだけではなく、それぞれの時と場所で新しい意識と生活を伝染させ根付かせている.<br>
 	以下の図はコロナウイルスの影響による人々の経済活動と意識の変化を示したものである. </p>
-	
+
+	<div class="box">
+		<p class="low">低</p>
+		<p class="high">高</p>
+	</div>
+
+	<p class="circle">&#9679; 拡大・縮小&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&#9679; 拡大・縮小</p>
+
 	<canvas class="data" data-processing-sources="myProgram.pde"></canvas>
 
 </div><!--div class="div-base"-->

@@ -1,13 +1,44 @@
-.div-base {
+* {
+	margin:0;
+	padding:0;
 	text-align: center;
-	margin-top: 80px;
+}
+.div-base {
 	font-family: 'Noto Sans JP', sans-serif;
 	color: #fff;
 }
-
-h1{
-font-family: 'Roboto', sans-serif;
+h1.intro_top {
+	margin-top: 80px;
+	margin-bottom: 20px;
+	font-family: 'Roboto', sans-serif;
 }
-
+p.intro{
+	margin-bottom: 20px;
+}
+.box{
+	width: 800px;
+	height: 50px;
+	background: rgb(0,0,255);
+	background: linear-gradient(90deg, rgba(0,0,255,1) 0%, rgba(255,0,0,1) 100%);
+	text-align:center;
+	margin:0 auto;
+}
+.low {
+	float: left;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.high {
+	float: right;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+p.circle {
+	margin-top: 20px;
+}
 .data {
 }
