@@ -54,6 +54,10 @@ void draw(){
     fill(color(0, 0, 0), 32);
     rect(0,0,width,height);
     
+  //Other Circle
+  fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+  OtherCircle();
+    
     for (int i = pgl.size() - 1; i >= 0; i--) {
     PG pg = pgl.get(i);
     if (pg.dead) {
@@ -62,6 +66,7 @@ void draw(){
       pg.draw();
     }
   }
+    
     
 //Collision
    for(int i=0; i<cwidth.length;i++){
@@ -111,9 +116,6 @@ void draw(){
   line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
   line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
   
-  //Other Circle
-  OtherCircle();
-    
   for(int i=0; i<cwidth.length;i++){    
   
   //flow
@@ -185,7 +187,6 @@ void SmallCircle(int i){
 }
 
 void OtherCircle(){
-  fill(250,250,250);
   stroke(0, 0, 0);
   strokeWeight(0);
   ellipse(owidth[0], oheight[0], 80, 80);
