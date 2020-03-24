@@ -77,13 +77,13 @@ text("継続的", width-45,height/2+7.5);
 text("個人", width/2,height-30);
 text("社会", width/2,30);
 
-print(loopcnt);
+print(loopcnt%3);
   //Other Circle
   for(int i=0; i<owidth.length;i++){
     if(otherText[i][1]=="0"){
       fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
         OtherCircle(i);
-      if(cos(radians(cnt)) == -1&&loopcnt==2){
+      if(cos(radians(cnt)) == -1&&loopcnt%3==2){
         otherText[1][1] = "1";
         otherText[5][1] = "1";
         otherText[7][1] = "1";
@@ -101,6 +101,9 @@ print(loopcnt);
     fill(250,250,250);
         OtherCircle(i);
         otherText[i][1]="2";
+      }
+      if(cos(radians(cnt)) == -1&&loopcnt%3==0){
+        otherText[i][1]="0";
       }
   }
     
