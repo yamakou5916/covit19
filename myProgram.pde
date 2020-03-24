@@ -100,10 +100,9 @@ print(loopcnt%3);
     }else{
     fill(250,250,250);
         OtherCircle(i);
-        otherText[i][1]="2";
-      }
-      if(cos(radians(cnt)) == -1&&loopcnt%3==0){
+        if(cos(radians(cnt)) == -1&&loopcnt%3==0){
         otherText[i][1]="0";
+      }
       }
   }
     
