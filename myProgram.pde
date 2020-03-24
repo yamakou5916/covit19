@@ -54,6 +54,12 @@ void draw(){
     fill(color(0, 0, 0), 32);
     rect(0,0,width,height);
     
+//軸
+stroke(250,250,250,50);
+strokeWeight(0.1);
+line(0,height/2, width,height/2);
+line(width/2,0, width/2,height);
+    
   //Other Circle
   fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
   OtherCircle();
