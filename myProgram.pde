@@ -187,7 +187,7 @@ void SmallCircle(int i){
 void OtherCircle(){
   fill(250,250,250);
   stroke(0, 0, 0);
-  strokeWeight(3);
+  strokeWeight(0);
   ellipse(owidth[0], oheight[0], 80, 80);
   ellipse(owidth[1], oheight[1], 80, 80);
   ellipse(owidth[2], oheight[2], 80, 80);
