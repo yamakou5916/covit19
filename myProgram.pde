@@ -15,11 +15,7 @@ String bigText[][]=
 {"身の回りの生活が変わる","身の回りの生活が安定する"},
 {"支出を減らす","支出が戻る"},
 {},
-{},
-{},
-{}
 };
-
 String smallText[][]=
 {{"ネットで\n転売する", "株価下落を\n狙った空売り", "過剰購入\n買い占め", "認可外の\n医療品の流通"},
 {"安心が\n伝播する", "医療品・人員の\n追加補給", "医療格差を\n解消する", "医療サービスの\n増強・進歩"},
@@ -29,8 +25,21 @@ String smallText[][]=
 {"新しい法律へ\n対応する", "製品の機能\nパッケージの変更", "生産・流通\nプロセスの変更", "清潔なイメージ\nPR・CSR戦略"},
 {"旅行・出張を\nキャンセルする", "収入の減少を\n想定する", "集会参加を\nキャンセルする", "ポートフォリオを\n変更する"},
 {"事象I", "事象J", "事象K", "事象L"},
-
 };
+String otherText[][]=
+{{"フェイクニュース\nの横行",},
+{"平均消費性向の\n低下・停滞",},
+{"株価の暴落",},
+{"社会保障費の\n増大",},
+{"医師不足\n医療崩壊", },
+{"経済圏の\nブロック化",},
+{"ひきこもり",},
+{"行き過ぎた\n清潔観・差別",},
+{"デジタル化\nによる失業",},
+{"首脳レベルの\n利権と癒着",},
+{},
+};
+
 Maru[] maruhairetu;
 ArrayList<PG> pgl = new ArrayList<PG>();
 
@@ -69,8 +78,10 @@ text("社会", width/2,30);
 
     
   //Other Circle
-  fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
-  OtherCircle();
+  for(int i=0; i<owidth.length;i++){    
+    fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+    OtherCircle(i);
+  }
     
     for (int i = pgl.size() - 1; i >= 0; i--) {
     PG pg = pgl.get(i);
@@ -200,32 +211,14 @@ void SmallCircle(int i){
   text(smallText[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
 }
 
-void OtherCircle(){
+void OtherCircle(int i){
   stroke(0, 0, 0);
   strokeWeight(0);
-  ellipse(owidth[0], oheight[0], 80, 80);
-  ellipse(owidth[1], oheight[1], 80, 80);
-  ellipse(owidth[2], oheight[2], 80, 80);
-  ellipse(owidth[3], oheight[3], 80, 80);
-  ellipse(owidth[4], oheight[4], 80, 80);
-  ellipse(owidth[5], oheight[5], 80, 80);
-  ellipse(owidth[6], oheight[6], 80, 80);
-  ellipse(owidth[7], oheight[7], 80, 80);
-  ellipse(owidth[8], oheight[8], 80, 80);
-  ellipse(owidth[9], oheight[9], 80, 80);
+  ellipse(owidth[i], oheight[i], 80, 80);
   fill(0,0,0);
   textSize(10);
   textAlign(CENTER);
-  text("フェイクニュース\nの横行", owidth[0], oheight[0]);
-  text("平均消費性向の\n低下・停滞", owidth[1], oheight[1]);
-  text("株価の暴落", owidth[2], oheight[2]);
-  text("社会保障費の\n増大", owidth[3], oheight[3]);
-  text("医師不足\n医療崩壊", owidth[4], oheight[4]);
-  text("経済圏の\nブロック化", owidth[5], oheight[5]);
-  text("ひきこもり", owidth[6], oheight[6]);
-  text("行き過ぎた\n清潔観・差別", owidth[7], oheight[7]);
-  text("デジタル化\nによる失業", owidth[8], oheight[8]);
-  text("首脳レベルの\n利権と癒着", owidth[9], oheight[9]);
+  text(otherText[i][0], owidth[i], oheight[i]);
 
 }
 
