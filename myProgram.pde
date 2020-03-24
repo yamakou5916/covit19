@@ -86,7 +86,7 @@ print(loopcnt);
       if(cos(radians(cnt)) == -1&&loopcnt==2){
         otherText[1][1] = "1";
         otherText[5][1] = "1";
-        otherText[6][1] = "1";
+        otherText[7][1] = "1";
       }
     }else if(int(otherText[i][1])==1){
       if(cos(radians(cnt))>-0.99){
