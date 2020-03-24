@@ -82,7 +82,7 @@ p.circle {
   align-self: center;
   width: 90%;
   max-width: 800px;
-  padding: 0px;
+  padding: 80px;
   box-sizing: border-box;
   background: #fff;
   line-height: 1.4em;
@@ -104,12 +104,14 @@ p.circle {
   transition: opacity 0.5s;
 }
 
+.sample-box {
+    position: relative;
+}
+
 .open_btn {
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: absolute;
+    top: 0;
+    left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
