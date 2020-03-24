@@ -154,20 +154,8 @@ void draw(){
   if(rSize[4]>500){
   rSize[4]=180;
 }
-  
-    for(int i=0; i<cwidth.length;i++){    
-    //popup
-    PopUp(i);
-  }
-}
-
-void PopUp(int i){
-  if( dist(cwidth[i], cheight[i],mouseX,mouseY) <= 100 && mousePressed){
-    rect(80, 80, 1120, 920, 7);
-  }
 }
  
-
 void BigCircle(int i){
   stroke(250,250,250);
   strokeWeight(0.1);
