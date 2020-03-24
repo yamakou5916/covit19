@@ -59,6 +59,14 @@ stroke(250,250,250,50);
 strokeWeight(0.1);
 line(0,height/2, width,height/2);
 line(width/2,0, width/2,height);
+fill(250,250,250,50);
+textSize(15);
+textAlign(CENTER);
+text("一時的", 45,height/2+7.5);
+text("継続的", width-45,height/2+7.5);
+text("個人", width/2,30);
+text("社会", width/2,height-30);
+
     
   //Other Circle
   fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
