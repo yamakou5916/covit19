@@ -185,8 +185,8 @@ void SmallCircle(int i){
 }
 
 void OtherCircle(){
-  fill(0, 0, 0);
-  stroke(250,250,250);
+  fill(250,250,250);
+  stroke(0, 0, 0);
   strokeWeight(3);
   ellipse(owidth[0], oheight[0], 80, 80);
   ellipse(owidth[1], oheight[1], 80, 80);
@@ -198,7 +198,7 @@ void OtherCircle(){
   ellipse(owidth[7], oheight[7], 80, 80);
   ellipse(owidth[8], oheight[8], 80, 80);
   ellipse(owidth[9], oheight[9], 80, 80);
-  fill(250,250,250);
+  fill(0,0,0);
   textSize(10);
   textAlign(CENTER);
   text("フェイクニュース\nの横行", owidth[0], oheight[0]);
