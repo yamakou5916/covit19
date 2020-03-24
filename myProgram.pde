@@ -4,6 +4,7 @@ int cheight[]={180,255,580,270,600,250,700};
 int owidth[]={100,770,410,400,550,840, 510,1150,930,750};
 int oheight[]={600,670,90,300,400,400,700,550,450,390};
 int cnt = 0;
+int loopcnt = 0;
 int textnum = 0;
 float rSize[] = {250,400,100,160,180,400,300};
 String bigText[][]=
@@ -27,16 +28,16 @@ String smallText[][]=
 {"事象I", "事象J", "事象K", "事象L"},
 };
 String otherText[][]=
-{{"フェイクニュース\nの横行",},
-{"平均消費性向の\n低下・停滞",},
-{"株価の暴落",},
-{"社会保障費の\n増大",},
-{"医師不足\n医療崩壊", },
-{"経済圏の\nブロック化",},
-{"ひきこもり",},
-{"行き過ぎた\n清潔観・差別",},
-{"デジタル化\nによる失業",},
-{"首脳レベルの\n利権と癒着",},
+{{"フェイクニュース\nの横行","0"},
+{"平均消費性向の\n低下・停滞","0"},
+{"株価の暴落","0"},
+{"社会保障費の\n増大","0"},
+{"医師不足\n医療崩壊","0"},
+{"経済圏の\nブロック化","0"},
+{"ひきこもり","0"},
+{"行き過ぎた\n清潔観・差別","0"},
+{"デジタル化\nによる失業","1"},
+{"首脳レベルの\n利権と癒着","0"},
 {},
 };
 
@@ -76,11 +77,31 @@ text("継続的", width-45,height/2+7.5);
 text("個人", width/2,height-30);
 text("社会", width/2,30);
 
-    
+print(loopcnt);
   //Other Circle
-  for(int i=0; i<owidth.length;i++){    
-    fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
-    OtherCircle(i);
+  for(int i=0; i<owidth.length;i++){
+    if(otherText[i][1]=="0"){
+      fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+        OtherCircle(i);
+      if(cos(radians(cnt)) == -1&&loopcnt==2){
+        otherText[1][1] = "1";
+        otherText[5][1] = "1";
+        otherText[6][1] = "1";
+      }
+    }else if(int(otherText[i][1])==1){
+      if(cos(radians(cnt))>-0.99){
+        fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+        OtherCircle(i);
+      }else{
+        fill(250,250,250);
+        OtherCircle(i);
+        otherText[i][1]="2";
+      }
+    }else{
+    fill(250,250,250);
+        OtherCircle(i);
+        otherText[i][1]="2";
+      }
   }
     
     for (int i = pgl.size() - 1; i >= 0; i--) {
@@ -91,7 +112,6 @@ text("社会", width/2,30);
       pg.draw();
     }
   }
-    
     
 //Collision
    for(int i=0; i<cwidth.length;i++){
@@ -142,7 +162,6 @@ text("社会", width/2,30);
   line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
   
   for(int i=0; i<cwidth.length;i++){    
-  
   //flow
     noStroke();
     for(Maru maru:maruhairetu){
@@ -180,6 +199,9 @@ text("社会", width/2,30);
   }
   if(rSize[4]>500){
   rSize[4]=180;
+}
+if(-1 == cos(radians(cnt)) ){
+  loopcnt++;
 }
 }
  
@@ -227,8 +249,6 @@ class Maru{
   Maru(float x, float a){
     this.x=x;
     this.a=a;
-    print(x);
-    print(a);
   }
   void draw(){
       //if (mousePressed)
