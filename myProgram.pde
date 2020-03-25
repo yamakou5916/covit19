@@ -8,13 +8,13 @@ int loopcnt = 0;
 int textnum = 0;
 float rSize[] = {250,400,100,160,180,400,300};
 String bigText[][]=
-{{"不正なビジネスが流行する","不正なビジネスを取り締まる"},
-{"市場の失敗","市場の自浄効果"},
-{"短期的な感染対策をとる","感染が沈静化する"},
-{"政府や外国の引き締め","政府や外国からの緩和"},
-{"予防習慣が定着する","予防習慣が定着する"},
-{"身の回りの生活が変わる","身の回りの生活が安定する"},
-{"支出を減らす","支出が戻る"},
+{{"不正なビジネスが流行する（＋）","不正なビジネスを取り締まる（ー）"},
+{"市場の失敗（ー）","市場の自浄効果（＋）"},
+{"短期的な感染対策をとる（＋）","感染が沈静化する（ー）"},
+{"政府や外国の引き締め（＋）","政府や外国の緩和（ー）"},
+{"予防習慣が定着する（＋）","予防習慣が定着する（＋）"},
+{"身の回りの生活が変わる（＋）","身の回りの生活が安定する（ー）"},
+{"支出を減らす（＋）","支出が戻る（ー）"},
 {},
 };
 String smallText[][]=
@@ -36,7 +36,7 @@ String otherText[][]=
 {"経済圏の\nブロック化","0"},
 {"ひきこもり","0"},
 {"行き過ぎた\n清潔観・差別","0"},
-{"デジタル化\nによる失業","1"},
+{"デジタル化\nによる失業","0"},
 {"首脳レベルの\n利権と癒着","0"},
 {},
 };
@@ -77,12 +77,12 @@ text("継続的", width-45,height/2+7.5);
 text("個人", width/2,height-30);
 text("社会", width/2,30);
 
-print(loopcnt%3);
   //Other Circle
   for(int i=0; i<owidth.length;i++){
     if(otherText[i][1]=="0"){
       fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
         OtherCircle(i);
+        otherText[8][1] = "1";
       if(cos(radians(cnt)) == -1&&loopcnt%3==2){
         otherText[1][1] = "1";
         otherText[5][1] = "1";
@@ -100,7 +100,7 @@ print(loopcnt%3);
     }else{
     fill(250,250,250);
         OtherCircle(i);
-        if(cos(radians(cnt)) == -1&&loopcnt%3==0){
+        if(cos(radians(cnt)) == -1&&loopcnt%3==2){
         otherText[i][1]="0";
       }
       }
@@ -213,7 +213,7 @@ void BigCircle(int i){
   noFill();
   ellipse(cwidth[i], cheight[i],rSize[i],rSize[i]);
   fill(255);
-  textSize(20);
+  textSize(16);
   textAlign(CENTER);
   text(bigText[i][textnum], cwidth[i], cheight[i]);
 }
