@@ -198,7 +198,7 @@ text("社会", width/2,30);
     rSize[3] += 0.2;
     rSize[4] += 0.7;
     rSize[5] -= 0.5;
-    rSize[6] += 0.4;
+    rSize[6] -= 0.4;
     textnum = 0;
 
   } else {
@@ -209,7 +209,7 @@ text("社会", width/2,30);
     rSize[3] -= 0.2;
     //rSize[4] -= 0.7;
     rSize[5] += 0.5;
-    rSize[6] -= 0.4;
+    rSize[6] += 0.4;
     textnum = 1;
 
   }
