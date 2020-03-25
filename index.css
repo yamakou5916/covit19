@@ -106,11 +106,12 @@ p.circle {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
   color: #fff;
   background: #0c0d62;
+  opacity: 0.1;
   font-weight: bold;
   border-radius: 100px;
   cursor: pointer;
