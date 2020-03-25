@@ -46,7 +46,27 @@ p.quote {
 p.circle {
   margin-top: 20px;
 }
-
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+li {
+  background-color: #CCC;
+  width: auto;
+  height: 100px;
+  padding: 20px;
+  margin: 5px;
+}
+.inline {
+  text-align: center;
+}
+.inline li {
+  display: inline;
+}
+.clr-block {
+  clear: both;
+  margin: 40px;
+}
 /*ポップアップここから*/
 
 .popup_wrap input {
@@ -125,7 +145,6 @@ p.circle {
 p.info {
   color: #000;
 }
-
 /*ポップアップココまで*/
 
 .data {
