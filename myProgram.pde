@@ -82,7 +82,7 @@ text("社会", width/2,30);
     if(otherText[i][1]=="0"){
       fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
         OtherCircle(i);
-      if(cos(radians(cnt)) == -1&&loopcnt%3==0){
+      if(cos(radians(cnt)) == -1&&loopcnt%3==1){
         otherText[8][1] = "1";
       }
       if(cos(radians(cnt)) == -1&&loopcnt%3==2){
@@ -102,7 +102,7 @@ text("社会", width/2,30);
     }else if(int(otherText[i][1])==2){
     fill(250,250,250);
         OtherCircle(i);
-        if(cos(radians(cnt)) == -1&&loopcnt%3==2){
+        if(cos(radians(cnt)) == -1&&loopcnt%3==0){
         otherText[i][1]="0";
       }
       }
