@@ -101,8 +101,8 @@ p.circle {
 }
 .open_btn {
   position: absolute;
-  top: 6%;
-  left: 34%;
+  top: 5%;
+  left: 33%;
   display: flex;
   justify-content: center;
   align-items: center;
