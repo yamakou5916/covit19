@@ -17,9 +17,20 @@ String bigText[][]=
 {"支出を減らす（＋）","支出が戻る（ー）"},
 {},
 };
-String smallText[][]=
+String smallText0[][]=
 {{"ネットで\n転売する", "株価下落を\n狙った空売り", "過剰購入\n買い占め", "認可外の\n医療品の流通"},
 {"安心が\n伝播する", "医療品・人員の\n追加補給", "医療格差を\n解消する", "医療サービスの\n増強・進歩"},
+{"氾濫した情報で\n混乱する", "自己判断での\n医療行為", "情報を集める", "外出・人との\n接触を避ける"},
+{"パンデミックを\n宣言する", "国民の行動を\n統制する", "医療援助", "検疫を\n強化する"},
+{"リモートワークが\n浸透する", "清潔さへの\n関心の高まり", "万一に備え\n貯蓄する", "キャッシュレス\neコマースでの\n物資補給"},
+{"新しい法律へ\n対応する", "製品の機能\nパッケージの変更", "生産・流通\nプロセスの変更", "清潔なイメージ\nPR・CSR戦略"},
+{"旅行・出張を\nキャンセルする", "収入の減少を\n想定する", "集会参加を\nキャンセルする", "ポートフォリオを\n変更する"},
+{"事象I", "事象J", "事象K", "事象L"},
+};
+
+String smallText1[][]=
+{{"ネットで\n転売する", "株の買い戻し", "流通網の\n整理", "医療品の\n流通量の拡充"},
+{"不安が\n伝播する", "医療品・人員が\n足りない", "医療格差が\n拡大する", "医療サービスの\n増強・進歩"},
 {"氾濫した情報で\n混乱する", "自己判断での\n医療行為", "情報を集める", "外出・人との\n接触を避ける"},
 {"パンデミックを\n宣言する", "国民の行動を\n統制する", "医療援助", "検疫を\n強化する"},
 {"リモートワークが\n浸透する", "清潔さへの\n関心の高まり", "万一に備え\n貯蓄する", "キャッシュレス\neコマースでの\n物資補給"},
@@ -232,10 +243,17 @@ void SmallCircle(int i){
   fill(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
   textSize(10);
   textAlign(CENTER);
-  text(smallText[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
-  text(smallText[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
-  text(smallText[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
-  text(smallText[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
+  if(textnum==0){
+    text(smallText0[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
+    text(smallText0[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
+    text(smallText0[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
+    text(smallText0[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
+  }else{
+    text(smallText1[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
+    text(smallText1[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
+    text(smallText1[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
+    text(smallText1[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
+  }
 }
 
 void OtherCircle(int i){
