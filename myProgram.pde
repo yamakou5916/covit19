@@ -85,8 +85,8 @@ textSize(15);
 textAlign(CENTER);
 text("一時的", 45,height/2+7.5);
 text("継続的", width-45,height/2+7.5);
-text("生活風習", width/2,height-30);
-text("経済活動", width/2,30);
+text("防疫意識・生活風習", width/2,height-30);
+text("政治・経済活動", width/2,30);
 
   //Other Circle
   for(int i=0; i<owidth.length;i++){
