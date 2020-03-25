@@ -1,60 +1,57 @@
 * {
-	margin:0;
-	padding:0;
-	text-align: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 .div-base {
-	font-family: 'Noto Sans JP', sans-serif;
-	color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #fff;
 }
 h1.intro_top {
-	margin-top: 80px;
-	margin-bottom: 20px;
-	font-family: 'Roboto', sans-serif;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
 }
-p.intro{
-	margin-bottom: 20px;
-	font-size: 16px;
+p.intro {
+  margin-bottom: 20px;
+  font-size: 16px;
 }
-p.quote{
-	font-size: 30px;
-	margin-bottom: 40px;
+p.quote {
+  font-size: 30px;
+  margin-bottom: 40px;
 }
-.box{
-	width: 800px;
-	height: 50px;
-	border-radius: 40px;
-	background: rgb(183,255,0);
-	background: linear-gradient(90deg, rgba(183,255,0,1) 0%, rgba(255,53,0,1) 100%);
-	text-align:center;
-	margin:0 auto;
+.box {
+  width: 800px;
+  height: 50px;
+  border-radius: 40px;
+  background: rgb(183, 255, 0);
+  background: linear-gradient(90deg, rgba(183, 255, 0, 1) 0%, rgba(255, 53, 0, 1) 100%);
+  text-align: center;
+  margin: 0 auto;
 }
 .low {
-	float: left;
-	font-family: 'Noto Sans JP', sans-serif;
-	font-size: 20px;
-	margin-top: 10px;
-	margin-left: 20px;
+  float: left;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 .high {
-	float: right;
-	font-family: 'Noto Sans JP', sans-serif;
-	font-size: 20px;
-	margin-top: 10px;
-	margin-right: 20px;
+  float: right;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
 }
 p.circle {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
-
-
-
 /*ポップアップここから*/
+
 .popup_wrap input {
   display: none;
 }
-
 .popup_overlay {
   display: flex;
   justify-content: center;
@@ -70,13 +67,11 @@ p.circle {
   transition: opacity 0.5s, transform 0s 0.5s;
   transform: scale(0);
 }
-
 .popup_trigger {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-
 .popup_content {
   position: relative;
   align-self: center;
@@ -88,7 +83,6 @@ p.circle {
   line-height: 1.4em;
   transition: 0.5s;
 }
-
 .close_btn {
   position: absolute;
   top: 14px;
@@ -97,45 +91,45 @@ p.circle {
   cursor: pointer;
   color: #000;
 }
-
-.popup_wrap input:checked ~ .popup_overlay {
+.popup_wrap input:checked~.popup_overlay {
   opacity: 1;
   transform: scale(1);
   transition: opacity 0.5s;
 }
-
 .sample-box {
-    position: relative;
+  position: relative;
 }
-
 .open_btn {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 10%;
+  left: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 30px;
   height: 30px;
   margin: 0 auto;
   color: #fff;
-  background:#0c0d62;
+  background: #0c0d62;
   font-weight: bold;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-  border-radius: 3px;
+  border-radius: 100px;
   cursor: pointer;
   transition: .3s ease;
+}
+.open_btn:hover {
+  background: #000;
+  color: #fff;
+  transition: .3s ease;
+}
+p.info {
+  color: #000;
+}
 
-}
-.open_btn:hover{
-    background:#000;
-    color:#fff;
-    transition: .3s ease;
-}
 /*ポップアップココまで*/
 
-p.info{
-	color: #000;
-}
 .data {
+  background-color: #fff;
+  width: 1200px;
+  height: 1280px;
+  padding-bottom: 100px;
 }
