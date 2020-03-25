@@ -111,7 +111,7 @@ p.circle {
   margin: 0 auto;
   color: #fff;
   background: #0c0d62;
-  opacity: 1;
+  /*opacity: 1;*/
   font-weight: bold;
   border-radius: 100px;
   cursor: pointer;
