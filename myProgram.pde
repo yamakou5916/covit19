@@ -1,6 +1,6 @@
 float a=0; 
-int cwidth[]={520,1030,290,780,930, 650,220};
-int cheight[]={180,255,580,170,600,700,250};
+int cwidth[]={860,1030,290,1080,930, 650,570};
+int cheight[]={180,555,580,170,600,700,250};
 int owidth[]={100,770,610,900,1050,740, 510,1150,630,1100};
 int oheight[]={600,670,140,300,400,400,700,550,450,800};
 int cnt = 0;
@@ -85,8 +85,8 @@ textSize(15);
 textAlign(CENTER);
 text("一時的", 45,height/2+7.5);
 text("継続的", width-45,height/2+7.5);
-text("防疫意識・生活風習", width/2,height-30);
-text("政治・経済活動", width/2,30);
+text("生産プロセス", width/2,height-30);
+text("消費プロセス", width/2,30);
 
   //Other Circle
   for(int i=0; i<owidth.length;i++){
