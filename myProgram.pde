@@ -235,10 +235,10 @@ void BigCircle(int i){
   image(img, cwidth[i]-10, cheight[i]-25, 20, 25);
   textSize(12);
   textAlign(CENTER);
-  text(bigText[i][3], cwidth[i], cheight[i]+20);
+  text(bigText[i][textnum], cwidth[i], cheight[i]+20);
   textSize(8);
   textAlign(CENTER);
-  text(bigText[i][textnum], cwidth[i], cheight[i]-20);
+  text(bigText[i][3], cwidth[i], cheight[i]-20);
 }
 
 void SmallCircle(int i){
