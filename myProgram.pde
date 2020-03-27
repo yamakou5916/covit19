@@ -76,17 +76,17 @@ void draw(){
     rect(0,0,width,height);
     
 //軸
-stroke(250,250,250,50);
+stroke(250,250,250,100);
 strokeWeight(0.1);
-line(0,height/2, width,height/2);
+//line(0,height/2, width,height/2);
 line(width/2,0, width/2,height);
 fill(250,250,250,50);
 textSize(15);
 textAlign(CENTER);
-text("一時的", 45,height/2+7.5);
-text("継続的", width-45,height/2+7.5);
-text("生産者行動", width/2,height-30);
-text("消費者行動", width/2,30);
+//text("一時的", 45,height/2+7.5);
+//text("継続的", width-45,height/2+7.5);
+text("生産者行動", width/2+200,30);
+text("消費者行動", width/2-200,30);
 
   //Other Circle
   for(int i=0; i<owidth.length;i++){
