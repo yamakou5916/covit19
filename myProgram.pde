@@ -235,7 +235,7 @@ void BigCircle(int i){
   image(img, cwidth[i]-10, cheight[i]-25, 20, 25);
   textSize(12);
   textAlign(CENTER);
-  text(bigText[i][textnum], cwidth[i], cheight[i]+15);
+  text(bigText[i][textnum], cwidth[i], cheight[i]+20);
 }
 
 void SmallCircle(int i){
