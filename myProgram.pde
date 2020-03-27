@@ -6,6 +6,7 @@ int oheight[]={910,670,1140,300,310,400,550,1350,1070,920};
 int cnt = 0;
 int loopcnt = 0;
 int textnum = 0;
+PImage img;
 float rSize[] = {200,400,100,160,180,500,500,270};
 String bigText[][]=
 {{"ストレージの内容を変更する\n（＋）貯蓄行動：備蓄品の増加","ストレージの内容を変更する\n（ー）貯蓄行動：廃棄の増加"},
@@ -67,6 +68,7 @@ void setup(){
     Maru maru=new Maru(rSize[i],rSize[i]);
     maruhairetu[i]=maru;
   }   
+  img = loadImage("user.png");
 }
 
 void draw(){
@@ -230,6 +232,7 @@ void BigCircle(int i){
   noFill();
   ellipse(cwidth[i], cheight[i],rSize[i],rSize[i]);
   fill(255);
+  image(img, cwidth[i]-5, cheight[i]+5, cwidth[i]+5, cheight[i]+5);
   textSize(12);
   textAlign(CENTER);
   text(bigText[i][textnum], cwidth[i], cheight[i]);
