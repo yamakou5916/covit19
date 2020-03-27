@@ -58,7 +58,7 @@ ArrayList<PG> pgl = new ArrayList<PG>();
 void setup(){
   PFont font = createFont("NotoSansCJKjp-Regular",50);
   textFont (font);
-  size(1280,1000);
+  size(1280,2000);
   noStroke();
   background(0);
 
