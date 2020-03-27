@@ -236,7 +236,7 @@ void BigCircle(int i){
   textSize(12);
   textAlign(CENTER);
   text(bigText[i][textnum], cwidth[i], cheight[i]+20);
-  textSize(8);
+  textSize(10);
   textAlign(CENTER);
   text(bigText[i][2], cwidth[i], cheight[i]-40);
 }
