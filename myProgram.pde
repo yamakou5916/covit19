@@ -172,12 +172,13 @@ text("消費者行動", width/2-200,30);
    }
    
    */
-//line
+/*/line
   stroke(250,250,250);
   strokeWeight(0.1);
   line(cwidth[0]+rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[1]-rSize[1]/3, cheight[1]-rSize[1]/3);
   line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
   line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
+  */
   
   for(int i=0; i<cwidth.length;i++){    
   //flow
