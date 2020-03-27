@@ -129,7 +129,7 @@ text("消費者行動", width/2-200,30);
     }
   }
     
-//Collision
+/*/Collision
    for(int i=0; i<cwidth.length;i++){
      for(int ii=0; ii<cwidth.length;ii++){
          if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
@@ -170,6 +170,8 @@ text("消費者行動", width/2-200,30);
         }
      } 
    }
+   
+   */
 //line
   stroke(250,250,250);
   strokeWeight(0.1);
