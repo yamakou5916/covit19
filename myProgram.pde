@@ -232,7 +232,7 @@ void BigCircle(int i){
   noFill();
   ellipse(cwidth[i], cheight[i],rSize[i],rSize[i]);
   fill(255);
-  image(img, cwidth[i], cheight[i], 50, 50);
+  image(img, cwidth[i], cheight[i], 20, 30);
   textSize(12);
   textAlign(CENTER);
   text(bigText[i][textnum], cwidth[i], cheight[i]);
