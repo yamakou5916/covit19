@@ -7,6 +7,7 @@ int cnt = 0;
 int loopcnt = 0;
 int textnum = 0;
 PImage img;
+float rSize0[] = {200,400,100,160,180,500,500,270};
 float rSize[] = {200,400,100,160,180,500,500,270};
 String bigText[][]=
 {{"ストレージの内容を変更する","ストレージの内容を変更する", "保有者"},
@@ -282,10 +283,10 @@ void OtherCircle(int i){
   stroke(0, 0, 0);
   strokeWeight(0);
   //ellipse(owidth[i], oheight[i], 80, 80);
-  ellipse(cwidth[i], cheight[i], 80, 80);
-  ellipse(cwidth[i], cheight[i], 80, 80);
-  ellipse(cwidth[i], cheight[i], 80, 80);
-  ellipse(cwidth[i], cheight[i], 80, 80);
+  ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+  ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+  ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
+  ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
   fill(0,0,0);
   textSize(10);
   textAlign(CENTER,CENTER);
