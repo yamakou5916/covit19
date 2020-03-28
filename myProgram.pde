@@ -232,7 +232,7 @@ if(-1 == cos(radians(cnt)) ){
  
 void BigCircle(int i){
   stroke(250,250,250);
-  strokeWeight(0.1);
+  strokeWeight(0);
    if(textnum==1){
      fill(0, 255-rSize[i]/3 ,  100+ rSize[i]/3,50);
    }else{
@@ -300,7 +300,7 @@ class Maru{
           fill(250, 250, 250);
           //fill(color(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 ));  
           a+=x/100000;
-          ellipse(cwidth[i]+rSize[i]*cos(a)/2, cheight[i]+rSize[i]*sin(a)/2,3,3);
+          //ellipse(cwidth[i]+rSize[i]*cos(a)/2, cheight[i]+rSize[i]*sin(a)/2,3,3);
         }
     //}
   }
