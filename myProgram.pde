@@ -231,7 +231,7 @@ if(-1 == cos(radians(cnt)) ){
 void BigCircle(int i){
   
    if(textnum==1){
-     fill(0, 80, 200-rSize[i]/3 , 80-rSize[i]/7);
+     fill(0, 80, 100+rSize[i]/3 , 80-rSize[i]/7);
      noStroke();
    }else{
      noFill();
