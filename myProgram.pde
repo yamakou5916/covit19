@@ -253,6 +253,7 @@ void BigCircle(int i){
 }
 
 void SmallCircle(int i){
+  if(textnum==0){
   fill(0, 0, 0);
   stroke(250, 250, 250);
   //stroke(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
@@ -263,7 +264,6 @@ void SmallCircle(int i){
   ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
   //fill(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
   fill(250, 250, 250);
-
   textSize(10);
   textAlign(CENTER,CENTER);
   //if(textnum==0){
@@ -277,6 +277,10 @@ void SmallCircle(int i){
     //text(smallText1[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
     //text(smallText1[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
   //}
+  }else{
+  noFill();
+  noStroke();
+  }
 }
 
 void OtherCircle(int i){
