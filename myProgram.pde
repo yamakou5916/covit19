@@ -107,7 +107,7 @@ text("消費者行動", width/2-200,30);
       }
     }else if(int(otherText[i][1])==1){
       if(cos(radians(cnt))>-0.99){
-        fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+        fill(125*cos(radians(cnt))-125 ,125*cos(radians(cnt))-125 , 125*cos(radians(cnt))-125 );
         OtherCircle(i);
       }else{
         fill(250,250,250);
