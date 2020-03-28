@@ -231,10 +231,10 @@ if(-1 == cos(radians(cnt)) ){
 }
  
 void BigCircle(int i){
-  stroke(100+ rSize[i]/3, 255-rSize[i]/3 ,  0);
   stroke(250,250,250);
   strokeWeight(0.1);
-  noFill();
+  fill(100+ rSize[i]/3, 255-rSize[i]/3 ,  0);
+  //noFill();
   ellipse(cwidth[i], cheight[i],rSize[i],rSize[i]);
   fill(255);
   image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
