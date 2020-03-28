@@ -206,6 +206,7 @@ text("消費者行動", width/2-200,30);
     rSize[4] -= 0.7;
     rSize[5] -= 0.5;
     rSize[6] -= 1.4;
+    rSize[7] -= 0.7;
     textnum = 0;
 
   } else {
@@ -217,6 +218,7 @@ text("消費者行動", width/2-200,30);
     rSize[4] += 0.7;
     rSize[5] += 0.5;
     rSize[6] += 1.4;
+    rSize[7] += 0.7;
     textnum = 1;
 
   }
