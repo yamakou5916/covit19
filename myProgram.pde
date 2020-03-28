@@ -1,8 +1,8 @@
 float a=0; 
 int cwidth[]={540,830,640,560,730, 1050,400,800};
 int cheight[]={770,1155,180,1050,500,800,500,820};
-int owidth[]={550,770,560,550,640,740, 210,850,1030,760};
-int oheight[]={910,670,1140,350,310,400,550,1350,1070,920};
+int owidth[]={550,770,560,550,640,740, 260,850,1030,760};
+int oheight[]={910,670,1140,350,310,400,600,1350,1070,920};
 int cnt = 0;
 int loopcnt = 0;
 int textnum = 0;
@@ -96,13 +96,13 @@ text("消費者行動", width/2-200,30);
       fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
         OtherCircle(i);
       if(cos(radians(cnt)) == -1&&loopcnt%3==1){
-        otherText[3][1] = "2";
-        otherText[8][1] = "1";
+        //otherText[3][1] = "2";
+        //otherText[8][1] = "1";
       }
       if(cos(radians(cnt)) == -1&&loopcnt%3==2){
-        otherText[1][1] = "1";
-        otherText[5][1] = "1";
-        otherText[7][1] = "1";
+        //otherText[1][1] = "1";
+        //otherText[5][1] = "1";
+        //otherText[7][1] = "1";
       }
     }else if(int(otherText[i][1])==1){
       if(cos(radians(cnt))>-0.99){
