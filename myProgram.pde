@@ -188,10 +188,11 @@ text("消費者行動", width/2-200,30);
     for(Maru maru:maruhairetu){
       maru.draw();
     }
+    
+    //Big Circle
+    BigCircle(i);
     //Small Circle
     SmallCircle(i);
-  //Big Circle
-    BigCircle(i);
   }
   
   cnt++;
