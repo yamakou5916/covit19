@@ -258,7 +258,9 @@ void SmallCircle(int i){
   ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-  fill(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
+  //fill(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
+       fill(0, 255-rSize[i]/3 ,  100+ rSize[i]/3,50);
+
   textSize(10);
   textAlign(CENTER,CENTER);
   if(textnum==0){
