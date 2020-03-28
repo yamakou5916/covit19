@@ -199,7 +199,6 @@ text("消費者行動", width/2-200,30);
   cnt++;
   if (1000 * sin(radians(cnt)) > 0) {
     //smaller
-    
     rSize[0] += 0.7;
     rSize[1] -= 0.6;
     rSize[2] += 1;
@@ -207,12 +206,10 @@ text("消費者行動", width/2-200,30);
     rSize[4] += 0.7;
     rSize[5] -= 0.5;
     rSize[6] -= 1.4;
-    
     textnum = 0;
 
   } else {
     //bigger
-    
     rSize[0] -= 0.7;
     rSize[1] += 0.6;
     rSize[2] -= 1;
@@ -220,7 +217,6 @@ text("消費者行動", width/2-200,30);
     rSize[4] -= 0.7;
     rSize[5] += 0.5;
     rSize[6] += 1.4;
-    
     textnum = 1;
 
   }
@@ -235,7 +231,7 @@ if(-1 == cos(radians(cnt)) ){
 void BigCircle(int i){
   
    if(textnum==1){
-     fill(0, 255-rSize[i]/3 ,  100+ rSize[i]/3,50);
+     fill(0, 255-rSize[i]/3 ,  100+ rSize[i]/3,rSize[i]/3);
      noStroke();
    }else{
      noFill();
