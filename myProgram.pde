@@ -94,7 +94,7 @@ text("消費者行動", width/2-200,30);
   //Other Circle
   for(int i=0; i<cwidth.length;i++){
     if(otherText[i][1]=="0"){
-      fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+      fill(125*cos(radians(cnt))-125 ,125*cos(radians(cnt))-125 , 125*cos(radians(cnt))-125 );
         OtherCircle(i);
       if(cos(radians(cnt)) == -1&&loopcnt%3==1){
         //otherText[3][1] = "2";
