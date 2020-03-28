@@ -199,22 +199,22 @@ text("消費者行動", width/2-200,30);
   cnt++;
   if (1000 * sin(radians(cnt)) > 0) {
     //smaller
-    rSize[0] += 0.7;
+    rSize[0] -= 0.7;
     rSize[1] -= 0.6;
-    rSize[2] += 1;
-    rSize[3] += 0.2;
-    rSize[4] += 0.7;
+    rSize[2] -= 1;
+    rSize[3] -= 0.2;
+    rSize[4] -= 0.7;
     rSize[5] -= 0.5;
     rSize[6] -= 1.4;
     textnum = 0;
 
   } else {
     //bigger
-    rSize[0] -= 0.7;
+    rSize[0] += 0.7;
     rSize[1] += 0.6;
-    rSize[2] -= 1;
-    rSize[3] -= 0.2;
-    rSize[4] -= 0.7;
+    rSize[2] += 1;
+    rSize[3] += 0.2;
+    rSize[4] += 0.7;
     rSize[5] += 0.5;
     rSize[6] += 1.4;
     textnum = 1;
