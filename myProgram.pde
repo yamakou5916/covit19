@@ -240,7 +240,7 @@ void BigCircle(int i){
      stroke(250,250,250);
      strokeWeight(0.1);
    }
-  ellipse(cwidth[i], cheight[i],rSize[i],rSize[i]);
+  ellipse(cwidth[i], cheight[i],rSize[i],100 * sin(radians(cnt)));
   fill(255);
   image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
   textSize(12);
