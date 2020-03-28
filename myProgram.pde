@@ -282,10 +282,10 @@ void OtherCircle(int i){
   stroke(0, 0, 0);
   strokeWeight(0);
   //ellipse(owidth[i], oheight[i], 80, 80);
-  ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-  ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-  ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-  ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
+  ellipse(cwidth[i], cheight[i], 80, 80);
+  ellipse(cwidth[i], cheight[i], 80, 80);
+  ellipse(cwidth[i], cheight[i], 80, 80);
+  ellipse(cwidth[i], cheight[i], 80, 80);
   fill(0,0,0);
   textSize(10);
   textAlign(CENTER,CENTER);
