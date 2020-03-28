@@ -252,6 +252,7 @@ void BigCircle(int i){
 }
 
 void SmallCircle(int i){
+  if(textnum==1){
   fill(0, 0, 0);
   stroke(250, 250, 250);
   //stroke(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
@@ -264,7 +265,6 @@ void SmallCircle(int i){
   fill(250, 250, 250);
   textSize(10);
   textAlign(CENTER,CENTER);
-  if(textnum==1){
     text(smallText0[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
     text(smallText0[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
     text(smallText0[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
