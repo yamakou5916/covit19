@@ -231,6 +231,7 @@ if(-1 == cos(radians(cnt)) ){
 }
  
 void BigCircle(int i){
+  stroke(100+ rSize[i]/3, 255-rSize[i]/3 ,  0);
   stroke(250,250,250);
   strokeWeight(0.1);
   noFill();
