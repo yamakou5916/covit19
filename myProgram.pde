@@ -233,14 +233,14 @@ if(-1 == cos(radians(cnt)) ){
 void BigCircle(int i){
   
    if(textnum==1){
-     fill(0, 80, 100+rSize[i]/3 , 80-rSize[i]/7);
+     fill(0, 80, 100+rSize[i]/3 , 1000 * sin(radians(cnt)));
      noStroke();
    }else{
      noFill();
      stroke(250,250,250);
      strokeWeight(0.1);
    }
-  ellipse(cwidth[i], cheight[i],rSize[i],100 * sin(radians(cnt)));
+  ellipse(cwidth[i], cheight[i],rSize[i],rSize[i]);
   fill(255);
   image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
   textSize(12);
