@@ -291,10 +291,10 @@ void OtherCircle(int i){
   textSize(10);
   textAlign(CENTER,CENTER);
   //text(otherText[i][0], owidth[i], oheight[i]);
-  text(smallText1[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
-  text(smallText1[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
-  text(smallText1[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
-  text(smallText1[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
+  text(smallText1[i][0], cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3);
+  text(smallText1[i][1], cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3);
+  text(smallText1[i][2], cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3);
+  text(smallText1[i][3], cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3);
 
 }
 
