@@ -94,7 +94,6 @@ void draw(){
 
     //円
   for(int i=0; i<cwidth.length;i++){
-    cnt++;
     fill(255);
     image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
     textSize(12);
@@ -116,6 +115,7 @@ void draw(){
 }
  
  void wave(int i){
+   cnt++;
     frameCnt += 1;
     if(frameCnt  ==frameCntMax){
       frameCnt  = 0;
@@ -168,35 +168,32 @@ void SmallCircle(int i){
       textnum = 1;
     }
   if(textnum==1){
-  fill(0, 0, 0);
-  stroke(250, 250, 250);
-  //stroke(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
-  strokeWeight(3);
-  ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-  ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-  ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-  ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-  //fill(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
-  fill(250, 250, 250);
-  textSize(10);
-  textAlign(CENTER,CENTER);
+    fill(0, 0, 0);
+    stroke(250, 250, 250);
+    strokeWeight(3);
+    ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
+    //fill(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
+    fill(250, 250, 250);
+    textSize(10);
+    textAlign(CENTER,CENTER);
     text(smallText0[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
     text(smallText0[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
     text(smallText0[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
     text(smallText0[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
   }else{
-  fill(0, 0, 0,30);
-  stroke(250, 250, 250,30);
-  //stroke(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
-  strokeWeight(3);
-  ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-  ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-  ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-  ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-  //fill(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
-  fill(250, 250, 250,30);
-  textSize(10);
-  textAlign(CENTER,CENTER);
+    fill(0, 0, 0,30);
+    stroke(250, 250, 250,30);
+    strokeWeight(3);
+    ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
+    fill(250, 250, 250,30);
+    textSize(10);
+    textAlign(CENTER,CENTER);
     text(smallText0[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
     text(smallText0[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
     text(smallText0[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
@@ -218,7 +215,6 @@ void OtherCircle(int i){
   text(smallText1[i][1], cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3);
   text(smallText1[i][2], cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3);
   text(smallText1[i][3], cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3);
-
 }
 
 class Maru{
