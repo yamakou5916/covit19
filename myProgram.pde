@@ -96,7 +96,7 @@ void draw(){
     text("生産者行動", width/2+200,30);
     text("消費者行動", width/2-200,30);
 
-    //translate(width / 2.0, height / 2.0);
+    translate(width / 2.0, height / 2.0);
     frameCnt += 1;
     if(frameCnt  ==frameCntMax){
       frameCnt  = 0;
