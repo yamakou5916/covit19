@@ -172,6 +172,7 @@ void SmallCircle(int i){
     fill(250, 250, 250);//,125 - 125*cos(radians(frameCnt[i])));
     }else{
     noFill();
+    noStroke();
     }
     textSize(10);
     textAlign(CENTER,CENTER);
