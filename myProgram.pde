@@ -1,5 +1,5 @@
 float a=0; 
-float radius      = width * 0.4;
+float radius      = 400;
 
 int cwidth[]={240,830,440,560,830, 950,400,800};
 int cheight[]={920,1255,180,1150,500,800,600,820};
