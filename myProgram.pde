@@ -95,6 +95,8 @@ void draw(){
     //円
   for(int i=0; i<cwidth.length;i++){
     fill(255);
+    OtherCircle(i);
+    wave(i);
     image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
     textSize(12);
     textAlign(CENTER);
@@ -102,9 +104,6 @@ void draw(){
     textSize(10);
     textAlign(CENTER);
     text(bigText[i][2], cwidth[i], cheight[i]-40);
-    OtherCircle(i);
-    wave(i);
-    fill(125 - 125*cos(radians(frameCnt)),125 - 125*cos(radians(frameCnt)),125 - 125*cos(radians(frameCnt)));
   }
   /*
       if(-1 == cos(radians(frameCnt)) ){
