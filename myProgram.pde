@@ -130,7 +130,7 @@ void draw(){
       float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       noStroke();
       fill(applyHue, 40.0, 80.0,100);
-      ellipse(applyX * radius+cwidth[i], applyY * radius+cheight[i], 1.0, 1.0);
+      ellipse(applyX * rSize[i] +cwidth[i], applyY *  rSize[i] +cheight[i], 1.0, 1.0);
     }
     SmallCircle(i);
  }
