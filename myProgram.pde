@@ -155,9 +155,9 @@ void draw(){
   line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
   line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
   */
-  
+      wave(0);
+
   for(int i=0; i<cwidth.length;i++){
-    wave(0);
     //OtherCircle
     if(otherText[i][1]=="0"){
         fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
