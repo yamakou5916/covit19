@@ -109,9 +109,12 @@ void draw(){
     //BigCircle(i);
     
   }
+  /*
       if(-1 == cos(radians(frameCnt)) ){
+        print(frameCnt);
+        frameCnt=0;
       loopcnt++;
-    }
+    }*/
 }
  
  void wave(int i){
