@@ -103,6 +103,8 @@ void draw(){
     textAlign(CENTER);
     text(bigText[i][2], cwidth[i], cheight[i]-40);
   }
+  
+  
 }
  
  void wave(int i){
@@ -154,9 +156,15 @@ void SmallCircle(int i){
       rSize[i] += 0.5;
       textnum = 1;
     }
+    if(textnum == 1){
     fill(0, 0, 0,125 - 125*cos(radians(frameCnt[i])));
     stroke(250, 250, 250,125 - 125*cos(radians(frameCnt[i])));
     strokeWeight(3);
+    }else{
+    noFill();
+    noStroke();
+    }
+    
     ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
     ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
