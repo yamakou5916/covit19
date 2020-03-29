@@ -203,7 +203,8 @@ void draw(){
     //Small Circle
     SmallCircle(i);
     
-      if (1000 * sin(radians(cnt)) > 0) {
+      cnt++;
+  if (1000 * sin(radians(cnt)) > 0) {
     //smaller
     rSize[0] -= 1;
     rSize[1] -= 1;
@@ -228,17 +229,15 @@ void draw(){
     textnum = 1;
 
   }
-    
-  }
-  
-  cnt++;
-
   if(rSize[4]>500){
   rSize[4]=180;
 }
 if(-1 == cos(radians(cnt)) ){
   loopcnt++;
 }
+  }
+  
+
 }
  
  void wave(){
