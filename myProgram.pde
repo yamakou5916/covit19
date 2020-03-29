@@ -3,12 +3,15 @@ int cwidth[]={240,830,440,560,830, 950,400,800};
 int cheight[]={920,1255,180,1150,500,800,600,820};
 int owidth[]={550,570,560,550,640,740, 260,850,1030,760};
 int oheight[]={1070,670,1140,350,310,400,650,1350,1070,920};
+int cnt = 0;
 int loopcnt = 0;
 int textnum = 0;
-int frameCnt[] = {0, 0, 0, 0, 0, 0, 0, 0};
+int frameCnt = 0;
+int frameCntMax = 15 * 6;
 PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {300,400,300,360,380,500,500,270};
+float radius  = 200;
 //Maru[] maruhairetu;
 //ArrayList<PG> pgl = new ArrayList<PG>();
 
@@ -112,7 +115,7 @@ void draw(){
 }
  
  void wave(int i){
-    frameCnt[i] += 0.05;
+    frameCnt += 0.05;
     float frameRatio = cos(radians(frameCnt[i]));
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
       float radian = TWO_PI * dotCnt;
@@ -151,21 +154,21 @@ void BigCircle(int i){
 }
 
 void SmallCircle(int i){
-  if (1000 * sin(radians(frameCnt[i])) > 0) {
+  if (1000 * sin(radians(frameCnt)) > 0) {
       rSize[i] -= 0.5;
       textnum = 0;
     } else {
       rSize[i] += 0.5;
       textnum = 1;
     }
-    fill(0, 0, 0,125 - 125*sin(radians(frameCnt[i])));
-    stroke(250, 250, 250,125 - 125*sin(radians(frameCnt[i])));
+    fill(0, 0, 0,125 - 125*sin(radians(frameCnt )));
+    stroke(250, 250, 250,125 - 125*sin(radians(frameCnt )));
     strokeWeight(3);
     ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
     ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-    fill(250, 250, 250,125 - 125*sin(radians(frameCnt[i])));
+    fill(250, 250, 250,125 - 125*sin(radians(frameCnt )));
     textSize(10);
     textAlign(CENTER,CENTER);
     text(smallText0[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
@@ -179,7 +182,7 @@ void OtherCircle(int i){
   stroke(0, 0, 0);
   strokeWeight(0);
   noStroke();
-  fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
+  fill(125 - 125*cos(radians(frameCnt )),125 - 125*cos(radians(frameCnt )),125 - 125*cos(radians(frameCnt )));
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
