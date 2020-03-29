@@ -4,7 +4,8 @@ int cheight[]={920,1255,180,1150,500,800,600,820};
 int owidth[]={550,570,560,550,640,740, 260,850,1030,760};
 int oheight[]={1070,670,1140,350,310,400,650,1350,1070,920};
 int textnum = 0;
-int frameCnt = 0;
+//int frameCnt = 0;
+float frameCnt[] = {0,0,0,0,0,0,0,0};
 PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {300,400,300,360,380,500,500,270};
@@ -86,8 +87,8 @@ void draw(){
     fill(250,250,250,50);
     textSize(15);
     textAlign(CENTER);
-    text("生産者行動", width/2+200,30);
-    text("消費者行動", width/2-200,30);
+    text("供給", width/2+200,30);
+    text("需要", width/2-200,30);
 
     //円
   for(int i=0; i<cwidth.length;i++){
@@ -112,8 +113,8 @@ void draw(){
 }
  
  void wave(int i){
-    frameCnt += 0.05;
-    float frameRatio = cos(radians(frameCnt));
+    frameCnt[0] += 0.05;
+    float frameRatio = cos(radians(frameCnt[0]));
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
       float radian = TWO_PI * dotCnt;
       float shapeAx = cos(radian);
@@ -151,21 +152,21 @@ void BigCircle(int i){
 }
 
 void SmallCircle(int i){
-  if (1000 * sin(radians(frameCnt)) > 0) {
+  if (1000 * sin(radians(frameCnt[0])) > 0) {
       rSize[i] -= 0.5;
       textnum = 0;
     } else {
       rSize[i] += 0.5;
       textnum = 1;
     }
-    fill(0, 0, 0,125 - 125*sin(radians(frameCnt )));
-    stroke(250, 250, 250,125 - 125*sin(radians(frameCnt )));
+    fill(0, 0, 0,125 - 125*sin(radians(frameCnt[0])));
+    stroke(250, 250, 250,125 - 125*sin(radians(frameCnt[0])));
     strokeWeight(3);
     ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
     ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-    fill(250, 250, 250,125 - 125*sin(radians(frameCnt )));
+    fill(250, 250, 250,125 - 125*sin(radians(frameCnt[0])));
     textSize(10);
     textAlign(CENTER,CENTER);
     text(smallText0[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
@@ -179,7 +180,7 @@ void OtherCircle(int i){
   stroke(0, 0, 0);
   strokeWeight(0);
   noStroke();
-  fill(125 - 125*cos(radians(frameCnt )),125 - 125*cos(radians(frameCnt )),125 - 125*cos(radians(frameCnt )));
+  fill(125 - 125*cos(radians(frameCnt[0])),125 - 125*cos(radians(frameCnt[0])),125 - 125*cos(radians(frameCnt[0])));
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
