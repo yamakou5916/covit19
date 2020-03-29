@@ -119,7 +119,7 @@ void draw(){
  void wave(int i){
     frameCnt += 0.01;
     float frameRatio = cos(radians(frameCnt));//easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
-    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
+    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
       float radian = TWO_PI * frameRatio;
       float shapeAx = cos(radian);
       float shapeAy = sin(radian);
@@ -131,8 +131,8 @@ void draw(){
       noStroke();
       fill(applyHue, 40.0, 80.0,100);
       ellipse(applyX * radius+cwidth[i], applyY * radius+cheight[i], 1.0, 1.0);
-      SmallCircle(i);
-    }      
+    }
+    SmallCircle(i);
  }
  
 void BigCircle(int i){
