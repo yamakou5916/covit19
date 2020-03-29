@@ -239,7 +239,7 @@ if(-1 == cos(radians(cnt)) ){
 }
 
 void wave(){
-   translate(width / 2.0, height / 2.0);
+   //translate(width / 2.0, height / 2.0);
      // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
     float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
@@ -251,8 +251,8 @@ void wave(){
       float applyX   = shapeAx * frameRatio + shapeBx * (1.0 - frameRatio);
       float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
       float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
-      //fill(applyHue, 40.0, 80.0, 100.0);
-      ellipse(applyX * radius, applyY * radius, 1.0, 1.0);
+      fill(applyHue, 40.0, 80.0, 100.0);
+      ellipse(300+applyX * radius, 300+applyY * radius, 1.0, 1.0);
       frameCnt += 1;
         if(frameCnt  ==frameCntMax){
           frameCnt  = 0;
