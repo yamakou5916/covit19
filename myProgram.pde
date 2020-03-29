@@ -157,10 +157,10 @@ void SmallCircle(int i){
     fill(0, 0, 0,125 - 125*sin(radians(frameCnt[i])));
     stroke(250, 250, 250,125 - 125*sin(radians(frameCnt[i])));
     strokeWeight(3);
-    ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-    ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-    ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-    ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3+125*sin(radians(frameCnt[i])), 80, 80);
+    ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3+125*sin(radians(frameCnt[i])), 80, 80);
+    ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3+125*sin(radians(frameCnt[i])), 80, 80);
+    ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3+125*sin(radians(frameCnt[i])), 80, 80);
     fill(250, 250, 250,125 - 125*sin(radians(frameCnt[i])));
     textSize(10);
     textAlign(CENTER,CENTER);
