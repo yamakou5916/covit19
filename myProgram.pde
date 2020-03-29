@@ -94,6 +94,7 @@ void draw(){
 
     //円
   for(int i=0; i<cwidth.length;i++){
+    cnt++;
     fill(255);
     image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
     textSize(12);
@@ -109,7 +110,6 @@ void draw(){
     //BigCircle(i);
     SmallCircle(i);
     
-    cnt++;
     if (1000 * sin(radians(cnt)) > 0) {
       rSize[i] -= 1;
       textnum = 0;
@@ -130,7 +130,7 @@ void draw(){
     }
      // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
     float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
-    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.01) {
+    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
       float radian = TWO_PI * dotCnt;
       float shapeAx = cos(radian);
       float shapeAy = sin(radian);
