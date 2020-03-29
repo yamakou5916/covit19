@@ -229,7 +229,8 @@ void draw(){
       float applyX   = shapeAx * frameRatio + shapeBx * (1.0 - frameRatio);
       float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
       float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
-      fill(applyHue, 40.0, 80.0);
+      noStroke();
+      fill(applyHue, 40.0, 80.0,100);
       ellipse(applyX * radius+cwidth[i], applyY * radius+cheight[i], 1.0, 1.0);
     }      
  }
@@ -273,8 +274,8 @@ void SmallCircle(int i){
     text(smallText0[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
     text(smallText0[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
   }else{
-  fill(0, 0, 0);
-  stroke(250, 250, 250);
+  fill(0, 0, 0,30);
+  stroke(250, 250, 250,30);
   //stroke(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
   strokeWeight(3);
   ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
@@ -282,7 +283,7 @@ void SmallCircle(int i){
   ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
   //fill(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 );
-  fill(250, 250, 250);
+  fill(250, 250, 250,30);
   textSize(10);
   textAlign(CENTER,CENTER);
     text(smallText0[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
