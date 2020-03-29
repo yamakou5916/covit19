@@ -134,7 +134,7 @@ void draw(){
       ellipse(applyX * radius+cwidth[i], applyY * radius+cheight[i], 1.0, 1.0);
       SmallCircle(i);
     }      
- }
+ //}
  
 void BigCircle(int i){
    if(textnum==1){
