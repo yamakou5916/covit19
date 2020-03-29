@@ -94,20 +94,26 @@ void draw(){
 
     //円
   for(int i=0; i<cwidth.length;i++){
+    fill(255);
+    image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
+    textSize(12);
+    textAlign(CENTER);
+    text(bigText[i][textnum], cwidth[i], cheight[i]+20);
+    textSize(10);
+    textAlign(CENTER);
+    text(bigText[i][2], cwidth[i], cheight[i]-40);
+    
     wave(i);
     fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
     OtherCircle(i);
-
     //BigCircle(i);
     SmallCircle(i);
     
     cnt++;
     if (1000 * sin(radians(cnt)) > 0) {
-      //smaller
       rSize[i] -= 1;
       textnum = 0;
     } else {
-      //bigger
       rSize[i] += 1;
       textnum = 1;
     }
@@ -118,7 +124,6 @@ void draw(){
 }
  
  void wave(int i){
-    //translate(width / 2.0, height / 2.0);
     frameCnt += 1;
     if(frameCnt  ==frameCntMax){
       frameCnt  = 0;
