@@ -1,5 +1,5 @@
 float a=0; 
-float radius      = 400;
+float radius  = 200;
 
 int cwidth[]={240,830,440,560,830, 950,400,800};
 int cheight[]={920,1255,180,1150,500,800,600,820};
@@ -239,7 +239,7 @@ if(-1 == cos(radians(cnt)) ){
 }
  
  void wave(){
-     translate(width / 2.0, height / 2.0);
+    //translate(width / 2.0, height / 2.0);
     frameCnt += 1;
     if(frameCnt  ==frameCntMax){
       frameCnt  = 0;
@@ -262,7 +262,7 @@ if(-1 == cos(radians(cnt)) ){
       float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       
       fill(applyHue, 40.0, 80.0, 100.0);
-      ellipse(applyX * radius, applyY * radius, 1.0, 1.0);
+      ellipse(applyX * radius+300, applyY * radius+300, 1.0, 1.0);
     }      
  }
  
