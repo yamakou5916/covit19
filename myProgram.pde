@@ -157,17 +157,17 @@ void SmallCircle(int i){
     fill(0, 0, 0,125 - 125*sin(radians(frameCnt[i])));
     stroke(250, 250, 250,125 - 125*sin(radians(frameCnt[i])));
     strokeWeight(3);
-    ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3-125*sin(radians(frameCnt[i])), 80, 80);
-    ellipse(cwidth[i]+rSize[i]/3+125*sin(radians(frameCnt[i])), cheight[i]-rSize[i]/3, 80, 80);
-    ellipse(cwidth[i]-rSize[i]/3-125*sin(radians(frameCnt[i])), cheight[i]+rSize[i]/3, 80, 80);
-    ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3+125*sin(radians(frameCnt[i])), 80, 80);
+    ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3-25*sin(radians(frameCnt[i])), 80, 80);
+    ellipse(cwidth[i]+rSize[i]/3+25*sin(radians(frameCnt[i])), cheight[i]-rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]-rSize[i]/3-25*sin(radians(frameCnt[i])), cheight[i]+rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3+25*sin(radians(frameCnt[i])), 80, 80);
     fill(250, 250, 250,125 - 125*sin(radians(frameCnt[i])));
     textSize(10);
     textAlign(CENTER,CENTER);
-    text(smallText0[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3-125*sin(radians(frameCnt[i])));
-    text(smallText0[i][1], cwidth[i]+rSize[i]/3+125*sin(radians(frameCnt[i])), cheight[i]-rSize[i]/3);
-    text(smallText0[i][2], cwidth[i]-rSize[i]/3-125*sin(radians(frameCnt[i])), cheight[i]+rSize[i]/3);
-    text(smallText0[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3+125*sin(radians(frameCnt[i])));
+    text(smallText0[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3-25*sin(radians(frameCnt[i])));
+    text(smallText0[i][1], cwidth[i]+rSize[i]/3+25*sin(radians(frameCnt[i])), cheight[i]-rSize[i]/3);
+    text(smallText0[i][2], cwidth[i]-rSize[i]/3-25*sin(radians(frameCnt[i])), cheight[i]+rSize[i]/3);
+    text(smallText0[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3+25*sin(radians(frameCnt[i])));
   }
   
 
