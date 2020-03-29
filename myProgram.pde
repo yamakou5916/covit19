@@ -97,7 +97,7 @@ void draw(){
     text("消費者行動", width/2-200,30);
 
    
-  
+  wave();
 
   //Other Circle
   for(int i=0; i<cwidth.length;i++){
