@@ -108,15 +108,7 @@ void draw(){
     fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
     OtherCircle(i);
     //BigCircle(i);
-    SmallCircle(i);
     
-    if (1000 * sin(radians(cnt)) > 0) {
-      rSize[i] -= 1;
-      textnum = 0;
-    } else {
-      rSize[i] += 1;
-      textnum = 1;
-    }
   }
       if(-1 == cos(radians(cnt)) ){
       loopcnt++;
@@ -142,6 +134,8 @@ void draw(){
       noStroke();
       fill(applyHue, 40.0, 80.0,100);
       ellipse(applyX * radius+cwidth[i], applyY * radius+cheight[i], 1.0, 1.0);
+      SmallCircle(i);
+
     }      
  }
  
@@ -166,6 +160,13 @@ void BigCircle(int i){
 }
 
 void SmallCircle(int i){
+  if (1000 * sin(radians(cnt)) > 0) {
+      rSize[i] -= 1;
+      textnum = 0;
+    } else {
+      rSize[i] += 1;
+      textnum = 1;
+    }
   if(textnum==1){
   fill(0, 0, 0);
   stroke(250, 250, 250);
