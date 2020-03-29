@@ -206,17 +206,17 @@ void draw(){
       cnt++;
       if (1000 * sin(radians(cnt)) > 0) {
         //smaller
-        rSize[i] -= 10;
+        rSize[i] -= 1;
         textnum = 0;
       } else {
         //bigger
-        rSize[i] += 10;
+        rSize[i] += 1;
         textnum = 1;
       }
-    if(-1 == cos(radians(cnt)) ){
+  }
+      if(-1 == cos(radians(cnt)) ){
       loopcnt++;
     }
-  }
 }
  
  void wave(){
