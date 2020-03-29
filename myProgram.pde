@@ -104,18 +104,17 @@ void draw(){
     text(bigText[i][2], cwidth[i], cheight[i]-40);
     
     wave(i);
-    fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+    fill(125 - 125*cos(radians(frameCnt)),125 - 125*cos(radians(frameCnt)),125 - 125*cos(radians(frameCnt)));
     OtherCircle(i);
     //BigCircle(i);
     
   }
-      if(-1 == cos(radians(cnt)) ){
+      if(-1 == cos(radians(frameCnt)) ){
       loopcnt++;
     }
 }
  
  void wave(int i){
-   cnt++;
     frameCnt += 1;
     if(frameCnt  ==frameCntMax){
       frameCnt  = 0;
@@ -160,7 +159,7 @@ void BigCircle(int i){
 }
 
 void SmallCircle(int i){
-  if (1000 * sin(radians(cnt)) > 0) {
+  if (1000 * sin(radians(frameCnt)) > 0) {
       rSize[i] -= 0.0001;
       textnum = 0;
     } else {
