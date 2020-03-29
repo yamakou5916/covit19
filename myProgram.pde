@@ -104,16 +104,10 @@ void draw(){
     textAlign(CENTER);
     text(bigText[i][2], cwidth[i], cheight[i]-40);
   }
-  /*
-      if(-1 == cos(radians(frameCnt)) ){
-        print(frameCnt);
-        frameCnt=0;
-      loopcnt++;
-    }*/
 }
  
  void wave(int i){
-    frameCnt[i] += 0.05;
+    frameCnt[i] += 0.1;
     float frameRatio = cos(radians(frameCnt[i]));
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
       float radian = TWO_PI * dotCnt;
@@ -130,7 +124,8 @@ void draw(){
     }
     SmallCircle(i);
  }
- 
+
+/*
 void BigCircle(int i){
    if(textnum==1){
      fill(0, 80, 100+rSize[i]/3 , -50 * sin(radians(cnt)));
@@ -150,6 +145,7 @@ void BigCircle(int i){
   textAlign(CENTER);
   text(bigText[i][2], cwidth[i], cheight[i]-40);
 }
+*/
 
 void SmallCircle(int i){
   if (1000 * sin(radians(frameCnt[0])) > 0) {
