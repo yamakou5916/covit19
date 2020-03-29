@@ -6,7 +6,8 @@ int oheight[]={1070,670,1140,350,310,400,650,1350,1070,920};
 int cnt = 0;
 int loopcnt = 0;
 int textnum = 0;
-int   frameCntMax = 15 * 6;
+int frameCnt = 0;
+int frameCntMax = 15 * 6;
 PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {300,400,300,360,380,500,500,270};
@@ -99,8 +100,11 @@ background(0.0, 0.0, 90.0, 100.0);
   int   frameCntMax = 15 * 6;
 
   translate(width / 2.0, height / 2.0);
-
-  for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
+frameCnt += 1;
+if(frameCnt  ==frameCntMax){
+  rameCnt  = 0;
+}
+ // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
     float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
 
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
@@ -119,12 +123,8 @@ background(0.0, 0.0, 90.0, 100.0);
       
       fill(applyHue, 40.0, 80.0, 100.0);
       ellipse(applyX * radius, applyY * radius, 1.0, 1.0);
-
     }      
-    
-  }  
-
-
+  
 
   //Other Circle
   for(int i=0; i<cwidth.length;i++){
