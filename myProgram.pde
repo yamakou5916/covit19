@@ -94,8 +94,7 @@ void draw(){
     //text("継続的", width-45,height/2+7.5);
     text("生産者行動", width/2+200,30);
     text("消費者行動", width/2-200,30);
-    
-    wave();
+    /*
     for (int i = pgl.size() - 1; i >= 0; i--) {
     PG pg = pgl.get(i);
     if (pg.dead) {
@@ -103,7 +102,7 @@ void draw(){
     } else {
       pg.draw();
     }
-  }
+  }*/
     
 /*/Collision
    for(int i=0; i<cwidth.length;i++){
@@ -155,7 +154,7 @@ void draw(){
   line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
   line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
   */
-  
+  wave();
   for(int i=0; i<cwidth.length;i++){
     //OtherCircle
     if(otherText[i][1]=="0"){
