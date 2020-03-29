@@ -161,8 +161,7 @@ void SmallCircle(int i){
       rSize[i] += 0.5;
       textnum = 1;
     }
-    //fill(0, 0, 0);
-    noFill();
+    fill(0, 0, 0);
     stroke(250, 250, 250);
     stroke(125 - 125*sin(radians(frameCnt )),125 - 125*sin(radians(frameCnt )),125 - 125*sin(radians(frameCnt )));
     strokeWeight(3);
