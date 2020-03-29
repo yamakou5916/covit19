@@ -118,7 +118,7 @@ void draw(){
  
  void wave(int i){
     frameCnt += 0.05;
-    float frameRatio = cos(radians(frameCnt));//easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
+    float frameRatio = cos(radians(frameCnt));
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
       float radian = TWO_PI * dotCnt;
       float shapeAx = cos(radian);
@@ -157,10 +157,10 @@ void BigCircle(int i){
 
 void SmallCircle(int i){
   if (1000 * sin(radians(frameCnt)) > 0) {
-      rSize[i] -= 1;
+      rSize[i] -= 0.5;
       textnum = 0;
     } else {
-      rSize[i] += 1;
+      rSize[i] += 0.5;
       textnum = 1;
     }
   if(textnum==1){
@@ -231,16 +231,6 @@ class Maru{
         }
     //}
   }
-}
-
-private float easing(float t) {
-  // InOutCubic
-  t *= 2.0;
-  if (t < 1.0) {
-    return pow(t, 3) / 2.0;
-  }
-  t -= 2.0;
-  return (pow(t, 3) + 2.0) / 2.0;
 }
 
 class PG {
