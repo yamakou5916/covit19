@@ -1,5 +1,5 @@
 float a=0; 
-float radius = 100;
+float radius      = 400;
 
 int cwidth[]={240,830,440,560,830, 950,400,800};
 int cheight[]={920,1255,180,1150,500,800,600,820};
@@ -96,8 +96,32 @@ void draw(){
     text("生産者行動", width/2+200,30);
     text("消費者行動", width/2-200,30);
 
-   
-  wave();
+    translate(width / 2.0, height / 2.0);
+    frameCnt += 1;
+    if(frameCnt  ==frameCntMax){
+      frameCnt  = 0;
+    }
+     // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
+    float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
+
+    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
+
+      float radian = TWO_PI * dotCnt;
+
+      float shapeAx = cos(radian);
+      float shapeAy = sin(radian);
+
+      float shapeBx = cos(radian) * pow(cos(radian * 3.0), 2);
+      float shapeBy = sin(radian) * pow(sin(radian * 3.0), 2);
+
+      float applyX   = shapeAx * frameRatio + shapeBx * (1.0 - frameRatio);
+      float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
+      float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
+      
+      fill(applyHue, 40.0, 80.0, 100.0);
+      ellipse(applyX * radius, applyY * radius, 1.0, 1.0);
+    }      
+  
 
   //Other Circle
   for(int i=0; i<cwidth.length;i++){
@@ -236,28 +260,6 @@ void draw(){
 if(-1 == cos(radians(cnt)) ){
   loopcnt++;
 }
-}
-
-void wave(){
-  //translate(width / 2.0, height / 2.0);
-     // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
-    float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
-    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
-      float radian = TWO_PI * dotCnt;
-      float shapeAx = cos(radian);
-      float shapeAy = sin(radian);
-      float shapeBx = cos(radian) * pow(cos(radian * 3.0), 2);
-      float shapeBy = sin(radian) * pow(sin(radian * 3.0), 2);
-      float applyX   = shapeAx * frameRatio + shapeBx * (1.0 - frameRatio);
-      float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
-      float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
-      fill(applyHue, 40.0, 80.0, 100.0);
-      ellipse(300+applyX * radius, 300+applyY * radius, 1.0, 1.0);
-      frameCnt += 1;
-        if(frameCnt  ==frameCntMax){
-          frameCnt  = 0;
-        }
-    } 
 }
  
 void BigCircle(int i){
