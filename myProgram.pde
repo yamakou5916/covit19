@@ -5,7 +5,7 @@ int owidth[]={550,570,560,550,640,740, 260,850,1030,760};
 int oheight[]={1070,670,1140,350,310,400,650,1350,1070,920};
 int textnum = 0;
 //int frameCnt = 0;
-float frameCnt[] = {0,0,0,0,0,0,0,0};
+float frameCnt[] = {0,10,0,10,0,10,0,0};
 PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {300,400,300,360,380,500,500,270};
@@ -113,8 +113,8 @@ void draw(){
 }
  
  void wave(int i){
-    frameCnt[0] += 0.05;
-    float frameRatio = cos(radians(frameCnt[0]));
+    frameCnt[i] += 0.05;
+    float frameRatio = cos(radians(frameCnt[i]));
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
       float radian = TWO_PI * dotCnt;
       float shapeAx = cos(radian);
