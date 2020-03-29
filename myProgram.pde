@@ -161,10 +161,10 @@ void BigCircle(int i){
 
 void SmallCircle(int i){
   if (1000 * sin(radians(cnt)) > 0) {
-      rSize[i] -= 1;
+      rSize[i] -= 0.0001;
       textnum = 0;
     } else {
-      rSize[i] += 1;
+      rSize[i] += 0.0001;
       textnum = 1;
     }
   if(textnum==1){
