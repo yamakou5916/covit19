@@ -94,9 +94,10 @@ void draw(){
 
     //円
   for(int i=0; i<cwidth.length;i++){
-    fill(255);
+    //fill(255);
     OtherCircle(i);
     wave(i);
+    fill(255);
     image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
     textSize(12);
     textAlign(CENTER);
