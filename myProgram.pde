@@ -199,10 +199,10 @@ text("消費者行動", width/2-200,30);
   cnt++;
   if (1000 * sin(radians(cnt)) > 0) {
     //smaller
-    rSize[0] -=  sin(radians(cnt));
-    rSize[1] -=  sin(radians(cnt));
-    rSize[2] -=  sin(radians(cnt));
-    rSize[3] -=  sin(radians(cnt));
+    rSize[0] -= 1;
+    rSize[1] -= 1;
+    rSize[2] -= 1;
+    rSize[3] -= 1;
     rSize[4] -= 1;
     rSize[5] -= 1;
     rSize[6] -= 1.4;
@@ -211,10 +211,10 @@ text("消費者行動", width/2-200,30);
 
   } else {
     //bigger
-    rSize[0] +=  sin(radians(cnt));
-    rSize[1] +=  sin(radians(cnt));
-    rSize[2] +=  sin(radians(cnt));
-    rSize[3] +=  sin(radians(cnt));
+    rSize[0] += 1;
+    rSize[1] += 1;
+    rSize[2] += 1;
+    rSize[3] += 1;
     rSize[4] += 1;
     rSize[5] += 1;
     rSize[6] += 1.4;
