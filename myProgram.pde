@@ -60,7 +60,6 @@ String otherText[][]=
 {},
 };
 
-
 void setup(){
   PFont font = createFont("NotoSansCJKjp-Regular",50);
   textFont (font);
@@ -78,7 +77,7 @@ void setup(){
 }
 
 void draw(){
-  //BackGround
+  //背景
   noStroke();
   fill(color(0, 0, 0), 32);
   rect(0,0,width,height);
@@ -86,115 +85,20 @@ void draw(){
     //軸
     stroke(250,250,250,100);
     strokeWeight(0.1);
-    //line(0,height/2, width,height/2);
     line(width/2,0, width/2,height);
     fill(250,250,250,50);
     textSize(15);
     textAlign(CENTER);
-    //text("一時的", 45,height/2+7.5);
-    //text("継続的", width-45,height/2+7.5);
     text("生産者行動", width/2+200,30);
     text("消費者行動", width/2-200,30);
-    /*
-    for (int i = pgl.size() - 1; i >= 0; i--) {
-    PG pg = pgl.get(i);
-    if (pg.dead) {
-      pgl.remove(i);
-    } else {
-      pg.draw();
-    }
-  }*/
-    
-/*/Collision
-   for(int i=0; i<cwidth.length;i++){
-     for(int ii=0; ii<cwidth.length;ii++){
-         if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-           pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
-        }
-        if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
-        }
-        if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
-        }
-        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
-        }
-        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
-        }
-        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
-        }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
-        }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
-        }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
-        }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
-        }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
-        }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
-        }
-     } 
-   }
-   
-   */
-/*/line
-  stroke(250,250,250);
-  strokeWeight(0.1);
-  line(cwidth[0]+rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[1]-rSize[1]/3, cheight[1]-rSize[1]/3);
-  line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
-  line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
-  */
 
+    //円
   for(int i=0; i<cwidth.length;i++){
     wave(i);
+    fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+    OtherCircle(i);
 
-    //OtherCircle
-    if(otherText[i][1]=="0"){
-        fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
-          OtherCircle(i);
-        if(cos(radians(cnt)) == -1&&loopcnt%3==1){
-          //otherText[3][1] = "2";
-        }
-        if(cos(radians(cnt)) == -1&&loopcnt%3==2){
-          //otherText[1][1] = "1";
-        }
-      }else if(int(otherText[i][1])==1){
-        if(cos(radians(cnt))>-0.99){
-          fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
-          OtherCircle(i);
-        }else{
-          fill(250,250,250);
-          OtherCircle(i);
-          otherText[i][1]="2";
-        }
-      }else if(int(otherText[i][1])==2){
-      fill(250,250,250);
-          OtherCircle(i);
-          if(cos(radians(cnt)) == -1&&loopcnt%3==0){
-          otherText[i][1]="0";
-        }
-      }
-  /*    
-  //flow
-    noStroke();
-    for(Maru maru:maruhairetu){
-      maru.draw();
-    }
-    */
-    //Big Circle
     //BigCircle(i);
-    //Small Circle
     SmallCircle(i);
     
     cnt++;
@@ -221,7 +125,7 @@ void draw(){
     }
      // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
     float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
-    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.00001) {
+    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
       float radian = TWO_PI * dotCnt;
       float shapeAx = cos(radian);
       float shapeAy = sin(radian);
@@ -297,7 +201,6 @@ void SmallCircle(int i){
 void OtherCircle(int i){
   stroke(0, 0, 0);
   strokeWeight(0);
-  //ellipse(owidth[i], oheight[i], 80, 80);
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
@@ -305,7 +208,6 @@ void OtherCircle(int i){
   fill(0,0,0);
   textSize(10);
   textAlign(CENTER,CENTER);
-  //text(otherText[i][0], owidth[i], oheight[i]);
   text(smallText1[i][0], cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3);
   text(smallText1[i][1], cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3);
   text(smallText1[i][2], cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3);
@@ -333,7 +235,6 @@ class Maru{
 }
 
 private float easing(float t) {
-
   // InOutCubic
   t *= 2.0;
   if (t < 1.0) {
@@ -341,9 +242,7 @@ private float easing(float t) {
   }
   t -= 2.0;
   return (pow(t, 3) + 2.0) / 2.0;
-
 }
-
 
 class PG {
   ArrayList<P> pl;
@@ -408,3 +307,97 @@ class PG {
     }
   }
 }
+
+
+    /*
+    for (int i = pgl.size() - 1; i >= 0; i--) {
+    PG pg = pgl.get(i);
+    if (pg.dead) {
+      pgl.remove(i);
+    } else {
+      pg.draw();
+    }
+  }
+    
+//Collision
+   for(int i=0; i<cwidth.length;i++){
+     for(int ii=0; ii<cwidth.length;ii++){
+         if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+           pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+        }
+        if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+        }
+        if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        }
+        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        }
+        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+        }
+        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+        }
+        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
+          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+        }
+     } 
+   }
+   
+//line
+  stroke(250,250,250);
+  strokeWeight(0.1);
+  line(cwidth[0]+rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[1]-rSize[1]/3, cheight[1]-rSize[1]/3);
+  line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
+  line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
+    
+  //flow
+    noStroke();
+    for(Maru maru:maruhairetu){
+      maru.draw();
+    }
+    */
+
+/*
+if(otherText[i][1]=="0"){
+        fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+        OtherCircle(i);
+        if(cos(radians(cnt)) == -1&&loopcnt%3==1){
+          //otherText[3][1] = "2";
+        }
+        if(cos(radians(cnt)) == -1&&loopcnt%3==2){
+          //otherText[1][1] = "1";
+        }
+      }else if(int(otherText[i][1])==1){
+        if(cos(radians(cnt))>-0.99){
+          fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+          OtherCircle(i);
+        }else{
+          fill(250,250,250);
+          OtherCircle(i);
+          otherText[i][1]="2";
+        }
+      }else if(int(otherText[i][1])==2){
+      fill(250,250,250);
+          OtherCircle(i);
+          if(cos(radians(cnt)) == -1&&loopcnt%3==0){
+          otherText[i][1]="0";
+        }
+      }*/
