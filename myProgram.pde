@@ -6,6 +6,7 @@ int oheight[]={1070,670,1140,350,310,400,650,1350,1070,920};
 int cnt = 0;
 int loopcnt = 0;
 int textnum = 0;
+int   frameCntMax = 15 * 6;
 PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {300,400,300,360,380,500,500,270};
@@ -63,6 +64,7 @@ void setup(){
   size(1280,2000);
   noStroke();
   background(0);
+  smooth();
 
   maruhairetu =new Maru[5];
   for(int i=0; i<maruhairetu.length;i++){
@@ -90,6 +92,39 @@ textAlign(CENTER);
 //text("継続的", width-45,height/2+7.5);
 text("生産者行動", width/2+200,30);
 text("消費者行動", width/2-200,30);
+
+background(0.0, 0.0, 90.0, 100.0);
+
+  float radius      = width * 0.4;
+  int   frameCntMax = 15 * 6;
+
+  translate(width / 2.0, height / 2.0);
+
+  for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
+    float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
+
+    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
+
+      float radian = TWO_PI * dotCnt;
+
+      float shapeAx = cos(radian);
+      float shapeAy = sin(radian);
+
+      float shapeBx = cos(radian) * pow(cos(radian * 3.0), 2);
+      float shapeBy = sin(radian) * pow(sin(radian * 3.0), 2);
+
+      float applyX   = shapeAx * frameRatio + shapeBx * (1.0 - frameRatio);
+      float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
+      float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
+      
+      fill(applyHue, 40.0, 80.0, 100.0);
+      ellipse(applyX * radius, applyY * radius, 1.0, 1.0);
+
+    }      
+    
+  }  
+
+
 
   //Other Circle
   for(int i=0; i<cwidth.length;i++){
@@ -326,6 +361,19 @@ class Maru{
     //}
   }
 }
+
+private float easing(float t) {
+
+  // InOutCubic
+  t *= 2.0;
+  if (t < 1.0) {
+    return pow(t, 3) / 2.0;
+  }
+  t -= 2.0;
+  return (pow(t, 3) + 2.0) / 2.0;
+
+}
+
 
 class PG {
   ArrayList<P> pl;
