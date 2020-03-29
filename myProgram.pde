@@ -229,7 +229,7 @@ void draw(){
       float applyX   = shapeAx * frameRatio + shapeBx * (1.0 - frameRatio);
       float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
       float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
-      fill(applyHue, 40.0, 80.0, 100.0);
+      fill(applyHue, 40.0, 80.0);
       ellipse(applyX * radius+cwidth[i], applyY * radius+cheight[i], 1.0, 1.0);
     }      
  }
