@@ -220,7 +220,7 @@ void draw(){
     }
      // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
     float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
-    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
+    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.00001) {
       float radian = TWO_PI * dotCnt;
       float shapeAx = cos(radian);
       float shapeAy = sin(radian);
