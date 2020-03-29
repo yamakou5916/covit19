@@ -1,6 +1,4 @@
 float a=0; 
-float radius  = 200;
-
 int cwidth[]={240,830,440,560,830, 950,400,800};
 int cheight[]={920,1255,180,1150,500,800,600,820};
 int owidth[]={550,570,560,550,640,740, 260,850,1030,760};
@@ -13,6 +11,10 @@ int frameCntMax = 15 * 6;
 PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {300,400,300,360,380,500,500,270};
+float radius  = 200;
+//Maru[] maruhairetu;
+//ArrayList<PG> pgl = new ArrayList<PG>();
+
 String bigText[][]=
 {{"ストレージの内容を変更する","ストレージの内容を変更する", "保有者"},
 {"清潔感への配慮は当たり前に","清潔感への配慮は当たり前に", "企画・設計者"},
@@ -58,8 +60,6 @@ String otherText[][]=
 {},
 };
 
-Maru[] maruhairetu;
-ArrayList<PG> pgl = new ArrayList<PG>();
 
 void setup(){
   PFont font = createFont("NotoSansCJKjp-Regular",50);
@@ -68,11 +68,12 @@ void setup(){
   noStroke();
   background(0);
   smooth();
+  /*
   maruhairetu =new Maru[5];
   for(int i=0; i<maruhairetu.length;i++){
     Maru maru=new Maru(rSize[i],rSize[i]);
     maruhairetu[i]=maru;
-  }   
+  }   */
   img = loadImage("user.png");
 }
 
@@ -162,12 +163,9 @@ void draw(){
           OtherCircle(i);
         if(cos(radians(cnt)) == -1&&loopcnt%3==1){
           //otherText[3][1] = "2";
-          //otherText[8][1] = "1";
         }
         if(cos(radians(cnt)) == -1&&loopcnt%3==2){
           //otherText[1][1] = "1";
-          //otherText[5][1] = "1";
-          //otherText[7][1] = "1";
         }
       }else if(int(otherText[i][1])==1){
         if(cos(radians(cnt))>-0.99){
@@ -185,29 +183,28 @@ void draw(){
           otherText[i][1]="0";
         }
       }
-      
-      
+  /*    
   //flow
     noStroke();
     for(Maru maru:maruhairetu){
       maru.draw();
     }
-    
+    */
     //Big Circle
     BigCircle(i);
     //Small Circle
     SmallCircle(i);
     
-      cnt++;
-      if (1000 * sin(radians(cnt)) > 0) {
-        //smaller
-        rSize[i] -= 1;
-        textnum = 0;
-      } else {
-        //bigger
-        rSize[i] += 1;
-        textnum = 1;
-      }
+    cnt++;
+    if (1000 * sin(radians(cnt)) > 0) {
+      //smaller
+      rSize[i] -= 1;
+      textnum = 0;
+    } else {
+      //bigger
+      rSize[i] += 1;
+      textnum = 1;
+    }
   }
       if(-1 == cos(radians(cnt)) ){
       loopcnt++;
