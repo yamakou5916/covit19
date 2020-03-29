@@ -9,7 +9,7 @@ int cnt = 0;
 int loopcnt = 0;
 int textnum = 0;
 int frameCnt = 0;
-int frameCntMax = 15 * 6;
+int frameCntMax = 30 * 6;
 PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {300,400,300,360,380,500,500,270};
@@ -95,33 +95,6 @@ void draw(){
     //text("継続的", width-45,height/2+7.5);
     text("生産者行動", width/2+200,30);
     text("消費者行動", width/2-200,30);
-
-    translate(width / 2.0, height / 2.0);
-    frameCnt += 1;
-    if(frameCnt  ==frameCntMax){
-      frameCnt  = 0;
-    }
-     // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
-    float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
-
-    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
-
-      float radian = TWO_PI * dotCnt;
-
-      float shapeAx = cos(radian);
-      float shapeAy = sin(radian);
-
-      float shapeBx = cos(radian) * pow(cos(radian * 3.0), 2);
-      float shapeBy = sin(radian) * pow(sin(radian * 3.0), 2);
-
-      float applyX   = shapeAx * frameRatio + shapeBx * (1.0 - frameRatio);
-      float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
-      float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
-      
-      fill(applyHue, 40.0, 80.0, 100.0);
-      ellipse(applyX * radius, applyY * radius, 1.0, 1.0);
-    }      
-  
 
   //Other Circle
   for(int i=0; i<cwidth.length;i++){
@@ -226,6 +199,8 @@ void draw(){
     BigCircle(i);
     //Small Circle
     SmallCircle(i);
+    
+    wave();
   }
   
   cnt++;
@@ -260,6 +235,28 @@ void draw(){
 if(-1 == cos(radians(cnt)) ){
   loopcnt++;
 }
+}
+
+void wave(){
+   translate(width / 2.0, height / 2.0);
+    frameCnt += 1;
+    if(frameCnt  ==frameCntMax){
+      frameCnt  = 0;
+    }
+     // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
+    float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
+    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
+      float radian = TWO_PI * dotCnt;
+      float shapeAx = cos(radian);
+      float shapeAy = sin(radian);
+      float shapeBx = cos(radian) * pow(cos(radian * 3.0), 2);
+      float shapeBy = sin(radian) * pow(sin(radian * 3.0), 2);
+      float applyX   = shapeAx * frameRatio + shapeBx * (1.0 - frameRatio);
+      float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
+      float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
+      fill(applyHue, 40.0, 80.0, 100.0);
+      ellipse(applyX * radius, applyY * radius, 1.0, 1.0);
+    } 
 }
  
 void BigCircle(int i){
