@@ -107,7 +107,7 @@ void draw(){
 }
  
  void wave(int i){
-    frameCnt[i] += 0.1;
+    frameCnt[i] += 0.05;
     float frameRatio = cos(radians(frameCnt[i]));
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
       float radian = TWO_PI * dotCnt;
