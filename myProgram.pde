@@ -202,10 +202,8 @@ void draw(){
     BigCircle(i);
     //Small Circle
     SmallCircle(i);
-  }
-  
-  cnt++;
-  if (1000 * sin(radians(cnt)) > 0) {
+    
+      if (1000 * sin(radians(cnt)) > 0) {
     //smaller
     rSize[0] -= 1;
     rSize[1] -= 1;
@@ -230,6 +228,11 @@ void draw(){
     textnum = 1;
 
   }
+    
+  }
+  
+  cnt++;
+
   if(rSize[4]>500){
   rSize[4]=180;
 }
