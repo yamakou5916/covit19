@@ -68,7 +68,6 @@ void setup(){
   noStroke();
   background(0);
   smooth();
-
   maruhairetu =new Maru[5];
   for(int i=0; i<maruhairetu.length;i++){
     Maru maru=new Maru(rSize[i],rSize[i]);
@@ -78,10 +77,10 @@ void setup(){
 }
 
 void draw(){
-//BackGround
-    noStroke();
-    fill(color(0, 0, 0), 32);
-    rect(0,0,width,height);
+  //BackGround
+  noStroke();
+  fill(color(0, 0, 0), 32);
+  rect(0,0,width,height);
     
     //軸
     stroke(250,250,250,100);
@@ -97,13 +96,6 @@ void draw(){
     text("消費者行動", width/2-200,30);
     
     wave();
-  
-
-  //Other Circle
-  for(int i=0; i<cwidth.length;i++){
-
-  }
-    
     for (int i = pgl.size() - 1; i >= 0; i--) {
     PG pg = pgl.get(i);
     if (pg.dead) {
