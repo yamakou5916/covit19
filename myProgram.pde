@@ -6,7 +6,7 @@ int oheight[]={1070,670,1140,350,310,400,650,1350,1070,920};
 int cnt = 0;
 int loopcnt = 0;
 int textnum = 0;
-int frameCnt = 0;
+int frameCnt[] = {0, 50, 100, 50, 0, 50, 100, 50};
 int frameCntMax = 15 * 6;
 PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
@@ -115,8 +115,8 @@ void draw(){
 }
  
  void wave(int i){
-    frameCnt += 0.05;
-    float frameRatio = cos(radians(frameCnt));
+    frameCnt[i] += 0.05;
+    float frameRatio = cos(radians(frameCnt[i]));
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
       float radian = TWO_PI * dotCnt;
       float shapeAx = cos(radian);
@@ -163,13 +163,11 @@ void SmallCircle(int i){
     }
     fill(0, 0, 0,125 - 125*sin(radians(frameCnt )));
     stroke(250, 250, 250,125 - 125*sin(radians(frameCnt )));
-    //stroke(125 - 125*sin(radians(frameCnt )),125 - 125*sin(radians(frameCnt )),125 - 125*sin(radians(frameCnt )));
     strokeWeight(3);
     ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
     ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-    //fill(125 - 125*sin(radians(frameCnt )),125 - 125*sin(radians(frameCnt )),125 - 125*sin(radians(frameCnt )));
     fill(250, 250, 250,125 - 125*sin(radians(frameCnt )));
     textSize(10);
     textAlign(CENTER,CENTER);
