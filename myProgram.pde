@@ -122,7 +122,6 @@ void draw(){
       noStroke();
       fill(applyHue, 40.0, 80.0,100);
       ellipse(applyX * rSize[i] /2+cwidth[i], applyY *  rSize[i] /2+cheight[i], 1.0, 1.0);
-      noFill();
     }
     SmallCircle(i);
  }
@@ -188,7 +187,8 @@ void OtherCircle(int i){
   stroke(0, 0, 0);
   strokeWeight(0);
   noStroke();
-  fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
+  fill(250,250,250);
+  //fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
