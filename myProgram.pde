@@ -200,6 +200,7 @@ void SmallCircle(int i){
 void OtherCircle(int i){
   stroke(0, 0, 0);
   strokeWeight(0);
+  noStroke();
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
