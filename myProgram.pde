@@ -5,7 +5,7 @@ int owidth[]={550,570,560,550,640,740, 260,850,1030,760};
 int oheight[]={1070,670,1140,350,310,400,650,1350,1070,920};
 int textnum = 0;
 //int frameCnt = 0;
-float frameCnt[] = {0,200,0,100,0,10,50,0};
+float frameCnt[] = {60,200,0,100,0,10,50,0};
 PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {300,400,300,360,380,500,500,270};
@@ -175,7 +175,7 @@ void OtherCircle(int i){
   stroke(0, 0, 0);
   strokeWeight(0);
   noStroke();
-  fill(125 - 125*cos(radians(frameCnt[0])),125 - 125*cos(radians(frameCnt[0])),125 - 125*cos(radians(frameCnt[0])));
+  fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
