@@ -160,7 +160,7 @@ void SmallCircle(int i){
     fill(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
     stroke(250, 250, 250);//,125 - 125*cos(radians(frameCnt[i])));
     strokeWeight(3);
-    }else{
+    }else if(textnum == 0){
     noFill();
     noStroke();
     }
@@ -170,7 +170,7 @@ void SmallCircle(int i){
     ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
     if(textnum == 1){
     fill(250, 250, 250);//,125 - 125*cos(radians(frameCnt[i])));
-    }else{
+    }else if(textnum == 0){
     noFill();
     noStroke();
     }
