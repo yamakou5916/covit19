@@ -101,34 +101,7 @@ void draw(){
 
   //Other Circle
   for(int i=0; i<cwidth.length;i++){
-    if(otherText[i][1]=="0"){
-      fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
-        OtherCircle(i);
-      if(cos(radians(cnt)) == -1&&loopcnt%3==1){
-        //otherText[3][1] = "2";
-        //otherText[8][1] = "1";
-      }
-      if(cos(radians(cnt)) == -1&&loopcnt%3==2){
-        //otherText[1][1] = "1";
-        //otherText[5][1] = "1";
-        //otherText[7][1] = "1";
-      }
-    }else if(int(otherText[i][1])==1){
-      if(cos(radians(cnt))>-0.99){
-        fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
-        OtherCircle(i);
-      }else{
-        fill(250,250,250);
-        OtherCircle(i);
-        otherText[i][1]="2";
-      }
-    }else if(int(otherText[i][1])==2){
-    fill(250,250,250);
-        OtherCircle(i);
-        if(cos(radians(cnt)) == -1&&loopcnt%3==0){
-        otherText[i][1]="0";
-      }
-      }
+
   }
     
     for (int i = pgl.size() - 1; i >= 0; i--) {
@@ -191,7 +164,38 @@ void draw(){
   line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
   */
   
-  for(int i=0; i<cwidth.length;i++){    
+  for(int i=0; i<cwidth.length;i++){
+    //OtherCircle
+    if(otherText[i][1]=="0"){
+        fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+          OtherCircle(i);
+        if(cos(radians(cnt)) == -1&&loopcnt%3==1){
+          //otherText[3][1] = "2";
+          //otherText[8][1] = "1";
+        }
+        if(cos(radians(cnt)) == -1&&loopcnt%3==2){
+          //otherText[1][1] = "1";
+          //otherText[5][1] = "1";
+          //otherText[7][1] = "1";
+        }
+      }else if(int(otherText[i][1])==1){
+        if(cos(radians(cnt))>-0.99){
+          fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+          OtherCircle(i);
+        }else{
+          fill(250,250,250);
+          OtherCircle(i);
+          otherText[i][1]="2";
+        }
+      }else if(int(otherText[i][1])==2){
+      fill(250,250,250);
+          OtherCircle(i);
+          if(cos(radians(cnt)) == -1&&loopcnt%3==0){
+          otherText[i][1]="0";
+        }
+      }
+      
+      
   //flow
     noStroke();
     for(Maru maru:maruhairetu){
