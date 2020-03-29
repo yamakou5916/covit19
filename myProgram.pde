@@ -5,7 +5,7 @@ int owidth[]={550,570,560,550,640,740, 260,850,1030,760};
 int oheight[]={1070,670,1140,350,310,400,650,1350,1070,920};
 int textnum = 0;
 //int frameCnt = 0;
-float frameCnt[] = {0,200,0,10,0,10,0,0};
+float frameCnt[] = {0,200,0,100,0,10,50,0};
 PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {300,400,300,360,380,500,500,270};
@@ -147,21 +147,21 @@ void BigCircle(int i){
 */
 
 void SmallCircle(int i){
-  if (1000 * sin(radians(frameCnt[0])) > 0) {
+  if (1000 * sin(radians(frameCnt[i])) > 0) {
       rSize[i] -= 0.5;
       textnum = 0;
     } else {
       rSize[i] += 0.5;
       textnum = 1;
     }
-    fill(0, 0, 0,125 - 125*sin(radians(frameCnt[0])));
-    stroke(250, 250, 250,125 - 125*sin(radians(frameCnt[0])));
+    fill(0, 0, 0,125 - 125*sin(radians(frameCnt[i])));
+    stroke(250, 250, 250,125 - 125*sin(radians(frameCnt[i])));
     strokeWeight(3);
     ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
     ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-    fill(250, 250, 250,125 - 125*sin(radians(frameCnt[0])));
+    fill(250, 250, 250,125 - 125*sin(radians(frameCnt[i])));
     textSize(10);
     textAlign(CENTER,CENTER);
     text(smallText0[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
