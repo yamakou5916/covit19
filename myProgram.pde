@@ -155,8 +155,9 @@ void draw(){
   line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
   line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
   */
-  wave();
+  
   for(int i=0; i<cwidth.length;i++){
+    wave(i);
     //OtherCircle
     if(otherText[i][1]=="0"){
         fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
@@ -211,7 +212,7 @@ void draw(){
     }
 }
  
- void wave(){
+ void wave(int i){
     //translate(width / 2.0, height / 2.0);
     frameCnt += 1;
     if(frameCnt  ==frameCntMax){
@@ -219,29 +220,21 @@ void draw(){
     }
      // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
     float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
-
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
-
       float radian = TWO_PI * dotCnt;
-
       float shapeAx = cos(radian);
       float shapeAy = sin(radian);
-
       float shapeBx = cos(radian) * pow(cos(radian * 1.0), 2);
       float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
-
       float applyX   = shapeAx * frameRatio + shapeBx * (1.0 - frameRatio);
       float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
       float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
-      
       fill(applyHue, 40.0, 80.0, 100.0);
-      ellipse(applyX * radius+300, applyY * radius+300, 1.0, 1.0);
+      ellipse(applyX * radius+cwidth[i], applyY * radius+cheight[i], 1.0, 1.0);
     }      
  }
  
- 
 void BigCircle(int i){
-  
    if(textnum==1){
      fill(0, 80, 100+rSize[i]/3 , -50 * sin(radians(cnt)));
      noStroke();
