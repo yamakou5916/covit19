@@ -206,11 +206,11 @@ void draw(){
       cnt++;
       if (1000 * sin(radians(cnt)) > 0) {
         //smaller
-        rSize[i] -= 1;
+        rSize[i] -= 10;
         textnum = 0;
       } else {
         //bigger
-        rSize[i] += 1;
+        rSize[i] += 10;
         textnum = 1;
       }
     if(-1 == cos(radians(cnt)) ){
