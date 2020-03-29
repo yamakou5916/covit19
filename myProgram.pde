@@ -1,4 +1,6 @@
 float a=0; 
+float radius      = width * 0.4;
+
 int cwidth[]={240,830,440,560,830, 950,400,800};
 int cheight[]={920,1255,180,1150,500,800,600,820};
 int owidth[]={550,570,560,550,640,740, 260,850,1030,760};
@@ -94,15 +96,11 @@ textAlign(CENTER);
 text("生産者行動", width/2+200,30);
 text("消費者行動", width/2-200,30);
 
-background(0.0, 0.0, 90.0, 100.0);
-
-  float radius      = width * 0.4;
-  int   frameCntMax = 15 * 6;
 
   translate(width / 2.0, height / 2.0);
 frameCnt += 1;
 if(frameCnt  ==frameCntMax){
-  rameCnt  = 0;
+  frameCnt  = 0;
 }
  // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
     float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
