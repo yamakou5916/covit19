@@ -224,11 +224,11 @@ void draw(){
       float radian = TWO_PI * dotCnt;
       float shapeAx = cos(radian);
       float shapeAy = sin(radian);
-      float shapeBx = cos(radian) * pow(cos(radian * 1.0), 2);
-      float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
-      float applyX   = shapeAx * frameRatio + shapeBx * (1.0 + frameRatio);
-      float applyY   = shapeAy * frameRatio + shapeBy * (1.0 + frameRatio);
-      float applyHue = 360 * frameRatio + 240 * (1.0 + frameRatio);
+      float shapeBx = cos(radian) * pow(cos(radian * 3.0), 2);
+      float shapeBy = sin(radian) * pow(sin(radian * 3.0), 2);
+      float applyX   = shapeAx * frameRatio + shapeBx * (1.0 - frameRatio);
+      float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
+      float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       fill(applyHue, 40.0, 80.0);
       ellipse(applyX * radius+cwidth[i], applyY * radius+cheight[i], 1.0, 1.0);
     }      
