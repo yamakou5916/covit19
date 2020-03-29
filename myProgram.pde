@@ -157,10 +157,10 @@ void BigCircle(int i){
 
 void SmallCircle(int i){
   if (1000 * sin(radians(frameCnt)) > 0) {
-      rSize[i] -= 0.1;
+      rSize[i] -= 1;
       textnum = 0;
     } else {
-      rSize[i] += 0.1;
+      rSize[i] += 1;
       textnum = 1;
     }
   if(textnum==1){
