@@ -1,5 +1,5 @@
 float a=0; 
-float radius      = 400;
+float radius = 100;
 
 int cwidth[]={240,830,440,560,830, 950,400,800};
 int cheight[]={920,1255,180,1150,500,800,600,820};
@@ -83,26 +83,25 @@ void draw(){
     fill(color(0, 0, 0), 32);
     rect(0,0,width,height);
     
-//軸
-stroke(250,250,250,100);
-strokeWeight(0.1);
-//line(0,height/2, width,height/2);
-line(width/2,0, width/2,height);
-fill(250,250,250,50);
-textSize(15);
-textAlign(CENTER);
-//text("一時的", 45,height/2+7.5);
-//text("継続的", width-45,height/2+7.5);
-text("生産者行動", width/2+200,30);
-text("消費者行動", width/2-200,30);
+    //軸
+    stroke(250,250,250,100);
+    strokeWeight(0.1);
+    //line(0,height/2, width,height/2);
+    line(width/2,0, width/2,height);
+    fill(250,250,250,50);
+    textSize(15);
+    textAlign(CENTER);
+    //text("一時的", 45,height/2+7.5);
+    //text("継続的", width-45,height/2+7.5);
+    text("生産者行動", width/2+200,30);
+    text("消費者行動", width/2-200,30);
 
-
-  translate(width / 2.0, height / 2.0);
-frameCnt += 1;
-if(frameCnt  ==frameCntMax){
-  frameCnt  = 0;
-}
- // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
+    //translate(width / 2.0, height / 2.0);
+    frameCnt += 1;
+    if(frameCnt  ==frameCntMax){
+      frameCnt  = 0;
+    }
+     // for (int frameCnt = 0; frameCnt <= frameCntMax; ++frameCnt) {
     float frameRatio = easing(map(frameCnt, 0, frameCntMax, 1.0, 0.0));
 
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.0001) {
