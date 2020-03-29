@@ -203,7 +203,7 @@ void OtherCircle(int i){
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
   //fill(0,0,0);
-  fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
+  fill(125 - 125*cos(radians(frameCnt )),125 - 125*cos(radians(frameCnt )),125 - 125*cos(radians(frameCnt )));
   textSize(10);
   textAlign(CENTER,CENTER);
   text(smallText1[i][0], cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3);
