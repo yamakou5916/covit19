@@ -39,6 +39,13 @@ p.quote {
   padding: 0px 40px 0px 40px;
 }
 
+.num {
+  font-size: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  padding-top: 40px;
+}
+
 /*右の内容*/
 .inline-contents2 {
   width: 70%;
@@ -47,11 +54,6 @@ p.quote {
   background-color: #fafafa;
   font-size: 16px;
   vertical-align: bottom;
-}
-
-p.number {
-  font-size: 14px;
-  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .data {
