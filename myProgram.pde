@@ -139,6 +139,7 @@ void BigCircle(int i){
   noFill();
   stroke(0,0,0);
   strokeWeight(0.1);
+  noStroke();
   ellipse(cwidth[i], cheight[i],rSize0[i],rSize0[i]);
 }
 
