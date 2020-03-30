@@ -85,7 +85,7 @@ void draw(){
     stroke(250,250,250);
     strokeWeight(0.1);
     line(width/2,0, width/2,height);
-    fill(250,250,250,50);
+    fill(250,250,250);
     textSize(15);
     textAlign(CENTER);
     text("供給", width/2+200,30);
