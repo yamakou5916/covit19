@@ -129,29 +129,17 @@ void draw(){
       ellipse(applyX * rSize[i] /5+cwidth[i], applyY *  rSize[i] /5+cheight[i], 1.0, 1.0);
     }
     SmallCircle(i);
+    BigCircle(i);
  }
 
-/*
 void BigCircle(int i){
-   if(textnum==1){
-     fill(0, 80, 100+rSize[i]/3 , -50 * sin(radians(cnt)));
-     noStroke();
-   }else{
-     noFill();
-     stroke(250,250,250);
-     strokeWeight(0.1);
-   }
+  noFill();
+  stroke(0,0,0);
+  strokeWeight(0.1);
   ellipse(cwidth[i], cheight[i],rSize[i],rSize[i]);
   fill(255);
   image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
-  textSize(12);
-  textAlign(CENTER);
-  text(bigText[i][textnum], cwidth[i], cheight[i]+20);
-  textSize(10);
-  textAlign(CENTER);
-  text(bigText[i][2], cwidth[i], cheight[i]-40);
 }
-*/
 
 void SmallCircle(int i){
   if (1000 * sin(radians(frameCnt[i])) > 0) {
