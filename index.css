@@ -44,6 +44,7 @@ p.quote {
   width: 70%;
   height: 1000px;
   display: inline-block;
+  background-color: #fafafa;
   font-size: 16px;
   vertical-align: bottom;
 }
