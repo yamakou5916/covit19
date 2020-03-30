@@ -11,6 +11,8 @@ float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {500,600,500,560,580,700,700,470};
 float radius  = 200;
 int collision = 0;
+color col1, col2;
+
 Maru[] maruhairetu;
 //ArrayList<PG> pgl = new ArrayList<PG>();
 
@@ -67,6 +69,8 @@ void setup(){
   //background(0);
   background(250);
   smooth();
+  col1 = color(0);
+  col2 = color(255);
   
   maruhairetu =new Maru[5];
   for(int i=0; i<maruhairetu.length;i++){
@@ -180,7 +184,8 @@ void OtherCircle(int i){
   noStroke();
   //stroke(250, 250, 250);//,125 - 125*cos(radians(frameCnt[i])));
   //fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
-  ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+  grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80);
+  //ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
@@ -191,6 +196,17 @@ void OtherCircle(int i){
   text(smallText1[i][1], cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3);
   text(smallText1[i][2], cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3);
   text(smallText1[i][3], cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3);
+}
+
+void grdCircle2(float x, float y, float d) {
+ float c = 100;
+ for (int i=0; i<c; i++) {
+   color col = lerpColor(col1, col2, i/c);
+   float a = lerp(PI, 0, i/c);
+   
+   fill(col);
+   arc(x, y, d, d, -a, a, CHORD);
+ }
 }
 
 class Maru{
