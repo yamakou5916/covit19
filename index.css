@@ -11,7 +11,7 @@
 /*左の内容*/
 .inline-contents1 {
   width: 30%;
-  height: 1000px;
+  height: auto;
   display: inline-block;
   background-color: #fff;
   vertical-align: bottom;
