@@ -8,7 +8,7 @@ int textnum = 0;
 float frameCnt[] = {60,200,0,100,0,10,50,0};
 PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
-float rSize[] = {300,400,300,360,380,500,500,270};
+float rSize[] = {500,600,500,560,580,700,700,470};
 float radius  = 200;
 //Maru[] maruhairetu;
 //ArrayList<PG> pgl = new ArrayList<PG>();
