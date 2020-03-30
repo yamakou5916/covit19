@@ -91,12 +91,12 @@ void draw(){
     text("供給", width/2+200,30);
     text("需要", width/2-200,30);
 
-    //円
+   //円
+  for(Maru maru:maruhairetu){
+        maru.draw();
+      }
   for(int i=0; i<cwidth.length;i++){
     BigCircle(i);
-    for(Maru maru:maruhairetu){
-      maru.draw();
-    }
     OtherCircle(i);
     wave(i);
     fill(0);
@@ -198,12 +198,12 @@ class Maru{
   void draw(){
       //if (mousePressed)
       //{
-        //for(int i=0; i<cwidth.length;i++){
+        for(int i=0; i<cwidth.length;i++){
           fill(150, 150, 150);
           //fill(color(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 ));  
           a+=x/100000;
           ellipse(cwidth[i]+rSize0[i]*cos(a)/2, cheight[i]+rSize0[i]*sin(a)/2,3,3);
-        //}
+        }
     //}
   }
 }
