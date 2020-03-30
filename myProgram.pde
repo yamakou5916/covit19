@@ -159,13 +159,12 @@ void SmallCircle(int i){
       stroke(0, 0, 0);
       strokeWeight(0.5);
   //noStroke();
-  fill(0,0,0);
-    
+  fill(255, 255, 255);
     ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
     ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-    fill(255, 255, 255);//,125 - 125*cos(radians(frameCnt[i])));
+    fill(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
     textSize(10);
     textAlign(CENTER,CENTER);
     text(smallText0[i][0], cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3);
@@ -185,7 +184,7 @@ void OtherCircle(int i){
   ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
   ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-  fill(250,250,250);
+  fill(255,255,255);
   textSize(10);
   textAlign(CENTER,CENTER);
   text(smallText1[i][0], cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3);
