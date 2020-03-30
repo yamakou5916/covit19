@@ -63,7 +63,7 @@ void setup(){
   textFont (font);
   size(1280,2000);
   noStroke();
-  background(0);
+  //background(0);
   smooth();
   /*
   maruhairetu =new Maru[5];
