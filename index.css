@@ -57,7 +57,7 @@ p.quote {
 /*右の内容*/
 .inline-contents2 {
   width: 70%;
-  height: auto;
+  height: 1000px;
   display: inline-block;
   background-color: #fafafa;
   font-size: 16px;
