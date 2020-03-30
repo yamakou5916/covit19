@@ -126,7 +126,7 @@ void draw(){
       }else{
         noFill();
       }
-      ellipse(applyX * rSize[i] /3+cwidth[i], applyY *  rSize[i] /3+cheight[i], 1.0, 1.0);
+      ellipse(applyX * rSize[i] /2+cwidth[i], applyY *  rSize[i] /2+cheight[i], 1.0, 1.0);
     }
     SmallCircle(i);
  }
