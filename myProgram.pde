@@ -199,8 +199,8 @@ class Maru{
       //if (mousePressed)
       //{
         for(int i=0; i<cwidth.length;i++){
-          fill(250, 250, 250);
-          fill(color(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 ));  
+          fill(150, 150, 150);
+          //fill(color(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 ));  
           a+=x/100000;
           ellipse(cwidth[i]+rSize0[i]*cos(a)/2, cheight[i]+rSize0[i]*sin(a)/2,3,3);
         }
