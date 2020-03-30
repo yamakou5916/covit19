@@ -10,6 +10,7 @@ PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {500,600,500,560,580,700,700,470};
 float radius  = 200;
+int collision = 0;
 Maru[] maruhairetu;
 //ArrayList<PG> pgl = new ArrayList<PG>();
 
@@ -108,8 +109,6 @@ void draw(){
     textAlign(CENTER);
     text(bigText[i][2], cwidth[i], cheight[i]-40);
   }
-  
-  
 }
  
  void wave(int i){
@@ -131,6 +130,11 @@ void draw(){
         noFill();
       }
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
+      if(dist(cwidth[i],cheight[i],applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i])<80){
+        collision = 1;
+      }else{
+        collision = 0;
+      }
     }
     SmallCircle(i);
  }
@@ -151,7 +155,7 @@ void SmallCircle(int i){
       rSize[i] += 0.1;
       textnum = 1;
     }
-    if(textnum == 1){
+    if(collision == 1){
     fill(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
     noStroke();
     //stroke(250, 250, 250);//,125 - 125*cos(radians(frameCnt[i])));
