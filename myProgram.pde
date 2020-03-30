@@ -77,7 +77,7 @@ void setup(){
 void draw(){
   //背景
   noStroke();
-  fill(color(80, 95, 97));
+  fill(color(80, 95, 97), 32);
   rect(0,0,width,height);
     
     //軸
@@ -120,7 +120,7 @@ void draw(){
       float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
       float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       noStroke();
-      fill(applyHue, 40.0, 80.0,100);
+      fill(40.0, 80.0, applyHue, 100);
       ellipse(applyX * rSize[i] /2+cwidth[i], applyY *  rSize[i] /2+cheight[i], 1.0, 1.0);
     }
     SmallCircle(i);
