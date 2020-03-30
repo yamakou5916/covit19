@@ -18,12 +18,12 @@
   vertical-align: bottom;
 }
 
-.inline-contents1 {
+/*.inline-contents1 {
   position: fixed;
   width: 30%;
   top: 0;
   z-index: 10000;
-}
+} */
 
 h1 {
   font-size: 20px;
