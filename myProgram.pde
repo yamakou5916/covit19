@@ -82,10 +82,10 @@ void draw(){
   rect(0,0,width,height);
     
     //軸
-    stroke(250,250,250);
+    stroke(0,0,0);
     strokeWeight(0.1);
     line(width/2,0, width/2,height);
-    fill(250,250,250);
+    fill(0,0,0);
     textSize(15);
     textAlign(CENTER);
     text("供給", width/2+200,30);
@@ -115,8 +115,8 @@ void draw(){
       float radian = TWO_PI * dotCnt;
       float shapeAx = cos(radian);
       float shapeAy = sin(radian);
-      float shapeBx = cos(radian) * pow(cos(radian *1.0), 2);
-      float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
+      //float shapeBx = cos(radian) * pow(cos(radian *1.0), 2);
+      //float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
       float applyX   = shapeAx * frameRatio ;//+ shapeBx * (1.0 - frameRatio);
       float applyY   = shapeAy * frameRatio;// + shapeBy * (1.0 - frameRatio);
       float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
