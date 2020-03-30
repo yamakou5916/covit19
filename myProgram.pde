@@ -123,14 +123,15 @@ void draw(){
       //float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
       float applyX   = shapeAx * (frameRatio+1) ;//+ shapeBx * (1.0 - frameRatio);
       float applyY   = shapeAy * (frameRatio+1);// + shapeBy * (1.0 - frameRatio);
-      float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
+      //float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
         fill(150, 150, 150);//, 100);
       }else{
         noFill();
       }
-      ellipse(applyX * rSize[i] /5+cwidth[i], applyY *  rSize[i] /5+cheight[i], 1.0, 1.0);
+      //ellipse(applyX * rSize[i] /5+cwidth[i], applyY *  rSize[i] /5+cheight[i], 1.0, 1.0);
+      ellipse(applyX * rSize[i]+cwidth[i], applyY *  rSize[i]+cheight[i], 1.0, 1.0);
     }
     SmallCircle(i);
  }
