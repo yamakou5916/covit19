@@ -136,9 +136,7 @@ void BigCircle(int i){
   noFill();
   stroke(0,0,0);
   strokeWeight(0.1);
-  ellipse(cwidth[i], cheight[i],rSize[i],rSize[i]);
-  fill(255);
-  image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
+  ellipse(cwidth[i], cheight[i],rSize0[i],rSize0[i]);
 }
 
 void SmallCircle(int i){
