@@ -158,7 +158,8 @@ void SmallCircle(int i){
     }
     if(textnum == 1){
     fill(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
-    stroke(250, 250, 250);//,125 - 125*cos(radians(frameCnt[i])));
+    noStroke();
+    //stroke(250, 250, 250);//,125 - 125*cos(radians(frameCnt[i])));
     strokeWeight(3);
     ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
