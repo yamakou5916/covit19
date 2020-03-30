@@ -82,7 +82,7 @@ void draw(){
   rect(0,0,width,height);
     
     //軸
-    stroke(250,250,250,100);
+    stroke(250,250,250);
     strokeWeight(0.1);
     line(width/2,0, width/2,height);
     fill(250,250,250,50);
