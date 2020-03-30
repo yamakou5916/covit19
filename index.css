@@ -8,6 +8,7 @@
   font-size: 0; /*←これだけでOK！*/
 }
 
+
 /*左の内容*/
 .inline-contents1 {
   width: 30%;
@@ -15,6 +16,13 @@
   display: inline-block;
   background-color: #fff;
   vertical-align: bottom;
+}
+
+.inline-contents1 {
+  position: fixed;
+  width: 30%;
+  top: 0;
+  z-index: 10000;
 }
 
 h1 {
@@ -49,7 +57,7 @@ p.quote {
 /*右の内容*/
 .inline-contents2 {
   width: 70%;
-  height: 1000px;
+  height: auto;
   display: inline-block;
   background-color: #fafafa;
   font-size: 16px;
