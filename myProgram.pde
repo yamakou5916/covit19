@@ -125,7 +125,7 @@ void draw(){
       if(sin(radians(frameCnt[i])) < 0){
         fill(40.0, 80.0, applyHue,125 - 125*cos(radians(frameCnt[i])));//, 100);
       }else{
-       // noFill();
+        noFill();
       }
       ellipse(applyX * rSize[i] /2+cwidth[i], applyY *  rSize[i] /2+cheight[i], 1.0, 1.0);
     }
