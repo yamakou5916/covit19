@@ -1,201 +1,58 @@
 * {
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
-.div-base {
+.container {
+  display: block;
+  font-size: 0; /*←これだけでOK！*/
+}
+
+/*左の内容*/
+.inline-contents1 {
+  width: 30%;
+  height: 1000px;
+  display: inline-block;
+  background-color: #fff;
+  vertical-align: bottom;
+}
+
+h1 {
+  font-size: 20px;
   font-family: 'Noto Sans JP', sans-serif;
-  color: #fff;
-}
-
-h1.intro_top {
-  margin-top: 80px;
-  margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding: 80px 40px 0px 40px;
+  font-weight: bold;
 }
 
 p.intro {
-  margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  padding: 40px;
 }
 
 p.quote {
-  font-size: 30px;
-  margin-bottom: 40px;
-}
-
-.box {
-  width: 300px;
-  height: 40px;
-  border-radius: 40px;
-  background: rgb(183, 255, 0);
-  background: linear-gradient(90deg, rgba(183, 255, 0, 1) 0%, rgba(255, 53, 0, 1) 100%);
-  text-align: center;
-  margin: 0 auto;
-}
-
-.box {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.low {
-  float: left;
-  font-family: 'Noto Sans JP', sans-serif;
   font-size: 20px;
-  margin-top: 10px;
-  margin-left: 20px;
-}
-
-.high {
-  float: right;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 20px;
-  margin-top: 10px;
-  margin-right: 20px;
-}
-
-.dot_black {
-  width: 80px;
-  height: 80px;
-  border-radius: 100px;
-  background: #fff;
   text-align: center;
-  margin: 0 auto;
+  padding: 0px 40px 0px 40px;
 }
 
-.dot_white {
-  width: 80px;
-  height: 80px;
-  border-radius: 100px;
-  background: #fff;
-  text-align: center;
-  margin: 0 auto;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-li {
-  border: thin solid #fff;
-  width: 400px;
-  height: auto;
-  padding: 25px;
-  margin: 5px;
-}
-
-.inline li {
+/*右の内容*/
+.inline-contents2 {
+  width: 70%;
+  height: 1000px;
   display: inline-block;
+  background-color: #CDEFF7;
+  font-size: 16px;
+  vertical-align: bottom;
 }
 
-.text1 p, .text2 p, .text3 p {
+p.number {
   font-size: 14px;
-  color: #fff;
-  padding-bottom: 25px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
-
-
-
-.clr-block {
-  clear: both;
-  margin: 40px;
-}
-
-.number {}
 
 .data {
-  padding-bottom: 100px;
 }
-
-/*ポップアップここから*/
-
-.popup_wrap input {
-  display: none;
-}
-
-.popup_overlay {
-  display: flex;
-  justify-content: center;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  transition: opacity 0.5s, transform 0s 0.5s;
-  transform: scale(0);
-}
-
-.popup_trigger {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.popup_content {
-  position: relative;
-  align-self: center;
-  width: 90%;
-  max-width: 800px;
-  padding: 80px;
-  box-sizing: border-box;
-  background: #fff;
-  line-height: 1.4em;
-  transition: 0.5s;
-}
-
-.close_btn {
-  position: absolute;
-  top: 14px;
-  right: 16px;
-  font-size: 30px;
-  cursor: pointer;
-  color: #000;
-}
-
-.popup_wrap input:checked~.popup_overlay {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.5s;
-}
-
-.sample-box {
-  position: relative;
-}
-
-.open_btn {
-  position: absolute;
-  top: 4.5%;
-  left: 33.1%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  color: #fff;
-  background: #0c0d62;
-  opacity: 0.1;
-  font-weight: bold;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: .3s ease;
-}
-
-.open_btn:hover {
-  background: #000;
-  color: #fff;
-  transition: .3s ease;
-}
-
-p.info {
-  color: #000;
-}
-
-/*ポップアップココまで*/

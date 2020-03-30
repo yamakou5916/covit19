@@ -5,90 +5,24 @@
 	<script src="processing.js" type="text/javascript">
 	</script>
 	<link href="index.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet"><!--
-.p-title{width:312px;font-weight:bold; text-align:center;border-left:1px solid #000;border-right:1px solid #000;margin:auto;}
-.p-center{text-align:center;}
-.ul-bar{list-style:none;max-width:880px;margin:0 auto;padding:18px 0;text-align:center;font-size:0;}
-.ul-bar li{position:relative;display:inline-block;width:14.28%;text-align:center;font-weight:bold;letter-spacing:2px;font-size:11px;line-height:2;}
-.ul-bar li:after{content:"|";position:absolute;display:block;top:-2px;right:0;}
-.ul-bar li a{display:block;}
-
-.div-base{min-width:1280px;margin:20px auto 20px auto;}
-.div-box-1{width:200px; margin-right:60px;float:left;}
-.div-box-2{width:200px; float:left;}
-.ol-list{list-style:none;margin:0;padding:0;text-align:right;font-size:0;}
-.ol-list li{display:inline-block;width:50%;margin:10px 0;text-align:left;font-weight:bold;letter-spacing:2px;border:1px solid #000;box-sizing:border-box;font-size:11px;line-height:2;}
-.ul-list{list-style:none;margin:0;padding:0;text-align:right;font-size:0;}
-.ul-list li{display:inline-block;width:50%;margin:10px 0;text-align:left;font-weight:bold;letter-spacing:2px;border:1px solid #000;box-sizing:border-box;font-size:11px;line-height:2;}
-.nav{z-index:10;margin:auto;}
-
-* {
-  -webkit-user-select: none;  /* Chrome or Safari */
-  -moz-user-select: none;     /* FireFox */
-  -ms-user-select: none;      /* IE */
-  -o-user-select: none;       /* Opera */
-  user-select: none;
-}
-
--->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
 </head>
-<body bgcolor="#CDEFF7" style="min-width: 1200px">
-	<div class="div-base">
-		<h1 class="intro_top">Experience map after COVIDE-19</h1>
-		<p class="intro">2019年11月に中国武漢を震源に発生したコロナウイルスは、瞬く間に拡散し2020年3月現在、世界Xカ国約20万人への感染が確認された.<br>
-		その病原菌を伝染させるだけではなく、それぞれの時と場所で新しい意識と生活を伝染させ根付かせている.<br>
-		以下の図はコロナウイルスの影響による人々の経済活動と意識の変化を示したものである.</p>
-		<p class="quote">“伝染は、ウイルスだけではなく、<br>
-		人々の意識や生活風習にも伝染する”</p><!--<div class="box">
-                <p class="low">低</p>
-                <p class="high">高</p>
-            </div>-->
-		<div class="clr-block"></div><!--フロートの下のブロック-->
-		<div class="inline">
-			<ul>
-				<li class="text1">
-					<p>
-					コロナウイルスがきっかけで起こっている人々の経済活動</p>
-					<div class="dot_black"></div>
-				</li>
-				<li class="text2">
-					<p>
-					活動量の規模、事象の大きさ</p>
-					<div class="box">
-						<p class="low">低</p>
-						<p class="high">高</p>
-					</div>
-				</li>
-				<li class="text3">
-					<p>
-					経済活動のループ、顕在化してくる社会課題</p>
-					<div class="dot_white"></div>
-				</li>
-			</ul>
-		</div>
-		<div class="clr-block"></div><!--フロートの下のブロック-->
-		<div class="infected">
-			<p class="number">感染者数<br>
-			422,613</p>
-		</div>
-		<div class="clr-block"></div><!--フロートの下のブロック-->
-		<!--<p class="circle">&#9679; 拡大・縮小&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&#9679; 拡大・縮小</p>-->
-		<div class="popup_wrap">
-			<input id="trigger" type="checkbox">
-			<div class="popup_overlay">
-				<label class="popup_trigger" for="trigger"></label>
-				<div class="popup_content">
-					<label class="close_btn" for="trigger">×</label>
-					<p class="info">ここにポップアップウィンドウの中身を入れます。<br>
-					画像も入りますし、動画も入ります。</p>
-				</div>
-			</div>
-		</div>
-		<div class="sample-box">
-			<label class="open_btn" for="trigger"></label>
+
+<body>
+	<div class="container">
+		<div class="inline-contents1">
+			<h1 class="t">Experience map after COVID-19</h1>
+			<p class="intro">2019年11月に中国武漢を震源に発生したコロナウイルスは、瞬く間に拡散し2020年3月現在、世界Xカ国約20万人への感染が確認された。
+			その病原菌を伝染させるだけではなく、それぞれの時と場所で新しい意識と生活を伝染させ根付かせている。
+			以下の図はコロナウイルスの影響による人々の経済活動と意識の変化を示したものである。</p>
+			<p class="quote">“伝染は、ウイルスだけではなく、<br>人々の意識や生活風習にも伝染する”</p>
+		</div>	
+		<div class="inline-contents2">
+			<p class="number">感染者数<br>422,613</p>
 			<canvas class="data" data-processing-sources="myProgram.pde"></canvas>
 		</div>
-	</div><!--div class="div-base"-->
+	</div>
+
 </body>
 </html>
