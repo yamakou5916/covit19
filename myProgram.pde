@@ -78,7 +78,7 @@ void setup(){
 void draw(){
   //背景
   noStroke();
-  fill(color(80, 95, 97), 32);
+  //fill(color(80, 95, 97), 32);
   rect(0,0,width,height);
     
     //軸
