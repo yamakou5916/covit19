@@ -121,7 +121,7 @@ void draw(){
       float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
       float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       noStroke();
-      fill(40.0, 80.0, applyHue, 100);
+      fill(40.0, 80.0, applyHue);//, 100);
       ellipse(applyX * rSize[i] /2+cwidth[i], applyY *  rSize[i] /2+cheight[i], 1.0, 1.0);
     }
     SmallCircle(i);
