@@ -93,6 +93,7 @@ void draw(){
 
     //円
   for(int i=0; i<cwidth.length;i++){
+    BigCircle(i);
     OtherCircle(i);
     wave(i);
     fill(0);
@@ -129,7 +130,6 @@ void draw(){
       ellipse(applyX * rSize[i] /5+cwidth[i], applyY *  rSize[i] /5+cheight[i], 1.0, 1.0);
     }
     SmallCircle(i);
-    BigCircle(i);
  }
 
 void BigCircle(int i){
@@ -149,8 +149,8 @@ void SmallCircle(int i){
     }
     if(textnum == 1){
     fill(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
-    noStroke();
-    //stroke(250, 250, 250);//,125 - 125*cos(radians(frameCnt[i])));
+    //noStroke();
+    stroke(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
     strokeWeight(3);
     ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
