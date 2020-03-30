@@ -64,7 +64,7 @@ void setup(){
   size(1280,2000);
   noStroke();
   //background(0);
-  background(color(80, 95, 97), 32);
+  background(color(80, 95, 97));
   smooth();
   /*
   maruhairetu =new Maru[5];
