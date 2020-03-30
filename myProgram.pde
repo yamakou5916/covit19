@@ -176,24 +176,14 @@ void SmallCircle(int i){
   
 
 void OtherCircle(int i){
+  fill(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
   noStroke();
   //stroke(250, 250, 250);//,125 - 125*cos(radians(frameCnt[i])));
   //fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
-  fill(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
-  color c1 = color(0);
-  color c2 = color(255);
-  for(float w = 0; w < 80; w += 5){
-    for(float h = 0; h < 80; h += 5){
-      color c = lerpColor(c1, c2, (w + h) / (80 + 80));
-      fill(c);
-      //rect(w, h, 5, 5);
-        ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-        ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-        ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-        ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-    }
-  }
-
+  ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+  ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+  ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
+  ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
   fill(255,255,255);
   textSize(10);
   textAlign(CENTER,CENTER);
