@@ -121,7 +121,6 @@ void draw(){
       float applyY   = shapeAy * frameRatio;// + shapeBy * (1.0 - frameRatio);
       float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       noStroke();
-      print( sin(radians(frameCnt[i]))  );
       if(sin(radians(frameCnt[i])) < 0){
         fill(40.0, 80.0, applyHue,125 - 125*cos(radians(frameCnt[i])));//, 100);
       }else{
