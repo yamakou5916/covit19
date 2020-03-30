@@ -64,7 +64,7 @@ void setup(){
   size(1280,2000);
   noStroke();
   //background(0);
-  background(color(40, 45, 47));
+  background(color(80, 95, 97), 32);
   smooth();
   /*
   maruhairetu =new Maru[5];
@@ -78,7 +78,7 @@ void setup(){
 void draw(){
   //背景
   noStroke();
-  fill(color(40, 45, 47), 12);
+  fill(color(80, 95, 97), 102);
   rect(0,0,width,height);
     
     //軸
