@@ -10,7 +10,7 @@ PImage img;
 float rSize0[] = {300,400,300,360,380,500,500,270};
 float rSize[] = {500,600,500,560,580,700,700,470};
 float radius  = 200;
-//Maru[] maruhairetu;
+Maru[] maruhairetu;
 //ArrayList<PG> pgl = new ArrayList<PG>();
 
 String bigText[][]=
@@ -66,12 +66,12 @@ void setup(){
   //background(0);
   background(250);
   smooth();
-  /*
+  
   maruhairetu =new Maru[5];
   for(int i=0; i<maruhairetu.length;i++){
     Maru maru=new Maru(rSize[i],rSize[i]);
     maruhairetu[i]=maru;
-  }   */
+  } 
   img = loadImage("user.png");
 }
 
@@ -94,6 +94,9 @@ void draw(){
     //円
   for(int i=0; i<cwidth.length;i++){
     BigCircle(i);
+    for(Maru maru:maruhairetu){
+      maru.draw();
+    }
     OtherCircle(i);
     wave(i);
     fill(0);
@@ -197,9 +200,9 @@ class Maru{
       //{
         for(int i=0; i<cwidth.length;i++){
           fill(250, 250, 250);
-          //fill(color(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 ));  
+          fill(color(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 ));  
           a+=x/100000;
-          //ellipse(cwidth[i]+rSize[i]*cos(a)/2, cheight[i]+rSize[i]*sin(a)/2,3,3);
+          ellipse(cwidth[i]+rSize[i]*cos(a)/2, cheight[i]+rSize[i]*sin(a)/2,3,3);
         }
     //}
   }
