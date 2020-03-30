@@ -95,7 +95,7 @@ void draw(){
   for(int i=0; i<cwidth.length;i++){
     OtherCircle(i);
     wave(i);
-    fill(255);
+    fill(0);
     image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
     textSize(12);
     textAlign(CENTER);
