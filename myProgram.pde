@@ -113,7 +113,7 @@ void draw(){
     text(bigText[i][collision], cwidth[i], cheight[i]+20);
     textSize(10);
     textAlign(CENTER);
-    text(bigText[i][2], cwidth[i], cheight[i]-40-rSize0[i]/4);
+    text(bigText[i][2], cwidth[i], cheight[i]-10-rSize0[i]/4);
   }
 }
  
