@@ -130,7 +130,8 @@ void draw(){
       //float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
-        fill(150, 150, 150);//, 100);
+        //fill(150, 150, 150);//, 100);
+        fill(250, 150, 150);//, 100);
       }else{
         noFill();
       }
