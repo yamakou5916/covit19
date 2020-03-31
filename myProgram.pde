@@ -127,7 +127,7 @@ void draw(){
     text(bigText[i][collision], cwidth[i], cheight[i]);
     textSize(10);
     textAlign(CENTER);
-    text(bigText[i][2], cwidth[i], cheight[i]+10-rSize0[i]/4);
+    text(titleText[i][collision], cwidth[i], cheight[i]+10-rSize0[i]/4);
   }
 }
  
