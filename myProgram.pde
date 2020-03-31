@@ -134,7 +134,7 @@ void draw(){
         //fill(150, 150, 150);//, 100);
         noStroke();
         //fill(156,209,217);//, 100);
-        fill(155,200+50*cos(radians(frameCnt[i])),200+50*cos(radians(frameCnt[i])));//, 100);
+        fill(155,200+50*cos(radians(frameCnt[i])),200+50*sin(radians(frameCnt[i])));//, 100);
       }else{
         noStroke();
         noFill();
