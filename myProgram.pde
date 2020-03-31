@@ -170,7 +170,7 @@ void SmallCircle(int i){
     ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
     ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-    fill(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
+    fill(49,73,100);//,125 - 125*cos(radians(frameCnt[i])));
     textSize(10);
     textAlign(CENTER,CENTER);
     text(smallText0[i][0], cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3);
