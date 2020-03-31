@@ -107,7 +107,7 @@ void draw(){
     wave(i);
     fill(49,73,100);
     noStroke();
-    image(img, cwidth[i]-10-rSize0[i], cheight[i]-30, 20, 25);
+    image(img, cwidth[i]-10, cheight[i]-30-rSize0[i]/2, 20, 25);
     textSize(12);
     textAlign(CENTER);
     text(bigText[i][collision], cwidth[i], cheight[i]+20);
