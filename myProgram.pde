@@ -68,7 +68,7 @@ void setup(){
   size(1280,2000);
   noStroke();
   //background(0);
-  background(255);
+  background(250);
   smooth();
   col1 = color(0);
   col2 = color(20);
@@ -84,7 +84,7 @@ void setup(){
 void draw(){
   //背景
   noStroke();
-  fill(255,32);
+  fill(250,32);
   rect(0,0,width,height);
     
     //軸
