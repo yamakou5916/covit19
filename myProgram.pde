@@ -185,7 +185,7 @@ void SmallCircle(int i){
   
 
 void OtherCircle(int i){
-  fill(156,209,217, rSize0[i]/6);//,125 - 125*cos(radians(frameCnt[i])));
+  fill(49,73,100, rSize0[i]/6);//,125 - 125*cos(radians(frameCnt[i])));
   noStroke();
   //stroke(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
   //fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
