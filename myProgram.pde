@@ -185,10 +185,13 @@ void OtherCircle(int i){
   //stroke(250, 250, 250);//,125 - 125*cos(radians(frameCnt[i])));
   //fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
   grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80);
+  grdCircle2(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80);
+  grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80);
+  grdCircle2(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80);
   //ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-  ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-  ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-  ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
+  //ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+  //ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
+  //ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
   fill(255,255,255);
   textSize(10);
   textAlign(CENTER,CENTER);
@@ -199,7 +202,7 @@ void OtherCircle(int i){
 }
 
 void grdCircle2(float x, float y, float d) {
- float c = 4;
+ float c = 40;
  for (int i=0; i<c; i++) {
    color col = lerpColor(col1, col2, i/c);
    float a = lerp(PI, 0, i/c);
