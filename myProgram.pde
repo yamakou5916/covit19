@@ -196,10 +196,10 @@ void OtherCircle(int i){
     
    // grdnum = 1;
   }else{*/
-      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);  
+      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/8, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/8, 80, 80);
+      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/8, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/8, 80, 80);  
       col1 = 0;
       col2 = 20;      
   //}
