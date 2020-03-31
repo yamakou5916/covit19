@@ -165,7 +165,7 @@ void SmallCircle(int i){
       stroke(0, 0, 0);
       strokeWeight(0.5);
   //noStroke();
-  fill(255, 255, 255);
+  fill(255, 155, 155);
     ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
     ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
