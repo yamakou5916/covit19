@@ -163,7 +163,7 @@ void SmallCircle(int i){
       textnum = 1;
     }
     if(collision == 1){
-      stroke(0, 0, 0);
+      stroke(49,73,100);
       strokeWeight(0.5);
   //noStroke();
   fill(255, 255, 255);
@@ -184,8 +184,8 @@ void SmallCircle(int i){
 
 void OtherCircle(int i){
   fill(255, 150, 150, rSize0[i]/8);//,125 - 125*cos(radians(frameCnt[i])));
-  //noStroke();
-  stroke(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
+  noStroke();
+  //stroke(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
   //fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
   /*if(grdnum<100){
     grdnum++;
