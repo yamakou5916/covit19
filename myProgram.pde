@@ -132,8 +132,10 @@ void draw(){
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
         //fill(150, 150, 150);//, 100);
+        noStroke();
         fill(156,209,217,10);//, 100);
       }else{
+        noStroke();
         noFill();
       }
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
