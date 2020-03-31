@@ -4,6 +4,7 @@ int cheight[]={920,1255,180,1150,500,800,600,820};
 int owidth[]={550,570,560,550,640,740, 260,850,1030,760};
 int oheight[]={1070,670,1140,350,310,400,650,1350,1070,920};
 int textnum = 0;
+int grdnum = 0;
 //int frameCnt = 0;
 float frameCnt[] = {60,200,0,100,0,10,50,0};
 PImage img;
@@ -70,7 +71,7 @@ void setup(){
   background(250);
   smooth();
   col1 = color(0);
-  col2 = color(255);
+  col2 = color(20);
   
   maruhairetu =new Maru[5];
   for(int i=0; i<maruhairetu.length;i++){
@@ -181,17 +182,28 @@ void SmallCircle(int i){
 
 void OtherCircle(int i){
   fill(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
-  noStroke();
-  //stroke(250, 250, 250);//,125 - 125*cos(radians(frameCnt[i])));
+  //noStroke();
+  stroke(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
   //fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
-  grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80);
-  grdCircle2(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80);
-  grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80);
-  grdCircle2(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80);
-  //ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-  //ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-  //ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-  //ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
+  if(grdnum==0){
+    for(int j=0; j<13; j++){
+      col1 += 20;
+      col2 += 20;      
+      grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80);
+      grdCircle2(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80);
+      grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80);
+      grdCircle2(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80);
+    }
+    grdnum = 1;
+  }else{
+      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);  
+      col1 += 0;
+      col2 += 20;      
+  }
+  
   fill(255,255,255);
   textSize(10);
   textAlign(CENTER,CENTER);
