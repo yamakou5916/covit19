@@ -88,10 +88,10 @@ void draw(){
   rect(0,0,width,height);
     
     //軸
-    stroke(0,0,0);
+    stroke(49,73,100);
     strokeWeight(0.1);
     line(width/2,0, width/2,height);
-    fill(0,0,0);
+    fill(49,73,100);
     textSize(15);
     textAlign(CENTER);
     text("供給", width/2+200,30);
