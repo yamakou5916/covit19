@@ -110,10 +110,10 @@ void draw(){
     image(img, cwidth[i]-10, cheight[i]-30-rSize0[i]/3, 20, 25);
     textSize(12);
     textAlign(CENTER);
-    text(bigText[i][collision], cwidth[i], cheight[i]+20-rSize0[i]/3);
+    text(bigText[i][collision], cwidth[i], cheight[i]+20);
     textSize(10);
     textAlign(CENTER);
-    text(bigText[i][2], cwidth[i], cheight[i]-40);
+    text(bigText[i][2], cwidth[i], cheight[i]-40-rSize0[i]/3);
   }
 }
  
