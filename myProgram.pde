@@ -181,7 +181,7 @@ void SmallCircle(int i){
   
 
 void OtherCircle(int i){
-  fill(0, 0, 0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
+  fill(0, 0, 0, rSize0[i]/8);//,125 - 125*cos(radians(frameCnt[i])));
   //noStroke();
   stroke(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
   //fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
@@ -196,10 +196,10 @@ void OtherCircle(int i){
     
    // grdnum = 1;
   }else{*/
-      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/8, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/8, 80, 80);
-      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/8, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/8, 80, 80);  
+      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);  
       col1 = 0;
       col2 = 20;      
   //}
