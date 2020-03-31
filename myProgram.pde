@@ -207,7 +207,7 @@ void grdCircle2(float x, float y, float d) {
    color col = lerpColor(col1, col2, i/c);
    float a = lerp(PI, 0, i/c);
    fill(col);
-   arc(x, y, d, d, -a, a, CHORD);
+   arc(x, y, d, d, -a, a, OPEN);
  }
 }
 
