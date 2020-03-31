@@ -199,7 +199,7 @@ void OtherCircle(int i){
 }
 
 void grdCircle2(float x, float y, float d) {
- float c = 40;
+ float c = 4;
  for (int i=0; i<c; i++) {
    color col = lerpColor(col1, col2, i/c);
    float a = lerp(PI, 0, i/c);
