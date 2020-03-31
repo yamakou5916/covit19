@@ -132,7 +132,7 @@ void draw(){
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
         //fill(150, 150, 150);//, 100);
-        fill(237,115,137,10);//, 100);
+        fill(156,209,217,10);//, 100);
       }else{
         noFill();
       }
@@ -183,7 +183,7 @@ void SmallCircle(int i){
   
 
 void OtherCircle(int i){
-  fill(237,115,137, rSize0[i]/6);//,125 - 125*cos(radians(frameCnt[i])));
+  fill(156,209,217, rSize0[i]/6);//,125 - 125*cos(radians(frameCnt[i])));
   noStroke();
   //stroke(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
   //fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
