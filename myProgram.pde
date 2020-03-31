@@ -186,9 +186,9 @@ void OtherCircle(int i){
   stroke(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
   //fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
   if(grdnum==0){
-    for(int j=0; j<13; j++){
-      col1 += 20;
-      col2 += 20;      
+    for(int j=0; j<100; j++){
+      col1 += 1;
+      col2 += 1;      
       grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80);
       grdCircle2(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80);
       grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80);
