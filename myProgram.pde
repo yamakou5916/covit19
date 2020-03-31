@@ -105,7 +105,8 @@ void draw(){
     BigCircle(i);
     OtherCircle(i);
     wave(i);
-    fill(0);
+    fill(49,73,100);
+    noStroke();
     image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
     textSize(12);
     textAlign(CENTER);
