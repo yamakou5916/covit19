@@ -133,7 +133,7 @@ void draw(){
       if(sin(radians(frameCnt[i])) < 0){
         //fill(150, 150, 150);//, 100);
         noStroke();
-        fill(156,209,217,10);//, 100);
+        fill(156,209,217,50);//, 100);
       }else{
         noStroke();
         noFill();
