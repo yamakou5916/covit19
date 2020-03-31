@@ -194,7 +194,7 @@ void OtherCircle(int i){
       grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80);
       grdCircle2(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80);
     }
-    grdnum = 1;
+   // grdnum = 1;
   }else{
       ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
