@@ -153,7 +153,7 @@ void draw(){
         //fill(155,200+50*cos(radians(frameCnt[i])),200+50*sin(radians(frameCnt[i])));//, 100);
       }else{
         noStroke();
-        Rcol[i]-=0.0002;
+        //Rcol[i]-=0.0002;
         Gcol[i]+=0.0002;
         Bcol[i]-=0.0002;
         noFill();
