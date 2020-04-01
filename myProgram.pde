@@ -150,17 +150,19 @@ void draw(){
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
         noStroke();
-        if(collision == 1){
+
+        fill(Rcol[colornum[i]],Gcol[colornum[i]],Bcol[colornum[i]]);//, 100);
+      }else{
+        noStroke();
+        noFill();
+        if(sin(radians(frameCnt[i])) == 0){
           colornum[i] += 1;
           if(colornum[i]==4){
             colornum[i]=0;
           }
         }
-        fill(Rcol[colornum[i]],Gcol[colornum[i]],Bcol[colornum[i]]);//, 100);
-      }else{
-        noStroke();
-        noFill();
       }
+      
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
       if(dist(cwidth[i],cheight[i],applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i])< rSize0[i]/2 -50){
         collision = 1;
