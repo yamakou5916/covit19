@@ -13,9 +13,9 @@ float rSize[] = {500,600,500,560,580,700,700,470};
 float radius  = 200;
 int collision = 0;
 color col1, col2;
-int Rcol[]={156,156,156,156,156,156,156,156};
-int Gcol[]={209,209,209,209,209,209,209,209};
-int Bcol[]={217,217,217,217,217,217,217,217};
+float Rcol[]={156,156,156,156,156,156,156,156};
+float Gcol[]={209,209,209,209,209,209,209,209};
+float Bcol[]={217,217,217,217,217,217,217,217};
 
 Maru[] maruhairetu;
 //ArrayList<PG> pgl = new ArrayList<PG>();
