@@ -15,7 +15,7 @@ int collision = 0;
 color col1, col2;
 float Rcol[]={0,0,0,0,0,0,0,0};
 float Gcol[]={230,230,230,230,230,230,230,230};
-float Bcol[]={211,211,211,211,211,211,211,211};
+float Bcol[]={115,115,115,115,115,115,115,115};
 
 Maru[] maruhairetu;
 //ArrayList<PG> pgl = new ArrayList<PG>();
