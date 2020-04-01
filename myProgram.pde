@@ -122,6 +122,12 @@ void draw(){
   for(int i=0; i<cwidth.length;i++){
     BigCircle(i);
     OtherCircle(i);
+    if(sin(radians(frameCnt[i])) == 1){
+          colornum[i] += 1;
+          if(colornum[i]==4){
+            colornum[i]=0;
+          }
+        }
     wave(i);
     fill(49,73,100);
     noStroke();
@@ -150,21 +156,12 @@ void draw(){
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
         noStroke();
-
         fill(Rcol[colornum[i]],Gcol[colornum[i]],Bcol[colornum[i]]);//, 100);
-        
       }else{
         noStroke();
         noFill();
-        if(sin(radians(frameCnt[i])) == 1){
-          print(colornum[i]);
-          colornum[i] += 1;
-          if(colornum[i]==4){
-            colornum[i]=0;
-            
-          }
-        }
       }
+      
       
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
       if(dist(cwidth[i],cheight[i],applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i])< rSize0[i]/2 -50){
@@ -211,7 +208,6 @@ void SmallCircle(int i){
     }
   }
   
-
 void OtherCircle(int i){
   fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
   noStroke();
