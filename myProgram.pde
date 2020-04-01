@@ -207,21 +207,20 @@ void SmallCircle(int i){
       text(smallText0[i][1], cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3);
       text(smallText0[i][2], cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3);
       text(smallText0[i][3], cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3);
-      
-      
-          fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
-    noStroke();
-    ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-    ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-    ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-    ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);  
-    fill(255,255,255);
-    textSize(10);
-    textAlign(CENTER,CENTER);
-    text(smallText1[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
-    text(smallText1[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
-    text(smallText1[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
-    text(smallText1[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
+    }else{
+      fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
+      noStroke();
+      ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
+      ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);  
+      fill(255,255,255);
+      textSize(10);
+      textAlign(CENTER,CENTER);
+      text(smallText1[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
+      text(smallText1[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
+      text(smallText1[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
+      text(smallText1[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
       }
     }
   
