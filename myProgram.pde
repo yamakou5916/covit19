@@ -13,6 +13,9 @@ float rSize[] = {500,600,500,560,580,700,700,470};
 float radius  = 200;
 int collision = 0;
 color col1, col2;
+int Rcol[]={156,156,156,156,156,156,156,156};
+int Gcol[]={209,209,209,209,209,209,209,209};
+int Bcol[]={217,217,217,217,217,217,217,217};
 
 Maru[] maruhairetu;
 //ArrayList<PG> pgl = new ArrayList<PG>();
@@ -145,12 +148,12 @@ void draw(){
       //float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
-        //fill(150, 150, 150);//, 100);
         noStroke();
-        fill(156,209,217);//, 100);
+        fill(Rcol[i],Gcol[i],Bcol[i]);//, 100);
         //fill(155,200+50*cos(radians(frameCnt[i])),200+50*sin(radians(frameCnt[i])));//, 100);
       }else{
         noStroke();
+        Rcol[i]-=1;
         noFill();
       }
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
