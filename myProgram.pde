@@ -163,7 +163,7 @@ void draw(){
         noStroke();
         noFill();
       }
-      ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
+      ellipse(cwidth[i]+applyX * rSize[i] /6, cheight[i]+applyY *  rSize[i] /6, 1.0, 1.0);
     }
     if (1000 * sin(radians(frameCnt[i])) > 0) {
       rSize[i] -= 0.1;
