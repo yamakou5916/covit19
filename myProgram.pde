@@ -148,12 +148,11 @@ void draw(){
       float radian = TWO_PI * dotCnt;
       float shapeAx = cos(radian);
       float shapeAy = sin(radian);
-      //print(shapeAy);
+      print(shapeAy);
       //float shapeBx = cos(radian) * pow(cos(radian *1.0), 2);
       //float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
       applyX   = shapeAx * (frameRatio+1) ;//+ shapeBx * (1.0 - frameRatio);
       applyY   = shapeAy * (frameRatio+1);// + shapeBy * (1.0 - frameRatio);
-      print(applyY);
       //float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
@@ -165,7 +164,7 @@ void draw(){
       }
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
     }
-    if (1000 * sin(radians(frameCnt[i])) > 0) {
+      if (1000 * sin(radians(frameCnt[i])) > 0) {
       rSize[i] -= 0.1;
       textnum = 0;
     } else {
