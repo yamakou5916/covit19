@@ -162,11 +162,6 @@ void draw(){
         noFill();
       }
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
-      if(dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])< rSize0[i]/2 -50){
-        collision = 1;
-      }else{
-        collision = 0;
-      }
     }
       if (1000 * sin(radians(frameCnt[i])) > 0) {
       rSize[i] -= 0.1;
@@ -175,7 +170,7 @@ void draw(){
       rSize[i] += 0.1;
       textnum = 1;
     }
-    if(collision == 1){
+    if(dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])< rSize0[i]/2 -50){
       stroke(49,73,100);
       strokeWeight(0.5);
       //noStroke();
@@ -194,18 +189,18 @@ void draw(){
     }else{
       fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       noStroke();
-      ellipse(cwidth[i]-applyX * rSize[i]/6, cheight[i]-applyY *  rSize[i] /6, 80, 80);
-      ellipse(cwidth[i]+applyX * rSize[i]/6, cheight[i]-applyY *  rSize[i] /6, 80, 80);
-      ellipse(cwidth[i]-applyX * rSize[i]/6, cheight[i]+applyY *  rSize[i] /6, 80, 80);
-      ellipse(cwidth[i]+applyX * rSize[i]/6, cheight[i]+applyY *  rSize[i] /6, 80, 80);  
+      ellipse(cwidth[i]-applyX * rSize0[i]/6, cheight[i]-applyY *  rSize0[i] /6, 80, 80);
+      ellipse(cwidth[i]+applyX * rSize0[i]/6, cheight[i]-applyY *  rSize0[i] /6, 80, 80);
+      ellipse(cwidth[i]-applyX * rSize0[i]/6, cheight[i]+applyY *  rSize0[i] /6, 80, 80);
+      ellipse(cwidth[i]+applyX * rSize0[i]/6, cheight[i]+applyY *  rSize0[i] /6, 80, 80);  
       fill(255,255,255);
       textSize(10);
       textAlign(CENTER,CENTER);
       print(applyY );
-      text(smallText1[i][0], cwidth[i]-applyX * rSize[i] /6, cheight[i]-applyY *  rSize[i] /6);
-      text(smallText1[i][1], cwidth[i]+applyX * rSize[i] /6, cheight[i]-applyY *  rSize[i] /6);
-      text(smallText1[i][2], cwidth[i]-applyX * rSize[i] /6, cheight[i]+applyY *  rSize[i] /6);
-      text(smallText1[i][3], cwidth[i]+applyX * rSize[i] /6, cheight[i]+applyY *  rSize[i] /6);
+      text(smallText1[i][0], cwidth[i]-applyX * rSize0[i] /6, cheight[i]-applyY *  rSize0[i] /6);
+      text(smallText1[i][1], cwidth[i]+applyX * rSize0[i] /6, cheight[i]-applyY *  rSize0[i] /6);
+      text(smallText1[i][2], cwidth[i]-applyX * rSize0[i] /6, cheight[i]+applyY *  rSize0[i] /6);
+      text(smallText1[i][3], cwidth[i]+applyX * rSize0[i] /6, cheight[i]+applyY *  rSize0[i] /6);
       }
  }
 
