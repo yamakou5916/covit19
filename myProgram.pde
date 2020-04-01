@@ -153,9 +153,9 @@ void draw(){
         //fill(155,200+50*cos(radians(frameCnt[i])),200+50*sin(radians(frameCnt[i])));//, 100);
       }else{
         noStroke();
-        Rcol[i]-=0.1;
-        Gcol[i]+=0.1;
-        Bcol[i]-=0.1;
+        Rcol[i]-=0.01;
+        Gcol[i]+=0.01;
+        Bcol[i]-=0.01;
         noFill();
       }
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
