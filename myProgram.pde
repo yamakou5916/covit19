@@ -228,36 +228,21 @@ void SmallCircle(int i){
     }
   
 void OtherCircle(int i){
-  fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
-  noStroke();
-  //stroke(0, 0, 0);//,125 - 125*cos(radians(frameCnt[i])));
-  //fill(125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])),125 - 125*cos(radians(frameCnt[i])));
-  /*if(grdnum<100){
-    grdnum++;
-    col1 += 1;
-    col2 += 1;      
-    grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80);
-    grdCircle2(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80);
-    grdCircle2(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80);
-    grdCircle2(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80);
-    
-   // grdnum = 1;
-  }else{*/
-      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);  
-      col1 = 0;
-      col2 = 20;      
-  //}
-  
-  fill(255,255,255);
-  textSize(10);
-  textAlign(CENTER,CENTER);
-  text(smallText1[i][0], cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3);
-  text(smallText1[i][1], cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3);
-  text(smallText1[i][2], cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3);
-  text(smallText1[i][3], cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3);
+  if(collision == 2){
+    fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
+    noStroke();
+    ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
+    ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);  
+    fill(255,255,255);
+    textSize(10);
+    textAlign(CENTER,CENTER);
+    text(smallText1[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
+    text(smallText1[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
+    text(smallText1[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
+    text(smallText1[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
+  }
 }
 
 void grdCircle2(float x, float y, float d) {
