@@ -165,12 +165,11 @@ void draw(){
       
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
       if(dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])< rSize0[i]/2 -50){
-        collision = 2;
-      }else if( rSize0[i]/2 -200<=dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])&&dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])< rSize0[i]/2 -50){
         collision = 1;
+      }else if( rSize0[i]/2 -50<=dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])&&dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])< rSize0[i]/2 ){
+        collision = 2;
       }else{
         collision = 0;
-
       }
     }
     SmallCircle(i);
