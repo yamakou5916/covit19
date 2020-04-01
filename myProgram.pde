@@ -201,10 +201,10 @@ void draw(){
       fill(255,255,255);
       textSize(10);
       textAlign(CENTER,CENTER);
-      text(smallText1[i][0], cwidth[i]-applyX * rSize[i] /6, cheight[i]-applyY *  rSize[i] /6);
-      text(smallText1[i][1], cwidth[i]+applyX * rSize[i] /6, cheight[i]-applyY *  rSize[i] /6);
-      text(smallText1[i][2], cwidth[i]-applyX * rSize[i] /6, cheight[i]+applyY *  rSize[i] /6);
-      text(smallText1[i][3], cwidth[i]+applyX * rSize[i] /6, cheight[i]+applyY *  rSize[i] /6);
+      text(smallText1[i][0], cwidth[i]-applyX * rSize[i] /6, cheight[i]-applyX *  rSize[i] /6);
+      text(smallText1[i][1], cwidth[i]+applyX * rSize[i] /6, cheight[i]-applyX *  rSize[i] /6);
+      text(smallText1[i][2], cwidth[i]-applyX * rSize[i] /6, cheight[i]+applyX *  rSize[i] /6);
+      text(smallText1[i][3], cwidth[i]+applyX * rSize[i] /6, cheight[i]+applyX *  rSize[i] /6);
       }
  }
 
