@@ -163,7 +163,16 @@ void draw(){
         noStroke();
         noFill();
       }
-      if(dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])< rSize0[i]/2 -50){
+      ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
+    }
+    if (1000 * sin(radians(frameCnt[i])) > 0) {
+      rSize[i] -= 0.1;
+      textnum = 0;
+    } else {
+      rSize[i] += 0.1;
+      textnum = 1;
+    }
+    if(dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])< rSize0[i]/2 -50){
       stroke(49,73,100);
       strokeWeight(0.5);
       //noStroke();
@@ -195,15 +204,6 @@ void draw(){
       text(smallText1[i][2], cwidth[i]-applyX * rSize[i] /6, cheight[i]+applyY *  rSize[i] /6);
       text(smallText1[i][3], cwidth[i]+applyX * rSize[i] /6, cheight[i]+applyY *  rSize[i] /6);
       }
-      ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
-    }
-    if (1000 * sin(radians(frameCnt[i])) > 0) {
-      rSize[i] -= 0.1;
-      textnum = 0;
-    } else {
-      rSize[i] += 0.1;
-      textnum = 1;
-    }
  }
 
 void BigCircle(int i){
