@@ -199,10 +199,10 @@ void draw(){
       textSize(10);
       textAlign(CENTER,CENTER);
       print(applyX );
-      text(smallText1[i][0], cwidth[i]-applyX * rSize[i] /6, cheight[i]-applyY *  rSize[i] /6);
-      text(smallText1[i][1], cwidth[i]+applyX * rSize[i] /6, cheight[i]-applyY *  rSize[i] /6);
-      text(smallText1[i][2], cwidth[i]-applyX * rSize[i] /6, cheight[i]+applyY *  rSize[i] /6);
-      text(smallText1[i][3], cwidth[i]+applyX * rSize[i] /6, cheight[i]+applyY *  rSize[i] /6);
+      text(smallText1[i][0], cwidth[i]-distance, cheight[i]-distance);
+      text(smallText1[i][1], cwidth[i]+distance, cheight[i]-distance);
+      text(smallText1[i][2], cwidth[i]-distance, cheight[i]+distance);
+      text(smallText1[i][3], cwidth[i]+distance, cheight[i]+distance);
       }
  }
 
