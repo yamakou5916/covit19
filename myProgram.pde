@@ -166,7 +166,7 @@ void draw(){
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
       if(dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])< rSize0[i]/2 -50){
         collision = 1;
-      }else if( rSize0[i]/2 -50<=dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])&&dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])< rSize0[i]/2 -80){
+      }else if( rSize0[i]/2 -80<=dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])&&dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i])< rSize0[i]/2 -50){
         collision = 2;
       }else{
         collision = 0;
@@ -243,16 +243,6 @@ void OtherCircle(int i){
     text(smallText1[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
     text(smallText1[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
   }
-}
-
-void grdCircle2(float x, float y, float d) {
- float c = 40;
- for (int i=0; i<c; i++) {
-   color col = lerpColor(col1, col2, i/c);
-   float a = lerp(PI, 0, i/c);
-   fill(col);
-   arc(x, y, d, d, -a, a, OPEN);
- }
 }
 
 class Maru{
