@@ -196,7 +196,7 @@ void draw(){
       noStroke();
       ellipse(cwidth[i]-applyX * rSize[i]/6, cheight[i]-applyX * rSize[i]/6, 80, 80);
       ellipse(cwidth[i]+applyX * rSize[i]/6, cheight[i]-applyX * rSize[i]/6, 80, 80);
-      ellipse(cwidth[i]-applyX * rSize[i]/6, cheight[i]+applyX * rSize[i]/6, 80, 80);
+      ellipse(cwidth[i]-applyX * rSize[i]/6, applyY *  rSize[i] /6+cheight[i], 80, 80);
       ellipse(cwidth[i]+applyX * rSize[i]/6, cheight[i]+applyX * rSize[i]/6, 80, 80);  
       fill(255,255,255);
       textSize(10);
