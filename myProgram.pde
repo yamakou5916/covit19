@@ -17,6 +17,8 @@ float Rcol[]={0,0,0,0,0,0,0,147};
 float Gcol[]={230,230,173,0};
 float Bcol[]={115,211,230,160};
 int colornum[]={0,0,0,0,0,0,0,0};
+float applyX =0;
+float applyY =0;
 
 Maru[] maruhairetu;
 //ArrayList<PG> pgl = new ArrayList<PG>();
