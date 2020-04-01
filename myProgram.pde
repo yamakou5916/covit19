@@ -152,13 +152,16 @@ void draw(){
         noStroke();
 
         fill(Rcol[colornum[i]],Gcol[colornum[i]],Bcol[colornum[i]]);//, 100);
+        
       }else{
         noStroke();
         noFill();
-        if(sin(radians(frameCnt[i])) == 0){
+        if(sin(radians(frameCnt[i])) == 1){
+          print(colornum[i]);
           colornum[i] += 1;
           if(colornum[i]==4){
             colornum[i]=0;
+            
           }
         }
       }
