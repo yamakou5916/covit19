@@ -155,7 +155,7 @@ void draw(){
         noStroke();
         if(Gcol[i]==210){
 
-        }else if(Gcol[i]>110)){
+        //}else if(Gcol[i]>110)){
           Gcol[i]+=0.0002;
         }
                //Rcol[i]-=0.0002;
