@@ -148,7 +148,6 @@ void draw(){
       float radian = TWO_PI * dotCnt;
       float shapeAx = cos(radian);
       float shapeAy = sin(radian);
-      print(shapeAy);
       //float shapeBx = cos(radian) * pow(cos(radian *1.0), 2);
       //float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
       applyX   = shapeAx * (frameRatio+1) ;//+ shapeBx * (1.0 - frameRatio);
@@ -197,7 +196,7 @@ void draw(){
       fill(255,255,255);
       textSize(10);
       textAlign(CENTER,CENTER);
-      //print(applyX );
+      print(applyX );
       text(smallText1[i][0], cwidth[i]-applyX * rSize[i] /6, cheight[i]-applyY *  rSize[i] /6);
       text(smallText1[i][1], cwidth[i]+applyX * rSize[i] /6, cheight[i]-applyY *  rSize[i] /6);
       text(smallText1[i][2], cwidth[i]-applyX * rSize[i] /6, cheight[i]+applyY *  rSize[i] /6);
