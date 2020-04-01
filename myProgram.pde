@@ -211,8 +211,8 @@ void SmallCircle(int i){
     }
   
 void OtherCircle(int i){
-  if(collision == 2){
-    fill(49,73,100);//, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
+  if(collision == 1){
+    fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
     noStroke();
     ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
     ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
