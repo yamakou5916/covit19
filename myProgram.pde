@@ -17,6 +17,8 @@ float Rcol[]={0,0,0,0,0,0,0,147};
 float Gcol[]={230,230,173,0};
 float Bcol[]={115,211,230,160};
 int colornum[]={0,0,0,0,0,0,0,0};
+float applyX =0;
+float applyY =0;
 Maru[] maruhairetu;
 //ArrayList<PG> pgl = new ArrayList<PG>();
 
@@ -148,8 +150,8 @@ void draw(){
       float shapeAy = sin(radian);
       //float shapeBx = cos(radian) * pow(cos(radian *1.0), 2);
       //float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
-      float applyX   = shapeAx * (frameRatio+1) ;//+ shapeBx * (1.0 - frameRatio);
-      float applyY   = shapeAy * (frameRatio+1);// + shapeBy * (1.0 - frameRatio);
+      applyX   = shapeAx * (frameRatio+1) ;//+ shapeBx * (1.0 - frameRatio);
+      applyY   = shapeAy * (frameRatio+1);// + shapeBy * (1.0 - frameRatio);
       //float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
