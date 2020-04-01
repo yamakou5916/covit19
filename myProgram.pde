@@ -19,7 +19,7 @@ float Bcol[]={115,211,230,160};
 int colornum[]={0,0,0,0,0,0,0,0};
 float applyX =0;
 float applyY =0;
-float distance[];
+float distance[]={0,0,0,0,0,0,0,0};;
 Maru[] maruhairetu;
 //ArrayList<PG> pgl = new ArrayList<PG>();
 
