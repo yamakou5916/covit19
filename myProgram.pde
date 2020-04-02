@@ -8,7 +8,7 @@ int grdnum = 0;
 //int frameCnt = 0;
 float frameCnt[] = {60,200,0,100,0,10,50,0};
 PImage img;
-float rSize0[] = {300,400,300,360,380,500,500,270};
+float rSize0[] ={500,600,500,560,580,700,700,470};
 float rSize[] = {500,600,500,560,580,700,700,470};
 float radius  = 200;
 int collision = 0;
@@ -163,12 +163,10 @@ void draw(){
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
     }
     distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
-    //print( rSize0[i]/3 );
 
     if(distance[i]< (rSize0[i]/2 -50)){
       stroke(49,73,100);
       strokeWeight(0.5);
-      //noStroke();
       fill(255, 255, 255);
       ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
