@@ -162,10 +162,10 @@ void draw(){
       }
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
     }
-    distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
+    distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6, applyY * rSize[i]/6);
     //print( rSize0[i]/3 );
 
-    if(distance[i]< rSize0[i]/2 -50){
+    if(distance[i]< (rSize0[i]/2 -50)){
       stroke(49,73,100);
       strokeWeight(0.5);
       //noStroke();
