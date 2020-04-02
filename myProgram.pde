@@ -153,7 +153,6 @@ void draw(){
       //float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
       applyX   = shapeAx * (frameRatio+1) ;//+ shapeBx * (1.0 - frameRatio);
       applyY   = shapeAy * (frameRatio+1);// + shapeBy * (1.0 - frameRatio);
-      distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
       //float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
@@ -165,6 +164,7 @@ void draw(){
       }
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
     }
+    distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
     //print( rSize0[i]/3 );
 
     if(distance[i]< rSize0[i]/3 -50){
