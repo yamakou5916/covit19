@@ -153,8 +153,7 @@ void draw(){
       //float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
       applyX   = shapeAx * (frameRatio+1) ;//+ shapeBx * (1.0 - frameRatio);
       applyY   = shapeAy * (frameRatio+1);// + shapeBy * (1.0 - frameRatio);
-      print(applyX);
-      distance[i] = dist(0,0,applyX * rSize[i]/6, applyY * rSize[i]/6);
+      distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
       //float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
@@ -192,10 +191,10 @@ void draw(){
     }else{
       fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       noStroke();
-      ellipse(cwidth[i]-distance[i]-50, cheight[i]-distance[i]-50, 80, 80);
-      ellipse(cwidth[i]+distance[i]-50, cheight[i]-distance[i]-50, 80, 80);
-      ellipse(cwidth[i]-distance[i]-50, cheight[i]+distance[i]-50, 80, 80);
-      ellipse(cwidth[i]+distance[i]-50, cheight[i]+distance[i]-50, 80, 80);  
+      ellipse(cwidth[i]-distance[i], cheight[i]-distance[i], 80, 80);
+      ellipse(cwidth[i]+distance[i], cheight[i]-distance[i], 80, 80);
+      ellipse(cwidth[i]-distance[i], cheight[i]+distance[i], 80, 80);
+      ellipse(cwidth[i]+distance[i], cheight[i]+distance[i], 80, 80);  
       fill(255,255,255);
       textSize(10);
       textAlign(CENTER,CENTER);
