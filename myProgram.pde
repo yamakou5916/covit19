@@ -161,8 +161,9 @@ void draw(){
         noFill();
       }
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
+      distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
+
     }
-    distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
 
     if(distance[i]< (rSize0[i]/4 -50)){
       stroke(49,73,100);
@@ -225,7 +226,7 @@ class Maru{
           fill(49,73,100);
           //fill(color(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 ));  
           a+=x/100000;
-          ellipse(cwidth[i]+rSize0[i]*cos(a)/2, cheight[i]+rSize0[i]*sin(a)/2,3,3);
+          ellipse(cwidth[i]+rSize0[i]*cos(a)/4, cheight[i]+rSize0[i]*sin(a)/4,3,3);
         }
     //}
   }
