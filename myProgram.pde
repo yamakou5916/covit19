@@ -192,18 +192,18 @@ void draw(){
     }else{
       fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       noStroke();
-      ellipse(cwidth[i]-distance[i]-50, cheight[i]-distance[i]-50, 80, 80);
-      ellipse(cwidth[i]+distance[i]-50, cheight[i]-distance[i]-50, 80, 80);
-      ellipse(cwidth[i]-distance[i]-50, cheight[i]+distance[i]-50, 80, 80);
-      ellipse(cwidth[i]+distance[i]-50, cheight[i]+distance[i]-50, 80, 80);  
+      ellipse(cwidth[i]-distance[i], cheight[i]-distance[i], 80, 80);
+      ellipse(cwidth[i]+distance[i], cheight[i]-distance[i], 80, 80);
+      ellipse(cwidth[i]-distance[i], cheight[i]+distance[i], 80, 80);
+      ellipse(cwidth[i]+distance[i], cheight[i]+distance[i], 80, 80);  
       fill(255,255,255);
       textSize(10);
       textAlign(CENTER,CENTER);
-      //print(applyX );
-      text(smallText1[i][0], cwidth[i]-distance[i]-50, cheight[i]-distance[i]-50);
-      text(smallText1[i][1], cwidth[i]+distance[i]-50, cheight[i]-distance[i]-50);
-      text(smallText1[i][2], cwidth[i]-distance[i]-50, cheight[i]+distance[i]-50);
-      text(smallText1[i][3], cwidth[i]+distance[i]-50, cheight[i]+distance[i]-50);
+      print(applyX );
+      text(smallText1[i][0], cwidth[i]-distance[i], cheight[i]-distance[i]);
+      text(smallText1[i][1], cwidth[i]+distance[i], cheight[i]-distance[i]);
+      text(smallText1[i][2], cwidth[i]-distance[i], cheight[i]+distance[i]);
+      text(smallText1[i][3], cwidth[i]+distance[i], cheight[i]+distance[i]);
       }
  }
 
@@ -214,6 +214,47 @@ void BigCircle(int i){
   noStroke();
   ellipse(cwidth[i], cheight[i],rSize0[i],rSize0[i]);
 }
+
+void SmallCircle(int i){
+  if (1000 * sin(radians(frameCnt[i])) > 0) {
+      rSize[i] -= 0.1;
+      textnum = 0;
+    } else {
+      rSize[i] += 0.1;
+      textnum = 1;
+    }
+    if(collision == 1){
+      stroke(49,73,100);
+      strokeWeight(0.5);
+      //noStroke();
+      fill(255, 255, 255);
+      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
+      fill(49,73,100);//,125 - 125*cos(radians(frameCnt[i])));
+      textSize(10);
+      textAlign(CENTER,CENTER);
+      text(smallText0[i][0], cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3);
+      text(smallText0[i][1], cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3);
+      text(smallText0[i][2], cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3);
+      text(smallText0[i][3], cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3);
+    }else{
+      fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
+      noStroke();
+      ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
+      ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);  
+      fill(255,255,255);
+      textSize(10);
+      textAlign(CENTER,CENTER);
+      text(smallText1[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
+      text(smallText1[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
+      text(smallText1[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
+      text(smallText1[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
+      }
+    }
 
 class Maru{
   float x,a;
