@@ -165,15 +165,15 @@ void draw(){
     distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
     //print( rSize0[i]/3 );
 
-    if(distance[i]< rSize0[i]/3 -50){
+    if(distance[i]< rSize0[i]/2 -50){
       stroke(49,73,100);
       strokeWeight(0.5);
       //noStroke();
       fill(255, 255, 255);
-      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-      ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]-rSize0[i]/2, cheight[i]-rSize0[i]/2, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/2, cheight[i]-rSize0[i]/2, 80, 80);
+      ellipse(cwidth[i]-rSize0[i]/2, cheight[i]+rSize0[i]/2, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/2, cheight[i]+rSize0[i]/2, 80, 80);
       fill(49,73,100);//,125 - 125*cos(radians(frameCnt[i])));
       textSize(10);
       textAlign(CENTER,CENTER);
