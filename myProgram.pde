@@ -87,6 +87,7 @@ void setup(){
   textFont (font);
   size(1280,1600);
   noStroke();
+  //background(0);
   background(250);
   smooth();
   col1 = color(0);
@@ -161,7 +162,7 @@ void draw(){
       }
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
     }
-    distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6, applyY * rSize[i]/6);
+    distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
     //print( rSize0[i]/3 );
 
     if(distance[i]< (rSize0[i]/2 -50)){
