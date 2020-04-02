@@ -170,10 +170,10 @@ void draw(){
       strokeWeight(0.5);
       //noStroke();
       fill(255, 255, 255);
-      ellipse(cwidth[i]-rSize0[i]/2, cheight[i]-rSize0[i]/2, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/2, cheight[i]-rSize0[i]/2, 80, 80);
-      ellipse(cwidth[i]-rSize0[i]/2, cheight[i]+rSize0[i]/2, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/2, cheight[i]+rSize0[i]/2, 80, 80);
+      ellipse(cwidth[i]-rSize0[i]/2, cheight[i]-rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/2, cheight[i]-rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]-rSize0[i]/2, cheight[i]+rSize0[i]/3, 80, 80);
+      ellipse(cwidth[i]+rSize0[i]/2, cheight[i]+rSize0[i]/3, 80, 80);
       fill(49,73,100);//,125 - 125*cos(radians(frameCnt[i])));
       textSize(10);
       textAlign(CENTER,CENTER);
@@ -196,14 +196,14 @@ void draw(){
       text(smallText1[i][2], cwidth[i]-distance[i], cheight[i]+distance[i]);
       text(smallText1[i][3], cwidth[i]+distance[i], cheight[i]+distance[i]);
       }
-       
+       /*
     if (1000 * sin(radians(frameCnt[i])) > 0) {
       rSize[i] -= 0.1;
       textnum = 0;
     } else {
       rSize[i] += 0.1;
       textnum = 1;
-    }
+    }*/
  }
 
 void BigCircle(int i){
@@ -296,7 +296,6 @@ class PG {
     }
   }
 }
-
 
     /*
     for (int i = pgl.size() - 1; i >= 0; i--) {
