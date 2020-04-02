@@ -178,10 +178,10 @@ void draw(){
       fill(49,73,100);//,125 - 125*cos(radians(frameCnt[i])));
       textSize(10);
       textAlign(CENTER,CENTER);
-      text(smallText0[i][0], cwidth[i]-rSize0[i]/2, cheight[i]-rSize0[i]/2);
-      text(smallText0[i][1], cwidth[i]+rSize0[i]/2, cheight[i]-rSize0[i]/2);
-      text(smallText0[i][2], cwidth[i]-rSize0[i]/2, cheight[i]+rSize0[i]/2);
-      text(smallText0[i][3], cwidth[i]+rSize0[i]/2, cheight[i]+rSize0[i]/2);
+      text(smallText0[i][0], cwidth[i]-(rSize0[i]/2 -50), cheight[i]-(rSize0[i]/2 -50));
+      text(smallText0[i][1], cwidth[i]+(rSize0[i]/2 -50), cheight[i]-(rSize0[i]/2 -50));
+      text(smallText0[i][2], cwidth[i]-(rSize0[i]/2 -50), cheight[i]+(rSize0[i]/2 -50));
+      text(smallText0[i][3], cwidth[i]+(rSize0[i]/2 -50), cheight[i]+(rSize0[i]/2 -50));
     }else{
       fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       noStroke();
