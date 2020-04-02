@@ -87,7 +87,6 @@ void setup(){
   textFont (font);
   size(1280,1600);
   noStroke();
-  //background(0);
   background(250);
   smooth();
   col1 = color(0);
