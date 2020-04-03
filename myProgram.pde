@@ -207,7 +207,14 @@ void draw(){
       text(smallText1[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
     }
     else{
-      fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
+      //noFill();
+      fill(0);
+      stroke(0);
+      strokeWeight(1);
+      ellipse(cwidth[i]-(rSize0[i]/6+1), cheight[i]-(rSize0[i]/6+1), 80, 80);
+      ellipse(cwidth[i]+(rSize0[i]/6+1), cheight[i]-(rSize0[i]/6+1), 80, 80);
+      ellipse(cwidth[i]-(rSize0[i]/6+1), cheight[i]+(rSize0[i]/6+1), 80, 80);
+      ellipse(cwidth[i]+(rSize0[i]/6+1), cheight[i]+(rSize0[i]/6+1), 80, 80);      fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       //strokeWeight(0.5);
       noStroke();
       fill(255);
