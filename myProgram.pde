@@ -169,7 +169,7 @@ void draw(){
       stroke(255);
       strokeWeight(1);
       noStroke();
-      fill(0);
+      fill(10);
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
