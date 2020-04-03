@@ -199,12 +199,12 @@ void draw(){
     else{
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       strokeWeight(0.5);
-      fill(255, 255, 255);
+      fill(255);
       ellipse(cwidth[i]-distance[i]*2/3, cheight[i]-distance[i]*2/3, 80, 80);
       ellipse(cwidth[i]+distance[i]*2/3, cheight[i]-distance[i]*2/3, 80, 80);
       ellipse(cwidth[i]-distance[i]*2/3, cheight[i]+distance[i]*2/3, 80, 80);
       ellipse(cwidth[i]+distance[i]*2/3, cheight[i]+distance[i]*2/3, 80, 80);  
-      fill(255,255,255);
+      fill(0);
       textSize(10);
       textAlign(CENTER,CENTER);
       text(smallText1[i][0], cwidth[i]-distance[i]*2/3, cheight[i]-distance[i]*2/3);
