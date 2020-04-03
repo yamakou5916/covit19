@@ -168,6 +168,7 @@ void draw(){
     if(distance[i]< (rSize0[i]/4 -50)){
       stroke(255);
       strokeWeight(1);
+      noStroke();
       fill(0);
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
