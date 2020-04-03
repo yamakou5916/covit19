@@ -166,6 +166,9 @@ void draw(){
     }
 
     if(distance[i]< (rSize0[i]/4 -50)){
+      noStroke();
+      fill(0,5);
+      rect(0,0,width,height);
       stroke(255);
       strokeWeight(1);
       noStroke();
@@ -182,9 +185,6 @@ void draw(){
       text(smallText0[i][2], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
       text(smallText0[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
     }else if(distance[i]> (rSize0[i]/4 -50)&&distance[i]<rSize0[i]/4){
-      noStroke();
-      fill(0);
-      rect(0,0,width,height);
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       strokeWeight(0.5);
       fill(255);
@@ -201,9 +201,6 @@ void draw(){
       text(smallText1[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
     }
     else{
-      noStroke();
-      fill(0);
-      rect(0,0,width,height);
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       strokeWeight(0.5);
       fill(255);
