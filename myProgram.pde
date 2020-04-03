@@ -132,13 +132,13 @@ void draw(){
     wave(i);
     fill(255);
     noStroke();
-    image(img, cwidth[i]-10, cheight[i]-rSize0[i]/4, 20, 25);
+    image(img, cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
     textSize(12);
     textAlign(CENTER);
     text(bigText[i][collision], cwidth[i], cheight[i]);
     textSize(10);
     textAlign(CENTER);
-    text(titleText[i][collision], cwidth[i], cheight[i]+10-rSize0[i]/4);
+    text(titleText[i][collision], cwidth[i], cheight[i]+60-rSize0[i]/4);
   }
 }
  
