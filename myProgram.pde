@@ -107,16 +107,7 @@ void draw(){
   fill(0,5);
   rect(0,0,width,height);
     
-    //軸
-    stroke(0);
-    strokeWeight(0.1);
-    line(width/2,0, width/2,height);
-    fill(0);
-    textSize(15);
-    textAlign(CENTER);
-    text("供給", width/2+200,30);
-    text("需要", width/2-200,30);
-
+    
    //円
   for(Maru maru:maruhairetu){
         maru.draw();
