@@ -130,7 +130,7 @@ void draw(){
           }
         }
     wave(i);
-    fill(0);
+    fill(255);
     noStroke();
     image(img, cwidth[i]-10, cheight[i]-30-rSize0[i]/4, 20, 25);
     textSize(12);
@@ -182,7 +182,8 @@ void draw(){
       text(smallText0[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
     }else if(distance[i]> (rSize0[i]/4 -50)&&distance[i]<rSize0[i]/4){
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
-      noStroke();
+      strokeWeight(0.5);
+      fill(255, 255, 255);
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
@@ -197,7 +198,8 @@ void draw(){
     }
     else{
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
-      noStroke();
+      strokeWeight(0.5);
+      fill(255, 255, 255);
       ellipse(cwidth[i]-distance[i]*2/3, cheight[i]-distance[i]*2/3, 80, 80);
       ellipse(cwidth[i]+distance[i]*2/3, cheight[i]-distance[i]*2/3, 80, 80);
       ellipse(cwidth[i]-distance[i]*2/3, cheight[i]+distance[i]*2/3, 80, 80);
