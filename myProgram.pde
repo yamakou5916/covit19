@@ -202,10 +202,10 @@ void draw(){
       noFill();
       stroke(0);
       strokeWeight(1);
-      ellipse(cwidth[i]-(rSize0[i]/6+1), cheight[i]-(rSize0[i]/6+1), 80, 80);
-      ellipse(cwidth[i]+(rSize0[i]/6+1), cheight[i]-(rSize0[i]/6+1), 80, 80);
-      ellipse(cwidth[i]-(rSize0[i]/6+1), cheight[i]+(rSize0[i]/6+1), 80, 80);
-      ellipse(cwidth[i]+(rSize0[i]/6+1), cheight[i]+(rSize0[i]/6+1), 80, 80);
+      ellipse(cwidth[i]-(rSize0[i]/6-1), cheight[i]-(rSize0[i]/6-1), 80, 80);
+      ellipse(cwidth[i]+(rSize0[i]/6-1), cheight[i]-(rSize0[i]/6-1), 80, 80);
+      ellipse(cwidth[i]-(rSize0[i]/6-1), cheight[i]+(rSize0[i]/6-1), 80, 80);
+      ellipse(cwidth[i]+(rSize0[i]/6-1), cheight[i]+(rSize0[i]/6-1), 80, 80);
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       //strokeWeight(0.5);
       noStroke();
