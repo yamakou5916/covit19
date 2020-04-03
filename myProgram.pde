@@ -166,6 +166,13 @@ void draw(){
     }
 
     if(distance[i]< (rSize0[i]/4 -50)){
+      noFill();
+      stroke(0);
+      strokeWeight(1);
+      ellipse(cwidth[i]-(rSize0[i]/6+1), cheight[i]-(rSize0[i]/6+1), 80, 80);
+      ellipse(cwidth[i]+(rSize0[i]/6+1), cheight[i]-(rSize0[i]/6+1), 80, 80);
+      ellipse(cwidth[i]-(rSize0[i]/6+1), cheight[i]+(rSize0[i]/6+1), 80, 80);
+      ellipse(cwidth[i]+(rSize0[i]/6+1), cheight[i]+(rSize0[i]/6+1), 80, 80);
       stroke(255);
       strokeWeight(1);
       noStroke();
