@@ -191,10 +191,10 @@ void draw(){
       fill(0);
       textSize(10);
       textAlign(CENTER,CENTER);
-      text(smallText0[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
-      text(smallText0[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
-      text(smallText0[i][2], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
-      text(smallText0[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
+      text(smallText1[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
+      text(smallText1[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
+      text(smallText1[i][2], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
+      text(smallText1[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
     }
     else{
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
