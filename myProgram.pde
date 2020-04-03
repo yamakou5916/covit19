@@ -25,7 +25,7 @@ Maru[] maruhairetu;
 
 String titleText[][]=
 {{"保有者の文化","保有者の意識",},
-{"企画・設計者の文化","企画・設計者の意識",},
+{"企画・設計者の文化","経営の破綻（ー）",},
 {"投資家の文化","投資家の意識",},
 {"販売者の文化","販売者の意識",},
 {"生産者の文化","生産者の意識",},
@@ -168,6 +168,7 @@ void draw(){
       text(smallText0[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
       text(smallText0[i][2], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
       text(smallText0[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
+      collision = 1;
     }else if(distance[i]> (rSize0[i]/4 -50)&&distance[i]<rSize0[i]/4){
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       strokeWeight(0.5);
@@ -184,6 +185,7 @@ void draw(){
       text(smallText1[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
       text(smallText1[i][2], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
       text(smallText1[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
+      collision = 0;
     }
     else{
       //noFill();
@@ -211,6 +213,7 @@ void draw(){
       text(smallText1[i][1], cwidth[i]+distance[i]*2/3, cheight[i]-distance[i]*2/3);
       text(smallText1[i][2], cwidth[i]-distance[i]*2/3, cheight[i]+distance[i]*2/3);
       text(smallText1[i][3], cwidth[i]+distance[i]*2/3, cheight[i]+distance[i]*2/3);
+      collision = 0;
       }
        /*
     if (1000 * sin(radians(frameCnt[i])) > 0) {
