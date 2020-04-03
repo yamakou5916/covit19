@@ -108,10 +108,10 @@ void draw(){
   rect(0,0,width,height);
     
     //軸
-    stroke(49,73,100);
+    stroke(0);
     strokeWeight(0.1);
     line(width/2,0, width/2,height);
-    fill(49,73,100);
+    fill(0);
     textSize(15);
     textAlign(CENTER);
     text("供給", width/2+200,30);
@@ -130,7 +130,7 @@ void draw(){
           }
         }
     wave(i);
-    fill(49,73,100);
+    fill(0);
     noStroke();
     image(img, cwidth[i]-10, cheight[i]-30-rSize0[i]/4, 20, 25);
     textSize(12);
@@ -166,14 +166,14 @@ void draw(){
     }
 
     if(distance[i]< (rSize0[i]/4 -50)){
-      stroke(49,73,100);
+      stroke(0);
       strokeWeight(0.5);
       fill(255, 255, 255);
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
-      fill(49,73,100);//,125 - 125*cos(radians(frameCnt[i])));
+      fill(0);//,125 - 125*cos(radians(frameCnt[i])));
       textSize(10);
       textAlign(CENTER,CENTER);
       text(smallText0[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
@@ -181,7 +181,7 @@ void draw(){
       text(smallText0[i][2], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
       text(smallText0[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
     }else if(distance[i]> (rSize0[i]/4 -50)&&distance[i]<rSize0[i]/4){
-      fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
+      fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       noStroke();
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
@@ -196,7 +196,7 @@ void draw(){
       text(smallText0[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
     }
     else{
-      fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
+      fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       noStroke();
       ellipse(cwidth[i]-distance[i]*2/3, cheight[i]-distance[i]*2/3, 80, 80);
       ellipse(cwidth[i]+distance[i]*2/3, cheight[i]-distance[i]*2/3, 80, 80);
