@@ -167,7 +167,7 @@ void draw(){
 
     if(distance[i]< (rSize0[i]/4 -50)){
       noStroke();
-      fill(0,5);
+      fill(0);
       rect(0,0,width,height);
       stroke(255);
       strokeWeight(1);
