@@ -185,7 +185,7 @@ void draw(){
       noFill();
       stroke(0);
       strokeWeight(1);
-      ellipse(cwidth[i],cheight[i],rSize0[i]/2, rSize0[i]/2);
+      ellipse(cwidth[i],cheight[i],distance[i]*2/3, distance[i]*2/3);
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       strokeWeight(0.5);
       fill(255);
