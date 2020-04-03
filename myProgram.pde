@@ -6,7 +6,7 @@ int oheight[]={1070,670,350,310,400,650,1350,1070,920};
 int textnum = 0;
 int grdnum = 0;
 //int frameCnt = 0;
-float frameCnt[] = {60,200,100,0,10,50,0};
+float frameCnt[] = {200,200,0,0,100,0,50};
 PImage img;
 float rSize0[] ={500,600,860,580,700,700,470};
 float rSize[] = {500,600,860,580,700,700,470};
