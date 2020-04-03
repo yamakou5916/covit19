@@ -166,13 +166,6 @@ void draw(){
     }
 
     if(distance[i]< (rSize0[i]/4 -50)){
-      noFill();
-      stroke(0);
-      strokeWeight(1);
-      ellipse(cwidth[i]-(rSize0[i]/6+1), cheight[i]-(rSize0[i]/6+1), 80, 80);
-      ellipse(cwidth[i]+(rSize0[i]/6+1), cheight[i]-(rSize0[i]/6+1), 80, 80);
-      ellipse(cwidth[i]-(rSize0[i]/6+1), cheight[i]+(rSize0[i]/6+1), 80, 80);
-      ellipse(cwidth[i]+(rSize0[i]/6+1), cheight[i]+(rSize0[i]/6+1), 80, 80);
       stroke(255);
       strokeWeight(1);
       noStroke();
@@ -189,13 +182,6 @@ void draw(){
       text(smallText0[i][2], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
       text(smallText0[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
     }else if(distance[i]> (rSize0[i]/4 -50)&&distance[i]<rSize0[i]/4){
-      noFill();
-      stroke(0);
-      strokeWeight(1);
-      ellipse(cwidth[i]-(rSize0[i]/6+1), cheight[i]-(rSize0[i]/6+1), 80, 80);
-      ellipse(cwidth[i]+(rSize0[i]/6+1), cheight[i]-(rSize0[i]/6+1), 80, 80);
-      ellipse(cwidth[i]-(rSize0[i]/6+1), cheight[i]+(rSize0[i]/6+1), 80, 80);
-      ellipse(cwidth[i]+(rSize0[i]/6+1), cheight[i]+(rSize0[i]/6+1), 80, 80);
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       strokeWeight(0.5);
       fill(255);
