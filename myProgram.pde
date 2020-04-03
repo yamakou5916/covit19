@@ -190,10 +190,10 @@ void draw(){
       fill(255,255,255);
       textSize(10);
       textAlign(CENTER,CENTER);
-      text(smallText1[i][0], cwidth[i]-distance[i], cheight[i]-distance[i]);
-      text(smallText1[i][1], cwidth[i]+distance[i], cheight[i]-distance[i]);
-      text(smallText1[i][2], cwidth[i]-distance[i], cheight[i]+distance[i]);
-      text(smallText1[i][3], cwidth[i]+distance[i], cheight[i]+distance[i]);
+      text(smallText1[i][0], cwidth[i]-distance[i]*2/3, cheight[i]-distance[i]*2/3);
+      text(smallText1[i][1], cwidth[i]+distance[i]*2/3, cheight[i]-distance[i]*2/3);
+      text(smallText1[i][2], cwidth[i]-distance[i]*2/3, cheight[i]+distance[i]*2/3);
+      text(smallText1[i][3], cwidth[i]+distance[i]*2/3, cheight[i]+distance[i]*2/3);
       }
        /*
     if (1000 * sin(radians(frameCnt[i])) > 0) {
