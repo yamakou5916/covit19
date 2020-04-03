@@ -240,7 +240,7 @@ class Maru{
       //if (mousePressed)
       //{
         for(int i=0; i<cwidth.length;i++){
-          fill(49,73,100);
+          fill(255);
           //fill(color(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 ));  
           a+=x/100000;
           ellipse(cwidth[i]+rSize0[i]*cos(a)/4, cheight[i]+rSize0[i]*sin(a)/4,3,3);
