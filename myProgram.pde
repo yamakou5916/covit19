@@ -104,7 +104,7 @@ void setup(){
 void draw(){
   //背景
   noStroke();
-  fill(250,5);
+  fill(0,5);
   rect(0,0,width,height);
     
     //軸
