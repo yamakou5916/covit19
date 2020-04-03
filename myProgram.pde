@@ -1,6 +1,6 @@
 float a=0; 
 int cwidth[]={320,1080,710,580, 1200,250,900};
-int cheight[]={220,255,250,600,550,600,620};
+int cheight[]={220,255,250,700,550,600,620};
 int owidth[]={550,570,550,640,740, 260,850,1030,760};
 int oheight[]={1070,670,350,310,400,650,1350,1070,920};
 int textnum = 0;
@@ -8,8 +8,8 @@ int grdnum = 0;
 //int frameCnt = 0;
 float frameCnt[] = {200,200,0,0,100,0,50};
 PImage img;
-float rSize0[] ={500,470,860,380,500,700,670};
-float rSize[] = {500,470,860,380,500,700,670};
+float rSize0[] ={500,470,860,420,500,700,670};
+float rSize[] = {500,470,860,420,500,700,670};
 float radius  = 200;
 int collision = 0;
 color col1, col2;
