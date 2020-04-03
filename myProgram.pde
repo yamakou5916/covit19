@@ -182,7 +182,8 @@ void draw(){
       text(smallText0[i][2], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
       text(smallText0[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
     }else if(distance[i]> (rSize0[i]/4 -50)&&distance[i]<rSize0[i]/4){
-      noFill();
+      //noFill();
+      fill(0);
       stroke(0);
       strokeWeight(1);
       ellipse(cwidth[i]-(rSize0[i]/6+1), cheight[i]-(rSize0[i]/6+1), 80, 80);
