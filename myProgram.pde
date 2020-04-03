@@ -88,7 +88,7 @@ void setup(){
   size(1280,1600);
   noStroke();
   //background(0);
-  background(250);
+  background(0);
   smooth();
   col1 = color(0);
   col2 = color(20);
