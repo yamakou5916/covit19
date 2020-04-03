@@ -9,7 +9,7 @@ int grdnum = 0;
 float frameCnt[] = {200,200,0,0,100,0,50};
 PImage img;
 float rSize0[] ={500,470,860,340,500,700,670};
-float rSize[] = {500,470,860,540,500,700,670};
+float rSize[] = {500,470,860,340,500,700,670};
 float radius  = 200;
 int collision = 0;
 color col1, col2;
