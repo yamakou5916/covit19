@@ -224,7 +224,7 @@ void draw(){
       pg.draw();
     }
   }
-    
+    /*
 //Collision
    for(int i=0; i<cwidth.length;i++){
      for(int ii=0; ii<cwidth.length;ii++){
@@ -267,7 +267,7 @@ void draw(){
      } 
    }
 
-      
+      */
       
        /*
     if (1000 * sin(radians(frameCnt[i])) > 0) {
