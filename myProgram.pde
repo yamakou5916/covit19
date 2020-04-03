@@ -180,7 +180,7 @@ void draw(){
       text(smallText0[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
       text(smallText0[i][2], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
       text(smallText0[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
-    }else if(distance[i]> (rSize0[i]/4 -50)&&distance[i]< (rSize0[i]/4 -100)){
+    }else if(distance[i]> (rSize0[i]/4 -50)&&distance[i]<rSize0[i]/6){
       fill(49,73,100, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       noStroke();
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
