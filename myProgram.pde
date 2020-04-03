@@ -9,7 +9,7 @@ int grdnum = 0;
 float frameCnt[] = {200,200,0,0,100,0,50};
 PImage img;
 float rSize0[] ={500,470,860,340,500,700,670};
-float rSize[] = {500,470,860,340,500,700,670};
+float rSize[] = {500,470,860,380,500,700,670};
 float radius  = 200;
 int collision = 0;
 color col1, col2;
@@ -81,7 +81,7 @@ String otherText[][]=
 void setup(){
   PFont font = createFont("NotoSansCJKjp-Regular",50);
   textFont (font);
-  size(1440,1000);
+  size(1400,1000);
   noStroke();
   //background(0);
   background(0);
