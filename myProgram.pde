@@ -142,7 +142,7 @@ void draw(){
    for(int i=0; i<cwidth.length;i++){
      for(int ii=0; ii<cwidth.length;ii++){
        if(i!=ii){
-         if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<distance[ii]){
+         if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<distance[ii]-40){
            pgl.add(new PG((cwidth[i]+rSize[i]/6+cwidth[ii]+rSize[ii]/6)/2, (cheight[i]+rSize[i]/6+cheight[ii]-rSize[ii]/6)/2, 2, 1));
         }
        }
@@ -327,7 +327,7 @@ class PG {
       if (dead) return;
       x += sp * cos(th);
       y += sp * sin(th);
-      sp *= 0.97; //0.99を変えると減速速度が速くなる
+      sp *= 0.98; //0.99を変えると減速速度が速くなる
       if (x < 0 || x > width) dead = true;
       if (y < 0 || y > height) dead = true;
       if (sp < 1) dead = true;
