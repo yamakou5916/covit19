@@ -21,7 +21,7 @@ float applyX =0;
 float applyY =0;
 float distance[]={0,0,0,0,0,0,0,0};;
 Maru[] maruhairetu;
-//ArrayList<PG> pgl = new ArrayList<PG>();
+ArrayList<PG> pgl = new ArrayList<PG>();
 
 String titleText[][]=
 {{"貯蓄の再構築\n（＋）","貯蓄の破綻\n（ー）",},
@@ -127,6 +127,29 @@ void draw(){
     textAlign(CENTER);
     text(titleText[i][collision], cwidth[i], cheight[i]+60-rSize0[i]/4);
   }
+  
+  
+    for (int i = pgl.size() - 1; i >= 0; i--) {
+    PG pg = pgl.get(i);
+    if (pg.dead) {
+      pgl.remove(i);
+    } else {
+      pg.draw();
+    }
+  }
+    
+//Collision
+   for(int i=0; i<cwidth.length;i++){
+     for(int ii=0; ii<cwidth.length;ii++){
+         if(dist(cwidth[i]+rSize[i]/6,cheight[i]+rSize[i]/6,cwidth[ii],cheight[ii])<distance[ii]){
+           pgl.add(new PG((cwidth[i]+rSize[i]/6+cwidth[ii]+rSize[ii]/6)/2, (cheight[i]+rSize[i]/6+cheight[ii]-rSize[ii]/6)/2, 10, 1));
+        }
+     } 
+   }
+ 
+ 
+ 
+  
 }
  
  void wave(int i){
