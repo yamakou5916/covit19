@@ -221,7 +221,7 @@ void draw(){
       ellipse(cwidth[i]+(distance[i]*2/3+1), cheight[i]+(distance[i]*2/3+1), 80, 80);
       ellipse(cwidth[i]-(distance[i]*2/3+1), cheight[i]+(distance[i]*2/3+1), 80, 80); 
       noFill();
-      ellipse(cwidth[i], cheight[i], (distance[i]*2+1), (distance[i]*2+1)); 
+      //ellipse(cwidth[i], cheight[i], (distance[i]*2+1), (distance[i]*2+1)); 
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
       //strokeWeight(0.5);
       noStroke();
