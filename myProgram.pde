@@ -325,7 +325,7 @@ class PG {
       if (dead) return;
       x += sp * cos(th);
       y += sp * sin(th);
-      sp *= 0.88; //0.99を変えると減速速度が速くなる
+      sp *= 0.95; //0.99を変えると減速速度が速くなる
       if (x < 0 || x > width) dead = true;
       if (y < 0 || y > height) dead = true;
       if (sp < 1) dead = true;
