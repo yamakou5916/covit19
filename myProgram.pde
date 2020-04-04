@@ -293,7 +293,7 @@ class PG {
   }
 
   void draw() {
-    for (int i = pl.size() - 1; i >= 0; i--) {
+    for (int i = pl.size() - 10; i >= 0; i--) {
       P p = pl.get(i);
       p.update();
       if (p.dead) {
