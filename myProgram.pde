@@ -142,7 +142,7 @@ void draw(){
    for(int i=0; i<cwidth.length;i++){
      for(int ii=0; ii<cwidth.length;ii++){
          if(dist(cwidth[i]+rSize[i]/6,cheight[i]+rSize[i]/6,cwidth[ii],cheight[ii])<distance[ii]){
-           pgl.add(new PG((cwidth[i]+rSize[i]/6+cwidth[ii]+rSize[ii]/6)/2, (cheight[i]+rSize[i]/6+cheight[ii]-rSize[ii]/6)/2, 10, 1));
+           pgl.add(new PG((cwidth[i]+rSize[i]/6+cwidth[ii]+rSize[ii]/6)/2, (cheight[i]+rSize[i]/6+cheight[ii]-rSize[ii]/6)/2, 5, 1));
         }
      } 
    }
