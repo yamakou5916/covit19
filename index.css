@@ -159,3 +159,59 @@ p.info {
 
 /*ポップアップココまで*/
 
+body {
+    background: #000;
+    font-family: "Nico Moji", sans-serif;
+}
+
+.column {
+    height: 50vh;*/
+    width: 100%;
+    text-align: center;
+    display: flex;
+    /*align-items: flex-end;*/
+    justify-content: center;
+}
+    .info {
+        /*margin-bottom: 10%;*/
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    p {
+        font-size: 1rem;
+        padding: 5px;
+    }
+    a {
+        font-size: 1rem;
+        background: #0bd;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 18px;
+    }
+    a:hover {
+        background: #0090aa;
+    }
+.cat1 {
+    width: 50%;
+    /*background: url(http://webcreatorbox.com/sample/images/cat1.jpg) no-repeat top center;*/
+    background-size: cover;
+    color: rgba(255,255,255,.9);
+    background-color: rgba(0,0,0,.7);
+}
+.cat2 {
+    width: 50%;
+    /*background: url(http://webcreatorbox.com/sample/images/cat2.jpg) no-repeat top center;*/
+    background-size: cover;
+    color: rgba(0,0,0,.7);
+    background-color: rgba(245,245,245.7);
+}
+
+@media all and (min-width: 500px) {
+  .wrapper {
+    display: flex;
+  }
+}
