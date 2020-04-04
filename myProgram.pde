@@ -169,6 +169,7 @@ void draw(){
         fill(Rcol[colornum[i]],Gcol[colornum[i]],Bcol[colornum[i]]);//, 100);
       }else{
         noFill();
+        fill(0);//, 100);
       }
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
       distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
@@ -293,7 +294,7 @@ class PG {
   }
 
   void draw() {
-    for (int i = pl.size() - 10; i >= 0; i--) {
+    for (int i = pl.size() - 1; i >= 0; i--) {
       P p = pl.get(i);
       p.update();
       if (p.dead) {
