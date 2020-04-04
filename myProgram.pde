@@ -159,15 +159,15 @@ void draw(){
       fill(30);
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-      ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
+      ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
       fill(255);//,125 - 125*cos(radians(frameCnt[i])));
       textSize(10);
       textAlign(CENTER,CENTER);
       text(smallText0[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
       text(smallText0[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
-      text(smallText0[i][2], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
-      text(smallText0[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
+      text(smallText0[i][2], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
+      text(smallText0[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
       collision = 1;
     }else if(distance[i]> (rSize0[i]/4 -50)&&distance[i]<rSize0[i]/4){
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
@@ -176,15 +176,15 @@ void draw(){
       noStroke();
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-      ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
+      ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
       fill(0);
       textSize(10);
       textAlign(CENTER,CENTER);
       text(smallText1[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
       text(smallText1[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
-      text(smallText1[i][2], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
-      text(smallText1[i][3], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
+      text(smallText1[i][2], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
+      text(smallText1[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
       collision = 0;
     }
     else{
@@ -194,8 +194,8 @@ void draw(){
       strokeWeight(1);
       ellipse(cwidth[i]-(distance[i]*2/3+1), cheight[i]-(distance[i]*2/3+1), 80, 80);
       ellipse(cwidth[i]+(distance[i]*2/3+1), cheight[i]-(distance[i]*2/3+1), 80, 80);
-      ellipse(cwidth[i]-(distance[i]*2/3+1), cheight[i]+(distance[i]*2/3+1), 80, 80);
-      ellipse(cwidth[i]+(distance[i]*2/3+1), cheight[i]+(distance[i]*2/3+1), 80, 80); 
+      ellipse(cwidth[i]+(distance[i]*2/3+1), cheight[i]+(distance[i]*2/3+1), 80, 80);
+      ellipse(cwidth[i]-(distance[i]*2/3+1), cheight[i]+(distance[i]*2/3+1), 80, 80); 
       noFill();
       ellipse(cwidth[i], cheight[i], (distance[i]*2+1), (distance[i]*2+1)); 
       fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
@@ -204,15 +204,15 @@ void draw(){
       fill(255);
       ellipse(cwidth[i]-distance[i]*2/3, cheight[i]-distance[i]*2/3, 80, 80);
       ellipse(cwidth[i]+distance[i]*2/3, cheight[i]-distance[i]*2/3, 80, 80);
-      ellipse(cwidth[i]-distance[i]*2/3, cheight[i]+distance[i]*2/3, 80, 80);
-      ellipse(cwidth[i]+distance[i]*2/3, cheight[i]+distance[i]*2/3, 80, 80);  
+      ellipse(cwidth[i]+distance[i]*2/3, cheight[i]+distance[i]*2/3, 80, 80);
+      ellipse(cwidth[i]-distance[i]*2/3, cheight[i]+distance[i]*2/3, 80, 80);  
       fill(0);
       textSize(10);
       textAlign(CENTER,CENTER);
       text(smallText1[i][0], cwidth[i]-distance[i]*2/3, cheight[i]-distance[i]*2/3);
       text(smallText1[i][1], cwidth[i]+distance[i]*2/3, cheight[i]-distance[i]*2/3);
-      text(smallText1[i][2], cwidth[i]-distance[i]*2/3, cheight[i]+distance[i]*2/3);
-      text(smallText1[i][3], cwidth[i]+distance[i]*2/3, cheight[i]+distance[i]*2/3);
+      text(smallText1[i][2], cwidth[i]+distance[i]*2/3, cheight[i]+distance[i]*2/3);
+      text(smallText1[i][3], cwidth[i]-distance[i]*2/3, cheight[i]+distance[i]*2/3);
       collision = 0;
       }
        /*
