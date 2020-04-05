@@ -34,7 +34,7 @@ String titleText[][]=
 };
 
 String bigText[][]=
-{{"備蓄ストレージの内容を変更する", "景気低迷に応じ、資産が減少・棄損する","貯蓄者"},
+{{"ポートフォリオを変更し、", "景気低迷に応じ、\n資産が減少・棄損する","貯蓄者"},
 {"企業と産業構造の転換","中小零細企業が倒産する", "経営者"},
 {"投資が安全資産や大企業に集中し、\n格差が拡大する","地政学的リスクが高まり、\n投資が停滞する", "投資家"},
 {"テクノロジを用い、\n接客手順を省略する","感染を恐れて、\n接客機会を削減する", "販売者"},
@@ -121,10 +121,10 @@ void draw(){
     noStroke();
     image(img, cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
     textSize(12);
-    textAlign(CENTER);
+    textAlign(CENTER,CENTER);
     text(bigText[i][collision], cwidth[i], cheight[i]);
     textSize(10);
-    textAlign(CENTER);
+    textAlign(CENTER,CENTER);
     text(titleText[i][collision], cwidth[i], cheight[i]+60-rSize0[i]/4);
   }
   
