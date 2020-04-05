@@ -207,7 +207,7 @@ p.quote {
 .open_btn3 {
   position: absolute;
   top: 570px;
-  left: 810px;
+  left: 910px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,7 +232,7 @@ p.quote {
 .open_btn4 {
   position: absolute;
   top: 400px;
-  left: 1350px;
+  left: 1450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,7 +257,7 @@ p.quote {
 .open_btn5 {
   position: absolute;
   top: 400px;
-  left: 450px;
+  left: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,7 +282,7 @@ p.quote {
 .open_btn6 {
   position: absolute;
   top: 470px;
-  left: 1050px;
+  left: 1150px;
   display: flex;
   justify-content: center;
   align-items: center;
