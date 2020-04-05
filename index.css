@@ -310,6 +310,7 @@ p.info {
 
 /*ポップアップココまで*/
 
+/*ここからポップアップの中身*/
 body {
     background: #000;
     font-family: "Nico Moji", sans-serif;
@@ -365,4 +366,106 @@ body {
   .wrapper {
     display: flex;
   }
+}
+
+/*ここから台形*/
+
+.trapezoid {
+  position: absolute;
+  top: 0;
+  left: 500px;
+  width: 500px;
+  border-top: 900px solid rgba(255,165,0,0.5);
+  border-left: 0px solid transparent;
+  border-right: 400px solid rgba(255,0,0,0.5);
+  height: 0;
+}
+
+.rectangle {
+  position: absolute;
+  top: 0;
+  left: 1400px;
+  width:400px;
+  height:900px;
+  background:rgba(255,0,0,0.5);
+}
+
+.trapezoid1 {
+  position: absolute;
+  top: 0;
+  left: 500px;
+  /*top: 0;
+  left: 500px;
+  width: 1400px;
+  border-top: 600px solid rgba(0,165,255,0.5);
+  border-left: 200px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 0px solid rgba(0,0,255,0.5);
+  height: 0;*/
+  width:0;
+  height:450px;
+  border-right:1400px solid rgba(0,0,255,0.5);
+  border-top:0px solid transparent;
+  border-bottom:100px solid transparent;
+}
+
+.trapezoid2 {
+  position: absolute;
+  top: 450px;
+  left: 500px;
+
+  /*top: 0;
+  left: 500px;
+  width: 1400px;
+  border-top: 600px solid rgba(0,165,255,0.5);
+  border-left: 200px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 0px solid rgba(0,0,255,0.5);
+  height: 0;*/
+  width:0;
+  height:450px;
+  border-left:1400px solid rgba(0,165,255,0.5);
+  border-top:100px solid transparent;
+  border-bottom:0px solid transparent;
+}
+
+
+/*全体*/
+.hidden_box {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+    padding: 15px;
+    font-weight: bold;
+    border: solid 2px black;
+    cursor :pointer;
+}
+
+/*ボタンホバー時*/
+.hidden_box label:hover {
+    background: #efefef;
+}
+
+/*チェックは見えなくする*/
+.hidden_box input {
+    /*display: none;*/
+}
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
 }
