@@ -46,7 +46,7 @@ String bigText[][]=
 String smallText0[][]=
 {{"景気の\n低迷・悪化", "資産が\n減少する", "危険資産を\n引き上げる", "まとめ買い増加\n購入の低頻度化"},
 {"企業倒産\n産業縮小", "人員削減\nリストラ\nの増加", "訴訟リスク\nの増加", "風評被害\nインフォデミック"},
-{"緊急事態宣言\n国民の生活\nの制限", "企業価値\nの下落", "国家破綻\n国家財政\nの深刻化", "貿易摩擦\n資源需給\nの悪化"},
+{"国民生活\nの制限\n緊急事態宣言", "企業価値\nの下落", "国家破綻\n国家財政\nの深刻化", "貿易摩擦\n資源需給\nの悪化"},
 {"接触回避で\n来客が減少", "在庫管理が\nできない", "契約の\n不履行\nが増加", "店頭販売\nの減少"},
 {"需要に偏り\nが生じる", "生産・流通\nプロセス\nの省人化", "失業が\n増加", "品質基準\nが劣化"},
 {"インバウンド\n需要の崩壊", "集客型\nビジネス\nの減退", "外出機会\nの減少", "家庭内消費\n時間の増加"},
@@ -56,7 +56,7 @@ String smallText0[][]=
 String smallText1[][]=
 {{"景気の安定化", "緊急融資\nの増加", "国内または\n安全な資産\nを購入する", "計画購入\n消費社会\nの形成"},
 {"オープン\nイノベーション\n企業買収合併", "リモート\nワーク\nの定着", "コンプライアンス\nの向上", "ブランド\nPR・CSR戦略\nの刷新"},
-{"政府の防疫\n経済政策\nの実行", "GAFA等\n巨大企業へ\n富が集積", "ブロック\nチェーン\n信用創造加速", "リスク回避\n資産の\n購入増加"},
+{"政府の防疫\n経済政策\nの実行", "GAFA等\n巨大企業へ\n富が集積", "ブロック\nチェーン\n信用創造加速", "リスク回避\n安全資産の\n購入増加"},
 {"サービス\nの無人化", "在庫・営業\n情報の\nクラウド化", "カスタマー\nサクセス型\nの営業", "オンライン\nオムニチャネル\n戦略の増加"},
 {"工場生産物\nの多角化", "ロボット化\nが浸透する", "失業保険\nの整備", "商品価値\nの再定義"},
 {"国内消費\n向けビジネス\nの増加", "一人レジャー\nの増加", "遠隔×ライブ\nエンタテイメント\nの勃興", "生活全般での\nDIY化が進む"},
@@ -142,13 +142,13 @@ void draw(){
    for(int i=0; i<cwidth.length;i++){
      for(int ii=0; ii<cwidth.length;ii++){
        if(i!=ii){
-         if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
+         if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[i]/2+40){
            pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
+        }else if(dist(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[i]/2+40){
            pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
+        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[i]/2+40){
            pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
+        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[i]/2+40){
            pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
         }
        }
