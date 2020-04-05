@@ -38,7 +38,7 @@ String bigText[][]=
 {"産業構造の転換に合わせ、\n経営を合理化する","中小零細企業が倒産する", "経営者"},
 {"投資が安全資産や大企業に集中し、\n格差が拡大する","地政学的リスクが高まり、\n投資が停滞する", "投資家"},
 {"テクノロジを用い、\n接客手順を省略する","感染を恐れて、\n接客機会が減少する", "販売者"},
-{"プロセス内の無駄・リスクに気づき、\n新体制が定着する","製造ラインでの感染を恐れて、\n供給体制を見直す", "生産者"},
+{"プロセス内の無駄・リスクに気づき、\n新体制が定着する","組織内の感染爆発を恐れて、\n供給体制を見直す", "生産者"},
 {"新しい消費方法が確立し、\n文化が生まれる", "感染を恐れて、\n消費を自粛する","消費者"},
 {"地場での生産・配給体制を整える","配送制限と配送需要増加の\nジレンマに陥る", "流通ライン"},
 };
@@ -142,14 +142,14 @@ void draw(){
    for(int i=0; i<cwidth.length;i++){
      for(int ii=0; ii<cwidth.length;ii++){
        if(i!=ii){
-         if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
+         if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/6+40){
            print(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii]));
            pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
+        }else if(dist(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/6+40){
            pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
+        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/6+40){
            pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
+        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/6+40){
            pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
         }
        }
