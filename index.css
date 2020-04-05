@@ -128,26 +128,177 @@ p.quote {
   position: relative;
 }
 
-.open_btn {
+.open_btn0 {
   position: absolute;
-  top: 4.5%;
-  left: 33.1%;
+  top: 125px;
+  left: 580px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
+  width: 225px;
+  height: 225px;
   margin: 0 auto;
   color: #fff;
   background: #0c0d62;
   opacity: 0.1;
   font-weight: bold;
-  border-radius: 100px;
+  border-radius: 125px;
   cursor: pointer;
   transition: .3s ease;
 }
 
-.open_btn:hover {
+.open_btn0:hover {
+  background: #000;
+  color: #fff;
+  transition: .3s ease;
+}
+
+.open_btn1 {
+  position: absolute;
+  top: 145px;
+  left: 1270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 215px;
+  height: 215px;
+  margin: 0 auto;
+  color: #fff;
+  background: #0c0d62;
+  opacity: 0.1;
+  font-weight: bold;
+  border-radius: 120px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.open_btn1:hover {
+  background: #000;
+  color: #fff;
+  transition: .3s ease;
+}
+
+
+.open_btn2 {
+  position: absolute;
+  top: 65px;
+  left: 835px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 405px;
+  height: 405px;
+  margin: 0 auto;
+  color: #fff;
+  background: #0c0d62;
+  opacity: 0.1;
+  font-weight: bold;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.open_btn2:hover {
+  background: #000;
+  color: #fff;
+  transition: .3s ease;
+}
+
+.open_btn3 {
+  position: absolute;
+  top: 570px;
+  left: 810px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 185px;
+  height: 185px;
+  margin: 0 auto;
+  color: #fff;
+  background: #0c0d62;
+  opacity: 0.1;
+  font-weight: bold;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.open_btn3:hover {
+  background: #000;
+  color: #fff;
+  transition: .3s ease;
+}
+
+.open_btn4 {
+  position: absolute;
+  top: 400px;
+  left: 1350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 225px;
+  height: 225px;
+  margin: 0 auto;
+  color: #fff;
+  background: #0c0d62;
+  opacity: 0.1;
+  font-weight: bold;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.open_btn4:hover {
+  background: #000;
+  color: #fff;
+  transition: .3s ease;
+}
+
+.open_btn5 {
+  position: absolute;
+  top: 400px;
+  left: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 325px;
+  height: 325px;
+  margin: 0 auto;
+  color: #fff;
+  background: #0c0d62;
+  opacity: 0.1;
+  font-weight: bold;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.open_btn5:hover {
+  background: #000;
+  color: #fff;
+  transition: .3s ease;
+}
+
+.open_btn6 {
+  position: absolute;
+  top: 470px;
+  left: 1050px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 310px;
+  height: 310px;
+  margin: 0 auto;
+  color: #fff;
+  background: #0c0d62;
+  opacity: 0.1;
+  font-weight: bold;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.open_btn6:hover {
   background: #000;
   color: #fff;
   transition: .3s ease;
