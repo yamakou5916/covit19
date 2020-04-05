@@ -55,7 +55,7 @@ String smallText0[][]=
 
 String smallText1[][]=
 {{"景気の安定化", "緊急融資\nの増加", "国内または\n安全な資産\nを購入する", "計画購入\n消費社会\nの形成"},
-{"オープン\nイノベーション\n企業買収合併", "リモート\nワーク\nの定着", "コンプライアンス\nの向上", "ブランド\nPR・CSR戦略\nの刷新"},
+{"オープン\nイノベーション\n企業買収合併", "リモート\nワーク\nの定着", "コンプライアンス\nの強化", "ブランド\nPR・CSR戦略\nの刷新"},
 {"政府の防疫\n経済政策\nの実行", "GAFA等\n巨大企業へ\n富が集積", "ブロック\nチェーン\n信用創造加速", "リスク回避\n安全資産の\n購入増加"},
 {"サービス\nの無人化", "在庫・営業\n情報の\nクラウド化", "カスタマー\nサクセス型\nの営業", "オンライン\nオムニチャネル\n戦略の増加"},
 {"工場生産物\nの多角化", "ロボット化\nが浸透する", "失業保険\nの整備", "商品価値\nの再定義"},
@@ -142,13 +142,14 @@ void draw(){
    for(int i=0; i<cwidth.length;i++){
      for(int ii=0; ii<cwidth.length;ii++){
        if(i!=ii){
-         if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[i]/2+40){
+         if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
+           print(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii]));
            pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[i]/2+40){
+        }else if(dist(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
            pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[i]/2+40){
+        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
            pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[i]/2+40){
+        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/2+40){
            pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
         }
        }
