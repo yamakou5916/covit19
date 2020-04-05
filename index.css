@@ -131,7 +131,7 @@ p.quote {
 .open_btn0 {
   position: absolute;
   top: 125px;
-  left: 580px;
+  left: 680px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +156,7 @@ p.quote {
 .open_btn1 {
   position: absolute;
   top: 145px;
-  left: 1270px;
+  left: 1370px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,7 +182,7 @@ p.quote {
 .open_btn2 {
   position: absolute;
   top: 65px;
-  left: 835px;
+  left: 935px;
   display: flex;
   justify-content: center;
   align-items: center;
