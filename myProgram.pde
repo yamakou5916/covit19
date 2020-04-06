@@ -7,7 +7,7 @@ int textnum = 0;
 int grdnum = 0;
 //int frameCnt = 0;
 float frameCnt[] = {200,200,0,0,100,0,50};
-PImage img[];
+PImage img;
 float rSize0[] ={500,470,860,420,500,700,670};
 float rSize[] = {500,470,860,420,500,700,670};
 float radius  = 200;
@@ -94,7 +94,7 @@ void setup(){
     Maru maru=new Maru(rSize[i],rSize[i]);
     maruhairetu[i]=maru;
   } 
-  img[0] = loadImage("user.png");
+  img = loadImage("user.png");
 }
 
 void draw(){
@@ -119,7 +119,7 @@ void draw(){
     wave(i);
     fill(255);
     noStroke();
-    image(img[0], cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
+    image(img, cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
     textSize(12);
     textAlign(CENTER,CENTER);
     text(bigText[i][collision], cwidth[i], cheight[i]);
