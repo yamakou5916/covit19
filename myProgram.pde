@@ -7,7 +7,7 @@ int textnum = 0;
 int grdnum = 0;
 //int frameCnt = 0;
 float frameCnt[] = {200,200,0,0,100,0,50};
-PImage img;
+PImage img[];
 float rSize0[] ={500,470,860,420,500,700,670};
 float rSize[] = {500,470,860,420,500,700,670};
 float radius  = 200;
@@ -60,7 +60,7 @@ String smallText1[][]=
 {"サービス\nの無人化", "在庫・営業\n情報の\nクラウド化", "カスタマー\nサクセス型\nの営業", "オンライン\nオムニチャネル\n戦略の増加"},
 {"工場生産物\nの多角化", "ロボット化\nが浸透する", "失業保険\nの整備", "商品価値\nの再定義"},
 {"国内消費\n向けビジネス\nの増加", "一人レジャー\nの増加", "遠隔×ライブ\nエンタテイメント\nの勃興", "生活全般での\nDIY化が進む"},
-{"地産地消の\n意識が育つ\n代替生産拠点", "eコマース\nデリバリー\nの普及", "自動運転が\n配達を賄う", "医療品\n日用品が\n配給制に"},
+{"地産地消の\n意識が育つ\n代替生産拠点", "eコマース\nデリバリー\nの一般化", "自動運転が\n配達を賄う", "医療品\n日用品が\n配給制に"},
 {},
 };
 
@@ -94,7 +94,14 @@ void setup(){
     Maru maru=new Maru(rSize[i],rSize[i]);
     maruhairetu[i]=maru;
   } 
-  img = loadImage("user.png");
+  img[0] = loadImage("savings.png");
+  img[1] = loadImage("management.png");
+  img[2] = loadImage("investment.png");
+  img[3] = loadImage("customer_service.png");
+  img[4] = loadImage("production.png");
+  img[5] = loadImage("consumption.png");
+  img[6] = loadImage("supply_chain.png");
+  img[7] = loadImage("user.png");
 }
 
 void draw(){
@@ -119,7 +126,7 @@ void draw(){
     wave(i);
     fill(255);
     noStroke();
-    image(img, cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
+    image(img[i], cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
     textSize(12);
     textAlign(CENTER,CENTER);
     text(bigText[i][collision], cwidth[i], cheight[i]);
