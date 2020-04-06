@@ -95,12 +95,6 @@ void setup(){
     maruhairetu[i]=maru;
   } 
   img[0] = loadImage("user.png");
-  img[1] = loadImage("user.png");
-  img[2] = loadImage("user.png");
-  img[3] = loadImage("user.png");
-  img[4] = loadImage("user.png");
-  img[5] = loadImage("user.png");
-  img[6] = loadImage("user.png");
 }
 
 void draw(){
@@ -125,7 +119,7 @@ void draw(){
     wave(i);
     fill(255);
     noStroke();
-    image(img[i], cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
+    image(img[0], cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
     textSize(12);
     textAlign(CENTER,CENTER);
     text(bigText[i][collision], cwidth[i], cheight[i]);
@@ -133,6 +127,7 @@ void draw(){
     textAlign(CENTER,CENTER);
     text(titleText[i][collision], cwidth[i], cheight[i]+60-rSize0[i]/4);
   }
+  
   
     for (int i = pgl.size() - 1; i >= 0; i--) {
     PG pg = pgl.get(i);
