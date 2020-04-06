@@ -94,13 +94,13 @@ void setup(){
     Maru maru=new Maru(rSize[i],rSize[i]);
     maruhairetu[i]=maru;
   } 
-  img[0] = loadImage("savings.png");
-  img[1] = loadImage("management.png");
-  img[2] = loadImage("investment.png");
-  img[3] = loadImage("customer_service.png");
-  img[4] = loadImage("production.png");
-  img[5] = loadImage("consumption.png");
-  img[6] = loadImage("supply_chain.png");
+  img[0] = loadImage("user.png");
+  img[1] = loadImage("user.png");
+  img[2] = loadImage("user.png");
+  img[3] = loadImage("user.png");
+  img[4] = loadImage("user.png");
+  img[5] = loadImage("user.png");
+  img[6] = loadImage("user.png");
 }
 
 void draw(){
