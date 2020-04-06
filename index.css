@@ -130,7 +130,31 @@ p.quote {
 .data {
 }
 
+.table_bg {
+  width:100%;
+  font-size:15px;  
+  padding: 20px;
+  text-align:center;
+}
+.table_bg th{
+    border-radius: 10px;
+    line-height:30px;
+  }
+.table_bg td{
+    border: none;
+    border-radius: 3px;
+    padding:20px;
+  }  
 
+.popup_content h1 {
+  margin-bottom: 20px;
+}
+
+.popup_content h2 {
+  padding: 10px;
+  background-color: black;
+  color: #fff;
+}
 
 /*ポップアップここから*/
 
@@ -165,11 +189,15 @@ p.quote {
   align-self: center;
   width: 90%;
   max-width: 800px;
-  padding: 80px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
   box-sizing: border-box;
   background: #fff;
   line-height: 1.4em;
   transition: 0.5s;
+  text-align: center;
 }
 
 .close_btn {
