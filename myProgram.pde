@@ -101,7 +101,6 @@ void setup(){
   img[4] = loadImage("production.png");
   img[5] = loadImage("consumption.png");
   img[6] = loadImage("supply_chain.png");
-  img[7] = loadImage("user.png");
 }
 
 void draw(){
@@ -134,7 +133,6 @@ void draw(){
     textAlign(CENTER,CENTER);
     text(titleText[i][collision], cwidth[i], cheight[i]+60-rSize0[i]/4);
   }
-  
   
     for (int i = pgl.size() - 1; i >= 0; i--) {
     PG pg = pgl.get(i);
