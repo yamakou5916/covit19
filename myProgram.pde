@@ -8,6 +8,9 @@ int grdnum = 0;
 //int frameCnt = 0;
 float frameCnt[] = {200,200,0,0,100,0,50};
 PImage img;
+int numFrames = 12; //アニメーションのフレーム数
+PImage[] images = new PImage[numFrames];
+
 float rSize0[] ={500,470,860,420,500,700,670};
 float rSize[] = {500,470,860,420,500,700,670};
 float radius  = 200;
@@ -94,7 +97,13 @@ void setup(){
     Maru maru=new Maru(rSize[i],rSize[i]);
     maruhairetu[i]=maru;
   } 
-  img = loadImage("user.png");
+  images[0] = loadImage("savings.png");
+  images[1] = loadImage("management.png");
+  images[2] = loadImage("investment.png");
+  images[3] = loadImage("customer_service.png");
+  images[4] = loadImage("production.png");
+  images[5] = loadImage("consumption.png");
+  images[6] = loadImage("supply_chain.png");
 }
 
 void draw(){
@@ -119,7 +128,7 @@ void draw(){
     wave(i);
     fill(255);
     noStroke();
-    image(img, cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
+    image(images[i], cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
     textSize(12);
     textAlign(CENTER,CENTER);
     text(bigText[i][collision], cwidth[i], cheight[i]);
