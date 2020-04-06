@@ -16,7 +16,7 @@
   display: inline-block;
   background-color: #fff;
   vertical-align: bottom;
-  color: #2B4F64;
+  color: #000;
 }
 
 /*.inline-contents1 {
@@ -27,7 +27,7 @@
 } */
 
 h1 {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
   padding: 80px 40px 0px 40px;
@@ -35,24 +35,37 @@ h1 {
 }
 
 p.intro {
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
   padding: 40px;
 }
 
 p.quote {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
   padding: 0px 40px 0px 40px;
 }
 
 .num {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
   padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.AAA ul {
+  list-style-type: none; /*箇条書きのポッチを消す*/
+  text-align: center;
+  font-size: 14px;
+}
+
+.AAA li {
+  display: inline-block;
+  padding: 20px;
+  border: thin solid #000;
 }
 
 /*右の内容*/
@@ -67,6 +80,7 @@ p.quote {
 
 .data {
 }
+
 
 
 /*ポップアップここから*/
