@@ -504,15 +504,6 @@ body {
   position: absolute;
   top: 450px;
   left: 500px;
-
-  /*top: 0;
-  left: 500px;
-  width: 1400px;
-  border-top: 600px solid rgba(0,165,255,0.5);
-  border-left: 200px solid transparent;
-  border-right: 0px solid transparent;
-  border-bottom: 0px solid rgba(0,0,255,0.5);
-  height: 0;*/
   width:0;
   height:450px;
   border-left:1400px solid rgba(0,165,255,0.5);
@@ -559,4 +550,14 @@ body {
     padding: 10px 0;
     height: auto;
     opacity: 1;
+}
+
+/*社会課題マップ*/
+
+.covid_map {
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  width:1200;
+  height:800px;
 }
