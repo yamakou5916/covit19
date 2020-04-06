@@ -556,8 +556,8 @@ body {
 
 .covid_map {
   position: absolute;
-  top: 100px;
-  left: 500px;
-  width:1200;
+  top: 0px;
+  left: 400px;
+  width:1400;
   height:800px;
 }
