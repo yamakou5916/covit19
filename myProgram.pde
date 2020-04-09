@@ -148,7 +148,7 @@ void draw(){
         }
     noStroke();
     fill(255);
-    rect(cwidth[i]-50, cheight[i]-rSize0[i]/4,100, 30);
+    rect(cwidth[i]-50, cheight[i]+30-rSize0[i]/4,100, 30);
     noStroke();
     fill(255);
     rect(cwidth[i]-100, cheight[i]-15,200, 30);
