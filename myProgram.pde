@@ -146,6 +146,9 @@ void draw(){
             colornum[i]=0;
           }
         }
+    noStroke();
+    fill(255);
+    rect(cwidth[i]-20, cheight[i]-10,cwidth[i]+20, cheight[i]+10);
     wave(i);
     fill(0);
     noStroke();
@@ -156,9 +159,7 @@ void draw(){
     textSize(10);
     textAlign(CENTER,CENTER);
     text(titleText[i][collision], cwidth[i], cheight[i]+60-rSize0[i]/4);
-    noStroke();
-    fill(255);
-    rect(cwidth[i]-20, cheight[i]-10,cwidth[i]+20, cheight[i]+10);
+    
   }
   
   
