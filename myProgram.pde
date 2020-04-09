@@ -148,6 +148,9 @@ void draw(){
         }
     noStroke();
     fill(255);
+    rect(cwidth[i]-50, cheight[i]+15-rSize0[i]/4,100, 30);
+    noStroke();
+    fill(255);
     rect(cwidth[i]-100, cheight[i]-15,200, 30);
     wave(i);
     fill(0);
