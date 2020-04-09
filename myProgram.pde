@@ -1,28 +1,28 @@
 float a=0; 
-int cwidth[]={200,400,600,800,1000,1200,300,500,700,900,1100};
-int cheight[]={300,300,300,300,300,300,700,700,700,700,700};
+int cwidth[]={200,500,800,1100,300,600,900,200,500,800,1100};
+int cheight[]={200,200,200,200,500,500,500,800,800,800,800};
 int owidth[]={550,570,550,640,740, 260,850,1030,760};
 int oheight[]={1070,670,350,310,400,650,1350,1070,920};
 int textnum = 0;
 int grdnum = 0;
 //int frameCnt = 0;
-float frameCnt[] = {200,200,0,0,100,0,50};
+float frameCnt[] = {200,200,0,0,100,0,0,0,0,0,0};
 PImage img;
 int numFrames = 12; //アニメーションのフレーム数
 PImage[] images = new PImage[numFrames];
 
-float rSize0[] ={500,500,500,500,500,500,500,500,500,500,500};
-float rSize[] = {500,500,500,500,500,500,500,500,500,500,500};
+float rSize0[] ={400,400,400,400,400,400,400,400,400,400,400};
+float rSize[] = {400,400,400,400,400,400,400,400,400,400,400};
 float radius  = 200;
 int collision = 0;
 color col1, col2;
 float Rcol[]={0,0,0,0,0,0,0,147};
 float Gcol[]={230,230,173,0};
 float Bcol[]={115,211,230,160};
-int colornum[]={0,0,0,0,0,0,0,0};
+int colornum[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 float applyX =0;
 float applyY =0;
-float distance[]={0,0,0,0,0,0,0,0};;
+float distance[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};;
 Maru[] maruhairetu;
 ArrayList<PG> pgl = new ArrayList<PG>();
 
@@ -120,6 +120,11 @@ void setup(){
   images[4] = loadImage("production.png");
   images[5] = loadImage("consumption.png");
   images[6] = loadImage("supply_chain.png");
+  images[7] = loadImage("user.png");
+  images[8] = loadImage("user.png");
+  images[9] = loadImage("user.png");
+  images[10] = loadImage("user.png");
+  images[11] = loadImage("user.png");
 }
 
 void draw(){
