@@ -103,7 +103,7 @@ void setup(){
   size(1400,1000);
   noStroke();
   //background(0);
-  background(0);
+  background(255);
   smooth();
   col1 = color(0);
   col2 = color(20);
@@ -130,7 +130,7 @@ void setup(){
 void draw(){
   //背景
   noStroke();
-  fill(0,5);
+  fill(255,5);
   rect(0,0,width,height);
     
     
@@ -147,7 +147,7 @@ void draw(){
           }
         }
     wave(i);
-    fill(255);
+    fill(0);
     noStroke();
     image(images[i], cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
     textSize(12);
