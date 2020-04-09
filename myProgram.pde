@@ -11,8 +11,8 @@ PImage img;
 int numFrames = 12; //アニメーションのフレーム数
 PImage[] images = new PImage[numFrames];
 
-float rSize0[] ={400,400,400,400,400,400,400,400,400,400,400};
-float rSize[] = {400,400,400,400,400,400,400,400,400,400,400};
+float rSize0[] ={500,500,500,500,500,500,500,500,500,500,500};
+float rSize[] = {500,500,500,500,500,500,500,500,500,500,500};
 float radius  = 200;
 int collision = 0;
 color col1, col2;
