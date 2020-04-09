@@ -210,10 +210,13 @@ void draw(){
       applyX   = shapeAx * (frameRatio+1) ;//+ shapeBx * (1.0 - frameRatio);
       applyY   = shapeAy * (frameRatio+1);// + shapeBy * (1.0 - frameRatio);
       //float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
+      stroke(255);
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
         fill(Rcol[colornum[i]],Gcol[colornum[i]],Bcol[colornum[i]]);//, 100);
       }else{
+        stroke(255);
+        noStroke();
         noFill();
         fill(255);//, 100);
       }
@@ -226,7 +229,6 @@ void draw(){
       fill(0);
       stroke(0);
       strokeWeight(1);
-      fill(30);
       ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
       ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
