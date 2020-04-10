@@ -26,6 +26,9 @@ float applyY =0;
 float distance[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};;
 Maru[] maruhairetu;
 ArrayList<PG> pgl = new ArrayList<PG>();
+color mainColor;
+float currentValue = 0;
+
 
 String titleText[][]=
 {{"エデュケーション","エデュケーション",},
@@ -108,7 +111,7 @@ void setup(){
   smooth();
   col1 = color(0);
   col2 = color(20);
-  
+  mainColor = color(250, 114, 94, 200);
   maruhairetu =new Maru[5];
   for(int i=0; i<maruhairetu.length;i++){
     Maru maru=new Maru(rSize[i],rSize[i]);
@@ -223,6 +226,14 @@ void draw(){
   }
   
 void BigCircle(int i){
+  color c1 = color(220,202,163);
+  color c2 = color(247,243,234);
+  /*for(float d = lSize[0]; d > 0; d -= 2){
+    color c = lerpColor(c1, c2, d / 400.0);
+    fill(c);
+    noStroke();
+    //ellipse(width / 2, height / 2, d, d);
+  }*/
   noStroke();
   currentValue = abs(sin(frameCount/80))*width;
   float w = map(currentValue, 0, width, 20, 5);
