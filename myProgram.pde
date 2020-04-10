@@ -1,51 +1,93 @@
 float a=0; 
-int cwidth[]={240,830,440,560,830, 950,400,800};
-int cheight[]={920,1255,180,1150,500,800,600,820};
-int owidth[]={550,570,560,550,640,740, 260,850,1030,760};
-int oheight[]={1070,670,1140,350,310,400,650,1350,1070,920};
-int cnt = 0;
-int loopcnt = 0;
+int cwidth[]={300,1050,350,400,1700,900,1600,700,1800,1250,1200};
+
+int cheight[]={350,900,950,650,1000,200,600,700,300,500,200};
+
+int owidth[]={550,570,550,640,740, 260,850,1030,760};
+int oheight[]={1070,670,350,310,400,650,1350,1070,920};
 int textnum = 0;
-int frameCnt = 0;
-int frameCntMax = 15 * 6;
+int grdnum = 0;
+//int frameCnt = 0;
+float frameCnt[] = {200,200,0,0,100,0,0,0,0,0,0};
 PImage img;
-float rSize0[] = {300,400,300,360,380,500,500,270};
-float rSize[] = {300,400,300,360,380,500,500,270};
+int numFrames = 12; //アニメーションのフレーム数
+PImage[] images = new PImage[numFrames];
+
+float rSize0[] ={500,500,500,500,500,500,500,500,500,500,500};
+float rSize[] = {500,500,500,500,500,500,500,500,500,500,500};
+float lSize[]  = {0};
 float radius  = 200;
-//Maru[] maruhairetu;
-//ArrayList<PG> pgl = new ArrayList<PG>();
+int collision = 0;
+float Rcol[]={237,237,247,247,236,236,209,209,145,145,143,143,};
+float Gcol[]={237,237,223,223,181,181,226,226,193,193,176,176,};
+float Bcol[]={191,191,144,144,125,125,200,200,186,186,187,187,};
+int colornum[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+float applyX =0;
+float applyY =0;
+float distance[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};;
+Maru[] maruhairetu;
+ArrayList<PG> pgl = new ArrayList<PG>();
+
+float numsX[][] = {{}};
+float numsY[][] = {{}};
+
+String titleText[][]=
+{{"エデュケーション","エデュケーション",},
+{"ライフスタイル","ライフスタイル",},
+{"エンタテイメント","エンタテイメント",},
+{"ワークスタイル","ワークスタイル",},
+{"ライフイベント","ライフイベント",},
+{"ヘルスケア","ヘルスケア",},
+{"ライフライン","ライフライン",},
+{"マニュファクチュア","マニュファクチュア",},
+{"サプライチェーン","サプライチェーン",},
+{"マネジメント","マネジメント",},
+{"メディカル","メディカル",},
+};
 
 String bigText[][]=
-{{"ストレージの内容を変更する","ストレージの内容を変更する", "保有者"},
-{"清潔感への配慮は当たり前に","清潔感への配慮は当たり前に", "企画・設計者"},
-{"予防・一次対応への意識向上","予防・一次対応への意識向上", "病人"},
-{"経済的ストレスを負担に","経済的ストレスが負担に", "投資家"},
-{"人との不要な接触が不快に","人との不要な接触が不快に", "販売者"},
-{"プロセス内の無駄・リスクに気づく","プロセス内の無駄・リスクに気づく", "生産者"},
-{"コト・トキ消費からウチ消費へ","コト・トキ消費からウチ消費へ", "消費者"},
-{"物の届き方が変わる","物の届き方が変わる", "流通ライン"},
+{{"能力と社会性の変化","能力と社会性の変化",},
+{"生活と価値観の変化","生活と価値観の変化",},
+{"余暇と気晴らしの変化","余暇と気晴らしの変化",},
+{"職業と人生観の変化","職業と人生観の変化",},
+{"社会通念と手続きの変化","社会通念と手続きの変化",},
+{"個人情報とプライバシーの変化","個人情報とプライバシーの変化",},
+{"人・社会との繋がりの変化","人・社会との繋がりの変化",},
+{"ものづくりの変化","ものづくりの変化",},
+{"所属意識の変化","所属意識の変化",},
+{"責任領域の変化","責任領域の変化",},
+{"信頼形成の変化","信頼形成の変化",},
 };
 String smallText0[][]=
-{{"不要な物\nを安全に\n処理する", "万一に備え\n貯蓄する", "過剰購入\n大量廃棄", "買い占め"},
-{"清潔なイメージ\nPR・CSR戦略", "製品の機能\nパッケージの変更", "風評被害\nを受ける", "感染状況を\n発表する"},
-{"感染症指定\n医療機関へ", "医療品・人員が\n足りない", "病院内での\n二次感染を恐れる", "医療格差が\n拡大する"},
-{"パンデミック\n宣言を受ける", "株を\n空売りする", "株を\n買い戻す", "経済政策が\n実行される"},
-{"オペレーション\nの無人化", "顧客接点の\n消毒・洗浄", "突発的な\n払い戻し\nへの対応", "営業情報\nの即時更新"},
-{"生産・流通\nプロセス\nの省人化", "需要の波に\n対応する", "収入の減少\nを想定", "失業が増加"},
-{"", "集客型\nビジネス\nの減退", "家庭内消費\n時間の増加", "インバウンド\n需要の崩壊"},
-{"買い占め\n転売による\n供給難", "デリバリー\nサービスが\n多用される", "商品を\n清潔に保つ\nパッケージ", "医療品\n日用品\nの配給"},
+{{"ネット教育の\n存在感向上", "学校教育の\n自主選択化", "リモート\n学習状況\n評価体制", "遠隔下の\n社会性\n人間関係教育"},
+{"反都市化\n地方への\n分散移住", "非定住\n複数拠点活動", "コミュニティ\n地方文化創生", "現実と仮想\nの均質化"},
+{"リフレッシュ\n短サイクル化", "小旅行の増加\n家庭内フィットネス", "異なる体験を\n同時に共有", "現実と仮想\n区分けが\nなくなる"},
+{"デジタルな\n働き方の確立", "需要変動\n季節労働化", "スキルの多角化\nマルチキャリア", "職業選択の\n価値観変化"},
+{"役所手続きの\nオンライン化", "冠婚葬祭の\n録画・記録", "SNSでの\n双方向型\n体験共有", "VRでの\n体験拡張"},
+{"遺伝・生体\n情報から\n疾病を予測", "集団免疫\n防疫連帯意識", "大規模検査\n健康情報開示", "免疫パスポート\n免疫情報での\n人物評価"},
+{"宅配ビジネス\nのインフラ化", "インフラの\n無人操業", "インフラの\n生産自由化", "位置情報取得"},
+{"防疫製品の\n生産に着手", "工場設備\nの転用", "企業買収合併\nオープン\nイノベーション", "製造拠点\nのシェア"},
+{"地政学リスク\nブロック経済", "地産地消の\n生産体制", "一次〜三次\n産業バランス\nが変わる", "陸海空運輸\n自動運転"},
+{"企業の\n持続可能性\nの検討", "社会課題\nに即した\n提供価値", "人材ストレス\n管理・環境\n整備", "即断即決\n独自行動規範"},
+{"電子カルテの\nブロックチェーン", "在宅診察\nオンライン治療", "医療に\n詳しくなる\n健康意識\nの向上", "医療人材教育\n転用可能な\n人材管理"},
+{"", "", "", ""},
 };
 
 String smallText1[][]=
-{{"廃棄物処理\nゴミの出し方", "備蓄場所の\nスペース増加", "バラ売り\n量り売りを中止", "医療品の\n流通量の拡充"},
-{"新しい法律\nへ対応する", "風評被害\nが起きる", "リスク対応を\n説明する", "リコールへ対応する"},
-{"外出し、人と\n会話する", "自宅で病状の\n独自判断する", "氾濫した情報で\n混乱する", "予防用品の購入\nを見送る"},
-{"危機管理\n評価基準\nの整備", "医療機関の\nパニック", "医療品・人員が\n足りない", "医療格差が\n拡大する"},
-{"キャッシュレス\n化が進む", "つばや咳が\n気になる", "購入前契約\nの徹底", "SNSを用いた\n顧客接点"},
-{"リモートワークが\n浸透する", "工場生産物\nの多角化 ", "質素な生活が\n美徳になる", "必需品以外の\nものの生産停止"},
-{"", "遠隔×ライブ\nエンタテイメント", "生活全般での\nDIY化が進む", "地産地消の\n意識が育つ"},
-{"独自の\n流通ライン\nを整備", "デリバリー\nプラットフォーム", "エコ×使い捨て\n再利用可能性", "国内で流通を\n完結する"},
+{{"ネット教育の\n存在感向上", "学校教育の\n自主選択化", "リモート\n学習状況\n評価体制", "遠隔下の\n社会性\n人間関係教育"},
+{"反都市化\n地方への\n分散移住", "非定住\n複数拠点活動", "コミュニティn地方文化創生", "現実と仮想\nの均質化"},
+{"リフレッシュ\n短サイクル化", "小旅行の増加\n家庭内フィットネス", "異なる体験を\n同時に共有", "現実と仮想\n区分けが\nなくなる"},
+{"デジタルな\n働き方の確立", "需要変動\n季節労働化", "スキルの多角化\nマルチキャリア", "職業選択の\n価値観変化"},
+{"役所手続きの\nオンライン化", "冠婚葬祭の\n録画・記録", "SNSでの\n双方向型\n体験共有", "VRでの\n体験拡張"},
+{"遺伝・生体\n情報から\n疾病を予測", "集団免疫\n防疫連帯意識", "大規模検査\n健康情報開示", "免疫パスポート\n免疫情報での\n人物評価"},
+{"宅配ビジネス\nのインフラ化", "インフラの\n無人操業", "インフラの\n生産自由化", "位置情報取得"},
+{"防疫製品の\n生産に着手", "工場設備\nの転用", "企業買収合併\nオープン\nイノベーション", "製造拠点\nのシェア"},
+{"地政学リスク\nブロック経済", "地産地消の\n生産体制", "一次〜三次\n産業バランス\nが変わる", "陸海空運輸\n自動運転"},
+{"企業の\n持続可能性\nの検討", "社会課題\nに即した\n提供価値", "人材ストレス\n管理・環境\n整備", "即断即決\n独自行動規範"},
+{"電子カルテの\nブロックチェーン", "在宅診察\nオンライン治療", "医療に\n詳しくなる\n健康意識\nの向上", "医療人材教育\n転用可能な\n人材管理"},
+{"", "", "", ""},
 };
+
 String otherText[][]=
 {{"フェイクニュース\nの横行","0"},
 {"地産地消の\n意識が育つ","0"},
@@ -63,139 +105,128 @@ String otherText[][]=
 void setup(){
   PFont font = createFont("NotoSansCJKjp-Regular",50);
   textFont (font);
-  size(1280,2000);
+  size(2000,1500);
   noStroke();
-  background(0);
+  //background(0);
+  background(255);
   smooth();
-  /*
+  randomSave();
+  
   maruhairetu =new Maru[5];
   for(int i=0; i<maruhairetu.length;i++){
     Maru maru=new Maru(rSize[i],rSize[i]);
     maruhairetu[i]=maru;
-  }   */
-  img = loadImage("user.png");
+  } 
+  images[0] = loadImage("education.png");
+  images[1] = loadImage("management.png");
+  images[2] = loadImage("investment.png");
+  images[3] = loadImage("workstyle.png");
+  images[4] = loadImage("production.png");
+  images[5] = loadImage("consumption.png");
+  images[6] = loadImage("supply_chain.png");
+  images[7] = loadImage("user.png");
+  images[8] = loadImage("user.png");
+  images[9] = loadImage("user.png");
+  images[10] = loadImage("user.png");
+  images[11] = loadImage("user.png");
 }
 
 void draw(){
   //背景
   noStroke();
-  fill(color(0, 0, 0), 32);
+  fill(255,255,255);
   rect(0,0,width,height);
-    
-    //軸
-    stroke(250,250,250,100);
-    strokeWeight(0.1);
-    line(width/2,0, width/2,height);
-    fill(250,250,250,50);
-    textSize(15);
-    textAlign(CENTER);
-    text("生産者行動", width/2+200,30);
-    text("消費者行動", width/2-200,30);
-
-    //円
-  for(int i=0; i<cwidth.length;i++){
-    //fill(255);
-    OtherCircle(i);
-    wave(i);
-    fill(255);
-    image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
-    textSize(12);
-    textAlign(CENTER);
-    text(bigText[i][textnum], cwidth[i], cheight[i]+20);
-    textSize(10);
-    textAlign(CENTER);
-    text(bigText[i][2], cwidth[i], cheight[i]-40);
-  }
-  /*
-      if(-1 == cos(radians(frameCnt)) ){
-        print(frameCnt);
-        frameCnt=0;
-      loopcnt++;
-    }*/
-}
- 
- void wave(int i){
-    frameCnt += 0.05;
-    float frameRatio = cos(radians(frameCnt));
-    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
-      float radian = TWO_PI * dotCnt;
-      float shapeAx = cos(radian);
-      float shapeAy = sin(radian);
-      float shapeBx = cos(radian) * pow(cos(radian *1.0), 2);
-      float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
-      float applyX   = shapeAx * frameRatio + shapeBx * (1.0 - frameRatio);
-      float applyY   = shapeAy * frameRatio + shapeBy * (1.0 - frameRatio);
-      float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
-      noStroke();
-      fill(applyHue, 40.0, 80.0,100);
-      ellipse(applyX * rSize[i] /2+cwidth[i], applyY *  rSize[i] /2+cheight[i], 1.0, 1.0);
-    }
-    SmallCircle(i);
- }
- 
-void BigCircle(int i){
-   if(textnum==1){
-     fill(0, 80, 100+rSize[i]/3 , -50 * sin(radians(cnt)));
-     noStroke();
-   }else{
-     noFill();
-     stroke(250,250,250);
-     strokeWeight(0.1);
-   }
-  ellipse(cwidth[i], cheight[i],rSize[i],rSize[i]);
-  fill(255);
-  image(img, cwidth[i]-10, cheight[i]-30, 20, 25);
-  textSize(12);
-  textAlign(CENTER);
-  text(bigText[i][textnum], cwidth[i], cheight[i]+20);
-  textSize(10);
-  textAlign(CENTER);
-  text(bigText[i][2], cwidth[i], cheight[i]-40);
-}
-
-void SmallCircle(int i){
-  if (1000 * sin(radians(frameCnt)) > 0) {
-      rSize[i] -= 0.5;
+  
+   //円
+  for(Maru maru:maruhairetu){
+        maru.draw();
+      }
+      
+   if (1000 * sin(radians(frameCnt[0])) > 0) {
+      lSize[0] += 2;
       textnum = 0;
     } else {
-      rSize[i] += 0.5;
+      lSize[0] += 2;
       textnum = 1;
     }
-    fill(0, 0, 0);
-    stroke(250, 250, 250);
-    stroke(125 - 125*sin(radians(frameCnt )),125 - 125*sin(radians(frameCnt )),125 - 125*sin(radians(frameCnt )));
-    strokeWeight(3);
-    ellipse(cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-    ellipse(cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3, 80, 80);
-    ellipse(cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-    ellipse(cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3, 80, 80);
-    fill(125 - 125*sin(radians(frameCnt )),125 - 125*sin(radians(frameCnt )),125 - 125*sin(radians(frameCnt )));
-//(250, 250, 250);
+  for(int i=0; i<cwidth.length;i++){
+    myCircle(i) ;
+    BigCircle(i);
+    
+    if(sin(radians(frameCnt[i])) == 1){
+          colornum[i] += 1;
+          if(colornum[i]==4){
+            colornum[i]=0;
+          }
+        }
+        wave(i);
+        
+        fill(0);
+        noStroke();
+        imageMode(CENTER);
+        image(images[i], cwidth[i], cheight[i]-10, 40, 40);
+        textSize(12);
+        textAlign(CENTER,CENTER);
+        text(bigText[i][collision], cwidth[i], cheight[i]+20);
+        textSize(10);
+        textAlign(CENTER,CENTER);
+        text(titleText[i][collision], cwidth[i], cheight[i]-40);
+      }
+      for (int i = pgl.size() - 1; i >= 0; i--) {
+        PG pg = pgl.get(i);
+        if (pg.dead) {
+          pgl.remove(i);
+        } else {
+          pg.draw();
+        }
+      }
+      //Collision
+      for(int i=0; i<cwidth.length;i++){
+        for(int ii=0; ii<cwidth.length;ii++){
+          if(i!=ii){
+            if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
+              print(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii]));
+              pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
+            }else if(dist(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
+              pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
+            }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
+              pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
+            }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
+              pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
+            }
+          }
+        } 
+      }
+    }
+ 
+ void wave(int i){
+    distance[i] = 100;
+    /*
+    fill(255);
+    stroke(0);
+    strokeWeight(1);
+    */      
+    fill(0);
+    stroke(0);
+    strokeWeight(1);
+    ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
+    ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
+    ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
+    ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
+    fill(255);
     textSize(10);
     textAlign(CENTER,CENTER);
-    text(smallText0[i][0], cwidth[i]-rSize[i]/3, cheight[i]-rSize[i]/3);
-    text(smallText0[i][1], cwidth[i]+rSize[i]/3, cheight[i]-rSize[i]/3);
-    text(smallText0[i][2], cwidth[i]-rSize[i]/3, cheight[i]+rSize[i]/3);
-    text(smallText0[i][3], cwidth[i]+rSize[i]/3, cheight[i]+rSize[i]/3);
+    text(smallText0[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
+    text(smallText0[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
+    text(smallText0[i][2], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
+    text(smallText0[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
+    collision = 0;
   }
   
-
-void OtherCircle(int i){
-  stroke(0, 0, 0);
-  strokeWeight(0);
+void BigCircle(int i){
   noStroke();
-  fill(125 - 125*cos(radians(frameCnt )),125 - 125*cos(radians(frameCnt )),125 - 125*cos(radians(frameCnt )));
-  ellipse(cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-  ellipse(cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3, 80, 80);
-  ellipse(cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-  ellipse(cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3, 80, 80);
-  fill(0,0,0);
-  textSize(10);
-  textAlign(CENTER,CENTER);
-  text(smallText1[i][0], cwidth[i]-rSize0[i]/3, cheight[i]-rSize0[i]/3);
-  text(smallText1[i][1], cwidth[i]+rSize0[i]/3, cheight[i]-rSize0[i]/3);
-  text(smallText1[i][2], cwidth[i]-rSize0[i]/3, cheight[i]+rSize0[i]/3);
-  text(smallText1[i][3], cwidth[i]+rSize0[i]/3, cheight[i]+rSize0[i]/3);
+  fill(color(220,202,163,10));
+  ellipse(width / 2, height / 2, lSize[0], lSize[0]);
 }
 
 class Maru{
@@ -205,15 +236,11 @@ class Maru{
     this.a=a;
   }
   void draw(){
-      //if (mousePressed)
-      //{
-        for(int i=0; i<cwidth.length;i++){
-          fill(250, 250, 250);
-          //fill(color(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 ));  
-          a+=x/100000;
-          //ellipse(cwidth[i]+rSize[i]*cos(a)/2, cheight[i]+rSize[i]*sin(a)/2,3,3);
-        }
-    //}
+    for(int i=0; i<cwidth.length;i++){
+      fill(0);
+      a+=x/100000;
+      ellipse(cwidth[i]+rSize0[i]*cos(a)/4, cheight[i]+rSize0[i]*sin(a)/4,3,3);
+    }
   }
 }
 
@@ -266,7 +293,7 @@ class PG {
       if (dead) return;
       x += sp * cos(th);
       y += sp * sin(th);
-      sp *= 0.99; //0.99を変えると減速速度が速くなる
+      sp *= 0.98; //0.99を変えると減速速度が速くなる
       if (x < 0 || x > width) dead = true;
       if (y < 0 || y > height) dead = true;
       if (sp < 1) dead = true;
@@ -280,6 +307,63 @@ class PG {
     }
   }
 }
+
+void myCircle(int i) {
+  if(i %3 == 0){
+    strokeWeight(3);
+  }else{
+    strokeWeight(2);
+}
+  stroke(Rcol[i],Gcol[i],Bcol[i]); //点の色は青
+  for (int h = 0; h < numsX[i].length; h ++) {
+    float x = numsX[i][h];
+    float y = numsY[i][h];
+    point(x, y);
+  }
+}
+
+void randomSave() {
+  numsX=new float[cwidth.length][2000]; 
+  numsY=new float[cwidth.length][2000]; 
+  for(int i=0; i<cwidth.length;i++){
+    
+    if(i %3 == 0){
+      float radius = rSize0[i]/4;
+      int count = 1500;
+      for (int h = 0; h < count; h ++) {
+        float angle = random(TWO_PI);
+        float r = sqrt(random(1));
+        float x = cwidth[i]+ r * radius * cos(angle);
+        float y = cheight[i] + r * radius * sin(angle);
+        numsX[i][h] = x;
+        numsY[i][h] =  y;
+      }
+    }else if(i %3 == 1){
+      float radius = rSize0[i]/4;
+      int count = 2000;
+      for (int h = 0; h < count; h ++) {
+        float angle = random(TWO_PI);
+        float r = 1-(random(random(random(1))));
+        float x = cwidth[i]+ r * radius * cos(angle);
+        float y = cheight[i] + r * radius * sin(angle);
+        numsX[i][h] = x;
+        numsY[i][h] =  y;
+      }
+    }else{
+      float radius = rSize0[i]/4;
+      int count = 2000;
+      for (int h = 0; h < count; h ++) {
+        float angle = random(TWO_PI);
+        float r = random(1);
+        float x = cwidth[i]+ r * radius * cos(angle);
+        float y = cheight[i] + r * radius * sin(angle);
+        numsX[i][h] = x;
+        numsY[i][h] =  y;
+      }
+    }
+  }
+}
+
 
 
     /*
