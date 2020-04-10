@@ -230,7 +230,8 @@ void BigCircle(){
   ellipse(400, 600, lSize[0], lSize[0]);
   ellipse(600, 800, lSize[0], lSize[0]);
   ellipse(1200, 900, lSize[0], lSize[0]);
-  ellipse(900, 200, lSize[0], lSize[0]);
+  ellipse(850, 200, lSize[0], lSize[0]);
+  ellipse(1000, 400, lSize[0], lSize[0]);
 }
 
 class Maru{
