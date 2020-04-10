@@ -163,7 +163,8 @@ void draw(){
         
         fill(0);
         noStroke();
-        image(images[i], cwidth[i]-17, cheight[i], 40, 40);
+        imageMode(CENTER);
+        image(images[i], cwidth[i], cheight[i], 40, 40);
         textSize(12);
         textAlign(CENTER,CENTER);
         text(bigText[i][collision], cwidth[i], cheight[i]+30);
