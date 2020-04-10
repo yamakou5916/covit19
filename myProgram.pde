@@ -129,7 +129,6 @@ void setup(){
 }
 
 void draw(){
-  
   //背景
   noStroke();
   fill(255,255,255);
@@ -152,7 +151,7 @@ void draw(){
         fill(255);
         noStroke();
         rect(cwidth[i]-50, cheight[i]+40-rSize0[i]/4,100, 30);
-        rect(cwidth[i]-100, cheight[i]-10,200, 20);
+        rect(cwidth[i]-100, cheight[i]-8,200, 16);
         fill(0);
         noStroke();
         image(images[i], cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
@@ -204,7 +203,7 @@ void draw(){
     ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
     ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
     ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
-    fill(255);//,125 - 125*cos(radians(frameCnt[i])));
+    fill(255);
     textSize(10);
     textAlign(CENTER,CENTER);
     text(smallText0[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
