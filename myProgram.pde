@@ -131,9 +131,8 @@ void draw(){
   
   //背景
   noStroke();
-  fill(255,255,255,5);
+  fill(255,255,255);
   rect(0,0,width,height);
-    
     
    //円
   for(Maru maru:maruhairetu){
