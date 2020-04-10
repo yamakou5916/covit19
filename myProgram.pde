@@ -311,7 +311,11 @@ class PG {
 }
 
 void myCircle(int i) {
-  strokeWeight(3); //点の大きさは8ピクセル
+  if(i %2 == 0){
+    strokeWeight(3);
+  }else{
+    strokeWeight(2);
+}
   stroke(Rcol[i],Gcol[i],Bcol[i]); //点の色は青
   for (int h = 0; h < numsX[i].length; h ++) {
     float x = numsX[i][h];
