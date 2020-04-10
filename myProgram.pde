@@ -150,8 +150,8 @@ void draw(){
         wave(i);
         fill(255);
         noStroke();
-        rect(cwidth[i]-50, cheight[i]+40-rSize0[i]/4,100, 30);
-        rect(cwidth[i]-100, cheight[i]-8,200, 16);
+        rect(cwidth[i]-50, cheight[i]+30-rSize0[i]/4,100, 16);
+        rect(cwidth[i]-100, cheight[i]-10,200, 20);
         fill(0);
         noStroke();
         image(images[i], cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
