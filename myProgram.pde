@@ -164,13 +164,13 @@ void draw(){
         fill(0);
         noStroke();
         imageMode(CENTER);
-        image(images[i], cwidth[i], cheight[i]-5, 40, 40);
+        image(images[i], cwidth[i], cheight[i]-10, 40, 40);
         textSize(12);
         textAlign(CENTER,CENTER);
-        text(bigText[i][collision], cwidth[i], cheight[i]+25);
+        text(bigText[i][collision], cwidth[i], cheight[i]+20);
         textSize(10);
         textAlign(CENTER,CENTER);
-        text(titleText[i][collision], cwidth[i], cheight[i]-35);
+        text(titleText[i][collision], cwidth[i], cheight[i]-40);
       }
       for (int i = pgl.size() - 1; i >= 0; i--) {
         PG pg = pgl.get(i);
