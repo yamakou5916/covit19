@@ -224,8 +224,8 @@ void BigCircle(int i){
   fill(color(220,202,163,10));
   //ellipse(width / 2, height / 2, lSize[0], lSize[0]);
 
-  color c1 = color(220,202,163,10);
-  color c2 = color(247,243,234,10);
+  color c1 = color(220,202,163);
+  color c2 = color(247,243,234);
   for(float d = lSize[0]; d > 0; d -= 20){
     color c = lerpColor(c1, c2, d );
     fill(c);
