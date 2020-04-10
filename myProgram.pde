@@ -225,12 +225,12 @@ void draw(){
 void BigCircle(int i){
   color c1 = color(220,202,163);
   color c2 = color(247,243,234);
-  for(float d = lSize[0]; d > 0; d -= 2){
+  /*for(float d = lSize[0]; d > 0; d -= 2){
     color c = lerpColor(c1, c2, d / 400.0);
     fill(c);
     noStroke();
-    ellipse(width / 2, height / 2, d, d);
-  }
+    //ellipse(width / 2, height / 2, d, d);
+  }*/
 }
 
 class Maru{
