@@ -17,9 +17,9 @@ float lSize[]  = {0};
 float radius  = 200;
 int collision = 0;
 color col1, col2;
-float Rcol[]={0,0,0,0,0,0,0,147};
-float Gcol[]={230,230,173,0};
-float Bcol[]={115,211,230,160};
+float Rcol[]={237,237,247,247,236,236,209,209,145,145,143,143,};
+float Gcol[]={237,237,223,223,181,181,226,226,193,193,176,176,};
+float Bcol[]={191,191,144,144,125,125,200,200,186,186,187,187,};
 int colornum[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 float applyX =0;
 float applyY =0;
@@ -147,7 +147,7 @@ void draw(){
       textnum = 1;
     }
   for(int i=0; i<cwidth.length;i++){
-    myCircle(cwidth[i], cheight[i],rSize0[i]/2) ;
+    myCircle(cwidth[i], cheight[i],rSize0[i]/2,i) ;
     BigCircle(i);
     
     if(sin(radians(frameCnt[i])) == 1){
@@ -308,9 +308,9 @@ class PG {
   }
 }
 
-void myCircle(float centerX, float centerY, float diameter) {
+void myCircle(float centerX, float centerY, float diameter,int ii) {
   strokeWeight(2); //点の大きさは8ピクセル
-  stroke(0,0,255); //点の色は青
+  stroke(Rcol[ii],Gcol[ii],Bcol[ii]); //点の色は青
   float radius = diameter/2;
   int count = 2000;
   for (int i = 0; i < count; i ++) {
