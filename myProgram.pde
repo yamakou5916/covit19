@@ -221,13 +221,13 @@ void draw(){
   
 void BigCircle(int i){
   noStroke();
-  fill(color(220,202,163,10));
+  //fill(color(220,202,163,10));
   //ellipse(width / 2, height / 2, lSize[0], lSize[0]);
 
-  color c1 = color(220,202,163);
-  color c2 = color(247,243,234);
+  color c1 = color(220,202,163,10);
+  color c2 = color(247,243,234,10);
   for(float d = lSize[0]; d > 0; d -= 20){
-    color c = lerpColor(c1, c2, d );
+    color c = lerpColor(c1, c2, d/ lSize[0] );
     fill(c);
     noStroke();
     ellipse(width / 2, height / 2, d, d);
