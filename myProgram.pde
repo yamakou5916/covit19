@@ -223,14 +223,15 @@ void draw(){
   }
   
 void BigCircle(int i){
-  color c1 = color(220,202,163);
-  color c2 = color(247,243,234);
-  /*for(float d = lSize[0]; d > 0; d -= 2){
-    color c = lerpColor(c1, c2, d / 400.0);
-    fill(c);
-    noStroke();
-    //ellipse(width / 2, height / 2, d, d);
-  }*/
+  noStroke();
+  currentValue = abs(sin(frameCount/80))*width;
+  float w = map(currentValue, 0, width, 20, 5);
+  float a = map(currentValue, 0, width, 50, 1);
+  float decrease = map(currentValue, 0, width, 1, 15);
+  
+  for(float i=currentValue; i>0; i-=decrease){
+    fill(250, 114, 94, a);
+    ellipse(width/2, height/2, i*1.5, i*1.5);
 }
 
 class Maru{
