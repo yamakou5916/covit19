@@ -140,10 +140,10 @@ void draw(){
       }
       
    if (1000 * sin(radians(frameCnt[i])) > 0) {
-      lSize[0] += 0.1;
+      lSize[0] += 1;
       textnum = 0;
     } else {
-      lSize[0] += 0.1;
+      lSize[0] += 1;
       textnum = 1;
     }
   for(int i=0; i<cwidth.length;i++){
@@ -236,15 +236,11 @@ class Maru{
     this.a=a;
   }
   void draw(){
-      //if (mousePressed)
-      //{
-        for(int i=0; i<cwidth.length;i++){
-          fill(0);
-          //fill(color(100+ rSize[i]/3, 255-rSize[i]/3 ,  0 ));  
-          a+=x/100000;
-          ellipse(cwidth[i]+rSize0[i]*cos(a)/4, cheight[i]+rSize0[i]*sin(a)/4,3,3);
-        }
-    //}
+    for(int i=0; i<cwidth.length;i++){
+      fill(0);
+      a+=x/100000;
+      ellipse(cwidth[i]+rSize0[i]*cos(a)/4, cheight[i]+rSize0[i]*sin(a)/4,3,3);
+    }
   }
 }
 
