@@ -120,7 +120,7 @@ void setup(){
   images[0] = loadImage("education.png");
   images[1] = loadImage("management.png");
   images[2] = loadImage("investment.png");
-  images[3] = loadImage("customer_service.png");
+  images[3] = loadImage("workstyle.png");
   images[4] = loadImage("production.png");
   images[5] = loadImage("consumption.png");
   images[6] = loadImage("supply_chain.png");
