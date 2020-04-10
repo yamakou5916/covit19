@@ -134,7 +134,7 @@ void draw(){
   noStroke();
   fill(255,255,255);
   rect(0,0,width,height);
-    
+  
    //円
   for(Maru maru:maruhairetu){
         maru.draw();
@@ -148,52 +148,47 @@ void draw(){
             colornum[i]=0;
           }
         }
-    noStroke();
-    fill(255);
-    rect(cwidth[i]-50, cheight[i]+40-rSize0[i]/4,100, 30);
-    noStroke();
-    fill(255);
-    rect(cwidth[i]-100, cheight[i]-10,200, 20);
-    wave(i);
-    fill(0);
-    noStroke();
-    image(images[i], cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
-    textSize(12);
-    textAlign(CENTER,CENTER);
-    text(bigText[i][collision], cwidth[i], cheight[i]);
-    textSize(10);
-    textAlign(CENTER,CENTER);
-    text(titleText[i][collision], cwidth[i], cheight[i]+60-rSize0[i]/4);
-    
-  }
-  
-    for (int i = pgl.size() - 1; i >= 0; i--) {
-    PG pg = pgl.get(i);
-    if (pg.dead) {
-      pgl.remove(i);
-    } else {
-      pg.draw();
-    }
-  }
-    
-//Collision
-   for(int i=0; i<cwidth.length;i++){
-     for(int ii=0; ii<cwidth.length;ii++){
-       if(i!=ii){
-         if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
-           print(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii]));
-           pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
-           pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
-           pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
-        }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
-           pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
+        wave(i);
+        fill(255);
+        noStroke();
+        rect(cwidth[i]-50, cheight[i]+40-rSize0[i]/4,100, 30);
+        rect(cwidth[i]-100, cheight[i]-10,200, 20);
+        fill(0);
+        noStroke();
+        image(images[i], cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
+        textSize(12);
+        textAlign(CENTER,CENTER);
+        text(bigText[i][collision], cwidth[i], cheight[i]);
+        textSize(10);
+        textAlign(CENTER,CENTER);
+        text(titleText[i][collision], cwidth[i], cheight[i]+60-rSize0[i]/4);
+      }
+      for (int i = pgl.size() - 1; i >= 0; i--) {
+        PG pg = pgl.get(i);
+        if (pg.dead) {
+          pgl.remove(i);
+        } else {
+          pg.draw();
         }
-       }
-     } 
-   }
-}
+      }
+      //Collision
+      for(int i=0; i<cwidth.length;i++){
+        for(int ii=0; ii<cwidth.length;ii++){
+          if(i!=ii){
+            if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
+              print(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii]));
+              pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
+            }else if(dist(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
+              pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
+            }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
+              pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
+            }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
+              pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
+            }
+          }
+        } 
+      }
+    }
  
  void wave(int i){
     distance[i] = 100;
@@ -218,8 +213,7 @@ void draw(){
     text(smallText0[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
     collision = 0;
   }
-       
-
+  
 void BigCircle(int i){
   noFill();
   stroke(0,0,0);
