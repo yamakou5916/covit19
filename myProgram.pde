@@ -309,7 +309,7 @@ void myCircle(float centerX, float centerY, float diameter) {
   strokeWeight(2); //点の大きさは8ピクセル
   stroke(0,0,255); //点の色は青
   float radius = diameter/2;
-  int count = 3000;
+  int count = 2000;
   for (int i = 0; i < count; i ++) {
     float angle = random(TWO_PI);
     float r = sqrt(random(1));
