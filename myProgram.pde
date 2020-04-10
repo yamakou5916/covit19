@@ -222,7 +222,7 @@ void draw(){
   
 void BigCircle(int i){
   noFill();
-  fill(100,20)
+  fill(100,20);
   stroke(0,0,0);
   strokeWeight(0.1);
   noStroke();
