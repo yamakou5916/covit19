@@ -136,7 +136,6 @@ void draw(){
   noStroke();
   fill(255,255,255);
   rect(0,0,width,height);
-  BigCircle();
   
    //円
   for(Maru maru:maruhairetu){
@@ -151,8 +150,8 @@ void draw(){
       textnum = 1;
     }
   for(int i=0; i<cwidth.length;i++){
+    BigCircle();
     myCircle(i) ;
-    
     if(sin(radians(frameCnt[i])) == 1){
           colornum[i] += 1;
           if(colornum[i]==4){
