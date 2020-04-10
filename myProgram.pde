@@ -298,7 +298,7 @@ void draw(){
       rSize[i] += 0.1;
       textnum = 1;
     }*/
-    myCircle(cwidth[i],cheight[i],  rSize[i]/2);
+    //myCircle(cwidth[i],cheight[i],  rSize[i]/2);
 
  }
 
