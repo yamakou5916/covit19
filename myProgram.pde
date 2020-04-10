@@ -324,15 +324,29 @@ void randomSave() {
   numsX=new float[cwidth.length][2000]; 
   numsY=new float[cwidth.length][2000]; 
   for(int i=0; i<cwidth.length;i++){
-    float radius = rSize0[i]/4;
-    int count = 1500;
-    for (int h = 0; h < count; h ++) {
-      float angle = random(TWO_PI);
-      float r = sqrt(random(1));
-      float x = cwidth[i]+ r * radius * cos(angle);
-      float y = cheight[i] + r * radius * sin(angle);
-      numsX[i][h] = x;
-      numsY[i][h] =  y;
+    
+    if(i %2 == 0){
+      float radius = rSize0[i]/4;
+      int count = 1500;
+      for (int h = 0; h < count; h ++) {
+        float angle = random(TWO_PI);
+        float r = sqrt(random(1));
+        float x = cwidth[i]+ r * radius * cos(angle);
+        float y = cheight[i] + r * radius * sin(angle);
+        numsX[i][h] = x;
+        numsY[i][h] =  y;
+      }
+    }else{
+      float radius = rSize0[i]/4;
+      int count = 2000;
+      for (int h = 0; h < count; h ++) {
+        float angle = random(TWO_PI);
+        float r = 1-(random(random(random(1))));
+        float x = cwidth[i]+ r * radius * cos(angle);
+        float y = cheight[i] + r * radius * sin(angle);
+        numsX[i][h] = x;
+        numsY[i][h] =  y;
+      }
     }
   }
 }
