@@ -150,7 +150,7 @@ void draw(){
         wave(i);
         fill(255);
         noStroke();
-        rect(cwidth[i]-50, cheight[i]+20-rSize0[i]/4,100, 16);
+        rect(cwidth[i]-50, cheight[i]+40-rSize0[i]/4,100, 16);
         rect(cwidth[i]-100, cheight[i]-15,200, 30);
         fill(0);
         noStroke();
