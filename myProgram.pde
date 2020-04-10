@@ -136,6 +136,7 @@ void draw(){
   noStroke();
   fill(255,255,255);
   rect(0,0,width,height);
+  BigCircle();
   
    //円
   for(Maru maru:maruhairetu){
@@ -151,7 +152,6 @@ void draw(){
     }
   for(int i=0; i<cwidth.length;i++){
     myCircle(i) ;
-    BigCircle(i);
     
     if(sin(radians(frameCnt[i])) == 1){
           colornum[i] += 1;
@@ -223,7 +223,7 @@ void draw(){
     collision = 0;
   }
   
-void BigCircle(int i){
+void BigCircle(){
   noStroke();
   fill(color(220,202,163,10));
   ellipse(width / 2, height / 2, lSize[0], lSize[0]);
