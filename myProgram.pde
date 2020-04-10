@@ -143,11 +143,12 @@ void draw(){
         maru.draw();
       }
       
-   if (1000 * sin(radians(frameCnt[0])) > 0) {
+   //if (1000 * sin(radians(frameCnt[0])) > 0) {
+   if (lSize[0] <400) {
       lSize[0] += 2;
       textnum = 0;
     } else {
-      lSize[0] += 2;
+      //lSize[0] += 2;
       textnum = 1;
     }
     
