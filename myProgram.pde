@@ -26,6 +26,9 @@ float distance[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};;
 Maru[] maruhairetu;
 ArrayList<PG> pgl = new ArrayList<PG>();
 
+float numsX[][] = {};
+float numsY[][] = {};
+
 String titleText[][]=
 {{"エデュケーション","エデュケーション",},
 {"ライフイベント","ライフイベント",},
@@ -105,6 +108,7 @@ void setup(){
   //background(0);
   background(255);
   smooth();
+  randomSave();
   
   maruhairetu =new Maru[5];
   for(int i=0; i<maruhairetu.length;i++){
@@ -144,7 +148,7 @@ void draw(){
       textnum = 1;
     }
   for(int i=0; i<cwidth.length;i++){
-    myCircle(cwidth[i], cheight[i],rSize0[i]/2,i) ;
+    myCircle(i,i) ;
     BigCircle(i);
     
     if(sin(radians(frameCnt[i])) == 1){
@@ -304,19 +308,31 @@ class PG {
   }
 }
 
-void myCircle(float centerX, float centerY, float diameter,int ii) {
+void myCircle(int i, int ii) {
   strokeWeight(2); //点の大きさは8ピクセル
   stroke(Rcol[ii],Gcol[ii],Bcol[ii]); //点の色は青
-  float radius = diameter/2;
-  int count = 2000;
-  for (int i = 0; i < count; i ++) {
-    float angle = random(TWO_PI);
-    float r = sqrt(random(1));
-    float x = centerX + r * radius * cos(angle);
-    float y = centerY + r * radius * sin(angle);
+  for (int iii = 0; iii < numsX[i].length; iii ++) {
+    float x = numsX[i][iii];
+    float y = numsY[i][iii];
     point(x, y);
   }
 }
+
+void randomSave() {
+  for(int i=0; i<cwidth.length;i++){
+    float radius = rSize0[i]/2/2;
+    int count = 2000;
+    for (int h = 0; h < count; h ++) {
+      float angle = random(TWO_PI);
+      float r = sqrt(random(1));
+      float x = cwidth[i]+ r * radius * cos(angle);
+      float y = cheight[i] + r * radius * sin(angle);
+      numsX[i] = append(numsX[i], x);
+      numsY[i] = append(numsY[i], y);
+    }
+  }
+}
+
 
 
     /*
