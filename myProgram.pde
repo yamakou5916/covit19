@@ -311,7 +311,7 @@ class PG {
 }
 
 void myCircle(int i) {
-  if(i %2 == 0){
+  if(i %3 == 0){
     strokeWeight(3);
   }else{
     strokeWeight(2);
@@ -329,7 +329,7 @@ void randomSave() {
   numsY=new float[cwidth.length][2000]; 
   for(int i=0; i<cwidth.length;i++){
     
-    if(i %2 == 0){
+    if(i %3 == 0){
       float radius = rSize0[i]/4;
       int count = 1500;
       for (int h = 0; h < count; h ++) {
@@ -340,12 +340,23 @@ void randomSave() {
         numsX[i][h] = x;
         numsY[i][h] =  y;
       }
-    }else{
+    }else if(i %3 == 1){
       float radius = rSize0[i]/4;
       int count = 2000;
       for (int h = 0; h < count; h ++) {
         float angle = random(TWO_PI);
         float r = 1-(random(random(random(1))));
+        float x = cwidth[i]+ r * radius * cos(angle);
+        float y = cheight[i] + r * radius * sin(angle);
+        numsX[i][h] = x;
+        numsY[i][h] =  y;
+      }
+    }else{
+      float radius = rSize0[i]/4;
+      int count = 2000;
+      for (int h = 0; h < count; h ++) {
+        float angle = random(TWO_PI);
+        float r = random(1);
         float x = cwidth[i]+ r * radius * cos(angle);
         float y = cheight[i] + r * radius * sin(angle);
         numsX[i][h] = x;
