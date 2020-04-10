@@ -16,7 +16,6 @@ float rSize[] = {500,500,500,500,500,500,500,500,500,500,500};
 float lSize[]  = {0};
 float radius  = 200;
 int collision = 0;
-color col1, col2;
 float Rcol[]={237,237,247,247,236,236,209,209,145,145,143,143,};
 float Gcol[]={237,237,223,223,181,181,226,226,193,193,176,176,};
 float Bcol[]={191,191,144,144,125,125,200,200,186,186,187,187,};
@@ -106,8 +105,6 @@ void setup(){
   //background(0);
   background(255);
   smooth();
-  col1 = color(0);
-  col2 = color(20);
   
   maruhairetu =new Maru[5];
   for(int i=0; i<maruhairetu.length;i++){
