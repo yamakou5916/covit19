@@ -132,7 +132,7 @@ void draw(){
 
   //背景
   noStroke();
-  fill(255);
+  fill(255,255,255,5);
   rect(0,0,width,height);
     
     
@@ -141,7 +141,7 @@ void draw(){
         maru.draw();
       }
   for(int i=0; i<cwidth.length;i++){
-    //BigCircle(i);
+    BigCircle(i);
     if(sin(radians(frameCnt[i])) == 1){
           colornum[i] += 1;
           if(colornum[i]==4){
@@ -200,7 +200,7 @@ void draw(){
   
 }
  
- void wave(int i){/*
+ void wave(int i){
     frameCnt[i] += 0.4;
     float frameRatio = cos(radians(frameCnt[i]));
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
@@ -215,19 +215,17 @@ void draw(){
       stroke(255);
       noStroke();
       if(sin(radians(frameCnt[i])) < 0){
-        fill(Rcol[colornum[i]],Gcol[colornum[i]],Bcol[colornum[i]], 100);
+        fill(Rcol[colornum[i]],Gcol[colornum[i]],Bcol[colornum[i]]);//, 100);
       }else{
         stroke(255);
         noStroke();
         noFill();
         fill(255);//, 100);
       }
-      //ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
+      ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
       distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
-    }*/
-    distance[i] = 200;
-
-
+      
+    }
 
     if(distance[i]< (rSize0[i]/4 -50)){
       fill(0);
@@ -298,8 +296,6 @@ void draw(){
       rSize[i] += 0.1;
       textnum = 1;
     }*/
-    //myCircle(cwidth[i],cheight[i],  rSize[i]/2);
-
  }
 
 void BigCircle(int i){
@@ -308,7 +304,6 @@ void BigCircle(int i){
   strokeWeight(0.1);
   noStroke();
   ellipse(cwidth[i], cheight[i],rSize0[i],rSize0[i]);
-  
 }
 
 class Maru{
@@ -408,6 +403,7 @@ void myCircle(float centerX, float centerY, float diameter) {
   }
 }
 
+
     /*
     for (int i = pgl.size() - 1; i >= 0; i--) {
     PG pg = pgl.get(i);
@@ -459,8 +455,6 @@ void myCircle(float centerX, float centerY, float diameter) {
         }
      } 
    }
-   
-   
    
 //line
   stroke(250,250,250);
