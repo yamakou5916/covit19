@@ -168,7 +168,7 @@ void draw(){
         */
         fill(0);
         noStroke();
-        image(images[i], cwidth[i]-10, cheight[i]+20-rSize0[i]/4, 20, 25);
+        image(images[i], cwidth[i]-10, cheight[i]+70-rSize0[i]/4, 40, 40);
         textSize(12);
         textAlign(CENTER,CENTER);
         text(bigText[i][collision], cwidth[i], cheight[i]);
