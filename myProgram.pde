@@ -141,7 +141,7 @@ void draw(){
         maru.draw();
       }
   for(int i=0; i<cwidth.length;i++){
-    BigCircle(i);
+    //BigCircle(i);
     if(sin(radians(frameCnt[i])) == 1){
           colornum[i] += 1;
           if(colornum[i]==4){
@@ -299,6 +299,7 @@ void draw(){
       textnum = 1;
     }*/
     myCircle(cwidth[i],cheight[i],  rSize[i]/2);
+
  }
 
 void BigCircle(int i){
@@ -394,8 +395,10 @@ class PG {
 }
 
 void myCircle(float centerX, float centerY, float diameter) {
+  strokeWeight(2); //点の大きさは8ピクセル
+  stroke(0,0,255); //点の色は青
   float radius = diameter/2;
-  int count = 5000;
+  int count = 3000;
   for (int i = 0; i < count; i ++) {
     float angle = random(TWO_PI);
     float r = sqrt(random(1));
