@@ -150,8 +150,8 @@ void draw(){
       textnum = 1;
     }
   for(int i=0; i<cwidth.length;i++){
-    BigCircle();
     myCircle(i) ;
+    BigCircle();
     if(sin(radians(frameCnt[i])) == 1){
           colornum[i] += 1;
           if(colornum[i]==4){
