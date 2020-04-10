@@ -200,6 +200,7 @@ void draw(){
 }
  
  void wave(int i){
+   /*
     frameCnt[i] += 0.4;
     float frameRatio = cos(radians(frameCnt[i]));
     for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
@@ -224,7 +225,8 @@ void draw(){
       ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
       distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
 
-    }
+    }*/
+    distance[i] = 100;
 
     if(distance[i]< (rSize0[i]/4 -50)){
       fill(0);
