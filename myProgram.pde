@@ -227,7 +227,9 @@ void draw(){
 void BigCircle(){
   noStroke();
   fill(color(220,202,163,100));
-  ellipse(width / 2, height / 2, lSize[0], lSize[0]);
+  ellipse(400, 600, lSize[0], lSize[0]);
+  ellipse(600, 800, lSize[0], lSize[0]);
+  ellipse(1200, 900, lSize[0], lSize[0]);
 }
 
 class Maru{
