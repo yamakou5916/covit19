@@ -13,6 +13,7 @@ PImage[] images = new PImage[numFrames];
 
 float rSize0[] ={500,500,500,500,500,500,500,500,500,500,500};
 float rSize[] = {500,500,500,500,500,500,500,500,500,500,500};
+float lSize[]  = {0};
 float radius  = 200;
 int collision = 0;
 color col1, col2;
@@ -152,7 +153,7 @@ void draw(){
     rect(cwidth[i]-50, cheight[i]+40-rSize0[i]/4,100, 30);
     noStroke();
     fill(255);
-    rect(cwidth[i]-100, cheight[i]-15,200, 30);
+    rect(cwidth[i]-100, cheight[i]-10,200, 20);
     wave(i);
     fill(0);
     noStroke();
@@ -165,7 +166,6 @@ void draw(){
     text(titleText[i][collision], cwidth[i], cheight[i]+60-rSize0[i]/4);
     
   }
-  
   
     for (int i = pgl.size() - 1; i >= 0; i--) {
     PG pg = pgl.get(i);
@@ -193,111 +193,32 @@ void draw(){
        }
      } 
    }
- 
- 
- 
-  
 }
  
  void wave(int i){
-   /*
-    frameCnt[i] += 0.4;
-    float frameRatio = cos(radians(frameCnt[i]));
-    for (float dotCnt = 0.0; dotCnt < 1.0; dotCnt += 0.001) {
-      float radian = TWO_PI * dotCnt;
-      float shapeAx = cos(radian);
-      float shapeAy = sin(radian);
-      //float shapeBx = cos(radian) * pow(cos(radian *1.0), 2);
-      //float shapeBy = sin(radian) * pow(sin(radian * 1.0), 2);
-      applyX   = shapeAx * (frameRatio+1) ;//+ shapeBx * (1.0 - frameRatio);
-      applyY   = shapeAy * (frameRatio+1);// + shapeBy * (1.0 - frameRatio);
-      //float applyHue = 360 * frameRatio + 240 * (1.0 - frameRatio);
-      stroke(255);
-      noStroke();
-      if(sin(radians(frameCnt[i])) < 0){
-        fill(Rcol[colornum[i]],Gcol[colornum[i]],Bcol[colornum[i]]);//, 100);
-      }else{
-        stroke(255);
-        noStroke();
-        noFill();
-        fill(255);//, 100);
-      }
-      ellipse(applyX * rSize[i] /6+cwidth[i], applyY *  rSize[i] /6+cheight[i], 1.0, 1.0);
-      distance[i] = dist(cwidth[i],cheight[i],applyX * rSize[i]/6+cwidth[i], applyY * rSize[i]/6+cheight[i]);
-
-    }*/
     distance[i] = 100;
-
-    if(distance[i]< (rSize0[i]/4 -50)){
-      fill(0);
-      stroke(0);
-      strokeWeight(1);
-      ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
-      ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
-      fill(255);//,125 - 125*cos(radians(frameCnt[i])));
-      textSize(10);
-      textAlign(CENTER,CENTER);
-      text(smallText0[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
-      text(smallText0[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
-      text(smallText0[i][2], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
-      text(smallText0[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
-      collision = 1;
-    }else if(distance[i]> (rSize0[i]/4 -50)&&distance[i]<rSize0[i]/4){
-      fill(0, rSize0[i]/3);//,125 - 125*cos(radians(frameCnt[i])));
-      
-      fill(0);
-      stroke(0);
-      strokeWeight(1);
-      ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
-      ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
-      fill(255);
-      textSize(10);
-      textAlign(CENTER,CENTER);
-      text(smallText1[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
-      text(smallText1[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
-      text(smallText1[i][2], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
-      text(smallText1[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
-      collision = 0;
-    }
-    else{
-      //noFill();
-      fill(255);
-      stroke(0);
-      strokeWeight(1);
-      ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-      ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
-      ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
-      noFill();
-      //ellipse(cwidth[i], cheight[i], (distance[i]*2+1), (distance[i]*2+1)); 
-      fill(0);
-      textSize(10);
-      textAlign(CENTER,CENTER);
-      text(smallText1[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
-      text(smallText1[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
-      text(smallText1[i][2], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
-      text(smallText1[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
-      /*
-      text(smallText1[i][0], cwidth[i]-distance[i]*2/3, cheight[i]-distance[i]*2/3);
-      text(smallText1[i][1], cwidth[i]+distance[i]*2/3, cheight[i]-distance[i]*2/3);
-      text(smallText1[i][2], cwidth[i]+distance[i]*2/3, cheight[i]+distance[i]*2/3);
-      text(smallText1[i][3], cwidth[i]-distance[i]*2/3, cheight[i]+distance[i]*2/3);
-      */
-      collision = 0;
-      }
-       /*
-    if (1000 * sin(radians(frameCnt[i])) > 0) {
-      rSize[i] -= 0.1;
-      textnum = 0;
-    } else {
-      rSize[i] += 0.1;
-      textnum = 1;
-    }*/
- }
+    /*
+    fill(255);
+    stroke(0);
+    strokeWeight(1);
+    */      
+    fill(0);
+    stroke(0);
+    strokeWeight(1);
+    ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
+    ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
+    ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
+    ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
+    fill(255);//,125 - 125*cos(radians(frameCnt[i])));
+    textSize(10);
+    textAlign(CENTER,CENTER);
+    text(smallText0[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
+    text(smallText0[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
+    text(smallText0[i][2], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
+    text(smallText0[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
+    collision = 0;
+  }
+       
 
 void BigCircle(int i){
   noFill();
