@@ -172,7 +172,7 @@ p.quote {
   z-index: 9999;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0);
   opacity: 0;
   transition: opacity 0.5s, transform 0s 0.5s;
   transform: scale(0);
@@ -206,7 +206,7 @@ p.quote {
   right: 16px;
   font-size: 30px;
   cursor: pointer;
-  color: #000;
+  color: #fff;
 }
 
 .popup_wrap input:checked~.popup_overlay {
@@ -230,7 +230,7 @@ p.quote {
   height: 225px;
   margin: 0 auto;
   color: #fff;
-  background: #0c0d62;
+  background: #fff;
   opacity: 0.1;
   font-weight: bold;
   border-radius: 125px;
@@ -255,7 +255,7 @@ p.quote {
   height: 215px;
   margin: 0 auto;
   color: #fff;
-  background: #0c0d62;
+  background: #fff;
   opacity: 0.1;
   font-weight: bold;
   border-radius: 120px;
@@ -281,7 +281,7 @@ p.quote {
   height: 405px;
   margin: 0 auto;
   color: #fff;
-  background: #0c0d62;
+  background: #fff;
   opacity: 0.1;
   font-weight: bold;
   border-radius: 500px;
@@ -306,7 +306,7 @@ p.quote {
   height: 185px;
   margin: 0 auto;
   color: #fff;
-  background: #0c0d62;
+  background: #fff;
   opacity: 0.1;
   font-weight: bold;
   border-radius: 500px;
@@ -331,7 +331,7 @@ p.quote {
   height: 225px;
   margin: 0 auto;
   color: #fff;
-  background: #0c0d62;
+  background: #fff;
   opacity: 0.1;
   font-weight: bold;
   border-radius: 500px;
@@ -356,7 +356,7 @@ p.quote {
   height: 325px;
   margin: 0 auto;
   color: #fff;
-  background: #0c0d62;
+  background: #fff;
   opacity: 0.1;
   font-weight: bold;
   border-radius: 500px;
@@ -381,7 +381,7 @@ p.quote {
   height: 310px;
   margin: 0 auto;
   color: #fff;
-  background: #0c0d62;
+  background: #fff;
   opacity: 0.1;
   font-weight: bold;
   border-radius: 500px;
