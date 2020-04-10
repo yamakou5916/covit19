@@ -223,9 +223,9 @@ void draw(){
   }
   
 void BigCircle(int i){
-  color c1 = color(255, 140, 0);
-  color c2 = color(0, 255, 255);
-  for(float d = lSize[0]; d > 0; d -= 5){
+  color c1 = color(220,202,163);
+  color c2 = color(247,243,234);
+  for(float d = lSize[0]; d > 0; d -= 2){
     color c = lerpColor(c1, c2, d / 400.0);
     fill(c);
     noStroke();
