@@ -149,9 +149,9 @@ void draw(){
       lSize[0] += 2;
       textnum = 1;
     }
+    
   for(int i=0; i<cwidth.length;i++){
     myCircle(i) ;
-    BigCircle();
     if(sin(radians(frameCnt[i])) == 1){
           colornum[i] += 1;
           if(colornum[i]==4){
@@ -159,7 +159,6 @@ void draw(){
           }
         }
         wave(i);
-        
         fill(0);
         noStroke();
         imageMode(CENTER);
@@ -171,6 +170,9 @@ void draw(){
         textAlign(CENTER,CENTER);
         text(titleText[i][collision], cwidth[i], cheight[i]-40);
       }
+      BigCircle();
+     
+      
       for (int i = pgl.size() - 1; i >= 0; i--) {
         PG pg = pgl.get(i);
         if (pg.dead) {
