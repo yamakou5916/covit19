@@ -142,12 +142,12 @@ void draw(){
     myCircle(cwidth[i], cheight[i],rSize0[i]/2) ;
     BigCircle(i);
     if (1000 * sin(radians(frameCnt[i])) > 0) {
-      lSize[0] += 0.1;
+      rSize[0] -= 0.1;
       textnum = 0;
     } else {
-      lSize[0] += 0.1;
+      rSize[0] += 0.1;
       textnum = 1;
-    }*/
+    }
     if(sin(radians(frameCnt[i])) == 1){
           colornum[i] += 1;
           if(colornum[i]==4){
