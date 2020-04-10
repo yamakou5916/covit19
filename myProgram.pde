@@ -160,21 +160,16 @@ void draw(){
           }
         }
         wave(i);
-        /*
-        fill(255);
-        noStroke();
-        rect(cwidth[i]-50, cheight[i]+52-rSize0[i]/4,100, 16);
-        rect(cwidth[i]-100, cheight[i]-15,200, 30);
-        */
+        
         fill(0);
         noStroke();
-        image(images[i], cwidth[i]-17, cheight[i]+70-rSize0[i]/4, 40, 40);
+        image(images[i], cwidth[i]-17, cheight[i], 40, 40);
         textSize(12);
         textAlign(CENTER,CENTER);
-        text(bigText[i][collision], cwidth[i], cheight[i]);
+        text(bigText[i][collision], cwidth[i], cheight[i]+30);
         textSize(10);
         textAlign(CENTER,CENTER);
-        text(titleText[i][collision], cwidth[i], cheight[i]+60-rSize0[i]/4);
+        text(titleText[i][collision], cwidth[i], cheight[i]-30);
       }
       for (int i = pgl.size() - 1; i >= 0; i--) {
         PG pg = pgl.get(i);
