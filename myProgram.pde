@@ -105,7 +105,7 @@ String otherText[][]=
 void setup(){
   PFont font = createFont("NotoSansCJKjp-Regular",50);
   textFont (font);
-  size(1400,1000);
+  size(2000,1500);
   noStroke();
   //background(0);
   background(255);
