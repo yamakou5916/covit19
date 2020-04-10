@@ -141,6 +141,13 @@ void draw(){
   for(int i=0; i<cwidth.length;i++){
     myCircle(cwidth[i], cheight[i],rSize0[i]/2) ;
     BigCircle(i);
+    if (1000 * sin(radians(frameCnt[i])) > 0) {
+      lSize[0] += 0.1;
+      textnum = 0;
+    } else {
+      lSize[0] += 0.1;
+      textnum = 1;
+    }*/
     if(sin(radians(frameCnt[i])) == 1){
           colornum[i] += 1;
           if(colornum[i]==4){
@@ -215,6 +222,7 @@ void draw(){
   
 void BigCircle(int i){
   noFill();
+  fill(100,20)
   stroke(0,0,0);
   strokeWeight(0.1);
   noStroke();
