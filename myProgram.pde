@@ -117,7 +117,7 @@ void setup(){
     Maru maru=new Maru(rSize[i],rSize[i]);
     maruhairetu[i]=maru;
   } 
-  images[0] = loadImage("savings.png");
+  images[0] = loadImage("education.png");
   images[1] = loadImage("management.png");
   images[2] = loadImage("investment.png");
   images[3] = loadImage("customer_service.png");
