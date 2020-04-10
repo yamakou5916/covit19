@@ -464,19 +464,19 @@ body {
 .trapezoid {
   position: absolute;
   top: 0;
-  left: 500px;
-  width: 500px;
+  left: 550px;
+  width: 700px;
   border-top: 900px solid rgba(255,165,0,0.5);
   border-left: 0px solid transparent;
-  border-right: 400px solid rgba(255,0,0,0.5);
+  border-right: 0px solid transparent;
   height: 0;
 }
 
 .rectangle {
   position: absolute;
   top: 0;
-  left: 1400px;
-  width:400px;
+  left: 1200px;
+  width:700px;
   height:900px;
   background:rgba(255,0,0,0.5);
 }
@@ -497,7 +497,7 @@ body {
   height:450px;
   border-right:1400px solid rgba(0,0,255,0.5);
   border-top:0px solid transparent;
-  border-bottom:100px solid transparent;
+  border-bottom: 0px solid transparent;
 }
 
 .trapezoid2 {
@@ -507,7 +507,7 @@ body {
   width:0;
   height:450px;
   border-left:1400px solid rgba(0,165,255,0.5);
-  border-top:100px solid transparent;
+  border-top: 0px solid transparent;
   border-bottom:0px solid transparent;
 }
 
