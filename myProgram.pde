@@ -225,10 +225,8 @@ void draw(){
 void BigCircle(int i){
   noFill();
   fill(100,20);
-  stroke(0,0,0);
-  strokeWeight(0.1);
   noStroke();
-  ellipse(cwidth[i], cheight[i],rSize0[i],rSize0[i]);
+  ellipse(cwidth[i], cheight[i],lSize[0],lSize[0]);
 }
 
 class Maru{
