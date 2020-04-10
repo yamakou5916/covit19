@@ -223,10 +223,14 @@ void draw(){
   }
   
 void BigCircle(int i){
-  noFill();
-  fill(100,20);
-  noStroke();
-  ellipse(width/2, height/2,lSize[0],lSize[0]);
+  color c1 = color(255, 140, 0);
+  color c2 = color(0, 255, 255);
+  for(float d = lSize[0]; d > 0; d -= 5){
+    color c = lerpColor(c1, c2, d / 400.0);
+    fill(c);
+    noStroke();
+    ellipse(width / 2, height / 2, d, d);
+  }
 }
 
 class Maru{
