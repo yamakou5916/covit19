@@ -325,7 +325,7 @@ void randomSave() {
   numsY=new float[cwidth.length][2000]; 
   for(int i=0; i<cwidth.length;i++){
     float radius = rSize0[i]/4;
-    int count = 2000;
+    int count = 1500;
     for (int h = 0; h < count; h ++) {
       float angle = random(TWO_PI);
       float r = sqrt(random(1));
