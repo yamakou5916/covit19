@@ -136,7 +136,8 @@ void draw(){
   noStroke();
   fill(255,255,255);
   rect(0,0,width,height);
-  
+  BigCircle();
+
    //円
   for(Maru maru:maruhairetu){
         maru.draw();
@@ -169,9 +170,7 @@ void draw(){
         textSize(10);
         textAlign(CENTER,CENTER);
         text(titleText[i][collision], cwidth[i], cheight[i]-40);
-      }
-      BigCircle();
-     
+      }     
       
       for (int i = pgl.size() - 1; i >= 0; i--) {
         PG pg = pgl.get(i);
@@ -226,7 +225,7 @@ void draw(){
   
 void BigCircle(){
   noStroke();
-  fill(color(220,202,163,10));
+  fill(color(220,202,163,100));
   ellipse(width / 2, height / 2, lSize[0], lSize[0]);
 }
 
