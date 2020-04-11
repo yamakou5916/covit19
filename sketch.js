@@ -134,7 +134,7 @@ function draw(){
   stroke(0);
   strokeWeight(1);
   textSize(14);
-  textAlign(CENTER,CENTER);
+  //textAlign(CENTER,CENTER);
   line(windowWidth/2,0,windowWidth/2,windowHeight);
   line(0,windowHeight/2,windowWidth,windowHeight/2);
   text("個人としての意識", 100, windowHeight/2);
