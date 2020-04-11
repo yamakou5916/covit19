@@ -7,7 +7,7 @@ const lSize = [0];
 const collision = 0;
 const bigText = ["能力と社会性の変化","生活と価値観の変化","余暇と気晴らしの変化","職業と人生観の変化","社会通念と手続きの変化","個人情報とプライバシーの変化","人・社会との繋がりの変化","ものづくりの変化","所属意識の変化","責任領域の変化","信頼形成の変化"];
 
-//const images = ["education.png","lifestyle.png","entertainment.png","workstyle.png","lifeevent.png","healthcare.png","lifeline.png","manufacture.png","supplychain.png","management.png","medical.png"];
+const images = [loadImage("education.png"),loadImage("lifestyle.png"),loadImage("entertainment.png"),loadImage("workstyle.png"),loadImage("lifeevent.png"),loadImage("healthcare.png"),loadImage("lifeline.png"),loadImage("manufacture.png"),loadImage("supplychain.png"),loadImage("management.png"),loadImage("medical.png")];
 
 const Rcol = [237,237,247,247,236,236,209,209,145,145,143,143];
 const Gcol = [237,237,223,223,181,181,226,226,193,193,176,176];
