@@ -1,33 +1,32 @@
-float a=0; 
-int cwindowWidth[]=[400,1150,450,500,1500,1100,1500,800,1550,1150,750;
-int cwindowHeight[]=[450,1000,1200,750,1100,250,300,900,650,600,300];
+var a=0; 
+var cwindowWidth[]=[400,1150,450,500,1500,1100,1500,800,1550,1150,750;
+var cwindowHeight[]=[450,1000,1200,750,1100,250,300,900,650,600,300];
 
-int owindowWidth[]=[550,570,550,640,740, 260,850,1030,760];
-int owindowHeight[]=[1070,670,350,310,400,650,1350,1070,920];
-int textnum = 0;
-int grdnum = 0;
-//int frameCnt = 0;
-float frameCnt[] = [200,200,0,0,100,0,0,0,0,0,0];
-PImage img;
-int numFrames = 12; //アニメーションのフレーム数
-PImage[] images = new PImage[numFrames];
+var owindowWidth[]=[550,570,550,640,740, 260,850,1030,760];
+var owindowHeight[]=[1070,670,350,310,400,650,1350,1070,920];
+var textnum = 0;
+var grdnum = 0;
+//var frameCnt = 0;
+var frameCnt[] = [200,200,0,0,100,0,0,0,0,0,0];
+var numFrames = 12; //アニメーションのフレーム数
+let images[] = new PImage[numFrames];
 
-float rSize0[] = [500,500,500,500,500,500,500,500,500,500,500];
-float rSize[] = [500,500,500,500,500,500,500,500,500,500,500];
-float lSize[] = [0];
-float radius = 200;
-int collision = 0;
-float Rcol[] = [237,237,247,247,236,236,209,209,145,145,143,143,];
-float Gcol[] = [237,237,223,223,181,181,226,226,193,193,176,176,];
-float Bcol[] = [191,191,144,144,125,125,200,200,186,186,187,187,];
-int colornum[] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-float applyX = 0;
-float applyY = 0;
-float distance[] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var rSize0[] = [500,500,500,500,500,500,500,500,500,500,500];
+var rSize[] = [500,500,500,500,500,500,500,500,500,500,500];
+var lSize[] = [0];
+var radius = 200;
+var collision = 0;
+var rcol[] = [237,237,247,247,236,236,209,209,145,145,143,143,];
+var gcol[] = [237,237,223,223,181,181,226,226,193,193,176,176,];
+var bcol[] = [191,191,144,144,125,125,200,200,186,186,187,187,];
+var colornum[] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var applyX = 0;
+var applyY = 0;
+var distance[] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 Maru[] maruhairetu;
 
-float numsX[][] = [[]];
-float numsY[][] = [[]];
+var numsX[][] = [[]];
+var numsY[][] = [[]];
 
 String titleText[][] =
 [["エデュケーション","エデュケーション",],
@@ -152,7 +151,7 @@ function draw(){
     textnum = 1;
   }
 
-  for(int i=0; i<cwindowWidth.length;i++){
+  for(var i=0; i<cwindowWidth.length;i++){
     myCircle(i) ;
     if(sin(radians(frameCnt[i])) == 1){
       colornum[i] += 1;
@@ -173,7 +172,7 @@ function draw(){
     text(titleText[i][collision], cwindowWidth[i], cwindowHeight[i]-45);
   }
 
-  for (int i = pgl.size() - 1; i >= 0; i--) {
+  for (var i = pgl.size() - 1; i >= 0; i--) {
     PG pg = pgl.get(i);
     if (pg.dead) {
       pgl.remove(i);
@@ -185,7 +184,7 @@ function draw(){
 }
 
 /*
- function wave(int i){
+ function wave(var i){
     distance[i] = 100;
     
     fill(0);
@@ -219,56 +218,56 @@ function BigCircle(){
 }
 
 
-function myCircle(int i) {
+function myCircle(var i) {
   if(i %3 == 0){
     strokeWeight(3);
   }else{
     strokeWeight(2);
   }
-  stroke(Rcol[i],Gcol[i],Bcol[i]);
-  for (int h = 0; h < numsX[i].length; h ++) {
-    float x = numsX[i][h];
-    float y = numsY[i][h];
-    point(x, y);
+  stroke(rcol[i],gcol[i],bcol[i]);
+  for (var h = 0; h < numsX[i].length; h ++) {
+    var x = numsX[i][h];
+    var y = numsY[i][h];
+    povar(x, y);
   }
 }
 */
 
 /*
 function randomSave() {
-  numsX = new float[cwindowWidth.length][2000]; 
-  numsY = new float[cwindowWidth.length][2000]; 
-  for(int i=0; i<cwindowWidth.length;i++){
+  numsX = new var[cwindowWidth.length][2000]; 
+  numsY = new var[cwindowWidth.length][2000]; 
+  for(var i=0; i<cwindowWidth.length;i++){
     if(i %3 == 0){
-      float radius = rSize0[i]/4;
-      int count = 1500;
-      for (int h = 0; h < count; h ++) {
-        float angle = random(TWO_PI);
-        float r = sqrt(random(1));
-        float x = cwindowWidth[i]+ r * radius * cos(angle);
-        float y = cwindowHeight[i] + r * radius * sin(angle);
+      var radius = rSize0[i]/4;
+      var count = 1500;
+      for (var h = 0; h < count; h ++) {
+        var angle = random(TWO_PI);
+        var r = sqrt(random(1));
+        var x = cwindowWidth[i]+ r * radius * cos(angle);
+        var y = cwindowHeight[i] + r * radius * sin(angle);
         numsX[i][h] = x;
         numsY[i][h] = y;
       }
     }else if(i %3 == 1){
-      float radius = rSize0[i]/4;
-      int count = 2000;
-      for (int h = 0; h < count; h ++) {
-        float angle = random(TWO_PI);
-        float r = 1-(random(random(random(1))));
-        float x = cwindowWidth[i]+ r * radius * cos(angle);
-        float y = cwindowHeight[i] + r * radius * sin(angle);
+      var radius = rSize0[i]/4;
+      var count = 2000;
+      for (var h = 0; h < count; h ++) {
+        var angle = random(TWO_PI);
+        var r = 1-(random(random(random(1))));
+        var x = cwindowWidth[i]+ r * radius * cos(angle);
+        var y = cwindowHeight[i] + r * radius * sin(angle);
         numsX[i][h] = x;
         numsY[i][h] = y;
       }
     }else{
-      float radius = rSize0[i]/4;
-      int count = 2000;
-      for (int h = 0; h < count; h ++) {
-        float angle = random(TWO_PI);
-        float r = random(1);
-        float x = cwindowWidth[i]+ r * radius * cos(angle);
-        float y = cwindowHeight[i] + r * radius * sin(angle);
+      var radius = rSize0[i]/4;
+      var count = 2000;
+      for (var h = 0; h < count; h ++) {
+        var angle = random(TWO_PI);
+        var r = random(1);
+        var x = cwindowWidth[i]+ r * radius * cos(angle);
+        var y = cwindowHeight[i] + r * radius * sin(angle);
         numsX[i][h] = x;
         numsY[i][h] = y;
       }
@@ -278,7 +277,7 @@ function randomSave() {
 */
 
     /*
-    for (int i = pgl.size() - 1; i >= 0; i--) {
+    for (var i = pgl.size() - 1; i >= 0; i--) {
     PG pg = pgl.get(i);
     if (pg.dead) {
       pgl.remove(i);
@@ -288,8 +287,8 @@ function randomSave() {
   }
     
 //Collision
-   for(int i=0; i<cwindowWidth.length;i++){
-     for(int ii=0; ii<cwindowWidth.length;ii++){
+   for(var i=0; i<cwindowWidth.length;i++){
+     for(var ii=0; ii<cwindowWidth.length;ii++){
          if(dist(cwindowWidth[i]+rSize[i]/3,cwindowHeight[i]+rSize[i]/3,cwindowWidth[ii]+rSize[ii]/3,cwindowHeight[ii]-rSize[ii]/3)<80){
            pgl.add(new PG((cwindowWidth[i]+rSize[i]/3+cwindowWidth[ii]+rSize[ii]/3)/2, (cwindowHeight[i]+rSize[i]/3+cwindowHeight[ii]-rSize[ii]/3)/2, 10, 1));
         }
@@ -353,7 +352,7 @@ if(otherText[i][1]=="0"){
         if(cos(radians(cnt)) == -1&&loopcnt%3==2){
           //otherText[1][1] = "1";
         }
-      }else if(int(otherText[i][1])==1){
+      }else if(var(otherText[i][1])==1){
         if(cos(radians(cnt))>-0.99){
           fill(125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)),125 - 125*cos(radians(cnt)));
           OtherCircle(i);
@@ -362,7 +361,7 @@ if(otherText[i][1]=="0"){
           OtherCircle(i);
           otherText[i][1]="2";
         }
-      }else if(int(otherText[i][1])==2){
+      }else if(var(otherText[i][1])==2){
       fill(250,250,250);
           OtherCircle(i);
           if(cos(radians(cnt)) == -1&&loopcnt%3==0){
