@@ -40,6 +40,7 @@ function draw(){
 
     //wave(i);
     fill(0);
+    noFill();
     noStroke();
     imageMode(CENTER);
     //image(images[i], width/2,height/2, 70, 70);
