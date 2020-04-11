@@ -10,7 +10,7 @@ const bigText = ["能力と社会性の変化","生活と価値観の変化","�
 const images = [loadImage("education.png"),loadImage("lifestyle.png"),loadImage("entertainment.png"),loadImage("workstyle.png"),loadImage("lifeevent.png"),loadImage("healthcare.png"),loadImage("lifeline.png"),loadImage("manufacture.png"),loadImage("supplychain.png"),loadImage("management.png"),loadImage("medical.png")];
 
 function setup(){
-  createCanvas(windowWidth, windowHeight);//描画領域を指定
+  createCanvas(2000, 1500);//描画領域を指定
   background(255);
 }
 
