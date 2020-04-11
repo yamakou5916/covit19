@@ -118,17 +118,16 @@ void setup(){
     maruhairetu[i]=maru;
   } 
   images[0] = loadImage("education.png");
-  images[1] = loadImage("management.png");
+  images[1] = loadImage("user.png");
   images[2] = loadImage("investment.png");
   images[3] = loadImage("workstyle.png");
   images[4] = loadImage("production.png");
-  images[5] = loadImage("consumption.png");
-  images[6] = loadImage("supply_chain.png");
-  images[7] = loadImage("user.png");
-  images[8] = loadImage("user.png");
-  images[9] = loadImage("user.png");
-  images[10] = loadImage("user.png");
-  images[11] = loadImage("user.png");
+  images[5] = loadImage("healthcare.png");
+  images[6] = loadImage("user.png");
+  images[7] = loadImage("manufacture.png");
+  images[8] = loadImage("supplychain.png");
+  images[9] = loadImage("management.png");
+  images[10] = loadImage("medical.png");
 }
 
 void draw(){
