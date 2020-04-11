@@ -1,9 +1,9 @@
 float a=0; 
-int cwidth[]=[400,1150,450,500,1500,1100,1500,800,1550,1150,750;
-int cheight[]=[450,1000,1200,750,1100,250,300,900,650,600,300];
+int cwindowWidth[]=[400,1150,450,500,1500,1100,1500,800,1550,1150,750;
+int cwindowHeight[]=[450,1000,1200,750,1100,250,300,900,650,600,300];
 
-int owidth[]=[550,570,550,640,740, 260,850,1030,760];
-int oheight[]=[1070,670,350,310,400,650,1350,1070,920];
+int owindowWidth[]=[550,570,550,640,740, 260,850,1030,760];
+int owindowHeight[]=[1070,670,350,310,400,650,1350,1070,920];
 int textnum = 0;
 int grdnum = 0;
 //int frameCnt = 0;
@@ -127,7 +127,7 @@ function draw(){
   //背景
   noStroke();
   fill(255,255,255);
-  rect(0,0,width,height);
+  rect(0,0,windowWidth,windowHeight);
   //BigCircle();
   //軸
   fill(0);
@@ -135,12 +135,12 @@ function draw(){
   strokeWeight(1);
   textSize(14);
   textAlign(CENTER,CENTER);
-  line(width/2,0,width/2,height);
-  line(0,height/2,width,height/2);
-  text("個人としての意識", 100, height/2);
-  text("集団としての意識", width-100, height/2);
-  text("文化に関する思想", width/2, height-40);
-  text("社会システムに関する思想", width/2, 0+40);
+  line(windowWidth/2,0,windowWidth/2,windowHeight);
+  line(0,windowHeight/2,windowWidth,windowHeight/2);
+  text("個人としての意識", 100, windowHeight/2);
+  text("集団としての意識", windowWidth-100, windowHeight/2);
+  text("文化に関する思想", windowWidth/2, windowHeight-40);
+  text("社会システムに関する思想", windowWidth/2, 0+40);
 
 /*
   //if(1000 * sin(radians(frameCnt[0])) > 0) {
@@ -152,7 +152,7 @@ function draw(){
     textnum = 1;
   }
 
-  for(int i=0; i<cwidth.length;i++){
+  for(int i=0; i<cwindowWidth.length;i++){
     myCircle(i) ;
     if(sin(radians(frameCnt[i])) == 1){
       colornum[i] += 1;
@@ -164,13 +164,13 @@ function draw(){
     fill(0);
     noStroke();
     imageMode(CENTER);
-    image(images[i], cwidth[i], cheight[i]-10, 70, 70);
+    image(images[i], cwindowWidth[i], cwindowHeight[i]-10, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
-    text(bigText[i][collision], cwidth[i], cheight[i]+25);
+    text(bigText[i][collision], cwindowWidth[i], cwindowHeight[i]+25);
     textSize(10);
     textAlign(CENTER,CENTER);
-    text(titleText[i][collision], cwidth[i], cheight[i]-45);
+    text(titleText[i][collision], cwindowWidth[i], cwindowHeight[i]-45);
   }
 
   for (int i = pgl.size() - 1; i >= 0; i--) {
@@ -194,17 +194,17 @@ function draw(){
     fill(0);
     stroke(0);
     strokeWeight(1);
-    ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-    ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-    ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
-    ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
+    ellipse(cwindowWidth[i]-rSize0[i]/6, cwindowHeight[i]-rSize0[i]/6, 80, 80);
+    ellipse(cwindowWidth[i]+rSize0[i]/6, cwindowHeight[i]-rSize0[i]/6, 80, 80);
+    ellipse(cwindowWidth[i]+rSize0[i]/6, cwindowHeight[i]+rSize0[i]/6, 80, 80);
+    ellipse(cwindowWidth[i]-rSize0[i]/6, cwindowHeight[i]+rSize0[i]/6, 80, 80);
     fill(255);
     textSize(10);
     textAlign(CENTER,CENTER);
-    text(smallText0[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
-    text(smallText0[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
-    text(smallText0[i][2], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
-    text(smallText0[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
+    text(smallText0[i][0], cwindowWidth[i]-rSize0[i]/6, cwindowHeight[i]-rSize0[i]/6);
+    text(smallText0[i][1], cwindowWidth[i]+rSize0[i]/6, cwindowHeight[i]-rSize0[i]/6);
+    text(smallText0[i][2], cwindowWidth[i]+rSize0[i]/6, cwindowHeight[i]+rSize0[i]/6);
+    text(smallText0[i][3], cwindowWidth[i]-rSize0[i]/6, cwindowHeight[i]+rSize0[i]/6);
     collision = 0;
   }
 
@@ -239,17 +239,17 @@ function myCircle(int i) {
 
 /*
 function randomSave() {
-  numsX = new float[cwidth.length][2000]; 
-  numsY = new float[cwidth.length][2000]; 
-  for(int i=0; i<cwidth.length;i++){
+  numsX = new float[cwindowWidth.length][2000]; 
+  numsY = new float[cwindowWidth.length][2000]; 
+  for(int i=0; i<cwindowWidth.length;i++){
     if(i %3 == 0){
       float radius = rSize0[i]/4;
       int count = 1500;
       for (int h = 0; h < count; h ++) {
         float angle = random(TWO_PI);
         float r = sqrt(random(1));
-        float x = cwidth[i]+ r * radius * cos(angle);
-        float y = cheight[i] + r * radius * sin(angle);
+        float x = cwindowWidth[i]+ r * radius * cos(angle);
+        float y = cwindowHeight[i] + r * radius * sin(angle);
         numsX[i][h] = x;
         numsY[i][h] = y;
       }
@@ -259,8 +259,8 @@ function randomSave() {
       for (int h = 0; h < count; h ++) {
         float angle = random(TWO_PI);
         float r = 1-(random(random(random(1))));
-        float x = cwidth[i]+ r * radius * cos(angle);
-        float y = cheight[i] + r * radius * sin(angle);
+        float x = cwindowWidth[i]+ r * radius * cos(angle);
+        float y = cwindowHeight[i] + r * radius * sin(angle);
         numsX[i][h] = x;
         numsY[i][h] = y;
       }
@@ -270,8 +270,8 @@ function randomSave() {
       for (int h = 0; h < count; h ++) {
         float angle = random(TWO_PI);
         float r = random(1);
-        float x = cwidth[i]+ r * radius * cos(angle);
-        float y = cheight[i] + r * radius * sin(angle);
+        float x = cwindowWidth[i]+ r * radius * cos(angle);
+        float y = cwindowHeight[i] + r * radius * sin(angle);
         numsX[i][h] = x;
         numsY[i][h] = y;
       }
@@ -291,43 +291,43 @@ function randomSave() {
   }
     
 //Collision
-   for(int i=0; i<cwidth.length;i++){
-     for(int ii=0; ii<cwidth.length;ii++){
-         if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-           pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+   for(int i=0; i<cwindowWidth.length;i++){
+     for(int ii=0; ii<cwindowWidth.length;ii++){
+         if(dist(cwindowWidth[i]+rSize[i]/3,cwindowHeight[i]+rSize[i]/3,cwindowWidth[ii]+rSize[ii]/3,cwindowHeight[ii]-rSize[ii]/3)<80){
+           pgl.add(new PG((cwindowWidth[i]+rSize[i]/3+cwindowWidth[ii]+rSize[ii]/3)/2, (cwindowHeight[i]+rSize[i]/3+cwindowHeight[ii]-rSize[ii]/3)/2, 10, 1));
         }
-        if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+        if(dist(cwindowWidth[i]+rSize[i]/3,cwindowHeight[i]+rSize[i]/3,cwindowWidth[ii]-rSize[ii]/3,cwindowHeight[ii]-rSize[ii]/3)<80){
+          pgl.add(new PG((cwindowWidth[i]+rSize[i]/3+cwindowWidth[ii]-rSize[ii]/3)/2, (cwindowHeight[i]+rSize[i]/3+cwindowHeight[ii]-rSize[ii]/3)/2, 10, 1));
         }
-        if(dist(cwidth[i]+rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        if(dist(cwindowWidth[i]+rSize[i]/3,cwindowHeight[i]+rSize[i]/3,cwindowWidth[ii]-rSize[ii]/3,cwindowHeight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwindowWidth[i]+rSize[i]/3+cwindowWidth[ii]-rSize[ii]/3)/2, (cwindowHeight[i]+rSize[i]/3+cwindowHeight[ii]+rSize[ii]/3)/2, 10, 1));
         }
-        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        if(dist(cwindowWidth[i]+rSize[i]/3,cwindowHeight[i]-rSize[i]/3,cwindowWidth[ii]+rSize[ii]/3,cwindowHeight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwindowWidth[i]+rSize[i]/3+cwindowWidth[ii]-rSize[ii]/3)/2, (cwindowHeight[i]-rSize[i]/3+cwindowHeight[ii]+rSize[ii]/3)/2, 10, 1));
         }
-        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+        if(dist(cwindowWidth[i]+rSize[i]/3,cwindowHeight[i]-rSize[i]/3,cwindowWidth[ii]-rSize[ii]/3,cwindowHeight[ii]-rSize[ii]/3)<80){
+          pgl.add(new PG((cwindowWidth[i]+rSize[i]/3+cwindowWidth[ii]-rSize[ii]/3)/2, (cwindowHeight[i]-rSize[i]/3+cwindowHeight[ii]-rSize[ii]/3)/2, 10, 1));
         }
-        if(dist(cwidth[i]+rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]+rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        if(dist(cwindowWidth[i]+rSize[i]/3,cwindowHeight[i]-rSize[i]/3,cwindowWidth[ii]-rSize[ii]/3,cwindowHeight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwindowWidth[i]+rSize[i]/3+cwindowWidth[ii]-rSize[ii]/3)/2, (cwindowHeight[i]-rSize[i]/3+cwindowHeight[ii]+rSize[ii]/3)/2, 10, 1));
         }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        if(dist(cwindowWidth[i]-rSize[i]/3,cwindowHeight[i]-rSize[i]/3,cwindowWidth[ii]+rSize[ii]/3,cwindowHeight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwindowWidth[i]-rSize[i]/3+cwindowWidth[ii]+rSize[ii]/3)/2, (cwindowHeight[i]-rSize[i]/3+cwindowHeight[ii]+rSize[ii]/3)/2, 10, 1));
         }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+        if(dist(cwindowWidth[i]-rSize[i]/3,cwindowHeight[i]-rSize[i]/3,cwindowWidth[ii]+rSize[ii]/3,cwindowHeight[ii]-rSize[ii]/3)<80){
+          pgl.add(new PG((cwindowWidth[i]-rSize[i]/3+cwindowWidth[ii]+rSize[ii]/3)/2, (cwindowHeight[i]-rSize[i]/3+cwindowHeight[ii]-rSize[ii]/3)/2, 10, 1));
         }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]-rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]-rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        if(dist(cwindowWidth[i]-rSize[i]/3,cwindowHeight[i]-rSize[i]/3,cwindowWidth[ii]-rSize[ii]/3,cwindowHeight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwindowWidth[i]-rSize[i]/3+cwindowWidth[ii]-rSize[ii]/3)/2, (cwindowHeight[i]-rSize[i]/3+cwindowHeight[ii]+rSize[ii]/3)/2, 10, 1));
         }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]+rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]+rSize[ii]/3)/2, 10, 1));
+        if(dist(cwindowWidth[i]-rSize[i]/3,cwindowHeight[i]+rSize[i]/3,cwindowWidth[ii]+rSize[ii]/3,cwindowHeight[ii]+rSize[ii]/3)<80){
+          pgl.add(new PG((cwindowWidth[i]-rSize[i]/3+cwindowWidth[ii]+rSize[ii]/3)/2, (cwindowHeight[i]+rSize[i]/3+cwindowHeight[ii]+rSize[ii]/3)/2, 10, 1));
         }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]+rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]+rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+        if(dist(cwindowWidth[i]-rSize[i]/3,cwindowHeight[i]+rSize[i]/3,cwindowWidth[ii]+rSize[ii]/3,cwindowHeight[ii]-rSize[ii]/3)<80){
+          pgl.add(new PG((cwindowWidth[i]-rSize[i]/3+cwindowWidth[ii]+rSize[ii]/3)/2, (cwindowHeight[i]+rSize[i]/3+cwindowHeight[ii]-rSize[ii]/3)/2, 10, 1));
         }
-        if(dist(cwidth[i]-rSize[i]/3,cheight[i]+rSize[i]/3,cwidth[ii]-rSize[ii]/3,cheight[ii]-rSize[ii]/3)<80){
-          pgl.add(new PG((cwidth[i]-rSize[i]/3+cwidth[ii]-rSize[ii]/3)/2, (cheight[i]+rSize[i]/3+cheight[ii]-rSize[ii]/3)/2, 10, 1));
+        if(dist(cwindowWidth[i]-rSize[i]/3,cwindowHeight[i]+rSize[i]/3,cwindowWidth[ii]-rSize[ii]/3,cwindowHeight[ii]-rSize[ii]/3)<80){
+          pgl.add(new PG((cwindowWidth[i]-rSize[i]/3+cwindowWidth[ii]-rSize[ii]/3)/2, (cwindowHeight[i]+rSize[i]/3+cwindowHeight[ii]-rSize[ii]/3)/2, 10, 1));
         }
      } 
    }
@@ -335,9 +335,9 @@ function randomSave() {
 //line
   stroke(250,250,250);
   strokeWeight(0.1);
-  line(cwidth[0]+rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[1]-rSize[1]/3, cheight[1]-rSize[1]/3);
-  line(cwidth[0]-rSize[0]/3, cheight[0]+rSize[0]/3, cwidth[2]-rSize[2]/3, cheight[2]-rSize[2]/3);
-  line(cwidth[1]+rSize[1]/3, cheight[1]-rSize[1]/3, cwidth[3]-rSize[3]/3, cheight[3]-rSize[3]/3);
+  line(cwindowWidth[0]+rSize[0]/3, cwindowHeight[0]+rSize[0]/3, cwindowWidth[1]-rSize[1]/3, cwindowHeight[1]-rSize[1]/3);
+  line(cwindowWidth[0]-rSize[0]/3, cwindowHeight[0]+rSize[0]/3, cwindowWidth[2]-rSize[2]/3, cwindowHeight[2]-rSize[2]/3);
+  line(cwindowWidth[1]+rSize[1]/3, cwindowHeight[1]-rSize[1]/3, cwindowWidth[3]-rSize[3]/3, cwindowHeight[3]-rSize[3]/3);
     
   //flow
     noStroke();
