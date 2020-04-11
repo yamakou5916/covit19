@@ -9,7 +9,7 @@ var grdnum = 0;
 //var frameCnt = 0;
 var frameCnt[] = [200,200,0,0,100,0,0,0,0,0,0];
 var numFrames = 12; //アニメーションのフレーム数
-let images[] = new PImage[numFrames];
+//let images[] = new PImage[numFrames];
 
 var rSize0[] = [500,500,500,500,500,500,500,500,500,500,500];
 var rSize[] = [500,500,500,500,500,500,500,500,500,500,500];
@@ -23,7 +23,6 @@ var colornum[] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var applyX = 0;
 var applyY = 0;
 var distance[] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-Maru[] maruhairetu;
 
 var numsX[][] = [[]];
 var numsY[][] = [[]];
@@ -109,6 +108,7 @@ function setup(){
   background(255);
   smooth();
   //randomSave();
+  /*
   images[0] = loadImage("education.png");
   images[1] = loadImage("lifestyle.png");
   images[2] = loadImage("entertainment.png");
@@ -120,6 +120,7 @@ function setup(){
   images[8] = loadImage("supplychain.png");
   images[9] = loadImage("management.png");
   images[10] = loadImage("medical.png");
+  */
 }
 
 function draw(){
