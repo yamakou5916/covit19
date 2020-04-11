@@ -18,7 +18,7 @@ const images8 = loadImage("supplychain.png");
 const images9 = loadImage("management.png");
 const images10 = loadImage("medical.png");
 
-String bigText=
+const bigText=
 [["能力と社会性の変化","能力と社会性の変化",],
 ["生活と価値観の変化","生活と価値観の変化",],
 ["余暇と気晴らしの変化","余暇と気晴らしの変化",],
