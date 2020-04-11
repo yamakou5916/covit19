@@ -46,8 +46,8 @@ function draw(){
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
 
-  for(int i=0; i<cwidth.length;i++){
-    wave(i);
+  for(var i=0; i<cwidth.length;i++){
+    //wave(i);
     fill(0);
     noStroke();
     imageMode(CENTER);
