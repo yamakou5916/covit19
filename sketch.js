@@ -57,6 +57,7 @@ String bigText[][]=
 ["責任領域の変化","責任領域の変化",],
 ["信頼形成の変化","信頼形成の変化",],
 ];
+
 String smallText0[][]=
 [["ネット教育の\n存在感向上", "学校教育の\n自主選択化", "リモート\n学習状況\n評価制度", "遠隔下の\n社会性獲得\n人間関係教育"],
 ["反都市化\n地方への\n分散移住", "非定住\n複数拠点活動", "コミュニティ\n地方文化創生", "現実と仮想\nの均質化"],
@@ -111,7 +112,6 @@ function setup(){
   background(255);
   smooth();
   //randomSave();
-  
   images[0] = loadImage("education.png");
   images[1] = loadImage("lifestyle.png");
   images[2] = loadImage("entertainment.png");
@@ -131,7 +131,6 @@ function draw(){
   fill(255,255,255);
   rect(0,0,width,height);
   //BigCircle();
-
   //軸
   fill(0);
   stroke(0);
@@ -145,45 +144,45 @@ function draw(){
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
       
-   //if (1000 * sin(radians(frameCnt[0])) > 0) {
-   if (lSize[0] <400) {
-      lSize[0] += 2;
-      textnum = 0;
-    } else {
-      //lSize[0] += 2;
-      textnum = 1;
-    }
+  //if (1000 * sin(radians(frameCnt[0])) > 0) {
+  if(lSize[0] <400) {
+    lSize[0] += 2;
+    textnum = 0;
+  } else {
+    //lSize[0] += 2;
+    textnum = 1;
+  }
     
   for(int i=0; i<cwidth.length;i++){
     myCircle(i) ;
     if(sin(radians(frameCnt[i])) == 1){
-          colornum[i] += 1;
-          if(colornum[i]==4){
-            colornum[i]=0;
-          }
-        }
-        wave(i);
-        fill(0);
-        noStroke();
-        imageMode(CENTER);
-        image(images[i], cwidth[i], cheight[i]-10, 70, 70);
-        textSize(12);
-        textAlign(CENTER,CENTER);
-        text(bigText[i][collision], cwidth[i], cheight[i]+25);
-        textSize(10);
-        textAlign(CENTER,CENTER);
-        text(titleText[i][collision], cwidth[i], cheight[i]-45);
-      }     
-      
-      for (int i = pgl.size() - 1; i >= 0; i--) {
-        PG pg = pgl.get(i);
-        if (pg.dead) {
-          pgl.remove(i);
-        } else {
-          pg.draw();
-        }
+      colornum[i] += 1;
+      if(colornum[i]==4){
+      colornum[i]=0;
       }
     }
+    wave(i);
+    fill(0);
+    noStroke();
+    imageMode(CENTER);
+    image(images[i], cwidth[i], cheight[i]-10, 70, 70);
+    textSize(12);
+    textAlign(CENTER,CENTER);
+    text(bigText[i][collision], cwidth[i], cheight[i]+25);
+    textSize(10);
+    textAlign(CENTER,CENTER);
+    text(titleText[i][collision], cwidth[i], cheight[i]-45);
+  }
+
+  for (int i = pgl.size() - 1; i >= 0; i--) {
+    PG pg = pgl.get(i);
+    if (pg.dead) {
+      pgl.remove(i);
+    } else {
+      pg.draw();
+    }
+  }
+}
  
  function wave(int i){
     distance[i] = 100;
@@ -227,8 +226,8 @@ function myCircle(int i) {
     strokeWeight(3);
   }else{
     strokeWeight(2);
-}
-  stroke(Rcol[i],Gcol[i],Bcol[i]); //点の色は青
+  }
+  stroke(Rcol[i],Gcol[i],Bcol[i]);
   for (int h = 0; h < numsX[i].length; h ++) {
     float x = numsX[i][h];
     float y = numsY[i][h];
@@ -240,7 +239,6 @@ function randomSave() {
   numsX = new float[cwidth.length][2000]; 
   numsY = new float[cwidth.length][2000]; 
   for(int i=0; i<cwidth.length;i++){
-    
     if(i %3 == 0){
       float radius = rSize0[i]/4;
       int count = 1500;
