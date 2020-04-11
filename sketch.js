@@ -4,7 +4,7 @@ const cheight=[450,1000,1200,750,1100,250,300,900,650,600,300];
 const rSize =[500,500,500,500,500,500,500,500,500,500,500];
 const rSize0 =[500,500,500,500,500,500,500,500,500,500,500];
 const lSize = [0];
-const diameter = 50;
+const collision = 0;
 
 const images = [loadImage("education.png"),loadImage("lifestyle.png"),loadImage("entertainment.png"),loadImage("workstyle.png"),loadImage("lifeevent.png"),loadImage("healthcare.png"),loadImage("lifeline.png"),loadImage("manufacture.png"),loadImage("supplychain.png"),loadImage("management.png"),loadImage("medical.png")];
 
@@ -58,10 +58,10 @@ function draw(){
     fill(0);
     noStroke();
     imageMode(CENTER);
-    image(images[i], cwidth[i], cheight[i]-10, 70, 70);
+    //image(images[i], cwidth[i], cheight[i]-10, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
-    text(bigText[i][collision], cwidth[i], cheight[i]+25);
+    //text(bigText[i][collision], cwidth[i], cheight[i]+25);
     textSize(10);
     textAlign(CENTER,CENTER);
     text(titleText[i][collision], cwidth[i], cheight[i]-45);
