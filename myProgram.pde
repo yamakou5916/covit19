@@ -139,12 +139,17 @@ void draw(){
   BigCircle();
 
 //軸
-    fill(0);
-    stroke(0);
-    strokeWeight(1);
+fill(0);
+stroke(0);
+strokeWeight(1);
+textSize(14);
+textAlign(CENTER,CENTER);
 line(width/2,0,width/2,height);
 line(0,height/2,width,height/2);
-text("aaa", width/2, 0+40);
+text("個人としての意識", 40, height/2);
+text("集団としての意識", width-40, height/2);
+text("文化に関する思想", width/2, height-40);
+text("社会システムに関する思想", width/2, 0+40);
 
 
    //円
