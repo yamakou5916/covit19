@@ -112,7 +112,7 @@ void setup(){
   smooth();
   randomSave();
   
-  maruhairetu =new Maru[5];
+  maruhairetu =new Maru[10];
   for(int i=0; i<maruhairetu.length;i++){
     Maru maru=new Maru(rSize[i],rSize[i]);
     maruhairetu[i]=maru;
