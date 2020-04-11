@@ -107,7 +107,6 @@ function setup(){
   textFont (font);
   createCanvas(2000,1500);
   noStroke();
-  //background(0);
   background(255);
   smooth();
   //randomSave();
@@ -142,8 +141,8 @@ function draw(){
   text("集団としての意識", width-100, height/2);
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
-      
-  //if (1000 * sin(radians(frameCnt[0])) > 0) {
+
+  //if(1000 * sin(radians(frameCnt[0])) > 0) {
   if(lSize[0] < 400) {
     lSize[0] += 2;
     textnum = 0;
@@ -235,6 +234,7 @@ function myCircle(int i) {
   }
 }
 
+
 /*
 function randomSave() {
   numsX = new float[cwidth.length][2000]; 
@@ -277,6 +277,7 @@ function randomSave() {
   }
 }
 */
+
     /*
     for (int i = pgl.size() - 1; i >= 0; i--) {
     PG pg = pgl.get(i);
