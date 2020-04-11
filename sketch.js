@@ -101,8 +101,8 @@ String otherText[][] =
 
 function setup(){
   //pixelDensity(1);
-  PFont font = createFont("NotoSansCJKjp-Regular",50);
-  textFont (font);
+  //PFont font = createFont("NotoSansCJKjp-Regular",50);
+  //textFont (font);
   createCanvas(2000,1500);
   noStroke();
   background(255);
