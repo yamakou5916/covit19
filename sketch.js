@@ -184,13 +184,10 @@ function draw(){
   */
 }
 
+/*
  function wave(int i){
     distance[i] = 100;
-    /*
-    fill(255);
-    stroke(0);
-    strokeWeight(1);
-    */      
+    
     fill(0);
     stroke(0);
     strokeWeight(1);
@@ -235,7 +232,7 @@ function myCircle(int i) {
     point(x, y);
   }
 }
-
+*/
 
 /*
 function randomSave() {
