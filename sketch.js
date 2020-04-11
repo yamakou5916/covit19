@@ -11,12 +11,6 @@ var pathList = ["education.png","lifestyle.png","entertainment.png","workstyle.p
 function setup(){
   createCanvas(windowWidth, windowHeight);//描画領域を指定
   background(255);
-  var img = new Array();
-  for (var i = 0; i < pathList.length; i++) {
-      var image = new Image();
-      image.src = pathList[i];
-      img.push(image);
-  }
 }
 
 function draw(){
@@ -45,7 +39,7 @@ function draw(){
     fill(0);
     noStroke();
     imageMode(CENTER);
-    image(img[i], width/2,height/2, 70, 70);
+    //image(img[i], width/2,height/2, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
     text(bigText[i], cwidth[i], cheight[i]+25;
