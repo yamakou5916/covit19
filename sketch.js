@@ -134,6 +134,7 @@ function draw(){
   stroke(0);
   strokeWeight(1);
   textSize(14);
+  /*
   //textAlign(CENTER,CENTER);
   line(windowWidth/2,0,windowWidth/2,windowHeight);
   line(0,windowHeight/2,windowWidth,windowHeight/2);
@@ -141,7 +142,7 @@ function draw(){
   text("集団としての意識", windowWidth-100, windowHeight/2);
   text("文化に関する思想", windowWidth/2, windowHeight-40);
   text("社会システムに関する思想", windowWidth/2, 0+40);
-
+*/
 /*
   //if(1000 * sin(radians(frameCnt[0])) > 0) {
   if(lSize[0] < 400) {
