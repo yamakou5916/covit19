@@ -56,71 +56,7 @@ function draw(){
     //text(titleText[i][collision], cwidth[i], cheight[i]-45);
   }
 
-
-function myCircle(var i) {
-  if(i %3 == 0){
-    strokeWeight(3);
-  }else{
-    strokeWeight(2);
 }
-  stroke(Rcol[i],Gcol[i],Bcol[i]); //点の色は青
-  for (var h = 0; h < numsX[i].length; h ++) {
-    var x = numsX[i][h];
-    var y = numsY[i][h];
-    povar(x, y);
-  }
-}
-
-}
-
-function randomSave() {
-  numsX = new var[cwidth.length][2000]; 
-  numsY = new var[cwidth.length][2000]; 
-  for(var i=0; i<cwidth.length;i++){
-    
-    if(i %3 == 0){
-      var radius = rSize0[i]/4;
-      var count = 1500;
-      for (var h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = sqrt(random(1));
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
-        numsX[i][h] = x;
-        numsY[i][h] =  y;
-      }
-    }else if(i %3 == 1){
-      var radius = rSize0[i]/4;
-      var count = 2000;
-      for (var h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = 1-(random(random(random(1))));
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i]+ r * radius * sin(angle);
-        numsX[i][h] = x;
-        numsY[i][h] =  y;
-      }
-    }else{
-      var radius = rSize0[i]/4;
-      var count = 2000;
-      for (var h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = random(1);
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i]+ r * radius * sin(angle);
-        numsX[i][h] = x;
-        numsY[i][h] = y;
-      }
-    }
-  }
-}
-
-
-
-
-
-
-
 
 
 
