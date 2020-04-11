@@ -138,6 +138,12 @@ void draw(){
   rect(0,0,width,height);
   BigCircle();
 
+//軸
+line(width/2,0,width/2,height);
+line(0,height/2,width,height/2);
+text("aaa", width/2, 0+40);
+
+
    //円
   for(Maru maru:maruhairetu){
         maru.draw();
