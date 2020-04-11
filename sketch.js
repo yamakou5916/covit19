@@ -38,7 +38,49 @@ function setup(){
 }
 
 function draw(){
+  //背景
   noStroke();
   fill(255,255,255);
   rect(0,0,windowWidth, windowHeight);
+
+  //軸
+  fill(0);
+  stroke(0);
+  strokeWeight(1);
+  textSize(14);
+  textAlign(CENTER,CENTER);
+  line(width/2,0,width/2,height);
+  line(0,height/2,width,height/2);
+  text("個人としての意識", 100, height/2);
+  text("集団としての意識", width-100, height/2);
+  text("文化に関する思想", width/2, height-40);
+  text("社会システムに関する思想", width/2, 0+40);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
