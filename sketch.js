@@ -42,7 +42,7 @@ function draw(){
     fill(0);
     noStroke();
     imageMode(CENTER);
-    image(images[i], width/2,height/2, 70, 70);
+    //image(images[i], width/2,height/2, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
     textSize(10);
