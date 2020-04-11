@@ -142,6 +142,7 @@ function draw(){
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
 
+/*
   //if(1000 * sin(radians(frameCnt[0])) > 0) {
   if(lSize[0] < 400) {
     lSize[0] += 2;
@@ -180,6 +181,7 @@ function draw(){
       pg.draw();
     }
   }
+  */
 }
 
  function wave(int i){
