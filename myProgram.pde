@@ -180,10 +180,10 @@ text("社会システムに関する思想", width/2, 0+40);
         image(images[i], cwidth[i], cheight[i]-10, 70, 70);
         textSize(12);
         textAlign(CENTER,CENTER);
-        text(bigText[i][collision], cwidth[i], cheight[i]+30);
+        text(bigText[i][collision], cwidth[i], cheight[i]+25);
         textSize(10);
         textAlign(CENTER,CENTER);
-        text(titleText[i][collision], cwidth[i], cheight[i]-50);
+        text(titleText[i][collision], cwidth[i], cheight[i]-45);
       }     
       
       for (int i = pgl.size() - 1; i >= 0; i--) {
