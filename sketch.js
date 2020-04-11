@@ -51,10 +51,10 @@ function draw(){
     fill(0);
     noStroke();
     imageMode(CENTER);
-    //image(images[i], cwidth[i], cheight[i]-10, 70, 70);
+    image(images[i], cwidth[i], cheight[i]-10, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
-    //text(bigText[i][collision], cwidth[i], cheight[i]+25);
+    text(bigText[i][collision], cwidth[i], cheight[i]+25);
     textSize(10);
     textAlign(CENTER,CENTER);
     //text(titleText[i][collision], cwidth[i], cheight[i]-45);
