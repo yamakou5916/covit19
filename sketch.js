@@ -8,7 +8,7 @@ const collision = 0;
 
 const images = [loadImage("education.png"),loadImage("lifestyle.png"),loadImage("entertainment.png"),loadImage("workstyle.png"),loadImage("lifeevent.png"),loadImage("healthcare.png"),loadImage("lifeline.png"),loadImage("manufacture.png"),loadImage("supplychain.png"),loadImage("management.png"),loadImage("medical.png")];
 
-const bigText=
+var bigText=
 [["能力と社会性の変化","能力と社会性の変化",],
 ["生活と価値観の変化","生活と価値観の変化",],
 ["余暇と気晴らしの変化","余暇と気晴らしの変化",],
