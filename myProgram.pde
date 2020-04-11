@@ -135,7 +135,7 @@ void draw(){
   noStroke();
   fill(255,255,255);
   rect(0,0,width,height);
-  BigCircle();
+  //BigCircle();
 
 //軸
 fill(0);
