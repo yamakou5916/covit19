@@ -6,7 +6,7 @@ const rSize0 =[500,500,500,500,500,500,500,500,500,500,500];
 const lSize = [0];
 const diameter = 50;
 
-const images0 = loadImage("education.png");
+const images0 = [loadImage("education.png");
 const images1 = loadImage("lifestyle.png");
 const images2 = loadImage("entertainment.png");
 const images3 = loadImage("workstyle.png");
@@ -68,7 +68,7 @@ function draw(){
     fill(0);
     noStroke();
     imageMode(CENTER);
-    image(images[i], cwidth[i], cheight[i]-10, 70, 70);
+    //image(images[i], cwidth[i], cheight[i]-10, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
     text(bigText[i][collision], cwidth[i], cheight[i]+25);
