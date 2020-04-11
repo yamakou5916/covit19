@@ -32,10 +32,9 @@ function draw(){
   text("集団としての意識", width-100, height/2);
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
+  text(bigText, width/2,height/2);
 
   for(var i=0; i<11;i++){
-    text(bigText, width/2,height/2);
-
     //text("社会システムに関する思想", width/2,height/2);
 
     //wave(i);
@@ -45,7 +44,6 @@ function draw(){
     image(images[i], width/2,height/2, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
-    text(bigText, cwidth[i], cheight[i]+25;
     textSize(10);
     textAlign(CENTER,CENTER);
     //text(titleText[i][collision], cwidth[i], cheight[i]-45);
