@@ -110,7 +110,7 @@ function setup(){
   //background(0);
   background(255);
   smooth();
-  randomSave();
+  //randomSave();
   
   images[0] = loadImage("education.png");
   images[1] = loadImage("lifestyle.png");
@@ -183,7 +183,6 @@ function draw(){
           pg.draw();
         }
       }
-
     }
  
  function wave(int i){
@@ -223,7 +222,7 @@ function BigCircle(){
 }
 
 
-void myCircle(int i) {
+function myCircle(int i) {
   if(i %3 == 0){
     strokeWeight(3);
   }else{
@@ -237,9 +236,9 @@ void myCircle(int i) {
   }
 }
 
-void randomSave() {
-  numsX=new float[cwidth.length][2000]; 
-  numsY=new float[cwidth.length][2000]; 
+function randomSave() {
+  numsX = new float[cwidth.length][2000]; 
+  numsY = new float[cwidth.length][2000]; 
   for(int i=0; i<cwidth.length;i++){
     
     if(i %3 == 0){
