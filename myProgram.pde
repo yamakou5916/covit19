@@ -103,7 +103,7 @@ String otherText[][]=
 };
 
 void setup(){
-    pixelDensity(2);
+//pixelDensity(2);
 PFont font = createFont("NotoSansCJKjp-Regular",50);
   textFont (font);
   size(2000,1500);
