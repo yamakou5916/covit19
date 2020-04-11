@@ -112,11 +112,6 @@ function setup(){
   smooth();
   randomSave();
   
-  maruhairetu =new Maru[10];
-  for(int i=0; i<maruhairetu.length;i++){
-    Maru maru=new Maru(random(rSize[i]),random(rSize[i]));
-    maruhairetu[i]=maru;
-  } 
   images[0] = loadImage("education.png");
   images[1] = loadImage("lifestyle.png");
   images[2] = loadImage("entertainment.png");
@@ -149,11 +144,6 @@ function draw(){
   text("集団としての意識", width-100, height/2);
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
-
-   //円
-  for(Maru maru:maruhairetu){
-        maru.draw();
-      }
       
    //if (1000 * sin(radians(frameCnt[0])) > 0) {
    if (lSize[0] <400) {
@@ -193,23 +183,7 @@ function draw(){
           pg.draw();
         }
       }
-      //Collision
-      for(int i=0; i<cwidth.length;i++){
-        for(int ii=0; ii<cwidth.length;ii++){
-          if(i!=ii){
-            if(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
-              print(dist(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii]));
-              pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
-            }else if(dist(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
-              pgl.add(new PG(cwidth[i]+distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
-            }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
-              pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]+distance[i]*2/3, 2, 1));
-            }else if(dist(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3,cwidth[ii],cheight[ii])<rSize[ii]/4+40){
-              pgl.add(new PG(cwidth[i]-distance[i]*2/3,cheight[i]-distance[i]*2/3, 2, 1));
-            }
-          }
-        } 
-      }
+
     }
  
  function wave(int i){
@@ -247,86 +221,6 @@ function BigCircle(){
   ellipse(1250, 450, lSize[0], lSize[0]);
   ellipse(750, 1350, lSize[0], lSize[0]);
 }
-
-class Maru{
-  float x,a;
-  Maru(float x, float a){
-    this.x=x;
-    this.a=a;
-  }
-  static draw(){
-    for(int i=0; i<cwidth.length;i++){
-      fill(0);
-      a+=x/100000;
-      ellipse(cwidth[i]+rSize0[i]*cos(a)/4, cheight[i]+rSize0[i]*sin(a)/4,3,3);
-    }
-  }
-}
-
-class PG {
-  ArrayList<P> pl;
-  int num;
-  int r;
-  boolean dead;
-  
-  public PG(float x, float y, int num, int r) {
-    pl = new ArrayList<P>();
-    this.num = num;
-    this.r = r;
-    for (int i = 0; i < num; i++) {
-      float xx = x + random(-r, r);
-      float yy = y + random(-r, r);
-      pl.add(new P(xx, yy, r, atan2(yy-y, xx-x), random(0.3, 3))); //3は初速の上限
-    }
-  }
-
-  static draw() {
-    for (int i = pl.size() - 1; i >= 0; i--) {
-      P p = pl.get(i);
-      p.update();
-      if (p.dead) {
-        pl.remove(i);
-        if (pl.size() == 0) dead = true;
-      } else {
-        p.draw();
-      }
-    }
-  }
-
-}
-
-  class P {
-    float x, y;
-    float r;
-    float th;
-    float sp;
-    boolean dead = false;
-    
-    public P(float x, float y, float r, float th, float sp) {
-      this.x = x;
-      this.y = y;
-      this.r = r;
-      this.th = th; //0 - TWO_PI
-      this.sp = sp;
-    }
-    
-    static update() {
-      if (dead) return;
-      x += sp * cos(th);
-      y += sp * sin(th);
-      sp *= 0.98; //0.99を変えると減速速度が速くなる
-      if (x < 0 || x > width) dead = true;
-      if (y < 0 || y > height) dead = true;
-      if (sp < 1) dead = true;
-    }
-    
-    static draw() {
-      noStroke();
-      fill(255, sp * 255 * random(0, 1)); //randomは明滅するため
-      //      ellipse(x, y, r, r);
-      rect(x, y, r, r);
-    }
-  }
 
 
 void myCircle(int i) {
@@ -384,8 +278,6 @@ void randomSave() {
     }
   }
 }
-
-
 
     /*
     for (int i = pgl.size() - 1; i >= 0; i--) {
