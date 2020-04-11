@@ -6,17 +6,17 @@ const rSize0 =[500,500,500,500,500,500,500,500,500,500,500];
 const lSize = [0];
 const diameter = 50;
 
-const images[0] = loadImage("education.png");
-const images[1] = loadImage("lifestyle.png");
-const images[2] = loadImage("entertainment.png");
-const images[3] = loadImage("workstyle.png");
-const images[4] = loadImage("lifeevent.png");
-const images[5] = loadImage("healthcare.png");
-const images[6] = loadImage("lifeline.png");
-const images[7] = loadImage("manufacture.png");
-const images[8] = loadImage("supplychain.png");
-const images[9] = loadImage("management.png");
-const images[10] = loadImage("medical.png");
+const images0 = loadImage("education.png");
+const images1 = loadImage("lifestyle.png");
+const images2 = loadImage("entertainment.png");
+const images3 = loadImage("workstyle.png");
+const images4 = loadImage("lifeevent.png");
+const images5 = loadImage("healthcare.png");
+const images6 = loadImage("lifeline.png");
+const images7 = loadImage("manufacture.png");
+const images8 = loadImage("supplychain.png");
+const images9 = loadImage("management.png");
+const images10 = loadImage("medical.png");
 
 String bigText=
 [["能力と社会性の変化","能力と社会性の変化",],
