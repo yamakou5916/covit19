@@ -118,12 +118,12 @@ void setup(){
     maruhairetu[i]=maru;
   } 
   images[0] = loadImage("education.png");
-  images[1] = loadImage("user.png");
-  images[2] = loadImage("investment.png");
+  images[1] = loadImage("lifestyle.png");
+  images[2] = loadImage("entertainment.png");
   images[3] = loadImage("workstyle.png");
-  images[4] = loadImage("production.png");
+  images[4] = loadImage("lifeevent.png");
   images[5] = loadImage("healthcare.png");
-  images[6] = loadImage("user.png");
+  images[6] = loadImage("lifeline.png");
   images[7] = loadImage("manufacture.png");
   images[8] = loadImage("supplychain.png");
   images[9] = loadImage("management.png");
