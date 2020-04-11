@@ -103,8 +103,8 @@ String otherText[][]=
 };
 
 void setup(){
-//pixelDensity(2);
-PFont font = createFont("NotoSansCJKjp-Regular",50);
+  pixelDensity(1);
+  PFont font = createFont("NotoSansCJKjp-Regular",50);
   textFont (font);
   size(2000,1500);
   noStroke();
@@ -150,7 +150,6 @@ text("個人としての意識", 100, height/2);
 text("集団としての意識", width-100, height/2);
 text("文化に関する思想", width/2, height-40);
 text("社会システムに関する思想", width/2, 0+40);
-
 
    //円
   for(Maru maru:maruhairetu){
