@@ -46,12 +46,12 @@ function draw(){
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
 
-  for(var i=0; i<cwidth.length;i++){
+  for(var i=0; i<11;i++){
     //wave(i);
     fill(0);
     noStroke();
     imageMode(CENTER);
-    image(images[i], width/2, height/2, 70, 70);
+    image(images[i], cwidth[i], cheight[i]-10, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
     text(bigText[i][collision], cwidth[i], cheight[i]+25);
