@@ -106,7 +106,7 @@ void setup(){
   PFont font = createFont("NotoSansCJKjp-Regular",50);
   textFont (font);
   size(2000,1500);
-  pixelDensity(displayDensity());
+  pixelDensity(3);
   noStroke();
   //background(0);
   background(255);
