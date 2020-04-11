@@ -177,7 +177,7 @@ text("社会システムに関する思想", width/2, 0+40);
         fill(0);
         noStroke();
         imageMode(CENTER);
-        image(images[i], cwidth[i], cheight[i]-10, 40, 40);
+        image(images[i], cwidth[i], cheight[i]-10, 50, 50);
         textSize(12);
         textAlign(CENTER,CENTER);
         text(bigText[i][collision], cwidth[i], cheight[i]+20);
