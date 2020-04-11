@@ -141,7 +141,7 @@ void draw(){
 fill(0);
 stroke(0);
 strokeWeight(1);
-textSize(28);
+textSize(14);
 textAlign(CENTER,CENTER);
 line(width/2,0,width/2,height);
 line(0,height/2,width,height/2);
@@ -177,11 +177,11 @@ text("社会システムに関する思想", width/2, 0+40);
         fill(0);
         noStroke();
         imageMode(CENTER);
-        image(images[i], cwidth[i], cheight[i]-10, 140, 140);
-        textSize(24);
+        image(images[i], cwidth[i], cheight[i]-10, 70, 70);
+        textSize(12);
         textAlign(CENTER,CENTER);
         text(bigText[i][collision], cwidth[i], cheight[i]+25);
-        textSize(20);
+        textSize(10);
         textAlign(CENTER,CENTER);
         text(titleText[i][collision], cwidth[i], cheight[i]-45);
       }     
