@@ -6,17 +6,7 @@ const rSize0 =[500,500,500,500,500,500,500,500,500,500,500];
 const lSize = [0];
 const diameter = 50;
 
-const images0 = [loadImage("education.png");
-const images1 = loadImage("lifestyle.png");
-const images2 = loadImage("entertainment.png");
-const images3 = loadImage("workstyle.png");
-const images4 = loadImage("lifeevent.png");
-const images5 = loadImage("healthcare.png");
-const images6 = loadImage("lifeline.png");
-const images7 = loadImage("manufacture.png");
-const images8 = loadImage("supplychain.png");
-const images9 = loadImage("management.png");
-const images10 = loadImage("medical.png");
+const images = [loadImage("education.png"),loadImage("lifestyle.png"),loadImage("entertainment.png"),loadImage("workstyle.png"),loadImage("lifeevent.png"),loadImage("healthcare.png"),loadImage("lifeline.png"),loadImage("manufacture.png"),loadImage("supplychain.png"),loadImage("management.png"),loadImage("medical.png")];
 
 const bigText=
 [["能力と社会性の変化","能力と社会性の変化",],
@@ -55,7 +45,7 @@ function draw(){
   text("集団としての意識", width-100, height/2);
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
-
+/*
   for(int i=0; i<cwidth.length;i++){
     myCircle(i) ;
     if(sin(radians(frameCnt[i])) == 1){
@@ -75,7 +65,7 @@ function draw(){
     textSize(10);
     textAlign(CENTER,CENTER);
     text(titleText[i][collision], cwidth[i], cheight[i]-45);
-  }
+  }*/
 
 }
 
