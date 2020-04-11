@@ -141,7 +141,7 @@ void draw(){
 fill(0);
 stroke(0);
 strokeWeight(1);
-textSize(14);
+textSize(28);
 textAlign(CENTER,CENTER);
 line(width/2,0,width/2,height);
 line(0,height/2,width,height/2);
