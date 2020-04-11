@@ -55,7 +55,7 @@ function draw(){
     image(images[i], width/2,height/2, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
-    text(bigText[i][collision], width/2,height/2);
+    text(bigText[i][0], width/2,height/2);
     textSize(10);
     textAlign(CENTER,CENTER);
     //text(titleText[i][collision], cwidth[i], cheight[i]-45);
