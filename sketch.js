@@ -47,13 +47,6 @@ function draw(){
   text("社会システムに関する思想", width/2, 0+40);
 
   for(int i=0; i<cwidth.length;i++){
-    myCircle(i) ;
-    if(sin(radians(frameCnt[i])) == 1){
-      colornum[i] += 1;
-      if(colornum[i]==4){
-        colornum[i]=0;
-      }
-    }
     wave(i);
     fill(0);
     noStroke();
@@ -61,7 +54,7 @@ function draw(){
     //image(images[i], cwidth[i], cheight[i]-10, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
-    text(bigText[i][collision], cwidth[i], cheight[i]+25);
+    //text(bigText[i][collision], cwidth[i], cheight[i]+25);
     textSize(10);
     textAlign(CENTER,CENTER);
     //text(titleText[i][collision], cwidth[i], cheight[i]-45);
