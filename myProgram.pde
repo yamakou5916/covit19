@@ -31,6 +31,8 @@ ArrayList<PG> pgl = new ArrayList<PG>();
 float numsX[][] = {{}};
 float numsY[][] = {{}};
 
+int size = 2;
+
 String titleText[][]=
 {{"エデュケーション","エデュケーション",},
 {"ライフスタイル","ライフスタイル",},
@@ -105,7 +107,7 @@ String otherText[][]=
 void setup(){
   PFont font = createFont("NotoSansCJKjp-Regular",50);
   textFont (font);
-  size(2000,1500);
+  size(2000*size,1500*size);
   noStroke();
   //background(0);
   background(255);
@@ -141,14 +143,14 @@ void draw(){
 fill(0);
 stroke(0);
 strokeWeight(1);
-textSize(14);
+textSize(14*size);
 textAlign(CENTER,CENTER);
 line(width/2,0,width/2,height);
 line(0,height/2,width,height/2);
-text("個人としての意識", 100, height/2);
-text("集団としての意識", width-100, height/2);
-text("文化に関する思想", width/2, height-40);
-text("社会システムに関する思想", width/2, 0+40);
+text("個人としての意識", 100*size, height/2);
+text("集団としての意識", width-100*size, height/2);
+text("文化に関する思想", width/2, height-40*size);
+text("社会システムに関する思想", width/2, 0+40*size);
 
 
    //円
@@ -177,13 +179,13 @@ text("社会システムに関する思想", width/2, 0+40);
         fill(0);
         noStroke();
         imageMode(CENTER);
-        image(images[i], cwidth[i], cheight[i]-10, 70, 70);
-        textSize(12);
+        image(images[i], (cwidth[i])*size, (cheight[i]-10)*size, 70*size, 70*size);
+        textSize(12*size);
         textAlign(CENTER,CENTER);
-        text(bigText[i][collision], cwidth[i], cheight[i]+25);
-        textSize(10);
+        text(bigText[i][collision], (cwidth[i])*size, (cheight[i]+25)*size);
+        textSize(10*size);
         textAlign(CENTER,CENTER);
-        text(titleText[i][collision], cwidth[i], cheight[i]-45);
+        text(titleText[i][collision], (cwidth[i])*size, (cheight[i]-45)*size);
       }     
       
       for (int i = pgl.size() - 1; i >= 0; i--) {
@@ -223,30 +225,30 @@ text("社会システムに関する思想", width/2, 0+40);
     fill(0);
     stroke(0);
     strokeWeight(1);
-    ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-    ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
-    ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
-    ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
+    ellipse((cwidth[i]-rSize0[i]/6)*size, (cheight[i]-rSize0[i]/6)*size, 80*size, 80*size);
+    ellipse((cwidth[i]+rSize0[i]/6)*size, (cheight[i]-rSize0[i]/6)*size, 80*size, 80*size);
+    ellipse((cwidth[i]+rSize0[i]/6)*size, (cheight[i]+rSize0[i]/6)*size, 80*size, 80*size);
+    ellipse((cwidth[i]-rSize0[i]/6)*size, (cheight[i]+rSize0[i]/6)*size, 80*size, 80*size);
     fill(255);
     textSize(10);
     textAlign(CENTER,CENTER);
-    text(smallText0[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
-    text(smallText0[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
-    text(smallText0[i][2], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
-    text(smallText0[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
+    text(smallText0[i][0], (cwidth[i]-rSize0[i]/6)*size, (cheight[i]-rSize0[i]/6)*size);
+    text(smallText0[i][1], (cwidth[i]+rSize0[i]/6)*size, (cheight[i]-rSize0[i]/6)*size);
+    text(smallText0[i][2], (cwidth[i]+rSize0[i]/6)*size, (cheight[i]+rSize0[i]/6)*size);
+    text(smallText0[i][3], (cwidth[i]-rSize0[i]/6)*size, (cheight[i]+rSize0[i]/6)*size);
     collision = 0;
   }
   
 void BigCircle(){
   noStroke();
   fill(color(220,202,163,100));
-  ellipse(400, 600, lSize[0], lSize[0]);
-  ellipse(600, 800, lSize[0], lSize[0]);
-  ellipse(1200, 900, lSize[0], lSize[0]);
-  ellipse(850, 200, lSize[0], lSize[0]);
-  ellipse(1000, 400, lSize[0], lSize[0]);
-  ellipse(1250, 450, lSize[0], lSize[0]);
-  ellipse(750, 1350, lSize[0], lSize[0]);
+  ellipse(400*size, 600*size, lSize[0], lSize[0]);
+  ellipse(600*size, 800*size, lSize[0], lSize[0]);
+  ellipse(1200*size, 900*size, lSize[0], lSize[0]);
+  ellipse(850*size, 200*size, lSize[0], lSize[0]);
+  ellipse(1000*size, 400*size, lSize[0], lSize[0]);
+  ellipse(1250*size, 450*size, lSize[0], lSize[0]);
+  ellipse(750*size, 1350*size, lSize[0], lSize[0]);
 }
 
 class Maru{
@@ -259,7 +261,7 @@ class Maru{
     for(int i=0; i<cwidth.length;i++){
       fill(0);
       a+=x/100000;
-      ellipse(cwidth[i]+rSize0[i]*cos(a)/4, cheight[i]+rSize0[i]*sin(a)/4,3,3);
+      ellipse((cwidth[i]+rSize0[i]*cos(a)/4)*size, (cheight[i]+rSize0[i]*sin(a)/4)*size,3*size,3*size);
     }
   }
 }
@@ -330,9 +332,9 @@ class PG {
 
 void myCircle(int i) {
   if(i %3 == 0){
-    strokeWeight(3);
+    strokeWeight(3*size);
   }else{
-    strokeWeight(2);
+    strokeWeight(2*size);
 }
   stroke(Rcol[i],Gcol[i],Bcol[i]); //点の色は青
   for (int h = 0; h < numsX[i].length; h ++) {
