@@ -34,6 +34,8 @@ function draw(){
   text("社会システムに関する思想", width/2, 0+40);
 
   for(var i=0; i<11;i++){
+    text(bigText, width/2,height/2);
+
     //text("社会システムに関する思想", width/2,height/2);
 
     //wave(i);
@@ -43,7 +45,7 @@ function draw(){
     image(images[i], width/2,height/2, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
-    text(bigText[i], cwidth[i], cheight[i]+25;
+    text(bigText, cwidth[i], cheight[i]+25;
     textSize(10);
     textAlign(CENTER,CENTER);
     //text(titleText[i][collision], cwidth[i], cheight[i]-45);
