@@ -114,7 +114,7 @@ void setup(){
   
   maruhairetu =new Maru[10];
   for(int i=0; i<maruhairetu.length;i++){
-    Maru maru=new Maru(rSize[i],rSize[i]);
+    Maru maru=new Maru(random(rSize[i]),random(rSize[i]));
     maruhairetu[i]=maru;
   } 
   images[0] = loadImage("education.png");
