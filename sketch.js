@@ -107,8 +107,8 @@ for (var t=0; t<twidth.length; t++){
       peaks.forEach(peak => {
         curveVertex(peak.x, peak.y);
         text(techText[k], peak.x, peak.y);
+        k++;
       });
-      k++;
     }
     //text(peaks, width/2, height/2);
     endShape();
