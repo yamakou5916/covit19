@@ -1,6 +1,5 @@
 const cwidth=[400,1150,450,500,1500,1100,1500,800,1550,1150,750];
 const cheight=[450,1000,1200,750,1100,250,300,900,650,600,300];
-
 const rSize =[500,500,500,500,500,500,500,500,500,500,500];
 const rSize0 =[500,500,500,500,500,500,500,500,500,500,500];
 const lSize = [0];
@@ -9,11 +8,9 @@ const bigText = ["能力と社会性の変化","生活と価値観の変化","�
 const titleText=["エデュケーション","ライフスタイル","エンタテイメント","ワークスタイル","ライフイベント","ヘルスケア","ライフライン","マニュファクチュア","サプライチェーン","マネジメント","メディカル"];
 var numsX = [[]];
 var numsY = [[]];
-
 const rCol=[237,237,247,247,236,236,209,209,145,145,143,143];
 const gCol=[237,237,223,223,181,181,226,226,193,193,176,176];
 const bCol=[191,191,144,144,125,125,200,200,186,186,187,187];
-
 
 const images = [loadImage("education.png"),loadImage("lifestyle.png"),loadImage("entertainment.png"),loadImage("workstyle.png"),loadImage("lifeevent.png"),loadImage("healthcare.png"),loadImage("lifeline.png"),loadImage("manufacture.png"),loadImage("supplychain.png"),loadImage("management.png"),loadImage("medical.png")];
 
@@ -46,6 +43,7 @@ function draw(){
   for(var i=0; i<11;i++){
     //text("社会システムに関する思想", width/2,height/2);
     myCircle(i);
+    littleCircle(i)
     //wave(i);
     fill(0);
     noStroke();
@@ -116,7 +114,27 @@ function myCircle(i){
 
 }
 
-
+function littleCircle(i){
+    /*
+    fill(255);
+    stroke(0);
+    strokeWeight(1);
+    */      
+    fill(0);
+    stroke(0);
+    strokeWeight(1);
+    ellipse(cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
+    ellipse(cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6, 80, 80);
+    ellipse(cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
+    ellipse(cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6, 80, 80);
+    fill(255);
+    textSize(10);
+    textAlign(CENTER,CENTER);
+    text(smallText0[i][0], cwidth[i]-rSize0[i]/6, cheight[i]-rSize0[i]/6);
+    text(smallText0[i][1], cwidth[i]+rSize0[i]/6, cheight[i]-rSize0[i]/6);
+    text(smallText0[i][2], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
+    text(smallText0[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
+  }
 
 
 
