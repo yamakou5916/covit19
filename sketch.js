@@ -76,8 +76,8 @@ function randomSave() {
       var r = sqrt(random(1));
       var x = cwidth[i]+ r * radius * cos(angle);
       var y = cheight[i] + r * radius * sin(angle);
-      numsX[i].push = x;
-      numsY[i].push = y;
+      numsX[i].push(x);
+      numsY[i].push(y);
       //numsX[i][h] = x;
       //numsY[i][h] = y;
     }
