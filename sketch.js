@@ -37,7 +37,7 @@ function draw(){
 
   for(var i=0; i<11;i++){
     //text("社会システムに関する思想", width/2,height/2);
-    myCircle(int i)
+    myCircle(i)
 
     //wave(i);
     fill(0);
@@ -83,7 +83,7 @@ function randomSave() {
 }
 
 
-void myCircle(int i) {
+void myCircle(i){
   if(i %3 == 0){
     strokeWeight(3);
   }else{
