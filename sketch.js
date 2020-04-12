@@ -80,12 +80,10 @@ function draw(){
   text("社会システムに関する思想", width/2, 0+40);
 
   //テクノロジマップ
-
-for (var t=0;t<twidth.length;t++){
-
+for (var t=0; t<twidth.length; t++){
   for (var h = 0; h < repnum; h++) {
     beginShape();
-    for (var i = 0; i < 450; i += 30) {
+    for (var i = 0; i < 150; i += 10) {
       var peaks = [];
       var j;
       if (i % 60 != 0) {
