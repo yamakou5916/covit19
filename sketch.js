@@ -57,11 +57,11 @@ function draw(){
 
 
 function randomSave() {
-  var numsX = new Array(cwidth.length);
+  numsX = new Array(cwidth.length);
   for(let y = 0; y < cwidth.length; y++) {
     numsX = new Array(2000).fill(0);
   } 
-  var numsY = new Array(cwidth.length);
+  numsY = new Array(cwidth.length);
   for(let y = 0; y < cwidth.length; y++) {
     numsY = new Array(2000).fill(0);
   }
