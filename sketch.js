@@ -83,7 +83,7 @@ function randomSave() {
 }
 
 
-void myCircle(i){
+function myCircle(i){
   text("aaa", cwidth[i], cheight[i]);
   strokeWeight(3);
   stroke(100,100,0);
