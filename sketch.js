@@ -91,9 +91,9 @@ function myCircle(i){
   stroke(100,100,0);
   text(numsX[0][0], width/2,height/2);
   for (var h = 0; h < 10; h++){
-    var x = numsX[i][h];
-    var y = numsY[i][h];
-    point(x, y);
+    //var x = numsX[i][h];
+    //var y = numsY[i][h];
+    //point(x, y);
   }
   //var aaa = numsX[0][0] = 1111111;
   //text(numsX[i][0], cwidth,cheight);
