@@ -76,6 +76,16 @@ function randomSave() {
         numsX[i].push(x);
         numsY[i].push(y);
       }
+    }else{
+      for (int h = 0; h < count; h ++) {
+        var angle = random(TWO_PI);
+        var r = 1-(random(random(random(1))));
+        var x = cwidth[i]+ r * radius * cos(angle);
+        var y = cheight[i] + r * radius * sin(angle);
+        numsX[i].push(x);
+        numsY[i].push(y);
+      }
+
     }
   }
 
