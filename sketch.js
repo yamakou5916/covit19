@@ -52,6 +52,7 @@ function draw(){
   noStroke();
   fill(255,255,255);
   rect(0,0,2000,1500);
+  mouseMoved()
 
   //軸
   fill(0);
@@ -161,6 +162,30 @@ function littleCircle(i){
     text(smallText0[i][2], cwidth[i]+rSize0[i]/6, cheight[i]+rSize0[i]/6);
     text(smallText0[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
   }
+
+
+function mouseMoved(){
+  beginShape();
+  var angStep = map(mouseX, 0, width, 30, 1);
+  var radiousWidth = map(mouseY, 0, height, 30, 120);
+  PVector[] heads = new PVector[3];
+  for(var angle = 0, i = 0; angle < 360; angle += angStep){
+    var radian = radians(angle);
+    var radious = map(random(1), 0, 1, 150 - radiousWidth / 2, 150 + radiousWidth / 2);
+    var x = 250 + radious * cos(radian);
+    var y = 250 + radious * sin(radian);
+    if(i == 0 || i == 1 || i == 2){
+      heads[i] = new PVector(x, y);
+    }
+    curveVertex(x, y);
+    i++;
+  }
+  for(var i = 0; i < 3; i++){
+    curveVertex(heads[i].x, heads[i].y);  
+  }
+  endShape();
+}
+
 
 
 
