@@ -87,11 +87,11 @@ function randomSave() {
 function myCircle(i){
   strokeWeight(3);
   stroke(100,100,0);
-  /*for (int h = 0; h < numsX.length; h++){
-    var x = numsX[i][h];
+  for (int h = 0; h < numsX.length; h++){
+    /*var x = numsX[i][h];
     var y = numsY[i][h];
-    point(x, y);
-  }*/
+    point(x, y);*/
+  }
 }
 
 
