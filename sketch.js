@@ -6,8 +6,8 @@ const rSize0 =[500,500,500,500,500,500,500,500,500,500,500];
 const lSize = [0];
 const collision = 0;
 const bigText = ["能力と社会性の変化","生活と価値観の変化","余暇と気晴らしの変化","職業と人生観の変化","社会通念と手続きの変化","個人情報とプライバシーの変化","人・社会との繋がりの変化","ものづくりの変化","所属意識の変化","責任領域の変化","信頼形成の変化"];
-var numsX = [[]];
-var numsY = [[]];
+var numsX = [];
+var numsY = [];
 const images = [loadImage("education.png"),loadImage("lifestyle.png"),loadImage("entertainment.png"),loadImage("workstyle.png"),loadImage("lifeevent.png"),loadImage("healthcare.png"),loadImage("lifeline.png"),loadImage("manufacture.png"),loadImage("supplychain.png"),loadImage("management.png"),loadImage("medical.png")];
 
 function setup(){
@@ -56,14 +56,16 @@ function draw(){
 
 
 function randomSave() {
-  numsX = new Array(cwidth.length);
+  var numX = new Array(cwidth.length);
   for(let y = 0; y < cwidth.length; y++) {
-    numsX = new Array(2000).fill(0);
-  } 
-  numsY = new Array(cwidth.length);
-  for(let y = 0; y < cwidth.length; y++) {
-    numsY = new Array(2000).fill(0);
+    numX = new Array(2000).fill(0);
   }
+  numsX.push(numX);
+  var numY = new Array(cwidth.length);
+  for(let y = 0; y < cwidth.length; y++) {
+    numY = new Array(2000).fill(0);
+  }
+  numsY.push(numY);
 
     for(var i=0; i<cwidth.length;i++){
       var radius = rSize0[i]/4;
