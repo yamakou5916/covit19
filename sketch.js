@@ -109,8 +109,8 @@ function draw(){
             }
             peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
             peaks.forEach(peak => {
-                peak.x += (noise(xnoiseCords[i % 360 / 30]) * 20 - 10) * h;
-                peak.y += (noise(ynoiseCords[i % 360 / 30]) * 20 - 10) * h;
+                peak.x += (noise(xnoiseCords[i % 360 / 30]) * 120 - 10) * h;
+                peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120 - 10) * h;
             });
             noFill();
             stroke(180 + (180 / repnum * h), 80, 100);
