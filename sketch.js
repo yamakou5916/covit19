@@ -107,7 +107,7 @@ for (var t=0; t<twidth.length; t++){
         curveVertex(peak.x, peak.y);
       });
     }
-    text(peaks.toString(), width/2, height/2);
+    text(peak.x, width/2, height/2);
     endShape();
     noiseUpdate();
   }
