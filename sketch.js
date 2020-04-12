@@ -79,7 +79,7 @@ function randomSave() {
       }
 
     }
-    text(numsX[i][h], width/2,height/2);
+    text("aaa", width/2,height/2);
 
 }
 
