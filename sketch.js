@@ -71,7 +71,7 @@ function draw(){
     fill(0);
     noStroke();
     imageMode(CENTER);
-    image(images, cwidth,cheight, 70, 70);
+    image(images, cwidth[i], cheight[i], 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
     text(bigText[i], cwidth[i], cheight[i]+25);
