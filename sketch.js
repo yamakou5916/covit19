@@ -76,7 +76,7 @@ function randomSave() {
       var x = cwidth[i]+ r * radius * cos(angle);
       var y = cheight[i] + r * radius * sin(angle);
       numsX[0].push(1.0);
-      text(numsX[0][0], width/2,height/2);
+      
       //numsX[i].push(x);
       //text(numsX[i], width/2,height/2);
 
@@ -94,6 +94,7 @@ function randomSave() {
 function myCircle(i){
   strokeWeight(3);
   stroke(100,100,0);
+  text(numsX[0][0], width/2,height/2);
   for (var h = 0; h < 10; h++){
     //text(i, width/2,height/2);
     //var x = numsX[i][h];
