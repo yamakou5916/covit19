@@ -80,7 +80,6 @@ function randomSave() {
       numsY[i][h] = y;
     }
   }
-  text(numsX[i][h], width/2,height/2);
 
 }
 
@@ -94,6 +93,8 @@ function myCircle(i){
     //var y = numsY[i][h];
     //point(x, y);
   }
+  text(numsX[0][0], width/2,height/2);
+
 }
 
 
