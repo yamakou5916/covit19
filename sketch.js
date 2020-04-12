@@ -77,6 +77,40 @@ function draw(){
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
 
+
+  translate(400, 400);
+  rotate(frameCount / 600);
+  for (var h = 0; h < repnum; h++) {
+      beginShape();
+      for (var i = 0; i < 450; i += 30) {
+          var peaks = [];
+          var j;
+          if (i % 60 != 0) {
+              j = startRad + ((starStrkWeight + 1) * h);
+          } else {
+               //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
+          }
+          peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
+          peaks.forEach(peak => {
+              peak.x += (noise(xnoiseCords[i % 360 / 30]) * 120 - 10) * h;
+              peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120 - 10) * h;
+          });
+          noFill();
+          fill(80, 180 + (180 / repnum * h), 100,80);
+          stroke(80, 180 + (180 / repnum * h), 100);
+          strokeWeight(starStrkWeight);
+          peaks.forEach(peak => {
+              curveVertex(peak.x, peak.y);
+          });
+      }
+      endShape();
+      noiseUpdate();
+    }
+
+
+
+
+
   for(var i=0; i<11;i++){
     myCircle(i);
     littleCircle(i)
@@ -95,34 +129,7 @@ function draw(){
 
 
 
-    translate(400, 400);
-    rotate(frameCount / 600);
-    for (var h = 0; h < repnum; h++) {
-        beginShape();
-        for (var i = 0; i < 450; i += 30) {
-            var peaks = [];
-            var j;
-            if (i % 60 != 0) {
-                j = startRad + ((starStrkWeight + 1) * h);
-            } else {
-                //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
-            }
-            peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
-            peaks.forEach(peak => {
-                peak.x += (noise(xnoiseCords[i % 360 / 30]) * 120 - 10) * h;
-                peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120 - 10) * h;
-            });
-            noFill();
-            fill(80, 180 + (180 / repnum * h), 100,80);
-            stroke(80, 180 + (180 / repnum * h), 100);
-            strokeWeight(starStrkWeight);
-            peaks.forEach(peak => {
-                curveVertex(peak.x, peak.y);
-            });
-        }
-        endShape();
-        noiseUpdate();
-    }
+
 
 
 
