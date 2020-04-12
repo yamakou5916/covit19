@@ -77,7 +77,7 @@ function randomSave() {
         numsY[i][h] = y;
       }
     }
-    text(x, width/2,height/2);
+    text(numsX[i][h], width/2,height/2);
 
 }
 
