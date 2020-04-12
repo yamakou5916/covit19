@@ -26,7 +26,22 @@ const rCol=[237,237,247,247,236,236,209,209,145,145,143,143];
 const gCol=[237,237,223,223,181,181,226,226,193,193,176,176];
 const bCol=[191,191,144,144,125,125,200,200,186,186,187,187];
 
-const images = [loadImage("education.png"),loadImage("lifestyle.png"),loadImage("entertainment.png"),loadImage("workstyle.png"),loadImage("lifeevent.png"),loadImage("healthcare.png"),loadImage("lifeline.png"),loadImage("manufacture.png"),loadImage("supplychain.png"),loadImage("management.png"),loadImage("medical.png")];
+var images = [];
+
+function preload() {
+  images = loadImage("education.png");
+  images = loadImage("lifestyle.png");
+  images = loadImage("entertainment.png");
+  images = loadImage("workstyle.png");
+  images = loadImage("lifeevent.png");
+  images = loadImage("healthcare.png");
+  images = loadImage("lifeline.png");
+  images = loadImage("manufacture.png");
+  images = loadImage("supplychain.png");
+  images = loadImage("management.png");
+  images = loadImage("medical.png");
+}
+
 
 function setup(){
   createCanvas(2000, 1500);//描画領域を指定
@@ -55,14 +70,12 @@ function draw(){
   text("社会システムに関する思想", width/2, 0+40);
 
   for(var i=0; i<11;i++){
-    //text("社会システムに関する思想", width/2,height/2);
     myCircle(i);
     littleCircle(i)
-    //wave(i);
     fill(0);
     noStroke();
     imageMode(CENTER);
-    //image(images[i], width/2,height/2, 70, 70);
+    image(images, cwidth,cheight, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
     text(bigText[i], cwidth[i], cheight[i]+25);
