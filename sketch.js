@@ -24,6 +24,7 @@ const techText=["人工知能","ライフスタイル","エンタテイメント
 
 var numsX = [[]];
 var numsY = [[]];
+
 const rCol=[237,237,247,247,236,236,209,209,145,145,143,143];
 const gCol=[237,237,223,223,181,181,226,226,193,193,176,176];
 const bCol=[191,191,144,144,125,125,200,200,186,186,187,187];
@@ -37,7 +38,7 @@ var repnum = 7;
 var startRad = 300;
 var starStrkWeight = 2;
 var xnoiseCords = [], ynoiseCords = [];
-
+var k=0;
 
 
 
@@ -103,13 +104,14 @@ for (var t=0; t<twidth.length; t++){
       //fill(80, 180 + (180 / repnum * h), 100,80);
       stroke(80, 180 + (180 / repnum * h), 100);
       strokeWeight(starStrkWeight);
-      var k=0;
+      
       peaks.forEach(peak => {
         curveVertex(peak.x, peak.y);
         text(techText[k], peak.x, peak.y);
         text(k, peak.x, peak.y);
         k++;
       });
+      k = 0;
     }
     //text(peaks, width/2, height/2);
     endShape();
