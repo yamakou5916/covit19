@@ -83,11 +83,11 @@ function draw(){
 for (var t=0; t<twidth.length; t++){
   for (var h = 0; h < repnum; h++) {
     beginShape();
-    for (var i = 0; i < 150; i += 10) {
+    for (var i = 0; i < 450; i += 30) {
       var peaks = [];
       var j;
       if (i % 60 != 0) {
-        j = startRad + ((starStrkWeight + 1) * h);
+        j = startRad + ((starStrkWeight + 1));
       } else {
         //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
       }
