@@ -94,6 +94,7 @@ function myCircle(i){
     //point(x, y);
   }
   text(numsX[0][0], width/2,height/2);
+  text("aaa", width/2,height/2);
 
 }
 
