@@ -96,7 +96,7 @@ for (var t=0; t<twidth.length; t++){
         peak.x += (noise(xnoiseCords[i % 360 / 30]) * 120) +twidth[t];
         peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120) +theight[t];
       });
-      //text("社会システムに関する思想", peak[x][0], peak[y][0]);
+      //
       //text("社会システムに関する思想", peak[x][0], peak[y][0]);
 
       noFill();
@@ -107,7 +107,7 @@ for (var t=0; t<twidth.length; t++){
         curveVertex(peak.x, peak.y);
       });
     }
-    text(peaks, width/2, height/2);
+    text(peaks.x, width/2, height/2);
     endShape();
     noiseUpdate();
   }
