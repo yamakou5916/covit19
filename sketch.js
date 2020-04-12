@@ -84,17 +84,13 @@ function randomSave() {
 
 
 void myCircle(i){
-  if(i %3 == 0){
-    strokeWeight(3);
-  }else{
-    strokeWeight(2);
-  }
+  strokeWeight(3);
   stroke(100,100,0);
-  for (int h = 0; h < numsX.length; h++){
+  //for (int h = 0; h < numsX.length; h++){
     //var x = numsX[i][h];
     //var y = numsY[i][h];
     //point(x, y);
-  }
+  //}
 }
 
 
