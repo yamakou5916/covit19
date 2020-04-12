@@ -12,6 +12,7 @@ const images = [loadImage("education.png"),loadImage("lifestyle.png"),loadImage(
 function setup(){
   createCanvas(2000, 1500);//描画領域を指定
   background(255);
+  randomSave();
 }
 
 function draw(){
