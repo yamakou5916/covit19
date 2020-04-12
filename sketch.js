@@ -8,6 +8,12 @@ const collision = 0;
 const bigText = ["能力と社会性の変化","生活と価値観の変化","余暇と気晴らしの変化","職業と人生観の変化","社会通念と手続きの変化","個人情報とプライバシーの変化","人・社会との繋がりの変化","ものづくりの変化","所属意識の変化","責任領域の変化","信頼形成の変化"];
 var numsX = [[]];
 var numsY = [[]];
+
+const rCol=[237,237,247,247,236,236,209,209,145,145,143,143];
+const gCol=[237,237,223,223,181,181,226,226,193,193,176,176];
+const bCol=[191,191,144,144,125,125,200,200,186,186,187,187];
+
+
 const images = [loadImage("education.png"),loadImage("lifestyle.png"),loadImage("entertainment.png"),loadImage("workstyle.png"),loadImage("lifeevent.png"),loadImage("healthcare.png"),loadImage("lifeline.png"),loadImage("manufacture.png"),loadImage("supplychain.png"),loadImage("management.png"),loadImage("medical.png")];
 
 function setup(){
@@ -87,7 +93,7 @@ function randomSave() {
 
 function myCircle(i){
   strokeWeight(3);
-  stroke(100,100,0);
+  stroke(rCol[i],gCol[i],bCol[i]);
   //text(numsX[0][0], width/2,height/2);
   for (var h = 0; h < 1500; h++){
     //text(i, width/2,height/2);
