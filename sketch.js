@@ -88,9 +88,9 @@ function myCircle(i){
   strokeWeight(3);
   stroke(100,100,0);
   for (var h = 0; h < 11; h++){
-    /*var x = numsX[i][h];
+    var x = numsX[i][h];
     var y = numsY[i][h];
-    point(x, y);*/
+    point(x, y);
   }
 }
 
