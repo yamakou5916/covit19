@@ -64,6 +64,9 @@ function randomSave() {
   for(let y = 0; y < cwidth.length; y++) {
     numsY = new Array(2000).fill(0);
   }
+  numsX[0][0] = 1;
+  text(numsX[0][0], width/2,height/2);
+
 
   for(var i=0; i<cwidth.length;i++){
     var radius = rSize0[i]/4;
