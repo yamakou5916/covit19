@@ -37,8 +37,7 @@ function draw(){
 
   for(var i=0; i<11;i++){
     //text("社会システムに関する思想", width/2,height/2);
-    myCircle(i)
-
+    myCircle(i);
     //wave(i);
     fill(0);
     noStroke();
