@@ -5,6 +5,7 @@ const rSize =[500,500,500,500,500,500,500,500,500,500,500];
 const rSize0 =[500,500,500,500,500,500,500,500,500,500,500];
 const lSize = [0];
 const collision = 0;
+const titleText=["エデュケーション","ライフスタイル","エンタテイメント","ワークスタイル","ライフイベント","ヘルスケア","ライフライン","マニュファクチュア","サプライチェーン","マネジメント","メディカル"];
 const bigText = ["能力と社会性の変化","生活と価値観の変化","余暇と気晴らしの変化","職業と人生観の変化","社会通念と手続きの変化","個人情報とプライバシーの変化","人・社会との繋がりの変化","ものづくりの変化","所属意識の変化","責任領域の変化","信頼形成の変化"];
 var numsX = [[]];
 var numsY = [[]];
@@ -36,6 +37,7 @@ function draw(){
   textAlign(CENTER,CENTER);
   line(width/2,0,width/2,height);
   line(0,height/2,width,height/2);
+  noStroke();
   text("個人としての意識", 100, height/2);
   text("集団としての意識", width-100, height/2);
   text("文化に関する思想", width/2, height-40);
@@ -49,12 +51,11 @@ function draw(){
     noStroke();
     imageMode(CENTER);
     //image(images[i], width/2,height/2, 70, 70);
+    textAlign(CENTER,CENTER);
     textSize(12);
-    textAlign(CENTER,CENTER);
-    text(bigText[i], cwidth[i], cheight[i]);
+    text(bigText[i], cwidth[i], cheight[i]+25);
     textSize(10);
-    textAlign(CENTER,CENTER);
-    //text(titleText[i][collision], cwidth[i], cheight[i]-45);
+    text(titleText[i], cwidth[i], cheight[i]-45);
   }
 
 }
@@ -62,29 +63,37 @@ function draw(){
 
 
 function randomSave() {
-  /*numsX = new Array(cwidth.length);
-  for(let y = 0; y < cwidth.length; y++) {
-    numsX = new Array(2000).fill(0);
-  } 
-  numsY = new Array(cwidth.length);
-  for(let y = 0; y < cwidth.length; y++) {
-    numsY = new Array(2000).fill(0);
-  }*/
-  
-
   for(var i=0; i<11;i++){
     var radius = rSize0[i]/4;
     var count = 1500;
     numsX.push([i]);
     numsY.push([i]);
 
-    for (var h = 0; h < count; h ++) {
-      var angle = random(TWO_PI);
-      var r = sqrt(random(1));
-      var x = cwidth[i]+ r * radius * cos(angle);
-      var y = cheight[i] + r * radius * sin(angle);
-      numsX[i].push(x);
-      numsY[i].push(y);
+    if(i %3 == 0){
+      for (var h = 0; h < count; h ++) {
+        var angle = random(TWO_PI);
+        var r = sqrt(random(1));
+        var x = cwidth[i]+ r * radius * cos(angle);
+        var y = cheight[i] + r * radius * sin(angle);
+        numsX[i].push(x);
+        numsY[i].push(y);
+      }
+    }else if(i %3 == 1){
+      for (int h = 0; h < count; h ++) {
+        var angle = random(TWO_PI);
+        var r = 1-(random(random(random(1))));
+        var x = cwidth[i]+ r * radius * cos(angle);
+        var y = cheight[i] + r * radius * sin(angle);
+        numsX[i].push(x);
+        numsY[i].push(y);
+    }else{
+      for (int h = 0; h < count; h ++) {
+        var angle = random(TWO_PI);
+        var r = random(1);
+        var x = cwidth[i]+ r * radius * cos(angle);
+        var y = cheight[i] + r * radius * sin(angle);
+        numsX[i].push(x);
+        numsY[i].push(y);
     }
   }
 
@@ -96,7 +105,6 @@ function myCircle(i){
   stroke(rCol[i],gCol[i],bCol[i]);
   //text(numsX[0][0], width/2,height/2);
   for (var h = 0; h < 1500; h++){
-    //text(i, width/2,height/2);
     var x = numsX[i][h];
     var y = numsY[i][h];
     point(x, y);
