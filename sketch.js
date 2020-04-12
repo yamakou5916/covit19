@@ -64,7 +64,7 @@ function randomSave() {
   for(let y = 0; y < cwidth.length; y++) {
     numsY = new Array(2000).fill(0);
   }*/
-  numsX[0].push(1);
+  numsX[0].push(1.0);
   text(numsX[0][0], width/2,height/2);
 
   for(var i=0; i<11;i++){
@@ -76,7 +76,7 @@ function randomSave() {
       var r = sqrt(random(1));
       var x = cwidth[i]+ r * radius * cos(angle);
       var y = cheight[i] + r * radius * sin(angle);
-      numsX[i].push(x);
+      //numsX[i].push(x);
       //text(numsX[i], width/2,height/2);
 
       /*
