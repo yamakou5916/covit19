@@ -75,9 +75,9 @@ function randomSave() {
       var r = sqrt(random(1));
       var x = cwidth[i]+ r * radius * cos(angle);
       var y = cheight[i] + r * radius * sin(angle);
-      //numsX[0].push(1.0);
+      numsX[i].push(1.0);
       
-      numsX[i].push(x);
+      //numsX[i].push(x);
       //text(numsX[i], width/2,height/2);
 
       /*
@@ -102,7 +102,7 @@ function myCircle(i){
     //point(x, y);
   }
   //var aaa = numsX[0][0] = 1111111;
-  text(numsX[0][0], cwidth,cheight);
+  text(numsX[i][0], cwidth,cheight);
 
 }
 
