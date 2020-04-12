@@ -26,13 +26,16 @@ const rCol=[237,237,247,247,236,236,209,209,145,145,143,143];
 const gCol=[237,237,223,223,181,181,226,226,193,193,176,176];
 const bCol=[191,191,144,144,125,125,200,200,186,186,187,187];
 let images0;
-
+let allImages = [];
 
 function setup(){
   createCanvas(2000, 1500);//描画領域を指定
   background(255);
   randomSave();
-  images0 = loadImage("education.png");
+  //images0 = loadImage("education.png");
+  allImages.push("education.png");
+  images0 = loadImage(allImages[0]);
+
 }
 
 function draw(){
