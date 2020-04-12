@@ -113,6 +113,7 @@ function draw(){
                 peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120 - 10) * h;
             });
             noFill();
+            fill(80, 180 + (180 / repnum * h), 100,80);
             stroke(80, 180 + (180 / repnum * h), 100);
             strokeWeight(starStrkWeight);
             peaks.forEach(peak => {
