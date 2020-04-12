@@ -95,7 +95,7 @@ function draw(){
 
 
 
-    translate(width / 2, height / 2);
+    translate(400, 400);
     rotate(frameCount / 600);
     for (var h = 0; h < repnum; h++) {
         beginShape();
@@ -112,7 +112,8 @@ function draw(){
                 peak.x += (noise(xnoiseCords[i % 360 / 30]) * 20 - 10) * h;
                 peak.y += (noise(ynoiseCords[i % 360 / 30]) * 20 - 10) * h;
             });
-            stroke(180 + (180 / repnum * h), 80, 100, 1);
+            noFill();
+            stroke(180 + (180 / repnum * h), 80, 100);
             strokeWeight(starStrkWeight);
             peaks.forEach(peak => {
                 curveVertex(peak.x, peak.y);
