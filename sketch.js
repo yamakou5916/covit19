@@ -97,7 +97,7 @@ for (var t=0; t<twidth.length; t++){
         peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120) +theight[t];
       });
       //
-      //text("社会システムに関する思想", peak[x][0], peak[y][0]);
+      text("社会システムに関する思想", peaks.x, peaks.y);
 
       noFill();
       //fill(80, 180 + (180 / repnum * h), 100,80);
