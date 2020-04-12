@@ -71,7 +71,7 @@ function randomSave() {
   for(var i=0; i<1;i++){
     var radius = rSize0[i]/4;
     var count = 1500;
-    for (var h = 0; h < count; h ++) {
+    for (var h = 0; h < count; h++) {
       var angle = random(TWO_PI);
       var r = sqrt(random(1));
       var x = cwidth[i]+ r * radius * cos(angle);
