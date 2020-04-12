@@ -25,23 +25,14 @@ var numsY = [[]];
 const rCol=[237,237,247,247,236,236,209,209,145,145,143,143];
 const gCol=[237,237,223,223,181,181,226,226,193,193,176,176];
 const bCol=[191,191,144,144,125,125,200,200,186,186,187,187];
-
+let images0;
 
 
 function setup(){
   createCanvas(2000, 1500);//描画領域を指定
   background(255);
   randomSave();
-  var images0 = loadImage("education.png");
-  var images1 = loadImage("lifestyle.png");
-  var images2 = loadImage("entertainment.png");
-  var images3 = loadImage("workstyle.png");
-  var images4 = loadImage("lifeevent.png");
-  var images5 = loadImage("healthcare.png");
-  var images6 = loadImage("lifeline.png");
-  var images7 = loadImage("manufacture.png");
-  var images8 = loadImage("supplychain.png");
-  var images9 = loadImage("management.png");
+  images0 = loadImage("education.png");
 }
 
 function draw(){
