@@ -33,17 +33,17 @@ function setup(){
   background(255);
   randomSave();
   //images0 = loadImage("education.png");
-  allImages.push("education.png");
-  allImages.push("lifestyle.png");
-  allImages.push("entertainment.png");
-  allImages.push("workstyle.png");
-  allImages.push("lifeevent.png");
-  allImages.push("healthcare.png");
-  allImages.push("lifeline.png");
-  allImages.push("manufacture.png");
-  allImages.push("supplychain.png");
-  allImages.push("management.png");
-  allImages.push("medical.png");
+  allImages.push(loadImage("education.png"));
+  allImages.push(loadImage("lifestyle.png"));
+  allImages.push(loadImage("entertainment.png"));
+  allImages.push(loadImage("workstyle.png"));
+  allImages.push(loadImage("lifeevent.png"));
+  allImages.push(loadImage("healthcare.png"));
+  allImages.push(loadImage("lifeline.png"));
+  allImages.push(loadImage("manufacture.png"));
+  allImages.push(loadImage("supplychain.png"));
+  allImages.push(loadImage("management.png"));
+  allImages.push(loadImage("medical.png"));
 
 }
 
