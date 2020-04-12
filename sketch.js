@@ -220,6 +220,7 @@ function littleCircle(i){
 
 
 function drawShape() {
+  stroke(rCol[i],gCol[i],bCol[i]);
   //  calculate node  starting locations
   for (var i=0; i<nodes; i++){
     nodeStartX[i] = centerX+cos(radians(rotAngle))*radius;
