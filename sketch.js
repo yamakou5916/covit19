@@ -67,7 +67,7 @@ function randomSave() {
   numsX[0].push = (1);
   text(numsX[0][0], width/2,height/2);
 
-
+/*
   for(var i=0; i<cwidth.length;i++){
     var radius = rSize0[i]/4;
     var count = 1500;
@@ -79,7 +79,7 @@ function randomSave() {
       numsX[i][h] = x;
       numsY[i][h] = y;
     }
-  }
+  }*/
 
 }
 
