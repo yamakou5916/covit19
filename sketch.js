@@ -28,10 +28,20 @@ const bCol=[191,191,144,144,125,125,200,200,186,186,187,187];
 let images0;
 let allImages = [];
 
+
+var repnum = 3;
+var startRad = 60;
+var starStrkWeight = 2;
+var xnoiseCords = [], ynoiseCords = [];
+
+
+
+
 function setup(){
   createCanvas(2000, 1500);//描画領域を指定
   background(255);
   randomSave();
+  noiseSet();
   //images0 = loadImage("education.png");
   allImages.push(loadImage("education.png"));
   allImages.push(loadImage("lifestyle.png"));
@@ -82,6 +92,38 @@ function draw(){
     textAlign(CENTER,CENTER);
     text(titleText[i], cwidth[i], cheight[i]-45);
   }
+
+
+    translate(width / 2, height / 2);
+    rotate(frameCount / 600);
+    for (var h = 0; h < repnum; h++) {
+        beginShape();
+        for (var i = 0; i < 450; i += 30) {
+            var peaks = [];
+            var j;
+            if (i % 60 != 0) {
+                j = startRad + ((starStrkWeight + 1) * h);
+            } else {
+                //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
+            }
+            peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
+            peaks.forEach(peak => {
+                peak.x += (noise(xnoiseCords[i % 360 / 30]) * 20 - 10) * h;
+                peak.y += (noise(ynoiseCords[i % 360 / 30]) * 20 - 10) * h;
+            });
+            stroke(180 + (180 / repnum * h), 80, 100, 1);
+            strokeWeight(starStrkWeight);
+            peaks.forEach(peak => {
+                curveVertex(peak.x, peak.y);
+            });
+        }
+        endShape();
+        noiseUpdate();
+    }
+
+
+
+
 
 }
 
@@ -163,8 +205,18 @@ function littleCircle(i){
   }
 
 
-
-
+function noiseSet() {
+    for (var i = 0; i < 12; i++) {
+        xnoiseCords[i] = random(-1000, 1000);
+        ynoiseCords[i] = random(-1000, 1000);
+    }
+}
+function noiseUpdate() {
+    for (var i = 0; i < 12; i++) {
+        xnoiseCords[i] += 0.00003;
+        ynoiseCords[i] += 0.00003;
+    }
+}
 
 
 
