@@ -31,7 +31,7 @@ let allImages = [];
 const twidth=[500,1150,450,500,1500,1100,1500,800];
 const theight=[500,1000,1200,750,1100,250,300,900];
 
-var repnum = 1;
+var repnum = 3;
 var startRad = 300;
 var starStrkWeight = 2;
 var xnoiseCords = [], ynoiseCords = [];
@@ -93,8 +93,8 @@ for (var t=0; t<twidth.length; t++){
       }
       peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
       peaks.forEach(peak => {
-        peak.x += (noise(xnoiseCords[i % 360 / 30]) * 120) * h +twidth[t];
-        peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120) * h +theight[t];
+        peak.x += (noise(xnoiseCords[i % 360 / 30]) * 120) +twidth[t];
+        peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120) +theight[t];
       });
       //text("社会システムに関する思想", peak[x][0], peak[y][0]);
       //text("社会システムに関する思想", peak[x][0], peak[y][0]);
