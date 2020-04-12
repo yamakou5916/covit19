@@ -6,6 +6,7 @@ const rSize0 =[500,500,500,500,500,500,500,500,500,500,500];
 const lSize = [0];
 const collision = 0;
 const bigText = ["能力と社会性の変化","生活と価値観の変化","余暇と気晴らしの変化","職業と人生観の変化","社会通念と手続きの変化","個人情報とプライバシーの変化","人・社会との繋がりの変化","ものづくりの変化","所属意識の変化","責任領域の変化","信頼形成の変化"];
+const titleText=["エデュケーション","ライフスタイル","エンタテイメント","ワークスタイル","ライフイベント","ヘルスケア","ライフライン","マニュファクチュア","サプライチェーン","マネジメント","メディカル"];
 var numsX = [[]];
 var numsY = [[]];
 
@@ -55,7 +56,7 @@ function draw(){
     text(bigText[i], cwidth[i], cheight[i]);
     textSize(10);
     textAlign(CENTER,CENTER);
-    //text(titleText[i][collision], cwidth[i], cheight[i]-45);
+    text(titleText[i], cwidth[i], cheight[i]-45);
   }
 
 }
