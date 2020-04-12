@@ -34,7 +34,6 @@ function draw(){
   text("集団としての意識", width-100, height/2);
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
-  //text(bigText[0], width/2,height/2);
 
   for(var i=0; i<11;i++){
     //text("社会システムに関する思想", width/2,height/2);
@@ -88,8 +87,9 @@ function myCircle(i){
   strokeWeight(3);
   stroke(100,100,0);
   for (var h = 0; h < 11; h++){
-    var x = numsX[i][h];
-    var y = numsY[i][h];
+    text(numsX[i][h], width/2,height/2);
+    //var x = numsX[i][h];
+    //var y = numsY[i][h];
     point(x, y);
   }
 }
