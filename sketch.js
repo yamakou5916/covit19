@@ -34,7 +34,16 @@ function setup(){
   randomSave();
   //images0 = loadImage("education.png");
   allImages.push("education.png");
-  images0 = loadImage(allImages[0]);
+  allImages.push("lifestyle.png");
+  allImages.push("entertainment.png");
+  allImages.push("workstyle.png");
+  allImages.push("lifeevent.png");
+  allImages.push("healthcare.png");
+  allImages.push("lifeline.png");
+  allImages.push("manufacture.png");
+  allImages.push("supplychain.png");
+  allImages.push("management.png");
+  allImages.push("medical.png");
 
 }
 
@@ -64,6 +73,7 @@ function draw(){
     fill(0);
     noStroke();
     imageMode(CENTER);
+    images0 = loadImage(allImages[i]);
     image(images0, cwidth[i], cheight[i]-10, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
