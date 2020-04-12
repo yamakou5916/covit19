@@ -93,6 +93,7 @@ function myCircle(i){
     //var y = numsY[i][h];
     //point(x, y);
   }
+  numsX[0][0] = 1111111;
   text(numsX[0][0], width/2,height/2);
   text("aaa", width/2,height/2);
 
