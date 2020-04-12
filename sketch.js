@@ -64,14 +64,13 @@ function randomSave() {
   for(let y = 0; y < cwidth.length; y++) {
     numsY = new Array(2000).fill(0);
   }*/
-  numsX[0].push = (1);
+  numsX[0].push(1);
   text(numsX[0][0], width/2,height/2);
 
-
-  for(var i=0; i<1;i++){
+  for(var i=0; i<11;i++){
     var radius = rSize0[i]/4;
-    var count = 1;
-    for (var h = 0; h < count; h++) {
+    var count = 1500;
+    for (var h = 0; h < count; h ++) {
       var angle = random(TWO_PI);
       var r = sqrt(random(1));
       var x = cwidth[i]+ r * radius * cos(angle);
