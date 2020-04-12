@@ -31,7 +31,7 @@ let allImages = [];
 const twidth=[500,1150,450,500,1500,1100,1500,800];
 const theight=[500,1000,1200,750,1100,250,300,900];
 
-var repnum = 3;
+var repnum = 7;
 var startRad = 300;
 var starStrkWeight = 2;
 var xnoiseCords = [], ynoiseCords = [];
