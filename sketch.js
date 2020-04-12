@@ -5,7 +5,6 @@ const rSize =[500,500,500,500,500,500,500,500,500,500,500];
 const rSize0 =[500,500,500,500,500,500,500,500,500,500,500];
 const lSize = [0];
 const collision = 0;
-
 const bigText = ["能力と社会性の変化","生活と価値観の変化","余暇と気晴らしの変化","職業と人生観の変化","社会通念と手続きの変化","個人情報とプライバシーの変化","人・社会との繋がりの変化","ものづくりの変化","所属意識の変化","責任領域の変化","信頼形成の変化"];
 var numsX = [[]];
 var numsY = [[]];
@@ -69,31 +68,13 @@ function randomSave() {
     numsX.push([i]);
     numsY.push([i]);
 
-    if(i %3 == 0){
-      for (var h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = sqrt(random(1));
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
-        numsX[i].push(x);
-        numsY[i].push(y);
-      }
-    }else if(i %3 == 1){
-      for (int h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = 1-(random(random(random(1))));
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
-        numsX[i].push(x);
-        numsY[i].push(y);
-    }else{
-      for (int h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = random(1);
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
-        numsX[i].push(x);
-        numsY[i].push(y);
+    for (var h = 0; h < count; h ++) {
+      var angle = random(TWO_PI);
+      var r = sqrt(random(1));
+      var x = cwidth[i]+ r * radius * cos(angle);
+      var y = cheight[i] + r * radius * sin(angle);
+      numsX[i].push(x);
+      numsY[i].push(y);
     }
   }
 
