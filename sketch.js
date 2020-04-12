@@ -56,14 +56,14 @@ function draw(){
 
 
 function randomSave() {
-  numsX = new Array(cwidth.length);
+  /*numsX = new Array(cwidth.length);
   for(let y = 0; y < cwidth.length; y++) {
     numsX = new Array(2000).fill(0);
   } 
   numsY = new Array(cwidth.length);
   for(let y = 0; y < cwidth.length; y++) {
     numsY = new Array(2000).fill(0);
-  }
+  }*/
 
   for(var i=0; i<cwidth.length;i++){
     var radius = rSize0[i]/4;
