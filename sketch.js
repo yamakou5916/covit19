@@ -93,6 +93,7 @@ function randomSave() {
         var y = cheight[i] + r * radius * sin(angle);
         numsX[i].push(x);
         numsY[i].push(y);
+      }
     }
   }
 
