@@ -28,7 +28,11 @@ const bCol=[191,191,144,144,125,125,200,200,186,186,187,187];
 
 var images = [];
 
-function preload() {
+
+function setup(){
+  createCanvas(2000, 1500);//描画領域を指定
+  background(255);
+  randomSave();
   images = loadImage("education.png");
   images = loadImage("lifestyle.png");
   images = loadImage("entertainment.png");
@@ -38,15 +42,7 @@ function preload() {
   images = loadImage("lifeline.png");
   images = loadImage("manufacture.png");
   images = loadImage("supplychain.png");
-  images = loadImage("management.png");
-  images = loadImage("medical.png");
-}
-
-
-function setup(){
-  createCanvas(2000, 1500);//描画領域を指定
-  background(255);
-  randomSave();
+  images = loadImage("management.png"
 }
 
 function draw(){
