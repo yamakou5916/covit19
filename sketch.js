@@ -105,7 +105,7 @@ for (var t=0; t<twidth.length; t++){
       strokeWeight(starStrkWeight);
       peaks.forEach(peak => {
         curveVertex(peak.x, peak.y);
-        text(techText[peaks], peak.x, peak.y);
+        text(techText[0], peak.x, peak.y);
         
 
       });
