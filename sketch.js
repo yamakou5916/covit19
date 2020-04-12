@@ -67,7 +67,7 @@ function randomSave() {
   numsX[0].push = (1);
   text(numsX[0][0], width/2,height/2);
 
-/*
+
   for(var i=0; i<cwidth.length;i++){
     var radius = rSize0[i]/4;
     var count = 1500;
@@ -76,10 +76,12 @@ function randomSave() {
       var r = sqrt(random(1));
       var x = cwidth[i]+ r * radius * cos(angle);
       var y = cheight[i] + r * radius * sin(angle);
-      numsX[i][h] = x;
-      numsY[i][h] = y;
+      numsX[i].push = x;
+      numsY[i].push = y;
+      //numsX[i][h] = x;
+      //numsY[i][h] = y;
     }
-  }*/
+  }
 
 }
 
@@ -94,7 +96,7 @@ function myCircle(i){
     //point(x, y);
   }
   var aaa = numsX[0][0] = 1111111;
-  text(numsX[0][0], width/2,height/2);
+  text(numsX[i][0], cwidth,cheight);
   text("aaa", width/2,height/2);
 
 }
