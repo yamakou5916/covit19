@@ -69,6 +69,7 @@ function randomSave() {
   for(var i=0; i<11;i++){
     var radius = rSize0[i]/4;
     var count = 1500;
+    numsX.push(i);
 
     for (var h = 0; h < count; h ++) {
       var angle = random(TWO_PI);
@@ -77,8 +78,8 @@ function randomSave() {
       var y = cheight[i] + r * radius * sin(angle);
       //numsX[i].push(1.0);
       
-      //numsX[i].push(x);
-      text(i, width/2,height/2);
+      numsX[i].push(x);
+      //text(i, width/2,height/2);
 
       /*
       numsX[i].push(x);
@@ -102,7 +103,7 @@ function myCircle(i){
     //point(x, y);
   }
   //var aaa = numsX[0][0] = 1111111;
-  //text(numsX[0][0], cwidth,cheight);
+  text(numsX[i][0], cwidth,cheight);
 
 }
 
