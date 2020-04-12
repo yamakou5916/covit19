@@ -36,6 +36,7 @@ function draw(){
   textAlign(CENTER,CENTER);
   line(width/2,0,width/2,height);
   line(0,height/2,width,height/2);
+  noStroke();
   text("個人としての意識", 100, height/2);
   text("集団としての意識", width-100, height/2);
   text("文化に関する思想", width/2, height-40);
