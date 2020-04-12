@@ -165,6 +165,7 @@ function littleCircle(i){
 
 
 function mouseMoved(){
+  background(255);
   beginShape();
   var angStep = map(mouseX, 0, width, 30, 1);
   var radiousWidth = map(mouseY, 0, height, 30, 120);
