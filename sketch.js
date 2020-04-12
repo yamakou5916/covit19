@@ -9,11 +9,6 @@ const bigText = ["能力と社会性の変化","生活と価値観の変化","�
 
 const images = [loadImage("education.png"),loadImage("lifestyle.png"),loadImage("entertainment.png"),loadImage("workstyle.png"),loadImage("lifeevent.png"),loadImage("healthcare.png"),loadImage("lifeline.png"),loadImage("manufacture.png"),loadImage("supplychain.png"),loadImage("management.png"),loadImage("medical.png")];
 
-const Rcol = [237,237,247,247,236,236,209,209,145,145,143,143];
-const Gcol = [237,237,223,223,181,181,226,226,193,193,176,176];
-const Bcol = [191,191,144,144,125,125,200,200,186,186,187,187];
-
-
 function setup(){
   pixelDensity(2);
   createCanvas(2000, 1500);//描画領域を指定
