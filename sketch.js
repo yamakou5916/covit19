@@ -113,7 +113,7 @@ function draw(){
                 peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120 - 10) * h;
             });
             noFill();
-            stroke(180 + (180 / repnum * h), 80, 100);
+            stroke(80, 180 + (180 / repnum * h), 100);
             strokeWeight(starStrkWeight);
             peaks.forEach(peak => {
                 curveVertex(peak.x, peak.y);
