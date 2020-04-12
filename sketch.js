@@ -28,6 +28,8 @@ const bCol=[191,191,144,144,125,125,200,200,186,186,187,187];
 let images0;
 let allImages = [];
 
+const twidth=[500,1150,450,500,1500,1100,1500,800,1550,1150,750];
+const theight=[500,1000,1200,750,1100,250,300,900,650,600,300];
 
 var repnum = 3;
 var startRad = 300;
@@ -78,6 +80,9 @@ function draw(){
   text("社会システムに関する思想", width/2, 0+40);
 
   //テクノロジマップ
+
+for (var t=0;t<twidth.length;t++){
+
   for (var h = 0; h < repnum; h++) {
     beginShape();
     for (var i = 0; i < 450; i += 30) {
@@ -90,8 +95,8 @@ function draw(){
       }
       peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
       peaks.forEach(peak => {
-        peak.x += (noise(xnoiseCords[i % 360 / 30]) * 120) * h +400;
-        peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120) * h +400;
+        peak.x += (noise(xnoiseCords[i % 360 / 30]) * 120) * h +twidth[t];
+        peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120) * h +theight[t];
       });
       noFill();
       //fill(80, 180 + (180 / repnum * h), 100,80);
@@ -104,6 +109,8 @@ function draw(){
     endShape();
     noiseUpdate();
   }
+}
+
 
   //意識・思想マップ
   for(var i=0; i<11;i++){
@@ -215,7 +222,7 @@ function noiseUpdate() {
     }
 }
 
-
+  
 
 
 
