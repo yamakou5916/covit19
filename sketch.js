@@ -33,16 +33,16 @@ function setup(){
   createCanvas(2000, 1500);//描画領域を指定
   background(255);
   randomSave();
-  images = loadImage("education.png");
-  images = loadImage("lifestyle.png");
-  images = loadImage("entertainment.png");
-  images = loadImage("workstyle.png");
-  images = loadImage("lifeevent.png");
-  images = loadImage("healthcare.png");
-  images = loadImage("lifeline.png");
-  images = loadImage("manufacture.png");
-  images = loadImage("supplychain.png");
-  images = loadImage("management.png"
+  var images = loadImage("education.png");
+  var images = loadImage("lifestyle.png");
+  var images = loadImage("entertainment.png");
+  var images = loadImage("workstyle.png");
+  var images = loadImage("lifeevent.png");
+  var images = loadImage("healthcare.png");
+  var images = loadImage("lifeline.png");
+  var images = loadImage("manufacture.png");
+  var images = loadImage("supplychain.png");
+  var images = loadImage("management.png");
 }
 
 function draw(){
