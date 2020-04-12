@@ -53,7 +53,7 @@ function draw(){
     //image(images[i], width/2,height/2, 70, 70);
     textSize(12);
     textAlign(CENTER,CENTER);
-    text(bigText[i], cwidth[i], cheight[i]);
+    text(bigText[i], cwidth[i], cheight[i]+25);
     textSize(10);
     textAlign(CENTER,CENTER);
     text(titleText[i], cwidth[i], cheight[i]-45);
