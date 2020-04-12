@@ -103,7 +103,7 @@ function myCircle(i){
     //point(x, y);
   }
   //var aaa = numsX[0][0] = 1111111;
-  //text(numsX[i][0], cwidth,cheight);
+  text(numsX[i], cwidth,cheight);
 
 }
 
