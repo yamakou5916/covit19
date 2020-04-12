@@ -93,9 +93,6 @@ function draw(){
     text(titleText[i], cwidth[i], cheight[i]-45);
   }
 
-  noFIll();
-  stroke(0);
-  strokeWeight(1);
 
 
     translate(width / 2, height / 2);
