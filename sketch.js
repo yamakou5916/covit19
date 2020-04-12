@@ -20,6 +20,8 @@ const smallText0=
 ["電子カルテの\nブロックチェーン", "在宅診察\nオンライン治療", "医療に\n詳しくなる\n健康意識\nの向上", "医療人材教育\n転用可能な\n人材管理"],
 ["", "", "", ""],
 ];
+const techText=["エデュケーション","ライフスタイル","エンタテイメント","ワークスタイル","ライフイベント","ヘルスケア","ライフライン","マニュファクチュア","サプライチェーン","マネジメント","メディカル"];
+
 var numsX = [[]];
 var numsY = [[]];
 const rCol=[237,237,247,247,236,236,209,209,145,145,143,143];
@@ -101,9 +103,11 @@ for (var t=0; t<twidth.length; t++){
       //fill(80, 180 + (180 / repnum * h), 100,80);
       stroke(80, 180 + (180 / repnum * h), 100);
       strokeWeight(starStrkWeight);
+      var k = 0;
       peaks.forEach(peak => {
         curveVertex(peak.x, peak.y);
-        text("社会システムに関する思想", peak.x, peak.y);
+        text(techText[k], peak.x, peak.y);
+        k++;
 
       });
     }
