@@ -90,9 +90,9 @@ void myCircle(int i) {
     strokeWeight(2);
 }
   stroke(100,100,0); //点の色は青
-  for (int h = 0; h < numsX[i].length; h ++) {
-    float x = numsX[i][h];
-    float y = numsY[i][h];
+  for (int h = 0; h < numsX.length; h ++) {
+    var x = numsX[i][h];
+    var y = numsY[i][h];
     point(x, y);
   }
 }
