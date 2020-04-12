@@ -90,7 +90,7 @@ function myCircle(i){
     //text(numsX[i][h], width/2,height/2);
     //var x = numsX[i][h];
     //var y = numsY[i][h];
-    point(x, y);
+    //point(x, y);
   }
 }
 
