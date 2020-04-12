@@ -18,7 +18,7 @@ function setup(){
   pixelDensity(2);
   createCanvas(2000, 1500);//描画領域を指定
   background(255);
-  randomSave();
+  //randomSave();
 }
 
 function draw(){
@@ -75,6 +75,7 @@ function myCircle(var i) {
 
 
 function randomSave() {
+
   numsX = new var[cwidth.length][2000]; 
   numsY = new var[cwidth.length][2000]; 
   for(var i=0; i<cwidth.length;i++){
