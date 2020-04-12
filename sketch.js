@@ -30,7 +30,7 @@ let allImages = [];
 
 
 var repnum = 3;
-var startRad = 60;
+var startRad = 600;
 var starStrkWeight = 2;
 var xnoiseCords = [], ynoiseCords = [];
 
