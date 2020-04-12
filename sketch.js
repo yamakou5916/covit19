@@ -37,6 +37,7 @@ function draw(){
 
   for(var i=0; i<11;i++){
     //text("社会システムに関する思想", width/2,height/2);
+    myCircle(int i)
 
     //wave(i);
     fill(0);
@@ -77,15 +78,24 @@ function randomSave() {
         numsY[i][h] = y;
       }
 
-
-
     }
-
 
 }
 
 
-
+void myCircle(int i) {
+  if(i %3 == 0){
+    strokeWeight(3);
+  }else{
+    strokeWeight(2);
+}
+  stroke(100,100,0); //点の色は青
+  for (int h = 0; h < numsX[i].length; h ++) {
+    float x = numsX[i][h];
+    float y = numsY[i][h];
+    point(x, y);
+  }
+}
 
 
 
