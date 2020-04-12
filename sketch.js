@@ -20,7 +20,7 @@ function draw(){
   //背景
   noStroke();
   fill(255,255,255);
-  rect(0,0,windowWidth, windowHeight);
+  rect(0,0,2000,1500);
 
   //軸
   fill(0);
