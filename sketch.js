@@ -111,11 +111,11 @@ for (var t=0; t<twidth.length; t++){
         text(k, peak.x, peak.y);
         k++;
       });
-      k = 0;
     }
     //text(peaks, width/2, height/2);
     endShape();
     noiseUpdate();
+    k = 0;
   }
 }
 
