@@ -71,10 +71,7 @@ function randomSave() {
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = sqrt(random(1));
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
-        numsX[i][h] = x;
-        numsY[i][h] =  y;
+        
       }
     }else if(i %3 == 1){
       var radius = rSize0[i]/4;
@@ -82,10 +79,6 @@ function randomSave() {
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = 1-(random(random(random(1))));
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
-        numsX[i][h] = x;
-        numsY[i][h] =  y;
       }
     }else{
       var radius = rSize0[i]/4;
@@ -93,12 +86,12 @@ function randomSave() {
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = random(1);
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
-        numsX[i][h] = x;
-        numsY[i][h] =  y;
       }
     }
+    var x = cwidth[i]+ r * radius * cos(angle);
+    var y = cheight[i] + r * radius * sin(angle);
+    numsX[i][h] = x;
+    numsY[i][h] = y;
   }
 
 
