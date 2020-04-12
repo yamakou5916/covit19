@@ -78,8 +78,8 @@ function draw(){
   text("社会システムに関する思想", width/2, 0+40);
 
 
-  translate(400, 400);
-  rotate(frameCount / 600);
+  //translate(400, 400);
+  //rotate(frameCount / 600);
   for (var h = 0; h < repnum; h++) {
       beginShape();
       for (var i = 0; i < 450; i += 30) {
