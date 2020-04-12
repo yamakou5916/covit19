@@ -69,7 +69,7 @@ function randomSave() {
   for(var i=0; i<11;i++){
     var radius = rSize0[i]/4;
     var count = 1500;
-    numsX.push(i);
+    numsX.push([i]);
 
     for (var h = 0; h < count; h ++) {
       var angle = random(TWO_PI);
