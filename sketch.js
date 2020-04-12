@@ -55,7 +55,7 @@ function draw(){
     textSize(12);
     text(bigText[i], cwidth[i], cheight[i]+25);
     textSize(10);
-    text(titleText[i], cwidth[i], cheight[i]-45);
+    //text(titleText[i], cwidth[i], cheight[i]-45);
   }
 
 }
