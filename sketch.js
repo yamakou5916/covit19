@@ -95,7 +95,7 @@ function myCircle(i){
   }
   numsX[0][0] = 1111111;
   text(numsX[0][0], width/2,height/2);
-  text("aaa", width/2,height/2);
+  text(1111111, width/2,height/2);
 
 }
 
