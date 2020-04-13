@@ -140,7 +140,7 @@ for (var t=0; t<twidth.length; t++){
           //rotate(radians(i) + PI/2);
           //text(currentChar, 0, 0);
           textSize(10);
-          text(techText[k], peak.x, peak.y);
+          text(techText[t][k], peak.x, peak.y);
           //pop();
         //}
         
