@@ -20,18 +20,11 @@ body {
     z-index: 10;
 }
 
-.header p {
-    margin: 0 auto;
-    text-align: center;
-    line-height: 60px;
-    color: #fff;
-}
-
 .main {
     margin: 0 auto;
     display: block;
-    margin-top: 60px;
 }
+
 .mainInner{
     display: table;
     text-align: center;
