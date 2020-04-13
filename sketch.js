@@ -117,9 +117,9 @@ for (var t=0; t<twidth.length; t++){
           //text(currentChar, 0, 0);
           text(techText[k], peak.x, peak.y);
           pop();
-        }
+        //}
         
-      //});
+      });
       k++;
     }
     //text(peaks, width/2, height/2);
