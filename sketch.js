@@ -114,8 +114,8 @@ for (var t=0; t<twidth.length; t++){
           push();
           translate(peak.x, peak.y); 
           //rotate(radians(i) + PI/2);
-          text(currentChar, 0, 0);
-          //text(techText[k], peak.x, peak.y);
+          //text(currentChar, 0, 0);
+          text(techText[k], peak.x, peak.y);
           pop();
         }
         
