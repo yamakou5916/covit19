@@ -109,7 +109,6 @@ function draw(){
 
   //テクノロジマップ
 for (var t=0; t<twidth.length; t++){
-//  for (var h = 0; h < repnum; h++) {
     beginShape();
     for (var i = 0; i < 450; i += 30) {
       var peaks = [];
@@ -127,8 +126,6 @@ for (var t=0; t<twidth.length; t++){
 
       noFill();
       //fill(80, 180 + (180 / repnum * h), 100,80);
-      
-      //k = 0;
 
       peaks.forEach(peak => {
         stroke(145,193,186);
@@ -150,11 +147,9 @@ for (var t=0; t<twidth.length; t++){
       });
       k++;
     }
-    //text(peaks, width/2, height/2);
     endShape();
     noiseUpdate();
     k = 0;
-//  }
 }
 
 
