@@ -170,7 +170,10 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   align-self: center;
   width: 1200px;
   height: 800px;
-  padding: 20px;
+  padding-top: 40px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 40px;
   overflow: scroll;
   box-sizing: border-box;
   background-image: url("bg.jpg"); 
