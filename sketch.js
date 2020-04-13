@@ -127,18 +127,21 @@ for (var t=0; t<twidth.length; t++){
 
       noFill();
       //fill(80, 180 + (180 / repnum * h), 100,80);
-      stroke(145,193,186);
-      strokeWeight(starStrkWeight);
+      
       //k = 0;
 
       peaks.forEach(peak => {
+        stroke(145,193,186);
+        strokeWeight(starStrkWeight);
         curveVertex(peak.x, peak.y);
+
         //for(var ii = 0; ii < techText[k].length; ii++){
           //var currentChar = techText[k].charAt(ii);
           //push();
           //translate(peak.x, peak.y); 
           //rotate(radians(i) + PI/2);
           //text(currentChar, 0, 0);
+          strokeWeight(1);
           textSize(10);
           text(techText[t][k], peak.x, peak.y);
           //pop();
