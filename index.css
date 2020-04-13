@@ -174,8 +174,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   overflow: scroll;
   box-sizing: border-box;
   background-image: url("bg.jpg"); 
-  line-height: 1.4em;
-  transition: 0.5s;
   text-align: left;
 }
 
