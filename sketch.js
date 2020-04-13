@@ -113,7 +113,7 @@ for (var t=0; t<twidth.length; t++){
           translate(sin(radians(i)) * j, cos(radians(i)) * j); 
           rotate(radians(i) + PI/2); 
           text(currentChar, 0, 0);
-          text(techText[k], peak.x, peak.y);
+          //text(techText[k], peak.x, peak.y);
           pop();
         }
         k++;
