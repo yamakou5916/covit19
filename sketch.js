@@ -109,8 +109,8 @@ for (var t=0; t<twidth.length; t++){
 
       peaks.forEach(peak => {
         curveVertex(peak.x, peak.y);
-        for(var ii = 0; ii < techText[k].length; ii++){
-          var currentChar = techText[k].charAt(ii);
+        //for(var ii = 0; ii < techText[k].length; ii++){
+          //var currentChar = techText[k].charAt(ii);
           push();
           translate(peak.x, peak.y); 
           //rotate(radians(i) + PI/2);
@@ -119,7 +119,7 @@ for (var t=0; t<twidth.length; t++){
           pop();
         }
         
-      });
+      //});
       k++;
     }
     //text(peaks, width/2, height/2);
