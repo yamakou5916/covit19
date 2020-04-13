@@ -104,13 +104,13 @@ for (var t=0; t<twidth.length; t++){
       //fill(80, 180 + (180 / repnum * h), 100,80);
       stroke(145,193,186);
       strokeWeight(starStrkWeight);
-      
+      k = 0;
       peaks.forEach(peak => {
         curveVertex(peak.x, peak.y);
         for(var ii = 0; ii < techText[k].length; ii++){
           var currentChar = techText[k].charAt(ii);
           push();
-          translate(peak.x+sin(radians(i)) * j, peak.y+cos(radians(i)) * j); 
+          translate(peak.x+ii, peak.y+ii); 
           //rotate(radians(i) + PI/2);
           text(currentChar, 0, 0);
           //text(techText[k], peak.x, peak.y);
