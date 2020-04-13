@@ -134,7 +134,12 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 
 
-/* ポップアップ*/
+/* ポップアップ (education) */
+
+.inline-contents2 {
+
+}
+
 .popup_wrap input {
   display: none;
 }
@@ -193,8 +198,8 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 .open_btn0 {
   position: absolute;
-  top: 175px;
-  left: 625px;
+  top: 325px;
+  left: 275px;
   display: flex;
   justify-content: center;
   align-items: center;
