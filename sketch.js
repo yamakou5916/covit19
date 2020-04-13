@@ -116,14 +116,14 @@ for (var t=0; t<twidth.length; t++){
           //text(techText[k], peak.x, peak.y);
           pop();
         }
-        
+        k++;
       });
-      k++;
+      
     }
     //text(peaks, width/2, height/2);
     endShape();
     noiseUpdate();
-    k = 0;
+    //k = 0;
   }
 }
 
