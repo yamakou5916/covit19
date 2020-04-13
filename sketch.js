@@ -83,7 +83,6 @@ function draw(){
   text("社会システムに関する思想", width/2, 0+40);
 
   //テクノロジマップ
-  function mousePressed() {
 for (var t=0; t<twidth.length; t++){
   for (var h = 0; h < repnum; h++) {
     beginShape();
@@ -119,7 +118,7 @@ for (var t=0; t<twidth.length; t++){
   }
 }
 
-}
+
   //意識・思想マップ
   for(var i=0; i<11;i++){
     myCircle(i);
