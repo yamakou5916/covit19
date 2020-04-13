@@ -33,7 +33,7 @@ let allImages = [];
 
 const twidth=[700,950,1200,1300];//,500,1500,1100,1500,800];
 const theight=[500,1150,400,700];//,750,1100,250,300,900];
-const tsize=[150,500,80,250];
+const tsize=[150,500,80,50];
 
 var repnum = 7;
 var startRad = [300,500,150,200];
