@@ -84,7 +84,7 @@ function draw(){
 
   //テクノロジマップ
 
-if(mousePressed){
+function(mousePressed){
 for (var t=0; t<twidth.length; t++){
   for (var h = 0; h < repnum; h++) {
     beginShape();
