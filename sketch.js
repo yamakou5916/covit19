@@ -25,9 +25,9 @@ const techText=["人工知能","","IoT","","ユビキタス","ウェアラブル
 var numsX = [[]];
 var numsY = [[]];
 
-const rCol=[237,237,247,247,236,236,209,209,145,145,143,143];
-const gCol=[237,237,223,223,181,181,226,226,193,193,176,176];
-const bCol=[191,191,144,144,125,125,200,200,186,186,187,187];
+const rCol=[237,237,247,247,236,236,209,209,237,237,247,143];
+const gCol=[237,237,223,223,181,181,226,226,237,237,223,176];
+const bCol=[191,191,144,144,125,125,200,200,191,191,144,187];
 let images0;
 let allImages = [];
 
@@ -102,7 +102,7 @@ for (var t=0; t<twidth.length; t++){
 
       noFill();
       //fill(80, 180 + (180 / repnum * h), 100,80);
-      stroke(80, 180 + (180 / repnum * h), 100);
+      stroke(143,176,187);
       strokeWeight(starStrkWeight);
       
       peaks.forEach(peak => {
