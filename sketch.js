@@ -107,16 +107,16 @@ for (var t=0; t<twidth.length; t++){
       
       peaks.forEach(peak => {
         curveVertex(peak.x, peak.y);
-        for (int ii = 0; ii < techText[k].length; ii ++ ) {
+        //for (int ii = 0; ii < techText[k].length; ii ++ ) {
           //var currentChar = techText[k].charAt(ii);
-          //push();
+          push();
           //translate(sin(radians(i)) * j, cos(radians(i)) * j); 
           //rotate(radians(i) + PI/2); 
           //text(currentChar, 0, 0);
           text(techText[k], peak.x, peak.y);
-          //pop();
-        }
-        k++;
+          pop();
+        //}
+        //k++;
       });
     }
     //text(peaks, width/2, height/2);
