@@ -83,7 +83,7 @@ function draw(){
   text("社会システムに関する思想", width/2, 0+40);
 
   //テクノロジマップ
-//for (var t=0; t<twidth.length; t++){
+for (var t=0; t<twidth.length; t++){
   for (var h = 0; h < repnum; h++) {
     beginShape();
     for (var i = 0; i < 450; i += 30) {
@@ -107,15 +107,15 @@ function draw(){
       
       peaks.forEach(peak => {
         curveVertex(peak.x, peak.y);
-        //for (int ii = 0; ii < techText[k].length; ii ++ ) {
+        for (int ii = 0; ii < techText[k].length; ii ++ ) {
           //var currentChar = techText[k].charAt(ii);
-          push();
+          //push();
           //translate(sin(radians(i)) * j, cos(radians(i)) * j); 
           //rotate(radians(i) + PI/2); 
           //text(currentChar, 0, 0);
-          text(techText[k].length, peak.x, peak.y);
-          pop();
-        //}
+          text(techText[k], peak.x, peak.y);
+          //pop();
+        }
         k++;
       });
     }
@@ -124,7 +124,7 @@ function draw(){
     noiseUpdate();
     k = 0;
   }
-//}
+}
 
 
   //意識・思想マップ
