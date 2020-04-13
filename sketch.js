@@ -102,7 +102,7 @@ for (var t=0; t<twidth.length; t++){
 
       noFill();
       //fill(80, 180 + (180 / repnum * h), 100,80);
-      stroke(143,176,187);
+      stroke(145,193,186);
       strokeWeight(starStrkWeight);
       
       peaks.forEach(peak => {
