@@ -110,7 +110,7 @@ for (var t=0; t<twidth.length; t++){
         for(var ii = 0; ii < techText[k].length; ii++){
           var currentChar = techText[k].charAt(ii);
           push();
-          translate(peak.x, peak.y); 
+          translate(peak.x+sin(radians(i)) * j, peak.y+cos(radians(i)) * j); 
           //rotate(radians(i) + PI/2);
           text(currentChar, 0, 0);
           //text(techText[k], peak.x, peak.y);
