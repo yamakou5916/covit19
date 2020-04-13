@@ -31,11 +31,13 @@ body {
 }
 
 /* メニュー */
+h1 {color: #fff;
+text-align: center;}
 #sidebarMenu {
     height: 100%;
     position: fixed;
     left: 0;
-    width: 250px;
+    width: 500px;
     padding-top: 60px;
     transform: translateX(0);
     transition: transform 250ms ease-in-out;
@@ -64,7 +66,7 @@ body {
     text-decoration: none;
 }
 input[type="checkbox"]:checked ~ #sidebarMenu {
-    transform: translateX(-250px);
+    transform: translateX(-500px);
 }
 
 input[type=checkbox] {
@@ -146,7 +148,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 /* ポップアップ (education) */
 
 .inline-contents2 {
-
 }
 
 .popup_wrap input {
