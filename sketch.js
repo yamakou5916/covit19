@@ -83,6 +83,25 @@ function draw(){
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
 
+
+  //意識・思想マップ
+  for(var i=0; i<11;i++){
+    myCircle(i);
+    littleCircle(i)
+    fill(0);
+    noStroke();
+    imageMode(CENTER);
+    images0 = allImages[i];
+    image(images0, cwidth[i], cheight[i]-10, 70, 70);
+    textSize(12);
+    textAlign(CENTER,CENTER);
+    text(bigText[i], cwidth[i], cheight[i]+25);
+    textSize(10);
+    textAlign(CENTER,CENTER);
+    text(titleText[i], cwidth[i], cheight[i]-45);
+  }
+
+
   //テクノロジマップ
 for (var t=0; t<twidth.length; t++){
   for (var h = 0; h < repnum; h++) {
@@ -130,22 +149,15 @@ for (var t=0; t<twidth.length; t++){
 }
 
 
-  //意識・思想マップ
-  for(var i=0; i<11;i++){
-    myCircle(i);
-    littleCircle(i)
-    fill(0);
-    noStroke();
-    imageMode(CENTER);
-    images0 = allImages[i];
-    image(images0, cwidth[i], cheight[i]-10, 70, 70);
-    textSize(12);
-    textAlign(CENTER,CENTER);
-    text(bigText[i], cwidth[i], cheight[i]+25);
-    textSize(10);
-    textAlign(CENTER,CENTER);
-    text(titleText[i], cwidth[i], cheight[i]-45);
-  }
+
+
+
+
+
+
+
+
+
 
 }
 
