@@ -36,7 +36,7 @@ const theight=[500,750,400,700];//,750,1100,250,300,900];
 const tsize=[150,200,80,250];
 
 var repnum = 7;
-var startRad = [300,600,150,200];
+var startRad = [300,800,150,200];
 var starStrkWeight = 2;
 var xnoiseCords = [], ynoiseCords = [];
 var k=0;
