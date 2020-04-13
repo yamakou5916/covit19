@@ -33,6 +33,7 @@ let allImages = [];
 
 const twidth=[650,1150,450];//,500,1500,1100,1500,800];
 const theight=[500,1000,1200];//,750,1100,250,300,900];
+const tsize=[120,200,80];
 
 var repnum = 7;
 var startRad = 300;
@@ -96,8 +97,8 @@ for (var t=0; t<twidth.length; t++){
       }
       peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
       peaks.forEach(peak => {
-        peak.x += (noise(xnoiseCords[i % 360 / 30]) * 120) +twidth[t];
-        peak.y += (noise(ynoiseCords[i % 360 / 30]) * 120) +theight[t];
+        peak.x += (noise(xnoiseCords[i % 360 / 30]) * tsize[t]) +twidth[t];
+        peak.y += (noise(ynoiseCords[i % 360 / 30]) * tsize[t]) +theight[t];
       });
 
       noFill();
