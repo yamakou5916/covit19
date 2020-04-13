@@ -31,12 +31,12 @@ const bCol=[191,191,144,144,125,125,200,200,191,191,144,187];
 let images0;
 let allImages = [];
 
-const twidth=[700,1150,1200];//,500,1500,1100,1500,800];
-const theight=[500,1000,400];//,750,1100,250,300,900];
-const tsize=[150,200,80];
+const twidth=[700,1150,1200,1300];//,500,1500,1100,1500,800];
+const theight=[500,1000,400,700];//,750,1100,250,300,900];
+const tsize=[150,200,80,250];
 
 var repnum = 7;
-var startRad = [300,600,150];
+var startRad = [300,600,150,200];
 var starStrkWeight = 2;
 var xnoiseCords = [], ynoiseCords = [];
 var k=0;
