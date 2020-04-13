@@ -36,7 +36,7 @@ const theight=[500,1000,1200];//,750,1100,250,300,900];
 const tsize=[120,200,80];
 
 var repnum = 7;
-var startRad = 300;
+var startRad = [300,150,600];
 var starStrkWeight = 2;
 var xnoiseCords = [], ynoiseCords = [];
 var k=0;
@@ -91,7 +91,7 @@ for (var t=0; t<twidth.length; t++){
       var peaks = [];
       var j;
       if (i % 60 != 0) {
-        j = startRad + ((starStrkWeight + 1));
+        j = startRad[t] + ((starStrkWeight + 1));
       } else {
         //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
       }
