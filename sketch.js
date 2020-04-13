@@ -86,7 +86,6 @@ function draw(){
 for (var t=0; t<twidth.length; t++){
   for (var h = 0; h < repnum; h++) {
     beginShape();
-    k = 0;
     for (var i = 0; i < 450; i += 30) {
       var peaks = [];
       var j;
@@ -105,6 +104,8 @@ for (var t=0; t<twidth.length; t++){
       //fill(80, 180 + (180 / repnum * h), 100,80);
       stroke(145,193,186);
       strokeWeight(starStrkWeight);
+      k = 0;
+
       peaks.forEach(peak => {
         curveVertex(peak.x, peak.y);
         for(var ii = 0; ii < techText[k].length; ii++){
