@@ -31,21 +31,13 @@ body {
 .main {
     margin: 0 auto;
     display: block;
-    height: 100%;
     margin-top: 60px;
 }
 .mainInner{
     display: table;
-    height: 100%;
-    width: 100%;
     text-align: center;
 }
-.mainInner div{
-    display:table-cell;
-    vertical-align: middle;
-    font-size: 3em;
-    letter-spacing: 1.25px;
-}
+
 #sidebarMenu {
     height: 100%;
     position: fixed;
