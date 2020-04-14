@@ -287,6 +287,26 @@ function littleCircle(i){
 
 
 
+function moss() {
+  for(var i=0; i<11;i++){
+    var radius = rSize0[i]/4;
+    var count = 1500;
+    numsX.push([i]);
+    numsY.push([i]);
+      for (var h = 0; h < count; h ++) {
+        var angle = random(TWO_PI);
+        var r = sqrt(random(1));
+        var x = cwidth[i]+ r * radius * cos(angle);
+        var y = cheight[i] + r * radius * sin(angle);
+        numsX[i].push(x);
+        numsY[i].push(y);
+      
+    }
+  }
+
+}
+
+
 
 
 function noiseSet() {
