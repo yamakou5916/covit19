@@ -296,19 +296,9 @@ function noiseUpdate() {
     }
 }
 
-
-
-function showMind(){
-  showCon0++;
-}
-
-function showTechnology(){
-  showCon1++;
-}
-
-function showPwC(){
-  showCon2++;
-}
+function showMind(){showCon0++;}
+function showTechnology(){showCon1++;}
+function showPwC(){showCon2++;}
 
 
 const popup = document.getElementById("popup_overlay");
@@ -319,6 +309,16 @@ function mouseClicked(){
   document.getElementById('popup_overlay').style.backgroundColor = 'red';
   //popup.style.transform = "scale(1)";
 };
+
+
+
+
+
+
+
+
+
+
 
 
 
