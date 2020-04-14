@@ -119,84 +119,85 @@ function draw(){
   //テクノロジマップ
 
   if(showCon1%2 == 0){
-for (var t=0; t<twidth.length; t++){
-    beginShape();
-    for (var i = 0; i < 450; i += 30) {
-      var peaks = [];
-      var j;
-      if (i % 60 != 0) {
-        j = startRad[t] + ((starStrkWeight + 1));
-      } else {
-        //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
-      }
-      peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
-      peaks.forEach(peak => {
-        peak.x += (noise(xnoiseCords[i % 360 / 30]) * tsize[t]) +twidth[t];
-        peak.y += (noise(ynoiseCords[i % 360 / 30]) * tsize[t]) +theight[t];
-      });
+    for (var t=0; t<twidth.length; t++){
+        beginShape();
+        for (var i = 0; i < 450; i += 30) {
+          var peaks = [];
+          var j;
+          if (i % 60 != 0) {
+            j = startRad[t] + ((starStrkWeight + 1));
+          } else {
+            //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
+          }
+          peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
+          peaks.forEach(peak => {
+            peak.x += (noise(xnoiseCords[i % 360 / 30]) * tsize[t]) +twidth[t];
+            peak.y += (noise(ynoiseCords[i % 360 / 30]) * tsize[t]) +theight[t];
+          });
 
-      noFill();
-      //fill(80, 180 + (180 / repnum * h), 100,80);
+          noFill();
+          //fill(80, 180 + (180 / repnum * h), 100,80);
 
-      peaks.forEach(peak => {
-        stroke(145,193,186);
-        strokeWeight(starStrkWeight);
-        curveVertex(peak.x, peak.y);
+          peaks.forEach(peak => {
+            stroke(145,193,186);
+            strokeWeight(starStrkWeight);
+            curveVertex(peak.x, peak.y);
 
-        //for(var ii = 0; ii < techText[k].length; ii++){
-          //var currentChar = techText[k].charAt(ii);
-          //push();
-          //translate(peak.x, peak.y); 
-          //rotate(radians(i) + PI/2);
-          //text(currentChar, 0, 0);
-          strokeWeight(1);
-          textSize(10);
-          text(techText[t][k], peak.x, peak.y);
-          //pop();
-        //}
-        
-      });
-      k++;
+            //for(var ii = 0; ii < techText[k].length; ii++){
+              //var currentChar = techText[k].charAt(ii);
+              //push();
+              //translate(peak.x, peak.y); 
+              //rotate(radians(i) + PI/2);
+              //text(currentChar, 0, 0);
+              strokeWeight(1);
+              textSize(10);
+              text(techText[t][k], peak.x, peak.y);
+              //pop();
+            //}
+            
+          });
+          k++;
+        }
+        endShape();
+        noiseUpdate();
+        k = 0;
     }
-    endShape();
-    noiseUpdate();
-    k = 0;
-}
 
 }
 
 
   //オファリングマップ
-for (var t=0; t<twidth.length; t++){
-    beginShape();
-    for (var i = 0; i < 450; i += 30) {
-      var peaks = [];
-      var j;
-      if (i % 60 != 0) {
-        j = startRad2[t] + ((starStrkWeight + 1));
-      } else {
-        //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
-      }
-      peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
-      peaks.forEach(peak => {
-        peak.x += (noise(xnoiseCords[i % 360 / 30]) * psize[t]) +pwidth[t];
-        peak.y += (noise(ynoiseCords[i % 360 / 30]) * psize[t]) +pheight[t];
-      });
+  if(showCon2%2 == 0){
+    for (var t=0; t<twidth.length; t++){
+        beginShape();
+        for (var i = 0; i < 450; i += 30) {
+          var peaks = [];
+          var j;
+          if (i % 60 != 0) {
+            j = startRad2[t] + ((starStrkWeight + 1));
+          } else {
+            //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
+          }
+          peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
+          peaks.forEach(peak => {
+            peak.x += (noise(xnoiseCords[i % 360 / 30]) * psize[t]) +pwidth[t];
+            peak.y += (noise(ynoiseCords[i % 360 / 30]) * psize[t]) +pheight[t];
+          });
 
-      noStroke();
-      fill(145,193,186,80);
+          noStroke();
+          fill(145,193,186,80);
 
-      peaks.forEach(peak => {
-        curveVertex(peak.x, peak.y);
-      });
-      k++;
+          peaks.forEach(peak => {
+            curveVertex(peak.x, peak.y);
+          });
+          k++;
+        }
+        endShape();
+        noiseUpdate();
+        k = 0;
     }
-    endShape();
-    noiseUpdate();
-    k = 0;
+
 }
-
-
 
 
 
