@@ -13,20 +13,14 @@
 </head>
 <body>
   <div class="header"></div>
-  <form>
-    <input class="openSidebarMenu" id="openSidebarMenu" type="checkbox"> <label class="sidebarIconToggle" for="openSidebarMenu"></label>
-  </form>
-  <div class="spinner diagonal part-1">
-    <label class="sidebarIconToggle" for="openSidebarMenu"></label>
-  </div>
-  <div class="spinner horizontal">
-    <label class="sidebarIconToggle" for="openSidebarMenu"></label>
-  </div>
-  <div class="spinner diagonal part-2">
-    <label class="sidebarIconToggle" for="openSidebarMenu"></label>
-  </div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  
   <div id="sidebarMenu">
-    <h1>Experience MAP</h1>
     <ul class="sidebarMenuInner">
       <li>概要<br>
       2019年11月に中国武漢を震源に発生したコロナウイルスは、瞬く間に拡散し2020年3月現在、世界Xカ国約20万人への感染が確認された。 以下の図はコロナウイルスの影響による人々の経済活動と意識の変化を示したものである。</li>
@@ -38,7 +32,8 @@
       <li>テクノロジーマップ</li>
     </ul>
   </div>
-  <div class="main center" id='center'>
+
+  <div id='center' class="main center">
     <div class="mainInner"></div>
   </div>
   <div class="inline-contents2">
