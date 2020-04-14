@@ -55,6 +55,7 @@ var showCon0 = 0;
 var showCon1 = 1;
 var showCon2 = 1;
 
+var framCnt = 0;
 
 
 function setup(){
@@ -78,6 +79,9 @@ function setup(){
 }
 
 function draw(){
+  //
+  framCnt++;
+
   //背景
   noStroke();
   fill(255,255,255);
@@ -96,7 +100,8 @@ function draw(){
   text("集団としての意識", width-100, height/2);
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
-
+  
+  //
   moss();
 
 
