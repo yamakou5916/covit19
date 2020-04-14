@@ -180,13 +180,7 @@ for (var t=0; t<twidth.length; t++){
       fill(145,193,186,80);
 
       peaks.forEach(peak => {
-        stroke(145,193,186);
-        strokeWeight(starStrkWeight);
         curveVertex(peak.x, peak.y);
-          strokeWeight(1);
-          textSize(10);
-          text(techText[t][k], peak.x, peak.y);
-
       });
       k++;
     }
