@@ -106,18 +106,18 @@ function draw(){
     moss();
   }
   
-  if (rSize[0] <400) {
-    rSize[0] += 2;
-    textnum = 0;
-  } else {
-    rSize[0] -= 2;
-    textnum = 1;
-  }
-    
 
   //意識・思想マップ
   if(showCon0%2 == 0){
     for(var i=0; i<11;i++){
+      if (rSize[i] <400) {
+        rSize[i] += 2;
+        textnum = 0;
+      } else {
+        rSize[i] -= 2;
+        textnum = 1;
+      }
+    
       myCircle(i);
       littleCircle(i)
       fill(0);
