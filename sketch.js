@@ -3,8 +3,6 @@ const cheight=[450,1000,1250,750,1150,250,300,950,650,600,300];
 const rSize =[500,500,500,500,500,500,500,500,500,500,500];
 const rSize0 =[500,500,500,500,500,500,500,500,500,500,500];
 const lSize = [0];
-const frameCnt[] = {200,200,0,0,100,0,0,0,0,0,0};
-var textnum = 0;
 const collision = 0;
 const bigText = ["能力と社会性の変化","生活と価値観の変化","余暇と気晴らしの変化","職業と人生観の変化","社会通念と手続きの変化","個人情報とプライバシーの変化","人・社会との繋がりの変化","ものづくりの変化","所属意識の変化","責任領域の変化","信頼形成の変化"];
 const titleText=["エデュケーション","ライフスタイル","エンタテイメント","ワークスタイル","ライフイベント","ヘルスケア","ライフライン","マニュファクチュア","サプライチェーン","マネジメント","メディカル"];
@@ -99,16 +97,8 @@ function draw(){
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
 
-  //frameCnt[0]++;
-  //if (1000 * sin(radians(frameCnt[0])) > 0) {
-    //if (lSize[0] <400) {
-    //lSize[0] += 2;
-    //textnum++;
-    // /moss();
-  //} else {
-    //lSize[0] += 2;
-    //textnum--;
-  //}
+
+
 
 
   //意識・思想マップ
@@ -295,25 +285,8 @@ function littleCircle(i){
     text(smallText0[i][3], cwidth[i]-rSize0[i]/6, cheight[i]+rSize0[i]/6);
   }
 
-function moss() {
-  for(var i=0; i<11;i++){
-    var radius = rSize0[i]/16;
-    var count = 400;
-    numsX.push([i]);
-    numsY.push([i]);
-      for (var h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = sqrt(random(1));
-        var x = cwidth[i]+ r * radius * cos(angle) + random(rSize0[i])/4;
-        var y = cheight[i] + r * radius * sin(angle)+ random(rSize0[i])/4;
-        numsX[i].push(x);
-        numsY[i].push(y);
-        strokeWeight(3);
-        stroke(rCol[i],gCol[i],bCol[i]);
-        point(x, y); 
-    }
-  }
-}
+
+
 
 
 function noiseSet() {
