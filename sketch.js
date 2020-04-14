@@ -102,7 +102,10 @@ function draw(){
   text("社会システムに関する思想", width/2, 0+40);
 
   //
-  moss();
+  if(framCnt<120){
+    moss();
+  }
+  
 
 
   //意識・思想マップ
