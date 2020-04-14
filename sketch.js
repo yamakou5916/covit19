@@ -172,8 +172,8 @@ for (var t=0; t<twidth.length; t++){
       }
       peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
       peaks.forEach(peak => {
-        peak.x += (noise(xnoiseCords[i % 360 / 30]) * tsize[t]) +twidth[t];
-        peak.y += (noise(ynoiseCords[i % 360 / 30]) * tsize[t]) +theight[t];
+        peak.x += (noise(xnoiseCords[i % 360 / 30]) * psize[t]) +pwidth[t];
+        peak.y += (noise(ynoiseCords[i % 360 / 30]) * psize[t]) +pheight[t];
       });
 
       noFill();
