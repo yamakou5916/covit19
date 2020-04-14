@@ -100,7 +100,7 @@ function draw(){
   text("集団としての意識", width-100, height/2);
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
-  
+
   //
   moss();
 
@@ -272,7 +272,11 @@ function littleCircle(i){
     fill(255);
     stroke(0);
     strokeWeight(1);
-    */      
+    */ 
+    noFill();
+    stroke(0);
+    ellipse(cwidth[i], cheight[i], rSize0[i]/3, rSize0[i]/3);
+     
     fill(0);
     stroke(0);
     strokeWeight(1);
@@ -313,8 +317,6 @@ function moss() {
 }
 
 
-
-
 function noiseSet() {
     for (var i = 0; i < 12; i++) {
         xnoiseCords[i] = random(-1000, 1000);
@@ -328,9 +330,20 @@ function noiseUpdate() {
     }
 }
 
+
+
+
+
+
+
+
+
+
 function showMind(){showCon0++;}
 function showTechnology(){showCon1++;}
 function showPwC(){showCon2++;}
+
+
 
 
 const popup = document.getElementById("popup_overlay");
