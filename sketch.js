@@ -166,7 +166,7 @@ for (var t=0; t<twidth.length; t++){
       var peaks = [];
       var j;
       if (i % 60 != 0) {
-        j = startRad[t] + ((starStrkWeight + 1));
+        j = startRad2[t] + ((starStrkWeight + 1));
       } else {
         //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
       }
