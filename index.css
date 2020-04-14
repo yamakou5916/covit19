@@ -191,8 +191,8 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
-  transition: opacity 0.5s, transform 0s 0.5s;
-  transform: scale(0);
+  /*transition: opacity 0.5s, transform 0s 0.5s;
+  transform: scale(0);*/
 }
 
 .popup_trigger {
@@ -224,13 +224,13 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
   cursor: pointer;
   color: #000;
 }
-
+/*
 .popup_wrap input:checked~.popup_overlay {
   opacity: 1;
   transform: scale(1);
   transition: opacity 0.5s;
 }
-
+*/
 .sample-box {
   position: relative;
 }
