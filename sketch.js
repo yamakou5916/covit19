@@ -52,8 +52,8 @@ var k=0;
 
 
 var showCon0 = 0;
-var showCon1 = 0;
-var showCon2 = 0;
+var showCon1 = 1;
+var showCon2 = 1;
 
 
 
