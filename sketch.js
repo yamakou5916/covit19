@@ -315,9 +315,14 @@ function mouseClicked(){
   document.getElementById("text").innerHTML = "クリックされた！";
   //document.getElementById('popup_overlay').style.transform = scale(1);
   $(function(){
-    $('#popup_overlay').show();
+    $('#text-button').click(function() {
+        $('#popup_overlay').hide();
+    })
+    //$('#popup_overlay').show();
   });
   //text(titleText[i], width/2, height/2);
+
+
 };
 
 
