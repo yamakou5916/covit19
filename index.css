@@ -34,9 +34,10 @@ body {
 
 /* メニュー */
 
-h1 {
+#sidebarMenu h1 {
   color: #fff;
   text-align: center;
+  font-size: 20px;
 }
 
 #sidebarMenu {
