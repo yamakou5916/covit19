@@ -110,7 +110,7 @@ function draw(){
   //意識・思想マップ
   if(showCon0%2 == 0){
     for(var i=0; i<11;i++){
-      if (rSize[i] <400) {
+      if (rSize[i] <800) {
         rSize[i] += 2;
         textnum = 0;
       } else {
