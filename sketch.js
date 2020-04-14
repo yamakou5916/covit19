@@ -311,22 +311,18 @@ function showPwC(){
 }
 
 
-document.getElementById("popup_overlay").style.display ="none";
-
+const popup = document.getElementById("popup_overlay");
 
 function mouseClicked(){
   document.getElementById("text").innerHTML = "クリックされた！";
-  const popup_overlay = document.getElementById("popup_overlay");
+  //const popup_overlay = document.getElementById("popup_overlay");
   //document.getElementById('popup_overlay').style.transform = scale(1);
-  if(popup_overlay.style.display=="block"){
-    // noneで非表示
-    popup_overlay.style.display ="none";
-  }else{
-    // blockで表示
-    popup_overlay.style.display ="block";
-  }
-};
+  
+    popup.style.transform = "scale(1)";
+  
+  
 
+};
 
 
 
