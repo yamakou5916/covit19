@@ -288,15 +288,15 @@ function littleCircle(i){
 
 function moss() {
   for(var i=0; i<11;i++){
-    var radius = rSize0[i]/4;
+    var radius = rSize0[i]/16;
     var count = 1500;
     numsX.push([i]);
     numsY.push([i]);
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = sqrt(random(1));
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
+        var x = cwidth[i]+ r * radius * cos(angle)+random(rSize0[i]/4);
+        var y = cheight[i] + r * radius * sin(angle)+random(rSize0[i]/4);
         numsX[i].push(x);
         numsY[i].push(y);
         strokeWeight(3);
