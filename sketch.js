@@ -311,8 +311,9 @@ function showPwC(){
 }
 
   
-document.getElementById("text-button").onclick = function() {
+function mouseClicked(){
   document.getElementById("text").innerHTML = "クリックされた！";
+  text(titleText[i], width/2, height/2);
 };
 
 
