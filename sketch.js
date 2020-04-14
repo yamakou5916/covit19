@@ -102,10 +102,10 @@ function draw(){
   text("社会システムに関する思想", width/2, 0+40);
 
   //
-  //if(framCnt<120){
+  if(framCnt<120){
     moss();
-  //}
-  /*
+  }
+  
   if (lSize[0] <400) {
     lSize[0] += 2;
     textnum = 0;
@@ -113,7 +113,7 @@ function draw(){
     //lSize[0] += 2;
     textnum = 1;
   }
-    */
+    
 
   //意識・思想マップ
   if(showCon0%2 == 0){
@@ -314,8 +314,8 @@ function moss() {
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = sqrt(random(1));
-        var x = cwidth[i]+ r * radius * cos(angle)+random(-10,10)*rSize0[i]/2;
-        var y = cheight[i] + r * radius * sin(angle)+random(-7,7)*rSize0[i]/2;
+        var x = cwidth[i]+ r * radius * cos(angle)+random(-1,1)*rSize0[i]/4;
+        var y = cheight[i] + r * radius * sin(angle)+random(-1,1)*rSize0[i]/4;
         numsX[i].push(x);
         numsY[i].push(y);
         //strokeWeight(3);
