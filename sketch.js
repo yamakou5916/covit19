@@ -313,7 +313,8 @@ function showPwC(){
   
 function mouseClicked(){
   document.getElementById("text").innerHTML = "クリックされた！";
-  document.getElementById('trigger0').value;
+  document.getElementById('popup_overlay').style.opacity = 1;
+
   //text(titleText[i], width/2, height/2);
 };
 
