@@ -97,8 +97,7 @@ function draw(){
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
 
-
-
+  moss();
 
 
   //意識・思想マップ
