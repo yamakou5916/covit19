@@ -301,7 +301,6 @@ function moss() {
     var count = 400;
     numsX.push([i]);
     numsY.push([i]);
-    if(i %3 == 0){
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = sqrt(random(1));
@@ -309,16 +308,9 @@ function moss() {
         var y = cheight[i] + r * radius * sin(angle)+ random(rSize0[i])/4;
         numsX[i].push(x);
         numsY[i].push(y);
-        point(x, y);
-      }
-    }
-    strokeWeight(3);
-    stroke(rCol[i],gCol[i],bCol[i]);
-    //text(numsX[0][0], width/2,height/2);
-    for (var h = 0; h < numsX[i].length; h++){
-      var x = numsX[i][h];
-      var y = numsY[i][h];
-      point(x, y);
+        strokeWeight(3);
+        stroke(rCol[i],gCol[i],bCol[i]);
+        point(x, y); 
     }
   }
 }
