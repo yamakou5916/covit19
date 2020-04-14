@@ -159,6 +159,17 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
   margin-top: 3px;
 }
 
+
+
+#text-button {
+  display: block;
+  cursor: pointer;
+  width: 160px;
+  text-align: center;
+  border: 1px solid #232323;
+}
+
+
 /* ポップアップ (education) */
 
 .inline-contents2 {}
