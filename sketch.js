@@ -300,7 +300,9 @@ function moss() {
         var y = cheight[i] + r * radius * sin(angle);
         numsX[i].push(x);
         numsY[i].push(y);
-      
+        strokeWeight(3);
+        stroke(rCol[i],gCol[i],bCol[i]);
+        point(x, y);
     }
   }
 
