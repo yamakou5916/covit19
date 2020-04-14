@@ -319,9 +319,9 @@ function mouseClicked(){
         $('#popup_overlay').show();
     })
     //$('#popup_overlay').show();
+    $("#popup_overlay").css("transform","scale(0)");
   });
   //text(titleText[i], width/2, height/2);
-
 
 };
 
@@ -330,9 +330,6 @@ $(function () {
         $('#popup_overlay').show();
     });
 });
-
-
-
 
 
 
