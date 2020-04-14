@@ -99,20 +99,22 @@ function draw(){
 
 
   //意識・思想マップ
-  for(var i=0; i<11;i++){
-    myCircle(i);
-    littleCircle(i)
-    fill(0);
-    noStroke();
-    imageMode(CENTER);
-    images0 = allImages[i];
-    image(images0, cwidth[i], cheight[i]-10, 70, 70);
-    textSize(12);
-    textAlign(CENTER,CENTER);
-    text(bigText[i], cwidth[i], cheight[i]+25);
-    textSize(10);
-    textAlign(CENTER,CENTER);
-    text(titleText[i], cwidth[i], cheight[i]-45);
+  if(showCon0%2 == 0){
+    for(var i=0; i<11;i++){
+      myCircle(i);
+      littleCircle(i)
+      fill(0);
+      noStroke();
+      imageMode(CENTER);
+      images0 = allImages[i];
+      image(images0, cwidth[i], cheight[i]-10, 70, 70);
+      textSize(12);
+      textAlign(CENTER,CENTER);
+      text(bigText[i], cwidth[i], cheight[i]+25);
+      textSize(10);
+      textAlign(CENTER,CENTER);
+      text(titleText[i], cwidth[i], cheight[i]-45);
+    }
   }
 
 
