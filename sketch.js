@@ -298,8 +298,16 @@ function noiseUpdate() {
 
 
 
+function showMind(){
+  showCon0++;
+}
+
 function showTechnology(){
   showCon1++;
+}
+
+function showPwC(){
+  showCon2++;
 }
 
   
