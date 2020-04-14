@@ -105,14 +105,14 @@ function draw(){
   if(framCnt<120){
     moss();
   }
-  
+  /*
   if (lSize[0] <400) {
     lSize[0] += 2;
     textnum = 0;
   } else {
     //lSize[0] += 2;
     textnum = 1;
-  }
+  }*/
     
 
   //意識・思想マップ
