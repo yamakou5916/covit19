@@ -104,7 +104,7 @@ function draw(){
     //if (lSize[0] <400) {
     //lSize[0] += 2;
     //textnum++;
-    moss();
+    // /moss();
   //} else {
     //lSize[0] += 2;
     //textnum--;
