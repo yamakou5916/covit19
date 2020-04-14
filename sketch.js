@@ -311,27 +311,20 @@ function showPwC(){
 }
 
 
+document.getElementById("popup_overlay").style.display ="none";
+
 function mouseClicked(){
   document.getElementById("text").innerHTML = "クリックされた！";
+  const popup_overlay = document.getElementById("popup_overlay");
   //document.getElementById('popup_overlay').style.transform = scale(1);
-  $(function(){
-    $('#text-button').click(function() {
-        $('#popup_overlay').show();
-    });
-    //$('#popup_overlay').show();
-    $("#popup_overlay").css("transform","scale(0)");
-  });
-  //text(titleText[i], width/2, height/2);
-
+  if(popup_overlay.style.display=="block"){
+    // noneで非表示
+    popup_overlay.style.display ="none";
+  }else{
+    // blockで表示
+    popup_overlay.style.display ="block";
+  }
 };
-
-$(function () {
-    $('#text-button').on('click', () => {
-        $('#popup_overlay').show();
-    });
-});
-
-
 
 
 
