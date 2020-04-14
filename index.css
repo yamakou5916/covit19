@@ -167,6 +167,8 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
   width: 160px;
   text-align: center;
   border: 1px solid #232323;
+  background-color: #fff;
+  color: #000;
 }
 
 
