@@ -51,6 +51,11 @@ var xnoiseCords = [], ynoiseCords = [];
 var k=0;
 
 
+var showCon0;
+var showCon1;
+var showCon2;
+
+
 
 function setup(){
   createCanvas(2000, 1500);//描画領域を指定
@@ -112,6 +117,8 @@ function draw(){
 
 
   //テクノロジマップ
+
+  if(showCon1%2 == 0){
 for (var t=0; t<twidth.length; t++){
     beginShape();
     for (var i = 0; i < 450; i += 30) {
@@ -156,7 +163,7 @@ for (var t=0; t<twidth.length; t++){
     k = 0;
 }
 
-
+}
 
 
   //オファリングマップ
@@ -286,6 +293,12 @@ function noiseUpdate() {
         xnoiseCords[i] += 0.00003;
         ynoiseCords[i] += 0.00003;
     }
+}
+
+
+
+function showTechnology(){
+  showCon1++;
 }
 
   
