@@ -325,8 +325,11 @@ function mouseClicked(){
 
 };
 
-
-
+$(function () {
+    $('#text-button').on('click', () => {
+        $('#popup_overlay').show();
+    });
+});
 
 
 
