@@ -170,7 +170,7 @@ for (var t=0; t<twidth.length; t++){
       });
 
       noFill();
-      fill(80, 180 + (180 / repnum * h), 100,80);
+      fill(145,193,186,80);
 
       peaks.forEach(peak => {
         stroke(145,193,186);
