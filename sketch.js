@@ -317,7 +317,7 @@ function mouseClicked(){
   $(function(){
     $('#text-button').click(function() {
         $('#popup_overlay').show();
-    })
+    });
     //$('#popup_overlay').show();
     $("#popup_overlay").css("transform","scale(0)");
   });
