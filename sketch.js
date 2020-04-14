@@ -152,6 +152,37 @@ for (var t=0; t<twidth.length; t++){
     k = 0;
 }
 
+  //オファリング
+for (var t=0; t<twidth.length; t++){
+    beginShape();
+    for (var i = 0; i < 450; i += 30) {
+      var peaks = [];
+      var j;
+      if (i % 60 != 0) {
+        j = startRad[t] + ((starStrkWeight + 1));
+      } else {
+        //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
+      }
+      peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
+      peaks.forEach(peak => {
+        peak.x += (noise(xnoiseCords[i % 360 / 30]) * tsize[t]) +twidth[t];
+        peak.y += (noise(ynoiseCords[i % 360 / 30]) * tsize[t]) +theight[t];
+      });
+
+      
+      fill(80, 180 + (180 / repnum * h), 100,80);
+      stroke(145,193,186);
+      strokeWeight(starStrkWeight);
+
+      peaks.forEach(peak => {
+        curveVertex(peak.x, peak.y);
+      });
+      k++;
+    }
+    endShape();
+    noiseUpdate();
+    k = 0;
+}
 
 
 
