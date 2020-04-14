@@ -102,9 +102,9 @@ function draw(){
   text("社会システムに関する思想", width/2, 0+40);
 
   //
-  if(framCnt<120){
+  //if(framCnt<120){
     moss();
-  }
+  //}
   /*
   if (lSize[0] <400) {
     lSize[0] += 2;
