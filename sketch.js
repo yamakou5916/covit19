@@ -105,8 +105,15 @@ function draw(){
   if(framCnt<120){
     moss();
   }
-  
-
+  /*
+  if (lSize[0] <400) {
+    lSize[0] += 2;
+    textnum = 0;
+  } else {
+    //lSize[0] += 2;
+    textnum = 1;
+  }
+    */
 
   //意識・思想マップ
   if(showCon0%2 == 0){
@@ -129,7 +136,6 @@ function draw(){
 
 
   //テクノロジマップ
-
   if(showCon1%2 == 0){
     for (var t=0; t<twidth.length; t++){
         beginShape();
@@ -308,8 +314,8 @@ function moss() {
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = sqrt(random(1));
-        var x = cwidth[i]+ r * radius * cos(angle)+random(-1,1)*rSize0[i]/4;
-        var y = cheight[i] + r * radius * sin(angle)+random(-1,1)*rSize0[i]/4;
+        var x = cwidth[i]+ r * radius * cos(angle)+random(-1000,1000)*rSize0[i]/4;
+        var y = cheight[i] + r * radius * sin(angle)+random(-700,700)*rSize0[i]/4;
         numsX[i].push(x);
         numsY[i].push(y);
         //strokeWeight(3);
