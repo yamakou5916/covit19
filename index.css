@@ -224,13 +224,13 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
   cursor: pointer;
   color: #000;
 }
-/*
+
 .popup_wrap input:checked~.popup_overlay {
   opacity: 1;
   transform: scale(1);
   transition: opacity 0.5s;
 }
-*/
+
 .sample-box {
   position: relative;
 }
