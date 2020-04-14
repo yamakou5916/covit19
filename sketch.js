@@ -51,9 +51,9 @@ var xnoiseCords = [], ynoiseCords = [];
 var k=0;
 
 
-var showCon0;
-var showCon1;
-var showCon2;
+var showCon0 = 0;
+var showCon1 = 0;
+var showCon2 = 0;
 
 
 
