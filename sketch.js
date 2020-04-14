@@ -152,30 +152,34 @@ for (var t=0; t<twidth.length; t++){
     k = 0;
 }
 
-  //オファリング
+  //テクノロジマップ
 for (var t=0; t<twidth.length; t++){
     beginShape();
     for (var i = 0; i < 450; i += 30) {
-      var peaks2 = [];
+      var peaks = [];
       var j;
       if (i % 60 != 0) {
         j = startRad[t] + ((starStrkWeight + 1));
       } else {
         //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
       }
-      peaks2.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
-      peaks2.forEach(peak => {
-        peak2.x += (noise(xnoiseCords[i % 360 / 30]) * tsize[t]) +twidth[t];
-        peak2.y += (noise(ynoiseCords[i % 360 / 30]) * tsize[t]) +theight[t];
+      peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
+      peaks.forEach(peak => {
+        peak.x += (noise(xnoiseCords[i % 360 / 30]) * tsize[t]) +twidth[t];
+        peak.y += (noise(ynoiseCords[i % 360 / 30]) * tsize[t]) +theight[t];
       });
 
-      
+      noFill();
       fill(80, 180 + (180 / repnum * h), 100,80);
-      //stroke(145,193,186);
-      //strokeWeight(starStrkWeight);
 
-      peaks2.forEach(peak => {
-        curveVertex(peak2.x, peak2.y);
+      peaks.forEach(peak => {
+        stroke(145,193,186);
+        strokeWeight(starStrkWeight);
+        curveVertex(peak.x, peak.y);
+          strokeWeight(1);
+          textSize(10);
+          text(techText[t][k], peak.x, peak.y);
+
       });
       k++;
     }
