@@ -171,8 +171,8 @@ for (var t=0; t<twidth.length; t++){
 
       
       fill(80, 180 + (180 / repnum * h), 100,80);
-      stroke(145,193,186);
-      strokeWeight(starStrkWeight);
+      //stroke(145,193,186);
+      //strokeWeight(starStrkWeight);
 
       peaks.forEach(peak => {
         curveVertex(peak.x, peak.y);
