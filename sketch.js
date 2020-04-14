@@ -176,7 +176,7 @@ for (var t=0; t<twidth.length; t++){
         peak.y += (noise(ynoiseCords[i % 360 / 30]) * psize[t]) +pheight[t];
       });
 
-      noFill();
+      noStroke();
       fill(145,193,186,80);
 
       peaks.forEach(peak => {
