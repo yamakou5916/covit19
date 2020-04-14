@@ -314,8 +314,8 @@ function moss() {
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = sqrt(random(1));
-        var x = cwidth[i]+ r * radius * cos(angle)+random(-1000,1000)*rSize0[i]/4;
-        var y = cheight[i] + r * radius * sin(angle)+random(-700,700)*rSize0[i]/4;
+        var x = cwidth[i]+ r * radius * cos(angle)+random(-10,10)*rSize0[i]/2;
+        var y = cheight[i] + r * radius * sin(angle)+random(-7,7)*rSize0[i]/2;
         numsX[i].push(x);
         numsY[i].push(y);
         //strokeWeight(3);
