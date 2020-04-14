@@ -318,7 +318,7 @@ function mouseClicked(){
   //const popup_overlay = document.getElementById("popup_overlay");
   //document.getElementById('popup_overlay').style.transform = scale(1);
   popup.style.transform = "scale(1)";
-  
+  popup.style.transform = scale(1);
 };
 
 
