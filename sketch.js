@@ -161,9 +161,8 @@ function draw(){
         endShape();
         noiseUpdate();
         k = 0;
+      }
     }
-
-}
 
 
   //オファリングマップ
@@ -195,9 +194,8 @@ function draw(){
         endShape();
         noiseUpdate();
         k = 0;
+      }
     }
-
-}
 
 
 
