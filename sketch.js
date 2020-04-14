@@ -111,10 +111,10 @@ function draw(){
   if(showCon0%2 == 0){
     for(var i=0; i<11;i++){
       if (1000 * sin(radians(framCnt)) > 0) {
-        rSize[i] += 2;
+        rSize0[i] += 2;
         textnum = 0;
       } else {
-        rSize[i] -= 2;
+        rSize0[i] -= 2;
         textnum = 1;
       }
     
