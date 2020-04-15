@@ -283,7 +283,7 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
   height: 250px;
   margin: 0 auto;
   background: #000;
-  opacity: 0.1;
+  opacity: 0;
   font-weight: bold;
   border-radius: 125px;
   cursor: pointer;
