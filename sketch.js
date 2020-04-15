@@ -231,7 +231,7 @@ function draw(){
 function randomSave() {
   for(var i=0; i<11;i++){
     var radius = rSize0[i]/4;
-    var count = 1500;
+    var count = 2000;
     numsX.push([i]);
     numsY.push([i]);
     /*if(i %3 == 0){
