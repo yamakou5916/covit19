@@ -330,7 +330,7 @@ function moss(i) {
         //point(x, y);
       }
     var radius = rSize0[i]/4;
-    var count = 50;
+    var count = 100;
     numsX.push([i]);
     numsY.push([i]);
     for (var h = 0; h < count; h ++) {
