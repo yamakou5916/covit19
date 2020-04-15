@@ -58,8 +58,8 @@ var framCnt = 0;
 
 function setup(){
   pixelDensity(2);
-  //createCanvas(windowWidth, windowHeight);
-  createCanvas(1000, 1500);//描画領域を指定
+  createCanvas(windowWidth, windowHeight);
+  //createCanvas(2000, 1500);//描画領域を指定
   background(255);
   //randomSave();
   noiseSet();
