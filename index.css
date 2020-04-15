@@ -197,6 +197,18 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
 
 .inline-block_test1 h1 {
 	font-size: 12px;
+  text-decoration: underline;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.inline-block_test1 p {
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+   line-height: 300px;
+
 }
 
 .popup_wrap input {
