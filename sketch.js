@@ -328,17 +328,19 @@ function moss() {
 }
 
 function wird(){
-  var radius = rSize0[i]/16;
-    var count = 4000;
-    numsX.push([i]);
-    numsY.push([i]);
-    for (var h = 0; h < count; h ++) {
-      var angle = random(TWO_PI);
-      var r = sqrt(random(1));
-      var x = width/2+random(-1000,1000);
-      var y = height/2+random(-750,750);
-      numsX[i].push(x);
-      numsY[i].push(y);
+  for(var i=0; i<11;i++){
+    var radius = rSize0[i]/16;
+      var count = 4000;
+      numsX.push([i]);
+      numsY.push([i]);
+      for (var h = 0; h < count; h ++) {
+        var angle = random(TWO_PI);
+        var r = sqrt(random(1));
+        var x = width/2+random(-1000,1000);
+        var y = height/2+random(-750,750);
+        numsX[i].push(x);
+        numsY[i].push(y);
+    }
 }
 
 
