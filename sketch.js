@@ -100,20 +100,19 @@ function draw(){
   text("集団としての意識", width-100, height/2);
   text("文化に関する思想", width/2, height-40);
   text("社会システムに関する思想", width/2, 0+40);
-
-  //
-  if(framCnt<120){
-    moss();
-    wird();
-    strokeWeight(3);
-  }else{
-    strokeWeight(4);
-  }
   
 
   //意識・思想マップ
   if(showCon0%2 == 0){
     for(var i=0; i<11;i++){
+      //
+      if(framCnt<120){
+        moss(i);
+        wird();
+        strokeWeight(3);
+      }else{
+        strokeWeight(4);
+      }
       if (1000 * sin(radians(framCnt)) > 0) {
         rSize0[i] += 2;
         textnum = 0;
@@ -309,8 +308,8 @@ function littleCircle(i){
 
 
 
-function moss() {
-  for(var i=0; i<11;i++){
+function moss(var i) {
+  //for(var i=0; i<11;i++){
     var radius = rSize0[i]/16;
     var count = 40;
     numsX.push([i]);
@@ -325,14 +324,14 @@ function moss() {
         //strokeWeight(3);
         //stroke(rCol[i],gCol[i],bCol[i]);
         //point(x, y);
-    }
+   // }
   }
 }
 
 function wird(){
   for(var i=0; i<1;i++){
     var radius = rSize0[i];
-      var count = 40;
+      var count = 4;
       numsX.push([i]);
       numsY.push([i]);
       for (var h = 0; h < count; h ++) {
