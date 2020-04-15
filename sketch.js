@@ -105,6 +105,9 @@ function draw(){
   if(framCnt<120){
     moss();
     wird();
+    strokeWeight(3);
+  }else{
+    strokeWeight(4);
   }
   
 
@@ -264,7 +267,6 @@ function randomSave() {
 
 
 function myCircle(i){
-  strokeWeight(3);
   stroke(rCol[i],gCol[i],bCol[i]);
   //text(numsX[0][0], width/2,height/2);
   for (var h = 0; h < numsX[i].length; h++){
