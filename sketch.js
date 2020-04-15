@@ -116,10 +116,10 @@ function draw(){
         strokeWeight(3);
       }
       if (1000 * sin(radians(framCnt)) > 0) {
-        rSize0[i] += 2;
+        rSize0[i] += 1;
         textnum = 0;
       } else {
-        rSize0[i] -= 2;
+        rSize0[i] -= 1;
         textnum = 1;
       }
     
