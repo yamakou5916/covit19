@@ -59,6 +59,7 @@ var framCnt = 0;
 
 
 function setup(){
+  pixelDensity(2);
   createCanvas(2000, 1500);//描画領域を指定
   background(255);
   //randomSave();
