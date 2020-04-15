@@ -239,7 +239,7 @@ function randomSave() {
         numsX[i].push(x);
         numsY[i].push(y);
       }
-    }else if(i %3 == 1){
+    }else if(i %3 == 1){*/
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = 1-(random(random(random(1))));
@@ -248,7 +248,7 @@ function randomSave() {
         numsX[i].push(x);
         numsY[i].push(y);
       }
-    }else{*/
+    /*}else{
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = random(1);
@@ -257,7 +257,7 @@ function randomSave() {
         numsX[i].push(x);
         numsY[i].push(y);
       }
-    //}
+    //}*/
   }
 
 }
