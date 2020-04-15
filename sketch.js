@@ -57,6 +57,11 @@ var showCon2 = 1;
 
 var framCnt = 0;
 
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    canvasSetup;
+}
+
 
 function setup(){
   pixelDensity(2);
@@ -263,6 +268,7 @@ function noiseUpdate() {
 function showMind(){showCon0++;}
 function showTechnology(){showCon1++;}
 function showPwC(){showCon2++;}
+
 
 
 
