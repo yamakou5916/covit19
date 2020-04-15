@@ -62,7 +62,7 @@ function setup(){
   createCanvas(2000, 1500);//描画領域を指定
   background(255);
   //randomSave();
-  //noiseSet();
+  noiseSet();
   //images0 = loadImage("education.png");
   allImages.push(loadImage("education.png"));
   allImages.push(loadImage("lifestyle.png"));
@@ -105,16 +105,6 @@ function draw(){
   //意識・思想マップ
   if(showCon0%2 == 0){
     for(var i=0; i<11;i++){
-      /*/
-      if(framCnt<120){
-        //moss(i);
-        //wird(i);
-        strokeWeight(3);
-      }else if(120<=framCnt && framCnt<130){
-        strokeWeight(3);
-      }else{
-        strokeWeight(3);
-      }*/
       if (1000 * sin(radians(framCnt)) > 0) {
         rSize0[i] += 1;
         textnum = 0;
@@ -123,7 +113,6 @@ function draw(){
         textnum = 1;
       }
     
-      //myCircle(i);
       littleCircle(i)
       fill(0);
       noStroke();
@@ -220,65 +209,8 @@ function draw(){
       }
     }
 
-
-
-
-
 }
 
-
-
-function randomSave() {
-  for(var i=0; i<11;i++){
-    var radius = rSize0[i]/4;
-    var count = 2500;
-    numsX.push([i]);
-    numsY.push([i]);
-    /*if(i %3 == 0){
-      for (var h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = sqrt(random(1));
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
-        numsX[i].push(x);
-        numsY[i].push(y);
-      }
-    }else if(i %3 == 1){*/
-      for (var h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = 1-(random(random(random(1))));
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
-        numsX[i].push(x);
-        numsY[i].push(y);
-      }
-    /*}else{
-      for (var h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = random(1);
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
-        numsX[i].push(x);
-        numsY[i].push(y);
-      }
-    //}*/
-  }
-
-}
-
-
-function myCircle(i){
-  stroke(rCol[i],gCol[i],bCol[i]);
-  //text(numsX[0][0], width/2,height/2);
-  /*for (var h = 0; h < numsX[i].length; h++){
-    var x = numsX[i][h];
-    var y = numsY[i][h];
-    point(x, y);
-  }
-  //var aaa = numsX[0][0] = 1111111;
-  //text(numsX[i][0], cwidth,cheight);
-*/
-}
 
 function littleCircle(i){
     /*
@@ -312,57 +244,6 @@ function littleCircle(i){
 
 
 
-function moss(i) {
-  //for(var i=0; i<11;i++){
-    var radius = rSize0[i]/16;
-    var count = 40;
-    numsX.push([i]);
-    numsY.push([i]);
-      for (var h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = sqrt(random(1));
-        var x = cwidth[i]+ r * radius * cos(angle)+random(-1,1)*rSize0[i]/4;
-        var y = cheight[i] + r * radius * sin(angle)+random(-1,1)*rSize0[i]/4;
-        numsX[i].push(x);
-        numsY[i].push(y);
-        //strokeWeight(3);
-        //stroke(rCol[i],gCol[i],bCol[i]);
-        //point(x, y);
-      }
-    var radius = rSize0[i]/4;
-    var count = 100;
-    numsX.push([i]);
-    numsY.push([i]);
-    for (var h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = sqrt(random(1));
-        var x = cwidth[i]+ r * radius * cos(angle);
-        var y = cheight[i] + r * radius * sin(angle);
-        numsX[i].push(x);
-        numsY[i].push(y);
-      }
-    //}
-  }
-
-function wird(i){
-  //for(var i=0; i<1;i++){
-    var radius = rSize0[i];
-      var count = 4;
-      numsX.push([i]);
-      numsY.push([i]);
-      for (var h = 0; h < count; h ++) {
-        var angle = random(TWO_PI);
-        var r = sqrt(random(1));
-        var x = width/2+random(-1000,1000);
-        var y = height/2+random(-750,750);
-        numsX[i].push(x);
-        numsY[i].push(y);
-      //}
-    }
-  }
-
-
-
 function noiseSet() {
     for (var i = 0; i < 12; i++) {
         xnoiseCords[i] = random(-1000, 1000);
@@ -375,13 +256,6 @@ function noiseUpdate() {
         ynoiseCords[i] += 0.00003;
     }
 }
-
-
-
-
-
-
-
 
 
 
