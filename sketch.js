@@ -110,8 +110,10 @@ function draw(){
         moss(i);
         wird(i);
         strokeWeight(3);
-      }else{
+      }else if(120<=framCnt && framCnt<130){
         strokeWeight(4);
+      }else{
+        strokeWeight(5);
       }
       if (1000 * sin(radians(framCnt)) > 0) {
         rSize0[i] += 2;
