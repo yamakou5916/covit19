@@ -328,9 +328,9 @@ function moss() {
 }
 
 function wird(){
-  for(var i=0; i<11;i++){
+  for(var i=0; i<1;i++){
     var radius = rSize0[i];
-      var count = 10;
+      var count = 40;
       numsX.push([i]);
       numsY.push([i]);
       for (var h = 0; h < count; h ++) {
