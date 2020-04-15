@@ -111,9 +111,9 @@ function draw(){
         wird(i);
         strokeWeight(3);
       }else if(120<=framCnt && framCnt<130){
-        strokeWeight(4);
+        strokeWeight(3);
       }else{
-        strokeWeight(5);
+        strokeWeight(3);
       }
       if (1000 * sin(radians(framCnt)) > 0) {
         rSize0[i] += 2;
@@ -231,7 +231,7 @@ function draw(){
 function randomSave() {
   for(var i=0; i<11;i++){
     var radius = rSize0[i]/4;
-    var count = 2000;
+    var count = 2500;
     numsX.push([i]);
     numsY.push([i]);
     /*if(i %3 == 0){
