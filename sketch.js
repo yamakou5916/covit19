@@ -162,15 +162,15 @@ function draw(){
             curveVertex(peak.x, peak.y);
 
             //for(var ii = 0; ii < techText[k].length; ii++){
-              //var currentChar = techText[k].charAt(ii);
-              //push();
-              //translate(peak.x, peak.y); 
-              //rotate(radians(i) + PI/2);
-              //text(currentChar, 0, 0);
-              strokeWeight(1);
-              textSize(10);
-              text(techText[t][k], peak.x, peak.y);
-              //pop();
+            //var currentChar = techText[k].charAt(ii);
+            //push();
+            //translate(peak.x, peak.y); 
+            //rotate(radians(i) + PI/2);
+            //text(currentChar, 0, 0);
+            strokeWeight(1);
+            textSize(10);
+            text(techText[t][k], peak.x, peak.y);
+            //pop();
             //}
             
           });
@@ -284,7 +284,7 @@ function littleCircle(i){
     */ 
     noFill();
     stroke(0);
-    strokeWeight(1);
+    strokeWeight(0.5);
     ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
      
     fill(0);
