@@ -61,8 +61,8 @@ var framCnt = 0;
 function setup(){
   createCanvas(2000, 1500);//描画領域を指定
   background(255);
-  randomSave();
-  noiseSet();
+  //randomSave();
+  //noiseSet();
   //images0 = loadImage("education.png");
   allImages.push(loadImage("education.png"));
   allImages.push(loadImage("lifestyle.png"));
@@ -105,7 +105,7 @@ function draw(){
   //意識・思想マップ
   if(showCon0%2 == 0){
     for(var i=0; i<11;i++){
-      //
+      /*/
       if(framCnt<120){
         //moss(i);
         //wird(i);
@@ -114,7 +114,7 @@ function draw(){
         strokeWeight(3);
       }else{
         strokeWeight(3);
-      }
+      }*/
       if (1000 * sin(radians(framCnt)) > 0) {
         rSize0[i] += 1;
         textnum = 0;
@@ -123,7 +123,7 @@ function draw(){
         textnum = 1;
       }
     
-      myCircle(i);
+      //myCircle(i);
       littleCircle(i)
       fill(0);
       noStroke();
