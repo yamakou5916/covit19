@@ -308,7 +308,7 @@ function littleCircle(i){
 
 
 
-function moss(var i) {
+function moss(i) {
   //for(var i=0; i<11;i++){
     var radius = rSize0[i]/16;
     var count = 40;
@@ -328,7 +328,7 @@ function moss(var i) {
   }
 }
 
-function wird(var i){
+function wird(i){
   //for(var i=0; i<1;i++){
     var radius = rSize0[i];
       var count = 4;
