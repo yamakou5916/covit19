@@ -296,8 +296,8 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
 
 #defaultCanvas0{
     margin: auto auto !important;
-    width: auto !important;
-    height: 100% !important;
+    width: 100% !important;
+    height: auto !important;
 }
 
 
