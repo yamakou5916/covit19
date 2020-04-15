@@ -98,8 +98,8 @@ function draw(){
   noStroke();
   text("個人としての意識", 100, height/2);
   text("集団としての意識", width-100, height/2);
-  text("文化に関する思想", width/2, height-40);
-  text("社会システムに関する思想", width/2, 0+40);
+  text("文化に関する行動", width/2, height-40);
+  text("社会システムに関する行動", width/2, 0+40);
   
 
   //意識・思想マップ
