@@ -108,7 +108,7 @@ function draw(){
       //
       if(framCnt<120){
         moss(i);
-        wird();
+        wird(i);
         strokeWeight(3);
       }else{
         strokeWeight(4);
