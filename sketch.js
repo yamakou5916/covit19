@@ -107,8 +107,8 @@ function draw(){
     for(var i=0; i<11;i++){
       //
       if(framCnt<120){
-        moss(i);
-        wird(i);
+        //moss(i);
+        //wird(i);
         strokeWeight(3);
       }else if(120<=framCnt && framCnt<130){
         strokeWeight(3);
@@ -270,14 +270,14 @@ function randomSave() {
 function myCircle(i){
   stroke(rCol[i],gCol[i],bCol[i]);
   //text(numsX[0][0], width/2,height/2);
-  for (var h = 0; h < numsX[i].length; h++){
+  /*for (var h = 0; h < numsX[i].length; h++){
     var x = numsX[i][h];
     var y = numsY[i][h];
     point(x, y);
   }
   //var aaa = numsX[0][0] = 1111111;
   //text(numsX[i][0], cwidth,cheight);
-
+*/
 }
 
 function littleCircle(i){
