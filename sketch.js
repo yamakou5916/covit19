@@ -58,8 +58,7 @@ var framCnt = 0;
 
 function setup(){
   pixelDensity(2);
-  createCanvas(windowWidth, windowHeight);
-  //createCanvas(2000, 1500);//描画領域を指定
+  createCanvas(2000, 1500);//描画領域を指定
   background(255);
   //randomSave();
   noiseSet();
@@ -263,6 +262,15 @@ function showMind(){showCon0++;}
 function showTechnology(){showCon1++;}
 function showPwC(){showCon2++;}
 
+
+// キャンパス要素を取得
+var canvas = document.getElementById( "defaultCanvas0" ) ;
+
+// キャンパスの描画領域の横幅を500pxに変更する
+canvas.width = 500 ;
+
+// キャンパスの描画領域の横幅を取得
+var width = canvas.width ;
 
 
 
