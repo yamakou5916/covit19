@@ -293,7 +293,7 @@ function littleCircle(i){
     drawingContext.setLineDash([5, 5]);
     //line(30, height * 0.2, width - 30, height * 0.2);
     ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
-     
+    drawingContext.setLineDash([1,1]);
     fill(0);
     stroke(0);
     strokeWeight(1);
