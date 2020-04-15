@@ -310,7 +310,7 @@ function littleCircle(i){
 function moss() {
   for(var i=0; i<11;i++){
     var radius = rSize0[i]/16;
-    var count = 40;
+    var count = 10;
     numsX.push([i]);
     numsY.push([i]);
       for (var h = 0; h < count; h ++) {
