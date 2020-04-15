@@ -288,8 +288,8 @@ function littleCircle(i){
     */ 
     noFill();
     stroke(0);
-    strokeWeight(0.2);
-    //noStroke();
+    //strokeWeight(0.2);
+    noStroke();
     ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
      
     fill(0);
