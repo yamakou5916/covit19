@@ -328,8 +328,8 @@ function moss(var i) {
   }
 }
 
-function wird(){
-  for(var i=0; i<1;i++){
+function wird(var i){
+  //for(var i=0; i<1;i++){
     var radius = rSize0[i];
       var count = 4;
       numsX.push([i]);
@@ -341,7 +341,7 @@ function wird(){
         var y = height/2+random(-750,750);
         numsX[i].push(x);
         numsY[i].push(y);
-      }
+      //}
     }
   }
 
