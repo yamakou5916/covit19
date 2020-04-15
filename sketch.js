@@ -55,10 +55,14 @@ var showCon1 = 1;
 var showCon2 = 1;
 var framCnt = 0;
 
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    canvasSetup;
+}
 
 function setup(){
   pixelDensity(2);
-  createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight);
   //createCanvas(2000, 1500);//描画領域を指定
   background(255);
   //randomSave();
