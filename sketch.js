@@ -230,7 +230,7 @@ function randomSave() {
     var count = 1500;
     numsX.push([i]);
     numsY.push([i]);
-    if(i %3 == 0){
+    /*if(i %3 == 0){
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = sqrt(random(1));
@@ -248,7 +248,7 @@ function randomSave() {
         numsX[i].push(x);
         numsY[i].push(y);
       }
-    }else{
+    }else{*/
       for (var h = 0; h < count; h ++) {
         var angle = random(TWO_PI);
         var r = random(1);
@@ -257,7 +257,7 @@ function randomSave() {
         numsX[i].push(x);
         numsY[i].push(y);
       }
-    }
+    //}
   }
 
 }
