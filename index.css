@@ -174,7 +174,30 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
 
 /* ポップアップ (education) */
 
-.inline-contents2 {}
+.inline-contents {}
+
+.edu {
+ text-align: center;
+}
+
+.inline-block_test1, .inline-block_test2 {
+    display: inline-block;      /* インラインブロック要素にする */
+    background-color:  #fff;    /* 背景色指定 */
+    height: auto;              /* 高さ指定 */
+    width: 500px;
+    vertical-align: top;
+}
+
+.inline-block_test1 {
+	background-image: url("bg2.jpg");
+	width: 500px;
+	height: 625px;
+}
+
+
+.inline-block_test1 h1 {
+	font-size: 12px;
+}
 
 .popup_wrap input {
   display: none;
@@ -207,12 +230,12 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
   width: 1200px;
   height: 800px;
   padding-top: 40px;
-  padding-left: 80px;
-  padding-right: 80px;
   padding-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   overflow: scroll;
   box-sizing: border-box;
-  background-image: url("bg.jpg");
+  background-color: #fff;
   text-align: left;
 }
 
