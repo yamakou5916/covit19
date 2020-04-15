@@ -286,6 +286,8 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
   border-radius: 125px;
   cursor: pointer;
   transition: .3s ease;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .open_btn0:hover {
