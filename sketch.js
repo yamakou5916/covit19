@@ -88,7 +88,7 @@ function draw(){
 
   //軸
   noStroke();
-  fill(0);
+  fill(255);
   rect(width/2-100,0,width/2+100,100);
   fill(0);
   stroke(0);
