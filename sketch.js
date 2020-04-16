@@ -217,15 +217,17 @@ function littleCircle(i){
     stroke(0);
     strokeWeight(1);
     */
-    noFill();
     fill(250, 254, 106);
+    ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
+
+    noFill();
     //fill(255);
     stroke(0);
     strokeWeight(0.2);
     //noStroke();
     drawingContext.setLineDash([5, 5]);
     //line(30, height * 0.2, width - 30, height * 0.2);
-    ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
+    ellipse(cwidth[i], cheight[i], rSize[i]/2, rSize[i]/2);
     drawingContext.setLineDash([1,1]);
     fill(0);
     stroke(0);
