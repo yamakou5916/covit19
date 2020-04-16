@@ -97,8 +97,8 @@ function draw(){
   line(0,height/2,width,height/2);
   noStroke();
   fill(255);
-  rect(0, height/2-20,200, height/2+20);
-  rect(width-200, height/2-20,width-0, height/2+20);
+  rect(0, height/2-20,200, 40);
+  rect(width-200, height/2-20,200, 40);
   rect(width/2, height-40,100,40);
   rect(width/2, 0+40,100,40);
   fill(0);
