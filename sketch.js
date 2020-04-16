@@ -216,8 +216,10 @@ function littleCircle(i){
     fill(255);
     stroke(0);
     strokeWeight(1);
-    */ 
+    */
     noFill();
+    fill(237,237,191);
+    //fill(255);
     stroke(0);
     strokeWeight(0.2);
     //noStroke();
