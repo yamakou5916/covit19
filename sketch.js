@@ -88,8 +88,6 @@ function draw(){
 
   //軸
   noStroke();
-  fill(255);
-  rect(width/2-100,0,width/2+100,100);
   fill(0);
   stroke(0);
   strokeWeight(1);
@@ -98,6 +96,12 @@ function draw(){
   line(width/2,0,width/2,height);
   line(0,height/2,width,height/2);
   noStroke();
+  fill(255);
+  rect(width/2-50,20,100,40);
+  rect(width/2-50,height-60,100,40);
+  rect(0,height/2-20,100,40);
+  rect(0,height/2-20,100,40);
+  fill(0);
   text("個人としての意識", 100, height/2);
   text("集団としての意識", width-100, height/2);
   text("文化に関する行動", width/2, height-40);
