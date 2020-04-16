@@ -218,7 +218,7 @@ function littleCircle(i){
     strokeWeight(1);
     */
     noFill();
-    fill(237,237,191,100);
+    fill(250, 254, 106,100);
     //fill(255);
     stroke(0);
     strokeWeight(0.2);
