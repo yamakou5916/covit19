@@ -15,6 +15,7 @@
   <!-- Load d3.js and c3.js -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="chart/c3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
   <link href="index.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
@@ -118,17 +119,28 @@
         </div> 
         <div class="block4" style="background-color: #000000">
           <pre>
+            <canvas id="myChart"></canvas>
             <div id="chart" style="width:80%;margin: auto;"></div>
               <script type="text/javascript">
-                  var chart = c3.generate({
-                      bindto: '#chart',
-                      data: {
-                        columns: [
-                          ['data1', 30, 200, 100, 400, 150, 250],
-                          ['data2', 50, 20, 10, 40, 15, 25]
-                        ]
-                      }
-                  });
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    // The type of chart we want to create
+                    type: 'line',
+
+                    // The data for our dataset
+                    data: {
+                        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                        datasets: [{
+                            label: 'My First dataset',
+                            backgroundColor: 'rgb(255, 99, 132)',
+                            borderColor: 'rgb(255, 99, 132)',
+                            data: [0, 10, 5, 2, 20, 30, 45]
+                        }]
+                    },
+
+    // Configuration options go here
+    options: {}
+});
               </script>
           </pre>
         </div>
