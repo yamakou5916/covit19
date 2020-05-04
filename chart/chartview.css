@@ -5,7 +5,9 @@
   stroke-width: 5px;
 }
 
-pre {margin:0; padding:0;}
+pre {margin:0; padding:0; color:#fff;}
+
+
 
 .block1 {
     width: 100%;
