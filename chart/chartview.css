@@ -11,7 +11,7 @@ pre {margin:0; padding:0; color:#fff;}
 .outer p {color:#fff; text-align: center;}
 .block3 h2 {color:#fff; font-size: 16px; margin:0 20px;}
 .block3 p {color:#fff; margin:0 20px;}
-.block25 p {
+.block25 div {
 	width: 90px;
 	font-size: 20px;
 	text-align: center; 
@@ -20,6 +20,14 @@ pre {margin:0; padding:0; color:#fff;}
 	padding:10px 20px;
 	margin: 30px auto;
 	border-radius: 15px; 
+}
+.block25 h2 {
+	font-size: 20px;
+	text-align: center;  
+}
+.block25 p {
+	font-size: 12px;
+	text-align: center;  
 }
 
 .block1 {
