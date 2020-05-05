@@ -35,6 +35,11 @@ pre {margin:0; padding:0; color:#fff;}
 	margin: 0; 
 }
 
+.outer{
+	width: 100%;
+	min-height: 1px;
+}
+
 .block1 {
 	width: 100%; 
 	height: 100%; 
