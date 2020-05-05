@@ -22,12 +22,17 @@ pre {margin:0; padding:0; color:#fff;}
 	border-radius: 15px; 
 }
 .block25 h2 {
+	color:#fff; 
 	font-size: 20px;
-	text-align: center;  
+	text-align: center; 
+	margin: 0;
+ 
 }
 .block25 p {
+	color:#fff; 
 	font-size: 12px;
-	text-align: center;  
+	text-align: center; 
+	margin: 0; 
 }
 
 .block1 {
