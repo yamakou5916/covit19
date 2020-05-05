@@ -38,6 +38,7 @@ pre {margin:0; padding:0; color:#fff;}
 .outer{
 	width: 100%;
 	min-height: 1px;
+	background-color: #000000;
 }
 
 .block1 {
