@@ -10,30 +10,13 @@ pre {margin:0; padding:0; color:#fff;}
 
 .outer p {color:#fff; text-align: center;}
 .block3 h2 {color:#fff; font-size: 16px; margin:0 20px;}
-.block3 p {color:#fff; font-size: 10px; margin:0 20px;}
-.block25 div {
-	width: 90px;
-	font-size: 20px;
-	text-align: center; 
-	border:2px solid; 
-	border-color:white; 
-	padding:10px 20px;
-	margin: 30px auto;
-	border-radius: 15px; 
-}
-.block25 h2 {
-	color:#fff; 
-	font-size: 20px;
-	text-align: center; 
-	margin: 0;
- 
-}
-.block25 p {
-	color:#fff; 
-	font-size: 12px;
-	text-align: center; 
-	margin: 0; 
-}
+.block3 p {color:#fff; margin:0 20px;}
+.block25 div {width: 90px;font-size: 20px;text-align: center; border:2px solid; border-color:white; padding:10px 20px;margin: 30px auto;border-radius: 15px;}
+.block25 h2 {color:#fff; font-size: 20px;text-align: center; margin: 0;}
+.block25 p {color:#fff; font-size: 12px;text-align: center; margin: 0; }
+.block2 p {color:#fff; font-size: 10px; margin:0 20px;}
+.block1 p {color:#fff; font-size: 20px; margin:0 20px;}
+
 
 .outer{
 	width: 100%;
