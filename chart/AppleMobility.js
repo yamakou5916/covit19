@@ -1,33 +1,33 @@
 // 2) CSVから２次元配列に変換
-function csv2Array(str) {
-  var csvData = [];
-  var lines = str.split("\n");
-  for (var i = 0; i < lines.length; ++i) {
-    var cells = lines[i].split(",");
-    csvData.push(cells);
+function csv2Array2(str) {
+  var csvData2 = [];
+  var lines2 = str.split("\n");
+  for (var i = 0; i < lines2.length; ++i) {
+    var cells2 = lines2[i].split(",");
+    csvData2.push(cells2);
   }
   return csvData;
 }
 
-function drawBarChart(data) {
+function drawBarChart2(data) {
   // 3)chart.jsのdataset用の配列を用意
-  var tmpLabels = [], tmpData1 = [], tmpData2 = [], tmpData3 = [], tmpData4 = [], tmpData5 = [], tmpData6 = [];
+  var tmpLabels2 = [], tmpData12 = [], tmpData22 = [], tmpData32 = [], tmpData42 = [], tmpData52 = [], tmpData62 = [];
   for (var row in data) {
-    tmpLabels.push(data[row][0])
-    tmpData1.push(data[row][1])
-    tmpData2.push(data[row][2])
-    tmpData3.push(data[row][3])
-    tmpData4.push(data[row][4])
-    tmpData5.push(data[row][5])
-    tmpData6.push(data[row][6])
+    tmpLabels2.push(data[row][0])
+    tmpData12.push(data[row][1])
+    tmpData22.push(data[row][2])
+    tmpData32.push(data[row][3])
+    tmpData42.push(data[row][4])
+    tmpData52.push(data[row][5])
+    tmpData62.push(data[row][6])
   };
 
   // 4)chart.jsで描画
-  var ctx = document.getElementById("AppleMobility").getContext("2d");
-  var AppleMobility = new Chart(ctx, {
+  var ctx2 = document.getElementById("AppleMobility").getContext("2d");
+  var AppleMobility = new Chart(ctx2, {
     type: 'line',
     data: {
-      labels: tmpLabels,
+      labels: tmpLabels2,
       datasets: [
         { label: "retail & recreation", data: tmpData1, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
         { label: "grocery & pharmacy", data: tmpData2, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
@@ -73,21 +73,21 @@ function drawBarChart(data) {
 }
 
 
-function main() {
+function main2() {
   // 1) ajaxでCSVファイルをロード
-  var req = new XMLHttpRequest();
-  var filePath = './data/AppleMobility.csv';
-  req.open("GET", filePath, true);
-  req.onload = function() {
+  var req2 = new XMLHttpRequest();
+  var filePath2 = './data/AppleMobility.csv';
+  req2.open("GET", filePath, true);
+  req2.onload = function() {
     // 2) CSVデータ変換の呼び出し
-    data = csv2Array(req.responseText);
+    data2 = csv2Array2(req.responseText);
     // 3) chart.jsデータ準備、4) chart.js描画の呼び出し
-    drawBarChart(data);
+    drawBarChart2(data2);
   }
-  req.send(null);
+  req2.send(null);
 }
 
-main();
+main2();
 
 
 
