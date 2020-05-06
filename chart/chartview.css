@@ -20,7 +20,7 @@ pre {margin:0; padding:0; color:#fff;}
 
 .outer{
 	max-width: 1000px;
-	padding: auto 0;
+	margin: auto 0;
 	/*width: 100%;*/
 	min-height: 1px;
 	background-color: #000000;
@@ -85,7 +85,7 @@ pre {margin:0; padding:0; color:#fff;}
     width: 30%;
     height:100%;
     float: left;
-    display:inline-block;
+    /*display:inline-block;*/
     margin:0;
     padding:0;
     flex: 1;
@@ -96,7 +96,7 @@ pre {margin:0; padding:0; color:#fff;}
     width: 70%;
     float: right;
     height:100%;
-    display:inline-block;
+    /*display:inline-block;*/
     margin:0;
     padding:0;
     flex: 1;
