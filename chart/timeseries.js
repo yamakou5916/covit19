@@ -37,11 +37,15 @@ function csv2Array(str) {
 
 function drawBarChart(data) {
   // 3)chart.jsのdataset用の配列を用意
-  var tmpLabels = [], tmpData1 = [], tmpData2 = [];
+  var tmpLabels = [], tmpData1 = [], tmpData2 = [], tmpData3 = [], tmpData4 = [], tmpData5 = [], tmpData6 = [];
   for (var row in data) {
     tmpLabels.push(data[row][0])
     tmpData1.push(data[row][1])
     tmpData2.push(data[row][2])
+    tmpData3.push(data[row][3])
+    tmpData4.push(data[row][4])
+    tmpData5.push(data[row][5])
+    tmpData6.push(data[row][6])
   };
 
   // 4)chart.jsで描画
@@ -51,8 +55,12 @@ function drawBarChart(data) {
     data: {
       labels: tmpLabels,
       datasets: [
-        { label: "Tokyo", data: tmpData1, borderColor: 'rgb(255, 99, 132)', borderWidth: 1,/* backgroundColor: "red" */},
-        { label: "Osaka", data: tmpData2, borderColor: 'rgb(255, 99, 132)', borderWidth: 1,/* backgroundColor: "blue" */}
+        { label: "retail_and_recreation", data: tmpData1, borderColor: 'rgb(255, 99, 132)', borderWidth: 1,/* backgroundColor: "red" */},
+        { label: "grocery_and_pharmacy", data: tmpData2, borderColor: 'rgb(255, 99, 132)', borderWidth: 1,/* backgroundColor: "blue" */}
+		{ label: "parks", data: tmpData3, borderColor: 'rgb(255, 99, 132)', borderWidth: 1,/* backgroundColor: "red" */},
+        { label: "transit_stations", data: tmpData4, borderColor: 'rgb(255, 99, 132)', borderWidth: 1,/* backgroundColor: "blue" */}
+		{ label: "workplaces", data: tmpData5, borderColor: 'rgb(255, 99, 132)', borderWidth: 1,/* backgroundColor: "red" */},
+        { label: "residential", data: tmpData6, borderColor: 'rgb(255, 99, 132)', borderWidth: 1,/* backgroundColor: "blue" */}
       ]
     }
   });
