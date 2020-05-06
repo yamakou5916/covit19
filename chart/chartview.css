@@ -20,7 +20,7 @@ pre {margin:0; padding:0; color:#fff;}
 
 .outer{
 	max-width: 1000px;
-	margin: auto 0;
+	margin: auto;
 	/*width: 100%;*/
 	min-height: 1px;
 	background-color: #000000;
