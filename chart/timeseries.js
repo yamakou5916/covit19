@@ -1,11 +1,22 @@
-var chart = c3.generate({
-    bindto: '#chart',
-    data: {
-        columns: [
-        ['data1', 30, 200, 100, 400, 150, 250],
-        ['data2', 50, 20, 10, 40, 15, 25]
-        ]
-    }
-});
-
-
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+                // The data for our dataset
+                data: {
+                  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                  datasets: [{
+                    label: 'My First dataset',
+                    //backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                  },{
+                    label: 'My Second dataset',
+                    //backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [2, 9, 14, 12, 10, 20, 35]
+                  }]
+                },
+                // Configuration options go here
+                options: {}
+              });
