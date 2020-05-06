@@ -68,14 +68,10 @@ function drawBarChart(data) {
     	scales: {
     		
     		xAxes: [{
-    			type: 'linear',
     			position: 'bottom',
     			ticks: {
-    				min: "2020-02-15",
-                    max: "2020-04-30",
-                    //stepSize: 2 // 無視される
-	    			/*autoSkip: true,
-	    			maxTicksLimit: 20 //値の最大表示数*/
+    				autoSkip: true,
+    				maxTicksLimit: 10 //値の最大表示数
     			}
     		}],/*
     		yAxes: [{
