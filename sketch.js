@@ -220,9 +220,9 @@ function littleCircle(i){
     strokeWeight(1);
     */
     if (i%2==0) {
-      fill(91, 192, 170);
-    }else{
       fill(236, 89, 122);
+    }else{
+      fill(91, 192, 170);
     }
 
     ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
