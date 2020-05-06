@@ -83,7 +83,7 @@ function draw(){
 
   //背景
   noStroke();
-  fill(0,0,0);
+  fill(1,1,27);
   rect(0,0,2000,1500);
 
   //軸
@@ -220,6 +220,9 @@ function littleCircle(i){
     strokeWeight(1);
     */
     fill(91, 192, 170);
+    /*
+    fill(236, 89, 122);
+    */
     ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
 
     noFill();
