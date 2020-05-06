@@ -219,7 +219,7 @@ function littleCircle(i){
     stroke(0);
     strokeWeight(1);
     */
-    fill(250, 254, 106);
+    fill(91, 192, 170);
     ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
 
     noFill();
