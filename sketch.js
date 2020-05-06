@@ -115,7 +115,7 @@ function draw(){
       }
     
       littleCircle(i)
-      fill(255);
+      fill(0);
       noStroke();
       imageMode(CENTER);
       images0 = allImages[i];
