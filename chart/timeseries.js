@@ -66,15 +66,15 @@ function drawBarChart(data) {
 
     options: {
     	scales: {
-    		/*
+    		
     		xAxes: [{
     			type: 'linear',
     			position: 'bottom',
     			ticks: {
-    				beginAtZero: true,
-    				stepSize: 5
+    			autoSkip: true,
+    			maxTicksLimit: 20 //値の最大表示数
     			}
-    		}],
+    		}],/*
     		yAxes: [{
     			ticks: {
     				min: 0,
