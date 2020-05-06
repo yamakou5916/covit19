@@ -83,8 +83,16 @@ function drawBarChart(data) {
     				fontColor: "white",
                     fontSize: 10,
     			}
-    		}]
-    	}
+    		}],
+    	},
+    	legend: {
+    		display: true,
+    		//position: 'top',
+    		labels: {
+    			fontSize: 10,
+    			boxWidth: 10,
+    		}
+    	},
     }
 
   });
