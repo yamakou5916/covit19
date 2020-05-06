@@ -24,7 +24,7 @@ function drawBarChart(data) {
 
   // 4)chart.jsで描画
   var ctx = document.getElementById("AppleMobility").getContext("2d");
-  var myChart = new Chart(ctx, {
+  var AppleMobility = new Chart(ctx, {
     type: 'line',
     data: {
       labels: tmpLabels,
@@ -76,7 +76,7 @@ function drawBarChart(data) {
 function main() {
   // 1) ajaxでCSVファイルをロード
   var req = new XMLHttpRequest();
-  var filePath = './data/data.csv';
+  var filePath = './data/AppleMobility.csv';
   req.open("GET", filePath, true);
   req.onload = function() {
     // 2) CSVデータ変換の呼び出し
