@@ -66,6 +66,7 @@ function drawBarChart(data) {
 
     options: {
     	scales: {
+    		/*
     		xAxes: [{
     			type: 'linear',
     			position: 'bottom',
@@ -74,7 +75,7 @@ function drawBarChart(data) {
     				stepSize: 5
     			}
     		}],
-    		/*yAxes: [{
+    		yAxes: [{
     			ticks: {
     				min: 0,
     				max: 50,
