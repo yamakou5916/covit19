@@ -70,8 +70,7 @@ function drawBarChart(data) {
     			type: 'linear',
     			position: 'bottom',
     			ticks: {
-    				//min: 0,
-    				//max: 50,
+    				beginAtZero: true,
     				stepSize: 5
     			}
     		}],
