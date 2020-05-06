@@ -85,6 +85,8 @@ pre {margin:0; padding:0; color:#fff;}
     display:inline-block;
     margin:0;
     padding:0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .g-block-2 {
@@ -94,4 +96,6 @@ pre {margin:0; padding:0; color:#fff;}
     display:inline-block;
     margin:0;
     padding:0;
+    display: flex;
+    flex-wrap: wrap;
 }
