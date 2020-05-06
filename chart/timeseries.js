@@ -74,16 +74,17 @@ function drawBarChart(data) {
     				minRotation: 0,
     				autoSkip: true,
     				maxTicksLimit: 5, //値の最大表示数
-    				fontColor: "white",             // 文字の色
+    				fontColor: "white", // 文字の色
                     fontSize: 10,
     			}
     		}],
     		yAxes: [{
     			ticks: {
-    				fontColor: "white",             // 文字の色
+    				fontColor: "white",
                     fontSize: 10,
     			}
-    		    	}
+    		}]
+    	}
     }
 
   });
