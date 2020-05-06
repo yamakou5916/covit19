@@ -6,7 +6,7 @@ function csv2Array2(str) {
     var cells2 = lines2[i].split(",");
     csvData2.push(cells2);
   }
-  return csvData;
+  return csvData2;
 }
 
 function drawBarChart2(data) {
@@ -29,12 +29,12 @@ function drawBarChart2(data) {
     data: {
       labels: tmpLabels2,
       datasets: [
-        { label: "retail & recreation", data: tmpData1, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "grocery & pharmacy", data: tmpData2, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-		{ label: "parks", data: tmpData3, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "transit stations", data: tmpData4, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-		{ label: "workplaces", data: tmpData5, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "residential", data: tmpData6, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "retail & recreation", data: tmpData12, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "grocery & pharmacy", data: tmpData22, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "parks", data: tmpData32, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "transit stations", data: tmpData42, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+		    { label: "workplaces", data: tmpData52, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "residential", data: tmpData62, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
       ]
     },
 
@@ -80,7 +80,7 @@ function main2() {
   req2.open("GET", filePath2, true);
   req2.onload = function() {
     // 2) CSVデータ変換の呼び出し
-    data2 = csv2Array2(req.responseText);
+    data2 = csv2Array2(req2.responseText);
     // 3) chart.jsデータ準備、4) chart.js描画の呼び出し
     drawBarChart2(data2);
   }
