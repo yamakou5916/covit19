@@ -83,13 +83,13 @@ function draw(){
 
   //背景
   noStroke();
-  fill(255,255,255);
+  fill(0,0,0);
   rect(0,0,2000,1500);
 
   //軸
   noStroke();
-  fill(0);
-  stroke(0);
+  fill(255);
+  stroke(255);
   strokeWeight(1);
   textSize(14);
   textAlign(CENTER,CENTER);
@@ -115,7 +115,7 @@ function draw(){
       }
     
       littleCircle(i)
-      fill(0);
+      fill(255);
       noStroke();
       imageMode(CENTER);
       images0 = allImages[i];
