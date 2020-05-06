@@ -227,7 +227,7 @@ function littleCircle(i){
 
     noFill();
     //fill(255);
-    stroke(0);
+    stroke(255);
     strokeWeight(0.2);
     //noStroke();
     drawingContext.setLineDash([5, 5]);
