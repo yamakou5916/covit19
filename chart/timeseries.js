@@ -79,9 +79,9 @@ function drawBarChart(data) {
     				maxRotation: 0, 
     				minRotation: 0,
     				autoSkip: true,
-    				maxTicksLimit: 5 //値の最大表示数
+    				maxTicksLimit: 5, //値の最大表示数
     				fontColor: "white",             // 文字の色
-                    fontSize: 10  
+                    fontSize: 10,
     			}
     		}],/*
     		yAxes: [{
