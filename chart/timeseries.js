@@ -69,12 +69,6 @@ function drawBarChart(data) {
     		
     		xAxes: [{
     			position: 'bottom',
-    			scaleLabel: {
-    				display: true,                // 表示設定
-                    labelString: '横軸ラベル',    // ラベル
-                    fontColor: "white",             // 文字の色
-                    fontSize: 10                  // フォントサイズ
-                },
     			ticks: {
     				maxRotation: 0, 
     				minRotation: 0,
@@ -83,15 +77,13 @@ function drawBarChart(data) {
     				fontColor: "white",             // 文字の色
                     fontSize: 10,
     			}
-    		}],/*
+    		}],
     		yAxes: [{
     			ticks: {
-    				min: 0,
-    				max: 50,
-    				stepSize: 1
+    				fontColor: "white",             // 文字の色
+                    fontSize: 10,
     			}
-    		}]*/
-    	}
+    		    	}
     }
 
   });
