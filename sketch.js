@@ -121,7 +121,7 @@ function draw(){
       images0 = allImages[i];
       image(images0, cwidth[i], cheight[i]-10, 70, 70);
       textSize(12);
-      //textAlign(CENTER,CENTER);
+      textAlign(CENTER,CENTER);
       text(bigText[i], cwidth[i], cheight[i]+25);
       textSize(10);
       textAlign(CENTER,CENTER);
@@ -246,10 +246,10 @@ function littleCircle(i){
     fill(255);
     textSize(10);
     textAlign(CENTER,CENTER);
-    text(smallText0[i][0], cwidth[i]-rSize[i]/6, cheight[i]-rSize[i]/6);
-    text(smallText0[i][1], cwidth[i]+rSize[i]/6, cheight[i]-rSize[i]/6);
-    text(smallText0[i][2], cwidth[i]+rSize[i]/6, cheight[i]+rSize[i]/6);
-    text(smallText0[i][3], cwidth[i]-rSize[i]/6, cheight[i]+rSize[i]/6);
+    //text(smallText0[i][0], cwidth[i]-rSize[i]/6, cheight[i]-rSize[i]/6);
+    //text(smallText0[i][1], cwidth[i]+rSize[i]/6, cheight[i]-rSize[i]/6);
+    //text(smallText0[i][2], cwidth[i]+rSize[i]/6, cheight[i]+rSize[i]/6);
+    //text(smallText0[i][3], cwidth[i]-rSize[i]/6, cheight[i]+rSize[i]/6);
   }
 
 
