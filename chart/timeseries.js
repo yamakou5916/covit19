@@ -72,8 +72,8 @@ function drawBarChart(data) {
     			ticks: {
     				autoSkip: true,
     				maxTicksLimit: 5 //値の最大表示数
-    				maxRotation: 0, 
-    				minRotation: 0,
+    				//maxRotation: 0, 
+    				//minRotation: 0,
     			}
     		}],/*
     		yAxes: [{
