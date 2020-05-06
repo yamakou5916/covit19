@@ -51,8 +51,8 @@ function drawBarChart(data) {
     data: {
       labels: tmpLabels,
       datasets: [
-        { label: "Tokyo", data: tmpData1, backgroundColor: "red" },
-        { label: "Osaka", data: tmpData2, backgroundColor: "blue" }
+        { label: "Tokyo", data: tmpData1, borderColor: 'rgb(255, 99, 132)',/* backgroundColor: "red" */},
+        { label: "Osaka", data: tmpData2, borderColor: 'rgb(255, 99, 132)',/* backgroundColor: "blue" */}
       ]
     }
   });
