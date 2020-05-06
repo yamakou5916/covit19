@@ -70,10 +70,11 @@ function drawBarChart(data) {
     		xAxes: [{
     			position: 'bottom',
     			ticks: {
+    				maxRotation: 0, 
+    				minRotation: 0,
     				autoSkip: true,
     				maxTicksLimit: 5 //値の最大表示数
-    				//maxRotation: 0, 
-    				//minRotation: 0,
+    				//
     			}
     		}],/*
     		yAxes: [{
