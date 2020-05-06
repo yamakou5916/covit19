@@ -62,7 +62,7 @@ function drawBarChart(data) {
 function main() {
   // 1) ajaxでCSVファイルをロード
   var req = new XMLHttpRequest();
-  var filePath = 'data.csv';
+  var filePath = './data/data.csv';
   req.open("GET", filePath, true);
   req.onload = function() {
     // 2) CSVデータ変換の呼び出し
