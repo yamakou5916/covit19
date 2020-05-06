@@ -66,15 +66,13 @@ function drawBarChart(data) {
 
     options: {
     	scales: {
-    		/*
+
     		xAxes: [{
-    			type: 'linear',
+    			type: 'time',
+    			distribution: 'series'
     			position: 'bottom',
-    			ticks: {
-    				beginAtZero: true,
-    				stepSize: 5
-    			}
     		}],
+    		/*
     		yAxes: [{
     			ticks: {
     				min: 0,
