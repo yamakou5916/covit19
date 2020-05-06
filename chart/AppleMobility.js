@@ -77,7 +77,7 @@ function main2() {
   // 1) ajaxでCSVファイルをロード
   var req2 = new XMLHttpRequest();
   var filePath2 = './data/AppleMobility.csv';
-  req2.open("GET", filePath, true);
+  req2.open("GET", filePath2, true);
   req2.onload = function() {
     // 2) CSVデータ変換の呼び出し
     data2 = csv2Array2(req.responseText);
