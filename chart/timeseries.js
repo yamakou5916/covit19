@@ -70,18 +70,18 @@ function drawBarChart(data) {
     			type: 'linear',
     			position: 'bottom',
     			ticks: {
-    				min: 0,
-    				max: 50,
-    				stepSize: 1
+    				//min: 0,
+    				//max: 50,
+    				stepSize: 5
     			}
     		}],
-    		yAxes: [{
+    		/*yAxes: [{
     			ticks: {
     				min: 0,
     				max: 50,
     				stepSize: 1
     			}
-    		}]
+    		}]*/
     	}
     }
 
