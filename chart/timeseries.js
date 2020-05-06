@@ -71,8 +71,11 @@ function drawBarChart(data) {
     			type: 'linear',
     			position: 'bottom',
     			ticks: {
-    			autoSkip: true,
-    			maxTicksLimit: 20 //値の最大表示数
+    				min: "2020-02-15",
+                    max: "2020-04-30",
+                    //stepSize: 2 // 無視される
+	    			/*autoSkip: true,
+	    			maxTicksLimit: 20 //値の最大表示数*/
     			}
     		}],/*
     		yAxes: [{
