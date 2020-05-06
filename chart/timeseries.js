@@ -62,7 +62,29 @@ function drawBarChart(data) {
 		{ label: "workplaces", data: tmpData5, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 1,/* backgroundColor: "red" */},
         { label: "residential", data: tmpData6, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 1,/* backgroundColor: "blue" */},
       ]
+    },
+
+    options: {
+    	scales: {
+    		xAxes: [{
+    			type: 'linear',
+    			position: 'bottom',
+    			ticks: {
+    				min: 0,
+    				max: 50,
+    				stepSize: 1
+    			}
+    		}],
+    		yAxes: [{
+    			ticks: {
+    				min: 0,
+    				max: 50,
+    				stepSize: 1
+    			}
+    		}]
+    	}
     }
+
   });
 }
 
