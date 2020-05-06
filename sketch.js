@@ -234,14 +234,14 @@ function littleCircle(i){
     //line(30, height * 0.2, width - 30, height * 0.2);
     ellipse(cwidth[i], cheight[i], rSize[i]/2, rSize[i]/2);
     drawingContext.setLineDash([1,1]);
-    fill(0);
-    stroke(0);
+    fill(255);
+    stroke(255);
     strokeWeight(1);
     ellipse(cwidth[i]-rSize[i]/6, cheight[i]-rSize[i]/6, 80, 80);
     ellipse(cwidth[i]+rSize[i]/6, cheight[i]-rSize[i]/6, 80, 80);
     ellipse(cwidth[i]+rSize[i]/6, cheight[i]+rSize[i]/6, 80, 80);
     ellipse(cwidth[i]-rSize[i]/6, cheight[i]+rSize[i]/6, 80, 80);
-    fill(255);
+    fill(0);
     textSize(10);
     textAlign(CENTER,CENTER);
     text(smallText0[i][0], cwidth[i]-rSize[i]/6, cheight[i]-rSize[i]/6);
