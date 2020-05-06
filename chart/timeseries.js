@@ -47,7 +47,7 @@ function drawBarChart(data) {
   // 4)chart.jsで描画
   var ctx = document.getElementById("myChart").getContext("2d");
   var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
       labels: tmpLabels,
       datasets: [
@@ -57,9 +57,6 @@ function drawBarChart(data) {
     }
   });
 }
-
-
-
 
 
 function main() {
