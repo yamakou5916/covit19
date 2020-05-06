@@ -96,7 +96,7 @@ function draw(){
   line(width/2,80,width/2,height-80);
   line(200,height/2,width-200,height/2);
   noStroke();
-  fill(0);
+  fill(255);
   text("個人としての意識", 100, height/2);
   text("集団としての意識", width-100, height/2);
   text("文化に関する行動", width/2, height-40);
