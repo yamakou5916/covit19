@@ -219,10 +219,12 @@ function littleCircle(i){
     stroke(0);
     strokeWeight(1);
     */
-    fill(91, 192, 170);
-    /*
-    fill(236, 89, 122);
-    */
+    if (i%2==0) {
+      fill(91, 192, 170);
+    }else{
+      fill(236, 89, 122);
+    }
+    
     ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
 
     noFill();
