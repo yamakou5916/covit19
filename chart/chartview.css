@@ -86,7 +86,7 @@ pre {margin:0; padding:0; color:#fff;}
     height:100%;
     float: left;
     /*display:inline-block;*/
-    margin:0;
+    margin: auto;
     padding:0;
     flex: 1;
 
@@ -97,7 +97,7 @@ pre {margin:0; padding:0; color:#fff;}
     float: right;
     height:100%;
     /*display:inline-block;*/
-    margin:0;
+    margin: auto;
     padding:0;
     flex: 1;
 }
