@@ -72,7 +72,7 @@ function main3() {
   // 1) ajaxでCSVファイルをロード
   var req3 = new XMLHttpRequest();
   var filePath3 = './data/MigrantMobility.csv';
-  req3.open("GET", filePath2, true);
+  req3.open("GET", filePath3, true);
   req3.onload = function() {
     // 2) CSVデータ変換の呼び出し
     data3 = csv2Array3(req3.responseText);
