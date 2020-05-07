@@ -21,8 +21,8 @@ function drawBarChart4(data) {
   };
 
   // 4)chart.jsで描画
-  var ctx4 = document.getElementById("AppleMobility").getContext("2d");
-  var AppleMobility = new Chart(ctx4, {
+  var ctx4 = document.getElementById("Bankruptcy").getContext("2d");
+  var Bankruptcy = new Chart(ctx4, {
     type: 'line',
     data: {
       labels: tmpLabels4,
@@ -71,7 +71,7 @@ function drawBarChart4(data) {
 function main4() {
   // 1) ajaxでCSVファイルをロード
   var req4 = new XMLHttpRequest();
-  var filePath4 = './data/AppleMobility.csv';
+  var filePath4 = './data/Bankruptcy.csv';
   req4.open("GET", filePath4, true);
   req4.onload = function() {
     // 2) CSVデータ変換の呼び出し
