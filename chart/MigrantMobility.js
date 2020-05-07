@@ -27,9 +27,9 @@ function drawBarChart3(data) {
     data: {
       labels: tmpLabels3,
       datasets: [
-        { label: "driving", data: tmpData13, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "transit", data: tmpData23, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "walking", data: tmpData33, borderColor: 'rgb(188, 250, 254)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "他道府県から東京都への転入者数【人】", data: tmpData13, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "東京都から他道府県への転出者数【人】", data: tmpData23, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "他都道府県からの転入者数【人】", data: tmpData33, borderColor: 'rgb(188, 250, 254)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 
