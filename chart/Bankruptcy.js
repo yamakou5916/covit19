@@ -11,12 +11,11 @@ function csv2Array4(str) {
 
 function drawBarChart4(data) {
   // 3)chart.jsのdataset用の配列を用意
-  var tmpLabels4 = [], tmpData14 = [], tmpData24 = [], tmpData34 = [];
+  var tmpLabels4 = [], tmpData14 = [], tmpData24 = [];
   for (var row in data) {
     tmpLabels4.push(data[row][0])
     tmpData14.push(data[row][1])
     tmpData24.push(data[row][2])
-    tmpData34.push(data[row][3])
 
   };
 
@@ -27,9 +26,8 @@ function drawBarChart4(data) {
     data: {
       labels: tmpLabels4,
       datasets: [
-        { label: "他道府県から東京都への転入者数【人】", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "東京都から他道府県への転出者数【人】", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "他都道府県からの転入者数【人】", data: tmpData34, borderColor: 'rgb(188, 250, 254)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "倒産数", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "負債総額", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
       ]
     },
 
