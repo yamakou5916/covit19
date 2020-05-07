@@ -11,55 +11,57 @@ function csv2Array4(str) {
 
 function drawBarChart4(data) {
   // 3)chart.jsのdataset用の配列を用意
-  var tmpLabels4 = [], tmpData14 = [], tmpData24 = [];
+  var tmpLabels4 = [], tmpData14 = [], tmpData24 = [], tmpData34 = [];
   for (var row in data) {
     tmpLabels4.push(data[row][0])
     tmpData14.push(data[row][1])
     tmpData24.push(data[row][2])
+    tmpData34.push(data[row][3])
 
   };
 
   // 4)chart.jsで描画
-  var ctx4 = document.getElementById("MigrantMobility").getContext("2d");
-  var CountryMobility = new Chart(ctx4, {
+  var ctx4 = document.getElementById("AppleMobility").getContext("2d");
+  var AppleMobility = new Chart(ctx4, {
     type: 'line',
     data: {
       labels: tmpLabels4,
       datasets: [
-        { label: "倒産数", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "負債総額", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "driving", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "transit", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "walking", data: tmpData34, borderColor: 'rgb(188, 250, 254)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 
     options: {
-    	scales: {
-    		
-    		xAxes: [{
-    			position: 'bottom',
-    			ticks: {
-    				maxRotation: 0, 
-    				minRotation: 0,
-    				autoSkip: true,
-    				maxTicksLimit: 5, //値の最大表示数
-    				fontColor: "white", // 文字の色
+      scales: {
+        
+        xAxes: [{
+          position: 'bottom',
+          ticks: {
+            maxRotation: 0, 
+            minRotation: 0,
+            autoSkip: true,
+            maxTicksLimit: 5, //値の最大表示数
+            fontColor: "white", // 文字の色
                     fontSize: 10,
-    			}
-    		}],
-    		yAxes: [{
-    			ticks: {
-    				fontColor: "white",
+          }
+        }],
+        yAxes: [{
+          ticks: {
+            fontColor: "white",
                     fontSize: 10,
-    			}
-    		}],
-    	},
-    	legend: {
-    		display: true,
-    		//position: 'top',
-    		labels: {
-    			fontSize: 10,
-    			boxWidth: 10,
-    		}
-    	},
+          }
+        }],
+      },
+      legend: {
+        display: true,
+        //position: 'top',
+        labels: {
+          fontSize: 10,
+          boxWidth: 10,
+        }
+      },
     }
 
   });
@@ -69,8 +71,8 @@ function drawBarChart4(data) {
 function main4() {
   // 1) ajaxでCSVファイルをロード
   var req4 = new XMLHttpRequest();
-  var filePath4 = './data/MigrantMobility.csv';
-  req4.open("GET", filePath4, true);
+  var filePath4 = './data/AppleMobility.csv';
+  req4.open("GET", filePath2, true);
   req4.onload = function() {
     // 2) CSVデータ変換の呼び出し
     data4 = csv2Array4(req4.responseText);
