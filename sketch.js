@@ -120,7 +120,7 @@ function draw(){
       imageMode(CENTER);
       images0 = allImages[i];
       image(images0, cwidth[i], cheight[i]-50, 20, 20);
-      textSize(12);
+      textSize(16);
       textStyle(BOLD);
       textAlign(CENTER,CENTER);
       text(bigText[i], cwidth[i], cheight[i]);
