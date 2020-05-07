@@ -72,7 +72,7 @@ function main4() {
   // 1) ajaxでCSVファイルをロード
   var req4 = new XMLHttpRequest();
   var filePath4 = './data/AppleMobility.csv';
-  req4.open("GET", filePath2, true);
+  req4.open("GET", filePath4, true);
   req4.onload = function() {
     // 2) CSVデータ変換の呼び出し
     data4 = csv2Array4(req4.responseText);
