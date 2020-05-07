@@ -63,17 +63,17 @@ function setup(){
   //randomSave();
   noiseSet();
   //images0 = loadImage("education.png");
-  allImages.push(loadImage("image/education.png"));
-  allImages.push(loadImage("image/lifestyle.png"));
-  allImages.push(loadImage("image/entertainment.png"));
-  allImages.push(loadImage("image/workstyle.png"));
-  allImages.push(loadImage("image/lifeevent.png"));
-  allImages.push(loadImage("image/healthcare.png"));
-  allImages.push(loadImage("image/lifeline.png"));
-  allImages.push(loadImage("image/manufacture.png"));
-  allImages.push(loadImage("image/supplychain.png"));
-  allImages.push(loadImage("image/management.png"));
-  allImages.push(loadImage("image/medical.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
 
 }
 
