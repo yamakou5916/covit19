@@ -119,13 +119,15 @@ function draw(){
       noStroke();
       imageMode(CENTER);
       images0 = allImages[i];
-      image(images0, cwidth[i], cheight[i]-10, 20, 20);
+      image(images0, cwidth[i], cheight[i]-50, 20, 20);
       textSize(12);
+      textStyle(BOLD);
       textAlign(CENTER,CENTER);
-      text(bigText[i], cwidth[i], cheight[i]+25);
-      textSize(10);
-      textAlign(CENTER,CENTER);
-      text(titleText[i], cwidth[i], cheight[i]-45);
+      //text(bigText[i], cwidth[i], cheight[i]);
+      //textSize(10);
+      //textAlign(CENTER,CENTER);
+      //text(titleText[i], cwidth[i], cheight[i]-45);
+      textStyle(NORMAL);
     }
   }
 
