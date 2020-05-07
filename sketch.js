@@ -123,7 +123,7 @@ function draw(){
       textSize(12);
       textStyle(BOLD);
       textAlign(CENTER,CENTER);
-      //text(bigText[i], cwidth[i], cheight[i]);
+      text(bigText[i], cwidth[i], cheight[i]);
       //textSize(10);
       //textAlign(CENTER,CENTER);
       //text(titleText[i], cwidth[i], cheight[i]-45);
