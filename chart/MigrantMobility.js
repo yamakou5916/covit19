@@ -68,7 +68,7 @@ function drawBarChart3(data) {
 }
 
 
-function main2() {
+function main3() {
   // 1) ajaxでCSVファイルをロード
   var req3 = new XMLHttpRequest();
   var filePath3 = './data/MigrantMobility.csv';
