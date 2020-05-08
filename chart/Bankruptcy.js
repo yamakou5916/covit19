@@ -24,8 +24,8 @@ function drawBarChart4(data) {
     data: {
       labels: tmpLabels4,
       datasets: [
-        { type: 'line', label: "driving", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { type: 'line',label: "transit", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { type: 'line', label: "driving", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,yAxisID: "y-axis-1",/* backgroundColor: "red" */},
+        { type: 'line',label: "transit", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,yAxisID: "y-axis-2",/* backgroundColor: "blue" */},
       ]
     },
 
@@ -44,10 +44,22 @@ function drawBarChart4(data) {
           }
         }],
         yAxes: [{
+          id: "y-axis-1",   // Y軸のID
+          type: "linear",   // linear固定 
+          position: "left", // どちら側に表示される軸か？
           ticks: {
             fontColor: "white",
-                    fontSize: 10,
+            fontSize: 10,
           }
+        }, {
+          id: "y-axis-2",
+          type: "linear", 
+          position: "right",
+          ticks: {
+            max: 200,
+            min: 0,
+            //stepSize: .5
+          },
         }],
       },
       legend: {
