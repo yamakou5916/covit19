@@ -11,30 +11,22 @@ function csv2Array7(str) {
 
 function drawBarChart7(data) {
   // 3)chart.jsのdataset用の配列を用意
-  var tmpLabels7 = [], tmpData17 = [], tmpData27 = [], tmpData37 = [], tmpData47 = [], tmpData57 = [], tmpData67 = [];
+  var tmpLabels7 = [], tmpData17 = [], tmpData27 = [], tmpData37 = [];
   for (var row in data) {
     tmpLabels7.push(data[row][0])
     tmpData17.push(data[row][1])
     tmpData27.push(data[row][2])
-    tmpData37.push(data[row][3])
-    tmpData47.push(data[row][4])
-    tmpData57.push(data[row][5])
-    tmpData67.push(data[row][6])
   };
 
   // 7)chart.jsで描画
   var ctx7 = document.getElementById("POS").getContext("2d");
   var POS = new Chart(ctx7, {
-    type: 'line',
+  type: 'bar',  
     data: {
       labels: tmpLabels7,
       datasets: [
-        { label: "食品", data: tmpData17, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "飲料", data: tmpData27, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "雑貨", data: tmpData37, borderColor: 'rgb(188, 270, 277)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "化粧品", data: tmpData47, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "ヘルスケア", data: tmpData57, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "その他", data: tmpData67, borderColor: 'rgb(188, 270, 277)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        {  label: "倒産数", data: tmpData17, borderColor: 'rgb(57, 127, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: 'rgba(57, 127, 189, 0.5)'},
+        { type: 'line',label: "transit", data: tmpData27, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,yAxisID: "y-axis-2",/* backgroundColor: "blue" */},
       ]
     },
 
@@ -47,16 +39,27 @@ function drawBarChart7(data) {
             maxRotation: 0, 
             minRotation: 0,
             autoSkip: true,
-            maxTicksLimit: 7, //値の最大表示数
+            maxTicksLimit: 5, //値の最大表示数
             fontColor: "white", // 文字の色
                     fontSize: 10,
           }
         }],
         yAxes: [{
+          id: "y-axis-1",   // Y軸のID
+          type: "linear",   // linear固定 
+          position: "left", // どちら側に表示される軸か？
           ticks: {
             fontColor: "white",
-                    fontSize: 10,
+            fontSize: 10,
           }
+        }, {
+          id: "y-axis-2",
+          type: "linear", 
+          position: "right",
+          ticks: {
+            fontColor: "white",
+            fontSize: 10,
+          },
         }],
       },
       legend: {
