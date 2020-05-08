@@ -25,7 +25,7 @@ function drawBarChart4(data) {
       labels: tmpLabels4,
       datasets: [
         { type: 'line', label: "driving", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { type: 'bar',label: "transit", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { type: 'line',label: "transit", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
       ]
     },
 
