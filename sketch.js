@@ -55,10 +55,12 @@ var showCon1 = 1;
 var showCon2 = 1;
 var framCnt = 0;
 
+var canvas;
 
 function setup(){
   pixelDensity(2);
-  createCanvas(2000, 1500);//描画領域を指定
+  canvas = createCanvas(2000, 1500);//描画領域を指定
+  canvas.parent("P5Canvas");
   background(255);
   //randomSave();
   noiseSet();
