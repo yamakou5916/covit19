@@ -28,10 +28,10 @@ function drawBarChart11(data) {
     data: {
       labels: tmpLabels11,
       datasets: [
-        { label: "全産業活動指数", data: tmpData111, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "建設業活動指数", data: tmpData211, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "鉱工業生産指数", data: tmpData311, borderColor: 'rgb(188, 270, 277)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "第３次産業活動指数", data: tmpData411, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "給与所得", data: tmpData111, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "事業所得", data: tmpData211, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "年金所得", data: tmpData311, borderColor: 'rgb(188, 270, 277)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "その他", data: tmpData411, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 
