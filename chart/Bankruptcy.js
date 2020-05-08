@@ -56,9 +56,8 @@ function drawBarChart4(data) {
           type: "linear", 
           position: "right",
           ticks: {
-            max: 200,
-            min: 0,
-            //stepSize: .5
+            fontColor: "white",
+            fontSize: 10,
           },
         }],
       },
