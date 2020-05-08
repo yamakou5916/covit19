@@ -11,31 +11,27 @@ function csv2Array7(str) {
 
 function drawBarChart7(data) {
   // 3)chart.jsのdataset用の配列を用意
-  var tmpLabels7 = [], tmpData17 = [], tmpData27 = [], tmpData37 = [], tmpData47 = [], tmpData57 = [], tmpData67 = []
+  var tmpLabels7 = [], tmpData17 = [], tmpData27 = [], tmpData37 = [], tmpData47 = [];
   for (var row in data) {
     tmpLabels7.push(data[row][0])
     tmpData17.push(data[row][1])
     tmpData27.push(data[row][2])
     tmpData37.push(data[row][3])
     tmpData47.push(data[row][4])
-    tmpData57.push(data[row][5])
-    tmpData67.push(data[row][6])
 
   };
 
   // 7)chart.jsで描画
-  var ctx7 = document.getElementById("POS").getContext("2d");
-  var POS = new Chart(ctx7, {
+  var ctx7 = document.getElementById("Industry").getContext("2d");
+  var Industry = new Chart(ctx7, {
     type: 'line',
     data: {
       labels: tmpLabels7,
       datasets: [
-        { label: "食品", data: tmpData17, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "飲料", data: tmpData27, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "雑貨", data: tmpData37, borderColor: 'rgb(188, 270, 277)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "化粧品", data: tmpData47, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "ヘルスケア", data: tmpData57, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "その他", data: tmpData67, borderColor: 'rgb(188, 270, 277)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "全産業活動指数", data: tmpData17, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "建設業活動指数", data: tmpData27, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "鉱工業生産指数", data: tmpData37, borderColor: 'rgb(188, 270, 277)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "第３次産業活動指数", data: tmpData47, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 
@@ -43,7 +39,7 @@ function drawBarChart7(data) {
       scales: {
         
         xAxes: [{
-          position: 'bottom',
+          Industryition: 'bottom',
           ticks: {
             maxRotation: 0, 
             minRotation: 0,
@@ -62,7 +58,7 @@ function drawBarChart7(data) {
       },
       legend: {
         display: true,
-        //position: 'top',
+        //Industryition: 'top',
         labels: {
           fontSize: 10,
           boxWidth: 10,
@@ -77,7 +73,7 @@ function drawBarChart7(data) {
 function main7() {
   // 1) ajaxでCSVファイルをロード
   var req7 = new XMLHttpRequest();
-  var filePath7 = './data/POS.csv';
+  var filePath7 = './data/Industry.csv';
   req7.open("GET", filePath7, true);
   req7.onload = function() {
     // 2) CSVデータ変換の呼び出し
