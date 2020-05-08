@@ -27,10 +27,10 @@ function drawBarChart10(data) {
     data: {
       labels: tmpLabels10,
       datasets: [
-        { label: "全産業活動指数", data: tmpData110, borderColor: 'rgb(1010, 1210, 1109)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "建設業活動指数", data: tmpData210, borderColor: 'rgb(91, 192, 1100)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "鉱工業生産指数", data: tmpData310, borderColor: 'rgb(11010, 2100, 21010)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "第３次産業活動指数", data: tmpData410, borderColor: 'rgb(1010, 1210, 1109)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "全産業活動指数", data: tmpData110, borderColor: 'rgb(99, 129, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "建設業活動指数", data: tmpData210, borderColor: 'rgb(91, 192, 190)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "鉱工業生産指数", data: tmpData310, borderColor: 'rgb(188, 290, 299)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "第３次産業活動指数", data: tmpData410, borderColor: 'rgb(99, 129, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 
