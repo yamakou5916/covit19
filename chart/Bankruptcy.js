@@ -16,20 +16,16 @@ function drawBarChart4(data) {
     tmpLabels4.push(data[row][0])
     tmpData14.push(data[row][1])
     tmpData24.push(data[row][2])
-    tmpData34.push(data[row][3])
-
   };
 
   // 4)chart.jsで描画
   var ctx4 = document.getElementById("Bankruptcy").getContext("2d");
-  var Bankruptcy = new Chart(ctx4, {
-    type: 'line',
+  var Bankruptcy = new Chart(ctx4, {   
     data: {
       labels: tmpLabels4,
       datasets: [
-        { label: "driving", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "transit", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "walking", data: tmpData34, borderColor: 'rgb(188, 250, 254)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { type: 'line', label: "driving", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { type: 'bar',label: "transit", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
       ]
     },
 
