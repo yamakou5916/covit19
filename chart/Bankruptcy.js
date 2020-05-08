@@ -20,11 +20,12 @@ function drawBarChart4(data) {
 
   // 4)chart.jsで描画
   var ctx4 = document.getElementById("Bankruptcy").getContext("2d");
-  var Bankruptcy = new Chart(ctx4, {   
+  var Bankruptcy = new Chart(ctx4, {
+    type: 'bar',  
     data: {
       labels: tmpLabels4,
       datasets: [
-        { type: 'bar', label: "倒産数", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: 'rgba(57, 124, 189, 0.5)'},
+        {  label: "倒産数", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: 'rgba(57, 124, 189, 0.5)'},
         { type: 'line',label: "transit", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,yAxisID: "y-axis-2",/* backgroundColor: "blue" */},
       ]
     },
