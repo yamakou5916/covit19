@@ -11,7 +11,7 @@ function csv2Array7(str) {
 
 function drawBarChart7(data) {
   // 3)chart.jsのdataset用の配列を用意
-  var tmpLabels7 = [], tmpData17 = [], tmpData27 = [], tmpData37 = [], tmpData47 = [], tmpData57 = [], tmpData67 = [],;
+  var tmpLabels7 = [], tmpData17 = [], tmpData27 = [], tmpData37 = [], tmpData47 = [], tmpData57 = [], tmpData67 = []
   for (var row in data) {
     tmpLabels7.push(data[row][0])
     tmpData17.push(data[row][1])
