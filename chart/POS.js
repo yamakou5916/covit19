@@ -11,12 +11,15 @@ function csv2Array7(str) {
 
 function drawBarChart7(data) {
   // 3)chart.jsのdataset用の配列を用意
-  var tmpLabels7 = [], tmpData17 = [], tmpData27 = [], tmpData37 = [];
+  var tmpLabels7 = [], tmpData17 = [], tmpData27 = [], tmpData37 = [], tmpData47 = [], tmpData57 = [], tmpData67 = [],;
   for (var row in data) {
     tmpLabels7.push(data[row][0])
     tmpData17.push(data[row][1])
     tmpData27.push(data[row][2])
     tmpData37.push(data[row][3])
+    tmpData47.push(data[row][4])
+    tmpData57.push(data[row][5])
+    tmpData67.push(data[row][6])
 
   };
 
@@ -27,9 +30,12 @@ function drawBarChart7(data) {
     data: {
       labels: tmpLabels7,
       datasets: [
-        { label: "driving", data: tmpData17, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "transit", data: tmpData27, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "walking", data: tmpData37, borderColor: 'rgb(188, 270, 277)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "食品", data: tmpData17, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "飲料", data: tmpData27, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "雑貨", data: tmpData37, borderColor: 'rgb(188, 270, 277)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "化粧品", data: tmpData17, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "ヘルスケア", data: tmpData27, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "その他", data: tmpData37, borderColor: 'rgb(188, 270, 277)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 
