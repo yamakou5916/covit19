@@ -32,6 +32,29 @@ body {
   text-align: center;
 }
 
+.top {
+	background-color: yellow;
+	height:100vh;
+	width:100vw;
+	display: table;
+
+}
+
+
+.top p {
+	text-align: center;
+	margin: auto 0;
+	display: table-cell;
+  vertical-align: middle;
+  
+}
+
+#defaultCanvas0{
+    margin: auto auto !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
 /* メニュー */
 #sidebarMenu h1 {
   color: #fff;
@@ -158,8 +181,6 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
   margin-top: 3px;
 }
 
-
-
 #text-button {
   display: block;
   cursor: pointer;
@@ -169,138 +190,3 @@ input[type=checkbox]:checked~ .sidebarIconToggle >.diagonal.part-2 {
   background-color: #fff;
   color: #000;
 }
-
-
-/* ポップアップ (education) */
-
-.inline-contents {}
-
-.edu {
- text-align: center;
-}
-
-.inline-block_test1, .inline-block_test2 {
-    display: inline-block;      /* インラインブロック要素にする */
-    background-color:  #fff;    /* 背景色指定 */
-    height: auto;              /* 高さ指定 */
-    width: 500px;
-    vertical-align: top;
-}
-
-.inline-block_test1 {
-	background-image: url("bg2.jpg");
-	width: 500px;
-	height: 625px;
-}
-
-
-.inline-block_test1 h1 {
-	font-size: 12px;
-  text-decoration: underline;
-  margin: 0 auto;
-  padding-top: 20px;
-  padding-left: 20px;
-}
-
-.inline-block_test1 p {
-  font-size: 30px;
-  margin: 0 auto;
-  text-align: center;
-   line-height: 300px;
-
-}
-
-.popup_wrap input {
-  display: none;
-  position: -webkit-sticky;
-  position: sticky;
-}
-
-.popup_overlay {
-  display: flex;
-  justify-content: center;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  transition: opacity 0.5s, transform 0s 0.5s;
-  transform: scale(0);
-}
-
-.popup_trigger {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.popup_content {
-  position: relative;
-  align-self: center;
-  width: 1200px;
-  height: 800px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 50px;
-  padding-right: 50px;
-  overflow: scroll;
-  box-sizing: border-box;
-  background-color: #fff;
-  text-align: left;
-}
-
-.close_btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
-  cursor: pointer;
-  color: #000;
-}
-
-.popup_wrap input:checked~.popup_overlay {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.5s;
-}
-
-.sample-box {
-  position: relative;
-}
-
-.open_btn0 {
-  position: absolute;
-  top: 325px;
-  left: 275px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
-  background: #000;
-  opacity: 0.1;
-  font-weight: bold;
-  border-radius: 125px;
-  cursor: pointer;
-  transition: .3s ease;
-}
-
-.open_btn0:hover {
-  background: #000;
-  transition: .3s ease;
-}
-
-
-#defaultCanvas0{
-    margin: auto auto !important;
-    width: 100% !important;
-    height: auto !important;
-}
-
-
-
-
