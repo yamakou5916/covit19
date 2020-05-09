@@ -53,7 +53,7 @@ body {
 .top p {
 	text-align: center;
 	margin: auto 0;
-	display: table-cell;
+	/*display: table-cell;
   /*vertical-align: middle;*/
   color: #fff;
   opacity: 1;
