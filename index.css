@@ -33,7 +33,7 @@ body {
 }
 
 .top {
-  background-image: url('mask.jpg') center center / cover no-repeat fixed;
+  background-image: url('mask.jpg');
 	/*background-color: yellow;*/
 	height:100vh;
 	width:100vw;
