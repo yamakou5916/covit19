@@ -37,7 +37,7 @@ function drawBarChart2(data) {
     	scales: {
     		xAxes: [{
     			position: 'bottom',
-          gridLines: {color: "rgba(255, 255, 255, 0.2)"},
+          gridLines: {color: rgba(255, 255, 255, 0.2)},
     			ticks: {
     				maxRotation: 0, 
     				minRotation: 0,
