@@ -292,7 +292,7 @@ function mouseClicked(){
     fill(255);
     rect(cwidth[0]-80,cheight[0]-80,160,160);
     document.getElementById("text").innerHTML = "クリックされた！";
-    location.href = 'section1';
+    location.href = 'https://yamakou5916.com/#section1';
     //const popup_overlay = document.getElementById("popup_overlay");
   }
   document.getElementById('popup_overlay').style.backgroundColor = 'red';
