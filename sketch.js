@@ -289,14 +289,23 @@ const popup = document.getElementById("popup_overlay");
 
 function mouseClicked(){
   if(mouseX < cwidth[0]+rSize0[0]/2 & mouseX > cwidth[0]-rSize0[0]/2 & mouseY < cwidth[0]+rSize0[0]/2 & mouseY > cheight[0]-rSize0[0]/2){
-    fill(255);
-    rect(cwidth[0]-80,cheight[0]-80,160,160);
-    document.getElementById("text").innerHTML = "クリックされた！";
+    location.href = 'https://yamakou5916.com/#section0';
+  }else if(mouseX < cwidth[1]+rSize0[1]/2 & mouseX > cwidth[1]-rSize0[1]/2 & mouseY < cwidth[1]+rSize0[1]/2 & mouseY > cheight[1]-rSize0[1]/2){
     location.href = 'https://yamakou5916.com/#section1';
-    //const popup_overlay = document.getElementById("popup_overlay");
+  }else if(mouseX < cwidth[2]+rSize0[2]/2 & mouseX > cwidth[2]-rSize0[2]/2 & mouseY < cwidth[2]+rSize0[2]/2 & mouseY > cheight[2]-rSize0[2]/2){
+    location.href = 'https://yamakou5916.com/#section2';
+  }else if(mouseX < cwidth[3]+rSize0[3]/2 & mouseX > cwidth[3]-rSize0[3]/2 & mouseY < cwidth[3]+rSize0[3]/2 & mouseY > cheight[3]-rSize0[3]/2){
+    location.href = 'https://yamakou5916.com/#section3';
+  }else if(mouseX < cwidth[4]+rSize0[4]/2 & mouseX > cwidth[4]-rSize0[4]/2 & mouseY < cwidth[4]+rSize0[4]/2 & mouseY > cheight[4]-rSize0[4]/2){
+    location.href = 'https://yamakou5916.com/#section4';
+  }else if(mouseX < cwidth[5]+rSize0[5]/2 & mouseX > cwidth[5]-rSize0[5]/2 & mouseY < cwidth[5]+rSize0[5]/2 & mouseY > cheight[5]-rSize0[5]/2){
+    location.href = 'https://yamakou5916.com/#section5';
   }
-  document.getElementById('popup_overlay').style.backgroundColor = 'red';
+  //document.getElementById("text").innerHTML = "クリックされた！";
+  //document.getElementById('popup_overlay').style.backgroundColor = 'red';
   //popup.style.transform = "scale(1)";
+  //const popup_overlay = document.getElementById("popup_overlay");
+
 };
 
 
