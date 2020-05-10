@@ -10,6 +10,10 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+h2 {
+  color: #fff;
+}
+
 .header {
   display: block;
   margin: 0 auto;
