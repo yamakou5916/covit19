@@ -65,6 +65,10 @@ body {
     height: auto !important;
 }
 
+.logo {
+	width:100vw;
+}
+
 /* メニュー */
 #sidebarMenu h1 {
   color: #fff;
