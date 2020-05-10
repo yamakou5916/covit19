@@ -17,6 +17,12 @@ pre {margin:0; padding:0; color:#fff;}
     padding:10px 20px;margin: 30px auto;}
 .block25 h2 {color:#01011b; font-size: 16px;text-align: center; margin: 0;}
 .block25 p {color:#01011b; font-size: 12px;text-align: center; margin: 0; }
+.block25-up div {width: 90px;font-size: 20px;text-align: center;
+    background-color: #FF4978;
+    /*border:2px solid; border-color:white;*/border-radius: 15px;
+    padding:10px 20px;margin: 30px auto;}
+.block25-up h2 {color:#01011b; font-size: 16px;text-align: center; margin: 0;}
+.block25-up p {color:#01011b; font-size: 12px;text-align: center; margin: 0; }
 .block2 p {color:#fff; font-size: 12px; margin:0 20px;}
 .block1 p {color:#fff; font-size: 16px;}
 
