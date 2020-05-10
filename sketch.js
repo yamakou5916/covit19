@@ -95,11 +95,13 @@ function draw(){
   strokeWeight(1);
   textSize(14);
   textAlign(CENTER,CENTER);
-  line(width/2,80,width/2,height-80);
+  //line(width/2,80,width/2,height-80);
+  //line(200,height/2,width-200,height/2);
+  line(width/2,0,width/2,height-80);
   line(200,height/2,width-200,height/2);
   noStroke();
   fill(255);
-  textSize(36);
+  textSize(32);
   text("Politics", 200, 50);
   text("Economics", width-200, 50);
   text("Society", 200, height-50);
