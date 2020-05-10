@@ -298,17 +298,17 @@ const popup = document.getElementById("popup_overlay");
 
 function mouseClicked(){
   if(mouseX < cwidth[0]+rSize0[0]/2 & mouseX > cwidth[0]-rSize0[0]/2 & mouseY < cwidth[0]+rSize0[0]/2 & mouseY > cheight[0]-rSize0[0]/2){
-    location.href = 'https://yamakou5916.com/#section00';
+    location.href = 'https://yamakou5916.com/#section07';
     // Scroll to a certain element
     /*document.querySelector('.section00').scrollIntoView({ 
       behavior: 'smooth' 
     });*/
   }else if(mouseX < cwidth[1]+rSize0[1]/2 & mouseX > cwidth[1]-rSize0[1]/2 & mouseY < cwidth[1]+rSize0[1]/2 & mouseY > cheight[1]-rSize0[1]/2){
-    location.href = 'https://yamakou5916.com/#section01';
+    location.href = 'https://yamakou5916.com/#section08';
   }else if(mouseX < cwidth[2]+rSize0[2]/2 & mouseX > cwidth[2]-rSize0[2]/2 & mouseY < cwidth[2]+rSize0[2]/2 & mouseY > cheight[2]-rSize0[2]/2){
-    location.href = 'https://yamakou5916.com/#section02';
+    location.href = 'https://yamakou5916.com/#section01';
   }else if(mouseX < cwidth[3]+rSize0[3]/2 & mouseX > cwidth[3]-rSize0[3]/2 & mouseY < cwidth[3]+rSize0[3]/2 & mouseY > cheight[3]-rSize0[3]/2){
-    location.href = 'https://yamakou5916.com/#section03';
+    location.href = 'https://yamakou5916.com/#section00';
   }else if(mouseX < cwidth[4]+rSize0[4]/2 & mouseX > cwidth[4]-rSize0[4]/2 & mouseY < cwidth[4]+rSize0[4]/2 & mouseY > cheight[4]-rSize0[4]/2){
     location.href = 'https://yamakou5916.com/#section04';
   }else if(mouseX < cwidth[5]+rSize0[5]/2 & mouseX > cwidth[5]-rSize0[5]/2 & mouseY < cwidth[5]+rSize0[5]/2 & mouseY > cheight[5]-rSize0[5]/2){
