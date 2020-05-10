@@ -48,12 +48,15 @@ body {
 
 
 .top p {
-	text-align: center;
+  width: 45.5%;
+	text-align: left;
+  padding-right: 20px;
+  padding-top: 20px;
+  float: right;
 	margin: auto 0;
-	/*display: table-cell;
-  /*vertical-align: middle;*/
   color: #fff;
   opacity: 1;
+  font-size: 16px;
 }
 
 #defaultCanvas0{
