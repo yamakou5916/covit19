@@ -35,20 +35,19 @@ function drawBarChart2(data) {
 
     options: {
     	scales: {
+        gridLines: {color: rgba(255, 255, 255, 0.8)},
     		xAxes: [{
     			position: 'bottom',
-          gridLines: {color: rgba(255, 255, 255, 0.2)},
     			ticks: {
     				maxRotation: 0, 
     				minRotation: 0,
     				autoSkip: true,
     				maxTicksLimit: 5, //値の最大表示数
     				fontColor: "white", // 文字の色
-            fontSize: 10,
+                    fontSize: 10,
     			}
     		}],
     		yAxes: [{
-          gridLines: {color: rgba(255, 255, 255, 0.8)},
     			ticks: {
     				fontColor: "white",
                     fontSize: 10,
