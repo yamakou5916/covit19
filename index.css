@@ -42,11 +42,8 @@ body {
   background-attachment: fixed;
   /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
   background-size: cover;
-	/*background-color: yellow;*/
 	height:100vh;
 	width:100vw;
-	display: table;
-  opacity: 1;
 }
 
 
@@ -68,6 +65,16 @@ body {
 .logo {
 	width:100vw;
 }
+
+.G1 {
+  background-image: url('covid.gif');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height:500px;
+  width:100vw;
+  }
 
 /* メニュー */
 #sidebarMenu h1 {
