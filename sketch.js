@@ -297,7 +297,7 @@ const popup = document.getElementById("popup_overlay");
 
 function mouseClicked(){
   if(mouseX < cwidth[0]+rSize0[0]/2 & mouseX > cwidth[0]-rSize0[0]/2 & mouseY < cwidth[0]+rSize0[0]/2 & mouseY > cheight[0]-rSize0[0]/2){
-    location.href = 'https://yamakou5916.com/#section00';
+    //location.href = 'https://yamakou5916.com/#section00';
     // Scroll to a certain element
     document.querySelector('.section00').scrollIntoView({ 
       behavior: 'smooth' 
