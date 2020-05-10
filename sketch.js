@@ -233,9 +233,9 @@ function littleCircle(i){
     strokeWeight(1);
     */
     if (i%2==0) {
-      fill(236, 89, 122);
+      fill("#FF4978");
     }else{
-      fill(91, 192, 170);
+      fill("#1BC3A9");
     }
 
     ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
