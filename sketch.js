@@ -99,11 +99,16 @@ function draw(){
   line(200,height/2,width-200,height/2);
   noStroke();
   fill(255);
+  text("Politics", 100, 50);
+  text("Economics", width-100, 50);
+  text("Society", 100, height-50);
+  text("Technology", width-100, height-50);
+  /*
   text("個人としての意識", 100, height/2);
   text("集団としての意識", width-100, height/2);
   text("文化に関する行動", width/2, height-40);
   text("社会システムに関する行動", width/2, 0+40);
-  
+  */
 
   //意識・思想マップ
   if(showCon0%2 == 0){
