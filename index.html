@@ -18,7 +18,12 @@
   <link href="index.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
+  <script src="jquery.scrollify.js"></script>
+  <link href="section.css" rel="stylesheet" type="text/css">
+  <script src="section.js"></script>
+
   <title></title>
+
 </head>
 <body>
   <div class="header"></div>
@@ -47,12 +52,23 @@
   </div-->
   <div id='center' class="main center">
     <div class="mainInner"></div>
-  </div>   
+  </div>
+  <div class="main">
+  <section class="section section-blue js-section" data-section-name="section1">
+    <div class="section-content">
       <div class="top" style="">
         <img src="logo.png" class="logo" alt="Smiley face"><br>
       	<p>コロナウイルスの影響で今までの生活が一変した。自粛が解除された後も続いていく。 <br>このマップは、その世界をシミュレートし、ウイルスと共存した世界のあり方を示したしたものである。</p>
       </div>
+    </div>
+  </section>
+  <section class="section section-red js-section" data-section-name="section2">
+    <div class="section-content">
       <div id="P5Canvas"></div>
+    </div>
+  </section>
+  <section class="section section-blue js-section" data-section-name="section3">
+    <div class="section-content">
       <div class="G1"></div>
       <div class="outer" id="section0">
         <div class="g-block-1">
@@ -360,6 +376,8 @@
         </div>
       </div>
     </div>
+  </section>
+  <ul class="pager" id="js-pager"></ul>
   </div>
   <script type="text/javascript" src="chart/timeseries.js"></script>
   <script type="text/javascript" src="chart/AppleMobility.js"></script>
