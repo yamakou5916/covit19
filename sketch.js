@@ -99,10 +99,11 @@ function draw(){
   line(200,height/2,width-200,height/2);
   noStroke();
   fill(255);
-  text("Politics", 100, 50);
-  text("Economics", width-100, 50);
-  text("Society", 100, height-50);
-  text("Technology", width-100, height-50);
+  textSize(36);
+  text("Politics", 200, 50);
+  text("Economics", width-200, 50);
+  text("Society", 200, height-50);
+  text("Technology", width-200, height-50);
   /*
   text("個人としての意識", 100, height/2);
   text("集団としての意識", width-100, height/2);
