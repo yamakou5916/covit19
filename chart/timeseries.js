@@ -55,12 +55,12 @@ function drawBarChart(data) {
     data: {
       labels: tmpLabels,
       datasets: [
-        { label: "retail & recreation", data: tmpData1, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "grocery & pharmacy", data: tmpData2, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-		{ label: "parks", data: tmpData3, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "transit stations", data: tmpData4, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-		{ label: "workplaces", data: tmpData5, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "residential", data: tmpData6, borderColor: 'rgb(255, 99, 132)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "retail & recreation", data: tmpData1, borderColor: '#1BA0C3', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "grocery & pharmacy", data: tmpData2, borderColor: '#1BB4C3', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+		{ label: "parks", data: tmpData3, borderColor: '#1BC3BD', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "transit stations", data: tmpData4, borderColor: '#1BC3A9', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+		{ label: "workplaces", data: tmpData5, borderColor: '#1BC394', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "residential", data: tmpData6, borderColor: '#1BC380', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
       ]
     },
 
