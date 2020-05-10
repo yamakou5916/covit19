@@ -35,7 +35,7 @@ function drawBarChart2(data) {
 
     options: {
     	scales: {
-    		
+        gridLines: {color: "rgba(255, 255, 255, 0.8)", // 補助線の色},
     		xAxes: [{
     			position: 'bottom',
     			ticks: {
