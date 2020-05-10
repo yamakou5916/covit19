@@ -35,6 +35,7 @@ function drawBarChart4(data) {
         
         xAxes: [{
           position: 'bottom',
+          gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             maxRotation: 0, 
             minRotation: 0,
@@ -48,6 +49,7 @@ function drawBarChart4(data) {
           id: "y-axis-1",   // Y軸のID
           type: "linear",   // linear固定 
           position: "left", // どちら側に表示される軸か？
+          gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             fontColor: "white",
             fontSize: 10,
