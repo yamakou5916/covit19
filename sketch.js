@@ -1,4 +1,4 @@
-const cwidth=[400,1150,400,500,1500,1100,1500,800,1550,1150,750];
+const cwidth=[400,1200,400,500,1500,1100,1500,800,1550,1150,750];
 const cheight=[450,800,200,750,850,250,300,750,600,600,300];
 var rSize =[500,500,500,500,500,500,500,500,500,500,500];
 var rSize0 =[300,300,250,250,350,400,300,250,350,400,300];
@@ -106,12 +106,13 @@ function draw(){
   text("Economics", width-200, 50);
   text("Society", 200, height-50);
   text("Technology", width-200, height-50);
-  /*
-  text("個人としての意識", 100, height/2);
-  text("集団としての意識", width-100, height/2);
+  
+  textSize(14);
+  text("ミクロ指標", 100, height/2);
+  text("マクロ指標", width-100, height/2);
   text("文化に関する行動", width/2, height-40);
   text("社会システムに関する行動", width/2, 0+40);
-  */
+  
 
   //意識・思想マップ
   if(showCon0%2 == 0){
