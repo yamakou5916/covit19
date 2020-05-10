@@ -99,9 +99,9 @@ function draw(){
   //line(200,height/2,width-200,height/2);
   line(width/2,30,width/2,height-30);
   line(50,height/2,width-50,height/2);
-  noStroke(32);
+  noStroke();
   fill(255);
-  textSize(3);
+  textSize(32);
   text("Politics", 200, 50);
   text("Economics", width-200, 50);
   text("Society", 200, height-50);
