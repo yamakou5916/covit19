@@ -7,11 +7,13 @@ var option = {
   easing: "swing",
   scrollSpeed: 600,
   scrollbars: true,
-  before:function(index) {
+  before:function(index, section) {
+    setCurrent(index); // 現在のsectionにクラスを設定
     pagerCurrent(index); // ページャーに対応する順番にクラス名を付与
   },
   afterRender:function() {
     createPager(); // ページャーの作成
+    setCurrent(); // 現在のsectionにクラスを設定
   }
 };
 
@@ -24,6 +26,14 @@ $(function() {
 // ==============================
 // functions
 // ------------------------------
+
+// 現在のsectionにクラスを設定
+function setCurrent(index = 0) {
+  // 一旦、すべてのsectionのクラスをとる
+  $section.removeClass('is-show');
+  // 現在のsectionのみにクラスを付与
+  $section.eq(index).addClass('is-show');
+}
 
 // ページャーに対応する順番にクラス名を付与
 function pagerCurrent(index = 0) {
