@@ -291,9 +291,9 @@ function mouseClicked(){
   if(mouseX < cwidth[0]+80 & mouseX > cwidth[0]-80 & mouseY < cwidth[0]+80 & mouseY > cheight[0]-80){
     fill(255);
     rect(cwidth[0]-80,cheight[0]-80,160,160);
+    document.getElementById("text").innerHTML = "クリックされた！";
+    //const popup_overlay = document.getElementById("popup_overlay");
   }
-  document.getElementById("text").innerHTML = "クリックされた！";
-  //const popup_overlay = document.getElementById("popup_overlay");
   document.getElementById('popup_overlay').style.backgroundColor = 'red';
   //popup.style.transform = "scale(1)";
 };
