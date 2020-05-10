@@ -48,7 +48,7 @@ function drawBarChart2(data) {
     			}
     		}],
     		yAxes: [{
-          gridLines: {color: "rgba(255, 255, 255, 0.8)"},
+          gridLines: {color: rgba(255, 255, 255, 0.8),lineWidth: 0.2,},
     			ticks: {
     				fontColor: "white",
                     fontSize: 10,
