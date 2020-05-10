@@ -99,7 +99,7 @@ function draw(){
   //line(200,height/2,width-200,height/2);
   line(width/2,30,width/2,height-30);
   line(50,height/2,width-50,height/2);
-  noStroke();
+  noStroke(32);
   fill(255);
   textSize(3);
   text("Politics", 200, 50);
