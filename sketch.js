@@ -59,7 +59,7 @@ var canvas;
 
 function setup(){
   pixelDensity(2);
-  canvas = createCanvas(2000, 1500);//描画領域を指定
+  canvas = createCanvas(2000, 1200);//描画領域を指定
   canvas.parent("P5Canvas");
   background(255);
   //randomSave();
