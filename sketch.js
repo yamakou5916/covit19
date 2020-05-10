@@ -288,7 +288,7 @@ function showPwC(){showCon2++;}
 const popup = document.getElementById("popup_overlay");
 
 function mouseClicked(){
-  if(mouseX < cwidth[0]+80 & mouseX > cwidth[0]-80 & mouseY < cwidth[0]+80 & mouseY > cheight[0]-80){
+  if(mouseX < cwidth[0]+rSize0[0]/2 & mouseX > cwidth[0]-rSize0[0]/2 & mouseY < cwidth[0]+rSize0[0]/2 & mouseY > cheight[0]-rSize0[0]/2){
     fill(255);
     rect(cwidth[0]-80,cheight[0]-80,160,160);
     document.getElementById("text").innerHTML = "クリックされた！";
