@@ -295,25 +295,25 @@ function showPwC(){showCon2++;}
 const popup = document.getElementById("popup_overlay");
 
 function mouseClicked(){
-  if(mouseX < cwidth[0]+rSize0[0]/2 && mouseX > cwidth[0]-rSize0[0]/2 && mouseY < cheight[0]+rSize0[0]/2 && mouseY > cheight[0]-rSize0[0]/2){
+  if(dist(mouseX,mouseY,width[0],height[0]) < rSize0[0]/2){
     location.href = 'https://yamakou5916.com/#section07';
-  }else if(mouseX < cwidth[1]+rSize0[1]/2 && mouseX > cwidth[1]-rSize0[1]/2 && mouseY < cheight[1]+rSize0[1]/2 && mouseY > cheight[1]-rSize0[1]/2){
+  }else if(dist(mouseX,mouseY,width[0],height[0]) < rSize0[1]/2){
     location.href = 'https://yamakou5916.com/#section08';
-  }else if(mouseX < cwidth[2]+rSize0[2]/2 && mouseX > cwidth[2]-rSize0[2]/2 && mouseY < cheight[2]+rSize0[2]/2 && mouseY > cheight[2]-rSize0[2]/2){
+  }else if(dist(mouseX,mouseY,width[0],height[0]) < rSize0[2]/2){
     location.href = 'https://yamakou5916.com/#section01';
-  }else if(mouseX < cwidth[3]+rSize0[3]/2 && mouseX > cwidth[3]-rSize0[3]/2 && mouseY < cheight[3]+rSize0[3]/2 && mouseY > cheight[3]-rSize0[3]/2){
+  }else if(dist(mouseX,mouseY,width[0],height[0]) < rSize0[3]/2){
     location.href = 'https://yamakou5916.com/#section00';
-  }else if(mouseX < cwidth[4]+rSize0[4]/2 && mouseX > cwidth[4]-rSize0[4]/2 && mouseY < cheight[4]+rSize0[4]/2 && mouseY > cheight[4]-rSize0[4]/2){
+  }else if(dist(mouseX,mouseY,width[0],height[0]) < rSize0[4]/2){
     //location.href = 'https://yamakou5916.com/#section04';
-  }else if(mouseX < cwidth[5]+rSize0[5]/2 && mouseX > cwidth[5]-rSize0[5]/2 && mouseY < cheight[5]+rSize0[5]/2 && mouseY > cheight[5]-rSize0[5]/2){
+  }else if(dist(mouseX,mouseY,width[0],height[0]) < rSize0[5]/2){
     location.href = 'https://yamakou5916.com/#section03';
-  }else if(mouseX < cwidth[6]+rSize0[6]/2 && mouseX > cwidth[6]-rSize0[6]/2 && mouseY < cheight[6]+rSize0[6]/2 && mouseY > cheight[6]-rSize0[6]/2){
+  }else if(dist(mouseX,mouseY,width[0],height[0]) < rSize0[6]/2){
     //location.href = 'https://yamakou5916.com/#section06';
-  }else if(mouseX < cwidth[7]+rSize0[7]/2 && mouseX > cwidth[7]-rSize0[7]/2 && mouseY < cheight[7]+rSize0[7]/2 && mouseY > cheight[7]-rSize0[7]/2){
+  }else if(dist(mouseX,mouseY,width[0],height[0]) < rSize0[7]/2){
     location.href = 'https://yamakou5916.com/#section04';
-  }else if(mouseX < cwidth[8]+rSize0[8]/2 && mouseX > cwidth[8]-rSize0[8]/2 && mouseY < cheight[8]+rSize0[8]/2 && mouseY > cheight[8]-rSize0[8]/2){
+  }else if(dist(mouseX,mouseY,width[0],height[0]) < rSize0[8]/2){
     location.href = 'https://yamakou5916.com/#section05';
-  }else if(mouseX < cwidth[9]+rSize0[9]/2 && mouseX > cwidth[9]-rSize0[9]/2 && mouseY < cheight[9]+rSize0[9]/2 && mouseY > cheight[9]-rSize0[9]/2){
+  }else if(dist(mouseX,mouseY,width[0],height[0]) < rSize0[9]/2){
     location.href = 'https://yamakou5916.com/#section06';
   }
   //document.getElementById("text").innerHTML = "クリックされた！";
