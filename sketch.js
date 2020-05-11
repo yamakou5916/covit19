@@ -161,7 +161,7 @@ function draw(){
     noStroke();
     imageMode(CENTER);
     images1 = catImages[i];
-    image(images1, dwidth[i], dheight[i]-50, 20, 20);
+    image(images1, dwidth[i], dheight[i]-50, 70, 70);
     textSize(16);
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
