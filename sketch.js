@@ -97,8 +97,8 @@ function draw(){
   textAlign(CENTER,CENTER);
   //line(width/2,80,width/2,height-80);
   //line(200,height/2,width-200,height/2);
-  line(width/2,30,width/2,height-30);
-  line(100,height/2,width-100,height/2);
+  line(width/2,60,width/2,height-60);
+  line(200,height/2,width-200,height/2);
   noStroke();
   fill(255);
   textSize(32);
@@ -108,10 +108,10 @@ function draw(){
   text("Technology", width-200, height-50);
   
   textSize(14);
-  text("行動指標", 200, height/2);
-  text("経済指標", width-200, height/2);
-  text("ミクロ指標\n（日次）", width/2, height-100);
-  text("マクロ指標\n（月次）", width/2, 0+100);
+  text("行動指標", 100, height/2);
+  text("経済指標", width-100, height/2);
+  text("ミクロ指標\n（日次）", width/2, height-40);
+  text("マクロ指標\n（月次）", width/2, 0+40);
   
 
   //意識・思想マップ
