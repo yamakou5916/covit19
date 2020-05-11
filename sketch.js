@@ -318,25 +318,25 @@ function showPwC(){showCon2++;}
 const popup = document.getElementById("popup_overlay");
 
 function mouseClicked(){
-  if(dist(mouseX,mouseY,cwidth[0],cheight[0]) < rSize0[0]/2){
+  if(dist(mouseX,mouseY,cwidth[0],cheight[0]) < rSize0[0]/4){
     location.href = 'https://yamakou5916.com/#section07';
-  }else if(dist(mouseX,mouseY,cwidth[1],cheight[1]) < rSize0[1]/2){
+  }else if(dist(mouseX,mouseY,cwidth[1],cheight[1]) < rSize0[1]/4){
     location.href = 'https://yamakou5916.com/#section08';
-  }else if(dist(mouseX,mouseY,cwidth[2],cheight[2]) < rSize0[2]/2){
+  }else if(dist(mouseX,mouseY,cwidth[2],cheight[2]) < rSize0[2]/4){
     location.href = 'https://yamakou5916.com/#section01';
-  }else if(dist(mouseX,mouseY,cwidth[3],cheight[3]) < rSize0[3]/2){
+  }else if(dist(mouseX,mouseY,cwidth[3],cheight[3]) < rSize0[3]/4){
     location.href = 'https://yamakou5916.com/#section00';
-  }else if(dist(mouseX,mouseY,cwidth[4],cheight[4]) < rSize0[4]/2){
+  }else if(dist(mouseX,mouseY,cwidth[4],cheight[4]) < rSize0[4]/4){
     //location.href = 'https://yamakou5916.com/#section04';
-  }else if(dist(mouseX,mouseY,cwidth[5],cheight[5]) < rSize0[5]/2){
+  }else if(dist(mouseX,mouseY,cwidth[5],cheight[5]) < rSize0[5]/4){
     location.href = 'https://yamakou5916.com/#section03';
-  }else if(dist(mouseX,mouseY,cwidth[6],cheight[6]) < rSize0[6]/2){
+  }else if(dist(mouseX,mouseY,cwidth[6],cheight[6]) < rSize0[6]/4){
     //location.href = 'https://yamakou5916.com/#section06';
-  }else if(dist(mouseX,mouseY,cwidth[7],cheight[7]) < rSize0[7]/2){
+  }else if(dist(mouseX,mouseY,cwidth[7],cheight[7]) < rSize0[7]/4){
     location.href = 'https://yamakou5916.com/#section04';
-  }else if(dist(mouseX,mouseY,cwidth[8],cheight[8]) < rSize0[8]/2){
+  }else if(dist(mouseX,mouseY,cwidth[8],cheight[8]) < rSize0[8]/4){
     location.href = 'https://yamakou5916.com/#section05';
-  }else if(dist(mouseX,mouseY,cwidth[9],cheight[9]) < rSize0[9]/2){
+  }else if(dist(mouseX,mouseY,cwidth[9],cheight[9]) < rSize0[9]/4){
     location.href = 'https://yamakou5916.com/#section06';
   }
   //document.getElementById("text").innerHTML = "クリックされた！";
