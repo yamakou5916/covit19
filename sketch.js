@@ -108,10 +108,10 @@ function draw(){
   text("Technology", width-200, height-50);
   
   textSize(14);
-  text("行動指標", 100, height/2);
-  text("経済指標", width-100, height/2);
-  text("ミクロ指標\n（日次）", width/2, height-40);
-  text("マクロ指標\n（月次）", width/2, 0+40);
+  text("行動指標", 200, height/2);
+  text("経済指標", width-200, height/2);
+  text("ミクロ指標\n（日次）", width/2, height-100);
+  text("マクロ指標\n（月次）", width/2, 0+100);
   
 
   //意識・思想マップ
