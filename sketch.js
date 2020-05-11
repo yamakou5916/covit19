@@ -98,7 +98,7 @@ function draw(){
   //line(width/2,80,width/2,height-80);
   //line(200,height/2,width-200,height/2);
   line(width/2,60,width/2,height-60);
-  line(200,height/2,width-200,height/2);
+  line(150,height/2,width-150,height/2);
   noStroke();
   fill(255);
   textSize(32);
