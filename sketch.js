@@ -106,13 +106,13 @@ function draw(){
   text("Economics", width-200, 50);
   text("Society", 200, height-50);
   text("Technology", width-200, height-50);
-  /*
+  
   textSize(14);
   text("ミクロ指標", 100, height/2);
   text("マクロ指標", width-100, height/2);
   text("文化に関する行動", width/2, height-40);
   text("社会システムに関する行動", width/2, 0+40);
-  */
+  
 
   //意識・思想マップ
   if(showCon0%2 == 0){
