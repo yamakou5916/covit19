@@ -35,6 +35,7 @@ const gCol=[237,237,223,223,191,191,226,226,237,237,223,176];
 const bCol=[191,191,144,144,135,135,200,200,191,191,144,187];
 let images0;
 let allImages = [];
+let catImages = [];
 
 const twidth=[700,750,1200,1300];
 const theight=[500,1150,400,700];
@@ -76,6 +77,18 @@ function setup(){
   allImages.push(loadImage("image/-_b.png"));
   allImages.push(loadImage("image/-_b.png"));
   allImages.push(loadImage("image/-_b.png"));
+
+  catImages.push(loadImage("image/icon_education.png"));
+  catImages.push(loadImage("image/icon_entertainment.png"));
+  catImages.push(loadImage("image/icon_healthcare.png"));
+  catImages.push(loadImage("image/icon_lifeevent.png"));
+  catImages.push(loadImage("image/icon_lifeline.png"));
+  catImages.push(loadImage("image/icon_lifestyle.png"));
+  catImages.push(loadImage("image/icon_management.png"));
+  catImages.push(loadImage("image/icon_manufacture.png"));
+  catImages.push(loadImage("image/icon_medical.png"));
+  catImages.push(loadImage("image/icon_supplychain.png"));
+  catImages.push(loadImage("image/icon_workstyle.png"));
 
 }
 
