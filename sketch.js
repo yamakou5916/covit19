@@ -1,5 +1,7 @@
 const cwidth=[350,500,700,750,300,600,1150,1500,1550,1250,1500];
 const cheight=[300,150,350,650,700,800,300,250,600,700,800];
+const dwidth=[350,500,700,750,300,600,1150,1500,1550,1250,1500];
+const dheight=[300,150,350,650,700,800,300,250,600,700,800];
 var rSize =[500,500,500,500,500,500,500,500,500,500,500];
 var rSize0 =[300,300,250,250,350,400,300,250,350,400,300];
 const lSize = [0];
@@ -154,6 +156,21 @@ function draw(){
       textStyle(NORMAL);
     }
   }
+  for(var i=0; i<11;i++){
+    fill(0);
+    noStroke();
+    imageMode(CENTER);
+    images1 = catImages[i];
+    image(images1, dwidth[i], dheight[i]-50, 20, 20);
+    textSize(16);
+    textStyle(BOLD);
+    textAlign(CENTER,CENTER);
+    text(bigText[i], dwidth[i], dheight[i]);
+    //textSize(10);
+    //textAlign(CENTER,CENTER);
+    //text(titleText[i], cwidth[i], cheight[i]-45);
+    textStyle(NORMAL);
+    }
 
 
   //テクノロジマップ
