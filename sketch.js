@@ -175,7 +175,7 @@ function draw(){
     //text(titleText[i], cwidth[i], cheight[i]-45);
     textStyle(NORMAL);
     }
-*/s
+*/
 
   //テクノロジマップ
   if(showCon1%2 == 0){
