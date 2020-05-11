@@ -1,7 +1,9 @@
+//const cwidth=[350,500,700,750,300,600,1150,1500,1550,1250,1500];
+//const cheight=[300,150,350,650,700,800,300,250,600,700,800];
 const cwidth=[350,500,700,750,300,600,1150,1500,1550,1250,1500];
 const cheight=[300,150,350,650,700,800,300,250,600,700,800];
-const dwidth=[450,500,700,750,300,600,1150,1500,1550,1250,1500];
-const dheight=[600,150,350,650,700,800,300,250,600,700,800];
+const dwidth=[450,600,500,750,300,600,1150,1500,1550,1250,1500];
+const dheight=[600,400,150,650,700,800,300,250,600,700,800];
 var rSize =[500,500,500,500,500,500,500,500,500,500,500];
 var rSize0 =[300,300,250,250,350,400,300,250,350,400,300];
 const lSize = [0];
@@ -81,7 +83,6 @@ function setup(){
   allImages.push(loadImage("image/-_b.png"));
 
   catImages.push(loadImage("image/icon_entertainment.png"));
-  catImages.push(loadImage("image/icon_lifeline.png"));
   catImages.push(loadImage("image/icon_lifestyle.png"));
   catImages.push(loadImage("image/icon_management.png"));
   catImages.push(loadImage("image/icon_manufacture.png"));
@@ -91,6 +92,7 @@ function setup(){
   //catImages.push(loadImage("image/icon_healthcare.png"));
   //catImages.push(loadImage("image/icon_lifeevent.png"));
   //catImages.push(loadImage("image/icon_medical.png"));
+  //catImages.push(loadImage("image/icon_lifeline.png"));
 
 }
 
@@ -156,7 +158,7 @@ function draw(){
       textStyle(NORMAL);
     }
   }
-  for(var i=0; i<7;i++){
+  for(var i=0; i<6;i++){
     fill(0);
     noStroke();
     imageMode(CENTER);
