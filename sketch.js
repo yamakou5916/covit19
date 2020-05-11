@@ -223,18 +223,27 @@ function draw(){
       }
     }
 
+    fill(145,193,186,80);
     if(dist(mouseX,mouseY,cwidth[0],cheight[0]) < rSize0[0]/2){
       ellipse(cwidth[0],cheight[0], rSize0[0]/2, rSize0[0]/2);
     }else if(dist(mouseX,mouseY,cwidth[1],cheight[1]) < rSize0[1]/2){
       ellipse(cwidth[1],cheight[1], rSize0[1]/2, rSize0[1]/2);
     }else if(dist(mouseX,mouseY,cwidth[2],cheight[2]) < rSize0[2]/2){
+      ellipse(cwidth[2],cheight[2], rSize0[2]/2, rSize0[2]/2);
     }else if(dist(mouseX,mouseY,cwidth[3],cheight[3]) < rSize0[3]/2){
+      ellipse(cwidth[3],cheight[3], rSize0[3]/2, rSize0[3]/2);
     }else if(dist(mouseX,mouseY,cwidth[4],cheight[4]) < rSize0[4]/2){
+      ellipse(cwidth[4],cheight[4], rSize0[4]/2, rSize0[4]/2);
     }else if(dist(mouseX,mouseY,cwidth[5],cheight[5]) < rSize0[5]/2){
+      ellipse(cwidth[5],cheight[5], rSize0[5]/2, rSize0[5]/2);
     }else if(dist(mouseX,mouseY,cwidth[6],cheight[6]) < rSize0[6]/2){
+      ellipse(cwidth[6],cheight[6], rSize0[6]/2, rSize0[6]/2);
     }else if(dist(mouseX,mouseY,cwidth[7],cheight[7]) < rSize0[7]/2){
+      ellipse(cwidth[7],cheight[7], rSize0[7]/2, rSize0[7]/2);
     }else if(dist(mouseX,mouseY,cwidth[8],cheight[8]) < rSize0[8]/2){
+      ellipse(cwidth[8],cheight[8], rSize0[8]/2, rSize0[8]/2);
     }else if(dist(mouseX,mouseY,cwidth[9],cheight[9]) < rSize0[9]/2){
+      ellipse(cwidth[9],cheight[9], rSize0[9]/2, rSize0[9]/2);
     }
 
 }
