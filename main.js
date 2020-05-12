@@ -3,7 +3,7 @@ jQuery(function($){
 	$.scrollify({
 		section:".box",
 		setHeights:false,
-		scrollbars:true,
+		scrollbars:false,
 		before:function(i,box){
 			current = i
 			$('.pagenation .active').removeClass('active');
