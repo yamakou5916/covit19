@@ -114,8 +114,9 @@ function draw(){
   textAlign(CENTER,CENTER);
   //line(width/2,80,width/2,height-80);
   //line(200,height/2,width-200,height/2);
-  line(width/2, height/2,width/2,height-75);
-  line(150,height/2,width-150,height/2);
+  line(width/2, height/2, width/2, height-75);
+  line(50, height/4 ,width/2, height/2);
+  line(width/2,height/2,width-50,height/4);
   noStroke();
   fill(255);
   textSize(24);
@@ -125,9 +126,9 @@ function draw(){
   text("雇用動向", width-200, height-50);
   
   textSize(14);
-  text("行動指標", 100, height/2);
-  text("経済指標", width-100, height/2);
-  text("ミクロ指標\n（日次）", width/2, height-40);
+  //text("行動指標", 100, height/2);
+  //text("経済指標", width-100, height/2);
+  //text("ミクロ指標\n（日次）", width/2, height-40);
   //text("マクロ指標\n（月次）", width/2, 0+40);
   
 
