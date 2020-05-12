@@ -81,6 +81,15 @@ function setup(){
   allImages.push(loadImage("image/-_b.png"));
   allImages.push(loadImage("image/-_b.png"));
   allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
 
   catImages.push(loadImage("image/icon_entertainment.png"));
   catImages.push(loadImage("image/icon_lifestyle.png"));
