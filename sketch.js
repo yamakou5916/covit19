@@ -176,7 +176,8 @@ function draw(){
     //text(titleText[i], cwidth[i], cheight[i]-45);
     textStyle(NORMAL);
     }
-*/
+
+
 
   //テクノロジマップ
   if(showCon1%2 == 0){
@@ -257,7 +258,7 @@ function draw(){
         k = 0;
       }
     }
-
+*/
     fill(145,193,186,80);
     if(dist(mouseX,mouseY,cwidth[0],cheight[0]) < rSize0[0]/4){
       ellipse(cwidth[0],cheight[0], rSize0[0]/2, rSize0[0]/2);
