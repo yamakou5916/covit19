@@ -123,7 +123,7 @@ function draw(){
   textAlign(CENTER,CENTER);
   //line(width/2,80,width/2,height-80);
   //line(200,height/2,width-200,height/2);
-  line(width/2, height/2, width/2, height-75);
+  line(width/2, height/2, width/2, height-50);
   line(50, height/6 ,width/2, height/2);
   line(width/2,height/2,width-50,height/6);
   noStroke();
