@@ -143,7 +143,7 @@ function draw(){
 
   //意識・思想マップ
   if(showCon0%2 == 0){
-    for(var i=0; i<14;i++){
+    for(var i=0; i<17;i++){
       if (1000 * sin(radians(framCnt)) > 0) {
         rSize0[i] += 0.5;
         textnum = 0;
