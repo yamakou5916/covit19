@@ -66,8 +66,13 @@
 
 /* グラフのページ */
 .box3 {
-    height: 2000px;
+    height: auto;
     overflow: scroll;
+}
+
+.box4 {
+    height: 100vh;
+    background: yellow;
 }
 
 /* ページネーション */
