@@ -6,14 +6,13 @@
 
 .box {
     color: #fff;
-    height: 100vh;
 }
 
 
 /* 最初のページ */
 .box1 {
-    background: #01011b;
     height: 100vh;
+    background: #01011b;
 }
 
 .logo {
@@ -37,10 +36,10 @@
 
 /* マップのページ */
 .box2 {
+    height: 100vh;
     background: #01011b;
     display: table;
     position: relative;
-    height: 100vh;
 }
 
 .intro {
@@ -67,11 +66,9 @@
 
 /* グラフのページ */
 .box3 {
+    overflow: scroll;
     height: 100vh;
-    background: #01011b;
-    overflow: scroll; 
 }
-
 
 /* ページネーション */
 .pagenation {
