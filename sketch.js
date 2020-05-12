@@ -115,8 +115,8 @@ function draw(){
   //line(width/2,80,width/2,height-80);
   //line(200,height/2,width-200,height/2);
   line(width/2, height*2/3, width/2, height-75);
-  line(50, height/4 ,width/2, height/2);
-  line(width/2,height/2,width-50,height/4);
+  line(50, height/4 ,width/2, height*2/3);
+  line(width/2,height*2/3,width-50,height/4);
   noStroke();
   fill(255);
   textSize(24);
