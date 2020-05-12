@@ -114,11 +114,11 @@ function draw(){
   textAlign(CENTER,CENTER);
   //line(width/2,80,width/2,height-80);
   //line(200,height/2,width-200,height/2);
-  line(width/2,75,width/2,height-75);
+  line(width/2, height/2,width/2,height-75);
   line(150,height/2,width-150,height/2);
   noStroke();
   fill(255);
-  textSize(32);
+  textSize(24);
   text("経済動向", width/2, 50);
   text("Economics", width-200, 50);
   text("Society", 200, height-50);
@@ -128,7 +128,7 @@ function draw(){
   text("行動指標", 100, height/2);
   text("経済指標", width-100, height/2);
   text("ミクロ指標\n（日次）", width/2, height-40);
-  text("マクロ指標\n（月次）", width/2, 0+40);
+  //text("マクロ指標\n（月次）", width/2, 0+40);
   
 
   //意識・思想マップ
