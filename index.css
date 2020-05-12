@@ -67,6 +67,7 @@
 /* グラフのページ */
 .box3 {
     overflow-y: scroll;
+    width: 100vw;
     height: 100vh;
 }
 
