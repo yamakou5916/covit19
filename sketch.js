@@ -296,7 +296,7 @@ function draw(){
     }else if(dist(mouseX,mouseY,cwidth[12],cheight[12]) < rSize0[12]/4){
       ellipse(cwidth[12],cheight[12], rSize0[12]/2, rSize0[12]/2);
     }else if(dist(mouseX,mouseY,cwidth[13],cheight[13]) < rSize0[13]/4){
-      ellipse(cwidth[13],cheight[9], rSize0[13]/2, rSize0[13]/2);
+      ellipse(cwidth[13],cheight[13], rSize0[13]/2, rSize0[13]/2);
     }
 
 }
