@@ -27,9 +27,9 @@ function drawBarChart13(data) {
     data: {
       labels: tmpLabels13,
       datasets: [
-        { label: "driving", data: tmpData113, borderColor: 'rgb(57, 125, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "transit", data: tmpData213, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "walking", data: tmpData313, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "driving", data: tmpData113, borderColor: 'rgb(57, 125, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
+        { label: "transit", data: tmpData213, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
+        { label: "walking", data: tmpData313, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
       ]
     },
 
@@ -43,17 +43,28 @@ function drawBarChart13(data) {
             maxRotation: 0, 
             minRotation: 0,
             autoSkip: true,
-            maxTicksLimit: 13, //値の最大表示数
+            maxTicksLimit: 5, //値の最大表示数
             fontColor: "white", // 文字の色
                     fontSize: 10,
           }
         }],
         yAxes: [{
+          id: "y-axis-1",   // Y軸のID
+          type: "linear",   // linear固定 
+          position: "left", // どちら側に表示される軸か？
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             fontColor: "white",
-                    fontSize: 10,
+            fontSize: 10,
           }
+        }, {
+          id: "y-axis-2",
+          type: "linear", 
+          position: "right",
+          ticks: {
+            fontColor: "white",
+            fontSize: 10,
+          },
         }],
       },
       legend: {
