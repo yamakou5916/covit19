@@ -40,12 +40,13 @@
     width: 100vw;
     height: 100vh;
     background: #01011b;
+    display: table;
 }
 
-.box2 p {
-    font-size: 24px;
-    text-align: center;
+.intro {
+    display: table-cell;
     vertical-align: middle;
+    text-align: center;
 }
 
 /* マップのページ */
