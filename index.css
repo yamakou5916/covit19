@@ -95,7 +95,7 @@
     padding: 20px;
     position: fixed;
     left: 0;
-    top: 45%;
+    top: 43%;
 }
 
 .pagenation li {
@@ -105,11 +105,13 @@
 
 .pagenation a {
     display: block;
-    height: 10px;
-    border: 1px solid blue;
-    width: 10px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #fff;
+    border-radius: 30px;
 }
 
 .pagenation a.active {
-    background: blue;
+    background: #fff;
+    border-radius: 30px;
 }
