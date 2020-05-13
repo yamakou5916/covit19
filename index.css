@@ -109,10 +109,15 @@
     background-size: cover;
     height: 400px;
     width: 100vw;
+    display: table;
 }
 
 .G_outer {
+    display: table-cell;
+    vertical-align: middle;
     text-align: center;
+    width: 100vw;
+    padding: 80px;
 }
 
 /* ページネーション */
