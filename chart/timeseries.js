@@ -54,8 +54,8 @@ function drawBarChart(data) {
     type: 'line',
     data: {
       labels: tmpLabels,
-      labelTextColor : 'white',
-      labelColor : 'white',
+      labelTextColor : '#ffffff',
+      labelColor : '#ffffff',
       datasets: [
         { label: "小売店と娯楽施設", data: tmpData1, borderColor: '#1BA0C3', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
         { label: "食料品店と薬局", data: tmpData2, borderColor: '#1BB4C3', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
