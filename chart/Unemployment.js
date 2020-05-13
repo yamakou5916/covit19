@@ -23,13 +23,13 @@ function drawBarChart13(data) {
   // 13)chart.jsで描画
   var ctx13 = document.getElementById("Unemployment").getContext("2d");
   var Unemployment = new Chart(ctx13, {
-    type: 'line',
+    type: 'bar',
     data: {
       labels: tmpLabels13,
       datasets: [
         { label: "driving", data: tmpData113, borderColor: 'rgb(57, 125, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
-        { label: "transit", data: tmpData213, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2", /* backgroundColor: "blue" */},
-        { label: "walking", data: tmpData313, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
+        { label: "transit", type: 'line', data: tmpData213, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2", /* backgroundColor: "blue" */},
+        { label: "walking", type: 'line', data: tmpData313, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
       ]
     },
 
