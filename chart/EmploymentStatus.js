@@ -27,9 +27,9 @@ function drawBarChart12(data) {
     data: {
       labels: tmpLabels12,
       datasets: [
-        { label: "driving", data: tmpData112, borderColor: 'rgb(57, 55, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
-        { type: 'line', label: "transit", data: tmpData212, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
-        { type: 'line', label: "walking", data: tmpData312, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
+        { label: "非正規率", data: tmpData112, borderColor: 'rgb(57, 55, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
+        { type: 'line', label: "正規の職員・従業員", data: tmpData212, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
+        { type: 'line', label: "非正規の職員・従業員", data: tmpData312, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
       ]
     },
 
