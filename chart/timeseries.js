@@ -23,6 +23,8 @@ options: {}
 });
 */
 
+var color = ["#1BA0C3","1BB4C3","1BC3BD","1BC3A9","1BC380","1BC36C"];
+
 
 // 2) CSVから２次元配列に変換
 function csv2Array(str) {
@@ -57,7 +59,7 @@ function drawBarChart(data) {
       labelTextColor : '#ffffff',
       labelColor : '#ffffff',
       datasets: [
-        { label: "小売店と娯楽施設", data: tmpData1, borderColor: '#1BA0C3', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "小売店と娯楽施設", data: tmpData1, borderColor: color[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
         { label: "食料品店と薬局", data: tmpData2, borderColor: '#1BB4C3', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
         { label: "公園", data: tmpData3, borderColor: '#1BC3BD', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
         { label: "公共交通機関", data: tmpData4, borderColor: '#1BC3A9', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
