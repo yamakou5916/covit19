@@ -54,19 +54,19 @@ function drawBarChart(data) {
     type: 'line',
     data: {
       labels: tmpLabels,
+      fontColor : '#ffffff',
       datasets: [
-        { label: "小売店と娯楽施設", fontColor: '#fff', data: tmpData1, borderColor: '#1BA0C3', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "小売店と娯楽施設", data: tmpData1, borderColor: '#1BA0C3', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
         { label: "食料品店と薬局", data: tmpData2, borderColor: '#1BB4C3', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-		{ label: "公園", data: tmpData3, borderColor: '#1BC3BD', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "公園", data: tmpData3, borderColor: '#1BC3BD', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
         { label: "公共交通機関", data: tmpData4, borderColor: '#1BC3A9', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-		{ label: "職場", data: tmpData5, borderColor: '#1BC394', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "職場", data: tmpData5, borderColor: '#1BC394', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
         { label: "住居", data: tmpData6, borderColor: '#1BC380', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
       ]
     },
 
     options: {
     	scales: {
-    		
     		xAxes: [{
     			position: 'bottom',
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
