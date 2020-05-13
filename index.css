@@ -49,6 +49,26 @@
     text-align: center;
 }
 
+.intro h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 40px;
+    text-decoration: underline;
+}
+
+.intro h2 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 24px;
+    padding-bottom: 40px;
+}
+
+.intro p {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    padding-bottom: 40px;
+}
+
+
 /* マップのページ */
 .box3 {
     width: 100vw;
