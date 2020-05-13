@@ -118,7 +118,7 @@ function draw(){
   noStroke();
   fill(255);
   stroke(255);
-  strokeWeight(1);
+  strokeWeight(0.2);
   textSize(14);
   textAlign(CENTER,CENTER);
   //line(width/2,80,width/2,height-80);
