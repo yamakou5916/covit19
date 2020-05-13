@@ -27,9 +27,9 @@ function drawBarChart2(data) {
     data: {
       labels: tmpLabels2,
       datasets: [
-        { label: "driving", data: tmpData12, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "transit", data: tmpData22, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "walking", data: tmpData32, borderColor: 'rgb(188, 250, 254)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "車移動", data: tmpData12, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "電車移動", data: tmpData22, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "歩行移動", data: tmpData32, borderColor: 'rgb(188, 250, 254)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 
