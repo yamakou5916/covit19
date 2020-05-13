@@ -120,6 +120,14 @@
     padding: 80px;
 }
 
+.G_outer h2 {
+    padding-bottom: 20px;
+}
+
+.G_outer p {
+    padding-bottom: 20px;
+}
+
 /* ページネーション */
 .pagenation {
     padding: 20px;
