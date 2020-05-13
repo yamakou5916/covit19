@@ -39,6 +39,7 @@ function drawBarChart10(data) {
         
         xAxes: [{
           Industryition: 'bottom',
+          gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             maxRotation: 0, 
             minRotation: 0,
@@ -49,6 +50,7 @@ function drawBarChart10(data) {
           }
         }],
         yAxes: [{
+          gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             fontColor: "white",
                     fontSize: 10,
