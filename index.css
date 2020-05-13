@@ -9,8 +9,9 @@
 }
 
 
-/* 最初のページ */
+/* 最初のページ(写真) */
 .box1 {
+    width: 100vw;
     height: 100vh;
     background: #01011b;
 }
@@ -33,23 +34,26 @@
     width: 100vw;
 }
 
+/* イントロページ */
+.box2 {
+    width: 100vw;
+    height: 100vh;
+    background: #01011b;
+}
+
+.box2 p {
+    font-size: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
 
 /* マップのページ */
-.box2 {
+.box3 {
+    width: 100vw;
     height: 100vh;
     background: #01011b;
     display: table;
     position: relative;
-}
-
-.intro {
-    width: 100vw;
-    position: absolute;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 60px;
-    padding-left: 100px;
-    padding-right: 100px;
 }
 
 #defaultCanvas0 {
@@ -65,15 +69,11 @@
 
 
 /* グラフのページ */
-.box3 {
+.box4 {
     height: auto;
     overflow: scroll;
 }
 
-.box4 {
-    height: 100vh;
-    background: yellow;
-}
 
 /* ページネーション */
 .pagenation {
