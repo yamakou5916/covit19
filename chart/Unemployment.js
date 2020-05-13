@@ -28,7 +28,7 @@ function drawBarChart13(data) {
       labels: tmpLabels13,
       datasets: [
         { label: "driving", data: tmpData113, borderColor: 'rgb(57, 125, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
-        { label: "transit", data: tmpData213, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
+        { label: "transit", data: tmpData213, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2", /* backgroundColor: "blue" */},
         { label: "walking", data: tmpData313, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
       ]
     },
