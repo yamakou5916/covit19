@@ -23,19 +23,18 @@ function drawBarChart13(data) {
   // 13)chart.jsで描画
   var ctx13 = document.getElementById("Unemployment").getContext("2d");
   var Unemployment = new Chart(ctx13, {
-    type: 'bar',
+    type: 'line',
     data: {
       labels: tmpLabels13,
       datasets: [
-        { label: "driving", data: tmpData113, borderColor: 'rgb(57, 125, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
-        { label: "transit", type: 'line', data: tmpData213, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2", /* backgroundColor: "blue" */},
-        { label: "walking", type: 'line', data: tmpData313, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
+        { label: "完全失業率", data: tmpData113, borderColor: 'rgb(57, 125, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
+        { label: "労働力人口比率", data: tmpData213, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2", /* backgroundColor: "blue" */},
+        { label: "就業率", data: tmpData313, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
       ]
     },
 
     options: {
       scales: {
-        
         xAxes: [{
           position: 'bottom',
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
