@@ -27,9 +27,9 @@ function drawBarChart12(data) {
     data: {
       labels: tmpLabels12,
       datasets: [
-        { label: "driving", data: tmpData112, borderColor: 'rgb(57, 55, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "transit", data: tmpData212, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "walking", data: tmpData312, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "driving", data: tmpData112, borderColor: 'rgb(57, 55, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
+        { label: "transit", data: tmpData212, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
+        { label: "walking", data: tmpData312, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
       ]
     },
 
@@ -38,22 +38,33 @@ function drawBarChart12(data) {
         
         xAxes: [{
           position: 'bottom',
-          gridLines: {color: 'rgba(255, 2255, 255, 0.1)',},
+          gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             maxRotation: 0, 
             minRotation: 0,
             autoSkip: true,
-            maxTicksLimit: 12, //値の最大表示数
+            maxTicksLimit: 5, //値の最大表示数
             fontColor: "white", // 文字の色
                     fontSize: 10,
           }
         }],
         yAxes: [{
+          id: "y-axis-1",   // Y軸のID
+          type: "linear",   // linear固定 
+          position: "left", // どちら側に表示される軸か？
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             fontColor: "white",
-                    fontSize: 10,
+            fontSize: 10,
           }
+        }, {
+          id: "y-axis-2",
+          type: "linear", 
+          position: "right",
+          ticks: {
+            fontColor: "white",
+            fontSize: 10,
+          },
         }],
       },
       legend: {
