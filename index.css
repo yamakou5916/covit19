@@ -111,6 +111,10 @@
     width: 100vw;
 }
 
+.G_outer {
+    text-align: center;
+}
+
 /* ページネーション */
 .pagenation {
     padding: 20px;
