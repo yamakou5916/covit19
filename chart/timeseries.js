@@ -60,11 +60,11 @@ function drawBarChart(data) {
       labelColor : '#ffffff',
       datasets: [
         { label: "小売店と娯楽施設", data: tmpData1, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "食料品店と薬局", data: tmpData2, borderColor: '#1BB4C3', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "公園", data: tmpData3, borderColor: '#1BC3BD', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "公共交通機関", data: tmpData4, borderColor: '#1BC3A9', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "職場", data: tmpData5, borderColor: '#1BC394', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "住居", data: tmpData6, borderColor: '#1BC380', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "食料品店と薬局", data: tmpData2, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "公園", data: tmpData3, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "公共交通機関", data: tmpData4, borderColor: colors[3], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "職場", data: tmpData5, borderColor: colors[4], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "住居", data: tmpData6, borderColor: colors[5], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
       ]
     },
 
