@@ -23,7 +23,7 @@ options: {}
 });
 */
 
-var colors = ["#1BA0C3","1BB4C3","1BC3BD","1BC3A9","1BC380","1BC36C"];
+var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
 
 
 // 2) CSVから２次元配列に変換
