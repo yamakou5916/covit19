@@ -128,6 +128,22 @@
     padding-bottom: 20px;
 }
 
+/* footer */
+.footer {
+    width: 100vw;
+    height: 100px;
+    text-align: center;
+    display: table;
+}
+
+.footer p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
 /* ページネーション */
 .pagenation {
     padding: 20px;
