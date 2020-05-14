@@ -29,7 +29,7 @@ function drawBarChart12(data) {
     data: {
       labels: tmpLabels12,
       datasets: [
-        { label: "非正規率", data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
+        /*{ label: "非正規率", data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},*/
         { type: 'line', label: "正規の職員・従業員", data: tmpData212, borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
         { type: 'line', label: "非正規の職員・従業員", data: tmpData312, borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
       ]
@@ -39,6 +39,7 @@ function drawBarChart12(data) {
       scales: {
         
         xAxes: [{
+          stacked: true,
           position: 'bottom',
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
@@ -51,6 +52,7 @@ function drawBarChart12(data) {
           }
         }],
         yAxes: [{
+          stacked: true,
           id: "y-axis-1",   // Y軸のID
           type: "linear",   // linear固定 
           position: "left", // どちら側に表示される軸か？
