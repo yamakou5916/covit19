@@ -84,6 +84,8 @@ function drawBarChart12(data) {
 }
 
 
+var EmploymentStatus;
+
 function main12() {
   // 1) ajaxでCSVファイルをロード
   var req12 = new XMLHttpRequest();
@@ -94,8 +96,8 @@ function main12() {
     var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
     data12 = csv2Array12(req12.responseText);
     // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
-    drawBarChart12(data12);
-    var EmploymentStatus = new Chart(ctx12, config12);
+    var config12 = drawBarChart12(data12);
+    EmploymentStatus = new Chart(ctx12, config12);
   }
   req12.send(null);
 }
