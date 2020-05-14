@@ -1,3 +1,5 @@
+var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
+
 // 2) CSVから２次元配列に変換
 function csv2Array3(str) {
   var csvData3 = [];
@@ -27,9 +29,9 @@ function drawBarChart3(data) {
     data: {
       labels: tmpLabels3,
       datasets: [
-        { label: "他道府県から東京都への転入者数【人】", data: tmpData13, borderColor: '#FF5B49', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "東京都から他道府県への転出者数【人】", data: tmpData23, borderColor: '#FF4978', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "他都道府県からの転入者数【人】", data: tmpData33, borderColor: '#FF49B9', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "他道府県から東京都への転入者数【人】", data: tmpData13, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "東京都から他道府県への転出者数【人】", data: tmpData23, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "他都道府県からの転入者数【人】", data: tmpData33, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 

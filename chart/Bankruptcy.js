@@ -25,7 +25,7 @@ function drawBarChart4(data) {
     data: {
       labels: tmpLabels4,
       datasets: [
-        {  label: "倒産数", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: 'rgba(57, 124, 189, 0.5)'},
+        { label: "倒産数", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: 'rgba(57, 124, 189, 0.5)'},
         { type: 'line',label: "負債総額", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,yAxisID: "y-axis-2",/* backgroundColor: "blue" */},
       ]
     },

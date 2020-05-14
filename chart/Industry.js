@@ -1,3 +1,5 @@
+var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
+
 // 2) CSVから２次元配列に変換
 function csv2Array10(str) {
   var csvData10 = [];
@@ -27,10 +29,10 @@ function drawBarChart10(data) {
     data: {
       labels: tmpLabels10,
       datasets: [
-        { label: "全産業活動指数", data: tmpData110, borderColor: 'rgb(99, 129, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "建設業活動指数", data: tmpData210, borderColor: 'rgb(91, 192, 190)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "鉱工業生産指数", data: tmpData310, borderColor: 'rgb(188, 290, 299)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "第３次産業活動指数", data: tmpData410, borderColor: 'rgb(99, 129, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "全産業活動指数", data: tmpData110, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "建設業活動指数", data: tmpData210, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "鉱工業生産指数", data: tmpData310, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "第３次産業活動指数", data: tmpData410, borderColor: colors[3], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 
