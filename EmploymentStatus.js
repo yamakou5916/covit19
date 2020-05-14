@@ -24,12 +24,13 @@ function drawBarChart12(data) {
 
   // 12)chart.jsで描画
   var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
-  var EmploymentStatus = new Chart(ctx12, {
+  var config12 =
+  {
     type: 'bar', 
     data: {
       labels: tmpLabels12,
       datasets: [
-        { label: "非正規率", data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
+        /*{ label: "非正規率", data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},*/
         { type: 'line', label: "正規の職員・従業員", data: tmpData212, borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
         { type: 'line', label: "非正規の職員・従業員", data: tmpData312, borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
       ]
@@ -39,6 +40,7 @@ function drawBarChart12(data) {
       scales: {
         
         xAxes: [{
+          stacked: true,
           position: 'bottom',
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
@@ -51,6 +53,7 @@ function drawBarChart12(data) {
           }
         }],
         yAxes: [{
+          stacked: true,
           id: "y-axis-1",   // Y軸のID
           type: "linear",   // linear固定 
           position: "left", // どちら側に表示される軸か？
@@ -78,8 +81,8 @@ function drawBarChart12(data) {
         }
       },
     }
-
-  });
+  }
+  var EmploymentStatus = new Chart(ctx12, config12);
 }
 
 
@@ -99,6 +102,39 @@ function main12() {
 
 main12();
 
+
+
+$("#line").click(function() {
+  change('line');
+});
+
+$("#bar").click(function() {
+  change('bar');
+});
+
+function change(newType) {
+  var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
+  // Remove the old chart and all its event handles
+  if (EmploymentStatus) {
+    EmploymentStatus.destroy();
+  }
+  var req12 = new XMLHttpRequest();
+  var filePath12 = './data/EmploymentStatus.csv';
+  req12.open("GET", filePath12, true);
+  req12.onload = function() {
+    // 2) CSVデータ変換の呼び出し
+    data12 = csv2Array12(req12.responseText);
+    // Chart.js modifies the object you pass in. Pass a copy of the object so we can use the original object later
+    var temp = jQuery.extend(true, {}, config);
+    temp.type = newType;
+    // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
+    drawBarChart12(data12);
+  }
+  req12.send(null);
+
+
+  //EmploymentStatus = new Chart(ctx12, temp);
+};
 
 
 
