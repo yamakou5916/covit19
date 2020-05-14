@@ -85,7 +85,7 @@ function drawBarChart12(data) {
 
 
 var EmploymentStatus;
-
+/*
 function main12() {
   // 1) ajaxでCSVファイルをロード
   var req12 = new XMLHttpRequest();
@@ -101,9 +101,9 @@ function main12() {
   }
   req12.send(null);
 }
-
-main12();
-//change("line");
+*/
+//main12();
+change("line");
 
 
 $("#line").click(function() {
@@ -113,7 +113,7 @@ $("#line").click(function() {
 $("#bar").click(function() {
   change('bar');
 });
-/**/
+
 
 function change(newType) {
   if (EmploymentStatus) {
@@ -125,17 +125,14 @@ function change(newType) {
   req12.open("GET", filePath12, true);
   req12.onload = function() {
     // 2) CSVデータ変換の呼び出し
+    var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
     data12 = csv2Array12(req12.responseText);
     // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
-    drawBarChart12(data12);
-    var temp12 = jQuery.extend(true, {}, config12);
-    temp12.type = newType;
-    EmploymentStatus = new Chart(ctx12, temp12);
-
+    var config12 = drawBarChart12(data12);
+    EmploymentStatus = new Chart(ctx12, config12);
   }
   req12.send(null);
-
-};
+}
 /**/
 
 
