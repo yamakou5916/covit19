@@ -115,6 +115,66 @@ $("#bar").click(function() {
 function change(newType) {
   var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
 
+  var EmploymentStatus = new Chart(ctx12, {
+    type: 'bar', 
+    data: {
+      labels: tmpLabels12,
+      datasets: [
+        /*{ label: "非正規率", data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},*/
+        { type: 'line', label: "正規の職員・従業員", data: tmpData212, borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
+        { type: 'line', label: "非正規の職員・従業員", data: tmpData312, borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
+      ]
+    },
+
+    options: {
+      scales: {
+        
+        xAxes: [{
+          stacked: true,
+          position: 'bottom',
+          gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
+          ticks: {
+            maxRotation: 0, 
+            minRotation: 0,
+            autoSkip: true,
+            maxTicksLimit: 5, //値の最大表示数
+            fontColor: "white", // 文字の色
+                    fontSize: 10,
+          }
+        }],
+        yAxes: [{
+          stacked: true,
+          id: "y-axis-1",   // Y軸のID
+          type: "linear",   // linear固定 
+          position: "left", // どちら側に表示される軸か？
+          gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
+          ticks: {
+            fontColor: "white",
+            fontSize: 10,
+          }
+        }, {
+          id: "y-axis-2",
+          type: "linear", 
+          position: "right",
+          ticks: {
+            fontColor: "white",
+            fontSize: 10,
+          },
+        }],
+      },
+      legend: {
+        display: true,
+        //position: 'top',
+        labels: {
+          fontSize: 10,
+          boxWidth: 10,
+        }
+      },
+    }
+
+  });
+
+
   // Remove the old chart and all its event handles
   if (myChart) {
     myChart.destroy();
