@@ -102,7 +102,6 @@ function main12() {
 main12();
 
 
-var myChart;
 
 $("#line").click(function() {
   change('line');
@@ -116,14 +115,14 @@ function change(newType) {
   var ctx120 = document.getElementById("EmploymentStatus").getContext("2d");
 
   // Remove the old chart and all its event handles
-  if (myChart) {
-    myChart.destroy();
+  if (EmploymentStatus) {
+    EmploymentStatus.destroy();
   }
 
   // Chart.js modifies the object you pass in. Pass a copy of the object so we can use the original object later
   var temp = jQuery.extend(true, {}, config);
   temp.type = newType;
-  myChart = new Chart(ctx120, temp);
+  EmploymentStatus = new Chart(ctx120, temp);
 };
 
 
