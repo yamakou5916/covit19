@@ -113,7 +113,7 @@ $("#bar").click(function() {
 });
 
 function change(newType) {
-  var ctx12 = document.getElementById("canvas").getContext("2d");
+  var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
 
   // Remove the old chart and all its event handles
   if (myChart) {
