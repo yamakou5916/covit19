@@ -29,9 +29,9 @@ function drawBarChart6(data) {
     data: {
       labels: tmpLabels6,
       datasets: [
-        { label: "driving", data: tmpData16, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "transit", data: tmpData26, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "walking", data: tmpData36, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "食料品", data: tmpData16, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "原料品", data: tmpData26, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "鉱物性燃料", data: tmpData36, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 
