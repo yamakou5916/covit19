@@ -85,7 +85,7 @@ function drawBarChart12(data) {
   var EmploymentStatus = new Chart(ctx12, config12);
 }
 
-/*
+
 function main12() {
   // 1) ajaxでCSVファイルをロード
   var req12 = new XMLHttpRequest();
@@ -101,8 +101,8 @@ function main12() {
 }
 
 main12();
-*/
 
+/*
 
 $("#line").click(function() {
   change('line');
@@ -133,6 +133,6 @@ function change(newType) {
   req12.send(null);
 
 };
-
+*/
 
 
