@@ -24,7 +24,8 @@ function drawBarChart12(data) {
 
   // 12)chart.jsで描画
   var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
-  var EmploymentStatus = new Chart(ctx12, {
+  var config12 =
+  {
     type: 'bar', 
     data: {
       labels: tmpLabels12,
@@ -80,11 +81,11 @@ function drawBarChart12(data) {
         }
       },
     }
-
-  });
+  }
+  var EmploymentStatus = new Chart(ctx12, config12);
 }
 
-/*
+
 function main12() {
   // 1) ajaxでCSVファイルをロード
   var req12 = new XMLHttpRequest();
@@ -101,7 +102,7 @@ function main12() {
 
 main12();
 
-*/
+/*
 
 $("#line").click(function() {
   change('line');
@@ -113,12 +114,10 @@ $("#bar").click(function() {
 
 function change(newType) {
   var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
-
   // Remove the old chart and all its event handles
   if (EmploymentStatus) {
     EmploymentStatus.destroy();
   }
-
   var req12 = new XMLHttpRequest();
   var filePath12 = './data/EmploymentStatus.csv';
   req12.open("GET", filePath12, true);
@@ -137,5 +136,5 @@ function change(newType) {
   //EmploymentStatus = new Chart(ctx12, temp);
 };
 
-
+*/
 
