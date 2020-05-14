@@ -1,3 +1,5 @@
+var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
+
 // 2) CSVから２次元配列に変換
 function csv2Array13(str) {
   var csvData13 = [];
@@ -27,9 +29,9 @@ function drawBarChart13(data) {
     data: {
       labels: tmpLabels13,
       datasets: [
-        { label: "完全失業率", data: tmpData113, borderColor: 'rgb(57, 125, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
-        { label: "労働力人口比率", data: tmpData213, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2", /* backgroundColor: "blue" */},
-        { label: "就業率", data: tmpData313, borderColor: 'rgb(188, 250, 255)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
+        { label: "完全失業率", data: tmpData113, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
+        { label: "労働力人口比率", data: tmpData213, borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2", /* backgroundColor: "blue" */},
+        { label: "就業率", data: tmpData313, borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
       ]
     },
 
