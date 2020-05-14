@@ -103,7 +103,7 @@ function main12() {
 }
 */
 //main12();
-change("line");
+//change("line");
 
 
 $("#line").click(function() {
