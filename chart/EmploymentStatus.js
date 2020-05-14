@@ -82,6 +82,8 @@ function drawBarChart12(data) {
       },
     }
   }
+  var temp12 = jQuery.extend(true, {}, config12);
+    temp12.type = newType;
   var EmploymentStatus = new Chart(ctx12, config12);
 }
 
@@ -101,8 +103,9 @@ function main12() {
 }
 
 main12();
-change(line);
+change("line");
 
+/*
 $("#line").click(function() {
   change('line');
 });
@@ -110,8 +113,8 @@ $("#line").click(function() {
 $("#bar").click(function() {
   change('bar');
 });
+/**/
 
-/*
 function change(newType) {
   if (EmploymentStatus) {
     EmploymentStatus.destroy();
@@ -125,14 +128,12 @@ function change(newType) {
     data12 = csv2Array12(req12.responseText);
     // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
     drawBarChart12(data12);
-    var temp12 = jQuery.extend(true, {}, config12);
-    temp12.type = newType;
-    EmploymentStatus = new Chart(ctx12, temp12);
+    
 
   }
   req12.send(null);
 
 };
-*/
+/**/
 
 
