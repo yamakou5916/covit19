@@ -23,6 +23,7 @@ function drawBarChart12(data) {
   };
 
   // 12)chart.jsで描画
+  var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
   var config12 =
   {
     type: 'bar', 
