@@ -89,13 +89,12 @@ function main12() {
   // 1) ajaxでCSVファイルをロード
   var req12 = new XMLHttpRequest();
   var filePath12 = './data/EmploymentStatus.csv';
-  var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
-
   req12.open("GET", filePath12, true);
   req12.onload = function() {
     // 2) CSVデータ変換の呼び出し
     data12 = csv2Array12(req12.responseText);
     // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
+    var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
     drawBarChart12(data12);
   }
   req12.send(null);
