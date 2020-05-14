@@ -1,334 +1,439 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <!-- Load c3.css -->
-  <link href="chart/c3.css" rel="stylesheet" type="text/css">
-  <link href="chart/chartview.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-  <!-- Load d3.js and c3.js -->
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="chart/c3.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script type="text/javascript" src="sketch.js"></script>
-  <link href="index.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
-  <title></title>
+<!-- Load c3.css -->
+<link href="chart/c3.css" rel="stylesheet" type="text/css">
+<link href="chart/chartview.css" rel="stylesheet" type="text/css">
+
+<!-- Load d3.js and c3.js -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="chart/c3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script type="text/javascript" src="sketch.js"></script>
+
+<link href="index.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
+<script src="main.js"></script>
+<title>Breakthru Index with/after COVID-19</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="header"></div>
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-  
-  <div id="sidebarMenu">
-    <h1>Experience map after COVID-19</h1>
-	    <ul class="sidebarMenuInner">
-	      <li>概要<br>
-	      コロナウイルスの影響で今までの生活が一変した。自粛が解除された後も続いていく。
-	      このマップは、その世界をシミュレートし、ウイルスと共存した世界のあり方を示したしたものである。</li>
-	      <li>考え方<br>
-	      ウイルスとの共存。一度落ち込んだ状態から生まれてくるもの。その病原菌を伝染させるだけではなく、それぞれの時と場所で新しい意識と生活を伝染させ根付かせている。<br>
-	      人々の行動変容の流れ：外圧→意識・思想→行動（→アイコン）<br>
-	      ※ コロナのように外圧がかかり人の生活が制限されると、 意識や思想に変化が生じる（意識・思想のマップ） それを追うように行動にも変化が見えるようになる（テクノロジーマップ）</li>
-	      <a href="javascript:showMind()" class="btn">意識・思想</a>
-	      <a href="javascript:showTechnology()" class="btn">テクノロジ</a>
-	      <a href="javascript:showPwC()" class="btn">PwC</a>
-	      <div id="text-button"><p id="text">クリック</p></div>
-	      <a href="javascript:setup()" class="btn">マップ起動</a>
-	    </ul>
-  </div>
+	<div class="box box1">
+	<div class="top">
+	  <img src="logo.png" class="logo">
+	</div>
+	</div>
 
-  <div id='center' class="main center">
-    <div class="mainInner"></div>
-  </div>   
-      <div class="top">
-      	<p>コロナウイルスの影響で今までの生活が一変した。自粛が解除された後も続いていく。 <br>このマップは、その世界をシミュレートし、ウイルスと共存した世界のあり方を示したしたものである。</p>
-      </div>
-      <div id="P5Canvas"></div>
-      <div class="outer">
-        <div class="g-block-1">
-          <div class="block1">
-            <p>
-              <img src="image/icon_lifestyle.png" alt="Smiley face" height="70" width="70">
-            </p>
-            <p>
-              消費者の経済活動<br>
-              滞在場所と時間
-            </p>
-            
-          </div>
-          <div class="block2">
-            <p>
-              移動が制限されることから、<br>目的地の変化も生じている。<br><br>
-              職場や小売店での滞在が減少、<br>住宅地での滞在が増加している。<br>
+  <div class="box box2">
+    <div class="intro">
+      <h1>About This Map</h1>
+      <h2>コロナウイルスの影響で今までの国民生活が一変した。<br>
+      このマップは、経済の変化をオープンデータによって可視化し<br>ウイルスと共存した世界のあり方を捕捉するための資料である。</h2>
 
-            </p>
-          </div>
-          <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-          </div>
-        </div>
-        <div class="g-block-2">
-          <div class="block3">
-            <p>2020年1~2月基準の移動量</p>
-          </div>
-          <div class="block4">
-              <canvas id="myChart"></canvas>
-          </div>
-        </div>
-      </div> 
-      <div class="outer">
-        <div class="g-block-1">
-          <div class="block1">
-            <p>
-              <img src="image/icon_lifestyle.png" alt="Smiley face" height="70" width="70">
-            </p>
-            <p>
-              消費者の経済活動<br>
-              住環境
-            </p>
-            
-          </div>
-          <div class="block2">
-            <p>
-              感染を避けるため、<br>コロナ疎開や他県への移動制限など、<br>住む場所にも変化が生じる。<br><br>
-              都市への流入と<br>地方への流入を比較する。
-            </p>
-          </div>
-          <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-          </div>
-        </div>
-        <div class="g-block-2">
-          <div class="block3">
-            <p>2020年1~2月基準の移動量</p>
-          </div>
-          <div class="block4">
-            <canvas id="MigrantMobility"></canvas>
-          </div>
-        </div>
-      </div>
-      <div class="outer">
-        <div class="g-block-1">
-          <div class="block1">
-            <p>
-              <img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70">
-            </p>
-            <p>
-              消費者の経済活動<br>
-              移動手段と移動量
-            </p>
-            
-          </div>
-          <div class="block2">
-            <p>
-              3月25日の東京都による<br>
-              不要不急の外出自粛要請<br>
-              4月7日に非常事態宣言<br><br>
+      <p>
+      4/22に行われた新型コロナウイルス感染症対策専門家会議での協議を基に、<br>人と人との接触を8割減らす目標が政府によって掲げられました。<br><br>
 
-              移動手段・交通機関の利用量<br>
-              が減少している
-            </p>
-          </div>
-          <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-          </div>
-        </div>
-        <div class="g-block-2">
-          <div class="block3">
-            <p>2020年1~2月基準の移動量</p>
-          </div>
-          <div class="block4">
-            <canvas id="AppleMobility"></canvas>
-          </div>
-        </div>
-      </div>
-      <div class="outer">
-        <div class="g-block-1">
-          <div class="block1">
-            <p>
-              <img src="image/icon_medical.png" alt="Smiley face" height="70" width="70">
-            </p>
-            <p>
-              消費者の経済活動<br>購入手段
-            </p>
-            
-          </div>
-          <div class="block2">
-            <p>
-              感染を避け三密を避けるために、<br>購入手段にも変化が生じる。<br><br>
-              買い物はスーパーマーケットが増加。<br>コンビニエンスストアは減少傾向にある。
-            </p>
-          </div>
-          <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-          </div>
-        </div>
-        <div class="g-block-2">
-          <div class="block3">
-            <p>2020年1~2月基準の移動量</p>
-          </div>
-          <div class="block4">
-            <canvas id="POS"></canvas>
-          </div>
-        </div>
-      </div>
-      <div class="outer">
-        <div class="g-block-1">
-          <div class="block1">
-            <p>
-              <img src="image/icon_workstyle.png" alt="Smiley face" height="70" width="70">
-            </p>
-            <p>
-              企業の経済活動<br>雇用体制
-            </p>
-            
-          </div>
-          <div class="block2">
-            <p>
-              コロナウイルスの影響で、<br>活動が制限され経営状態が<br>悪化している企業が多い。<br><br>
-              失業率や雇用形態も変化して<br>いくことが想定される。
+      コロナウイルスの拡散防止を目的に国民への行動指標として、<br>人々の生活環境を可視化するためのデータ活用の取り組みが行われ、<br>
+      個人を特定しない範囲でのデータが開示されました。
+      <br><br>
 
-            </p>
-          </div>
-          <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-          </div>
-        </div>
-        <div class="g-block-2">
-          <div class="block3">
-            <p>2020年1~2月基準の移動量</p>
-          </div>
-          <div class="block4">
-            <canvas id="Bankruptcy"></canvas>
-          </div>
-        </div>
-      </div>
-      <div class="outer">
-        <div class="g-block-1">
-          <div class="block1">
-            <p>
-              <img src="image/icon_manufacture.png" alt="Smiley face" height="70" width="70">
-            </p>
-            <p>
-              企業の経済活動<br>生産内容
-            </p>
-            
-          </div>
-          <div class="block2">
-            <p>
-              コロナウイルスの影響で<br>貿易が制限され、<br>商品の需給が不安定になっている。<br><br>
-              購買行動を支える<br>商品の入手・生産経路の変化<br>に着目する。
-            </p>
-          </div>
-          <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-          </div>
-        </div>
-        <div class="g-block-2">
-          <div class="block3">
-            <p>2020年1~2月基準の移動量</p>
-          </div>
-          <div class="block4">
-            <canvas id="Industry"></canvas>
-          </div>
-        </div>
-      </div>
-      <div class="outer">
-        <div class="g-block-1">
-          <div class="block1">
-            <p>
-              <img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70">
-            </p>
-            <p>
-              企業の経済活動<br>生産内容
-            </p>
-            
-          </div>
-          <div class="block2">
-            <p>
-              コロナウイルスの影響で<br>貿易が制限され、<br>商品の需給が不安定になっている。<br><br>
-              購買行動を支える<br>商品の入手・生産経路の変化<br>に着目する。
-            </p>
-          </div>
-          <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-          </div>
-        </div>
-        <div class="g-block-2">
-          <div class="block3">
-            <p>2020年1~2月基準の移動量</p>
-          </div>
-          <div class="block4">
-            <canvas id="Import"></canvas>
-          </div>
-        </div>
-      </div>
-      <div class="outer">
-        <div class="g-block-1">
-          <div class="block1">
-            <p>
-              <img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70">
-            </p>
-            <p>
-              企業の経済活動<br>生産内容
-            </p>
-            
-          </div>
-          <div class="block2">
-            <p>
-              コロナウイルスの影響で<br>貿易が制限され、<br>商品の需給が不安定になっている。<br><br>
-              購買行動を支える<br>商品の入手・生産経路の<br>変化に着目する。
-            </p>
-          </div>
-          <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-          </div>
-        </div>
-        <div class="g-block-2">
-          <div class="block3">
-            <p>2020年1~2月基準の移動量</p>
-          </div>
-          <div class="block4">
-            <canvas id="Export"></canvas>
-          </div>
-        </div>
+      また、政府からの自粛要請を受け人々の動きが制限され、<br>
+      その結果として経済に大きな影響がもたらされました。<br>
+      経済的な被害はリーマンショック以上ともされ、産業構造自体を変革する動きが高まっています。<br><br>
+
+      ここで取り扱う人の移動データ、人々の生産・消費を主とした経済活動のデータは、<br>「新たな生活様式」が根付いた変革後のビジネスにおいても重要な行動指標になりえます。
+      </p>
+    </div>
+  </div> 
+
+  <div class="box box3">
+    <div id="P5Canvas" class="map"></div>
+  </div> 
+
+  <div class="box box4">
+    <div class="G1">
+      <div class="G_outer">
+        <h2>消費動向における変化</h2>
+        <p>
+          本データ群は、今後の暮らし向きの見通しなどについての消費者の意識、<br>
+          購入経路や商品カテゴリによる販売金額等を把握することにより、<br>
+          消費経済の基礎的な動向を把握することを目的としています。
+        </p>
       </div>
     </div>
+
+    <div class="outer" id="section00">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_lifestyle.png" alt="Smiley face" height="70" width="70"></p>
+              <p>人流滞在量</p>
+            </div>
+            <div class="block2">
+              <p>
+                Google アカウントの位置情報履歴の設定をオンにしているユーザーから集計されたデータ。人々が訪れる場所をいくつかのカテゴリ（小売店と娯楽施設、食料品店と薬局、公園、公共交通機関、職場、住居など）に分類し、人々の地理的な移動状況を時間の経過とともに提供しています。
+
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div> 
+
+    <div class="outer" id="section02">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70"></p>
+              <p>国内の<br>人流移動量</p>
+            </div>
+            <div class="block2">
+              <p>
+              特定の国や地域において、Appleマップに対して行われた経路検索の数を計数することによって生成されたデータ。特定の地域や小地域、および都市におけるデータの利用可否は、1日あたりの経路検索の下限などを含めたいくつかの要因に基づいています。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="AppleMobility"></canvas>
+            </div>
+        </div>
+    </div> 
+
+
+    <div class="outer" id="section04">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_medical.png" alt="Smiley face" height="70" width="70"></p>
+              <p>購入手段別<br>販売金額指数</p>
+            </div>
+            <div class="block2">
+              <p>
+                業態別・商品別・地域別の販売金額指数及び前年比のデータを提供している。感染を避け三密を避けるために、購入手段にも変化が生じる。買い物はスーパーマーケットが増加。コンビニエンスストアは減少傾向にある。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="POS"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="outer" id="section03">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_medical.png" alt="Smiley face" height="70" width="70"></p>
+              <p>消費者態度指数</p>
+            </div>
+            <div class="block2">
+              <p>
+              消費者の暮らし向きに関する考え方の変化や物価の見通しなどをとらえる消費動向調査に基づいたデータ。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="CustomerAttitude"></canvas>
+            </div>
+        </div>
+    </div> 
+    <div class="G1">
+      <div class="G_outer">
+        <h2>労働動向における変化</h2>
+        <p>
+          本データ群は、企業の経営状態や労働力需給の変化等が、雇用、労働時間等に及ぼしている影響を可視化し、<br>今後の見通しについて調査し、労働経済の変化の基礎的な動向を把握することを目的としています。
+        </p>
+      </div>
+    </div>
+
+    <div class="outer" id="section01">
+      <div class="g-block-1">
+        <div class="block25-up">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/+_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_lifestyle.png" alt="Smiley face" height="70" width="70"></p>
+              <p>他県からの<br>移住者数</p>
+            </div>
+            <div class="block2">
+              <p>
+              月々の国内における人口移動の状況を明らかにする住民基本台帳に基づいたデータ。都道府県別の転入・転出者などの移動者数を提供しています。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="MigrantMobility"></canvas>
+            </div>
+        </div>
+    </div> 
+
+    <div class="outer" id="section05">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_workstyle.png" alt="Smiley face" height="70" width="70"></p>
+              <p>雇用形態<br>非正規率</p>
+            </div>
+            <div class="block2">
+              <p>
+              統計法に基づく基幹統計調査として，国民の就業及び不就業の状態を明らかにするための労働力調査から得られるデータ。非正規の職員・従業員数，失業期間別の完全失業者数などを提供している。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <button id='line'>line</button><button id='bar'>bar</button>
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="EmploymentStatus"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="outer" id="section05">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_workstyle.png" alt="Smiley face" height="70" width="70"></p>
+              <p>完全失業率<br>就業者数</p>
+            </div>
+            <div class="block2">
+              <p>
+              統計法に基づく基幹統計調査として，国民の就業及び不就業の状態を明らかにするための労働力調査から得られるデータ。就業者数，完全失業者数，完全失業率などを提供している。
+
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="Unemployment"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="outer" id="section05">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_workstyle.png" alt="Smiley face" height="70" width="70"></p>
+              <p>倒産数<br>負債総額</p>
+            </div>
+            <div class="block2">
+              <p>
+              景気を測る統計指標の一つである全国・負債総額1千万円以上の倒産統計の、抜粋データ。「倒産件数」「負債額推移」を提供しています。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="Bankruptcy"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="G1">
+      <div class="G_outer">
+        <h2>経済動向における変化</h2>
+        <p>
+          本データ群は、企業の経営状態や労働力需給の変化等が、雇用、労働時間等に及ぼしている影響を可視化し、<br>今後の見通しについて調査し、経済全般の変化の基礎的な動向を把握することを目的としています。
+        </p>
+      </div>
+    </div>
+
+    <div class="outer" id="section06">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_manufacture.png" alt="Smiley face" height="70" width="70"></p>
+              <p>全産業活動指数</p>
+            </div>
+            <div class="block2">
+              <p>
+              全産業の生産活動の状況を示すデータ。 第3次産業活動指数、鉱工業生産指数、公務等活動指数、建設業活動指数、農林水産業生産指数の、5つの生産・活動指数を加重平均した数値を指数として算出し、提供しています。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="Industry"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="outer" id="section07">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70"></p>
+              <p>輸入量</p>
+            </div>
+            <div class="block2">
+              <p>
+              最近の輸出入動向について年分別に、「輸出入額及び差引額の推移」、「地域別輸出入額の推移」、「貿易相手先国上位１０カ国の推移」、「対世界主要輸出入品の推移」、「主要輸出入品の推移」について提供しています。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="Import"></canvas>
+            </div>
+        </div>
+    </div>               
+
+    <div class="outer" id="section08">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70"></p>
+              <p>輸出量</p>
+            </div>
+            <div class="block2">
+              <p>
+              最近の輸出入動向について年分別に、「輸出入額及び差引額の推移」、「地域別輸出入額の推移」、「貿易相手先国上位１０カ国の推移」、「対世界主要輸出入品の推移」、「主要輸出入品の推移」について提供しています。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="Export"></canvas>
+            </div>
+        </div>
+    </div> 
+
+    <div class="outer" id="section08">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70"></p>
+              <p>GDP</p>
+            </div>
+            <div class="block2">
+              <p>
+              最近の輸出入動向について年分別に、「輸出入額及び差引額の推移」、「地域別輸出入額の推移」、「貿易相手先国上位１０カ国の推移」、「対世界主要輸出入品の推移」、「主要輸出入品の推移」について提供しています。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="Export"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"><p>Powered by PwC Experience Center Tokyo</p></div>
+
+  </div><!--box-->
+
+  
   </div>
+
   <script type="text/javascript" src="chart/timeseries.js"></script>
   <script type="text/javascript" src="chart/AppleMobility.js"></script>
   <script type="text/javascript" src="chart/MigrantMobility.js"></script>
@@ -336,6 +441,9 @@
   <script type="text/javascript" src="chart/Import.js"></script>
   <script type="text/javascript" src="chart/Export.js"></script>
   <script type="text/javascript" src="chart/POS.js"></script>
-  <!--script type="text/javascript" src="chart/Industry.js"></script-->
+  <script type="text/javascript" src="chart/Industry.js"></script>
+  <script type="text/javascript" src="chart/CustomerAttitude.js"></script>
+  <script type="text/javascript" src="chart/Unemployment.js"></script>
+  <script type="text/javascript" src="chart/EmploymentStatus.js"></script>
 </body>
 </html>
