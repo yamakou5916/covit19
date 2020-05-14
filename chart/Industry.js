@@ -40,7 +40,6 @@ function drawBarChart10(data) {
       scales: {
         
         xAxes: [{
-          stacked: true,
           Industryition: 'bottom',
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
@@ -53,7 +52,6 @@ function drawBarChart10(data) {
           }
         }],
         yAxes: [{
-          stacked: true,
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             fontColor: "white",
