@@ -1,3 +1,19 @@
+
+var myChart;
+
+$("#line").click(function() {
+  change('line');
+});
+
+$("#bar").click(function() {
+  change('bar');
+});
+
+function change(newType) {
+  var ctx12 = document.getElementById("canvas").getContext("2d");
+
+  
+
 var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
 
 // 2) CSVから２次元配列に変換
@@ -102,18 +118,6 @@ function main12() {
 main12();
 
 
-var myChart;
-
-$("#line").click(function() {
-  change('line');
-});
-
-$("#bar").click(function() {
-  change('bar');
-});
-
-function change(newType) {
-  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Remove the old chart and all its event handles
   if (myChart) {
@@ -123,7 +127,7 @@ function change(newType) {
   // Chart.js modifies the object you pass in. Pass a copy of the object so we can use the original object later
   var temp = jQuery.extend(true, {}, config);
   temp.type = newType;
-  myChart = new Chart(ctx, temp);
+  myChart = new Chart(ctx12, temp);
 };
 
 
