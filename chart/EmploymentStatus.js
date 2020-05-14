@@ -23,7 +23,6 @@ function drawBarChart12(data) {
   };
 
   // 12)chart.jsで描画
-  var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
   var config12 =
   {
     type: 'bar', 
@@ -82,7 +81,7 @@ function drawBarChart12(data) {
       },
     }
   }
-  var EmploymentStatus = new Chart(ctx12, config12);
+  //var EmploymentStatus = new Chart(ctx12, config12);
 }
 
 
@@ -95,8 +94,10 @@ function main12() {
     // 2) CSVデータ変換の呼び出し
     data12 = csv2Array12(req12.responseText);
     // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
+    var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
+
     drawBarChart12(data12);
-    //var EmploymentStatus = new Chart(ctx12, config12);
+    var EmploymentStatus = new Chart(ctx12, config12);
   }
   req12.send(null);
 }
