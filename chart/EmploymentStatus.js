@@ -131,7 +131,7 @@ function change(newType) {
     var config12 = drawBarChart12(data12);
     var temp12 = jQuery.extend(true, {}, config12);
     temp12.type = newType;
-    EmploymentStatus = new Chart(ctx12, config12);
+    EmploymentStatus = new Chart(ctx12, temp12);
   }
   req12.send(null);
 }
