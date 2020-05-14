@@ -131,7 +131,7 @@ function change(newType) {
     var config12 = drawBarChart12(data12);
     var temp12 = jQuery.extend(true, {}, config12);
     temp12.type = newType;
-    if(newType == line){
+    if(newType == "line"){
       temp12.data = "data: {labels: tmpLabels12,datasets: [{ label: '非正規率', data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: 'y-axis-2',},]}"
     }
     EmploymentStatus = new Chart(ctx12, temp12);
