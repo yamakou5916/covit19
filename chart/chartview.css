@@ -12,18 +12,18 @@ pre {margin:0; padding:0; color:#fff;}
 .block3 h2 {color:#fff; font-size: 16px; margin:0 20px; text-align: left;}
 .block3 p {color:#fff; font-size: 12px; margin:0 20px; text-align: left;}
 .block25 div {
-    width: 90px;font-size: 20px;text-align: center;
+    width: 120px;font-size: 20px;text-align: center;
     background-color: #1BC3A9;
     /*border:2px solid; border-color:white;*/border-radius: 15px;
-    padding:10px 20px;margin: 30px auto;
+    padding:10px 20px; margin: 30px auto;
 }
 .block25 h2 {color:#01011b; font-size: 16px;text-align: center; margin: 0;}
 .block25 p {color:#01011b; font-size: 12px;text-align: center; margin: 0; }
 .block25-up div {
-    width: 90px;font-size: 20px;text-align: center;
+    width: 120px;font-size: 20px;text-align: center;
     background-color: #FF4978;
     /*border:2px solid; border-color:white;*/border-radius: 15px;
-    padding:10px 20px;margin: 30px auto;
+    padding:10px 20px; margin: 30px auto;
 }
 .block25-up h2 {color:#01011b; font-size: 16px;text-align: center; margin: 0;}
 .block25-up p {color:#01011b; font-size: 12px;text-align: center; margin: 0; }
@@ -94,20 +94,20 @@ pre {margin:0; padding:0; color:#fff;}
 }
 
 .g-block-1 {
-	max-width: 30%;
-    width: 30%;
-    height:100%;
+	max-width: 40%;
+    width: 40%;
+    height: 100%;
     float: left;
     /*display:inline-block;*/
     margin: auto;
-    padding:0;
+    padding: 0;
     flex: 1;
 }
 
 .g-block-2 {
-    width: 70%;
+    width: 60%;
     float: right;
-    height:100%;
+    height: 100%;
     /*display:inline-block;*/
     margin: auto;
     padding:0;
