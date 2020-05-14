@@ -100,9 +100,8 @@ function main12() {
   req12.send(null);
 }
 
-main12();
-
-/*
+//main12();
+change(line);
 
 $("#line").click(function() {
   change('line');
@@ -111,6 +110,7 @@ $("#line").click(function() {
 $("#bar").click(function() {
   change('bar');
 });
+
 
 function change(newType) {
   if (EmploymentStatus) {
@@ -133,6 +133,6 @@ function change(newType) {
   req12.send(null);
 
 };
-*/
+
 
 
