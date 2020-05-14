@@ -1,3 +1,5 @@
+var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
+
 // 2) CSVから２次元配列に変換
 function csv2Array11(str) {
   var csvData11 = [];
@@ -28,10 +30,10 @@ function drawBarChart11(data) {
     data: {
       labels: tmpLabels11,
       datasets: [
-        { label: "給与所得", data: tmpData111, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "事業所得", data: tmpData211, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "年金所得", data: tmpData311, borderColor: 'rgb(188, 270, 277)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "その他", data: tmpData411, borderColor: 'rgb(77, 127, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "給与所得", data: tmpData111, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "事業所得", data: tmpData211, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "年金所得", data: tmpData311, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "その他", data: tmpData411, borderColor: colors[3], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 

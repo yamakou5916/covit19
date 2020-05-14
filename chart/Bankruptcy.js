@@ -1,3 +1,5 @@
+var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
+
 // 2) CSVから２次元配列に変換
 function csv2Array4(str) {
   var csvData4 = [];
@@ -25,8 +27,8 @@ function drawBarChart4(data) {
     data: {
       labels: tmpLabels4,
       datasets: [
-        { label: "倒産数", data: tmpData14, borderColor: 'rgb(57, 124, 189)', borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: 'rgba(57, 124, 189, 0.5)'},
-        { type: 'line',label: "負債総額", data: tmpData24, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,yAxisID: "y-axis-2",/* backgroundColor: "blue" */},
+        { label: "倒産数", data: tmpData14, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: 'rgba(57, 124, 189, 0.5)'},
+        { type: 'line',label: "負債総額", data: tmpData24, borderColor: colors[1], borderWidth: 1, pointRadius: 0,yAxisID: "y-axis-2",/* backgroundColor: "blue" */},
       ]
     },
 

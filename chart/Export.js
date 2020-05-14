@@ -1,3 +1,5 @@
+var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
+
 // 2) CSVから２次元配列に変換
 function csv2Array6(str) {
   var csvData6 = [];
@@ -27,9 +29,9 @@ function drawBarChart6(data) {
     data: {
       labels: tmpLabels6,
       datasets: [
-        { label: "driving", data: tmpData16, borderColor: 'rgb(67, 126, 189)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "transit", data: tmpData26, borderColor: 'rgb(91, 192, 170)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "walking", data: tmpData36, borderColor: 'rgb(188, 260, 266)', borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "driving", data: tmpData16, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "transit", data: tmpData26, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "walking", data: tmpData36, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 
