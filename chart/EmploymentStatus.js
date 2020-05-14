@@ -132,7 +132,7 @@ function change(newType) {
     var temp12 = jQuery.extend(true, {}, config12);
     temp12.type = newType;
     if(newType == "line"){
-      temp12.data = "{labels: tmpLabels12, datasets: [{ label: '非正規率', data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: 'y-axis-2',},]}"
+      temp12.datasets = "[{ label: '非正規率', data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: 'y-axis-2',},]"
     }
     EmploymentStatus = new Chart(ctx12, temp12);
   }
