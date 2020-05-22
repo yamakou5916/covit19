@@ -73,6 +73,12 @@
     <div class="outer" id="section00">
       <div class="g-block-1">
         <div class="block25">
+          <div class="col-auto">
+            <button class="btn btn-info" v-on:click="randData">ランダムに生成する</button>
+            <select class="form-control" v-model="graphSelected">
+              <option v-for="(item,index) in graphs" :key="index" :value="item.type">{{ item.name }}</option>
+            </select>
+          </div>
             <div>
               <p style="">変化率</p>
               <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
