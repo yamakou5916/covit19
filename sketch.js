@@ -121,6 +121,11 @@ function draw(){
 
   //軸
   noStroke();
+  fill(0);
+  ellipse(300, 50, 80, 80);
+
+
+  noStroke();
   fill(255);
   stroke(255);
   strokeWeight(0.5);
@@ -129,21 +134,12 @@ function draw(){
   line(700,80,700,height-80);
   line(1300,80,1300,height-80);
   line(200,height/2,width-200,height/2);
-  //line(width/2, height/2, width/2, height-50);
-  //line(50, height/6 ,width/2, height/2);
-  //line(width/2,height/2,width-50,height/6);
   noStroke();
   fill(255);
   textSize(24);
   text("消費者の動き", 400, 50);
   text("労働者の動き", width/2, 50);
   text("企業の動き", 1600, 50);
-  
-  textSize(14);
-  //text("行動指標", 100, height/2);
-  //text("経済指標", width-100, height/2);
-  //text("ミクロ指標\n（日次）", width/2, height-40);
-  //text("マクロ指標\n（月次）", width/2, 0+40);
   
 
   //意識・思想マップ
