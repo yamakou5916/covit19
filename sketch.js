@@ -132,7 +132,6 @@ function draw(){
   rect(900,25,200,50);
   rect(1500,25,200,50);
 
-
   noStroke();
   fill(255);
   stroke(255);
@@ -149,6 +148,15 @@ function draw(){
   text("労働者の動き", width/2, 50);
   text("企業の動き", 1600, 50);
   
+
+  ellipse(1900, 300, 50, 50);
+  ellipse(1900, 700, 50, 50);
+  rect(1800,250,50,400);
+  text("労働者の動き", width/2, 50);
+  text("企業の動き", 1600, 50);
+
+
+
 
   //意識・思想マップ
   if(showCon0%2 == 0){
