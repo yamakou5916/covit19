@@ -30,8 +30,8 @@ function drawBarChart12(data) {
       labels: tmpLabels12,
       datasets: [
         /*{ label: "非正規率", data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},*/
-        { /*type: 'line',*/ label: "正規の職員・従業員", data: tmpData212, borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
-        { /*type: 'line',*/ label: "非正規の職員・従業員", data: tmpData312, borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
+        { label: "正規の職員・従業員", data: tmpData212, borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
+        { label: "非正規の職員・従業員", data: tmpData312, borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
       ]
     },
 
@@ -85,35 +85,11 @@ function drawBarChart12(data) {
 
 
 var EmploymentStatus;
-/*
-function main12() {
-  // 1) ajaxでCSVファイルをロード
-  var req12 = new XMLHttpRequest();
-  var filePath12 = './data/EmploymentStatus.csv';
-  req12.open("GET", filePath12, true);
-  req12.onload = function() {
-    // 2) CSVデータ変換の呼び出し
-    var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
-    data12 = csv2Array12(req12.responseText);
-    // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
-    var config12 = drawBarChart12(data12);
-    EmploymentStatus = new Chart(ctx12, config12);
-  }
-  req12.send(null);
-}
-*/
-//main12();
+
+//ボタン選択
 change("line");
-
-
-$("#line").click(function() {
-  change('line');
-});
-
-$("#bar").click(function() {
-  change('bar');
-});
-
+$("#line").click(function() {change('line');});
+$("#bar").click(function() {change('bar');});
 
 function change(newType) {
   if (EmploymentStatus) {
@@ -131,8 +107,7 @@ function change(newType) {
     var config12 = drawBarChart12(data12);
     var temp12 = jQuery.extend(true, {}, config12);
     temp12.type = newType;
-    if(newType == line){
-      temp12.data = {labels: tmpLabels12,datasets: [{ label: "非正規率", data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},]}}
+    if(newType == line){temp12.data = {labels: tmpLabels12,datasets: [{ label: "非正規率", data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},]}}
     EmploymentStatus = new Chart(ctx12, temp12);
   }
   req12.send(null);
