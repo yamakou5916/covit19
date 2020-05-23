@@ -124,7 +124,8 @@ function draw(){
   strokeWeight(0.5);
   textSize(14);
   textAlign(CENTER,CENTER);
-  line(width/2,80,width/2,height-80);
+  line(width/3,80,width/3,height-80);
+  line(width*2/3,80,width*2/3,height-80);
   line(200,height/2,width-200,height/2);
   //line(width/2, height/2, width/2, height-50);
   //line(50, height/6 ,width/2, height/2);
