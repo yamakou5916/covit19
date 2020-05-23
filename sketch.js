@@ -67,8 +67,8 @@ function setup(){
   pixelDensity(2);
   canvas = createCanvas(2000, 1000);//描画領域を指定
   canvas.parent("P5Canvas");
-  background(255);
   backphoto = loadImage("image/0.jpg");
+  background(0,0.4);
   //randomSave();
   noiseSet();
   //images0 = loadImage("education.png");
