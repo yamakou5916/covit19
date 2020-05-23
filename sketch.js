@@ -124,11 +124,11 @@ function draw(){
   strokeWeight(0.5);
   textSize(14);
   textAlign(CENTER,CENTER);
-  //line(width/2,80,width/2,height-80);
-  //line(200,height/2,width-200,height/2);
-  line(width/2, height/2, width/2, height-50);
-  line(50, height/6 ,width/2, height/2);
-  line(width/2,height/2,width-50,height/6);
+  line(width/2,80,width/2,height-80);
+  line(200,height/2,width-200,height/2);
+  //line(width/2, height/2, width/2, height-50);
+  //line(50, height/6 ,width/2, height/2);
+  //line(width/2,height/2,width-50,height/6);
   noStroke();
   fill(255);
   textSize(24);
@@ -317,7 +317,6 @@ function littleCircle(i){
       fill("#1BC3A9");
     }*/
     fill(255);
-
     ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
 
     noFill();
