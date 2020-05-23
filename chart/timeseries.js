@@ -52,7 +52,8 @@ function drawBarChart(data) {
 
   // 4)chart.jsで描画
   var ctx = document.getElementById("myChart").getContext("2d");
-  var myChart = new Chart(ctx, {
+  //var myChart = new Chart(ctx, {
+  var config = {
     type: 'line',
     data: {
       labels: tmpLabels,
@@ -65,52 +66,9 @@ function drawBarChart(data) {
         { label: "公共交通機関", data: tmpData4, borderColor: colors[3], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
         { label: "職場", data: tmpData5, borderColor: colors[4], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
         { label: "住居", data: tmpData6, borderColor: colors[5], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-      ],
-      graphs: [
-        {type: 'line',name: '折れ線グラフ'},
-        {type: 'bar',name: '棒グラフ'},
-        {type: 'radar',name: 'レーダーチャート'},
-        {type: 'pie',name: 'パイチャート'},
-        {type: 'polarArea',name: 'ポーラチャート'}
-      ],
-      graphSelected: 'line'
+      ]
     },
-    watch: {
-      datasets: {
-        handler() {
-          this.canvas.data.datasets[0].data = this.datasets;
-          this.canvas.data.labels = Array(this.datasets.length).fill('');
-          this.canvas.update();
-        }
-      },
-      graphSelected: {
-        handler() {
-          this.canvas.destroy();
-          this.chart();
-        }
-      }
-    },
-    mounted() {
-      this.chart();
-    },
-    methods: {
-      chart() {
-        var vm = this;
-        var ctx = document.getElementById("charts");
-        vm.canvas = new Chart(ctx, {
-          type: vm.graphSelected,
-          data: {
-            labels: Array(vm.datasets.length).fill(''),
-            datasets: [{
-              label: 'グラフ',
-              backgroundColor: '#20B2AA',
-              data: vm.datasets
-            }]
-          }
-        });
-      },
-    }
-    
+
     options: {
     	scales: {
     		xAxes: [{
@@ -122,14 +80,14 @@ function drawBarChart(data) {
     				autoSkip: true,
     				maxTicksLimit: 5, //値の最大表示数
     				fontColor: "white", // 文字の色
-            fontSize: 10,
+                    fontSize: 10,
     			}
     		}],
     		yAxes: [{
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
     			ticks: {
     				fontColor: "white",
-            fontSize: 10,
+                    fontSize: 10,
     			}
     		}],
     	},
@@ -142,22 +100,40 @@ function drawBarChart(data) {
     		}
     	},
     }
-  });
+  }
+  return config;
 }
 
+var timeseries;
+change("line");
 
-// 1) ajaxでCSVファイルをロード
-var req = new XMLHttpRequest();
-var filePath = './data/data.csv';
-req.open("GET", filePath, true);
-req.onload = function() {
-// 2) CSVデータ変換の呼び出し
+$("#line").click(function() {
+  change('line');
+});
+
+$("#bar").click(function() {
+  change('bar');
+});
+
+function change(newType) {
+  if (timeseries) {
+    timeseries.destroy();
+  }
+  // 1) ajaxでCSVファイルをロード
+  var req = new XMLHttpRequest();
+  var filePath = './data/timeseries.csv';
+  req.open("GET", filePath, true);
+  req.onload = function() {
+    // 2) CSVデータ変換の呼び出し
+    var ctx = document.getElementById("timeseries").getContext("2d");
     data = csv2Array(req.responseText);
-// 3) chart.jsデータ準備、4) chart.js描画の呼び出し
-    drawBarChart(data);
+    // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
+    var config = drawBarChart(data);
+    var temp = jQuery.extend(true, {}, config);
+    temp.type = newType;
+    if(newType == line){temp.data = {labels: tmpLabels,datasets: [{ label: "非正規率", data: tmpData1, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},]}}
+    timeseries = new Chart(ctx, temp);
+  }
+  req.send(null);
 }
-req.send(null);
-
-
-
 
