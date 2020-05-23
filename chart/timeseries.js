@@ -52,8 +52,7 @@ function drawBarChart(data) {
 
   // 4)chart.jsで描画
   var ctx = document.getElementById("myChart").getContext("2d");
-  //var myChart = new Chart(ctx, {
-  var config = {
+  var myChart = new Chart(ctx, {
     type: 'line',
     data: {
       labels: tmpLabels,
@@ -100,40 +99,26 @@ function drawBarChart(data) {
     		}
     	},
     }
-  }
-  return config;
+
+  });
 }
 
-var timeseries;
-change("line");
 
-$("#line0").click(function() {
-  change('line');
-});
-
-$("#bar0").click(function() {
-  change('bar');
-});
-
-function change(newType) {
-  if (timeseries) {
-    timeseries.destroy();
-  }
+function main() {
   // 1) ajaxでCSVファイルをロード
   var req = new XMLHttpRequest();
-  var filePath = './data/timeseries.csv';
+  var filePath = './data/data.csv';
   req.open("GET", filePath, true);
   req.onload = function() {
     // 2) CSVデータ変換の呼び出し
-    var ctx = document.getElementById("timeseries").getContext("2d");
     data = csv2Array(req.responseText);
-    // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
-    var config = drawBarChart(data);
-    var temp = jQuery.extend(true, {}, config);
-    temp.type = newType;
-    if(newType == line){temp.data = {labels: tmpLabels,datasets: [{ label: "小売店と娯楽施設", data: tmpData1, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},,]}}
-    timeseries = new Chart(ctx, temp);
+    // 3) chart.jsデータ準備、4) chart.js描画の呼び出し
+    drawBarChart(data);
   }
   req.send(null);
 }
+
+main();
+
+
 
