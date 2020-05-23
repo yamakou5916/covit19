@@ -41,33 +41,20 @@ function drawBarChart12(data) {
           stacked: true,
           position: 'bottom',
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
-          ticks: {
-            maxRotation: 0, 
-            minRotation: 0,
-            autoSkip: true,
-            maxTicksLimit: 5, //値の最大表示数
-            fontColor: "white", // 文字の色
-                    fontSize: 10,
-          }
+          ticks: {maxRotation: 0, minRotation: 0, autoSkip: true, maxTicksLimit: 5, fontColor: "white", fontSize: 10,}
         }],
         yAxes: [{
           stacked: true,
-          id: "y-axis-1",   // Y軸のID
-          type: "linear",   // linear固定 
-          position: "left", // どちら側に表示される軸か？
+          id: "y-axis-1", 
+          type: "linear", 
+          position: "left",
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
-          ticks: {
-            fontColor: "white",
-            fontSize: 10,
-          }
+          ticks: {fontColor: "white",fontSize: 10,}
         }, {
           id: "y-axis-2",
           type: "linear", 
           position: "right",
-          ticks: {
-            fontColor: "white",
-            fontSize: 10,
-          },
+          ticks: {fontColor: "white", fontSize: 10,},
         }],
       },
       legend: {
@@ -91,10 +78,9 @@ change("line");
 $("#line").click(function() {change('line');});
 $("#bar").click(function() {change('bar');});
 
+//リフレッシュ
 function change(newType) {
-  if (EmploymentStatus) {
-    EmploymentStatus.destroy();
-  }
+  if (EmploymentStatus) {EmploymentStatus.destroy();}
   // 1) ajaxでCSVファイルをロード
   var req12 = new XMLHttpRequest();
   var filePath12 = './data/EmploymentStatus.csv';
@@ -112,6 +98,6 @@ function change(newType) {
   }
   req12.send(null);
 }
-/**/
+
 
 
