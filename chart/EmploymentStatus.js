@@ -27,7 +27,7 @@ function drawBarChart12(data) {
   {
     type: 'bar', 
     data: {
-      labels: tmpData12,
+      labels: tmpData12[0],
       datasets: [
         /*{ label: "非正規率", data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},*/
         { label: "正規の職員・従業員", data: tmpData212, borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
