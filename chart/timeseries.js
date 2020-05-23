@@ -94,17 +94,6 @@ function drawBarChart(data) {
         this.chart();
     },
     methods: {
-      toRaw(data) {
-        return JSON.stringify(data);
-      },
-      add(i) {
-        this.datasets.splice(i, 0, this.datasets[i]);
-      },
-      del(i) {
-        if (this.datasets.length > 1) {
-          this.datasets.splice(i, 1);
-        }
-      },
       chart() {
         var vm = this;
         var ctx = document.getElementById("charts");
@@ -120,20 +109,8 @@ function drawBarChart(data) {
           }
         });
       },
-      randData() {
-        var index = Math.floor(Math.random() * (10 - 2) + 2);
-        var i = 0;
-        var datasets = [];
-        while (index > i) {
-          datasets.push(Math.floor(Math.random() * (1000) - 500));
-          i++;
-        }
-        this.datasets = datasets;
-      }
     }
-  })
-
-    /*
+    
     options: {
     	scales: {
     		xAxes: [{
@@ -165,10 +142,9 @@ function drawBarChart(data) {
     		}
     	},
     }
-
   });
 }
-*/
+
 
 function main() {
   // 1) ajaxでCSVファイルをロード
