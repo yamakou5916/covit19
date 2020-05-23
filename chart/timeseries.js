@@ -131,7 +131,7 @@ function change(newType) {
     var config = drawBarChart(data);
     var temp = jQuery.extend(true, {}, config);
     temp.type = newType;
-    if(newType == line){temp.data = {labels: tmpLabels,datasets: [{ label: "非正規率", data: tmpData1, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},]}}
+    if(newType == line){temp.data = {labels: tmpLabels,datasets: [{ label: "小売店と娯楽施設", data: tmpData1, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},,]}}
     timeseries = new Chart(ctx, temp);
   }
   req.send(null);
