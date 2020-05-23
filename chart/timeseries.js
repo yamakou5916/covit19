@@ -90,8 +90,8 @@ function drawBarChart(data) {
         }
       }
     },
-        mounted() {
-        this.chart();
+    mounted() {
+      this.chart();
     },
     methods: {
       chart() {
@@ -122,14 +122,14 @@ function drawBarChart(data) {
     				autoSkip: true,
     				maxTicksLimit: 5, //値の最大表示数
     				fontColor: "white", // 文字の色
-                    fontSize: 10,
+            fontSize: 10,
     			}
     		}],
     		yAxes: [{
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
     			ticks: {
     				fontColor: "white",
-                    fontSize: 10,
+            fontSize: 10,
     			}
     		}],
     	},
@@ -146,21 +146,18 @@ function drawBarChart(data) {
 }
 
 
-function main() {
-  // 1) ajaxでCSVファイルをロード
-  var req = new XMLHttpRequest();
-  var filePath = './data/data.csv';
-  req.open("GET", filePath, true);
-  req.onload = function() {
-    // 2) CSVデータ変換の呼び出し
+// 1) ajaxでCSVファイルをロード
+var req = new XMLHttpRequest();
+var filePath = './data/data.csv';
+req.open("GET", filePath, true);
+req.onload = function() {
+// 2) CSVデータ変換の呼び出し
     data = csv2Array(req.responseText);
-    // 3) chart.jsデータ準備、4) chart.js描画の呼び出し
+// 3) chart.jsデータ準備、4) chart.js描画の呼び出し
     drawBarChart(data);
-  }
-  req.send(null);
 }
+req.send(null);
 
-main();
 
 
 
