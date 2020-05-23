@@ -107,11 +107,11 @@ function drawBarChart(data) {
 var timeseries;
 change("line");
 
-$("#line").click(function() {
+$("#line0").click(function() {
   change('line');
 });
 
-$("#bar").click(function() {
+$("#bar0").click(function() {
   change('bar');
 });
 
