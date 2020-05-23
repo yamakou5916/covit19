@@ -122,7 +122,13 @@ function draw(){
   //軸
   noStroke();
   fill(0);
-  ellipse(300, 50, 80, 80);
+  ellipse(300, 50, 50, 50);
+  ellipse(500, 50, 50, 50);
+  ellipse(900, 50, 50, 50);
+  ellipse(1100, 50, 50, 50);
+  ellipse(1300, 50, 50, 50);
+  ellipse(1500, 50, 50, 50);
+  rect(300,100,500,150);
 
 
   noStroke();
