@@ -135,10 +135,9 @@ function draw(){
   noStroke();
   fill(255);
   textSize(24);
-  text("経済動向", width/2, 50);
-  //text("Economics", width-200, 50);
-  text("消費動向", 200, height-50);
-  text("労働動向", width-200, height-50);
+  text("消費者の動き", width/2, 50);
+  text("労働者の動き", width/3, 50);
+  text("企業の動き", width*2/3, 50);
   
   textSize(14);
   //text("行動指標", 100, height/2);
