@@ -136,7 +136,7 @@ function draw(){
   fill(255);
   textSize(24);
   text("消費者の動き", width/4, 50);
-  text("労働者の動き", width/3, 50);
+  text("労働者の動き", width/2, 50);
   text("企業の動き", width*3/4, 50);
   
   textSize(14);
