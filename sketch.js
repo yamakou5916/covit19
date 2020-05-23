@@ -316,7 +316,7 @@ function littleCircle(i){
     }else{
       fill("#1BC3A9");
     }*/
-    fill(0);
+    fill(255);
 
     ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
 
