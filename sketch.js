@@ -310,12 +310,13 @@ function littleCircle(i){
     fill(255);
     stroke(0);
     strokeWeight(1);
-    */
+    
     if (i%2==0) {
       fill("#FF4978");
     }else{
       fill("#1BC3A9");
-    }
+    }*/
+    fill(0);
 
     ellipse(cwidth[i], cheight[i], rSize0[i]/2, rSize0[i]/2);
 
