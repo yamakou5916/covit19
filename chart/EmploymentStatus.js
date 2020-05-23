@@ -15,10 +15,10 @@ function drawBarChart12(data) {
   // 3)chart.jsのdataset用の配列を用意
   var tmpData = [], tmpData112 = [], tmpData212 = [], tmpData312 = [];
   for (var row in data) {
-    tmpData[row].push(data[row][0])
-    tmpData[row].push(data[row][1])
-    tmpData[row].push(data[row][2])
-    tmpData[row].push(data[row][3])
+    tmpData[0].push(data[row][0])
+    tmpData[1].push(data[row][1])
+    tmpData[2].push(data[row][2])
+    tmpData[3].push(data[row][3])
   };
 
   // 12)chart.jsで描画
