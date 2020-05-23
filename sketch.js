@@ -40,7 +40,7 @@ const bCol=[191,191,144,144,135,135,200,200,191,191,144,187];
 let images0;
 let allImages = [];
 let catImages = [];
-let backphoto;
+let backphoto = [];
 
 const twidth=[700,750,1200,1300];
 const theight=[500,1150,400,700];
@@ -68,7 +68,8 @@ function setup(){
   canvas = createCanvas(2000, 1000);//描画領域を指定
   canvas.parent("P5Canvas");
   background(255);
-  backphoto = loadImage("image/0.jpg");
+  backphoto.push(loadImage("image/0.jpg"));
+  backphoto.push(loadImage("image/1.jpg"));
   //randomSave();
   noiseSet();
   //images0 = loadImage("education.png");
@@ -115,7 +116,7 @@ function draw(){
   noStroke();
   //fill(1,1,27);
   //rect(0,0,2000,1500);
-  image(backphoto, 0, 0, 4000, 3000);
+  image(backphoto[0], 0, 0, 4000, 3000);
   fill('rgba(0,0,0,0.4)');
   rect(0,0,4000,3000);
 
