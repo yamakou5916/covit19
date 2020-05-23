@@ -115,7 +115,7 @@ function draw(){
   noStroke();
   fill(1,1,27);
   rect(0,0,2000,1500);
-  image(backphoto, 0, 0, 4000, 2000);
+  image(backphoto, 0, 0, 4000, 3000);
 
   //軸
   noStroke();
