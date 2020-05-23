@@ -105,6 +105,7 @@ function setup(){
   //catImages.push(loadImage("image/icon_lifeevent.png"));
   //catImages.push(loadImage("image/icon_medical.png"));
   //catImages.push(loadImage("image/icon_lifeline.png"));
+  textnum = 0;
 
 }
 
@@ -116,7 +117,7 @@ function draw(){
   noStroke();
   //fill(1,1,27);
   //rect(0,0,2000,1500);
-  image(backphoto[0], 0, 0, 4000, 3000);
+  image(backphoto[textnum], 0, 0, 4000, 3000);
   fill('rgba(0,0,0,0.4)');
   rect(0,0,4000,3000);
 
@@ -291,12 +292,16 @@ function draw(){
     fill(145,193,186,80);
     if(dist(mouseX,mouseY,cwidth[0],cheight[0]) < rSize0[0]/4){
       ellipse(cwidth[0],cheight[0], rSize0[0]/2, rSize0[0]/2);
+      textnum = 0;
     }else if(dist(mouseX,mouseY,cwidth[1],cheight[1]) < rSize0[1]/4){
       ellipse(cwidth[1],cheight[1], rSize0[1]/2, rSize0[1]/2);
+      textnum = 1;
     }else if(dist(mouseX,mouseY,cwidth[2],cheight[2]) < rSize0[2]/4){
       ellipse(cwidth[2],cheight[2], rSize0[2]/2, rSize0[2]/2);
+      textnum = 0;
     }else if(dist(mouseX,mouseY,cwidth[3],cheight[3]) < rSize0[3]/4){
       ellipse(cwidth[3],cheight[3], rSize0[3]/2, rSize0[3]/2);
+      textnum = 1;
     }else if(dist(mouseX,mouseY,cwidth[4],cheight[4]) < rSize0[4]/4){
       ellipse(cwidth[4],cheight[4], rSize0[4]/2, rSize0[4]/2);
     }else if(dist(mouseX,mouseY,cwidth[5],cheight[5]) < rSize0[5]/4){
