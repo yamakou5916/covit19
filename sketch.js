@@ -67,8 +67,8 @@ function setup(){
   pixelDensity(2);
   canvas = createCanvas(2000, 1000);//描画領域を指定
   canvas.parent("P5Canvas");
+  background(255);
   backphoto = loadImage("image/0.jpg");
-  background(0,0,0,0.4);
   //randomSave();
   noiseSet();
   //images0 = loadImage("education.png");
@@ -116,6 +116,8 @@ function draw(){
   fill(1,1,27);
   rect(0,0,2000,1500);
   image(backphoto, 0, 0, 4000, 3000);
+  fill(0,0,0,0.4);
+  rect(0,0,4000,3000);
 
   //軸
   noStroke();
