@@ -13,12 +13,13 @@ function csv2Array12(str) {
 
 function drawBarChart12(data) {
   // 3)chart.jsのdataset用の配列を用意
-  var tmpLabels = [], tmpData[] = [[],[],[]], tmpData112 = [], tmpData212 = [], tmpData312 = [];
+  var tmpData12 = [[]], tmpData112 = [], tmpData212 = [], tmpData312 = [];
   for (var row in data) {
-    tmpLabels.push(data[row][0])
-    tmpData[row].push(data[row][1])
-    tmpData[row].push(data[row][2])
-    tmpData[row].push(data[row][3])
+    tmpData12[0].push(data[row][0])
+    tmpData112.push(data[row][1])
+    tmpData212.push(data[row][2])
+    tmpData312.push(data[row][3])
+
   };
 
   // 12)chart.jsで描画
@@ -26,11 +27,11 @@ function drawBarChart12(data) {
   {
     type: 'bar', 
     data: {
-      labels: tmpLabels[0],
+      labels: tmpData12,
       datasets: [
         /*{ label: "非正規率", data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},*/
-        { label: "正規の職員・従業員", data: tmpData[2]], borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
-        { label: "非正規の職員・従業員", data: tmpData[3]], borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
+        { label: "正規の職員・従業員", data: tmpData212, borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "blue" */},
+        { label: "非正規の職員・従業員", data: tmpData312, borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
       ]
     },
 
@@ -92,7 +93,7 @@ function change(newType) {
     var config12 = drawBarChart12(data12);
     var temp12 = jQuery.extend(true, {}, config12);
     temp12.type = newType;
-    if(newType == line){temp12.data = {labels: tmpLabels12,datasets: [{ label: "非正規率", data: tmpData[1], borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},]}}
+    if(newType == line){temp12.data = {labels: tmpData12[0],datasets: [{ label: "非正規率", data: tmpData112, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},]}}
     EmploymentStatus = new Chart(ctx12, temp12);
   }
   req12.send(null);
