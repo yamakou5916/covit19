@@ -73,10 +73,10 @@ function setup(){
   //randomSave();
   noiseSet();
   //images0 = loadImage("education.png");
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/icon/living_sphere.png"));
+  allImages.push(loadImage("image/icon/living_sphere.png"));
+  allImages.push(loadImage("image/icon/living_sphere.png"));
+  allImages.push(loadImage("image/icon/living_sphere.png"));
   allImages.push(loadImage("image/-_b.png"));
   allImages.push(loadImage("image/-_b.png"));
   allImages.push(loadImage("image/-_b.png"));
@@ -178,7 +178,7 @@ function draw(){
       noStroke();
       imageMode(CENTER);
       images0 = allImages[i];
-      image(images0, cwidth[i], cheight[i]-50, 20, 20);
+      image(images0, cwidth[i], cheight[i]-30, 50, 50);
       textSize(16);
       textStyle(BOLD);
       textAlign(CENTER,CENTER);
