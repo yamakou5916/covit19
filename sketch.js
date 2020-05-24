@@ -159,8 +159,8 @@ function draw(){
       textSize(16);
       textStyle(BOLD);
       textAlign(CENTER,CENTER);
-      text(bigText[i], cwidth[i], cheight[i]);
-      textSize(10);
+      //text(bigText[i], cwidth[i], cheight[i]);
+      //textSize(10);
       textAlign(CENTER,CENTER);
       text(titleText[i], cwidth[i], cheight[i]+45);
       textStyle(NORMAL);
