@@ -183,9 +183,9 @@ function draw(){
       textStyle(BOLD);
       textAlign(CENTER,CENTER);
       text(bigText[i], cwidth[i], cheight[i]);
-      textSize(10);
+      textSize(24);
       textAlign(CENTER,CENTER);
-      text(titleText[i], cwidth[i], cheight[i]+45);
+      text(titleText[i], cwidth[i], cheight[i]+25);
       textStyle(NORMAL);
     }
   }
