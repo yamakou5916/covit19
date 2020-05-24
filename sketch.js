@@ -174,7 +174,7 @@ function draw(){
       rSize0[i] -= 0.5;
       textnum = 1;
     }*/
-    if(changeRate[i] <= framCnt * 0.1){
+    if(changeRate[i] >= framCnt * 0.1){
       showNum[i] = framCnt * 0.1
     }else{
       showNum[i] = changeRate[i]
