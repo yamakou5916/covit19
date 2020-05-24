@@ -175,9 +175,9 @@ function draw(){
       textnum = 1;
     }*/
     if(changeRate[i] >= framCnt * 0.1){
-      showNum[i] = framCnt * 0.1
+      showNum[i].toFixed(1);  = framCnt * 0.1
     }else{
-      showNum[i] = changeRate[i]
+      showNum[i].toFixed(1);  = changeRate[i]
     }
     
     littleCircle(i)
