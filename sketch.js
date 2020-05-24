@@ -1,5 +1,5 @@
 const cwidth=[200,400,600,800,1000,1200,1400,1600,1800,];
-const cheight=[500,500,500,500,500,500,500,500,500,];
+var cheight=[500,500,500,500,500,500,500,500,500,];
 //const cwidth=[850,900,700,750,300,400,1150,1500,1550,1250,1300];
 //const cheight=[300,150,350,750,500,800,300,250,600,850,600];
 const dwidth=[450,600,500,1200,1400,600,1150,1500,1550,1250,1500];
@@ -175,13 +175,14 @@ function draw(){
       textnum = 1;
     }*/
     if(changeRate[i] >= framCnt * 0.1){
-      showNum[i] = framCnt * 0.1
+      showNum[i] = framCnt * 0.1;
     }else{
-      showNum[i] = changeRate[i]
+      showNum[i] = changeRate[i];
     }
+    cheight[i]+showNum[i];
 
     
-    littleCircle(i)
+    littleCircle(i);
     fill(0);
     noStroke();
     imageMode(CENTER);
