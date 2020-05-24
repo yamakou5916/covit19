@@ -166,36 +166,34 @@ function draw(){
 
 
   //意識・思想マップ
-  if(showCon0%2 == 0){
-    for(var i=0; i<9;i++){
+  for(var i=0; i<9;i++){
       /*if (1000 * sin(radians(framCnt)) > 0) {
-        rSize0[i] += 0.5;
-        textnum = 0;
-      } else {
-        rSize0[i] -= 0.5;
-        textnum = 1;
-      }*/
-      if(changeRate[i] <= framCnt * 0.1){
-        showNum[i] = framCnt * 0.1
-      }else{
-        showNum[i] = changeRate[i]
-      }
-    
-      littleCircle(i)
-      fill(0);
-      noStroke();
-      imageMode(CENTER);
-      images0 = allImages[i];
-      image(images0, cwidth[i], cheight[i]-30, 50, 50);
-      textSize(16);
-      textStyle(BOLD);
-      textAlign(CENTER,CENTER);
-      text(bigText[i], cwidth[i], cheight[i]);
-      textSize(24);
-      textAlign(CENTER,CENTER);
-      text(showNum[i], cwidth[i], cheight[i]+30);
-      textStyle(NORMAL);
+      rSize0[i] += 0.5;
+      textnum = 0;
+    } else {
+      rSize0[i] -= 0.5;
+      textnum = 1;
+    }*/
+    if(changeRate[i] <= framCnt * 0.1){
+      showNum[i] = framCnt * 0.1
+    }else{
+      showNum[i] = changeRate[i]
     }
+    
+    littleCircle(i)
+    fill(0);
+    noStroke();
+    imageMode(CENTER);
+    images0 = allImages[i];
+    image(images0, cwidth[i], cheight[i]-30, 50, 50);
+    textSize(16);
+    textStyle(BOLD);
+    textAlign(CENTER,CENTER);
+    text(bigText[i], cwidth[i], cheight[i]);
+    textSize(24);
+    textAlign(CENTER,CENTER);
+    text(showNum[i], cwidth[i], cheight[i]+30);
+    textStyle(NORMAL);
   }
 
   /*
