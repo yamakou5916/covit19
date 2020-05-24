@@ -8,8 +8,8 @@ var rSize =[300,300,300,300,300,300,300,300,300,300,300,300,300,300,300,300,300,
 var rSize0 =[300,300,300,300,300,300,300,300,300,300,300,300,300,300,300,300,300,300];
 const lSize = [0];
 const collision = 0;
-const bigText = ["Living Sphere","Touchpoint","Basket","Work Place","Management","Social Relation","Sentiment","Regulatory","Supply Chain"];
-const titleText=["-25%","-25%","-25%","-25%","-25%","-25%","-25%","-25%","-25%"];
+const bigText = ["Living Sphere","Touchpoint","Basket","Work Place","Management","Social Relation","Sentiment","Regulatory","Supply Chain","販売金額指数","他県からの\n移住者数","完全失業率","倒産数\n負債総額","雇用形態\n非正規率"];
+const titleText=["エデュケーション","ライフスタイル","エンタテイメント","ワークスタイル","ライフイベント","ヘルスケア","ライフライン","マニュファクチュア","サプライチェーン","マネジメント","メディカル"];
 const smallText0=
 [["ネット教育の\n存在感向上", "学校教育の\n自主選択化", "リモート\n学習状況\n評価制度", "遠隔下の\n社会性獲得\n人間関係教育"],
 ["反都市化\n地方への\n分散移住", "非定住\n複数拠点活動", "現実と仮想\nの均質化", "コミュニティ\n地方文化創生"],
@@ -82,6 +82,29 @@ function setup(){
   allImages.push(loadImage("image/icon/business_sentiment.png"));
   allImages.push(loadImage("image/icon/regulatory.png"));
   allImages.push(loadImage("image/icon/supply_chain.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+  allImages.push(loadImage("image/-_b.png"));
+
+  catImages.push(loadImage("image/icon_entertainment.png"));
+  catImages.push(loadImage("image/icon_lifestyle.png"));
+  catImages.push(loadImage("image/icon_management.png"));
+  catImages.push(loadImage("image/icon_manufacture.png"));
+  catImages.push(loadImage("image/icon_supplychain.png"));
+  catImages.push(loadImage("image/icon_workstyle.png"));
+  //catImages.push(loadImage("image/icon_education.png"));
+  //catImages.push(loadImage("image/icon_healthcare.png"));
+  //catImages.push(loadImage("image/icon_lifeevent.png"));
+  //catImages.push(loadImage("image/icon_medical.png"));
+  //catImages.push(loadImage("image/icon_lifeline.png"));
   textnum = 0;
 
 }
@@ -160,9 +183,9 @@ function draw(){
       textStyle(BOLD);
       textAlign(CENTER,CENTER);
       text(bigText[i], cwidth[i], cheight[i]);
-      textSize(10);
-      textAlign(CENTER,CENTER);
-      text(titleText[i], cwidth[i], cheight[i]+45);
+      //textSize(10);
+      //textAlign(CENTER,CENTER);
+      //text(titleText[i], cwidth[i], cheight[i]-45);
       textStyle(NORMAL);
     }
   }
