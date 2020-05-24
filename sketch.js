@@ -82,29 +82,6 @@ function setup(){
   allImages.push(loadImage("image/icon/business_sentiment.png"));
   allImages.push(loadImage("image/icon/regulatory.png"));
   allImages.push(loadImage("image/icon/supply_chain.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-  allImages.push(loadImage("image/-_b.png"));
-
-  catImages.push(loadImage("image/icon_entertainment.png"));
-  catImages.push(loadImage("image/icon_lifestyle.png"));
-  catImages.push(loadImage("image/icon_management.png"));
-  catImages.push(loadImage("image/icon_manufacture.png"));
-  catImages.push(loadImage("image/icon_supplychain.png"));
-  catImages.push(loadImage("image/icon_workstyle.png"));
-  //catImages.push(loadImage("image/icon_education.png"));
-  //catImages.push(loadImage("image/icon_healthcare.png"));
-  //catImages.push(loadImage("image/icon_lifeevent.png"));
-  //catImages.push(loadImage("image/icon_medical.png"));
-  //catImages.push(loadImage("image/icon_lifeline.png"));
   textnum = 0;
 
 }
