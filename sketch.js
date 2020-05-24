@@ -176,10 +176,11 @@ function draw(){
     }*/
     if(changeRate[i] >= framCnt * 0.1){
       showNum[i] = framCnt * 0.1;
+      cheight[i] = cheight[i] + 0.1;
     }else{
       showNum[i] = changeRate[i];
     }
-    cheight[i]+showNum[i];
+    
 
     
     littleCircle(i);
