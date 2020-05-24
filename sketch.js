@@ -72,6 +72,14 @@ function setup(){
   background(255);
   backphoto.push(loadImage("image/0.jpg"));
   backphoto.push(loadImage("image/1.jpg"));
+  backphoto.push(loadImage("image/2.jpg"));
+  backphoto.push(loadImage("image/3.jpg"));
+  backphoto.push(loadImage("image/4.jpg"));
+  backphoto.push(loadImage("image/5.jpg"));
+  backphoto.push(loadImage("image/6.jpg"));
+  backphoto.push(loadImage("image/7.jpg"));
+  backphoto.push(loadImage("image/8.jpg"));
+
   //randomSave();
   noiseSet();
   //images0 = loadImage("education.png");
@@ -307,25 +315,25 @@ function draw(){
       textnum = 1;
     }else if(dist(mouseX,mouseY,cwidth[2],cheight[2]) < rSize0[2]/4){
       ellipse(cwidth[2],cheight[2], rSize0[2]/2, rSize0[2]/2);
-      textnum = 0;
+      textnum = 2;
     }else if(dist(mouseX,mouseY,cwidth[3],cheight[3]) < rSize0[3]/4){
       ellipse(cwidth[3],cheight[3], rSize0[3]/2, rSize0[3]/2);
-      textnum = 1;
+      textnum = 3;
     }else if(dist(mouseX,mouseY,cwidth[4],cheight[4]) < rSize0[4]/4){
       ellipse(cwidth[4],cheight[4], rSize0[4]/2, rSize0[4]/2);
-      textnum = 0;
+      textnum = 4;
     }else if(dist(mouseX,mouseY,cwidth[5],cheight[5]) < rSize0[5]/4){
       ellipse(cwidth[5],cheight[5], rSize0[5]/2, rSize0[5]/2);
-      textnum = 1;
+      textnum = 5;
     }else if(dist(mouseX,mouseY,cwidth[6],cheight[6]) < rSize0[6]/4){
       ellipse(cwidth[6],cheight[6], rSize0[6]/2, rSize0[6]/2);
-      textnum = 0;
+      textnum = 6;
     }else if(dist(mouseX,mouseY,cwidth[7],cheight[7]) < rSize0[7]/4){
       ellipse(cwidth[7],cheight[7], rSize0[7]/2, rSize0[7]/2);
-      textnum = 1;
+      textnum = 7;
     }else if(dist(mouseX,mouseY,cwidth[8],cheight[8]) < rSize0[8]/4){
       ellipse(cwidth[8],cheight[8], rSize0[8]/2, rSize0[8]/2);
-      textnum = 0;
+      textnum = 8;
     }
 
 }
