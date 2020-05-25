@@ -13,7 +13,7 @@ const titleText = [25,15,2,22.2,5.4,10.5,7.5,8.6,9.3];
 var showNum = [0,0,0,0,0,0,0,0,0]
 var changeRate = [25,15,2,22.2,5.4,10.5,7.5,8.6,9.3];
 const smallText0=
-[["ネット教育の\n存在感向上", "学校教育の\n自主選択化", "リモート\n学習状況\n評価制度", "遠隔下の\n社会性獲得\n人間関係教育"],
+[["歩き", "車", "電車"],
 ["反都市化\n地方への\n分散移住", "非定住\n複数拠点活動", "現実と仮想\nの均質化", "コミュニティ\n地方文化創生"],
 ["リフレッシュ\n短サイクル化", "室内での運動\n小旅行の増加", "異なる地点の\n異なる体験を\n同時に共有", "現実と仮想\n区分けが\nなくなる"],
 ["デジタルな\n働き方の確立", "需要変動\n季節労働化", "スキルの多角化\nマルチキャリア", "職業選択の\n価値観変化"],
@@ -306,73 +306,75 @@ function draw(){
 */
     //fill(145,193,186,80);
     fill(27, 195, 169);
-    textSize(24);
+    textSize(16);
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
     if(dist(mouseX,mouseY,cwidth[0],cheight[0]) < rSize0[0]/4){
       ellipse(cwidth[0],cheight[0], rSize0[0]/2, rSize0[0]/2);
       fill(255);    
       textnum = 0;
+      text(smallText[textnum], cwidth[textnum]-30, cheight[textnum]);
+
       text(titleText[textnum], cwidth[textnum], cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]-40);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]+40);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]+30);
   
     }else if(dist(mouseX,mouseY,cwidth[1],cheight[1]) < rSize0[1]/4){
       ellipse(cwidth[1],cheight[1], rSize0[1]/2, rSize0[1]/2);
       fill(255);
       textnum = 1;
       text(titleText[textnum], cwidth[textnum], cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]-40);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]+40);      
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]+30);      
     }else if(dist(mouseX,mouseY,cwidth[2],cheight[2]) < rSize0[2]/4){
       ellipse(cwidth[2],cheight[2], rSize0[2]/2, rSize0[2]/2);
       fill(255);
       textnum = 2;
       text(titleText[textnum], cwidth[textnum], cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]-40);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]+40);      
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]+30);      
     }else if(dist(mouseX,mouseY,cwidth[3],cheight[3]) < rSize0[3]/4){
       ellipse(cwidth[3],cheight[3], rSize0[3]/2, rSize0[3]/2);
       fill(255);
       textnum = 3;
       text(titleText[textnum], cwidth[textnum], cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]-40);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]+40);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]+30);
     }else if(dist(mouseX,mouseY,cwidth[4],cheight[4]) < rSize0[4]/4){
       ellipse(cwidth[4],cheight[4], rSize0[4]/2, rSize0[4]/2);
       fill(255);
       textnum = 4;
       text(titleText[textnum], cwidth[textnum], cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]-40);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]+40);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]+30);
     }else if(dist(mouseX,mouseY,cwidth[5],cheight[5]) < rSize0[5]/4){
       ellipse(cwidth[5],cheight[5], rSize0[5]/2, rSize0[5]/2);
       fill(255);
       textnum = 5;
       text(titleText[textnum], cwidth[textnum], cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]-40);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]+40);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]+30);
     }else if(dist(mouseX,mouseY,cwidth[6],cheight[6]) < rSize0[6]/4){
       ellipse(cwidth[6],cheight[6], rSize0[6]/2, rSize0[6]/2);
       fill(255);
       textnum = 6;
       text(titleText[textnum], cwidth[textnum], cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]-40);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]+40);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]+30);
     }else if(dist(mouseX,mouseY,cwidth[7],cheight[7]) < rSize0[7]/4){
       ellipse(cwidth[7],cheight[7], rSize0[7]/2, rSize0[7]/2);
       fill(255);
       textnum = 7;
       text(titleText[textnum], cwidth[textnum], cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]-40);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]+40);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]+30);
     }else if(dist(mouseX,mouseY,cwidth[8],cheight[8]) < rSize0[8]/4){
       ellipse(cwidth[8],cheight[8], rSize0[8]/2, rSize0[8]/2);
       fill(255);
       textnum = 8;
       text(titleText[textnum], cwidth[textnum], cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]-40);
-      text(titleText[textnum], cwidth[textnum], cheight[textnum]+40);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum], cheight[textnum]+30);
     }
 
 }
