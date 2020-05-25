@@ -306,9 +306,15 @@ function draw(){
       }
     }
 */
-    fill(145,193,186,80);
+    //fill(145,193,186,80);
+    fill(27, 195, 169);
     if(dist(mouseX,mouseY,cwidth[0],cheight[0]) < rSize0[0]/4){
       ellipse(cwidth[0],cheight[0], rSize0[0]/2, rSize0[0]/2);
+      fill(0);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[i], cwidth[i], cheight[i]);
       textnum = 0;
     }else if(dist(mouseX,mouseY,cwidth[1],cheight[1]) < rSize0[1]/4){
       ellipse(cwidth[1],cheight[1], rSize0[1]/2, rSize0[1]/2);
