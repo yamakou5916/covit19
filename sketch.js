@@ -314,7 +314,8 @@ function draw(){
       fill(255);    
       textnum = 0;
       text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]);
-
+      text(smallText[textnum][1], cwidth[textnum], cheight[textnum]);
+      text(smallText[textnum][2], cwidth[textnum]+30, cheight[textnum]);
       text(titleText[textnum], cwidth[textnum], cheight[textnum]);
       text(titleText[textnum], cwidth[textnum], cheight[textnum]-30);
       text(titleText[textnum], cwidth[textnum], cheight[textnum]+30);
