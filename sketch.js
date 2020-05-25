@@ -313,9 +313,9 @@ function draw(){
       ellipse(cwidth[0],cheight[0], rSize0[0]/2, rSize0[0]/2);
       fill(255);    
       textnum = 0;
-      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]);
-      text(smallText[textnum][1], cwidth[textnum], cheight[textnum]);
-      text(smallText[textnum][2], cwidth[textnum]+30, cheight[textnum]);
+      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
+      text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
+      text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
       text(titleText[textnum], cwidth[textnum], cheight[textnum]);
       text(titleText[textnum], cwidth[textnum], cheight[textnum]-30);
       text(titleText[textnum], cwidth[textnum], cheight[textnum]+30);
