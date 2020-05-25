@@ -340,18 +340,43 @@ function draw(){
       textnum = 3;
     }else if(dist(mouseX,mouseY,cwidth[4],cheight[4]) < rSize0[4]/4){
       ellipse(cwidth[4],cheight[4], rSize0[4]/2, rSize0[4]/2);
+      fill(255);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[4], cwidth[4], cheight[4]);
       textnum = 4;
     }else if(dist(mouseX,mouseY,cwidth[5],cheight[5]) < rSize0[5]/4){
       ellipse(cwidth[5],cheight[5], rSize0[5]/2, rSize0[5]/2);
+      fill(255);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[5], cwidth[5], cheight[5]);
       textnum = 5;
     }else if(dist(mouseX,mouseY,cwidth[6],cheight[6]) < rSize0[6]/4){
       ellipse(cwidth[6],cheight[6], rSize0[6]/2, rSize0[6]/2);
+      fill(255);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[6], cwidth[6], cheight[6]);
       textnum = 6;
     }else if(dist(mouseX,mouseY,cwidth[7],cheight[7]) < rSize0[7]/4){
       ellipse(cwidth[7],cheight[7], rSize0[7]/2, rSize0[7]/2);
+      fill(255);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[7], cwidth[7], cheight[7]);
       textnum = 7;
     }else if(dist(mouseX,mouseY,cwidth[8],cheight[8]) < rSize0[8]/4){
       ellipse(cwidth[8],cheight[8], rSize0[8]/2, rSize0[8]/2);
+      fill(255);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[8], cwidth[8], cheight[8]);
       textnum = 8;
     }
 
