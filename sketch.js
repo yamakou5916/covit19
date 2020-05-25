@@ -12,7 +12,7 @@ const bigText = ["Living Sphere","Touchpoint","Basket","Work Place","Management"
 const titleText = [25,15,2,22.2,5.4,10.5,7.5,8.6,9.3];
 var showNum = [0,0,0,0,0,0,0,0,0]
 var changeRate = [25,15,2,22.2,5.4,10.5,7.5,8.6,9.3];
-const smallText0=
+const smallText=
 [["歩き", "車", "電車"],
 ["反都市化\n地方への\n分散移住", "非定住\n複数拠点活動", "現実と仮想\nの均質化", "コミュニティ\n地方文化創生"],
 ["リフレッシュ\n短サイクル化", "室内での運動\n小旅行の増加", "異なる地点の\n異なる体験を\n同時に共有", "現実と仮想\n区分けが\nなくなる"],
