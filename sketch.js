@@ -171,8 +171,6 @@ function draw(){
   text("率", 1950, 530);
 
 
-
-
   //意識・思想マップ
   for(var i=0; i<9;i++){
       /*if (1000 * sin(radians(framCnt)) > 0) {
@@ -310,11 +308,11 @@ function draw(){
     fill(27, 195, 169);
     if(dist(mouseX,mouseY,cwidth[0],cheight[0]) < rSize0[0]/4){
       ellipse(cwidth[0],cheight[0], rSize0[0]/2, rSize0[0]/2);
-      fill(0);
+      fill(255);
       textSize(16);
       textStyle(BOLD);
       textAlign(CENTER,CENTER);
-      text(bigText[i], cwidth[i], cheight[i]);
+      text(bigText[0], cwidth[0], cheight[0]);
       textnum = 0;
     }else if(dist(mouseX,mouseY,cwidth[1],cheight[1]) < rSize0[1]/4){
       ellipse(cwidth[1],cheight[1], rSize0[1]/2, rSize0[1]/2);
