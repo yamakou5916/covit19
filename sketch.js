@@ -148,6 +148,7 @@ function draw(){
   ellipse(1950, 700, 50, 50);
   rect(1925,300,50,400);
 
+  textStyle(NORMAL);
   noStroke();
   fill(255);
   stroke(255);
@@ -180,15 +181,14 @@ function draw(){
       rSize0[i] -= 0.5;
       textnum = 1;
     }*/
+
     if(changeRate[i] >= framCnt * 0.1){
       showNum[i] = framCnt * 0.1;
       cheight[i] = cheight[i] + 1;
     }else{
       showNum[i] = changeRate[i];
     }
-    
 
-    
     littleCircle(i);
     fill(0);
     noStroke();
