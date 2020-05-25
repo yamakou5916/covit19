@@ -306,7 +306,7 @@ function draw(){
 */
     //fill(145,193,186,80);
     fill(27, 195, 169);
-    textSize(16);
+    textSize(24);
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
     if(dist(mouseX,mouseY,cwidth[0],cheight[0]) < rSize0[0]/4){
