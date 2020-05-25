@@ -316,12 +316,27 @@ function draw(){
       textnum = 0;
     }else if(dist(mouseX,mouseY,cwidth[1],cheight[1]) < rSize0[1]/4){
       ellipse(cwidth[1],cheight[1], rSize0[1]/2, rSize0[1]/2);
+      fill(255);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[1], cwidth[1], cheight[1]);
       textnum = 1;
     }else if(dist(mouseX,mouseY,cwidth[2],cheight[2]) < rSize0[2]/4){
       ellipse(cwidth[2],cheight[2], rSize0[2]/2, rSize0[2]/2);
+      fill(255);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[2], cwidth[2], cheight[2]);
       textnum = 2;
     }else if(dist(mouseX,mouseY,cwidth[3],cheight[3]) < rSize0[3]/4){
       ellipse(cwidth[3],cheight[3], rSize0[3]/2, rSize0[3]/2);
+      fill(255);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[3], cwidth[3], cheight[3]);
       textnum = 3;
     }else if(dist(mouseX,mouseY,cwidth[4],cheight[4]) < rSize0[4]/4){
       ellipse(cwidth[4],cheight[4], rSize0[4]/2, rSize0[4]/2);
