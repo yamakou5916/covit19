@@ -316,9 +316,9 @@ function draw(){
       text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
       text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
       text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]+30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
   
     }else if(dist(mouseX,mouseY,cwidth[1],cheight[1]) < rSize0[1]/4){
       ellipse(cwidth[1],cheight[1], rSize0[1]/2, rSize0[1]/2);
@@ -327,9 +327,9 @@ function draw(){
       text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
       text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
       text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]+30);      
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);      
     }else if(dist(mouseX,mouseY,cwidth[2],cheight[2]) < rSize0[2]/4){
       ellipse(cwidth[2],cheight[2], rSize0[2]/2, rSize0[2]/2);
       fill(255);
@@ -337,9 +337,9 @@ function draw(){
       text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
       text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
       text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]+30);      
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);      
     }else if(dist(mouseX,mouseY,cwidth[3],cheight[3]) < rSize0[3]/4){
       ellipse(cwidth[3],cheight[3], rSize0[3]/2, rSize0[3]/2);
       fill(255);
@@ -347,9 +347,9 @@ function draw(){
       text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
       text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
       text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]+30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
     }else if(dist(mouseX,mouseY,cwidth[4],cheight[4]) < rSize0[4]/4){
       ellipse(cwidth[4],cheight[4], rSize0[4]/2, rSize0[4]/2);
       fill(255);
@@ -357,9 +357,9 @@ function draw(){
       text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
       text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
       text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]+30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
     }else if(dist(mouseX,mouseY,cwidth[5],cheight[5]) < rSize0[5]/4){
       ellipse(cwidth[5],cheight[5], rSize0[5]/2, rSize0[5]/2);
       fill(255);
@@ -367,9 +367,9 @@ function draw(){
       text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
       text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
       text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]+30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
     }else if(dist(mouseX,mouseY,cwidth[6],cheight[6]) < rSize0[6]/4){
       ellipse(cwidth[6],cheight[6], rSize0[6]/2, rSize0[6]/2);
       fill(255);
@@ -377,9 +377,9 @@ function draw(){
       text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
       text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
       text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]+30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
     }else if(dist(mouseX,mouseY,cwidth[7],cheight[7]) < rSize0[7]/4){
       ellipse(cwidth[7],cheight[7], rSize0[7]/2, rSize0[7]/2);
       fill(255);
@@ -387,9 +387,9 @@ function draw(){
       text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
       text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
       text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]+30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
     }else if(dist(mouseX,mouseY,cwidth[8],cheight[8]) < rSize0[8]/4){
       ellipse(cwidth[8],cheight[8], rSize0[8]/2, rSize0[8]/2);
       fill(255);
@@ -397,9 +397,9 @@ function draw(){
       text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
       text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
       text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+10, cheight[textnum]+30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
+      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
     }
 
 }
