@@ -128,6 +128,12 @@
     padding-bottom: 20px;
 }
 
+.box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12, .box13, .box14 , .box15 {
+    width: 100vw;
+    height: 100vh;
+    background: #01011b;
+}
+
 /* footer */
 .footer {
     width: 100vw;
