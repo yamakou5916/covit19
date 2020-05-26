@@ -4,11 +4,11 @@ new Chart(ctx, {
     type: 'bar',
  
     data: {
-        labels:label,
+        labels:['2019/09', '2019/10', '2019/11', '2019/12', '2020/1', '2020/2'],
         datasets: [{
             label: 'グラフ',
             backgroundColor: '#20B2AA',
-            data: datasets
+            data: [100, -50, 200, 150, 200, 400]
         }]
     }
 
