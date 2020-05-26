@@ -35,8 +35,6 @@ pre {
 .block1 p {color:#fff; font-size: 16px;}
 
 .box{
-    display: table;
-    position: relative;
 }
 
 .outer {
@@ -93,9 +91,7 @@ pre {
     border: 0;
     margin: 0;
     padding: 0;
-    display: table-cell;
-    vertical-align: middle;
-    background-color: yellow;
+    
 }
 
 .g-block-1 {
