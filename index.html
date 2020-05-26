@@ -1,446 +1,77 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart.jsを使ってグラフを描画してみよう</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 
-<!-- Load c3.css -->
-<link href="chart/c3.css" rel="stylesheet" type="text/css">
-<link href="chart/chartview.css" rel="stylesheet" type="text/css">
-
-<!-- Load d3.js and c3.js -->
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="chart/c3.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script type="text/javascript" src="sketch.js"></script>
-
-<link href="index.css" rel="stylesheet" type="text/css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
-<script src="main.js"></script>
-<title>Breakthru Index with/after COVID-19</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<div class="box box1">
-	<div class="top">
-	  <img src="logo.png" class="logo">
-	</div>
-	</div>
 
-  <div class="box box2">
-    <div class="intro">
-      <h1>About This Map</h1>
-      <h2>コロナウイルスの影響で今までの国民生活が一変した。<br>
-      このマップは、経済の変化をオープンデータによって可視化し<br>ウイルスと共存した世界のあり方を捕捉するための資料である。</h2>
+    <div id="app">
 
-      <p>
-      4/22に行われた新型コロナウイルス感染症対策専門家会議での協議を基に、<br>人と人との接触を8割減らす目標が政府によって掲げられました。<br><br>
-
-      コロナウイルスの拡散防止を目的に国民への行動指標として、<br>人々の生活環境を可視化するためのデータ活用の取り組みが行われ、<br>
-      個人を特定しない範囲でのデータが開示されました。
-      <br><br>
-
-      また、政府からの自粛要請を受け人々の動きが制限され、<br>
-      その結果として経済に大きな影響がもたらされました。<br>
-      経済的な被害はリーマンショック以上ともされ、産業構造自体を変革する動きが高まっています。<br><br>
-
-      ここで取り扱う人の移動データ、人々の生産・消費を主とした経済活動のデータは、<br>「新たな生活様式」が根付いた変革後のビジネスにおいても重要な行動指標になりえます。
-      </p>
-    </div>
-  </div> 
-
-  <div class="box box3">
-    <div id="P5Canvas" class="map"></div>
-  </div> 
-
-  <div class="box box4">
-    <div class="outer" id="section02">
-      <div class="g-block-1">
-        <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-            </div>
-            <div class="block1">
-              <p><img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70"></p>
-              <p>国内の<br>人流移動量</p>
-            </div>
-            <div class="block2">
-              <p>
-              特定の国や地域において、Appleマップに対して行われた経路検索の数を計数することによって生成されたデータ。特定の地域や小地域、および都市におけるデータの利用可否は、1日あたりの経路検索の下限などを含めたいくつかの要因に基づいています。
-              </p>
-            </div>
+        <div class="jumbotron">
+            <h1>Chart.jsを使ってグラフを描画してみよう</h1>
+            <p class="lead">
+                Chart.js（とVue.js）を使ってグラフを描画するサンプルサイトです。
+            </p>
         </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <p>2020年1~2月基準の移動量</p>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!--div class="col-12 col-md-6">
+
+                    <div class="row">
+                        <div class="col-12 my-5">
+                            <h3>生成されたデータ</h3>
+                            <div class="bg-light p-3">
+                                <pre>{{ toRaw(datasets) }}</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                </div-->
+                <div class="col-12 col-md-6">
+
+                    <div class="col-12 mb-5">
+                        <h2>グラフの種類</h2>
+                        <select class="form-control" v-model="graphSelected">
+                            <option v-for="(item,index) in graphs" :key="index" :value="item.type">
+                                {{ item.name }}</option>
+                        </select>
+
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col">
+                                <h2>グラフ</h2>
+                            </div>
+                            <!--div class="col-auto">
+                                <button class="btn btn-info" v-on:click="randData">ランダムに生成する</button>
+                            </div-->
+                        </div>
+                        <div>
+                            <canvas id="charts"></canvas>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="block4">
-              <canvas id="myChart"></canvas>
-            </div>
-        </div>
-    </div> 
-  </div>
 
 
 
-  <div class="box box5">
-    <div class="outer" id="section02">
-      <div class="g-block-1">
-        <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-            </div>
-            <div class="block1">
-              <p><img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70"></p>
-              <p>国内の<br>人流移動量</p>
-            </div>
-            <div class="block2">
-              <p>
-              特定の国や地域において、Appleマップに対して行われた経路検索の数を計数することによって生成されたデータ。特定の地域や小地域、および都市におけるデータの利用可否は、1日あたりの経路検索の下限などを含めたいくつかの要因に基づいています。
-              </p>
-            </div>
-        </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <p>2020年1~2月基準の移動量</p>
-            </div>
-            <div class="block4">
-              <canvas id="AppleMobility"></canvas>
-            </div>
-        </div>
-    </div> 
-  </div>
-
-  <div class="box box6">
-    <div class="outer" id="section04">
-      <div class="g-block-1">
-        <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-            </div>
-            <div class="block1">
-              <p><img src="image/icon_medical.png" alt="Smiley face" height="70" width="70"></p>
-              <p>購入手段別<br>販売金額指数</p>
-            </div>
-            <div class="block2">
-              <p>
-                業態別・商品別・地域別の販売金額指数及び前年比のデータを提供している。感染を避け三密を避けるために、購入手段にも変化が生じる。買い物はスーパーマーケットが増加。コンビニエンスストアは減少傾向にある。
-              </p>
-            </div>
-        </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <p>2020年1~2月基準の移動量</p>
-            </div>
-            <div class="block4">
-              <canvas id="POS"></canvas>
-            </div>
         </div>
     </div>
-  </div>
 
-  <div class="box box7">
-    <div class="outer" id="section03">
-      <div class="g-block-1">
-        <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-            </div>
-            <div class="block1">
-              <p><img src="image/icon_medical.png" alt="Smiley face" height="70" width="70"></p>
-              <p>消費者態度指数</p>
-            </div>
-            <div class="block2">
-              <p>
-              消費者の暮らし向きに関する考え方の変化や物価の見通しなどをとらえる消費動向調査に基づいたデータ。
-              </p>
-            </div>
-        </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <p>2020年1~2月基準の移動量</p>
-            </div>
-            <div class="block4">
-              <canvas id="CustomerAttitude"></canvas>
-            </div>
-        </div>
-    </div> 
- </div>
 
-<div class="box box8">
-    <div class="outer" id="section01">
-      <div class="g-block-1">
-        <div class="block25-up">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/+_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-            </div>
-            <div class="block1">
-              <p><img src="image/icon_lifestyle.png" alt="Smiley face" height="70" width="70"></p>
-              <p>他県からの<br>移住者数</p>
-            </div>
-            <div class="block2">
-              <p>
-              月々の国内における人口移動の状況を明らかにする住民基本台帳に基づいたデータ。都道府県別の転入・転出者などの移動者数を提供しています。
-              </p>
-            </div>
-        </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <p>2020年1~2月基準の移動量</p>
-            </div>
-            <div class="block4">
-              <canvas id="MigrantMobility"></canvas>
-            </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="box box9">
-    <div class="outer" id="section05">
-      <div class="g-block-1">
-        <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;<span id="samurai12">samurai</span>%</h2>
-            </div>
-            </div>
-            <div class="block1">
-              <p><img src="image/icon_workstyle.png" alt="Smiley face" height="70" width="70"></p>
-              <p>雇用形態<br>非正規率</p>
-            </div>
-            <div class="block2">
-              <p>
-              統計法に基づく基幹統計調査として，国民の就業及び不就業の状態を明らかにするための労働力調査から得られるデータ。非正規の職員・従業員数，失業期間別の完全失業者数などを提供している。
-              </p>
-            </div>
-        </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <button id='line'>line</button><button id='bar'>bar</button>
-              <p>2020年1~2月基準の移動量</p>
-            </div>
-            <div class="block4">
-              <canvas id="EmploymentStatus"></canvas>
-            </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="box box10">
-    <div class="outer" id="section05">
-      <div class="g-block-1">
-        <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-        </div>
-            <div class="block1">
-              <p><img src="image/icon_workstyle.png" alt="Smiley face" height="70" width="70"></p>
-              <p>完全失業率<br>就業者数</p>
-            </div>
-            <div class="block2">
-              <p>
-              統計法に基づく基幹統計調査として，国民の就業及び不就業の状態を明らかにするための労働力調査から得られるデータ。就業者数，完全失業者数，完全失業率などを提供している。
-
-              </p>
-            </div>
-        </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <p>2020年1~2月基準の移動量</p>
-            </div>
-            <div class="block4">
-              <canvas id="Unemployment"></canvas>
-            </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="box box11">
-    <div class="outer" id="section05">
-      <div class="g-block-1">
-        <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-            </div>
-            <div class="block1">
-              <p><img src="image/icon_workstyle.png" alt="Smiley face" height="70" width="70"></p>
-              <p>倒産数<br>負債総額</p>
-            </div>
-            <div class="block2">
-              <p>
-              景気を測る統計指標の一つである全国・負債総額1千万円以上の倒産統計の、抜粋データ。「倒産件数」「負債額推移」を提供しています。
-              </p>
-            </div>
-        </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <p>2020年1~2月基準の移動量</p>
-            </div>
-            <div class="block4">
-              <canvas id="Bankruptcy"></canvas>
-            </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="box box12">
-    <div class="outer" id="section06">
-      <div class="g-block-1">
-        <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-            </div>
-            <div class="block1">
-              <p><img src="image/icon_manufacture.png" alt="Smiley face" height="70" width="70"></p>
-              <p>全産業活動指数</p>
-            </div>
-            <div class="block2">
-              <p>
-              全産業の生産活動の状況を示すデータ。 第3次産業活動指数、鉱工業生産指数、公務等活動指数、建設業活動指数、農林水産業生産指数の、5つの生産・活動指数を加重平均した数値を指数として算出し、提供しています。
-              </p>
-            </div>
-        </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <p>2020年1~2月基準の移動量</p>
-            </div>
-            <div class="block4">
-              <canvas id="Industry"></canvas>
-            </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="box box13">
-    <div class="outer" id="section07">
-      <div class="g-block-1">
-        <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-            </div>
-            <div class="block1">
-              <p><img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70"></p>
-              <p>輸入量</p>
-            </div>
-            <div class="block2">
-              <p>
-              最近の輸出入動向について年分別に、「輸出入額及び差引額の推移」、「地域別輸出入額の推移」、「貿易相手先国上位１０カ国の推移」、「対世界主要輸出入品の推移」、「主要輸出入品の推移」について提供しています。
-              </p>
-            </div>
-        </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <p>2020年1~2月基準の移動量</p>
-            </div>
-            <div class="block4">
-              <canvas id="Import"></canvas>
-            </div>
-        </div>
-    </div>               
-  </div>
-
-  <div class="box box14">  
-    <div class="outer" id="section08">
-      <div class="g-block-1">
-        <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-            </div>
-            <div class="block1">
-              <p><img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70"></p>
-              <p>輸出量</p>
-            </div>
-            <div class="block2">
-              <p>
-              最近の輸出入動向について年分別に、「輸出入額及び差引額の推移」、「地域別輸出入額の推移」、「貿易相手先国上位１０カ国の推移」、「対世界主要輸出入品の推移」、「主要輸出入品の推移」について提供しています。
-              </p>
-            </div>
-        </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <p>2020年1~2月基準の移動量</p>
-            </div>
-            <div class="block4">
-              <canvas id="Export"></canvas>
-            </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="box box15">  
-    <div class="outer" id="section08">
-      <div class="g-block-1">
-        <div class="block25">
-            <div>
-              <p style="">変化率</p>
-              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
-            </div>
-            </div>
-            <div class="block1">
-              <p><img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70"></p>
-              <p>GDP</p>
-            </div>
-            <div class="block2">
-              <p>
-              最近の輸出入動向について年分別に、「輸出入額及び差引額の推移」、「地域別輸出入額の推移」、「貿易相手先国上位１０カ国の推移」、「対世界主要輸出入品の推移」、「主要輸出入品の推移」について提供しています。
-              </p>
-            </div>
-        </div>
-        <div class="g-block-2">
-            <div class="block3">
-              <p>2020年1~2月基準の移動量</p>
-            </div>
-            <div class="block4">
-              <canvas id="Export"></canvas>
-            </div>
-        </div>
-    </div>
-  </div> 
-
-    <div class="footer"><p>Powered by PwC Experience Center Tokyo</p></div>
-
-  </div><!--box-->
-
-  
-  </div>
-
-  <script type="text/javascript" src="chart/timeseries.js"></script>
-  <script type="text/javascript" src="chart/AppleMobility.js"></script>
-  <script type="text/javascript" src="chart/MigrantMobility.js"></script>
-  <script type="text/javascript" src="chart/Bankruptcy.js"></script>
-  <script type="text/javascript" src="chart/Import.js"></script>
-  <script type="text/javascript" src="chart/Export.js"></script>
-  <script type="text/javascript" src="chart/POS.js"></script>
-  <script type="text/javascript" src="chart/Industry.js"></script>
-  <script type="text/javascript" src="chart/CustomerAttitude.js"></script>
-  <script type="text/javascript" src="chart/Unemployment.js"></script>
-  <script type="text/javascript" src="chart/EmploymentStatus.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
