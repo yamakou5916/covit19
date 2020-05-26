@@ -35,7 +35,7 @@ pre {
 .block1 p {color:#fff; font-size: 16px;}
 
 .box{
-    background-color: #01011b;
+    display: table;
 }
 
 .outer {
@@ -43,6 +43,7 @@ pre {
 	max-width: 100%;
     height: auto;
 	display: flex;
+
 }
 
 .block1 {
@@ -109,5 +110,4 @@ display: table-cell;
     margin: auto 0;
     flex: 1;
     background-color: #01011b;
-    display: table;
 }
