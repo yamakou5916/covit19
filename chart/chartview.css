@@ -105,10 +105,10 @@ pre {
 .g-block-2 {
     max-width: 60%;
     width: 60%;
-    height: auto;
+    height: 100vh;
     float: right;
     margin: auto;
     padding: 0;
     flex: 1;
-    background-color: yellow;
+    background-color: #01011b;
 }
