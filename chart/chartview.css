@@ -91,6 +91,8 @@ pre {
     border: 0;
     margin: 0;
     padding: 0;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .g-block-1 {
@@ -110,4 +112,6 @@ pre {
     padding-top: 100px;
     flex: 1;
     background-color: #01011b;
+    display: table;
+    position: relative;
 }
