@@ -20,6 +20,8 @@ function drawBarChart12(data) {
     tmpData12[2].push(data[row][2])
     tmpData12[3].push(data[row][3])
   };
+  var demo12 = document.getElementById("samurai");
+  demo12.innerHTML = data[row][2];
 
   // 12)chart.jsで描画
   var config12 =
@@ -99,8 +101,7 @@ function change(newType) {
 }
 
 
-var demo2 = document.getElementById("samurai");
-demo2.innerHTML = "Samurai";
+
 
 
 
