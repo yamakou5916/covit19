@@ -1,3 +1,5 @@
+var label = ['2019/09', '2019/10', '2019/11', '2019/12', '2020/1', '2020/2'];
+var datasets = [100, -50, 200, 150, 200, 400];
 
 var ctx = document.getElementById("charts");
 new Chart(ctx, {
@@ -8,7 +10,7 @@ new Chart(ctx, {
         datasets: [{
             label: 'グラフ',
             backgroundColor: '#20B2AA',
-            data: [100, -50, 200, 150, 200, 400]
+            data: datasets
         }]
     }
 
