@@ -49,7 +49,7 @@ function drawBarChart(data) {
     tmpData5.push(data[row][5])
     tmpData6.push(data[row][6])
   };
-  var demo12 = document.getElementById("samurai12");
+  var demo12 = document.getElementById("samurai0");
   demo12.innerHTML = data[row][2];
 
   // 4)chart.jsで描画
