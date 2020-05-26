@@ -1,4 +1,21 @@
-new Vue({
+
+var ctx = document.getElementById("charts");
+new Chart(ctx, {
+    type: 'bar',
+ 
+    data: {
+        labels:label,
+        datasets: [{
+            label: 'グラフ',
+            backgroundColor: '#20B2AA',
+            data: datasets
+        }]
+    }
+
+
+
+
+/*new Vue({
     el: '#app',
     data: {
         datasets: [
@@ -47,6 +64,7 @@ new Vue({
         this.chart();
     },
     methods: {
+        
         toRaw(data) {
             return JSON.stringify(data);
         },
@@ -88,5 +106,5 @@ new Vue({
         }
     }
 })
-
+*/
 
