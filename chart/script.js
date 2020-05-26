@@ -5,10 +5,12 @@ new Chart(ctx, {
  
     data: {
         labels:['2019/09', '2019/10', '2019/11', '2019/12', '2020/1', '2020/2'],
-        datasets: [{
+        datasets:
+        [100, -50, 200, 150, 200, 400], 
+        [{
             label: 'グラフ',
             backgroundColor: '#20B2AA',
-            data: [100, -50, 200, 150, 200, 400]
+            data: datasets
         }]
     }
 
