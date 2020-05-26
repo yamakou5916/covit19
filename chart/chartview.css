@@ -107,8 +107,7 @@ pre {
     width: 60%;
     height: 100vh;
     float: right;
-    margin: auto;
-    padding: 0;
+    margin: 0 auto;
     flex: 1;
     background-color: #01011b;
 }
