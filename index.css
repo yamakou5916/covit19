@@ -92,9 +92,8 @@
 
 /* グラフのページ */
 
-.box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12, .box13, .box14 , .box15 {
-    
-      background-image: url('mask.jpg');
+.G1 {
+    background-image: url('mask.jpg');
     /* 画像を常に天地左右の中央に配置 */
     background-position: center center;
     /* 画像をタイル状に繰り返し表示しない */
@@ -103,8 +102,31 @@
     background-attachment: fixed;
     /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
     background-size: cover;
-    height: 100vh;
+    height: 400px;
     width: 100vw;
+    display: table;
+}
+
+.G_outer {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100vw;
+    padding: 80px;
+}
+
+.G_outer h2 {
+    padding-bottom: 20px;
+}
+
+.G_outer p {
+    padding-bottom: 20px;
+}
+
+.box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12, .box13, .box14 , .box15 {
+    width: 100vw;
+    height: 100vh;
+    background: #01011b;
 }
 
 /* footer */
