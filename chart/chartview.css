@@ -87,12 +87,13 @@ pre {
 .block4{
     width: 100%;
     height: 100%;
-    
+    z-index: 5;
 }
 
 .block5 {
     width: 100%;
     height: 100%;
+    z-index: 5;
     
 }
 
@@ -113,4 +114,5 @@ pre {
     float: right;
     flex: 1;
     background-color: #01011b;
+    z-index: 0;
 }
