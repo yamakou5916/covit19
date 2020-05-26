@@ -35,6 +35,8 @@ pre {
 .block1 p {color:#fff; font-size: 16px;}
 
 .box{
+    display: table;
+    position: relative;
 }
 
 .outer {
@@ -93,6 +95,7 @@ pre {
     padding: 0;
     display: table-cell;
     vertical-align: middle;
+    background-color: yellow;
 }
 
 .g-block-1 {
@@ -112,6 +115,4 @@ pre {
     padding-top: 100px;
     flex: 1;
     background-color: #01011b;
-    display: table;
-    position: relative;
 }
