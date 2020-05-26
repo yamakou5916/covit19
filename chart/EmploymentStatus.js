@@ -20,8 +20,8 @@ function drawBarChart12(data) {
     tmpData12[2].push(data[row][2])
     tmpData12[3].push(data[row][3])
   };
-  var demo12 = document.getElementById("samurai12");
-  demo12.innerHTML = data[row][2];
+  var demo = document.getElementById("samurai12");
+  demo.innerHTML = data[row][2];
 
   // 12)chart.jsで描画
   var config12 =
