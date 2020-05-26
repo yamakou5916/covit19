@@ -19,7 +19,6 @@ function drawBarChart12(data) {
     tmpData12[1].push(data[row][1])
     tmpData12[2].push(data[row][2])
     tmpData12[3].push(data[row][3])
-
   };
 
   // 12)chart.jsで描画
@@ -98,6 +97,10 @@ function change(newType) {
   }
   req12.send(null);
 }
+
+
+var demo2 = document.getElementById("samurai");
+demo2.innerHTML = "Samurai";
 
 
 
