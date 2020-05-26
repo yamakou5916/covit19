@@ -38,7 +38,6 @@ pre {
 .outer {
 	margin: 0 auto;
 	max-width: 100%;
-    padding: 60px;
     height: auto;
 	display: flex;
 }
@@ -98,16 +97,14 @@ pre {
     height: auto;
     float: left;
     margin: auto;
-    padding: 0;
     flex: 1;
 }
 
 .g-block-2 {
     max-width: 60%;
-    width: 60%;
     height: 100vh;
     float: right;
-    margin: 0 auto;
+    margin: auto 0;
     flex: 1;
-    background-color: #01011b;
+    background-color: yellow;
 }
