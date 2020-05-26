@@ -106,8 +106,8 @@ pre {
     max-width: 60%;
     height: 100vh;
     float: right;
-    padding: 40px;
     margin: auto 0;
+    padding-top: 100px;
     flex: 1;
     background-color: #01011b;
 }
