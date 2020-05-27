@@ -41,6 +41,8 @@ pre {
     padding: 60px;
     height: auto;
 	display: flex;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .block1 {
