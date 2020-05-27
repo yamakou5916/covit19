@@ -36,8 +36,7 @@ function drawBarChart20(data) {
         { label: "コンビニエンスストア", data: tmpData220, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
         { label: "ホームセンター", data: tmpData320, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
         { label: "ドラッグストア", data: tmpData420, borderColor: colors[3], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "ヘルスケア", data: tmpData520, borderColor: colors[4], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "家電大型専門店", data: tmpData620, borderColor: colors[5], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "家電大型専門店", data: tmpData520, borderColor: colors[4], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
       ]
     },
 
