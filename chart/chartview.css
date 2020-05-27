@@ -12,7 +12,7 @@ pre {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-.outer p {color:#fff; text-align: center;}
+.outer p {color:#fff;}
 .block3 h2 {color:#fff; font-size: 16px; margin:0 20px; text-align: left;}
 .block3 p {color:#fff; font-size: 12px; margin:0 20px; text-align: left;}
 .block25 div {
@@ -31,7 +31,7 @@ pre {
 }
 .block25-up h2 {color:#01011b; font-size: 16px;text-align: center; margin: 0; font-family: 'Roboto', sans-serif;}
 .block25-up p {color:#01011b; font-size: 12px;text-align: center; margin: 0; }
-.block2 p {color:#fff; font-size: 12px; margin:0 20px;}
+.block2 p {color:#fff; font-size: 12px;}
 .block1 p {color:#fff; font-size: 16px;}
 
 
@@ -49,15 +49,60 @@ pre {
 	border: 0;
     margin: 0;
     padding-top: 20px;
+    text-align: center;
+}
 
+.block1 h1 {
+    padding: 20px;
+}
+
+.block1 h3 {
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .block2 {
     width: 100%;
     height: 100%;
-    border: 0;
-    margin: 0;
-    padding: 20px;
+    border-top: 1px solid #fff;
+    margin-bottom: 40px;
+    text-align: left;
+    font-size: 20px;
+}
+
+
+ul.graph {
+}
+
+li.graph_1, .graph_2 {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+li.graph_1 {
+    float: left;
+      width: 50%;
+
+}
+
+li.graph_2 {
+    float: right;
+      width: 50%;
+      text-align: center;
+      background-color: blue;
+}
+
+
+ul.info {
+}
+
+li.info_1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  display: inline-block;
+  width: 50%;
+  font-size: 20px;
 }
 
 .block25 {
