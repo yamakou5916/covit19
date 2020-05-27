@@ -124,6 +124,8 @@
     width: 100vw;
     height: 100vh;
     background-color: #01011b;
+    display: table;
+    position: relative;
 }
 
 /* footer */
