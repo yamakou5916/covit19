@@ -34,13 +34,11 @@ pre {
 .block2 p {color:#fff; font-size: 12px; margin:0 20px;}
 .block1 p {color:#fff; font-size: 16px;}
 
-.box{
-    background-color: #01011b;
-}
 
 .outer {
 	margin: 0 auto;
 	max-width: 100%;
+    padding: 60px;
     height: auto;
 	display: flex;
 }
@@ -81,7 +79,9 @@ pre {
 .block4{
     width: 100%;
     height: 100%;
-    padding: 100px;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .block5 {
@@ -98,14 +98,16 @@ pre {
     height: auto;
     float: left;
     margin: auto;
+    padding: 0;
     flex: 1;
 }
 
 .g-block-2 {
-    background-color: #01011b;
     max-width: 60%;
-    height: 100vh;
+    width: 60%;
+    height: auto;
     float: right;
-    margin: auto 0;
+    margin: auto;
+    padding: 0;
     flex: 1;
 }
