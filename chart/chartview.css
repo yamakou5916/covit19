@@ -38,7 +38,7 @@ pre {
 .outer {
 	margin: 0 auto;
 	max-width: 100%;
-    padding: auto 60px;
+    padding: auto;
     height: 100%;
 	display: flex;
     margin: auto;
