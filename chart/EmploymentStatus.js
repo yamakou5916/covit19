@@ -89,7 +89,6 @@ function change(newType) {
   req12.onload = function() {
     // 2) CSVデータ変換の呼び出し
     var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
-    ctx12.canvas.height = 100%;
     data12 = csv2Array12(req12.responseText);
     // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
     var config12 = drawBarChart12(data12);
