@@ -41,8 +41,6 @@ pre {
     padding: 60px;
     height: auto;
 	display: flex;
-    display: table-cell;
-    vertical-align: middle;
 }
 
 .block1 {
@@ -92,9 +90,7 @@ li.graph_2 {
     float: right;
       width: 50%;
       text-align: center;
-      background-color: #1BC3A9;
-      color: #01011b;
-      border-radius: 10px;
+      background-color: blue;
 }
 
 
@@ -144,7 +140,7 @@ li.info_1 {
 .g-block-1 {
 	max-width: 30%;
     width: 30%;
-    height: auto;
+    height: 100%;
     float: left;
     margin: auto;
     padding: 0;
@@ -154,7 +150,7 @@ li.info_1 {
 .g-block-2 {
     max-width: 60%;
     width: 60%;
-    height: auto;
+    height: 100%;
     float: right;
     margin: auto;
     padding: 0;
