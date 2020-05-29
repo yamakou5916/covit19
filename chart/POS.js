@@ -32,12 +32,12 @@ function drawBarChart7(data) {
     data: {
       labels: tmpLabels7,
       datasets: [
-        { label: "食品", data: tmpData17, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "飲料", data: tmpData27, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "雑貨", data: tmpData37, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "化粧品", data: tmpData47, borderColor: colors[3], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "ヘルスケア", data: tmpData57, borderColor: colors[4], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "その他", data: tmpData67, borderColor: colors[5], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "食品", data: tmpData17, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "飲料", data: tmpData27, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "雑貨", data: tmpData37, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "化粧品", data: tmpData47, borderColor: colors[3], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "ヘルスケア", data: tmpData57, borderColor: colors[4], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "その他", data: tmpData67, borderColor: colors[5], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
       ]
     },
 

@@ -29,9 +29,9 @@ function drawBarChart13(data) {
     data: {
       labels: tmpLabels13,
       datasets: [
-        { label: "完全失業率", data: tmpData113, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", /* backgroundColor: "red" */},
-        { label: "労働力人口比率", data: tmpData213, borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2", /* backgroundColor: "blue" */},
-        { label: "就業率", data: tmpData313, borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",/* backgroundColor: "red" */},
+        { label: "完全失業率", data: tmpData113, borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
+        { label: "労働力人口比率", data: tmpData213, borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2", backgroundColor: "rgba(255,255,255,0)"},
+        { label: "就業率", data: tmpData313, borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2", backgroundColor: "rgba(255,255,255,0)"},
       ]
     },
 

@@ -38,9 +38,10 @@ pre {
 .outer {
 	margin: 0 auto;
 	max-width: 100%;
-    padding: auto;
-    max-height: 100%;
+    padding: auto 60px;
+    height: 100%;
 	display: flex;
+    margin: auto;
 }
 
 .block1 {
