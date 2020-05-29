@@ -125,7 +125,7 @@
     height: 100vh;
     background-color: #01011b;
     padding: auto;
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     display: flex;
     justify-content: center;
