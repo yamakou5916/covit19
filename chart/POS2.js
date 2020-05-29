@@ -32,11 +32,11 @@ function drawBarChart20(data) {
     data: {
       labels: tmpLabels20,
       datasets: [
-        { label: "スーパーマーケット", data: tmpData120, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "コンビニエンスストア", data: tmpData220, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "ホームセンター", data: tmpData320, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "ドラッグストア", data: tmpData420, borderColor: colors[3], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "家電大型専門店", data: tmpData520, borderColor: colors[4], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "スーパーマーケット", data: tmpData120, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "コンビニエンスストア", data: tmpData220, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "ホームセンター", data: tmpData320, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "ドラッグストア", data: tmpData420, borderColor: colors[3], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "家電大型専門店", data: tmpData520, borderColor: colors[4], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
       ]
     },
 
