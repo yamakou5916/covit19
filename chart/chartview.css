@@ -144,9 +144,9 @@ li.info_1 {
     float: left;
     /*margin: auto 0px auto 120px;*/
     margin-top: auto;
-    margin-right: 0px;
+    margin-right: 10px;
     margin-bottom: auto;
-    margin-left: 120px;
+    margin-left: 50px;
     padding: 0;
     flex: 1;
 }
