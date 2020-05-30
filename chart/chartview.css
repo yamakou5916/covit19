@@ -142,7 +142,11 @@ li.info_1 {
     width: 30%;
     height: 100%;
     float: left;
-    margin: auto 0px auto 120px;
+    /*margin: auto 0px auto 120px;*/
+    margin-top: auto;
+    margin-right: 0px;
+    margin-bottom: auto;
+    margin-left: 120px;
     padding: 0;
     flex: 1;
 }
