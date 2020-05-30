@@ -68,6 +68,7 @@ function drawBarChart7(data) {
       },
       legend: {
         display: true,
+        fontColor: "white"
         //position: 'top',
         labels: {
           fontSize: 10,
