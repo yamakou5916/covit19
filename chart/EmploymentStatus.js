@@ -36,6 +36,8 @@ function drawBarChart12(data) {
     },
 
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       scales: { 
         xAxes: [{
           stacked: true,
@@ -100,6 +102,7 @@ function change(newType) {
 }
 
 
+$('#mychart').css('height','100%');
 
 
 

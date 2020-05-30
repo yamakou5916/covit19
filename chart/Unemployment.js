@@ -36,6 +36,8 @@ function drawBarChart13(data) {
     },
 
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       scales: {
         xAxes: [{
           position: 'bottom',
@@ -98,6 +100,8 @@ function main13() {
 
 main13();
 
+
+$('#mychart').css('height','100%');
 
 
 

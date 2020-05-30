@@ -36,6 +36,8 @@ function drawBarChart5(data) {
     },
 
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       scales: {
         
         xAxes: [{
@@ -90,6 +92,7 @@ function main5() {
 
 main5();
 
+$('#mychart').css('height','100%');
 
 
 

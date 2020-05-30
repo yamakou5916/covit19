@@ -1,28 +1,3 @@
-/*
-var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
-// The type of chart we want to create
-type: 'line',
-// The data for our dataset
-data: {
-	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-	datasets: [{
-		label: 'My First dataset',
-		//backgroundColor: 'rgb(255, 99, 132)',
-		borderColor: 'rgb(255, 99, 132)',
-		data: [0, 10, 5, 2, 20, 30, 45]
-	},{
-		label: 'My Second dataset',
-		//backgroundColor: 'rgb(255, 99, 132)',
-		borderColor: 'rgb(255, 99, 132)',
-		data: [2, 9, 14, 12, 10, 20, 35]
-	}]
-},
-// Configuration options go here
-options: {}
-});
-*/
-
 var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
 
 
@@ -71,6 +46,8 @@ function drawBarChart(data) {
     },
 
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
     	scales: {
     		xAxes: [{
     			position: 'bottom',
