@@ -69,6 +69,7 @@ function drawBarChart20(data) {
         display: true,
         //POS2ition: 'top',
         labels: {
+          fontColor: "white",
           fontSize: 10,
           boxWidth: 10,
         }

@@ -65,6 +65,7 @@ function drawBarChart10(data) {
         display: true,
         //Industryition: 'top',
         labels: {
+          fontColor: "white",
           fontSize: 10,
           boxWidth: 10,
         }

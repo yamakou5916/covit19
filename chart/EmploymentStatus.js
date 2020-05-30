@@ -63,6 +63,7 @@ function drawBarChart12(data) {
         display: true,
         //position: 'top',
         labels: {
+          fontColor: "white",
           fontSize: 10,
           boxWidth: 10,
         }

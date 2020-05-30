@@ -64,8 +64,10 @@ function drawBarChart5(data) {
       },
       legend: {
         display: true,
+        fontColor: "white"
         //position: 'top',
         labels: {
+          fontColor: "white",
           fontSize: 10,
           boxWidth: 10,
         }
