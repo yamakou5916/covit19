@@ -142,7 +142,7 @@ li.info_1 {
     width: 30%;
     height: 100%;
     float: left;
-    margin: auto;
+    margin: auto 0px auto 120px;
     padding: 0;
     flex: 1;
 }
@@ -152,7 +152,7 @@ li.info_1 {
     width: 60%;
     height: 100%;
     float: right;
-    margin: auto 0px auto 120px;
+    margin: auto;
     padding: 0;
     flex: 1;
 }
