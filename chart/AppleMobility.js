@@ -21,6 +21,8 @@ function drawBarChart2(data) {
     tmpData32.push(data[row][3])
 
   };
+  var demo = document.getElementById("samurai0");
+  demo.innerHTML = data[row][2];
 
   // 4)chart.jsで描画
   var ctx2 = document.getElementById("AppleMobility").getContext("2d");
