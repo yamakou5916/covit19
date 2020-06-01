@@ -55,6 +55,7 @@ pre {
 .block1 h1 {
     text-align: center;
     min-width: 100px; 
+    padding-bottom: 20px;
 }
 
 .block1 h3 {
@@ -95,7 +96,9 @@ li.graph_2 {
     float: right;
     width: 50%;
     text-align: center;
-    background-color: blue;
+    background-color: #1BC3A9;
+    color: #01011b;
+    border-radius: 10px;
     min-width: 100px; 
 }
 
@@ -141,7 +144,7 @@ li.info_1 {
     height: 100%;
     border: 0;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 
 .g-block-1 {
