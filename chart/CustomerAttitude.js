@@ -38,6 +38,8 @@ function drawBarChart11(data) {
     },
 
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       scales: {
         
         xAxes: [{
