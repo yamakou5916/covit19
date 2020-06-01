@@ -22,7 +22,7 @@ function drawBarChart2(data) {
 
   };
   var demo = document.getElementById("samurai0");
-  demo.innerHTML = data[row][2];
+  demo.innerHTML = (data[row][2]-100).toFixed(1);;
 
   // 4)chart.jsで描画
   var ctx2 = document.getElementById("AppleMobility").getContext("2d");
