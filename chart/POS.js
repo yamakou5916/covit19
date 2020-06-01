@@ -25,7 +25,7 @@ function drawBarChart7(data) {
 
   };
   var demo = document.getElementById("samurai2");
-  demo.innerHTML = data[row][5];
+  demo.innerHTML = data[row][5]-100;
 
   // 7)chart.jsで描画
   var ctx7 = document.getElementById("POS").getContext("2d");
