@@ -25,7 +25,7 @@ function drawBarChart(data) {
     tmpData6.push(data[row][6])
   };
   var demo = document.getElementById("samurai3");
-  demo.innerHTML = data[row][2].toFixed(5);
+  demo.innerHTML = data[row][5];
 
   // 4)chart.jsで描画
   var ctx = document.getElementById("myChart").getContext("2d");
