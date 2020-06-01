@@ -24,7 +24,7 @@ function drawBarChart7(data) {
     tmpData67.push(data[row][6])
 
   };
-  var demo = document.getElementById("samurai3");
+  var demo = document.getElementById("samurai2");
   demo.innerHTML = data[row][2];
 
   // 7)chart.jsで描画
