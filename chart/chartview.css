@@ -150,13 +150,12 @@ li.info_1 {
 }
 
 .g-block-2 {
-    max-width: 60%;
-    width: 60%;
+    max-width: 70%;
+    width: 70%;
     height: 100%;
     float: right;
     margin: auto;
     padding: 0;
     flex: 1;
     background-color: #000;
-
 }
