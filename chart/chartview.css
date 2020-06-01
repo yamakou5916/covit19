@@ -49,15 +49,18 @@ pre {
 	border: 0;
     margin: 0;
     text-align: center;
+    min-width: 100px; 
 }
 
 .block1 h1 {
-    padding: 20px;
+    text-align: center;
+    min-width: 100px; 
 }
 
 .block1 h3 {
     padding: 20px;
     margin-bottom: 20px;
+    min-width: 100px; 
 }
 
 .block2 {
@@ -67,6 +70,7 @@ pre {
     margin-bottom: 40px;
     text-align: left;
     font-size: 20px;
+    min-width: 100px; 
 }
 
 
@@ -74,22 +78,25 @@ ul.graph {
 }
 
 li.graph_1, .graph_2 {
-  display: inline-block;
-  margin-bottom: 20px;
-  margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    min-width: 100px; 
 }
 
 li.graph_1 {
     float: left;
-      width: 50%;
+    width: 50%;
+    min-width: 100px; 
 
 }
 
 li.graph_2 {
     float: right;
-      width: 50%;
-      text-align: center;
-      background-color: blue;
+    width: 50%;
+    text-align: center;
+    background-color: blue;
+    min-width: 100px; 
 }
 
 
@@ -99,9 +106,10 @@ ul.info {
 li.info_1 {
     margin-top: 10px;
     margin-bottom: 20px;
-  display: inline-block;
-  width: 50%;
-  font-size: 20px;
+    display: inline-block;
+    width: 50%;
+    font-size: 20px;
+    min-width: 100px; 
 }
 
 .block25 {
@@ -137,9 +145,10 @@ li.info_1 {
 }
 
 .g-block-1 {
-	max-width: 30%;
     width: 30%;
     height: 100%;
+    max-width: 30%;
+    min-width: 300px; 
     float: left;
     margin-top: auto;
     margin-right: 10px;
@@ -150,9 +159,9 @@ li.info_1 {
 }
 
 .g-block-2 {
-    max-width: 70%;
-    width: 70%;
+    width: 100%;
     height: 100%;
+    max-width: 100%;
     float: right;
     margin: auto;
     padding: 0;
