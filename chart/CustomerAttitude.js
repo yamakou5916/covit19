@@ -22,6 +22,8 @@ function drawBarChart11(data) {
     tmpData411.push(data[row][4])
 
   };
+  var demo = document.getElementById("samurai4");
+  demo.innerHTML = (data[row][2]-50).toFixed(1);
 
   // 11)chart.jsで描画
   var ctx11 = document.getElementById("CustomerAttitude").getContext("2d");
@@ -38,6 +40,8 @@ function drawBarChart11(data) {
     },
 
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       scales: {
         
         xAxes: [{
@@ -64,6 +68,7 @@ function drawBarChart11(data) {
         display: true,
         //CustomerAttitudeition: 'top',
         labels: {
+          fontColor: "white",
           fontSize: 10,
           boxWidth: 10,
         }
@@ -90,6 +95,6 @@ function main11() {
 
 main11();
 
-
+$('#mychart').css('height','100%');
 
 
