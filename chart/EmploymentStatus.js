@@ -78,8 +78,9 @@ var EmploymentStatus;
 
 
 //リフレッシュ
-function change(newType) {
-  if (EmploymentStatus) {EmploymentStatus.destroy();}
+//function change(newType) {
+function main12() {
+  //if (EmploymentStatus) {EmploymentStatus.destroy();}
   // 1) ajaxでCSVファイルをロード
   var req12 = new XMLHttpRequest();
   var filePath12 = './data/EmploymentStatus.csv';
@@ -91,7 +92,7 @@ function change(newType) {
     // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
     var config12 = drawBarChart12(data12);
     var temp12 = jQuery.extend(true, {}, config12);
-    temp12.type = newType;
+    temp12.type = "line";//newType;
     if(newType == line){temp12.data = {labels: tmpData12[0],datasets: [{ label: "非正規率", data: tmpData12[1], borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},]}}
     EmploymentStatus = new Chart(ctx12, temp12);
   }
