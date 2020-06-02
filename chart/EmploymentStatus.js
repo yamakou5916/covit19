@@ -69,8 +69,8 @@ function drawBarChart12(data) {
         }
       },
     }
-  }
-  return config12;
+    
+  });
 }
 
 
