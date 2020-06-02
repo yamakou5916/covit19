@@ -1,4 +1,4 @@
-var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
+var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 
 // 2) CSVから２次元配列に変換
 function csv2Array10(str) {

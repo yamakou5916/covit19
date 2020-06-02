@@ -49,19 +49,15 @@ pre {
 	border: 0;
     margin: 0;
     text-align: center;
-    min-width: 100px; 
 }
 
 .block1 h1 {
-    text-align: center;
-    min-width: 100px; 
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 .block1 h3 {
     padding: 20px;
     margin-bottom: 20px;
-    min-width: 100px; 
 }
 
 .block2 {
@@ -71,7 +67,6 @@ pre {
     margin-bottom: 40px;
     text-align: left;
     font-size: 20px;
-    min-width: 100px; 
 }
 
 
@@ -79,27 +74,22 @@ ul.graph {
 }
 
 li.graph_1, .graph_2 {
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    min-width: 100px; 
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 li.graph_1 {
     float: left;
-    width: 50%;
-    min-width: 100px; 
+      width: 50%;
 
 }
 
 li.graph_2 {
     float: right;
-    width: 50%;
-    text-align: center;
-    background-color: #1BC3A9;
-    color: #01011b;
-    border-radius: 10px;
-    min-width: 100px; 
+      width: 50%;
+      text-align: center;
+      background-color: blue;
 }
 
 
@@ -109,10 +99,9 @@ ul.info {
 li.info_1 {
     margin-top: 10px;
     margin-bottom: 20px;
-    display: inline-block;
-    width: 50%;
-    font-size: 20px;
-    min-width: 100px; 
+  display: inline-block;
+  width: 50%;
+  font-size: 20px;
 }
 
 .block25 {
@@ -136,7 +125,7 @@ li.info_1 {
     height: 100vh;
     border: 0;
     margin: 0;
-    padding: 100px;
+    padding: 0;
 }
 
 .block5 {
@@ -145,14 +134,12 @@ li.info_1 {
     border: 0;
     margin: 0;
     padding: 0;
-    background-color: yellow;
 }
 
 .g-block-1 {
+	max-width: 30%;
     width: 30%;
     height: 100%;
-    max-width: 30%;
-    min-width: 300px; 
     float: left;
     margin-top: auto;
     margin-right: 10px;
@@ -163,9 +150,9 @@ li.info_1 {
 }
 
 .g-block-2 {
-    width: 100%;
+    max-width: 70%;
+    width: 70%;
     height: 100%;
-    max-width: 100%;
     float: right;
     margin: auto;
     padding: 0;
