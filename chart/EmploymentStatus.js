@@ -24,8 +24,8 @@ function drawBarChart12(data) {
   demo.innerHTML = (data[row][2]-50).toFixed(1);
 
   // 12)chart.jsで描画
-  var config12 =
-  {
+  var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
+  var EmploymentStatus = new Chart(ctx12, {
     type: 'bar', 
     data: {
       labels: tmpData12[0],
@@ -74,38 +74,25 @@ function drawBarChart12(data) {
 }
 
 
-var EmploymentStatus;
-
 
 //リフレッシュ
-//function change(newType) {
 function main12() {
-  //if (EmploymentStatus) {EmploymentStatus.destroy();}
   // 1) ajaxでCSVファイルをロード
   var req12 = new XMLHttpRequest();
   var filePath12 = './data/EmploymentStatus.csv';
   req12.open("GET", filePath12, true);
   req12.onload = function() {
     // 2) CSVデータ変換の呼び出し
-    var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
     data12 = csv2Array12(req12.responseText);
     // 3) chart.jsデータ準備、12) chart.js描画の呼び出し
-    var config12 = drawBarChart12(data12);
-    var temp12 = jQuery.extend(true, {}, config12);
-    temp12.type = "line";//newType;
-    if(newType == line){temp12.data = {labels: tmpData12[0],datasets: [{ label: "非正規率", data: tmpData12[1], borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-2",},]}}
-    EmploymentStatus = new Chart(ctx12, temp12);
+    drawBarChart12(data12);
   }
   req12.send(null);
 }
 
+main12();
 
 $('#mychart').css('height','100%');
-//ボタン選択
-change("line");
-$("#line").click(function() {change('line');});
-$("#bar").click(function() {change('bar');});
-
 
 
 
