@@ -22,7 +22,7 @@ function drawBarChart10(data) {
     tmpData410.push(data[row][4])
   };
   var demo = document.getElementById("samurai8");
-  demo.innerHTML = data[row][4];
+  demo.innerHTML = (data[row][4]-100).toFixed(1);;
 
 
   // 10)chart.jsで描画
