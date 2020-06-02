@@ -21,6 +21,9 @@ function drawBarChart10(data) {
     tmpData310.push(data[row][3])
     tmpData410.push(data[row][4])
   };
+  var demo = document.getElementById("samurai8");
+  demo.innerHTML = data[row][4];
+
 
   // 10)chart.jsで描画
   var ctx10 = document.getElementById("Industry").getContext("2d");
