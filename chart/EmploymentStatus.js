@@ -76,10 +76,6 @@ function drawBarChart12(data) {
 
 var EmploymentStatus;
 
-//ボタン選択
-change("line");
-$("#line").click(function() {change('line');});
-$("#bar").click(function() {change('bar');});
 
 //リフレッシュ
 function change(newType) {
@@ -104,6 +100,12 @@ function change(newType) {
 
 
 $('#mychart').css('height','100%');
+//ボタン選択
+change("line");
+$("#line").click(function() {change('line');});
+$("#bar").click(function() {change('bar');});
+
+
 
 
 
