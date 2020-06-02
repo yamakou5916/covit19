@@ -26,7 +26,7 @@ function drawBarChart12(data) {
   // 12)chart.jsで描画
   var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
   var EmploymentStatus = new Chart(ctx12, {
-    type: 'bar', 
+    type: 'line', 
     data: {
       labels: tmpData12[0],
       datasets: [
@@ -69,7 +69,7 @@ function drawBarChart12(data) {
         }
       },
     }
-    
+
   });
 }
 
