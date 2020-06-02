@@ -23,7 +23,7 @@ function drawBarChart11(data) {
 
   };
   var demo = document.getElementById("samurai4");
-  demo.innerHTML = (data[row][2]-50).toFixed(1);
+  demo.innerHTML = (data[row][2]-50).toFixed(6);
 
   // 11)chart.jsで描画
   var ctx11 = document.getElementById("CustomerAttitude").getContext("2d");
