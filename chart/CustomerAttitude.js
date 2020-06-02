@@ -38,8 +38,6 @@ function drawBarChart11(data) {
     },
 
     options: {
-      responsive: true,
-      maintainAspectRatio: false,
       scales: {
         
         xAxes: [{
@@ -66,7 +64,6 @@ function drawBarChart11(data) {
         display: true,
         //CustomerAttitudeition: 'top',
         labels: {
-          fontColor: "white",
           fontSize: 10,
           boxWidth: 10,
         }
@@ -93,6 +90,6 @@ function main11() {
 
 main11();
 
-$('#mychart').css('height','100%');
+
 
 
