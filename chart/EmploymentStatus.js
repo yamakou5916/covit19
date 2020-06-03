@@ -1,4 +1,4 @@
-var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
+var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF","#907AD6"];
 
 // 2) CSVから２次元配列に変換
 function csv2Array12(str) {
@@ -24,7 +24,7 @@ function drawBarChart12(data) {
     tmpData12[6].push(data[row][6])
   };
   var demo = document.getElementById("samurai4");
-  demo.innerHTML = (data[row][2]-50).toFixed(1);
+  demo.innerHTML = (data[row][2]).toFixed(1);
 
   // 12)chart.jsで描画
   var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
