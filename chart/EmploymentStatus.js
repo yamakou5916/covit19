@@ -47,24 +47,24 @@ function drawBarChart12(data) {
       maintainAspectRatio: false,
       scales: { 
         xAxes: [{
-          stacked: true,
+          //stacked: true,
           position: 'bottom',
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {maxRotation: 0, minRotation: 0, autoSkip: true, maxTicksLimit: 5, fontColor: "white", fontSize: 10,}
         }],
         yAxes: [{
-          stacked: true,
+          //stacked: true,
           id: "y-axis-1", 
           type: "linear", 
           position: "left",
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {fontColor: "white",fontSize: 10,}
-        }, {
+        },/* {
           id: "y-axis-2",
           type: "linear", 
           position: "right",
           ticks: {fontColor: "white", fontSize: 10,},
-        }],
+        }],*/
       },
       legend: {
         display: true,
