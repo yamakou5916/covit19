@@ -24,7 +24,7 @@ function drawBarChart12(data) {
     tmpData12[6].push(data[row][6])
   };
   var demo = document.getElementById("samurai4");
-  demo.innerHTML = (data[row][2]).toFixed(1);
+  demo.innerHTML = (data[row][2]-50).toFixed(1);
 
   // 12)chart.jsで描画
   var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
