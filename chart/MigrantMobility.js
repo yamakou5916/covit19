@@ -5,7 +5,7 @@ function csv2Array3(str) {
   var csvData3 = [];
   var lines3 = str.split("\n");
   for (var i = lines3.length-12; i < lines3.length; ++i) {
-  for (let i=0;i<12;i++){
+  //for (let i=0;i<12;i++){
     var cells3 = lines3[i].split(",");
     csvData3.push(cells3);
   }
