@@ -34,13 +34,11 @@ function drawBarChart12(data) {
     data: {
       labels: tmpData12[0],
       datasets: [
-        { label: "15歳以上人口", data: tmpData12[1], borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
-        { label: "労働力人口", data: tmpData12[2], borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
-        { label: "就業者", data: tmpData12[3], borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
-        { label: "雇用者", data: tmpData12[4], borderColor: colors[3], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
-        { label: "役員を除く雇用者", data: tmpData12[5], borderColor: colors[4], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
-        { label: "正規の職員・従業員", data: tmpData12[6], borderColor: colors[5], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
-        { label: "非正規の職員・従業員", data: tmpData12[6], borderColor: colors[5], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
+        { label: "非労働力人口", data: tmpData12[1], borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
+        { label: "完全失業者", data: tmpData12[2], borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
+        { label: "非正規の職員・従業員", data: tmpData12[3], borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
+        { label: "正規の職員・従業員", data: tmpData12[4], borderColor: colors[3], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
+        { label: "役員等", data: tmpData12[5], borderColor: colors[4], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
       ]
     },
 
