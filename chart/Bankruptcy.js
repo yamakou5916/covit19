@@ -23,7 +23,7 @@ function drawBarChart4(data) {
   // 4)chart.jsで描画
   var ctx4 = document.getElementById("Bankruptcy").getContext("2d");
   var Bankruptcy = new Chart(ctx4, {
-  type: 'line',  
+  type: 'bar',  
     data: {
       labels: tmpLabels4,
       datasets: [
