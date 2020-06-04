@@ -4,7 +4,8 @@ var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF",];
 function csv2Array12(str) {
   var csvData12 = [];
   var lines12 = str.split("\n");
-  for (var i = 0; i < lines12.length; ++i) {
+  //for (var i = 0; i < lines12.length; ++i) {
+  for (let i=0;i<12;i++){
     var cells12 = lines12[i].split(",");
     csvData12.push(cells12);
   }
@@ -29,7 +30,7 @@ function drawBarChart12(data) {
   // 12)chart.jsで描画
   var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
   var EmploymentStatus = new Chart(ctx12, {
-    type: 'line', 
+    type: 'bar', 
     data: {
       labels: tmpData12[0],
       datasets: [
@@ -39,6 +40,7 @@ function drawBarChart12(data) {
         { label: "雇用者", data: tmpData12[4], borderColor: colors[3], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
         { label: "役員を除く雇用者", data: tmpData12[5], borderColor: colors[4], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
         { label: "正規の職員・従業員", data: tmpData12[6], borderColor: colors[5], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
+        { label: "非正規の職員・従業員", data: tmpData12[6], borderColor: colors[5], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
       ]
     },
 
@@ -54,13 +56,13 @@ function drawBarChart12(data) {
       maintainAspectRatio: false,
       scales: { 
         xAxes: [{
-          //stacked: true,
+          stacked: true,
           position: 'bottom',
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {maxRotation: 0, minRotation: 0, autoSkip: true, maxTicksLimit: 5, fontColor: "white", fontSize: 10,}
         }],
         yAxes: [{
-          //stacked: true,
+          stacked: true,
           id: "y-axis-1", 
           type: "linear", 
           position: "left",
