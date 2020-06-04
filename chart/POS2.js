@@ -52,11 +52,10 @@ function drawBarChart20(data) {
     },
 
     options: {
-      // グラフタイトル表示
       title: {
-            display: true,
-            fontSize: 16,
-            text: ["レーダーグラフのサンプル（データセット" + cnt + "個)", "タイトルを改行するときは配列にするよ"]
+        display: true,
+        fontSize: 16,
+        text: "レーダーグラフのサンプル（データセット個)",
       },
       responsive: true,
       maintainAspectRatio: false,
