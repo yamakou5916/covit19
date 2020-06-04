@@ -37,19 +37,18 @@ function drawBarChart20(data) {
     data: {
       labels: tmpLabels20,
 
-      datasets: [[
+      datasets: [
         { label: "コロナ後スーパーマーケット", data: tmpData120, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
         { label: "コロナ後コンビニエンスストア", data: tmpData220, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
         { label: "コロナ後ホームセンター", data: tmpData320, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
         { label: "コロナ後ドラッグストア", data: tmpData420, borderColor: colors[3], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
         { label: "コロナ後家電大型専門店", data: tmpData520, borderColor: colors[4], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        ],
         { label: "コロナ前スーパーマーケット", data: tmpData620, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
         { label: "コロナ前コンビニエンスストア", data: tmpData720, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
         { label: "コロナ前ホームセンター", data: tmpData820, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
         { label: "コロナ前ドラッグストア", data: tmpData920, borderColor: colors[3], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
         { label: "コロナ前家電大型専門店", data: tmpData1020, borderColor: colors[4], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-      ]]
+      ]
     },
 
     options: {
