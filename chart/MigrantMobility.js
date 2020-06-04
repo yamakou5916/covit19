@@ -26,7 +26,7 @@ function drawBarChart3(data) {
   // 4)chart.jsで描画
   var ctx3 = document.getElementById("MigrantMobility").getContext("2d");
   var CountryMobility = new Chart(ctx3, {
-    type: 'line',
+    type: 'bar',
     data: {
       labels: tmpLabels3,
       datasets: [
@@ -49,6 +49,7 @@ function drawBarChart3(data) {
     	scales: {
     		
     		xAxes: [{
+          stacked: true,
     			position: 'bottom',
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
     			ticks: {
@@ -61,6 +62,7 @@ function drawBarChart3(data) {
     			}
     		}],
     		yAxes: [{
+          stacked: true,
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
     			ticks: {
     				fontColor: "white",
