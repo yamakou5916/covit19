@@ -36,6 +36,7 @@ function drawBarChart20(data) {
     type: 'line',
     data: {
       labels: tmpLabels20,
+
       datasets: [
         { label: "コロナ後スーパーマーケット", data: tmpData120, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
         { label: "コロナ後コンビニエンスストア", data: tmpData220, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
@@ -51,6 +52,12 @@ function drawBarChart20(data) {
     },
 
     options: {
+      // グラフタイトル表示
+      title: {
+            display: true,
+            fontSize: 16,
+            text: ["レーダーグラフのサンプル（データセット" + cnt + "個)", "タイトルを改行するときは配列にするよ"]
+      },
       responsive: true,
       maintainAspectRatio: false,
       scales: {
