@@ -57,6 +57,7 @@ function drawBarChart20(data) {
         fontSize: 16,
         text: "レーダーグラフのサンプル（データセット個)",
         fontColor: "white", // 文字の色
+        position: left,
       },
       responsive: true,
       maintainAspectRatio: false,
