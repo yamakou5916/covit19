@@ -22,7 +22,7 @@ function drawBarChart2(data) {
 
   };
   var demo = document.getElementById("samurai0");
-  demo.innerHTML = data[row][2];
+  demo.innerHTML = (data[row][2]-100).toFixed(1);
 
   // 4)chart.jsで描画
   var ctx2 = document.getElementById("AppleMobility").getContext("2d");
@@ -38,6 +38,13 @@ function drawBarChart2(data) {
     },
 
     options: {
+      title: {
+        display: true,
+        fontSize: 16,
+        text: "レーダーグラフのサンプル（データセット個)",
+        fontColor: "white", // 文字の色
+        //position: 'left',
+      },
       responsive: true,
       maintainAspectRatio: false,
     	scales: {

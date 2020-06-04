@@ -43,6 +43,13 @@ function drawBarChart12(data) {
     },
 
     options: {
+      title: {
+        display: true,
+        fontSize: 16,
+        text: "レーダーグラフのサンプル（データセット個)",
+        fontColor: "white", // 文字の色
+        //position: 'left',
+      },
       responsive: true,
       maintainAspectRatio: false,
       scales: { 
