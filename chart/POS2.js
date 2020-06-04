@@ -56,6 +56,7 @@ function drawBarChart20(data) {
         display: true,
         fontSize: 16,
         text: "レーダーグラフのサンプル（データセット個)",
+        fontColor: "white", // 文字の色
       },
       responsive: true,
       maintainAspectRatio: false,
@@ -70,7 +71,7 @@ function drawBarChart20(data) {
             autoSkip: true,
             maxTicksLimit: 20, //値の最大表示数
             fontColor: "white", // 文字の色
-                    fontSize: 10,
+            fontSize: 10,
           }
         }],
         yAxes: [{
