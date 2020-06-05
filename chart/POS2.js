@@ -22,11 +22,6 @@ function drawBarChart20(data) {
     tmpData320.push(data[row][3])
     tmpData420.push(data[row][4])
     tmpData520.push(data[row][5])
-    tmpData620.push(data[row][1])
-    tmpData720.push(data[row][2])
-    tmpData820.push(data[row][3])
-    tmpData920.push(data[row][4])
-    tmpData1020.push(data[row][5])
   };
   var demo = document.getElementById("samurai1");
   demo.innerHTML = (data[row][1]-100).toFixed(1);
@@ -39,16 +34,11 @@ function drawBarChart20(data) {
       labels: tmpLabels20,
 
       datasets: [
-        { label: "コロナ後スーパーマーケット", data: tmpData120, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "コロナ後コンビニエンスストア", data: tmpData220, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "コロナ後ホームセンター", data: tmpData320, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "コロナ後ドラッグストア", data: tmpData420, borderColor: colors[3], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "コロナ後家電大型専門店", data: tmpData520, borderColor: colors[4], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "コロナ前スーパーマーケット", data: tmpData620, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "コロナ前コンビニエンスストア", data: tmpData720, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "コロナ前ホームセンター", data: tmpData820, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "コロナ前ドラッグストア", data: tmpData920, borderColor: colors[3], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "コロナ前家電大型専門店", data: tmpData1020, borderColor: colors[4], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "スーパーマーケット", data: tmpData120, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "コンビニエンスストア", data: tmpData220, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "ホームセンター", data: tmpData320, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "ドラッグストア", data: tmpData420, borderColor: colors[3], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "家電大型専門店", data: tmpData520, borderColor: colors[4], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
       ]
     },
 
