@@ -4,7 +4,13 @@ var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 function csv2Array20(str) {
   var csvData20 = [];
   var lines20 = str.split("\n");
-  for (var i = 0; i < lines20.length; ++i) {
+  for (var i = lines20.length-48; i < lines20.length; ++i) {
+  //for (var i = 0; i < lines20.length; ++i) {
+    var cells20 = lines20[i].split(",");
+    csvData20.push(cells20);
+  }
+  for (var i = lines20.length-96; i < lines20.length-48; ++i) {
+  //for (var i = 0; i < lines20.length; ++i) {
     var cells20 = lines20[i].split(",");
     csvData20.push(cells20);
   }
@@ -21,11 +27,11 @@ function drawBarChart20(data) {
     tmpData320.push(data[row][3])
     tmpData420.push(data[row][4])
     tmpData520.push(data[row][5])
-    tmpData620.push(data[row][1])
-    tmpData720.push(data[row][2])
-    tmpData820.push(data[row][3])
-    tmpData920.push(data[row][4])
-    tmpData1020.push(data[row][5])
+    tmpData620.push(data[row][6])
+    tmpData720.push(data[row][7])
+    tmpData820.push(data[row][8])
+    tmpData920.push(data[row][9])
+    tmpData1020.push(data[row][10])
   };
   var demo = document.getElementById("samurai1");
   demo.innerHTML = (data[row][1]-100).toFixed(1);
@@ -57,7 +63,7 @@ function drawBarChart20(data) {
         fontSize: 16,
         text: "レーダーグラフのサンプル（データセット個)",
         fontColor: "white", // 文字の色
-        position: "left",
+        //position: 'left',
       },
       responsive: true,
       maintainAspectRatio: false,
@@ -79,7 +85,7 @@ function drawBarChart20(data) {
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             fontColor: "white",
-                    fontSize: 10,
+            fontSize: 10,
           }
         }],
       },
