@@ -33,11 +33,11 @@ function drawBarChart12(data) {
     data: {
       labels: tmpData12[0],
       datasets: [
-        { label: "非労働力人口", data: tmpData12[1], borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
-        { label: "完全失業者", data: tmpData12[2], borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
-        { label: "非正規の職員・従業員", data: tmpData12[3], borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
-        { label: "正規の職員・従業員", data: tmpData12[4], borderColor: colors[3], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
-        { label: "役員等", data: tmpData12[5], borderColor: colors[4], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: "rgba(255,255,255,0)"},
+        { label: "非労働力人口", data: tmpData12[1], borderColor: colors[0], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: colors[0]},
+        { label: "完全失業者", data: tmpData12[2], borderColor: colors[1], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: colors[1]},
+        { label: "非正規の職員・従業員", data: tmpData12[3], borderColor: colors[2], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: colors[2]},
+        { label: "正規の職員・従業員", data: tmpData12[4], borderColor: colors[3], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: colors[3]},
+        { label: "役員等", data: tmpData12[5], borderColor: colors[4], borderWidth: 1, pointRadius: 0, yAxisID: "y-axis-1", backgroundColor: colors[4]},
       ]
     },
 
