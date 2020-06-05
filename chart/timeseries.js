@@ -49,7 +49,7 @@ function drawBarChart(data) {
       title: {
         display: true,
         fontSize: 16,
-        text: "レーダーグラフのサンプル（データセット個)",
+        text: "場所カテゴリ別の滞在時間",
         fontColor: "white", // 文字の色
         //position: 'left',
       },
