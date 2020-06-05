@@ -120,68 +120,131 @@
 }
 */
 
-.box7, .box8, .box9, .box10, .box11, .box12, .box13, .box14 , .box15 {
-    width: 100vw;
-    height: 100vh;
-    background-color: #01011b;
-    padding: auto;
-    /*position: absolute;
-    top: 0;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-image: url('mask.jpg');
-    /* 画像を常に天地左右の中央に配置 */
-    background-position: center center;
-    /* 画像をタイル状に繰り返し表示しない */
-    background-repeat: no-repeat;
-    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
-    background-attachment: fixed;
-    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
-    background-size: cover;
-}
-
 .box4 {
     width: 100vw;
     height: 100vh;
-    background-image: url("image/0.jpg");
+    background-color: #01011b;
+    background-image: url("image/0a.jpg");
     /* 画像を常に天地左右の中央に配置 */
-    background-position: center center;
+    background-position: left center;
     /* 画像をタイル状に繰り返し表示しない */
     background-repeat: no-repeat;
     /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
     background-attachment: fixed;
     /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
-    background-size: cover;
+    background-size: contain;
 }
 
 .box5 {
     width: 100vw;
     height: 100vh;
-    background-image: url("image/1.jpg");
+    background-image: url("image/1a.jpg");    
     /* 画像を常に天地左右の中央に配置 */
-    background-position: center center;
+    background-position: left center;
     /* 画像をタイル状に繰り返し表示しない */
     background-repeat: no-repeat;
     /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
     background-attachment: fixed;
     /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
-    background-size: cover;
+    background-size: contain;
 }
 
 .box6 {
     width: 100vw;
     height: 100vh;
-    background-image: url("image/2.jpg");
+    background-image: url("image/2a.jpg");
     /* 画像を常に天地左右の中央に配置 */
-    background-position: center center;
+    background-position: left center;
     /* 画像をタイル状に繰り返し表示しない */
     background-repeat: no-repeat;
     /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
     background-attachment: fixed;
     /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
-    background-size: cover;
+    background-size: contain;
+}
+
+.box7 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("image/3a.jpg");
+    /* 画像を常に天地左右の中央に配置 */
+    background-position: left center;
+    /* 画像をタイル状に繰り返し表示しない */
+    background-repeat: no-repeat;
+    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+    background-attachment: fixed;
+    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+    background-size: contain;
+}
+
+.box8 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("image/4a.jpg");
+    /* 画像を常に天地左右の中央に配置 */
+    background-position: left center;
+    /* 画像をタイル状に繰り返し表示しない */
+    background-repeat: no-repeat;
+    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+    background-attachment: fixed;
+    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+    background-size: contain;
+}
+
+.box9 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("image/5a.jpg");
+    /* 画像を常に天地左右の中央に配置 */
+    background-position: left center;
+    /* 画像をタイル状に繰り返し表示しない */
+    background-repeat: no-repeat;
+    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+    background-attachment: fixed;
+    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+    background-size: contain;
+}
+
+.box10 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("image/6a.jpg");
+    /* 画像を常に天地左右の中央に配置 */
+    background-position: left center;
+    /* 画像をタイル状に繰り返し表示しない */
+    background-repeat: no-repeat;
+    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+    background-attachment: fixed;
+    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+    background-size: contain;
+}
+
+.box11 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("image/7a.jpg");
+    /* 画像を常に天地左右の中央に配置 */
+    background-position: left center;
+    /* 画像をタイル状に繰り返し表示しない */
+    background-repeat: no-repeat;
+    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+    background-attachment: fixed;
+    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+    background-size: contain;
+}
+
+.box12 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("image/8a.jpg");
+    /* 画像を常に天地左右の中央に配置 */
+    background-position: left center;
+    /* 画像をタイル状に繰り返し表示しない */
+    background-repeat: no-repeat;
+    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+    background-attachment: fixed;
+    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+    background-size: contain;
 }
 
 /* footer */
