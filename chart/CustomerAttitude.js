@@ -33,14 +33,21 @@ function drawBarChart11(data) {
     data: {
       labels: tmpLabels11,
       datasets: [
-        { label: "給与所得", data: tmpData111, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "事業所得", data: tmpData211, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
-        { label: "年金所得", data: tmpData311, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
-        { label: "その他", data: tmpData411, borderColor: colors[3], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "給与所得", data: tmpData111, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "事業所得", data: tmpData211, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "年金所得", data: tmpData311, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "その他", data: tmpData411, borderColor: colors[3], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
       ]
     },
 
     options: {
+      title: {
+        display: true,
+        fontSize: 16,
+        text: "消費者態度指数",
+        fontColor: "white", // 文字の色
+        //position: 'left',
+      },
       responsive: true,
       maintainAspectRatio: false,
       scales: {

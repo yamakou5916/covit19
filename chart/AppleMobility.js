@@ -41,7 +41,7 @@ function drawBarChart2(data) {
       title: {
         display: true,
         fontSize: 16,
-        text: "レーダーグラフのサンプル（データセット個)",
+        text: "全国の移動量データ",
         fontColor: "white", // 文字の色
         //position: 'left',
       },

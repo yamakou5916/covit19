@@ -40,7 +40,7 @@ function drawBarChart3(data) {
       title: {
         display: true,
         fontSize: 16,
-        text: "レーダーグラフのサンプル（データセット個)",
+        text: "転入者数",
         fontColor: "white", // 文字の色
         //position: 'left',
       },
