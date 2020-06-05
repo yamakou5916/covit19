@@ -55,28 +55,28 @@ function drawBarChart20(data) {
       scales: {
         
         xAxes: [{
-          POS2ition: 'bottom',
+          position: 'bottom',
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             maxRotation: 0, 
             minRotation: 0,
             autoSkip: true,
-            maxTicksLimit: 20, //値の最大表示数
+            maxTicksLimit: 7, //値の最大表示数
             fontColor: "white", // 文字の色
-            fontSize: 10,
+                    fontSize: 10,
           }
         }],
         yAxes: [{
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             fontColor: "white",
-            fontSize: 10,
+                    fontSize: 10,
           }
         }],
       },
       legend: {
         display: true,
-        //POS2ition: 'top',
+        //position: 'top',
         labels: {
           fontColor: "white",
           fontSize: 10,
