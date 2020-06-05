@@ -104,7 +104,7 @@ function func0() {
   // form要素内のラジオボタングループ(name="hoge")を取得
   var radioNodeList = element.hoge ;
   // 2つ目の要素を選択状態にする
-  radioNodeList[1].checked = true ;
+  //radioNodeList[1].checked = true ;
   // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
   var a = radioNodeList.value ;
 
@@ -125,6 +125,11 @@ function func0() {
 
 
 main2();
+var element = document.getElementById( "target0" ) ;
+// form要素内のラジオボタングループ(name="hoge")を取得
+var radioNodeList = element.hoge ;
+// 2つ目の要素を選択状態にする
+radioNodeList[1].checked = true ;
 
 $('#mychart').css('height','100%');
 
