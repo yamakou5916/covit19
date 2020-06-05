@@ -22,7 +22,7 @@
 }
 
 .top {
-    background-image: url('mask.jpg');
+    background-image: url('intro.gif');
     /* 画像を常に天地左右の中央に配置 */
     background-position: center center;
     /* 画像をタイル状に繰り返し表示しない */
