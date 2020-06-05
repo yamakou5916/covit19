@@ -21,8 +21,8 @@ function drawBarChart12(data) {
     tmpData12[2].push(data[row][2])
     tmpData12[3].push(data[row][3])
     tmpData12[4].push(data[row][4])
-    tmpData12[5].push(data[row][5])
-    tmpData12[6].push(data[row][6]-data[row][5])
+    tmpData12[5].push(data[row][5]-data[row][4])
+    tmpData12[6].push(data[row][6])
   };
   var demo = document.getElementById("samurai4");
   demo.innerHTML = (data[row][2]-50).toFixed(1);
