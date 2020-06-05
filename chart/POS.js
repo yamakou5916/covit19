@@ -4,7 +4,8 @@ var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 function csv2Array7(str) {
   var csvData7 = [];
   var lines7 = str.split("\n");
-  for (var i = 0; i < lines7.length; ++i) {
+  for (var i = lines7.length-48; i < lines7.length; ++i) {
+  //for (var i = 0; i < lines7.length; ++i) {
     var cells7 = lines7[i].split(",");
     csvData7.push(cells7);
   }
