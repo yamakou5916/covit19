@@ -1,7 +1,7 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 
 // 2) CSVから２次元配列に変換
-function csv2Array10(str) {
+function csv2Array10(str,a) {
   var csvData10 = [];
   var lines10 = str.split("\n");
   if(a == "a"){
@@ -31,7 +31,6 @@ function drawBarChart10(data) {
   };
   var demo = document.getElementById("samurai8");
   demo.innerHTML = (data[row][4]-100).toFixed(1);;
-
 
   // 10)chart.jsで描画
   var ctx10 = document.getElementById("Industry").getContext("2d");
