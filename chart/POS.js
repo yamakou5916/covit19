@@ -4,7 +4,14 @@ var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 function csv2Array7(str) {
   var csvData7 = [];
   var lines7 = str.split("\n");
-  for (var i = lines7.length-48; i < lines7.length; ++i) {
+  if(a == "a"){
+    var num0 = 48;
+    var num1 = 0;
+  }else{
+    var num0 = 96;
+    var num1 = 48;
+  }
+  for (var i = lines20.length-num0; i < lines20.length-num1; ++i) {
   //for (var i = 0; i < lines7.length; ++i) {
     var cells7 = lines7[i].split(",");
     csvData7.push(cells7);
@@ -105,7 +112,26 @@ function main7() {
   req7.send(null);
 }
 
-main7();
+function func1() {
+  // form要素を取得
+  var element = document.getElementById( "target1" ) ;
+  // form要素内のラジオボタングループ(name="hoge")を取得
+  var radioNodeList = element.hoge ;
+  // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
+  var a = radioNodeList.value ;
+  if ( a === "" ) {
+    // 未選択状態
+  } else {
+    // aには選択状態の値が代入されている
+    //console.log( a ) ;
+    main7(a)
+  }
+}
+
+var element = document.getElementById( "target1" ) ;
+var radioNodeList = element.hoge ;
+radioNodeList[1].checked = true ;
+func1();
 
 
 $('#mychart').css('height','100%');

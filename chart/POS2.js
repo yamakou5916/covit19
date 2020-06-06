@@ -4,7 +4,6 @@ var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 function csv2Array20(str, a) {
   var csvData20 = [];
   var lines20 = str.split("\n");
-  console.log( a ) ;
   if(a == "a"){
     var num0 = 48;
     var num1 = 0;
