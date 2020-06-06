@@ -111,7 +111,7 @@ function func0() {
   // 2つ目の要素を選択状態にする
   //radioNodeList[1].checked = true ;
   // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
-  //var a = radioNodeList.value ;
+  var a = radioNodeList.value ;
 
   for(var i = 0; i < element.length; i++){
     if(element[i].checked) {
