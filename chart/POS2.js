@@ -105,7 +105,7 @@ function main20() {
 
 function func0() {
   // form要素を取得
-  var element = document.getElementById( "target" ) ;
+  var element = document.getElementById( "target0" ) ;
   // form要素内のラジオボタングループ(name="hoge")を取得
   var radioNodeList = element.hoge ;
   // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
