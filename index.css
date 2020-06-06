@@ -247,6 +247,12 @@
     background-size: contain;
 }
 
+.box13 {
+    width: 100vw;
+    height: auto;
+    background: gray;
+}
+
 /* footer */
 .footer {
     width: 100vw;
