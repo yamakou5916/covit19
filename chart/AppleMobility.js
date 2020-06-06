@@ -99,8 +99,8 @@ function main2() {
 
 
 
-
 main2();
+
 
 $('#mychart').css('height','100%');
 
