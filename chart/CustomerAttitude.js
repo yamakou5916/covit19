@@ -1,10 +1,17 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 
 // 2) CSVから２次元配列に変換
-function csv2Array11(str) {
+function csv2Array11(str,a) {
   var csvData11 = [];
   var lines11 = str.split("\n");
-  for (var i = lines11.length-12; i < lines11.length; ++i) {
+  if(a == "a"){
+    var num0 = 48;
+    var num1 = 0;
+  }else{
+    var num0 = 96;
+    var num1 = 48;
+  }
+  for (var i = lines11.length-num0; i < lines11.length-num1; ++i) {
   //for (var i = 0; i < lines11.length; ++i) {
     var cells11 = lines11[i].split(",");
     csvData11.push(cells11);
@@ -87,21 +94,40 @@ function drawBarChart11(data) {
 }
 
 
-function main11() {
+function main11(a) {
   // 1) ajaxでCSVファイルをロード
   var req11 = new XMLHttpRequest();
   var filePath11 = './data/CustomerAttitude.csv';
   req11.open("GET", filePath11, true);
   req11.onload = function() {
     // 2) CSVデータ変換の呼び出し
-    data11 = csv2Array11(req11.responseText);
+    data11 = csv2Array11(req11.responseText,a);
     // 3) chart.jsデータ準備、11) chart.js描画の呼び出し
     drawBarChart11(data11);
   }
   req11.send(null);
 }
 
-main11();
+function func4() {
+  // form要素を取得
+  var element = document.getElementById( "target4" ) ;
+  // form要素内のラジオボタングループ(name="hoge")を取得
+  var radioNodeList = element.hoge ;
+  // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
+  var a = radioNodeList.value ;
+  if ( a === "" ) {
+    // 未選択状態
+  } else {
+    // aには選択状態の値が代入されている
+    //console.log( a ) ;
+    main11(a)
+  }
+}
+
+var element = document.getElementById( "target4" ) ;
+var radioNodeList = element.hoge ;
+radioNodeList[1].checked = true ;
+func4();
 
 $('#mychart').css('height','100%');
 
