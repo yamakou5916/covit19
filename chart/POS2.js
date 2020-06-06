@@ -119,7 +119,9 @@ function func0() {
   }
 }
 
-
+var element = document.getElementById( "target0" ) ;
+var radioNodeList = element.hoge ;
+radioNodeList[1].checked = true ;
 func0();
 
 $('#mychart').css('height','100%');
