@@ -1,10 +1,17 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 
 // 2) CSVから２次元配列に変換
-function csv2Array3(str) {
+function csv2Array3(str,a) {
   var csvData3 = [];
   var lines3 = str.split("\n");
-  for (var i = lines3.length-12; i < lines3.length; ++i) {
+  if(a == "a"){
+    var num0 = 12;
+    var num1 = 0;
+  }else{
+    var num0 = 24;
+    var num1 = 12;
+  }
+  for (var i = lines3.length-num0; i < lines3.length-num1; ++i) {
   //for (let i=0;i<12;i++){
     var cells3 = lines3[i].split(",");
     csvData3.push(cells3);
@@ -85,21 +92,42 @@ function drawBarChart3(data) {
 }
 
 
-function main3() {
+function main3(a) {
   // 1) ajaxでCSVファイルをロード
   var req3 = new XMLHttpRequest();
   var filePath3 = './data/MigrantMobility.csv';
   req3.open("GET", filePath3, true);
   req3.onload = function() {
     // 2) CSVデータ変換の呼び出し
-    data3 = csv2Array3(req3.responseText);
+    data3 = csv2Array3(req3.responseText,a);
     // 3) chart.jsデータ準備、4) chart.js描画の呼び出し
     drawBarChart3(data3);
   }
   req3.send(null);
 }
 
-main3();
+function func3() {
+  // form要素を取得
+  var element = document.getElementById( "target3" ) ;
+  // form要素内のラジオボタングループ(name="hoge")を取得
+  var radioNodeList = element.hoge ;
+  // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
+  var a = radioNodeList.value ;
+  if ( a === "" ) {
+    // 未選択状態
+  } else {
+    // aには選択状態の値が代入されている
+    //console.log( a ) ;
+    main3(a)
+  }
+}
+
+var element = document.getElementById( "target3" ) ;
+var radioNodeList = element.hoge ;
+radioNodeList[1].checked = true ;
+func3();
+
+
 
 $('#mychart').css('height','100%');
 
