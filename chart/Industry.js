@@ -108,7 +108,7 @@ function main10(a) {
   req10.send(null);
 }
 
-function func1() {
+function func6() {
   // form要素を取得
   var element = document.getElementById( "target6" ) ;
   // form要素内のラジオボタングループ(name="hoge")を取得
