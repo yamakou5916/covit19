@@ -129,7 +129,6 @@ function func0() {
 }
 
 
-radioNodeList[1].checked = true ;
 
 func0();
 
