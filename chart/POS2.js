@@ -115,6 +115,7 @@ function func0() {
   } else {
     // aには選択状態の値が代入されている
     console.log( a ) ;
+    main20()
   }
 }
 
