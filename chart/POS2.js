@@ -103,7 +103,7 @@ function main20(a) {
   req20.open("GET", filePath20, true);
   req20.onload = function() {
     // 2) CSVデータ変換の呼び出し
-    data20 = csv2Array20(req20.responseText);
+    data20 = csv2Array20(req20.responseText,a);
     // 3) chart.jsデータ準備、20) chart.js描画の呼び出し
     drawBarChart20(data20);
   }
