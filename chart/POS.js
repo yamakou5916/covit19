@@ -1,7 +1,7 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 
 // 2) CSVから２次元配列に変換
-function csv2Array7(str) {
+function csv2Array7(str,a) {
   var csvData7 = [];
   var lines7 = str.split("\n");
   if(a == "a"){
