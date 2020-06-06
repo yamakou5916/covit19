@@ -1,10 +1,17 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 
 // 2) CSVから２次元配列に変換
-function csv2Array20(str) {
+function csv2Array20(str, a) {
   var csvData20 = [];
   var lines20 = str.split("\n");
-  for (var i = lines20.length-48; i < lines20.length; ++i) {
+  if(a == "a"){
+    var num0 = 48;
+    var num1 = 0;
+  }else{
+    var num0 = 96;
+    var num1 = 48;
+  }
+  for (var i = lines20.length-num0; i < lines20.length-num1; ++i) {
   //for (var i = 0; i < lines20.length; ++i) {
     var cells20 = lines20[i].split(",");
     csvData20.push(cells20);
@@ -89,7 +96,7 @@ function drawBarChart20(data) {
 }
 
 
-function main20() {
+function main20(a) {
   // 1) ajaxでCSVファイルをロード
   var req20 = new XMLHttpRequest();
   var filePath20 = './data/POS2.csv';
@@ -115,7 +122,7 @@ function func0() {
   } else {
     // aには選択状態の値が代入されている
     console.log( a ) ;
-    main20()
+    main20(a)
   }
 }
 
