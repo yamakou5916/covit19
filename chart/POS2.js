@@ -107,13 +107,13 @@ function func0() {
   // form要素を取得
   var element = document.getElementById( "target0" ) ;
   // form要素内のラジオボタングループ(name="hoge")を取得
-  //var radioNodeList = element.hoge ;
+  var radioNodeList = element.hoge ;
   // 2つ目の要素を選択状態にする
   //radioNodeList[1].checked = true ;
   // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
-  for(var i = 0; i < element.length; i++){
-    if(element[i].checked) {
-      console.log("選択された値：", element[i].value);
+  for(var i = 0; i < radioNodeList.length; i++){
+    if(radioNodeList[i].checked) {
+      console.log("選択された値：", radioNodeList[i].value);
       main20();
     }
   }
