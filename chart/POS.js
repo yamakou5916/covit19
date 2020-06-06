@@ -98,14 +98,14 @@ function drawBarChart7(data) {
 }
 
 
-function main7() {
+function main7(a) {
   // 1) ajaxでCSVファイルをロード
   var req7 = new XMLHttpRequest();
   var filePath7 = './data/POS.csv';
   req7.open("GET", filePath7, true);
   req7.onload = function() {
     // 2) CSVデータ変換の呼び出し
-    data7 = csv2Array7(req7.responseText);
+    data7 = csv2Array7(req7.responseText,a);
     // 3) chart.jsデータ準備、7) chart.js描画の呼び出し
     drawBarChart7(data7);
   }
