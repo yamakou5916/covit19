@@ -4,7 +4,14 @@ var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 function csv2Array10(str) {
   var csvData10 = [];
   var lines10 = str.split("\n");
-  for (var i = lines10.length-12; i < lines10.length; ++i) {
+  if(a == "a"){
+    var num0 = 12;
+    var num1 = 0;
+  }else{
+    var num0 = 24;
+    var num1 = 12;
+  }
+  for (var i = lines10.length-num0; i < lines10.length-num1; ++i) {
   //for (var i = 0; i < lines10.length; ++i) {
     var cells10 = lines10[i].split(",");
     csvData10.push(cells10);
@@ -87,21 +94,40 @@ function drawBarChart10(data) {
 }
 
 
-function main10() {
+function main10(a) {
   // 1) ajaxでCSVファイルをロード
   var req10 = new XMLHttpRequest();
   var filePath10 = './data/Industry.csv';
   req10.open("GET", filePath10, true);
   req10.onload = function() {
     // 2) CSVデータ変換の呼び出し
-    data10 = csv2Array10(req10.responseText);
+    data10 = csv2Array10(req10.responseText,a);
     // 3) chart.jsデータ準備、10) chart.js描画の呼び出し
     drawBarChart10(data10);
   }
   req10.send(null);
 }
 
-main10();
+function func1() {
+  // form要素を取得
+  var element = document.getElementById( "target6" ) ;
+  // form要素内のラジオボタングループ(name="hoge")を取得
+  var radioNodeList = element.hoge ;
+  // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
+  var a = radioNodeList.value ;
+  if ( a === "" ) {
+    // 未選択状態
+  } else {
+    // aには選択状態の値が代入されている
+    //console.log( a ) ;
+    main10(a)
+  }
+}
+
+var element = document.getElementById( "target6" ) ;
+var radioNodeList = element.hoge ;
+radioNodeList[1].checked = true ;
+func6();
 
 
 $('#mychart').css('height','100%');
