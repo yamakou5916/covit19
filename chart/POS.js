@@ -11,7 +11,7 @@ function csv2Array7(str) {
     var num0 = 96;
     var num1 = 48;
   }
-  for (var i = lines20.length-num0; i < lines20.length-num1; ++i) {
+  for (var i = lines7.length-num0; i < lines7.length-num1; ++i) {
   //for (var i = 0; i < lines7.length; ++i) {
     var cells7 = lines7[i].split(",");
     csvData7.push(cells7);
