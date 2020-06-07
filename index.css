@@ -125,14 +125,13 @@
     height: 100vh;
     background-color: #01011b;
     background-image: url("image/0a.jpg");
-    /* 画像を常に天地左右の中央に配置 */
-    background-position: left center;
+    background-position: center center;
     /* 画像をタイル状に繰り返し表示しない */
     background-repeat: no-repeat;
     /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
     background-attachment: fixed;
     /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
-    background-size: contain;
+    background-size: cover;
 }
 
 .box5 {
@@ -257,6 +256,9 @@
     padding-bottom:150px;
 }
 
+.box h1 {
+    padding-bottom: 10px;
+}
 
 
 /* footer */
