@@ -100,7 +100,6 @@ function main2() {
 }
 
 function data0(){
-  mobility = 50;
   return mobility;
 }
 
