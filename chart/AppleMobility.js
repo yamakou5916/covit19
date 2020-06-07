@@ -1,4 +1,5 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
+var mobility = 0;
 
 // 2) CSVから２次元配列に変換
 function csv2Array2(str) {
@@ -23,6 +24,7 @@ function drawBarChart2(data) {
   };
   var demo = document.getElementById("samurai0");
   demo.innerHTML = (data[row][2]-100).toFixed(1);
+  mobility = data[row][2]-100;
 
   // 4)chart.jsで描画
   var ctx2 = document.getElementById("AppleMobility").getContext("2d");
@@ -97,6 +99,9 @@ function main2() {
   req2.send(null);
 }
 
+function mobility(){
+  return mobility;
+}
 
 
 main2();
