@@ -250,9 +250,14 @@
 .box13 {
     width: 100vw;
     height: auto;
-    background: gray;
+    background: #80808d;
+    color: #01011b;
     text-align: center;
+    padding-top:100px; 
+    padding-bottom:150px;
 }
+
+
 
 /* footer */
 .footer {
