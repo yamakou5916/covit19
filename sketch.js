@@ -68,7 +68,7 @@ var canvas;
 function setup(){
   changeRate[0] = data0();
   changeRate[1] = data1();
-  //changeRate[2] = data2();
+  changeRate[2] = data2();
   pixelDensity(2);
   canvas = createCanvas(2000, 1000);//描画領域を指定
   canvas.parent("P5Canvas");
@@ -185,7 +185,7 @@ function draw(){
       textnum = 1;
     }*/
 
-    if(changeRate[i] >= framCnt * 0.1){
+    if(Math.abs(changeRate[i]) >= framCnt * 0.1){
       showNum[i] = framCnt * 0.1;
       cheight[i] = cheight[i] + 1;
     }else{
