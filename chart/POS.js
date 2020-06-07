@@ -135,7 +135,7 @@ function data2(){
 }
 
 var element = document.getElementById( "target1" ) ;
-var radioNodeList = element.hoge ;
+var radioNodeList = element.hoge;
 radioNodeList[0].checked = true ;
 func1();
 
