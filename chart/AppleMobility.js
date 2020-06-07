@@ -1,5 +1,4 @@
-var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
-var mobility = 0;
+var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
 
 // 2) CSVから２次元配列に変換
 function csv2Array2(str) {
@@ -22,9 +21,6 @@ function drawBarChart2(data) {
     tmpData32.push(data[row][3])
 
   };
-  var demo = document.getElementById("samurai0");
-  demo.innerHTML = (data[row][2]-100).toFixed(1);
-  mobility = data[row][2]-100;
 
   // 4)chart.jsで描画
   var ctx2 = document.getElementById("AppleMobility").getContext("2d");
@@ -33,22 +29,13 @@ function drawBarChart2(data) {
     data: {
       labels: tmpLabels2,
       datasets: [
-        { label: "車移動", data: tmpData12, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "電車移動", data: tmpData22, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "歩行移動", data: tmpData32, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "車移動", data: tmpData12, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "電車移動", data: tmpData22, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "歩行移動", data: tmpData32, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
       ]
     },
 
     options: {
-      title: {
-        display: true,
-        fontSize: 16,
-        text: "全国の移動量データ",
-        fontColor: "white", // 文字の色
-        //position: 'left',
-      },
-      responsive: true,
-      maintainAspectRatio: false,
     	scales: {
     		xAxes: [{
     			position: 'bottom',
@@ -74,7 +61,6 @@ function drawBarChart2(data) {
     		display: true,
     		//position: 'top',
     		labels: {
-          fontColor: "white",
     			fontSize: 10,
     			boxWidth: 10,
     		}
@@ -99,15 +85,5 @@ function main2() {
   req2.send(null);
 }
 
-function data0(){
-  return mobility;
-}
-
-
 main2();
-
-
-$('#mychart').css('height','100%');
-
-
 
