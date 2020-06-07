@@ -121,9 +121,6 @@
 */
 
 .box4 {
-    width: 100vw;
-    height: 100vh;
-    background-color: #01011b;
     background-image: url("image/0a.jpg");
     background-position: center center;
     /* 画像をタイル状に繰り返し表示しない */
@@ -132,6 +129,9 @@
     background-attachment: fixed;
     /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
     background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-color: #01011b;
 }
 
 .box5 {
