@@ -67,6 +67,8 @@ var canvas;
 
 function setup(){
   changeRate[0] = data0();
+  changeRate[1] = data1();
+  changeRate[2] = data2();
   pixelDensity(2);
   canvas = createCanvas(2000, 1000);//描画領域を指定
   canvas.parent("P5Canvas");
