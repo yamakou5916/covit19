@@ -1,4 +1,5 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
+var workplace = 0;
 
 
 // 2) CSVから２次元配列に変換
@@ -26,6 +27,7 @@ function drawBarChart(data) {
   };
   var demo = document.getElementById("samurai3");
   demo.innerHTML = data[row][5];
+  workplace = data[row][5];
 
   // 4)chart.jsで描画
   var ctx = document.getElementById("myChart").getContext("2d");
@@ -105,7 +107,14 @@ function main() {
   req.send(null);
 }
 
+function data3(){
+  return workplace;
+}
+
 main();
+
+$('#mychart').css('height','100%');
+
 
 
 
