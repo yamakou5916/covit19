@@ -1,77 +1,534 @@
-<!DOCTYPE html>
-<html lang="ja">
-
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chart.jsを使ってグラフを描画してみよう</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+<!-- Load c3.css -->
+<link href="chart/c3.css" rel="stylesheet" type="text/css">
+<link href="chart/chartview.css" rel="stylesheet" type="text/css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script type="text/javascript" src="sketch.js"></script>
+
+<link href="index.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
+<script src="main.js"></script>
+<title>Breakthru Index with/after COVID-19</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+	<div class="box box1">
+	<div class="top">
+	  <img src="logo.png" class="logo">
+	</div>
+	</div>
 
-    <div id="app">
+  <div class="box box2">
+    <div class="intro">
+      <h1>About This Map</h1>
+      <h2>コロナウイルスの影響で今までの国民生活が一変した。<br>
+      このマップは、経済の変化をオープンデータによって可視化し<br>ウイルスと共存した世界のあり方を捕捉するための資料である。</h2>
 
-        <div class="jumbotron">
-            <h1>Chart.jsを使ってグラフを描画してみよう</h1>
-            <p class="lead">
-                Chart.js（とVue.js）を使ってグラフを描画するサンプルサイトです。
-            </p>
-        </div>
+      <p>
+      4/22に行われた新型コロナウイルス感染症対策専門家会議での協議を基に、<br>人と人との接触を8割減らす目標が政府によって掲げられました。<br><br>
 
-        <div class="container-fluid">
-            <div class="row">
-                <!--div class="col-12 col-md-6">
+      コロナウイルスの拡散防止を目的に国民への行動指標として、<br>人々の生活環境を可視化するためのデータ活用の取り組みが行われ、<br>
+      個人を特定しない範囲でのデータが開示されました。
+      <br><br>
 
-                    <div class="row">
-                        <div class="col-12 my-5">
-                            <h3>生成されたデータ</h3>
-                            <div class="bg-light p-3">
-                                <pre>{{ toRaw(datasets) }}</pre>
-                            </div>
-                        </div>
-                    </div>
+      また、政府からの自粛要請を受け人々の動きが制限され、<br>
+      その結果として経済に大きな影響がもたらされました。<br>
+      経済的な被害はリーマンショック以上ともされ、産業構造自体を変革する動きが高まっています。<br><br>
 
-                </div-->
-                <div class="col-12 col-md-6">
+      ここで取り扱う人の移動データ、人々の生産・消費を主とした経済活動のデータは、<br>「新たな生活様式」が根付いた変革後のビジネスにおいても重要な行動指標になりえます。
+      </p>
+    </div>
+  </div> 
 
-                    <div class="col-12 mb-5">
-                        <h2>グラフの種類</h2>
-                        <select class="form-control" v-model="graphSelected">
-                            <option v-for="(item,index) in graphs" :key="index" :value="item.type">
-                                {{ item.name }}</option>
-                        </select>
+  <div class="box box3">
+    <div id="P5Canvas" class="map"></div>
+  </div> 
 
-                    </div>
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col">
-                                <h2>グラフ</h2>
-                            </div>
-                            <!--div class="col-auto">
-                                <button class="btn btn-info" v-on:click="randData">ランダムに生成する</button>
-                            </div-->
-                        </div>
-                        <div>
-                            <canvas id="charts"></canvas>
-
-                        </div>
-
-                    </div>
-                </div>
+  <div class="box box4">
+    <div class="outer" id="section00">
+      <div class="g-block-1">
+        <!--div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;<span id="samurai0">samurai</span>%</h2>
             </div>
+        </div-->
+        <div class="block1">
+              <h1>Living Sphere</h1>
+              <p><img src="image/graph_icon/living_sphere.png" alt="Smiley face" height="70" width="70"></p>
+              <h3>顧客接点が家に近づき、<br>デジタルによる配送サービスが広まる。</h3>
+        </div>
+        <div class="block2">
+          <ul class="info">
+            <li class="info_1">想定の方向性</li>
+          </ul>
+              <p>
+              ワクチンが利用可能になるまで、全ての人が社会的接触を最小限に抑えるようにできる限り努力し、接触機会を全体として75％減らすという「社会距離戦略（Social distancing）」は、一時的な混乱ではなく、全く新たな生活様式の始まり。既に「シャットイン・エコノミー（家に閉じこもる経済）」と名付けられている分野が存在し、新しいサービスが爆発的に増加する。
+              </p>
+        </div>
+        <div class="block2">
+          <ul class="graph">
+            <li class="graph_1">グラフの見方</li>
+            <li class="graph_2">変化率<img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;<span id="samurai0">25.0</span>%</li>
+          </ul>
+          <p>
+          人々の移動量は緊急事態宣言期間中は大幅に減少し、交通手段に関わらず一様に落ち込みを見せた。日本の通勤手段は都市部は電車、地方は自家用車と二極化している。
+          </p>
+        </div>      
+      </div>
+      <div class="g-block-2">
+        <div class="block4">
+          <canvas id="AppleMobility"></canvas>
+        </div>
+      </div>
+    </div> 
+  </div>
 
 
 
+  <div class="box box5">
+    <div class="outer" id="section01">
+      <div class="g-block-1">
+        <div class="block1">
+              <h1>Touchpoint</h1>
+              <p><img src="image/graph_icon/customer_touchpoint.png" alt="Smiley face" height="70" width="70"></p>
+              <h3>アプリやウェブの利用者が増え、<br>国内配送量が増える。</h3>
+        </div>
+        <div class="block2">
+          <ul class="info">
+          <li class="info_1">想定の方向性</li>
+          </ul>
+              <p>
+              世代に関わらず、インターネットを利用して情報収集を行うようになる。デジタル消費が行動制限で幅広い消費者層に広がり、今後のサービス対象の拡大が見込める。デジタル化可能なものは極限までデジタル化され、リアルであることに効率性のないものは駆逐される。
+              </p>
+        </div>
+        <div class="block2">
+          <ul class="graph">
+            <li class="graph_1">グラフの見方</li>
+            <li class="graph_2">変化率<img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;<span id="samurai1">15.0</span>%</li>
+          </ul>
+          <p>
+          コロナウイルスの影響で飲食店の営業が自粛し、自炊を行う人が増えた。その結果、生活必需品をスーパーマーケットで賄う人が増加した。その一方で出歩く機会が減少し、コンビニエンスストアの販売金額が減少している。
+          </p>
+        </div>      
+      </div>
+      <div class="g-block-2">
+
+        <div class="block4">
+          <form id="target0">
+            <input name="hoge" type="radio" value="a" onchange="func0()" checked> コロナ後
+            <input name="hoge" type="radio" value="b" onchange="func0()"> コロナ前
+          </form>
+          <canvas id="POS2"></canvas>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="box box6">
+    <div class="outer" id="section02">
+      <div class="g-block-1">
+        <div class="block1">
+              <h1>Basket</h1>
+              <p><img src="image/graph_icon/shopping_basket.png" alt="Smiley face" height="70" width="70"></p>
+              <h3>新しい生活習慣に合わせた<br>商品の仕方が増加する。</h3>
+        </div>
+        <div class="block2">
+          <ul class="info">
+          <li class="info_1">想定の方向性</li>
+          </ul>
+              <p>
+              グループ消費からセルフ消費へ、外向き消費から内向き消費へ。家にいる時間を楽しむモノを所有したい消費者ニーズへの対応が必要。感染への危機意識が定着し、安全を意識した商品やヘルスケア商品へのニーズも増加。
+              </p>
+        </div>
+        <div class="block2">
+          <ul class="graph">
+            <li class="graph_1">グラフの見方</li>
+            <li class="graph_2">変化率<img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;<span id="samurai2">2.0</span>%</li>
+          </ul>
+          <p>
+          スーパーマーケットでの購入金額は食料品が増加し、その他の販売場所ではヘルスケア用品の販売が増加している。安全を担保するヘルスケア商品のニーズが増加するとともに、食料を主とした生活必需品の入手経路先に注目する。
+          </p>
+        </div>      
+      </div>
+      <div class="g-block-2">
+
+        <div class="block4">
+          <form id="target1">
+            <input name="hoge" type="radio" value="a" onchange="func1()" checked> コロナ後
+            <input name="hoge" type="radio" value="b" onchange="func1()"> コロナ前
+          </form>
+              <canvas id="POS"></canvas>
+         </div>
+      </div>
+    </div> 
+  </div>
+
+
+
+  <div class="box box7">
+    <div class="outer" id="section03">
+      <div class="g-block-1">
+        <div class="block1">
+              <h1>Work Place</h1>
+              <p><img src="image/graph_icon/work_place.png" alt="Smiley face" height="70" width="70"></p>
+              <h3>住宅地への滞在時間が増加し、<br>職場への滞在時間が減少する。</h3>
+        </div>
+        <div class="block2">
+          <ul class="info">
+          <li class="info_1">想定の方向性</li>
+          </ul>
+              <p>
+              テレワークなどの「就労環境の整備」の面で「働き方改革」が加速、会社にとって最適なデジタルと非デジタルのバランスを探る必要がある。営業回りがなくなる、配送プラットフォームの整備されるなど業務の効率化が進む。
+              </p>
+        </div>
+        <div class="block2">
+          <ul class="graph">
+            <li class="graph_1">グラフの見方</li>
+            <li class="graph_2">変化率<img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;<span id="samurai3">22.2</span>%</li>
+          </ul>
+          <p>
+            緊急事態宣言によるテレワークの推奨をきっかけに、職場に滞在する時間と住宅地に滞在する時間が反比例の関係で変化している。緊急事態宣言解除後も、職場への滞在時間が戻るかどうかはリモートワークが日本企業の働き方として定着するかを測る指標になりうる。
+          </p>
+        </div>      
+      </div>
+      <div class="g-block-2">
+        <div class="block4">
+              <canvas id="myChart"></canvas>
+         </div>
+      </div>
+    </div> 
+  </div>
+
+
+
+
+
+  <div class="box box8">
+    <div class="outer" id="section04">
+      <div class="g-block-1">
+        <div class="block1">
+              <h1>Management</h1>
+              <p><img src="image/graph_icon/management_style.png" alt="Smiley face" height="70" width="70"></p>
+              <h3>在宅からできる仕事が増加し、<br>雇用形態が多角化する。</h3>
+        </div>
+        <div class="block2">
+          <ul class="info">
+          <li class="info_1">想定の方向性</li>
+          </ul>
+              <p>
+              リモートワークの拡大と定着により、プロセス評価から成果主義へと移行が必要となる。また、個々の時間の使い方の自由度向上や経済的不安から、スキルアップへの投資や副業が増加する。
+              </p>
+        </div>
+        <div class="block2">
+          <ul class="graph">
+            <li class="graph_1">グラフの見方</li>
+            <li class="graph_2">変化率<img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;<span id="samurai4">5.4</span>%</li>
+          </ul>
+          <p>
+            コロナウイルスによる経済活動の停滞と働き方の変化から、労働市場の構造が変化することが予想される。特に正規雇用者以外の割合に着目することで、ギグワーカーや個人事業主など新しい労働形態の動向を占う。
+          </p>
+        </div>      
+      </div>
+      <div class="g-block-2">
+
+        <div class="block4">
+          <form id="target2">
+            <input name="hoge" type="radio" value="a" onchange="func2()" checked> コロナ後
+            <input name="hoge" type="radio" value="b" onchange="func2()"> コロナ前
+          </form>
+              <canvas id="EmploymentStatus"></canvas>
+         </div>
+      </div>
+    </div> 
+  </div>
+
+
+
+  <div class="box box9">
+    <div class="outer" id="section05">
+      <div class="g-block-1">
+        <div class="block1">
+              <h1>Social Relation</h1>
+              <p><img src="image/graph_icon/social_relation.png" alt="Smiley face" height="70" width="70"></p>
+              <h3>自由な働き方が増え、<br>住宅地・生活環境が分散される。</h3>
+        </div>
+        <div class="block2">
+          <ul class="info">
+          <li class="info_1">想定の方向性</li>
+          </ul>
+              <p>
+              対面で人と会う機会を減少させるため、多くの交流や購買がオンラインへとシフトする。また、ソーシャルディスタンスが定着し、非接触サービスが増加する。これらの変化は小売りやサービス業をはじめ、運輸や公的機関など幅広い業界・分野のビジネス形態に影響を及ぼす。
+              </p>
+        </div>
+        <div class="block2">
+          <ul class="graph">
+            <li class="graph_1">グラフの見方</li>
+            <li class="graph_2">変化率<img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;<span id="samurai5">10.5</span>%</li>
+          </ul>
+          <p>
+            2020年2~3月に平年以上の移住が確認された。これはコロナウイルスによる移動制限を懸念し、早めの移動が行われた結果だと考えられる。今後の移住人数の増減から移動の増加が一時的なものかを判断する必要がある。加えて、長期的には逆都市化の動きが生まれていくかを注視していく。
+          </p>
+        </div>      
+      </div>
+      <div class="g-block-2">
+
+        <div class="block4">
+          <form id="target3">
+            <input name="hoge" type="radio" value="a" onchange="func3()" checked> コロナ後
+            <input name="hoge" type="radio" value="b" onchange="func3()"> コロナ前
+          </form>
+          <canvas id="MigrantMobility"></canvas>
+         </div>
+      </div>
+    </div> 
+  </div>
+
+
+  <div class="box box10">
+    <div class="outer" id="section06">
+      <div class="g-block-1">
+        <div class="block1">
+              <h1>Sentiment</h1>
+              <p><img src="image/graph_icon/business_sentiment.png" alt="Smiley face" height="70" width="70"></p>
+              <h3>不況の伝播を防ぐため、<br>ポートフォリオの管理が進む。</h3>
+        </div>
+        <div class="block2">
+          <ul class="info">
+          <li class="info_1">想定の方向性</li>
+          </ul>
+              <p>
+                コロナウイルス禍においては、多くの企業の業績、特にリアルとの関わりが深いサービスほど、業績の打撃を受けている。明白になった労働力不足への投資が本格化し、コロナ時代に即しているかどうか（平均social distance/密度、換気力、非接触度、リモート対応度など）の対応が必要になる。
+              </p>
+        </div>
+        <div class="block2">
+          <ul class="graph">
+            <li class="graph_1">グラフの見方</li>
+            <li class="graph_2">変化率<img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;<span id="samurai6">7.5</span>%</li>
+          </ul>
+          <p>
+            コロナウイルスの影響で消費者態度指数の中では事業所得が大きく減少している。事業所得が一番落ち込みを見せている様子はリーマン・ショック後の動きと同様。事業所得の変化していく。
+          </p>
+        </div>      
+      </div>
+      <div class="g-block-2">
+
+        <div class="block4">
+          <form id="target4">
+            <input name="hoge" type="radio" value="a" onchange="func4()" checked> コロナ後
+            <input name="hoge" type="radio" value="b" onchange="func4()"> コロナ前
+          </form>
+              <canvas id="CustomerAttitude"></canvas>
+         </div>
+      </div>
+    </div> 
+  </div>
+
+
+
+ 
+  <div class="box box11">
+    <div class="outer" id="section07">
+      <div class="g-block-1">
+        <div class="block1">
+              <h1>Regulatory</h1>
+              <p><img src="image/graph_icon/regulatory.png" alt="Smiley face" height="70" width="70"></p>
+              <h3>倒産する企業が増加する。<br>企業全体の活動が低減している。</h3>
+        </div>
+        <div class="block2">
+          <ul class="info">
+          <li class="info_1">想定の方向性</li>
+          </ul>
+              <p>
+              新たな非常事態が発生した際にも、社会・経済を守り維持していけるルール作りが急務となる。世界的な不確実性における複雑さとリスクを克服するために、税務と規制への深い理解が必要となる。企業の税務部門は、事業を推進するための十分な情報に基づいたコンプライアンス上の決定を行うため、状況を経済的、政治的、社会的に幅広く考慮することが重要となる。
+              </p>
+        </div>
+        <div class="block2">
+          <ul class="graph">
+            <li class="graph_1">グラフの見方</li>
+            <li class="graph_2">変化率<img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;<span id="samurai7">8.6</span>%</li>
+          </ul>
+          <p>
+            コロナウイルスによる経済活動の自粛を受け、企業が倒産している。負債総額も増加傾向にある。実際に倒産に追い込まれる企業が多くなればなるほど、市場のセーフティネットの役割が機能していないことがわかる。
+          </p>
+        </div>      
+      </div>
+      <div class="g-block-2">
+
+        <div class="block4">
+          <form id="target5">
+            <input name="hoge" type="radio" value="a" onchange="func5()" checked> コロナ後
+            <input name="hoge" type="radio" value="b" onchange="func5()"> コロナ前
+          </form>
+          <canvas id="Bankruptcy"></canvas>
+         </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="box box12">
+    <div class="outer" id="section08">
+      <div class="g-block-1">
+         <div class="block1">
+              <h1>Supply Chain</h1>
+              <p><img src="image/graph_icon/supply_chain.png" alt="Smiley face" height="70" width="70"></p>
+              <h3>事業所や販路が再構築されるなかで、<br>デジタル化がさらに進む。</h3>
+        </div>
+        <div class="block2">
+          <ul class="info">
+          <li class="info_1">想定の方向性</li>
+          </ul>
+              <p>
+              新たな非常事態が発生した際にも、社会・経済を守り維持していけるルール作りが急務となる。世界的な不確実性における複雑さとリスクを克服するために、税務と規制への深い理解が必要となる。企業の税務部門は、事業を推進するための十分な情報に基づいたコンプライアンス上の決定を行うため、状況を経済的、政治的、社会的に幅広く考慮することが重要となる。
+              </p>
+        </div>
+        <div class="block2">
+          <ul class="graph">
+            <li class="graph_1">グラフの見方</li>
+            <li class="graph_2">変化率<img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;<span id="samurai8">9.3</span>%</li>
+          </ul>
+          <p>
+            建設業活動指数、鉱工業生産指数、第３次産業活動指数からなる部門別粗付加価値額の構成比から日本全体の生産活動状況を供給面から把握する。建設業はオリンピック特需が終了し活動指数が大幅に減少した。第３次産業の活動指数から旅行業等のサービス業の動きが変化する。
+          </p>
+        </div>      
+      </div>
+      <div class="g-block-2">
+
+        <div class="block4">
+          <form id="target6">
+            <input name="hoge" type="radio" value="a" onchange="func6()" checked> コロナ後
+            <input name="hoge" type="radio" value="b" onchange="func6()"> コロナ前
+          </form>      
+              <canvas id="Industry"></canvas>
+         </div>
+      </div>
+    </div> 
+  </div>
+
+
+
+
+  <div class="box box13">
+    <h1>Source</h1>
+    <ul>
+      <li>統計名: 労働力調査 基本集計 全都道府県 全国 月次&nbsp;&nbsp;&nbsp;
+      <a href="https://www.e-stat.go.jp/dbview?sid=0003074681">https://www.e-stat.go.jp/dbview?sid=0003074681</a></li>
+
+      <li>統計名: 労働力調査 基本集計 全都道府県 全国 月次&nbsp;&nbsp;&nbsp;
+      <a href="https://www.e-stat.go.jp/dbview?sid=0003074681">https://www.e-stat.go.jp/dbview?sid=0003074681</a></li>
+
+      <li>統計名: 労働力調査 基本集計 全都道府県 全国 月次&nbsp;&nbsp;&nbsp;
+      <a href="https://www.e-stat.go.jp/dbview?sid=0003074681">https://www.e-stat.go.jp/dbview?sid=0003074681</a></li>
+
+      <li>統計名: 労働力調査 基本集計 全都道府県 全国 月次&nbsp;&nbsp;&nbsp;
+      <a href="https://www.e-stat.go.jp/dbview?sid=0003074681">https://www.e-stat.go.jp/dbview?sid=0003074681</a></li>
+
+      <li>統計名: 労働力調査 基本集計 全都道府県 全国 月次&nbsp;&nbsp;&nbsp;
+      <a href="https://www.e-stat.go.jp/dbview?sid=0003074681">https://www.e-stat.go.jp/dbview?sid=0003074681</a></li>
+
+      <li>統計名: 労働力調査 基本集計 全都道府県 全国 月次&nbsp;&nbsp;&nbsp;
+      <a href="https://www.e-stat.go.jp/dbview?sid=0003074681">https://www.e-stat.go.jp/dbview?sid=0003074681</a></li>
+
+      <li>統計名: 労働力調査 基本集計 全都道府県 全国 月次&nbsp;&nbsp;&nbsp;
+      <a href="https://www.e-stat.go.jp/dbview?sid=0003074681">https://www.e-stat.go.jp/dbview?sid=0003074681</a></li>
+
+      <li>統計名: 労働力調査 基本集計 全都道府県 全国 月次&nbsp;&nbsp;&nbsp;
+      <a href="https://www.e-stat.go.jp/dbview?sid=0003074681">https://www.e-stat.go.jp/dbview?sid=0003074681</a></li>
+
+      <li>統計名: 労働力調査 基本集計 全都道府県 全国 月次&nbsp;&nbsp;&nbsp;
+      <a href="https://www.e-stat.go.jp/dbview?sid=0003074681">https://www.e-stat.go.jp/dbview?sid=0003074681</a></li>
+           
+  </div>
+
+<!--
+  <div class="box box14">  
+    <div class="outer" id="section08">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70"></p>
+              <p>輸出量</p>
+            </div>
+            <div class="block2">
+              <p>
+              最近の輸出入動向について年分別に、「輸出入額及び差引額の推移」、「地域別輸出入額の推移」、「貿易相手先国上位１０カ国の推移」、「対世界主要輸出入品の推移」、「主要輸出入品の推移」について提供しています。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="Export"></canvas>
+            </div>
         </div>
     </div>
+  </div>
 
+  <div class="box box15">  
+    <div class="outer" id="section08">
+      <div class="g-block-1">
+        <div class="block25">
+            <div>
+              <p style="">変化率</p>
+              <h2 style=""><img src="image/-_b.png" alt="Smiley face" height="15" width="15">&nbsp;35%</h2>
+            </div>
+            </div>
+            <div class="block1">
+              <p><img src="image/icon_supplychain.png" alt="Smiley face" height="70" width="70"></p>
+              <p>GDP</p>
+            </div>
+            <div class="block2">
+              <p>
+              最近の輸出入動向について年分別に、「輸出入額及び差引額の推移」、「地域別輸出入額の推移」、「貿易相手先国上位１０カ国の推移」、「対世界主要輸出入品の推移」、「主要輸出入品の推移」について提供しています。
+              </p>
+            </div>
+        </div>
+        <div class="g-block-2">
+            <div class="block3">
+              <p>2020年1~2月基準の移動量</p>
+            </div>
+            <div class="block4">
+              <canvas id="Export"></canvas>
+            </div>
+        </div>
+    </div>
+  </div--> 
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="script.js"></script>
+    <div class="footer"><p>Powered by PwC Experience Center Tokyo</p></div>
+
+  </div><!--box-->
+
+  
+  </div>
+
+  <script type="text/javascript" src="chart/timeseries.js"></script>
+  <script type="text/javascript" src="chart/AppleMobility.js"></script>
+  <script type="text/javascript" src="chart/MigrantMobility.js"></script>
+  <script type="text/javascript" src="chart/Bankruptcy.js"></script>
+  <script type="text/javascript" src="chart/POS.js"></script>
+  <script type="text/javascript" src="chart/Industry.js"></script>
+  <script type="text/javascript" src="chart/EmploymentStatus.js"></script>
+  <script type="text/javascript" src="chart/POS2.js"></script>
+  <script type="text/javascript" src="chart/CustomerAttitude.js"></script>
+
+  
 </body>
-
 </html>
