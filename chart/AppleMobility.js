@@ -100,6 +100,7 @@ function main2() {
 }
 
 function mobility(){
+  mobility = 50;
   return mobility;
 }
 
