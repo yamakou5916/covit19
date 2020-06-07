@@ -1,4 +1,5 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
+var posshop = 0;
 
 // 2) CSVから２次元配列に変換
 function csv2Array20(str, a) {
@@ -32,6 +33,7 @@ function drawBarChart20(data) {
   };
   var demo = document.getElementById("samurai1");
   demo.innerHTML = (data[row][1]-100).toFixed(1);
+  posshop = data[row][1]-100;
 
   // 20)chart.jsで描画
   var ctx20 = document.getElementById("POS2").getContext("2d");
@@ -124,6 +126,10 @@ function func0() {
     //console.log( a ) ;
     main20(a)
   }
+}
+
+function data1(){
+  return posshop;
 }
 
 var element = document.getElementById( "target0" ) ;
