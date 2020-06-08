@@ -208,7 +208,7 @@ function draw(){
     text(bigText[i], cwidth[i], cheight[i]);
     textSize(24);
     textAlign(CENTER,CENTER);
-    text(showNum[i].toFixed(1), cwidth[i], cheight[i]+30);
+    text(showNum[i], cwidth[i], cheight[i]+30);
     textStyle(NORMAL);
   }
 
