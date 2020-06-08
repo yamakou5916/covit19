@@ -400,13 +400,19 @@ function draw(){
     }else if(dist(mouseX,mouseY,cwidth[8],cheight[8]) < rSize0[8]/4){
       ellipse(cwidth[8],cheight[8], rSize0[8]/2, rSize0[8]/2);
       fill(255);
+      noStroke();
       textnum = 8;
-      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
-      text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
-      text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
+      imageMode(CENTER);
+      images0 = allImages[textnum];
+      image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[textnum], cwidth[textnum], cheight[textnum]);
+      textSize(24);
+      textAlign(CENTER,CENTER);
+      text(showNum[textnum], cwidth[textnum], cheight[textnum]+30);
+      textStyle(NORMAL);
     }
 
 }
