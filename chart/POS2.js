@@ -24,6 +24,8 @@ function csv2Array20(str, a) {
     ++k;
   }
   posshop = (((beforeafter[12][1]/beforeafter[0][1])-1)*100).toFixed(1);
+  var demo = document.getElementById("samurai1");
+  demo.innerHTML = (((beforeafter[12][1]/beforeafter[0][1])-1)*100).toFixed(1);
   return csvData20;
 }
 
@@ -38,8 +40,6 @@ function drawBarChart20(data) {
     tmpData420.push(data[row][4])
     tmpData520.push(data[row][5])
   };
-  var demo = document.getElementById("samurai1");
-  demo.innerHTML = (data[row][1]-100).toFixed(1);
 
   // 20)chart.jsで描画
   var ctx20 = document.getElementById("POS2").getContext("2d");

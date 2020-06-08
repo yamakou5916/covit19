@@ -24,6 +24,8 @@ function csv2Array11(str,a) {
     ++k;
   }
   sentiment = (((beforeafter[12][1]/beforeafter[0][1])-1)*100).toFixed(1);
+  var demo = document.getElementById("samurai6");
+  demo.innerHTML = (((beforeafter[12][1]/beforeafter[0][1])-1)*100).toFixed(1);
   return csvData11;
 }
 
@@ -36,10 +38,7 @@ function drawBarChart11(data) {
     tmpData211.push(data[row][2])
     tmpData311.push(data[row][3])
     tmpData411.push(data[row][4])
-
   };
-  var demo = document.getElementById("samurai6");
-  demo.innerHTML = (data[row][2]-50).toFixed(1);
 
   // 11)chart.jsで描画
   var ctx11 = document.getElementById("CustomerAttitude").getContext("2d");
