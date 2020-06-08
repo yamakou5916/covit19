@@ -61,7 +61,7 @@ function drawBarChart20(data) {
       title: {
         display: true,
         fontSize: 16,
-        text: "レーダーグラフのサンプル（データセット個)",
+        text: "販売経路別金額指数",
         fontColor: "white", // 文字の色
         //position: 'left',
       },
