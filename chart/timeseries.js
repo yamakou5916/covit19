@@ -107,7 +107,7 @@ function main() {
   req.send(null);
 }
 
-function data3(){
+function ratedata3(){
   return workplace;
 }
 
