@@ -99,7 +99,7 @@ function main2() {
   req2.send(null);
 }
 
-function data0(){
+function ratedata0(){
   return mobility;
 }
 

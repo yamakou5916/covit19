@@ -127,7 +127,7 @@ function func2() {
   }
 }
 
-function data4(){
+function ratedata4(){
   return employrate;
 }
 

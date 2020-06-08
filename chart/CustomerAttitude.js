@@ -126,7 +126,7 @@ function func4() {
   }
 }
 
-function data6(){
+function ratedata6(){
   return sentiment;
 }
 

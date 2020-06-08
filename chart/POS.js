@@ -130,7 +130,7 @@ function func1() {
   }
 }
 
-function data2(){
+function ratedata2(){
   return posproduct;
 }
 
