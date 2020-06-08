@@ -1,5 +1,6 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 var sentiment = 0;
+var beforeafter = [0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 // 2) CSVから２次元配列に変換
 function csv2Array11(str,a) {
@@ -17,6 +18,12 @@ function csv2Array11(str,a) {
     var cells11 = lines11[i].split(",");
     csvData11.push(cells11);
   }
+  var k=0;
+  for (var j = lines11.length-13; j < lines11.length; ++j) {
+    beforeafter[k] = lines11[j].split(",");
+    ++k;
+  }
+  sentiment = (((beforeafter[0][1]/beforeafter[12][1])-1)*100).toFixed(1);
   return csvData11;
 }
 
@@ -33,7 +40,6 @@ function drawBarChart11(data) {
   };
   var demo = document.getElementById("samurai6");
   demo.innerHTML = (data[row][2]-50).toFixed(1);
-  sentiment = (data[row][2]-50).toFixed(1);
 
   // 11)chart.jsで描画
   var ctx11 = document.getElementById("CustomerAttitude").getContext("2d");
@@ -132,7 +138,7 @@ function ratedata6(){
 
 var element = document.getElementById( "target4" ) ;
 var radioNodeList = element.hoge ;
-radioNodeList[1].checked = true ;
+radioNodeList[0].checked = true ;
 func4();
 
 $('#mychart').css('height','100%');
