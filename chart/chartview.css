@@ -34,7 +34,7 @@ pre {
 .block2 p {color:#fff; font-size: 12px;}
 .block1 p {color:#fff; font-size: 16px;}
 
-@media screen and (min-width:801px){
+@media screen and (min-width:300px){
     .outer {
     	margin: 0 auto;
     	max-width: 100%;
@@ -59,7 +59,7 @@ pre {
 }
 
 
-@media screen and (max-width:800px){
+@media screen and (min-width:800px){
     .outer {
         margin: 0 auto;
         max-width: 100%;
