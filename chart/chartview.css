@@ -1,11 +1,3 @@
-@media screen and (max-width:480px){
-  /*画面幅が480pxまでの時*/
-}
-
-@media screen and (min-width:781px){
-  /*画面幅が781px以上の時*/
-}
-
 #chart .c3-line-data1 {
   stroke-width: 2px;
 }
@@ -14,7 +6,7 @@
 }
 
 pre {
-    margin:0;
+    margin:0; 
     padding:0; 
     color:#fff;
     font-family: 'Noto Sans JP', sans-serif;
@@ -48,7 +40,30 @@ pre {
 	max-width: 100%;
     padding: auto;
     max-height: 100%;
-	/*display: flex;*/
+	display: flex;
+}
+
+@media screen and (min-width:800px){
+    .outer {
+        margin: 0 auto;
+        max-width: 100%;
+        padding: auto;
+        max-height: 100%;
+        /*display: flex;*/
+    }
+    .g-block-1 {
+        /*width: 30%;*/
+        height: 100%;
+        /*max-width: 30%;*/ 
+        min-width: 300px; 
+        float: left;
+        margin-top: auto;
+        margin-right: 10px;
+        margin-bottom: auto;
+        margin-left: 50px;
+        padding: 50px;
+        flex: 1;
+    }
 }
 
 .block1 {
@@ -168,6 +183,8 @@ li.info_1 {
     padding: 50px;
     flex: 1;
 }
+
+
 
 .g-block-2 {
     width: 100%;
