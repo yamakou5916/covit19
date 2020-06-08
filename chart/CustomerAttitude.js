@@ -23,7 +23,7 @@ function csv2Array11(str,a) {
     beforeafter[k] = lines11[j].split(",");
     ++k;
   }
-  sentiment = (((beforeafter[0][1]/beforeafter[12][1])-1)*100).toFixed(1);
+  sentiment = (((beforeafter[12][1]/beforeafter[0][1])-1)*100).toFixed(1);
   return csvData11;
 }
 

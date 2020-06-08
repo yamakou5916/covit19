@@ -23,8 +23,7 @@ function csv2Array12(str,a) {
     beforeafter[k] = lines12[j].split(",");
     ++k;
   }
-  employrate = (((beforeafter[0][5]/beforeafter[12][5])-1)*100).toFixed(1);
-  //employrate = 10;
+  employrate = (((beforeafter[12][5]/beforeafter[0][5])-1)*100).toFixed(1);
   return csvData12;
 }
 
