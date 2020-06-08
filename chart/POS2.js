@@ -1,5 +1,6 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 var posshop = 0;
+var beforeafter = [0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 // 2) CSVから２次元配列に変換
 function csv2Array20(str, a) {
