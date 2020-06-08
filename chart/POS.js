@@ -17,6 +17,12 @@ function csv2Array7(str,a) {
     var cells7 = lines7[i].split(",");
     csvData7.push(cells7);
   }
+  var k=0;
+  for (var j = lines7.length-13; j < lines7.length; ++j) {
+    beforeafter[k] = lines7[j].split(",");
+    ++k;
+  }
+  posproduct = (((beforeafter[12][1]/beforeafter[0][1])-1)*100).toFixed(1);
   return csvData7;
 }
 
@@ -35,7 +41,6 @@ function drawBarChart7(data) {
   };
   var demo = document.getElementById("samurai2");
   demo.innerHTML = (data[row][5]-100).toFixed(1);
-  posproduct = (data[row][5]-100).toFixed(1);
 
   // 7)chart.jsで描画
   var ctx7 = document.getElementById("POS").getContext("2d");

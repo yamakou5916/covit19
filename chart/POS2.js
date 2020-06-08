@@ -17,6 +17,12 @@ function csv2Array20(str, a) {
     var cells20 = lines20[i].split(",");
     csvData20.push(cells20);
   }
+  var k=0;
+  for (var j = lines20.length-13; j < lines20.length; ++j) {
+    beforeafter[k] = lines20[j].split(",");
+    ++k;
+  }
+  posshop = (((beforeafter[12][1]/beforeafter[0][1])-1)*100).toFixed(1);
   return csvData20;
 }
 
@@ -33,7 +39,6 @@ function drawBarChart20(data) {
   };
   var demo = document.getElementById("samurai1");
   demo.innerHTML = (data[row][1]-100).toFixed(1);
-  posshop = (data[row][1]-100).toFixed(1);
 
   // 20)chart.jsで描画
   var ctx20 = document.getElementById("POS2").getContext("2d");
