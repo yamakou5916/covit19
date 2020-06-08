@@ -1,5 +1,6 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 var posproduct = 0;
+var beforeafter = [0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 // 2) CSVから２次元配列に変換
 function csv2Array7(str,a) {
@@ -22,7 +23,10 @@ function csv2Array7(str,a) {
     beforeafter[k] = lines7[j].split(",");
     ++k;
   }
-  posproduct = (((beforeafter[12][1]/beforeafter[0][1])-1)*100).toFixed(1);
+  posproduct = (((beforeafter[12][2]/beforeafter[0][2])-1)*100).toFixed(1);
+  var demo = document.getElementById("samurai2");
+  demo.innerHTML = (((beforeafter[12][2]/beforeafter[0][2])-1)*100).toFixed(1);
+  //demo.innerHTML = (data[row][5]-100).toFixed(1);
   return csvData7;
 }
 
@@ -39,9 +43,7 @@ function drawBarChart7(data) {
     tmpData67.push(data[row][6])
 
   };
-  var demo = document.getElementById("samurai2");
-  demo.innerHTML = (data[row][5]-100).toFixed(1);
-
+  
   // 7)chart.jsで描画
   var ctx7 = document.getElementById("POS").getContext("2d");
   var POS = new Chart(ctx7, {
