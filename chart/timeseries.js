@@ -1,5 +1,29 @@
-var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
-var workplace = 0;
+/*
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+// The type of chart we want to create
+type: 'line',
+// The data for our dataset
+data: {
+	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+	datasets: [{
+		label: 'My First dataset',
+		//backgroundColor: 'rgb(255, 99, 132)',
+		borderColor: 'rgb(255, 99, 132)',
+		data: [0, 10, 5, 2, 20, 30, 45]
+	},{
+		label: 'My Second dataset',
+		//backgroundColor: 'rgb(255, 99, 132)',
+		borderColor: 'rgb(255, 99, 132)',
+		data: [2, 9, 14, 12, 10, 20, 35]
+	}]
+},
+// Configuration options go here
+options: {}
+});
+*/
+
+var colors = ["#1BA0C3","#1BB4C3","#1BC3BD","#1BC3A9","#1BC380","#1BC36C"];
 
 
 // 2) CSVから２次元配列に変換
@@ -25,9 +49,6 @@ function drawBarChart(data) {
     tmpData5.push(data[row][5])
     tmpData6.push(data[row][6])
   };
-  var demo = document.getElementById("samurai3");
-  demo.innerHTML = data[row][5];
-  workplace = data[row][5];
 
   // 4)chart.jsで描画
   var ctx = document.getElementById("myChart").getContext("2d");
@@ -38,25 +59,16 @@ function drawBarChart(data) {
       labelTextColor : '#ffffff',
       labelColor : '#ffffff',
       datasets: [
-        { label: "小売店と娯楽施設", data: tmpData1, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "食料品店と薬局", data: tmpData2, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "公園", data: tmpData3, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "公共交通機関", data: tmpData4, borderColor: colors[3], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "職場", data: tmpData5, borderColor: colors[4], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
-        { label: "住居", data: tmpData6, borderColor: colors[5], borderWidth: 1, pointRadius: 0, backgroundColor: "rgba(255,255,255,0)"},
+        { label: "小売店と娯楽施設", data: tmpData1, borderColor: colors[0], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "食料品店と薬局", data: tmpData2, borderColor: colors[1], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "公園", data: tmpData3, borderColor: colors[2], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "公共交通機関", data: tmpData4, borderColor: colors[3], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
+        { label: "職場", data: tmpData5, borderColor: colors[4], borderWidth: 1, pointRadius: 0,/* backgroundColor: "red" */},
+        { label: "住居", data: tmpData6, borderColor: colors[5], borderWidth: 1, pointRadius: 0,/* backgroundColor: "blue" */},
       ]
     },
 
     options: {
-      title: {
-        display: true,
-        fontSize: 16,
-        text: "場所カテゴリ別の滞在時間",
-        fontColor: "white", // 文字の色
-        //position: 'left',
-      },
-      responsive: true,
-      maintainAspectRatio: false,
     	scales: {
     		xAxes: [{
     			position: 'bottom',
@@ -82,7 +94,6 @@ function drawBarChart(data) {
     		display: true,
     		//position: 'top',
     		labels: {
-          fontColor: "white",
     			fontSize: 10,
     			boxWidth: 10,
     		}
@@ -107,13 +118,7 @@ function main() {
   req.send(null);
 }
 
-function ratedata3(){
-  return workplace;
-}
-
 main();
-
-
 
 
 
