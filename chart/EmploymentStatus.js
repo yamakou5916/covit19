@@ -17,6 +17,7 @@ function csv2Array12(str,a) {
     var cells12 = lines12[i].split(",");
     csvData12.push(cells12);
   }
+  employrate = ((lines12[0]/lines12[13]-1)*100).toFixed(1);
   return csvData12;
 }
 
@@ -33,7 +34,7 @@ function drawBarChart12(data) {
   };
   var demo = document.getElementById("samurai4");
   demo.innerHTML = (data[row][2]-50).toFixed(1);
-  employrate = (data[row][2]-50).toFixed(1);
+  //employrate = (data[row][2]-50).toFixed(1);
 
   // 12)chart.jsで描画
   var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
