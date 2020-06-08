@@ -34,16 +34,32 @@ pre {
 .block2 p {color:#fff; font-size: 12px;}
 .block1 p {color:#fff; font-size: 16px;}
 
+@media screen and (min-width:801px){
+    .outer {
+    	margin: 0 auto;
+    	max-width: 100%;
+        padding: auto;
+        max-height: 100%;
+    	display: flex;
+    }
 
-.outer {
-	margin: 0 auto;
-	max-width: 100%;
-    padding: auto;
-    max-height: 100%;
-	display: flex;
+    .g-block-1 {
+        width: 30%;
+        height: 100%;
+        max-width: 30%; 
+        min-width: 300px; 
+        float: left;
+        margin-top: auto;
+        margin-right: 10px;
+        margin-bottom: auto;
+        margin-left: 50px;
+        padding: 50px;
+        flex: 1;
+    }
 }
 
-@media screen and (min-width:800px){
+
+@media screen and (max-width:800px){
     .outer {
         margin: 0 auto;
         max-width: 100%;
@@ -169,21 +185,6 @@ li.info_1 {
     padding: 0;
     background-color: yellow;
 }
-
-.g-block-1 {
-	width: 30%;
-    height: 100%;
-    max-width: 30%; 
-    min-width: 300px; 
-    float: left;
-    margin-top: auto;
-    margin-right: 10px;
-    margin-bottom: auto;
-    margin-left: 50px;
-    padding: 50px;
-    flex: 1;
-}
-
 
 
 .g-block-2 {
