@@ -24,6 +24,9 @@ function csv2Array12(str,a) {
     ++k;
   }
   employrate = (((beforeafter[12][5]/beforeafter[0][5])-1)*100).toFixed(1);
+  var demo = document.getElementById("samurai4");
+  demo.innerHTML = (((beforeafter[12][5]/beforeafter[0][5])-1)*100).toFixed(1);
+  //employrate = (data[row][2]-50).toFixed(1);
   return csvData12;
 }
 
@@ -38,9 +41,6 @@ function drawBarChart12(data) {
     tmpData12[4].push(data[row][4])
     tmpData12[5].push(data[row][5]-data[row][4])
   };
-  var demo = document.getElementById("samurai4");
-  demo.innerHTML = (data[row][2]-50).toFixed(1);
-  //employrate = (data[row][2]-50).toFixed(1);
 
   // 12)chart.jsで描画
   var ctx12 = document.getElementById("EmploymentStatus").getContext("2d");
