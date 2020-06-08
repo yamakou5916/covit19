@@ -191,14 +191,14 @@ function draw(){
 
     if (changeRate[i]<0) {
       if(Math.abs(changeRate[i]) >= framCnt * 0.1){
-        showNum[i] = framCnt * 0.1;
+        showNum[i] = (framCnt * 0.1).toFixed(1);
         cheight[i] = cheight[i] + 1;
       }else{
         showNum[i] = changeRate[i];
       }
     }else{
       if(Math.abs(changeRate[i]) >= framCnt * 0.1){
-        showNum[i] = framCnt * 0.1;
+        showNum[i] = (framCnt * 0.1).toFixed(1);
         cheight[i] = cheight[i] - 1;
       }else{
         showNum[i] = changeRate[i];
