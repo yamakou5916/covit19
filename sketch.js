@@ -189,11 +189,20 @@ function draw(){
       textnum = 1;
     }*/
 
-    if(Math.abs(changeRate[i]) >= framCnt * 0.1){
-      showNum[i] = framCnt * 0.1;
-      cheight[i] = cheight[i] + 1;
+    if (changeRate[i]<0) {
+      if(Math.abs(changeRate[i]) >= framCnt * 0.1){
+        showNum[i] = framCnt * 0.1;
+        cheight[i] = cheight[i] + 1;
+      }else{
+        showNum[i] = changeRate[i];
+      }
     }else{
-      showNum[i] = changeRate[i];
+      if(Math.abs(changeRate[i]) >= framCnt * 0.1){
+        showNum[i] = framCnt * 0.1;
+        cheight[i] = cheight[i] - 1;
+      }else{
+        showNum[i] = changeRate[i];
+      }
     }
 
     littleCircle(i);
