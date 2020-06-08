@@ -113,7 +113,6 @@ function data3(){
 
 main();
 
-$('#mychart').css('height','100%');
 
 
 
