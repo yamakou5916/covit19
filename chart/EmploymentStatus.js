@@ -17,7 +17,10 @@ function csv2Array12(str,a) {
     var cells12 = lines12[i].split(",");
     csvData12.push(cells12);
   }
-  employrate = ((lines12[0]/lines12[13]-1)*100).toFixed(1);
+  for (var i = lines12.length-13; i < lines12.length; ++i) {
+    var beforeafter[i] = lines12[i].split(",");
+  }
+  employrate = ((beforeafter[0]/beforeafter[13]-1)*100).toFixed(1);
   return csvData12;
 }
 
