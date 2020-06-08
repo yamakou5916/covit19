@@ -125,7 +125,7 @@ function func6() {
 
 var element = document.getElementById( "target6" ) ;
 var radioNodeList = element.hoge ;
-radioNodeList[1].checked = true ;
+radioNodeList[0].checked = true ;
 func6();
 
 
