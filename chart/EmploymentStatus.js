@@ -1,5 +1,6 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF",];
 var employrate = 0;
+var beforeafter = []
 
 // 2) CSVから２次元配列に変換
 function csv2Array12(str,a) {
@@ -18,7 +19,7 @@ function csv2Array12(str,a) {
     csvData12.push(cells12);
   }
   for (var j = lines12.length-13; j < lines12.length; ++j) {
-    var beforeafter[j] = lines12[j].split(",");
+    beforeafter[j] = lines12[j].split(",");
   }
   employrate = ((beforeafter[0]/beforeafter[13]-1)*100).toFixed(1);
   return csvData12;
