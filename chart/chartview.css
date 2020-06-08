@@ -43,6 +43,29 @@ pre {
 	display: flex;
 }
 
+@media screen and (min-width:600px){
+    .outer {
+        margin: 0 auto;
+        max-width: 100%;
+        padding: auto;
+        max-height: 100%;
+        /*display: flex;*/
+    }
+    .g-block-1 {
+        width: 30%;
+        height: 100%;
+        max-width: 30%; 
+        min-width: 300px; 
+        float: left;
+        margin-top: auto;
+        margin-right: 10px;
+        margin-bottom: auto;
+        margin-left: 50px;
+        padding: 50px;
+        flex: 1;
+    }
+}
+
 .block1 {
 	width: 100%; 
 	height: 100%; 
@@ -160,6 +183,8 @@ li.info_1 {
     padding: 50px;
     flex: 1;
 }
+
+
 
 .g-block-2 {
     width: 100%;
