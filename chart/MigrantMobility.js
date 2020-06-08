@@ -129,7 +129,7 @@ function ratedata5(){
 
 var element = document.getElementById( "target3" ) ;
 var radioNodeList = element.hoge ;
-radioNodeList[1].checked = true ;
+radioNodeList[0].checked = true ;
 func3();
 
 

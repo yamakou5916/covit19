@@ -133,7 +133,7 @@ function ratedata4(){
 
 var element = document.getElementById( "target2" );
 var radioNodeList = element.hoge;
-radioNodeList[1].checked = true;
+radioNodeList[0].checked = true;
 func2();
 
 $('#mychart').css('height','100%');
