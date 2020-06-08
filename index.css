@@ -21,6 +21,17 @@
     width: 100%;
 }
 
+.sk {
+    width: 100%;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    position:absolute;
+    right:0;
+    bottom:20px;
+}
+
+
 .top {
     background-image: url('intro.gif');
     /* 画像を常に天地左右の中央に配置 */
