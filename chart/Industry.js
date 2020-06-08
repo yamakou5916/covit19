@@ -26,7 +26,7 @@ function csv2Array10(str,a) {
   }
   threeindex = (((beforeafter[12][2]/beforeafter[0][2])-1)*100).toFixed(1);
   var demo = document.getElementById("samurai8");
-  demo.innerHTML = (data[row][4]-100).toFixed(1);;
+  demo.innerHTML = (((beforeafter[12][2]/beforeafter[0][2])-1)*100).toFixed(1);
   return csvData10;
 }
 
