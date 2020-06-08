@@ -23,7 +23,7 @@ function csv2Array3(str,a) {
     beforeafter[k] = lines3[j].split(",");
     ++k;
   }
-  migration = (((beforeafter[0][5]/beforeafter[12][5])-1)*100).toFixed(1);
+  migration = (((beforeafter[0][2]/beforeafter[12][2])-1)*100).toFixed(1);
   return csvData3;
 }
 
