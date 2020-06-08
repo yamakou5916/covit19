@@ -66,13 +66,13 @@ var framCnt = 0;
 var canvas;
 
 function setup(){
-  changeRate[0] = data0();
-  changeRate[1] = data1();
-  changeRate[2] = data2();
-  changeRate[3] = data3();
-  changeRate[4] = data4();
-  changeRate[5] = data5();
-  changeRate[6] = data6();
+  changeRate[0] = ratedata0();
+  changeRate[1] = ratedata1();
+  changeRate[2] = ratedata2();
+  changeRate[3] = ratedata3();
+  changeRate[4] = ratedata4();
+  changeRate[5] = ratedata5();
+  changeRate[6] = ratedata6();
   pixelDensity(2);
   canvas = createCanvas(2000, 1000);//描画領域を指定
   canvas.parent("P5Canvas");
