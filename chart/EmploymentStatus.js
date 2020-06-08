@@ -23,9 +23,9 @@ function csv2Array12(str,a) {
     beforeafter[k] = lines12[j].split(",");
     ++k;
   }
-  employrate = (((beforeafter[12][5]/beforeafter[0][5])-1)*100).toFixed(1);
+  employrate = (((beforeafter[12][3]/beforeafter[0][3])-1)*100).toFixed(1);
   var demo = document.getElementById("samurai4");
-  demo.innerHTML = (((beforeafter[12][5]/beforeafter[0][5])-1)*100).toFixed(1);
+  demo.innerHTML = (((beforeafter[12][3]/beforeafter[0][3])-1)*100).toFixed(1);
   //employrate = (data[row][2]-50).toFixed(1);
   return csvData12;
 }
