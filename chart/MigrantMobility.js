@@ -1,5 +1,6 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF"];
 var migration = 0;
+var beforeafter = [0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 // 2) CSVから２次元配列に変換
 function csv2Array3(str,a) {
@@ -17,6 +18,12 @@ function csv2Array3(str,a) {
     var cells3 = lines3[i].split(",");
     csvData3.push(cells3);
   }
+  var k=0;
+  for (var j = lines3.length-13; j < lines3.length; ++j) {
+    beforeafter[k] = lines3[j].split(",");
+    ++k;
+  }
+  migration = (((beforeafter[0][5]/beforeafter[12][5])-1)*100).toFixed(1);
   return csvData3;
 }
 
