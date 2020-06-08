@@ -68,8 +68,8 @@ var canvas;
 function setup(){
   changeRate[0] = data0();
   changeRate[1] = data1();
-  /*changeRate[2] = data2();
-  changeRate[3] = data3();
+  changeRate[2] = data2();
+  /*changeRate[3] = data3();
   changeRate[4] = data4();
   changeRate[5] = data5();
   changeRate[6] = data6();
@@ -85,8 +85,8 @@ function setup(){
   backphoto.push(loadImage("image/4.jpg"));
   backphoto.push(loadImage("image/5.jpg"));
   backphoto.push(loadImage("image/6.jpg"));
-  //backphoto.push(loadImage("image/7.jpg"));
-  //backphoto.push(loadImage("image/8.jpg"));
+  backphoto.push(loadImage("image/7.jpg"));
+  backphoto.push(loadImage("image/8.jpg"));
 
   //randomSave();
   noiseSet();
