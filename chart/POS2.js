@@ -128,7 +128,7 @@ function func0() {
   }
 }
 
-function data1(){
+function ratedata1(){
   return posshop;
 }
 
