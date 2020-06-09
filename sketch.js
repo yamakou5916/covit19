@@ -1,7 +1,5 @@
 const cwidth=[200,400,600,800,1000,1200,1400,1600,1800,];
 var cheight=[500,500,500,500,500,500,500,500,500,];
-//const cwidth=[850,900,700,750,300,400,1150,1500,1550,1250,1300];
-//const cheight=[300,150,350,750,500,800,300,250,600,850,600];
 const dwidth=[450,600,500,1200,1400,600,1150,1500,1550,1250,1500];
 const dheight=[600,400,150,350,700,800,300,250,600,700,800];
 var rSize =[300,300,300,300,300,300,300,300,300,300,300,300,300,300,300,300,300,300];
@@ -12,6 +10,9 @@ const bigText = ["Living Sphere","Touchpoint","Basket","Work Place","Management"
 const titleText = [25,15,2,22.2,5.4,10.5,7.5,8.6,9.3];
 var showNum = [0,0,0,0,0,0,0,0,0]
 var changeRate = [25,15,2,22.2,5.4,10.5,7.5,8.6,9.3];
+var ratecolor = ["#FF4978","#1BC3A9"];
+var updown =[0,0,0,0,0,0,0,0,0];
+
 const smallText=
 [["歩き", "車", "電車"],
 ["歩き", "車", "電車"],
@@ -189,11 +190,22 @@ function draw(){
       textnum = 1;
     }*/
 
-    if(Math.abs(changeRate[i]) >= framCnt * 0.1){
-      showNum[i] = framCnt * 0.1;
-      cheight[i] = cheight[i] + 1;
+    if (changeRate[i]<0) {
+      updown[i]=0;
+      if(Math.abs(changeRate[i]) >= framCnt * 0.1){
+        showNum[i] = (framCnt * 0.1).toFixed(1);
+        cheight[i] = cheight[i] + 1;
+      }else{
+        showNum[i] = changeRate[i];
+      }
     }else{
-      showNum[i] = changeRate[i];
+      updown[i]=1;
+      if(Math.abs(changeRate[i]) >= framCnt * 0.1){
+        showNum[i] = (framCnt * 0.1).toFixed(1);
+        cheight[i] = cheight[i] - 1;
+      }else{
+        showNum[i] = changeRate[i];
+      }
     }
 
     littleCircle(i);
@@ -212,201 +224,165 @@ function draw(){
     textStyle(NORMAL);
   }
 
-  /*
-  for(var i=0; i<6;i++){
-    fill(0);
-    noStroke();
-    imageMode(CENTER);
-    images1 = catImages[i];
-    image(images1, dwidth[i], dheight[i]-50, 120, 120);
-    textSize(16);
-    textStyle(BOLD);
-    textAlign(CENTER,CENTER);
-    //stext(bigText[i], dwidth[i], dheight[i]);
-    //textSize(10);
-    //textAlign(CENTER,CENTER);
-    //text(titleText[i], cwidth[i], cheight[i]-45);
-    textStyle(NORMAL);
-    }
-
-
-
-  //テクノロジマップ
-  if(showCon1%2 == 0){
-    for (var t=0; t<twidth.length; t++){
-        beginShape();
-        for (var i = 0; i < 450; i += 30) {
-          var peaks = [];
-          var j;
-          if (i % 60 != 0) {
-            j = startRad[t] + ((starStrkWeight + 1));
-          } else {
-            //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
-          }
-          peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
-          peaks.forEach(peak => {
-            peak.x += (noise(xnoiseCords[i % 360 / 30]) * tsize[t]) +twidth[t];
-            peak.y += (noise(ynoiseCords[i % 360 / 30]) * tsize[t]) +theight[t];
-          });
-
-          noFill();
-          //fill(80, 180 + (180 / repnum * h), 100,80);
-
-          peaks.forEach(peak => {
-            stroke(145,193,186);
-            strokeWeight(starStrkWeight);
-            curveVertex(peak.x, peak.y);
-
-            //for(var ii = 0; ii < techText[k].length; ii++){
-            //var currentChar = techText[k].charAt(ii);
-            //push();
-            //translate(peak.x, peak.y); 
-            //rotate(radians(i) + PI/2);
-            //text(currentChar, 0, 0);
-            strokeWeight(1);
-            textSize(10);
-            text(techText[t][k], peak.x, peak.y);
-            //pop();
-            //}
-            
-          });
-          k++;
-        }
-        endShape();
-        noiseUpdate();
-        k = 0;
-      }
-    }
-
-
-  //オファリングマップ
-  if(showCon2%2 == 0){
-    for (var t=0; t<twidth.length; t++){
-        beginShape();
-        for (var i = 0; i < 450; i += 30) {
-          var peaks = [];
-          var j;
-          if (i % 60 != 0) {
-            j = startRad2[t] + ((starStrkWeight + 1));
-          } else {
-            //j = (startRad + ((starStrkWeight + 1) * h)) * .65;
-          }
-          peaks.push(createVector(sin(radians(i)) * j, cos(radians(i)) * j));
-          peaks.forEach(peak => {
-            peak.x += (noise(xnoiseCords[i % 360 / 30]) * psize[t]) +pwidth[t];
-            peak.y += (noise(ynoiseCords[i % 360 / 30]) * psize[t]) +pheight[t];
-          });
-
-          noStroke();
-          fill(145,193,186,80);
-
-          peaks.forEach(peak => {
-            curveVertex(peak.x, peak.y);
-          });
-          k++;
-        }
-        endShape();
-        noiseUpdate();
-        k = 0;
-      }
-    }
-*/
     //fill(145,193,186,80);
-    fill(27, 195, 169);
-    textSize(16);
-    textStyle(BOLD);
-    textAlign(CENTER,CENTER);
+    //fill(ratecolor[updown[textnum]]);
+    //textSize(16);
+    //textStyle(BOLD);
+    //textAlign(CENTER,CENTER);
     if(dist(mouseX,mouseY,cwidth[0],cheight[0]) < rSize0[0]/4){
+      textnum = 0;
+      fill(ratecolor[updown[textnum]]);
       ellipse(cwidth[0],cheight[0], rSize0[0]/2, rSize0[0]/2);
       fill(255);    
-      textnum = 0;
-      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
-      text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
-      text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
+      noStroke();
+      imageMode(CENTER);
+      images0 = allImages[textnum];
+      image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[textnum], cwidth[textnum], cheight[textnum]);
+      textSize(24);
+      textAlign(CENTER,CENTER);
+      text(showNum[textnum], cwidth[textnum], cheight[textnum]+30);
+      textStyle(NORMAL);
   
     }else if(dist(mouseX,mouseY,cwidth[1],cheight[1]) < rSize0[1]/4){
+      textnum = 1;
+      fill(ratecolor[updown[textnum]]);
       ellipse(cwidth[1],cheight[1], rSize0[1]/2, rSize0[1]/2);
       fill(255);
-      textnum = 1;
-      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
-      text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
-      text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);      
+      noStroke();
+      imageMode(CENTER);
+      images0 = allImages[textnum];
+      image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[textnum], cwidth[textnum], cheight[textnum]);
+      textSize(24);
+      textAlign(CENTER,CENTER);
+      text(showNum[textnum], cwidth[textnum], cheight[textnum]+30);
+      textStyle(NORMAL);     
     }else if(dist(mouseX,mouseY,cwidth[2],cheight[2]) < rSize0[2]/4){
+      textnum = 2;
+      fill(ratecolor[updown[textnum]]);
       ellipse(cwidth[2],cheight[2], rSize0[2]/2, rSize0[2]/2);
       fill(255);
-      textnum = 2;
-      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
-      text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
-      text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);      
+      noStroke();
+      imageMode(CENTER);
+      images0 = allImages[textnum];
+      image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[textnum], cwidth[textnum], cheight[textnum]);
+      textSize(24);
+      textAlign(CENTER,CENTER);
+      text(showNum[textnum], cwidth[textnum], cheight[textnum]+30);
+      textStyle(NORMAL);    
     }else if(dist(mouseX,mouseY,cwidth[3],cheight[3]) < rSize0[3]/4){
+      textnum = 3;
+      fill(ratecolor[updown[textnum]]);
       ellipse(cwidth[3],cheight[3], rSize0[3]/2, rSize0[3]/2);
       fill(255);
-      textnum = 3;
-      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
-      text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
-      text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
+      noStroke();
+      imageMode(CENTER);
+      images0 = allImages[textnum];
+      image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[textnum], cwidth[textnum], cheight[textnum]);
+      textSize(24);
+      textAlign(CENTER,CENTER);
+      text(showNum[textnum], cwidth[textnum], cheight[textnum]+30);
+      textStyle(NORMAL);
     }else if(dist(mouseX,mouseY,cwidth[4],cheight[4]) < rSize0[4]/4){
+      textnum = 4;
+      fill(ratecolor[updown[textnum]]);
       ellipse(cwidth[4],cheight[4], rSize0[4]/2, rSize0[4]/2);
       fill(255);
-      textnum = 4;
-      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
-      text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
-      text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
+      noStroke();
+      imageMode(CENTER);
+      images0 = allImages[textnum];
+      image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[textnum], cwidth[textnum], cheight[textnum]);
+      textSize(24);
+      textAlign(CENTER,CENTER);
+      text(showNum[textnum], cwidth[textnum], cheight[textnum]+30);
+      textStyle(NORMAL);
     }else if(dist(mouseX,mouseY,cwidth[5],cheight[5]) < rSize0[5]/4){
+      textnum = 5;
+      fill(ratecolor[updown[textnum]]);
       ellipse(cwidth[5],cheight[5], rSize0[5]/2, rSize0[5]/2);
       fill(255);
-      textnum = 5;
-      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
-      text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
-      text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
+      noStroke();
+      imageMode(CENTER);
+      images0 = allImages[textnum];
+      image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[textnum], cwidth[textnum], cheight[textnum]);
+      textSize(24);
+      textAlign(CENTER,CENTER);
+      text(showNum[textnum], cwidth[textnum], cheight[textnum]+30);
+      textStyle(NORMAL);
     }else if(dist(mouseX,mouseY,cwidth[6],cheight[6]) < rSize0[6]/4){
+      textnum = 6;
+      fill(ratecolor[updown[textnum]]);
       ellipse(cwidth[6],cheight[6], rSize0[6]/2, rSize0[6]/2);
       fill(255);
-      textnum = 6;
-      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
-      text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
-      text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
+      noStroke();
+      imageMode(CENTER);
+      images0 = allImages[textnum];
+      image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[textnum], cwidth[textnum], cheight[textnum]);
+      textSize(24);
+      textAlign(CENTER,CENTER);
+      text(showNum[textnum], cwidth[textnum], cheight[textnum]+30);
+      textStyle(NORMAL);
     }else if(dist(mouseX,mouseY,cwidth[7],cheight[7]) < rSize0[7]/4){
+      textnum = 7;
+      fill(ratecolor[updown[textnum]]);
       ellipse(cwidth[7],cheight[7], rSize0[7]/2, rSize0[7]/2);
       fill(255);
-      textnum = 7;
-      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
-      text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
-      text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
+      noStroke();
+      imageMode(CENTER);
+      images0 = allImages[textnum];
+      image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[textnum], cwidth[textnum], cheight[textnum]);
+      textSize(24);
+      textAlign(CENTER,CENTER);
+      text(showNum[textnum], cwidth[textnum], cheight[textnum]+30);
+      textStyle(NORMAL);
     }else if(dist(mouseX,mouseY,cwidth[8],cheight[8]) < rSize0[8]/4){
+      textnum = 8;
+      fill(ratecolor[updown[textnum]]);
       ellipse(cwidth[8],cheight[8], rSize0[8]/2, rSize0[8]/2);
       fill(255);
-      textnum = 8;
-      text(smallText[textnum][0], cwidth[textnum]-30, cheight[textnum]-30);
-      text(smallText[textnum][1], cwidth[textnum]-30, cheight[textnum]);
-      text(smallText[textnum][2], cwidth[textnum]-30, cheight[textnum]+30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]-30);
-      text(titleText[textnum], cwidth[textnum]+20, cheight[textnum]+30);
+      noStroke();
+      imageMode(CENTER);
+      images0 = allImages[textnum];
+      image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
+      textSize(16);
+      textStyle(BOLD);
+      textAlign(CENTER,CENTER);
+      text(bigText[textnum], cwidth[textnum], cheight[textnum]);
+      textSize(24);
+      textAlign(CENTER,CENTER);
+      text(showNum[textnum], cwidth[textnum], cheight[textnum]+30);
+      textStyle(NORMAL);
     }
 
 }
