@@ -93,7 +93,7 @@ function drawBarChart4(data) {
             fontColor: "white",
             fontSize: 10,
             min: 0,
-            max: 2000000
+            max: 20000000
           },
         }],
       },
