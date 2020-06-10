@@ -99,7 +99,7 @@ pre {
 
 .block1 h3 {
     padding: 20px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     min-width: 100px; 
 }
 
@@ -142,7 +142,8 @@ li.graph_2 {
     background-color: #1BC3A9;
     color: #01011b; 
     border-radius: 10px;    
-    min-width: 100px; 
+    min-width: 100px;
+    margin-bottom: 20px; 
 }
 
 
