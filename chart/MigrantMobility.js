@@ -34,7 +34,7 @@ function drawBarChart3(data) {
     tmpLabels3.push(data[row][0])
     tmpData13.push(data[row][1])
     tmpData23.push(data[row][2])
-    tmpData33.push(data[row][3])
+    tmpData33.push(data[row][3]-data[row][1]-data[row][2])
 
   };
 
