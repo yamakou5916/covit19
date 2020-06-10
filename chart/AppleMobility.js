@@ -25,7 +25,7 @@ function drawBarChart2(data) {
   demo.innerHTML = (data[row][2]-100).toFixed(1);
   mobility = (data[row][2]-100).toFixed(1);
   var target = document.getElementById("section00"); //対象要素をクラスで指定(IE9以上)
-  var tar = target.graph_2;
+  var tar = target.g-block-1.block1.graph.graph_2;
   tar.style.backgroundColor = "red"; /*//colorを設定*/
 
 
