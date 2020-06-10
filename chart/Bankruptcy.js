@@ -71,7 +71,7 @@ function drawBarChart4(data) {
             autoSkip: true,
             maxTicksLimit: 5, //値の最大表示数
             fontColor: "white", // 文字の色
-                    fontSize: 10,
+            fontSize: 10,
           }
         }],
         yAxes: [{
@@ -82,6 +82,8 @@ function drawBarChart4(data) {
           ticks: {
             fontColor: "white",
             fontSize: 10,
+            min: 0,
+            max: 1000
           }
         }, {
           id: "y-axis-2",
@@ -90,6 +92,8 @@ function drawBarChart4(data) {
           ticks: {
             fontColor: "white",
             fontSize: 10,
+            min: 0,
+            max: 2000000
           },
         }],
       },
