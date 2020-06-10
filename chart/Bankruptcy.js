@@ -133,7 +133,7 @@ function func7() {
     // 未選択状態
   } else {
     // aには選択状態の値が代入されている
-    //console.log( a ) ;
+    console.log( a ) ;
     main4(a)
   }
 }
