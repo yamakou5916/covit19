@@ -125,8 +125,8 @@ li.graph_1, .graph_2 {
 }
 */
 li.graph_1 {
-    float: left;
-    width: 50%;
+    /*float: left;
+    width: 50%;*/
     min-width: 100px;
 
     display: inline-block;
