@@ -42,7 +42,7 @@ function drawBarChart2(data) {
       title: {
         display: true,
         fontSize: 16,
-        text: "全国の移動量データ",
+        text: "交通手段別移動量",
         fontColor: "white", // 文字の色
         //position: 'left',
       },
