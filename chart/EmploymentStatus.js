@@ -7,13 +7,13 @@ function csv2Array12(str,a) {
   var csvData12 = [];
   var lines12 = str.split("\n");
   if(a == "a"){
-    var num0 = 12;
-    var num1 = 0;
+    var num120 = 12;
+    var num121 = 0;
   }else{
-    var num0 = 24;
-    var num1 = 12;
+    var num120 = 24;
+    var num121 = 12;
   }
-  for (var i = lines12.length-num0; i < lines12.length-num1; ++i) {
+  for (var i = lines12.length-num120; i < lines12.length-num121; ++i) {
   //for (let i=0;i<12;i++){
     var cells12 = lines12[i].split(",");
     csvData12.push(cells12);
