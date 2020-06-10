@@ -83,7 +83,9 @@ function drawBarChart10(data) {
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             fontColor: "white",
-                    fontSize: 10,
+            fontSize: 10,
+            min: 20,
+            max: 60
           }
         }],
       },
