@@ -121,7 +121,7 @@ function main4(a) {
 
 function func7() {
   // form要素を取得
-  var element = document.getElementById( "target7" ) ;
+  var element = document.getElementById( "target5" ) ;
   // form要素内のラジオボタングループ(name="hoge")を取得
   var radioNodeList = element.hoge ;
   // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
@@ -141,7 +141,7 @@ function ratedata7(){
 }
 
 
-var element = document.getElementById( "target7" ) ;
+var element = document.getElementById( "target5" ) ;
 var radioNodeList = element.hoge ;
 radioNodeList[0].checked = true ;
 func7();
