@@ -109,11 +109,6 @@ function setup(){
   catImages.push(loadImage("image/graph_icon/business_sentiment.png"));
   catImages.push(loadImage("image/graph_icon/regulatory.png"));
   catImages.push(loadImage("image/graph_icon/supply_chain.png"));
-  //catImages.push(loadImage("image/icon_education.png"));
-  //catImages.push(loadImage("image/icon_healthcare.png"));
-  //catImages.push(loadImage("image/icon_lifeevent.png"));
-  //catImages.push(loadImage("image/icon_medical.png"));
-  //catImages.push(loadImage("image/icon_lifeline.png"));
   textnum = 0;
 
 }
