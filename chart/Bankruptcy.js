@@ -83,7 +83,7 @@ function drawBarChart4(data) {
             fontColor: "white",
             fontSize: 10,
             min: 0,
-            max: 1000
+            max: 2000
           }
         }, {
           id: "y-axis-2",
