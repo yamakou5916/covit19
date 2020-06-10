@@ -132,7 +132,7 @@ function func6() {
   }
 }
 
-function ratedata1(){
+function ratedata8(){
   return threeindex;
 }
 
