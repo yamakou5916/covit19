@@ -59,7 +59,7 @@ function drawBarChart10(data) {
       title: {
         display: true,
         fontSize: 16,
-        text: "レーダーグラフのサンプル（データセット個)",
+        text: "全産業活動指数",
         fontColor: "white", // 文字の色
         //position: 'left',
       },
