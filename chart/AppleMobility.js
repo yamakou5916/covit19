@@ -24,9 +24,8 @@ function drawBarChart2(data) {
   var demo = document.getElementById("samurai0");
   demo.innerHTML = (data[row][2]-100).toFixed(1);
   mobility = (data[row][2]-100).toFixed(1);
-  var target = document.getElementById("section00"); //対象要素をクラスで指定(IE9以上)
-  var tar = target.children("graph_2");
-  tar.style.backgroundColor = "red"; /*//colorを設定*/
+  var target = document.getElementById("section00")target.children("graph_2");; //対象要素をクラスで指定(IE9以上)
+  target.style.backgroundColor = "red"; /*//colorを設定*/
 
 
   // 4)chart.jsで描画
