@@ -64,7 +64,7 @@ function drawBarChart7(data) {
       title: {
         display: true,
         fontSize: 16,
-        text: "商品カテゴリ別金額指数",
+        text: "商品カテゴリ別の販売金額指数",
         fontColor: "white", // 文字の色
         //position: 'left',
       },
