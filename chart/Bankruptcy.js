@@ -134,7 +134,7 @@ function func7() {
   } else {
     // aには選択状態の値が代入されている
     //console.log( a ) ;
-    main3(a)
+    main4(a)
   }
 }
 
