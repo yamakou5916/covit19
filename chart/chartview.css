@@ -116,18 +116,23 @@ pre {
 
 ul.graph {
 }
-
+/*
 li.graph_1, .graph_2 {
     display: inline-block;
     margin-bottom: 20px;
     margin-top: 10px;
     min-width: 100px;
 }
-
+*/
 li.graph_1 {
     float: left;
     width: 50%;
-    min-width: 100px; 
+    min-width: 100px;
+
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    min-width: 100px;
 }
 
 li.graph_2 {
