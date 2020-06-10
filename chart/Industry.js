@@ -132,6 +132,10 @@ function func6() {
   }
 }
 
+function ratedata1(){
+  return threeindex;
+}
+
 var element = document.getElementById( "target6" ) ;
 var radioNodeList = element.hoge ;
 radioNodeList[0].checked = true ;
