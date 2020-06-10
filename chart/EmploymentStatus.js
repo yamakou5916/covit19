@@ -1,6 +1,6 @@
 var colors = ["#7BDFF2","#B2F7EF","#EFF7F6","#F7D6E0","#F2B5D4","#DABFFF",];
 var employrate = 0;
-var beforeafter = [0,0,0,0,0,0,0,0,0,0,0,0,0]
+var beforeafter12 = [0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 // 2) CSVから２次元配列に変換
 function csv2Array12(str,a) {
@@ -20,12 +20,12 @@ function csv2Array12(str,a) {
   }
   var k=0;
   for (var j = lines12.length-13; j < lines12.length; ++j) {
-    beforeafter[k] = lines12[j].split(",");
+    beforeafter12[k] = lines12[j].split(",");
     ++k;
   }
-  employrate = (((beforeafter[12][3]/beforeafter[0][3])-1)*100).toFixed(1);
+  employrate = (((beforeafter12[12][3]/beforeafter12[0][3])-1)*100).toFixed(1);
   var demo = document.getElementById("samurai4");
-  demo.innerHTML = (((beforeafter[12][3]/beforeafter[0][3])-1)*100).toFixed(1);
+  demo.innerHTML = (((beforeafter12[12][3]/beforeafter12[0][3])-1)*100).toFixed(1);
   //employrate = (data[row][2]-50).toFixed(1);
   return csvData12;
 }
