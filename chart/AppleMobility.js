@@ -20,7 +20,6 @@ function drawBarChart2(data) {
     tmpData12.push(data[row][1])
     tmpData22.push(data[row][2])
     tmpData32.push(data[row][3])
-
   };
   var demo = document.getElementById("samurai0");
   demo.innerHTML = (data[row][2]-100).toFixed(1);
@@ -59,14 +58,16 @@ function drawBarChart2(data) {
     				autoSkip: true,
     				maxTicksLimit: 5, //値の最大表示数
     				fontColor: "white", // 文字の色
-                    fontSize: 10,
+            fontSize: 10,
     			}
     		}],
     		yAxes: [{
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
     			ticks: {
     				fontColor: "white",
-                    fontSize: 10,
+            fontSize: 10,
+            min: 0,
+            max: 200
     			}
     		}],
     	},

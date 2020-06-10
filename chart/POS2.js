@@ -78,14 +78,16 @@ function drawBarChart20(data) {
             autoSkip: true,
             maxTicksLimit: 7, //値の最大表示数
             fontColor: "white", // 文字の色
-                    fontSize: 10,
+            fontSize: 10,
           }
         }],
         yAxes: [{
           gridLines: {color: 'rgba(255, 255, 255, 0.1)',},
           ticks: {
             fontColor: "white",
-                    fontSize: 10,
+            fontSize: 10,
+            min: 0,
+            max: 200
           }
         }],
       },
