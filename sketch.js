@@ -100,15 +100,15 @@ function setup(){
   allImages.push(loadImage("image/icon/business_sentiment.png"));
   allImages.push(loadImage("image/icon/regulatory.png"));
   allImages.push(loadImage("image/icon/supply_chain.png"));
-  allImages.push(loadImage("image/graph_icon/living_sphere.png"));
-  allImages.push(loadImage("image/graph_icon/customer_touchpoint.png"));
-  allImages.push(loadImage("image/graph_icon/shopping_basket.png"));
-  allImages.push(loadImage("image/graph_icon/work_place.png"));
-  allImages.push(loadImage("image/graph_icon/management_style.png"));
-  allImages.push(loadImage("image/graph_icon/social_relation.png"));
-  allImages.push(loadImage("image/graph_icon/business_sentiment.png"));
-  allImages.push(loadImage("image/graph_icon/regulatory.png"));
-  allImages.push(loadImage("image/graph_icon/supply_chain.png"));
+  catImages.push(loadImage("image/graph_icon/living_sphere.png"));
+  catImages.push(loadImage("image/graph_icon/customer_touchpoint.png"));
+  catImages.push(loadImage("image/graph_icon/shopping_basket.png"));
+  catImages.push(loadImage("image/graph_icon/work_place.png"));
+  catImages.push(loadImage("image/graph_icon/management_style.png"));
+  catImages.push(loadImage("image/graph_icon/social_relation.png"));
+  catImages.push(loadImage("image/graph_icon/business_sentiment.png"));
+  catImages.push(loadImage("image/graph_icon/regulatory.png"));
+  catImages.push(loadImage("image/graph_icon/supply_chain.png"));
   //catImages.push(loadImage("image/icon_education.png"));
   //catImages.push(loadImage("image/icon_healthcare.png"));
   //catImages.push(loadImage("image/icon_lifeevent.png"));
@@ -227,7 +227,7 @@ function draw(){
       fill(255);    
       noStroke();
       imageMode(CENTER);
-      images0 = allImages[textnum];
+      images0 = catImages[textnum];
       image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
       textSize(16);
       textStyle(BOLD);
@@ -245,7 +245,7 @@ function draw(){
       fill(255);
       noStroke();
       imageMode(CENTER);
-      images0 = allImages[textnum];
+      images0 = catImages[textnum];
       image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
       textSize(16);
       textStyle(BOLD);
@@ -262,7 +262,7 @@ function draw(){
       fill(255);
       noStroke();
       imageMode(CENTER);
-      images0 = allImages[textnum];
+      images0 = catImages[textnum];
       image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
       textSize(16);
       textStyle(BOLD);
@@ -279,7 +279,7 @@ function draw(){
       fill(255);
       noStroke();
       imageMode(CENTER);
-      images0 = allImages[textnum];
+      images0 = catImages[textnum];
       image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
       textSize(16);
       textStyle(BOLD);
@@ -296,7 +296,7 @@ function draw(){
       fill(255);
       noStroke();
       imageMode(CENTER);
-      images0 = allImages[textnum];
+      images0 = catImages[textnum];
       image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
       textSize(16);
       textStyle(BOLD);
@@ -313,7 +313,7 @@ function draw(){
       fill(255);
       noStroke();
       imageMode(CENTER);
-      images0 = allImages[textnum];
+      images0 = catImages[textnum];
       image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
       textSize(16);
       textStyle(BOLD);
@@ -330,7 +330,7 @@ function draw(){
       fill(255);
       noStroke();
       imageMode(CENTER);
-      images0 = allImages[textnum];
+      images0 = catImages[textnum];
       image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
       textSize(16);
       textStyle(BOLD);
@@ -347,7 +347,7 @@ function draw(){
       fill(255);
       noStroke();
       imageMode(CENTER);
-      images0 = allImages[textnum];
+      images0 = catImages[textnum];
       image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
       textSize(16);
       textStyle(BOLD);
@@ -364,7 +364,7 @@ function draw(){
       fill(255);
       noStroke();
       imageMode(CENTER);
-      images0 = allImages[textnum];
+      images0 = catImages[textnum];
       image(images0, cwidth[textnum], cheight[textnum]-30, 50, 50);
       textSize(16);
       textStyle(BOLD);
