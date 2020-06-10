@@ -47,7 +47,7 @@ function drawBarChart3(data) {
       datasets: [
         { label: "他道府県から東京都への転入者数【人】", data: tmpData13, borderColor: colors[0], borderWidth: 1, pointRadius: 0, backgroundColor: colors[0]},
         { label: "東京都から他道府県への転出者数【人】", data: tmpData23, borderColor: colors[1], borderWidth: 1, pointRadius: 0, backgroundColor: colors[1]},
-        { label: "他都道府県からの転入者数【人】", data: tmpData33, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: colors[2]},
+        { label: "他都道府県同士の転出入者数【人】", data: tmpData33, borderColor: colors[2], borderWidth: 1, pointRadius: 0, backgroundColor: colors[2]},
       ]
     },
 
