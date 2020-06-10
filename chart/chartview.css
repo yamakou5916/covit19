@@ -131,8 +131,8 @@ li.graph_1 {
 }
 
 li.graph_2 {
-    float: right;
-    width: 50%;
+    /*float: right;
+    width: 50%;*/
     text-align: center;
     background-color: #1BC3A9;
     color: #01011b; 
