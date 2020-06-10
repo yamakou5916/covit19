@@ -84,8 +84,8 @@ function drawBarChart10(data) {
           ticks: {
             fontColor: "white",
             fontSize: 10,
-            min: 20,
-            max: 60
+            min: 90,
+            max: 120
           }
         }],
       },
