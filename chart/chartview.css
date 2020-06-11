@@ -34,12 +34,36 @@ pre {
 .block2 p {color:#fff; font-size: 12px;}
 .block1 p {color:#fff; font-size: 16px;}
 
+@media screen and (min-width:1400px){
+    .outer {
+        margin: 0 auto;
+        max-width: 100%;
+        padding: auto;
+        max-height: 100%;
+        display: flex;
+    }
+
+    .g-block-1 {
+        /*width: 30%;*/
+        height: 100%;
+        max-width: 30%;
+        min-width: 350px; 
+        float: left;
+        margin-top: auto;
+        margin-right: 10px;
+        margin-bottom: auto;
+        margin-left: 50px;
+        padding: 50px;
+        flex: 1;
+    }
+}
+
 @media screen and (min-width:800px){
     .outer {
     	margin: 0 auto;
     	max-width: 100%;
         padding: auto;
-        /*max-height: 100%;*/
+        max-height: 100%;
     	display: flex;
     }
 
@@ -56,6 +80,10 @@ pre {
         padding: 50px;
         flex: 1;
     }
+    h1{
+        font-size: 16px;
+    }
+
 }
 
 
