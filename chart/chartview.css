@@ -45,6 +45,7 @@ pre {
 
     .g-block-1 {
         /*width: 30%;*/
+        width: 350px;
         height: 100%;
         max-width: 30%;
         min-width: 350px; 
