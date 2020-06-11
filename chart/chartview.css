@@ -44,11 +44,10 @@ pre {
     }
 
     .g-block-1 {
-        /*width: 30%;
-        max-width: 30%;*/
-        width: 150px;
+        /*width: 30%;*/
         height: 100%;
-        /*min-width: 350px; */
+        max-width: 30%;
+        min-width: 350px; 
         float: left;
         margin-top: auto;
         margin-right: 10px;
