@@ -155,7 +155,8 @@ li.info_1 {
     margin-top: 10px;
     margin-bottom: 20px;
     display: inline-block;
-    width: 50%;
+    /*width: 50%;*/
+    width: 100%;
     font-size: 20px;
     min-width: 100px; 
 }
