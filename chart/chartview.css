@@ -47,7 +47,7 @@ pre {
         width: 30%;
         height: 100%;
         max-width: 30%; 
-        min-width: 300px; 
+        min-width: 494px; 
         float: left;
         margin-top: auto;
         margin-right: 10px;
@@ -140,10 +140,10 @@ li.graph_2 {
     width: 50%;*/
     text-align: center;
     background-color: #1BC3A9;
-    color: #01011b; 
-    border-radius: 10px;    
+    color: #01011b;
+    border-radius: 10px;
     min-width: 100px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 
