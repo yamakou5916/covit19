@@ -47,7 +47,7 @@ pre {
         width: 30%;
         height: 100%;
         max-width: 30%; 
-        min-width: 350px; 
+        min-width: 450px; 
         float: left;
         margin-top: auto;
         margin-right: 10px;
@@ -115,6 +115,7 @@ pre {
 
 
 ul.graph {
+    list-style: none;
 }
 /*
 li.graph_1, .graph_2 {
