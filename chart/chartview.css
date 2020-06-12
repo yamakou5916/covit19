@@ -91,7 +91,6 @@ pre {
         margin-left: 50px;
         padding: 50px;
         flex: 1;
-        box-sizing: border-box;
     }
     /*
     h1{
@@ -130,7 +129,6 @@ pre {
         margin-left: 50px;
         padding: 50px;
         flex: 1;
-        box-sizing: border-box;
     }
 }
 
