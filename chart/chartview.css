@@ -34,6 +34,7 @@ pre {
 .block2 p {color:#fff; font-size: 12px;}
 .block1 p {color:#fff; font-size: 16px;}
 
+/*
 @media screen and (min-width:1400px){
     .outer {
         margin: 0 auto;
@@ -44,7 +45,6 @@ pre {
     }
 
     .g-block-1 {
-        /*width: 30%;*/
         height: 100%;
         max-width: 30%;
         min-width: 300px; 
@@ -69,7 +69,7 @@ pre {
         font-size: 120%;
     }
 }
-
+*/
 
 @media screen and (min-width:800px){
     .outer {
@@ -94,7 +94,7 @@ pre {
         flex: 1;
 
     }
-    
+    /*
     h1{
         font-size: 150%;
     }
@@ -107,7 +107,7 @@ pre {
     li #graph_1{
         font-size: 100%;
     }
-
+*/
 }
 
 
