@@ -55,7 +55,6 @@ pre {
         margin-left: 50px;
         padding: 50px;
         flex: 1;
-
     }
     h1{
         font-size: 200%;
@@ -85,7 +84,7 @@ pre {
         /*width: 30%;*/
         height: 100%;
         max-width: 30%;
-        min-width: 300px; 
+        min-width: 400px; 
         float: left;
         margin-top: auto;
         margin-right: 10px;
@@ -163,7 +162,8 @@ pre {
     margin-bottom: 40px;
     text-align: left;
     font-size: 20px;
-    min-width: 100px; 
+    min-width: 100px;
+
 }
 
 
