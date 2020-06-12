@@ -30,7 +30,8 @@ function drawBarChart2(data) {
 
   // 4)chart.jsで描画
   var ctx2 = document.getElementById("AppleMobility").getContext("2d");
-  ctx2.canvas.style.height = "500px";
+  ctx2.canvas.style.height = "80%";
+  ctx2.canvas.style.width = "50%";
   var AppleMobility = new Chart(ctx2, {
     type: 'line',
     data: {
