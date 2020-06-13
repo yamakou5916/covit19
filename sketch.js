@@ -56,7 +56,7 @@ function setup(){
   changeRate[7] = ratedata7();
   changeRate[8] = ratedata8();
   pixelDensity(2);
-  canvas = createCanvas(windowWidth/2, windowHeight/2);
+  canvas = createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
   //canvas = createCanvas(2000, 1000);//描画領域を指定
   canvas.parent("P5Canvas");
@@ -454,7 +454,7 @@ function mouseClicked(){
 
 
 function windowResized() {
-  canvas = resizeCanvas(windowWidth/2, windowHeight/2);
+  canvas = resizeCanvas(windowWidth, windowHeight);
 }
 
 
