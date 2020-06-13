@@ -24,7 +24,7 @@ function csv2Array4(str,a) {
   }
   bankrupt = (((beforeafter[12][2]/beforeafter[0][2])-1)*100).toFixed(1);
   var demo = document.getElementById("samurai7");
-  demo.innerHTML = (((beforeafter[12][2]/beforeafter[0][2])-1)*100).toFixed(1);
+  demo.innerHTML = ((1-(beforeafter[12][2]/beforeafter[0][2]))*100).toFixed(1);
 
   return csvData4;
 }
