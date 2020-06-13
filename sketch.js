@@ -454,7 +454,7 @@ function mouseClicked(){
 
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+  canvas = resizeCanvas(windowWidth, windowHeight);
 }
 
 
