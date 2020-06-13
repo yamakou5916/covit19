@@ -93,7 +93,6 @@ function setup(){
   catImages.push(loadImage("image/graph_icon/regulatory.png"));
   catImages.push(loadImage("image/graph_icon/supply_chain.png"));
   textnum = 0;
-
 }
 
 function draw(){
@@ -113,7 +112,7 @@ function draw(){
   noStroke();
   fill(0);
   ellipse(300, 50, 50, 50);
-  ellipse(500, 50, 50, 50);
+  ellipse(windowWidth, 50, 50, 50);
   ellipse(900, 50, 50, 50);
   ellipse(1100, 50, 50, 50);
   ellipse(1500, 50, 50, 50);
