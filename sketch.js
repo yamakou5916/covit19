@@ -120,9 +120,6 @@ function draw(){
   rect(300,25,200,50);
   rect(900,25,200,50);
   rect(1500,25,200,50);
-  ellipse(1950, 300, 50, 50);
-  ellipse(1950, 700, 50, 50);
-  rect(1925,300,50,400);
 
   textStyle(NORMAL);
   noStroke();
@@ -141,6 +138,9 @@ function draw(){
   text("労働者の動き", 1000, 50);
   text("企業の動き", 1600, 50);
 
+  ellipse(1950, height/2-200, 50, 50);
+  ellipse(1950, height/2+200, 50, 50);
+  rect(1925,height/2-200,50,400);
   text("+", 1950, height/2-200);
   text("変", 1950, height/2-30);
   text("化", 1950, height/2);
