@@ -451,12 +451,12 @@ function mouseClicked(){
 
 };
 
-
+/*
 function windowResized() {
   canvas = resizeCanvas(windowWidth*2, windowHeight*2);
 }
 
-
+*/
 
 
 
