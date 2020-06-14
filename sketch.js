@@ -109,7 +109,8 @@ function draw(){
   var backImage = document.getElementById("P5Canvas");
   //var backImage = document.getElementsByClassName("box box3");
   backImage.style.backgroundImage = "image/0.jpg";
-  fill('rgba(0,0,0,0.4)');
+  //fill('rgba(0,0,0,0.4)');
+  fill('rgba(0,0,0,0)');
   rect(0,0,4000,3000);
 
   //軸
