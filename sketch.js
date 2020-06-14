@@ -104,7 +104,7 @@ function draw(){
   noStroke();
   //fill(1,1,27);
   //rect(0,0,2000,1500);
-  image(backphoto[textnum], 1000, 750, 2000, 1500);
+  image(backphoto[textnum], windowWidth, windowHeight, 2000, 1500);
   fill('rgba(0,0,0,0.4)');
   rect(0,0,4000,3000);
 
